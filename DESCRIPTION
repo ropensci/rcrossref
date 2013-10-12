@@ -22,3 +22,5 @@ Collate:
     'crossref_r.r'
     'crossref_search.r'
     'crossref_search_free.r'
+    'crossref_citation_count.r'
+    'crossref_cn.r'
