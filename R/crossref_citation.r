@@ -2,7 +2,8 @@
 #' 
 #' Options to get formatted citations as bibtext or plain text.
 #' 
-#' @import RCurl XML
+#' @importFrom XML xmlParse
+#' @importFrom RCurl getForm
 #' @param doi digital object identifier for an article in PLoS Journals
 #' @param title return the title of the paper or not (defaults to FALSE)
 #' @param url the PLoS API url for the function (should be left to default)
@@ -40,6 +41,7 @@ crossref_citation <- function(doi, title = FALSE, url = "http://www.crossref.org
 
 #' Convert crossref XML into a bibentry object
 #' 
+#' @importFrom XML xpathSApply
 #' @param a crossref XML output
 #' @return a bibentry format of the output
 #' @details internal helper function

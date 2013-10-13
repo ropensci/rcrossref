@@ -13,21 +13,19 @@
   Search the CrossRef Metatdata API.
 }
 \details{
-  See \url{http://search.labs.crossref.org/help/api} for
-  more info on this Crossref API service.
+  See \url{http://www.crosscite.org/cn/} for more info on
+  this Crossref Content Negotiation API service.
 }
 \examples{
 \dontrun{
 crossref_cn(doi = "10.1126/science.169.3946.635")
-crossref_cn(doi = "10.1126/science.169.3946.635")
+crossref_cn(doi = "10.1126/science.169.3946.635", header="citeprocjson")
+crossref_cn(doi = "10.1126/science.169.3946.635", header="ris")
+crossref_cn(doi = "10.1126/science.169.3946.635", header="formattedtextcitation")
+crossref_cn(doi = "10.1126/science.169.3946.635", header="formattedtextcitation", style="apa")
 }
 }
 \author{
   Scott Chamberlain \email{myrmecocystus@gmail.com}
-}
-\seealso{
-  \code{\link{crossref_r}},
-  \code{\link{crossref_citation}},
-  \code{\link{crossref_search_free}}
 }
 
