@@ -14,7 +14,10 @@
 #' crossref_cn("10.1126/science.169.3946.635", "rdf-xml") 
 #' crossref_cn("10.1126/science.169.3946.635", "crossref-xml") 
 #' crossref_cn("10.1126/science.169.3946.635", "bibtex") 
+#' # return an R bibentry type
 #' crossref_cn("10.1126/science.169.3946.635", "bibentry") 
+#' return an apa style citation
+#' crossref_cn("10.1126/science.169.3946.635", "text", "apa") 
 #' }
 #' @export
 crossref_cn <- function(dois, 
@@ -38,7 +41,9 @@ crossref_cn <- function(dois,
          "datacite-xml" = "application/vnd.datacite.datacite+xml",
          "bibentry" = "application/x-bibtex")
   type <- pick[[format]]
-  response <- GET(url, add_headers(Accept = type, style = style, locale = locale))
+  if(format == "text")
+    type <- paste(type, "; style = ", style, "; locale = ", locale, sep="")
+  response <- GET(url, add_headers(Accept = type))
   select <- c(
          "rdf-xml" = "text/xml",
          "turtle" = "text/plain",
