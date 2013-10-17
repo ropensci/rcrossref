@@ -26,37 +26,44 @@ crossref_cn <- function(dois,
                                    "datacite-xml", "bibentry"),
                         style = NULL,
                         locale = "en-US"){
-
   format <- match.arg(format)
-  lapply(dois, function(doi){
-  url <- paste("http://dx.doi.org", doi, sep="/")
-  pick<- c(
-         "rdf-xml" = "application/rdf+xml",
-         "turtle" = "text/turtle",
-         "citeproc-json" = "application/vnd.citationstyles.csl+json",
-         "text" = "text/x-bibliography",
-         "ris" = "application/x-research-info-systems",
-         "bibtex" = "application/x-bibtex",
-         "crossref-xml" = "application/vnd.crossref.unixref+xml",
-         "datacite-xml" = "application/vnd.datacite.datacite+xml",
-         "bibentry" = "application/x-bibtex")
-  type <- pick[[format]]
-  if(format == "text")
-    type <- paste(type, "; style = ", style, "; locale = ", locale, sep="")
-  response <- GET(url, add_headers(Accept = type))
-  select <- c(
-         "rdf-xml" = "text/xml",
-         "turtle" = "text/plain",
-         "citeproc-json" = "application/json",
-         "text" = "text/plain",
-         "ris" = "text/plain",
-         "bibtex" = "text/plain",
-         "crossref-xml" = "text/xml",
-         "datacite-xml" = "text/xml",
-         "bibentry" = "application/x-bibtex")
-  parser <- select[[format]]
-  content(response, "parsed", parser) 
-  })
+  cn <- function(doi){
+    url <- paste("http://dx.doi.org", doi, sep="/")
+    pick<- c(
+           "rdf-xml" = "application/rdf+xml",
+           "turtle" = "text/turtle",
+           "citeproc-json" = "application/vnd.citationstyles.csl+json",
+           "text" = "text/x-bibliography",
+           "ris" = "application/x-research-info-systems",
+           "bibtex" = "application/x-bibtex",
+           "crossref-xml" = "application/vnd.crossref.unixref+xml",
+           "datacite-xml" = "application/vnd.datacite.datacite+xml",
+           "bibentry" = "application/x-bibtex")
+    type <- pick[[format]]
+    if(format == "text")
+      type <- paste(type, "; style = ", style, "; locale = ", locale, sep="")
+    response <- GET(url, add_headers(Accept = type))
+    select <- c(
+           "rdf-xml" = "text/xml",
+           "turtle" = "text/plain",
+           "citeproc-json" = "application/json",
+           "text" = "text/plain",
+           "ris" = "text/plain",
+           "bibtex" = "text/plain",
+           "crossref-xml" = "text/xml",
+           "datacite-xml" = "text/xml",
+           "bibentry" = "text/plain")
+    parser <- select[[format]]
+    out <- content(response, "parsed", parser) 
+    if(format == "bibentry")
+      out = parse_bibtex(out)
+    out
+  }
+
+  if(length(dois) > 1)
+    lapply(dois, cn)
+  else
+    cn(dois)
 }
 
 #' @import bibtex
