@@ -1,6 +1,8 @@
 #' Search the CrossRef Metatdata for DOIs using free form references.
 #' 
-#' @import httr plyr RJSONIO
+#' @importFrom httr content POST
+#' @importFrom plyr rbind.fill llply
+#' @importFrom RJSONIO toJSON
 #' @param query Reference query; a character vector of length 1 or greater, 
 #' 		comma-separated of course.
 #' @param url Base url for the Crossref metadata API.

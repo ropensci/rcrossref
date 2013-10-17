@@ -1,6 +1,7 @@
 #' Search the CrossRef Metatdata API.
 #' 
-#' @import XML httr plyr
+#' @importFrom httr content GET
+#' @importFrom plyr ldply llply compact
 #' @param query Query terms.
 #' @param doi Search by a single DOI or many DOIs.
 #' @param page Page to return from results.
