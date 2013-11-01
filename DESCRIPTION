@@ -18,7 +18,6 @@ Imports:
     plyr
 Collate:
     'crossref_citation.r'
-    'crossref_openurl.r'
     'crossref_r.r'
     'crossref_search.r'
     'crossref_search_free.r'
