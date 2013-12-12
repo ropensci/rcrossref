@@ -2,10 +2,9 @@
 \alias{crossref_citation}
 \title{Lookup article info via CrossRef with DOI and get a citation.}
 \usage{
-  crossref_citation(doi, title = FALSE,
-    url = "http://www.crossref.org/openurl/",
-    key = "cboettig@gmail.com", ...,
-    curl = getCurlHandle())
+crossref_citation(doi, title = FALSE,
+  url = "http://www.crossref.org/openurl/", key = "cboettig@gmail.com", ...,
+  curl = getCurlHandle())
 }
 \arguments{
   \item{doi}{digital object identifier for an article in
@@ -28,15 +27,15 @@
   unnecessary footprint)}
 }
 \value{
-  Metadata from DOI in R's bibentry format.
+Metadata from DOI in R's bibentry format.
 }
 \description{
-  Options to get formatted citations as bibtext or plain
-  text.
+Options to get formatted citations as bibtext or plain
+text.
 }
 \details{
-  See \url{http://labs.crossref.org/openurl/} for more info
-  on this Crossref API service.
+See \url{http://labs.crossref.org/openurl/} for more info
+on this Crossref API service.
 }
 \examples{
 \dontrun{
@@ -46,10 +45,10 @@ print(crossref_citation("10.3998/3336451.0009.101"), style="text")
 }
 }
 \author{
-  Carl Boettiger \email{cboettig@gmail.com}
+Carl Boettiger \email{cboettig@gmail.com}
 }
 \seealso{
-  \code{\link{crossref_search}}, \code{\link{crossref_r}},
-  \code{\link{crossref_search_free}}
+\code{\link{crossref_search}}, \code{\link{crossref_r}},
+\code{\link{crossref_search_free}}
 }
 

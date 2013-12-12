@@ -3,7 +3,7 @@ Description: R Interface to the CrossRef APIs
 Title: R Interface to the CrossRef APIs
 Version: 0.1
 License: CC0
-Date: 2013
+Date: 2013-12-11
 Authors@R: c(person("Carl", "Boettiger", role = c("aut", "cre"), email =
     "cboettig@gmail.com"), person("Ted", "Harte", role = "aut"),
     person("Scott", "Chamberlain", role = "aut"),
@@ -16,11 +16,6 @@ Imports:
     XML,
     httr,
     plyr
-Collate:
-    'crossref_citation.r'
-    'crossref_openurl.r'
-    'crossref_r.r'
-    'crossref_search.r'
-    'crossref_search_free.r'
-    'crossref_citation_count.r'
-    'crossref_cn.r'
+Suggests:
+    roxygen2,
+    testthat

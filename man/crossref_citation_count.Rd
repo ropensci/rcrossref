@@ -2,10 +2,8 @@
 \alias{crossref_citation_count}
 \title{Lookup article info via CrossRef with DOI and get a citation.}
 \usage{
-  crossref_citation_count(doi,
-    url = "http://www.crossref.org/openurl/",
-    key = "cboettig@ropensci.org", ...,
-    curl = getCurlHandle())
+crossref_citation_count(doi, url = "http://www.crossref.org/openurl/",
+  key = "cboettig@ropensci.org", ..., curl = getCurlHandle())
 }
 \arguments{
   \item{doi}{digital object identifier for an article in
@@ -25,15 +23,15 @@
   unnecessary footprint)}
 }
 \value{
-  citation count
+citation count
 }
 \description{
-  Options to get formatted citations as bibtext or plain
-  text.
+Options to get formatted citations as bibtext or plain
+text.
 }
 \details{
-  See \url{http://labs.crossref.org/openurl/} for more info
-  on this Crossref API service.
+See \url{http://labs.crossref.org/openurl/} for more info
+on this Crossref API service.
 }
 \examples{
 \dontrun{
@@ -41,10 +39,10 @@ crossref_citation_count(doi="10.1371/journal.pone.0042793")
 }
 }
 \author{
-  Carl Boettiger \email{cboettig@gmail.com}
+Carl Boettiger \email{cboettig@gmail.com}
 }
 \seealso{
-  \code{\link{crossref_search}}, \code{\link{crossref_r}},
-  \code{\link{crossref_search_free}}
+\code{\link{crossref_search}}, \code{\link{crossref_r}},
+\code{\link{crossref_search_free}}
 }
 

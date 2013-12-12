@@ -2,8 +2,7 @@
 \alias{crossref_search_free}
 \title{Search the CrossRef Metatdata for DOIs using free form references.}
 \usage{
-  crossref_search_free(query,
-    url = "http://search.labs.crossref.org/links")
+crossref_search_free(query, url = "http://search.labs.crossref.org/links")
 }
 \arguments{
   \item{query}{Reference query; a character vector of
@@ -12,11 +11,11 @@
   \item{url}{Base url for the Crossref metadata API.}
 }
 \description{
-  Search the CrossRef Metatdata for DOIs using free form
-  references.
+Search the CrossRef Metatdata for DOIs using free form
+references.
 }
 \details{
-  Have to have at least three terms in each search query.
+Have to have at least three terms in each search query.
 }
 \examples{
 \dontrun{
@@ -43,10 +42,10 @@ crossref_search_free(queries)
 }
 }
 \author{
-  Scott Chamberlain \email{myrmecocystus@gmail.com}
+Scott Chamberlain \email{myrmecocystus@gmail.com}
 }
 \seealso{
-  \code{\link{crossref_search}}, \code{\link{crossref_r}},
-  \code{\link{crossref_citation}}
+\code{\link{crossref_search}}, \code{\link{crossref_r}},
+\code{\link{crossref_citation}}
 }
 

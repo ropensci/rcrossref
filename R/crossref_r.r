@@ -21,7 +21,8 @@
 #' 		ISSN. Provide ISSNs in the form xxxx-xxxx . However, sometimes this form 
 #' 		won't match because of how metadata has been submitted to CrossRef. If it 
 #' 		doesn't, try the form xxxxxxxx .
-#' @return Ten DOI's in R's bibentry format.
+#' @param ... Further args passed on to httr::GET
+#' @return A character vector of DOIs
 #' @details From the Crossref documentation: A random distribution of values, 
 #'    0 to 1, has been assigned to our DOI records. We use this as an index to 
 #'    look up a random values between 0 and 1 on each request, and take a 
@@ -29,8 +30,10 @@
 #'    title and ISSN filters out records before a lookup on the random index. 
 #'    See \url{http://random.labs.crossref.org/} for more info on this 
 #' 		Crossref API service.
+#' @references \url{http://random.labs.crossref.org/}
 #' @author Scott Chamberlain \email{myrmecocystus@@gmail.com}
-#' @seealso \code{\link{crossref_search}}, \code{\link{crossref_citation}}, \code{\link{crossref_search_free}}
+#' @seealso \code{\link{crossref_search}}, \code{\link{crossref_citation}}, 
+#' \code{\link{crossref_search_free}}
 #' @export
 #' @examples \dontrun{
 #' # Default search gets 20 random DOIs
@@ -42,9 +45,11 @@
 #' # Specify you want journal articles only
 #' crossref_r(type = 'journal_article')
 #' }
-crossref_r <- function(count = NULL, to = NULL, from = NULL, type = NULL, issn = NULL)
+crossref_r <- function(count = NULL, to = NULL, from = NULL, type = NULL, issn = NULL, ...)
 {
 	url = "http://random.labs.crossref.org/dois"
 	args <- compact(list(count = count, to = to, from = from, type = type, issn = issn))
-	content(GET(url, query = args))
+	tt <- GET(url, query = args, ...)
+  stop_for_status(tt)
+	content(tt)
 }

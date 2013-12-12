@@ -2,8 +2,8 @@
 \alias{crossref_r}
 \title{Get a random set of DOI's through CrossRef.}
 \usage{
-  crossref_r(count = NULL, to = NULL, from = NULL,
-    type = NULL, issn = NULL)
+crossref_r(count = NULL, to = NULL, from = NULL, type = NULL,
+  issn = NULL, ...)
 }
 \arguments{
   \item{count}{The number of returned random DOIs. Maximum
@@ -31,23 +31,25 @@
   xxxx-xxxx . However, sometimes this form won't match
   because of how metadata has been submitted to CrossRef.
   If it doesn't, try the form xxxxxxxx .}
+
+  \item{...}{Further args passed on to httr::GET}
 }
 \value{
-  Ten DOI's in R's bibentry format.
+A character vector of DOIs
 }
 \description{
-  From CrossRef website: "It [this API] might be useful to
-  anybody doing research on scholarly publications."
+From CrossRef website: "It [this API] might be useful to
+anybody doing research on scholarly publications."
 }
 \details{
-  From the Crossref documentation: A random distribution of
-  values, 0 to 1, has been assigned to our DOI records. We
-  use this as an index to look up a random values between 0
-  and 1 on each request, and take a series of DOIs from
-  that point in randomised order. Selection on year, title
-  and ISSN filters out records before a lookup on the
-  random index.  See \url{http://random.labs.crossref.org/}
-  for more info on this Crossref API service.
+From the Crossref documentation: A random distribution of
+values, 0 to 1, has been assigned to our DOI records. We
+use this as an index to look up a random values between 0
+and 1 on each request, and take a series of DOIs from that
+point in randomised order. Selection on year, title and
+ISSN filters out records before a lookup on the random
+index.  See \url{http://random.labs.crossref.org/} for more
+info on this Crossref API service.
 }
 \examples{
 \dontrun{
@@ -62,11 +64,14 @@ crossref_r(type = 'journal_article')
 }
 }
 \author{
-  Scott Chamberlain \email{myrmecocystus@gmail.com}
+Scott Chamberlain \email{myrmecocystus@gmail.com}
+}
+\references{
+\url{http://random.labs.crossref.org/}
 }
 \seealso{
-  \code{\link{crossref_search}},
-  \code{\link{crossref_citation}},
-  \code{\link{crossref_search_free}}
+\code{\link{crossref_search}},
+\code{\link{crossref_citation}},
+\code{\link{crossref_search_free}}
 }
 
