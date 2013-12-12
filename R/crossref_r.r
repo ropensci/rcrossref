@@ -49,7 +49,9 @@ crossref_r <- function(count = NULL, to = NULL, from = NULL, type = NULL, issn =
 {
 	url = "http://random.labs.crossref.org/dois"
 	args <- compact(list(count = count, to = to, from = from, type = type, issn = issn))
-	tt <- GET(url, query = args, ...)
-  stop_for_status(tt)
-	content(tt)
+	random_dois <- GET(url, query = args, ...)
+  stop_for_status(random_dois)
+   # Coerce to list otherwise it returns a character
+	as.list(content(random_dois))
 }
+
