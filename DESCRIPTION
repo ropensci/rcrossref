@@ -15,7 +15,8 @@ Imports:
     RJSONIO,
     XML,
     httr,
-    plyr
+    plyr,
+    bibtex
 Suggests:
-    roxygen2,
-    testthat
+    testthat,
+    roxygen2

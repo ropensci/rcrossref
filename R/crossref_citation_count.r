@@ -1,6 +1,4 @@
-#' Lookup article info via CrossRef with DOI and get a citation.
-#' 
-#' Options to get formatted citations as bibtext or plain text.
+#' Lookup article info via CrossRef with DOI and get a citation count.
 #' 
 #' @importFrom XML xmlParse xpathSApply xmlAttrs
 #' @importFrom RCurl getForm getCurlHandle

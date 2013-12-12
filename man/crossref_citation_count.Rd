@@ -1,6 +1,6 @@
 \name{crossref_citation_count}
 \alias{crossref_citation_count}
-\title{Lookup article info via CrossRef with DOI and get a citation.}
+\title{Lookup article info via CrossRef with DOI and get a citation count.}
 \usage{
 crossref_citation_count(doi, url = "http://www.crossref.org/openurl/",
   key = "cboettig@ropensci.org", ..., curl = getCurlHandle())
@@ -26,8 +26,8 @@ crossref_citation_count(doi, url = "http://www.crossref.org/openurl/",
 citation count
 }
 \description{
-Options to get formatted citations as bibtext or plain
-text.
+Lookup article info via CrossRef with DOI and get a
+citation count.
 }
 \details{
 See \url{http://labs.crossref.org/openurl/} for more info
