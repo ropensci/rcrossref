@@ -28,12 +28,8 @@ crossref_citation_count <- function(doi, url = "http://www.crossref.org/openurl/
   args$noredirect <- as.logical(TRUE)
 #  args$format=as.character("unixref")
   cite_count <- GET(url, query = args)
-  browser()
   stop_for_status(cite_count)
   cite_count_data <- content(cite_count, as = "text")
-  # tt = getForm(url, .params = args, 
-  # 						 .opts = list(...), 
-  # 						 curl = curl)
   ans <- xmlParse(cite_count_data)
   as.numeric(xpathSApply(ans, "//*[@fl_count]",  function(x) xmlAttrs(x)[["fl_count"]]))
 }
