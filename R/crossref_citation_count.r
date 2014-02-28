@@ -9,6 +9,7 @@
 #' @param curl If using in a loop, call getCurlHandle() first and pass 
 #'  the returned value in here (avoids unnecessary footprint)
 #' @return citation count 
+#' @importFrom httr GET content stop_for_status
 #' @details See \url{http://labs.crossref.org/openurl/} for more info on this 
 #' 		Crossref API service.
 #' @seealso \code{\link{crossref_search}}, \code{\link{crossref_r}}, \code{\link{crossref_search_free}}
@@ -22,14 +23,14 @@ crossref_citation_count <- function(doi, url = "http://www.crossref.org/openurl/
 {
   ## Assemble a url query such as:
   #http://www.crossref.org/openurl/?id=doi:10.3998/3336451.0009.101&noredirect=true&pid=API_KEY&format=unixref
-  args = list(id = paste("doi:", doi, sep="") )
-  args$pid = as.character(key)
-  args$noredirect=as.logical(TRUE)
+  args <- list(id = paste("doi:", doi, sep="") )
+  args$pid <- as.character(key)
+  args$noredirect <- as.logical(TRUE)
 #  args$format=as.character("unixref")
-  tt = getForm(url, .params = args, 
-  						 .opts = list(...), 
-  						 curl = curl)
-  ans = xmlParse(tt)
+  cite_count <- GET(url, query = args)
+  stop_for_status(cite_count)
+  cite_count_data <- content(cite_count, as = "text")
+  ans <- xmlParse(cite_count_data)
   as.numeric(xpathSApply(ans, "//*[@fl_count]",  function(x) xmlAttrs(x)[["fl_count"]]))
 }
 
