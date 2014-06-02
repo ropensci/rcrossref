@@ -19,7 +19,7 @@ API docs
 
 Please report any issues or bugs](https://github.com/ropensci/rcrossref/issues).
 
-License: CC0
+License: MIT
 
 This package is part of the [rOpenSci](http://ropensci.org/packages) project.
 

@@ -12,13 +12,13 @@
 #' @return citation count
 #' @details See \url{http://labs.crossref.org/openurl/} for more info on this
 #' 		Crossref API service.
-#' @seealso \code{\link{crossref_search}}, \code{\link{crossref_r}}, \code{\link{crossref_search_free}}
+#' @seealso \code{\link{cr_search}}, \code{\link{cr_r}}, \code{\link{cr_search_free}}
 #' @author Carl Boettiger \email{cboettig@@gmail.com}
 #' @examples \dontrun{
-#' crossref_citation_count(doi="10.1371/journal.pone.0042793")
+#' cr_citation_count(doi="10.1371/journal.pone.0042793")
 #' }
 #' @export
-crossref_citation_count <- function(doi, url = "http://www.crossref.org/openurl/",
+cr_citation_count <- function(doi, url = "http://www.crossref.org/openurl/",
 	key = "cboettig@ropensci.org", ..., curl = getCurlHandle())
 {
   ## Assemble a url query such as:

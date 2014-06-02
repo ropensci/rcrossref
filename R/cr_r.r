@@ -31,20 +31,20 @@
 #' 		Crossref API service.
 #' @references \url{http://random.labs.crossref.org/}
 #' @author Scott Chamberlain \email{myrmecocystus@@gmail.com}
-#' @seealso \code{\link{crossref_search}}, \code{\link{crossref_citation}},
-#' \code{\link{crossref_search_free}}
+#' @seealso \code{\link{cr_search}}, \code{\link{cr_citation}},
+#' \code{\link{cr_search_free}}
 #' @export
 #' @examples \dontrun{
 #' # Default search gets 20 random DOIs
-#' crossref_r()
+#' cr_r()
 #'
 #' # limit to certain dates
-#' crossref_r(from=1990, to=1999)
+#' cr_r(from=1990, to=1999)
 #'
 #' # Specify you want journal articles only
-#' crossref_r(type = 'journal_article')
+#' cr_r(type = 'journal_article')
 #' }
-crossref_r <- function(count = NULL, to = NULL, from = NULL, type = NULL, issn = NULL, ...)
+cr_r <- function(count = NULL, to = NULL, from = NULL, type = NULL, issn = NULL, ...)
 {
 	url = "http://random.labs.crossref.org/dois"
 	args <- cr_compact(list(count = count, to = to, from = from, type = type, issn = issn))

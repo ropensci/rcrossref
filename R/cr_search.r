@@ -10,34 +10,34 @@
 #' @param year Year to search.
 #' @details See \url{http://search.labs.crossref.org/help/api} for more info on this
 #' 		Crossref API service.
-#' @seealso \code{\link{crossref_r}}, \code{\link{crossref_citation}}, \code{\link{crossref_search_free}}
+#' @seealso \code{\link{cr_r}}, \code{\link{cr_citation}}, \code{\link{cr_search_free}}
 #' @author Scott Chamberlain \email{myrmecocystus@@gmail.com}
 #' @examples \dontrun{
-#' crossref_search(query = c("renear", "palmer"))
+#' cr_search(query = c("renear", "palmer"))
 #'
 #' # limit to 4 results
-#' crossref_search(query = c("renear", "palmer"), rows = 4)
+#' cr_search(query = c("renear", "palmer"), rows = 4)
 #'
 #' # get more results than standard
-#' crossref_search(query = c("renear", "palmer"), rows = 40)
+#' cr_search(query = c("renear", "palmer"), rows = 40)
 #'
 #' # sort results by score
-#' crossref_search(query = c("renear", "palmer"), rows = 10, sort = "score")
+#' cr_search(query = c("renear", "palmer"), rows = 10, sort = "score")
 #'
 #' # sort results by year
-#' crossref_search(query = c("renear", "palmer"), rows = 10, sort = "year")
+#' cr_search(query = c("renear", "palmer"), rows = 10, sort = "year")
 #'
 #' # get results for a certain year
-#' crossref_search(query = c("renear", "palmer"), year = 2010)
+#' cr_search(query = c("renear", "palmer"), year = 2010)
 #'
 #' # search by a single DOI
-#' crossref_search(doi = "10.1890/10-0340.1")
+#' cr_search(doi = "10.1890/10-0340.1")
 #'
 #' # search for many DOI's
-#' crossref_search(doi = c("10.1890/10-0340.1","10.1016/j.fbr.2012.01.001","10.1111/j.1469-8137.2012.04121.x"))
+#' cr_search(doi = c("10.1890/10-0340.1","10.1016/j.fbr.2012.01.001","10.1111/j.1469-8137.2012.04121.x"))
 #' }
 #' @export
-crossref_search <- function(query, doi = NULL, page = NULL, rows = NULL,
+cr_search <- function(query, doi = NULL, page = NULL, rows = NULL,
 	sort = NULL, year = NULL)
 {
 	url = "http://search.labs.crossref.org/dois"

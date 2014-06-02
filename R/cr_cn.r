@@ -9,17 +9,17 @@
 #'   	Crossref Content Negotiation API service.
 #' @author Scott Chamberlain \email{myrmecocystus@@gmail.com}
 #' @examples \dontrun{
-#' crossref_cn("10.1126/science.169.3946.635", "citeproc-json")
-#' crossref_cn("10.1126/science.169.3946.635", "rdf-xml")
-#' crossref_cn("10.1126/science.169.3946.635", "crossref-xml")
-#' crossref_cn("10.1126/science.169.3946.635", "bibtex")
+#' cr_cn("10.1126/science.169.3946.635", "citeproc-json")
+#' cr_cn("10.1126/science.169.3946.635", "rdf-xml")
+#' cr_cn("10.1126/science.169.3946.635", "crossref-xml")
+#' cr_cn("10.1126/science.169.3946.635", "bibtex")
 #' # return an R bibentry type
-#' crossref_cn("10.1126/science.169.3946.635", "bibentry")
+#' cr_cn("10.1126/science.169.3946.635", "bibentry")
 #' return an apa style citation
-#' crossref_cn("10.1126/science.169.3946.635", "text", "apa")
+#' cr_cn("10.1126/science.169.3946.635", "text", "apa")
 #' }
 #' @export
-crossref_cn <- function(dois,
+cr_cn <- function(dois,
                         format = c("rdf-xml", "turtle", "citeproc-json",
                                    "text", "ris", "bibtex", "crossref-xml",
                                    "datacite-xml", "bibentry"),

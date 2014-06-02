@@ -1,7 +1,7 @@
 #' Lookup article info via CrossRef with DOI and get a citation.
-#' 
+#'
 #' Options to get formatted citations as bibtext or plain text.
-#' 
+#'
 #' @importFrom XML xmlParse
 #' @importFrom RCurl getForm getCurlHandle
 #' @param doi digital object identifier for an article in PLoS Journals
@@ -9,20 +9,20 @@
 #' @param url the PLoS API url for the function (should be left to default)
 #' @param key your PLoS API key, either enter, or loads from .Rprofile
 #' @param ... optional additional curl options (debugging tools mostly)
-#' @param curl If using in a loop, call getCurlHandle() first and pass 
+#' @param curl If using in a loop, call getCurlHandle() first and pass
 #'  the returned value in here (avoids unnecessary footprint)
 #' @return Metadata from DOI in R's bibentry format.
-#' @details See \url{http://labs.crossref.org/openurl/} for more info on this 
+#' @details See \url{http://labs.crossref.org/openurl/} for more info on this
 #' 		Crossref API service.
-#' @seealso \code{\link{crossref_search}}, \code{\link{crossref_r}}, \code{\link{crossref_search_free}}
+#' @seealso \code{\link{cr_search}}, \code{\link{cr_r}}, \code{\link{cr_search_free}}
 #' @author Carl Boettiger \email{cboettig@@gmail.com}
 #' @examples \dontrun{
-#' crossref_citation(doi="10.1371/journal.pone.0042793")
-#' print(crossref_citation("10.3998/3336451.0009.101"), style="Bibtex")
-#' print(crossref_citation("10.3998/3336451.0009.101"), style="text")
+#' cr_citation(doi="10.1371/journal.pone.0042793")
+#' print(cr_citation("10.3998/3336451.0009.101"), style="Bibtex")
+#' print(cr_citation("10.3998/3336451.0009.101"), style="text")
 #' }
 #' @export
-crossref_citation <- function(doi, title = FALSE, url = "http://www.crossref.org/openurl/", 
+cr_citation <- function(doi, title = FALSE, url = "http://www.crossref.org/openurl/",
 	key = "cboettig@gmail.com", ..., curl = getCurlHandle())
 {
   ## Assemble a url query such as:
@@ -31,8 +31,8 @@ crossref_citation <- function(doi, title = FALSE, url = "http://www.crossref.org
   args$pid = as.character(key)
   args$noredirect=as.logical(TRUE)
   args$format=as.character("unixref")
-  tt = getForm(url, .params = args, 
-  						 .opts = list(...), 
+  tt = getForm(url, .params = args,
+  						 .opts = list(...),
   						 curl = curl)
   ans = xmlParse(tt)
   formatcrossref(ans)
@@ -40,7 +40,7 @@ crossref_citation <- function(doi, title = FALSE, url = "http://www.crossref.org
 
 
 #' Convert crossref XML into a bibentry object
-#' 
+#'
 #' @importFrom XML xpathSApply xmlValue
 #' @param a crossref XML output
 #' @return a bibentry format of the output
@@ -53,9 +53,9 @@ formatcrossref <- function(a){
         title = check_missing(xpathSApply(a, "//titles/title", xmlValue)),
         author = check_missing(authors),
         journal = check_missing(xpathSApply(a, "//full_title", xmlValue)),
-        year = check_missing(xpathSApply(a, 
+        year = check_missing(xpathSApply(a,
           "//journal_article/publication_date/year", xmlValue)[[1]]),
-        month =xpathSApply(a, 
+        month =xpathSApply(a,
           "//journal_article/publication_date/month", xmlValue),
         volume = xpathSApply(a, "//journal_volume/volume", xmlValue),
         doi = xpathSApply(a, "//journal_article/doi_data/doi", xmlValue)
@@ -66,11 +66,11 @@ formatcrossref <- function(a){
 }
 
 # Title, author, journal, & year cannot be missing, so return "NA" if they are
-# Avoid errors in bibentry calls when a required field is not specified.   
+# Avoid errors in bibentry calls when a required field is not specified.
 check_missing <- function(x){
  if(length(x)==0)
   out <- "NA"
- else 
+ else
   out <- x
   out
 }
