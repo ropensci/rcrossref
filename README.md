@@ -8,6 +8,13 @@ Getting started
 
 * [Register](http://www.crossref.org/requestaccount/) an email address with the CrossRef API as you'll need an API key for some functions.
 
+API docs
+
+* Fundref: [source 1](https://github.com/CrossRef/rest-api-doc/blob/master/funder_kpi_api.md), [source 2](http://crosstech.crossref.org/2014/04/%E2%99%AB-researchers-just-wanna-have-funds-%E2%99%AB.html), [source 3](http://help.crossref.org/#fundref-api)
+* [Content negotiation](http://www.crosscite.org/cn/)
+* [Metadata search]()
+* [Text and data mining (TDM)](http://tdmsupport.crossref.org/)
+
 ## Meta
 
 Please report any issues or bugs](https://github.com/ropensci/rcrossref/issues).

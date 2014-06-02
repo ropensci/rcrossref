@@ -1,6 +1,6 @@
 Package: rcrossref
-Description: R Interface to the CrossRef APIs, including metadata search, Fundref,
-etc.
+Description: R Interface to the CrossRef APIs, including metadata search,
+    Fundref, etc.
 Title: R Interface to the CrossRef APIs
 Version: 0.1.2
 License: MIT
