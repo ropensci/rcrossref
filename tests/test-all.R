@@ -1,2 +1,2 @@
-library(testthat)
-test_check("taxize")
+library("testthat")
+test_check("rcrossref")
