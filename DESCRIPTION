@@ -1,10 +1,10 @@
 Package: rcrossref
 Description: R Interface to the CrossRef APIs, including metadata search,
     Fundref, etc.
-Title: R Interface to the CrossRef APIs
-Version: 0.1.2
-License: MIT
-Date: 2014-04-27
+Title: R Interface to CrossRef APIs
+Version: 0.1.4
+License: MIT + file LICENSE
+Date: 2014-06-02
 Authors@R: c(person("Carl", "Boettiger", role = c("aut", "cre"), email =
     "cboettig@gmail.com"), person("Ted", "Harte", role = "aut"),
     person("Scott", "Chamberlain", role = "aut"),
@@ -17,7 +17,8 @@ Imports:
     XML,
     httr,
     plyr,
-    bibtex
+    bibtex,
+    assertthat
 Suggests:
     testthat,
     roxygen2

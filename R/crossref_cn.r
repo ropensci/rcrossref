@@ -1,26 +1,25 @@
 #' Search the CrossRef Metatdata API.
-#' 
-#' @importFrom httr GET add_headers stop_for_status content
-#' @importFrom plyr compact
+#'
+#' @import httr
 #' @param dois Search by a single DOI or many DOIs.
 #' @param format name of the format.
 #' @param style a CSL style (for text format only)
 #' @param locale language locale
-#' @details See \url{http://www.crosscite.org/cn/} for more info on this 
+#' @details See \url{http://www.crosscite.org/cn/} for more info on this
 #'   	Crossref Content Negotiation API service.
 #' @author Scott Chamberlain \email{myrmecocystus@@gmail.com}
 #' @examples \dontrun{
-#' crossref_cn("10.1126/science.169.3946.635", "citeproc-json") 
-#' crossref_cn("10.1126/science.169.3946.635", "rdf-xml") 
-#' crossref_cn("10.1126/science.169.3946.635", "crossref-xml") 
-#' crossref_cn("10.1126/science.169.3946.635", "bibtex") 
+#' crossref_cn("10.1126/science.169.3946.635", "citeproc-json")
+#' crossref_cn("10.1126/science.169.3946.635", "rdf-xml")
+#' crossref_cn("10.1126/science.169.3946.635", "crossref-xml")
+#' crossref_cn("10.1126/science.169.3946.635", "bibtex")
 #' # return an R bibentry type
-#' crossref_cn("10.1126/science.169.3946.635", "bibentry") 
+#' crossref_cn("10.1126/science.169.3946.635", "bibentry")
 #' return an apa style citation
-#' crossref_cn("10.1126/science.169.3946.635", "text", "apa") 
+#' crossref_cn("10.1126/science.169.3946.635", "text", "apa")
 #' }
 #' @export
-crossref_cn <- function(dois, 
+crossref_cn <- function(dois,
                         format = c("rdf-xml", "turtle", "citeproc-json",
                                    "text", "ris", "bibtex", "crossref-xml",
                                    "datacite-xml", "bibentry"),
@@ -54,7 +53,7 @@ crossref_cn <- function(dois,
            "datacite-xml" = "text/xml",
            "bibentry" = "text/plain")
     parser <- select[[format]]
-    out <- content(response, "parsed", parser) 
+    out <- content(response, "parsed", parser)
     if(format == "bibentry")
       out = parse_bibtex(out)
     out
@@ -67,12 +66,9 @@ crossref_cn <- function(dois,
 }
 
 #' @import bibtex
-parse_bibtex <- function(x){ 
+parse_bibtex <- function(x){
   writeLines(x, "tmp.bib")
   output <- read.bib("tmp.bib")
   unlink("tmp.bib")
-  output 
+  output
 }
-
-
-

@@ -1,16 +1,16 @@
 #' Lookup article info via CrossRef with DOI and get a citation count.
-#' 
+#'
+#' @import httr
 #' @importFrom XML xmlParse xpathSApply xmlAttrs
 #' @importFrom RCurl getForm getCurlHandle
 #' @param doi digital object identifier for an article in PLoS Journals
 #' @param url the PLoS API url for the function (should be left to default)
 #' @param key your PLoS API key, either enter, or loads from .Rprofile
 #' @param ... optional additional curl options (debugging tools mostly)
-#' @param curl If using in a loop, call getCurlHandle() first and pass 
+#' @param curl If using in a loop, call getCurlHandle() first and pass
 #'  the returned value in here (avoids unnecessary footprint)
-#' @return citation count 
-#' @importFrom httr GET content stop_for_status
-#' @details See \url{http://labs.crossref.org/openurl/} for more info on this 
+#' @return citation count
+#' @details See \url{http://labs.crossref.org/openurl/} for more info on this
 #' 		Crossref API service.
 #' @seealso \code{\link{crossref_search}}, \code{\link{crossref_r}}, \code{\link{crossref_search_free}}
 #' @author Carl Boettiger \email{cboettig@@gmail.com}
@@ -18,7 +18,7 @@
 #' crossref_citation_count(doi="10.1371/journal.pone.0042793")
 #' }
 #' @export
-crossref_citation_count <- function(doi, url = "http://www.crossref.org/openurl/", 
+crossref_citation_count <- function(doi, url = "http://www.crossref.org/openurl/",
 	key = "cboettig@ropensci.org", ..., curl = getCurlHandle())
 {
   ## Assemble a url query such as:
@@ -33,5 +33,3 @@ crossref_citation_count <- function(doi, url = "http://www.crossref.org/openurl/
   ans <- xmlParse(cite_count_data)
   as.numeric(xpathSApply(ans, "//*[@fl_count]",  function(x) xmlAttrs(x)[["fl_count"]]))
 }
-
-
