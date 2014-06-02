@@ -4,16 +4,30 @@
 \title{Search the CrossRef Fundref API - the works endpoint}
 \usage{
 cr_fundref_works(dois = NULL, query = NULL, filter = NULL,
-  offset = NULL, limit = NULL, ...)
+  offset = NULL, limit = NULL, sample = NULL, sort = NULL,
+  order = NULL, facet = FALSE, ...)
 }
 \arguments{
 \item{dois}{Search by a single DOI or many DOIs.}
 
-\item{format}{name of the format.}
+\item{query}{Query terms}
 
-\item{style}{a CSL style (for text format only)}
+\item{filter}{Filter options. See details.}
 
-\item{locale}{language locale}
+\item{offset}{Number of record to start at, from 1 to infinity.}
+
+\item{limit}{Number of results to return in the query. Not relavant when searching with specific
+dois. Default: 20. Max: 1000}
+
+\item{sample}{(integer) Number of random results to return. when you use the sample parameter,
+the rows and offset parameters are ignored.}
+
+\item{sort}{(character) Field to sort on, one of score, relevance, updated, deposited, indexed,
+or published.}
+
+\item{order}{(character) Sort order, one of 'asc' or 'desc'}
+
+\item{facet}{(logical) Include facet results.}
 
 \item{...}{Named parameters passed on to httr::GET}
 }
@@ -22,12 +36,39 @@ BEWARE: The API will only work for CrossRef DOIs.
 }
 \details{
 See \url{bit.ly/1nIjfN5} for more info on the Fundref API service.
+
+See the filters vignette for options for filters.
 }
 \examples{
 \dontrun{
+# Works funded by the NSF
 cr_fundref_works(query="NSF")
-cr_fundref_works(dois='10.13039/100000001')
-cr_fundref_works(dois='10.13039/100000001')
+# Works that include renear but not ontologies
+cr_fundref_works(query="renear+-ontologies")
+# Filter
+cr_fundref_works(query="global state", filter='has-orcid:true', limit=1)
+# Filter by multiple fields
+cr_fundref_works(filter=c(has_orcid=TRUE, from_pub_date='2004-04-04'))
+
+# Querying dois
+cr_fundref_works(dois='10.1063/1.3593378')
+cr_fundref_works(dois='10.1007/12080.1874-1746')
+cr_fundref_works(dois=c('10.1007/12080.1874-1746','10.1007/10452.1573-5125',
+                       '10.1111/(issn)1442-9993'))
+
+# Include facetting in results
+cr_fundref_works(query="NSF", facet=TRUE)
+## Get facets only, by setting limit=0
+cr_fundref_works(query="NSF", facet=TRUE, limit=0)
+
+# Sort results
+cr_fundref_works(query="ecology", sort='relevance', order="asc")
+res <- cr_fundref_works(query="ecology", sort='score', order="asc")
+sapply(res$items, "[[", "score")
+
+# Get a random number of results
+cr_fundref_works(sample=1)
+cr_fundref_works(sample=10)
 }
 }
 \author{

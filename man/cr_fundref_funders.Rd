@@ -3,44 +3,60 @@
 \alias{cr_fundref_funders}
 \title{Search the CrossRef Fundref API - the funders endpoint}
 \usage{
-cr_fundref_funders(funder_dois = NULL, query = NULL, filter = NULL,
-  offset = NULL, limit = NULL, works = FALSE, ...)
+cr_fundref_funders(dois = NULL, query = NULL, filter = NULL,
+  offset = NULL, limit = NULL, sample = NULL, sort = NULL,
+  order = NULL, facet = FALSE, works = FALSE, ...)
 }
 \arguments{
-\item{funder_dois}{Search by a single DOI or many DOIs.}
+\item{dois}{Search by a single DOI or many DOIs.}
 
-\item{format}{name of the format.}
+\item{query}{Query terms}
 
-\item{style}{a CSL style (for text format only)}
+\item{filter}{Filter options. See details.}
 
-\item{locale}{language locale}
+\item{offset}{Number of record to start at, from 1 to infinity.}
+
+\item{limit}{Number of results to return in the query. Not relavant when searching with specific
+dois. Default: 20. Max: 1000}
+
+\item{sample}{(integer) Number of random results to return. when you use the sample parameter,
+the rows and offset parameters are ignored.}
+
+\item{sort}{(character) Field to sort on, one of score, relevance, updated, deposited, indexed,
+or published.}
+
+\item{order}{(character) Sort order, one of 'asc' or 'desc'}
+
+\item{facet}{(logical) Include facet results.}
 
 \item{...}{Named parameters passed on to httr::GET}
+
+\item{works}{(logical) If TRUE, works returned as well, if not then not.}
 }
 \description{
 BEWARE: The API will only work for CrossRef DOIs.
 }
 \details{
 See \url{bit.ly/1nIjfN5} for more info on the Fundref API service.
+
+See the filters vignette for options for filters.
 }
 \examples{
 \dontrun{
 cr_fundref_funders(query="NSF")
 cr_fundref_funders(query="NSF", limit=1)
-cr_fundref_funders(funder_dois='10.13039/100000001')
-out <- cr_fundref_funders(funder_dois=c('10.13039/100000001','10.13039/100000015'))
+cr_fundref_funders(dois='10.13039/100000001')
+cr_fundref_funders(dois='10.13039/100000001', works=TRUE)
+out <- cr_fundref_funders(dois=c('10.13039/100000001','10.13039/100000015'))
 out['10.13039/100000001']
 out[['10.13039/100000001']]
 
-# Check the DOI minting agency
-cr_agency(funder_dois='10.13039/100000001')
-
-cr_fundref_funders(funder_dois='10.13039/100000001')
-cr_fundref_funders(funder_dois='10.13039/100000001')
+cr_fundref_funders(dois='10.13039/100000001')
+cr_fundref_funders(dois='10.13039/100000001')
 
 # Curl options
 library('httr')
-cr_fundref_funders(funder_dois='10.13039/100000001', config=verbose())
+cr_fundref_funders(dois='10.13039/100000001', config=verbose())
 }
 }
 \author{
