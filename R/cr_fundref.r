@@ -11,7 +11,7 @@
 #' cr_fundref_funders(query="NSF")
 #' cr_fundref_funders(query="NSF", limit=1)
 #' cr_fundref_funders(dois='10.13039/100000001')
-#' cr_fundref_funders(dois='10.13039/100000001', works=TRUE)
+#' cr_fundref_funders(dois='10.13039/100000001', works=TRUE, limit=2)
 #' out <- cr_fundref_funders(dois=c('10.13039/100000001','10.13039/100000015'))
 #' out['10.13039/100000001']
 #' out[['10.13039/100000001']]
