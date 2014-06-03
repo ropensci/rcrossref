@@ -5,7 +5,7 @@
 \usage{
 cr_cn(dois, format = c("rdf-xml", "turtle", "citeproc-json", "text", "ris",
   "bibtex", "crossref-xml", "datacite-xml", "bibentry"), style = NULL,
-  locale = "en-US")
+  locale = "en-US", ...)
 }
 \arguments{
 \item{dois}{Search by a single DOI or many DOIs.}
@@ -15,6 +15,8 @@ cr_cn(dois, format = c("rdf-xml", "turtle", "citeproc-json", "text", "ris",
 \item{style}{a CSL style (for text format only)}
 
 \item{locale}{language locale}
+
+\item{...}{optional additional curl options (debugging tools mostly) passed on to httr::GET}
 }
 \description{
 Search the CrossRef Metatdata API.
@@ -31,7 +33,7 @@ cr_cn("10.1126/science.169.3946.635", "crossref-xml")
 cr_cn("10.1126/science.169.3946.635", "bibtex")
 # return an R bibentry type
 cr_cn("10.1126/science.169.3946.635", "bibentry")
-return an apa style citation
+# return an apa style citation - eg. not working right now., 406 error
 cr_cn("10.1126/science.169.3946.635", "text", "apa")
 }
 }

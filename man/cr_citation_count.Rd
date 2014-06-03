@@ -4,7 +4,7 @@
 \title{Lookup article info via CrossRef with DOI and get a citation count.}
 \usage{
 cr_citation_count(doi, url = "http://www.crossref.org/openurl/",
-  key = "cboettig@ropensci.org", ..., curl = getCurlHandle())
+  key = "cboettig@ropensci.org", ...)
 }
 \arguments{
 \item{doi}{digital object identifier for an article in PLoS Journals}
@@ -13,10 +13,7 @@ cr_citation_count(doi, url = "http://www.crossref.org/openurl/",
 
 \item{key}{your PLoS API key, either enter, or loads from .Rprofile}
 
-\item{...}{optional additional curl options (debugging tools mostly)}
-
-\item{curl}{If using in a loop, call getCurlHandle() first and pass
-the returned value in here (avoids unnecessary footprint)}
+\item{...}{optional additional curl options (debugging tools mostly) passed on to httr::GET}
 }
 \value{
 citation count
@@ -31,6 +28,7 @@ See \url{http://labs.crossref.org/openurl/} for more info on this
 \examples{
 \dontrun{
 cr_citation_count(doi="10.1371/journal.pone.0042793")
+cr_citation_count(doi="10.1016/j.fbr.2012.01.001")
 }
 }
 \author{

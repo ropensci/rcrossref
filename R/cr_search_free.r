@@ -3,9 +3,12 @@
 #' @import httr
 #' @importFrom plyr rbind.fill llply
 #' @importFrom RJSONIO toJSON
+#' @export
+#' 
 #' @param query Reference query; a character vector of length 1 or greater,
 #' 		comma-separated of course.
 #' @param url Base url for the Crossref metadata API.
+#' 
 #' @details Have to have at least three terms in each search query.
 #' @seealso \code{\link{cr_search}}, \code{\link{cr_r}}, \code{\link{cr_citation}}
 #' @author Scott Chamberlain \email{myrmecocystus@@gmail.com}
@@ -31,15 +34,18 @@
 #'						 "karthik ram Metapopulation dynamics override local limits")
 #' cr_search_free(queries)
 #' }
-#' @export
+
 cr_search_free <- function(query,
 		url = "http://search.labs.crossref.org/links")
 {
 	query2 <- RJSONIO::toJSON(c(query))
-	out <- content(POST(url, body=query2))$results
-	if(length(out)==1){ data.frame(out) } else
+	tt <- POST(url, body=query2)
+  stop_for_status(tt)
+  res <- content(tt, as = "text")
+	out <- fromJSON(res, simplifyWithNames = FALSE)$results
+	if(length(out)==1){ data.frame(out, stringsAsFactors = FALSE) } else
 		{
-			temp <- llply(out, data.frame)
+			temp <- llply(out, data.frame, stringsAsFactors = FALSE)
 			rbind.fill(temp)
 		}
 }

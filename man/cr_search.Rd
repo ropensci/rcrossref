@@ -49,7 +49,8 @@ cr_search(query = c("renear", "palmer"), year = 2010)
 cr_search(doi = "10.1890/10-0340.1")
 
 # search for many DOI's
-cr_search(doi = c("10.1890/10-0340.1","10.1016/j.fbr.2012.01.001","10.1111/j.1469-8137.2012.04121.x"))
+cr_search(doi = c("10.1890/10-0340.1","10.1016/j.fbr.2012.01.001",
+                  "10.1111/j.1469-8137.2012.04121.x"))
 }
 }
 \author{

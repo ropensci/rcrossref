@@ -4,7 +4,7 @@
 \title{Lookup article info via CrossRef with DOI and get a citation.}
 \usage{
 cr_citation(doi, title = FALSE, url = "http://www.crossref.org/openurl/",
-  key = "cboettig@gmail.com", ..., curl = getCurlHandle())
+  key = "cboettig@gmail.com", ...)
 }
 \arguments{
 \item{doi}{digital object identifier for an article in PLoS Journals}
@@ -15,10 +15,7 @@ cr_citation(doi, title = FALSE, url = "http://www.crossref.org/openurl/",
 
 \item{key}{your PLoS API key, either enter, or loads from .Rprofile}
 
-\item{...}{optional additional curl options (debugging tools mostly)}
-
-\item{curl}{If using in a loop, call getCurlHandle() first and pass
-the returned value in here (avoids unnecessary footprint)}
+\item{...}{optional additional curl options (debugging tools mostly) passed on to httr::GET}
 }
 \value{
 Metadata from DOI in R's bibentry format.

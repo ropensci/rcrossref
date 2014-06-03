@@ -1,10 +1,14 @@
 #' Search the CrossRef Metatdata API.
 #'
 #' @import httr
+#' @export
+#' 
 #' @param dois Search by a single DOI or many DOIs.
 #' @param format name of the format.
 #' @param style a CSL style (for text format only)
 #' @param locale language locale
+#' @param ... optional additional curl options (debugging tools mostly) passed on to httr::GET
+#' 
 #' @details See \url{http://www.crosscite.org/cn/} for more info on this
 #'   	Crossref Content Negotiation API service.
 #' @author Scott Chamberlain \email{myrmecocystus@@gmail.com}
@@ -15,16 +19,16 @@
 #' cr_cn("10.1126/science.169.3946.635", "bibtex")
 #' # return an R bibentry type
 #' cr_cn("10.1126/science.169.3946.635", "bibentry")
-#' return an apa style citation
+#' # return an apa style citation - eg. not working right now., 406 error
 #' cr_cn("10.1126/science.169.3946.635", "text", "apa")
 #' }
-#' @export
+
 cr_cn <- function(dois,
                         format = c("rdf-xml", "turtle", "citeproc-json",
                                    "text", "ris", "bibtex", "crossref-xml",
                                    "datacite-xml", "bibentry"),
                         style = NULL,
-                        locale = "en-US"){
+                        locale = "en-US", ...){
   format <- match.arg(format)
   cn <- function(doi){
     url <- paste("http://dx.doi.org", doi, sep="/")
@@ -41,7 +45,8 @@ cr_cn <- function(dois,
     type <- pick[[format]]
     if(format == "text")
       type <- paste(type, "; style = ", style, "; locale = ", locale, sep="")
-    response <- GET(url, add_headers(Accept = type))
+    response <- GET(url, add_headers(Accept = type), ...)
+    stop_for_status(response)
     select <- c(
            "rdf-xml" = "text/xml",
            "turtle" = "text/plain",

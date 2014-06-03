@@ -4,6 +4,8 @@
 #'    on scholarly publications."
 #'
 #' @import httr
+#' @export
+#' 
 #' @param count The number of returned random DOIs. Maximum is 1000, default 20.
 #'    Note that a request for 1000 random DOIs will take a few seconds to
 #'    complete, whereas a request for 20 will take ~1 second.
@@ -21,6 +23,7 @@
 #' 		won't match because of how metadata has been submitted to CrossRef. If it
 #' 		doesn't, try the form xxxxxxxx .
 #' @param ... Further args passed on to httr::GET
+#' 
 #' @return A character vector of DOIs
 #' @details From the Crossref documentation: A random distribution of values,
 #'    0 to 1, has been assigned to our DOI records. We use this as an index to
@@ -33,7 +36,6 @@
 #' @author Scott Chamberlain \email{myrmecocystus@@gmail.com}
 #' @seealso \code{\link{cr_search}}, \code{\link{cr_citation}},
 #' \code{\link{cr_search_free}}
-#' @export
 #' @examples \dontrun{
 #' # Default search gets 20 random DOIs
 #' cr_r()
@@ -44,12 +46,14 @@
 #' # Specify you want journal articles only
 #' cr_r(type = 'journal_article')
 #' }
+
 cr_r <- function(count = NULL, to = NULL, from = NULL, type = NULL, issn = NULL, ...)
 {
 	url = "http://random.labs.crossref.org/dois"
 	args <- cr_compact(list(count = count, to = to, from = from, type = type, issn = issn))
 	random_dois <- GET(url, query = args, ...)
   stop_for_status(random_dois)
-   # Coerce to list otherwise it returns a character
-	as.list(content(random_dois))
+	res <- content(random_dois, as = "text")
+  out <- fromJSON(res, simplifyWithNames = FALSE)
+	as.list(out)
 }
