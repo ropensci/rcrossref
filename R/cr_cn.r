@@ -70,10 +70,11 @@ cr_cn <- function(dois,
     cn(dois)
 }
 
-#' @import bibtex
+#' @import bibtex RefManageR
 parse_bibtex <- function(x){
-  writeLines(x, "tmp.bib")
-  output <- read.bib("tmp.bib")
-  unlink("tmp.bib")
+  x <- gsub("@[Dd]ata", "@Misc", x)
+  writeLines(x, "tmpscratch.bib")
+  output <- read.bib("tmpscratch.bib")
+  unlink("tmpscratch.bib")
   output
 }
