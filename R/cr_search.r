@@ -10,6 +10,7 @@
 #' @param rows Number of records to return.
 #' @param sort Sort either by "score" or "year".
 #' @param year Year to search.
+#' @param type Record type, e.g., "Journal Article" or "Journal Issue"
 #' 
 #' @details See \url{http://search.labs.crossref.org/help/api} for more info on this
 #' 		Crossref API service.
@@ -39,10 +40,13 @@
 #' # search for many DOI's
 #' cr_search(doi = c("10.1890/10-0340.1","10.1016/j.fbr.2012.01.001",
 #'                   "10.1111/j.1469-8137.2012.04121.x"))
+#'                   
+#' # find all the records of articles from a journal ISBN
+#' cr_search(query = "1461-0248", type="Journal Article")
 #' }
 
 cr_search <- function(query, doi = NULL, page = NULL, rows = NULL,
-	sort = NULL, year = NULL)
+	sort = NULL, year = NULL, type = NULL)
 {
 	url = "http://search.labs.crossref.org/dois"
 
@@ -52,7 +56,7 @@ cr_search <- function(query, doi = NULL, page = NULL, rows = NULL,
 	}
 	if(!is.null(doi)){ doi <- as.character(doi) } else {doi <- doi}
 	if(is.null(doi)){
-		args <- cr_compact(list(q=query, page=page, rows=rows, sort=sort, year=year))
+		args <- cr_compact(list(q=query, page=page, rows=rows, sort=sort, year=year, type=type))
 		tt <- GET(url, query=args)
     stop_for_status(tt)
 		res <- content(tt, as = "text")
@@ -63,7 +67,7 @@ cr_search <- function(query, doi = NULL, page = NULL, rows = NULL,
 	} else
 		{
 			doicall <- function(x) {
-				args <- cr_compact(list(q=x, page=page, rows=rows, sort=sort, year=year))
+				args <- cr_compact(list(q=x, page=page, rows=rows, sort=sort, year=year, type=type))
 				out <- content(GET(url, query=args))
 				out2 <- llply(out, replacenull)
 				output <- ldply(out2, function(x) as.data.frame(x, stringsAsFactors = FALSE))
