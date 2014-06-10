@@ -4,7 +4,7 @@
 \title{Search the CrossRef Metatdata API.}
 \usage{
 cr_search(query, doi = NULL, page = NULL, rows = NULL, sort = NULL,
-  year = NULL)
+  year = NULL, type = NULL)
 }
 \arguments{
 \item{query}{Query terms.}
@@ -18,6 +18,8 @@ cr_search(query, doi = NULL, page = NULL, rows = NULL, sort = NULL,
 \item{sort}{Sort either by "score" or "year".}
 
 \item{year}{Year to search.}
+
+\item{type}{Record type, e.g., "Journal Article" or "Journal Issue"}
 }
 \description{
 Search the CrossRef Metatdata API.
@@ -51,6 +53,9 @@ cr_search(doi = "10.1890/10-0340.1")
 # search for many DOI's
 cr_search(doi = c("10.1890/10-0340.1","10.1016/j.fbr.2012.01.001",
                   "10.1111/j.1469-8137.2012.04121.x"))
+
+# find all the records of articles from a journal ISBN
+cr_search(query = "1461-0248", type="Journal Article")
 }
 }
 \author{
