@@ -71,9 +71,9 @@ cr_cn <- function(dois,
   if(length(dois) > 1)
     lapply(dois, function(z) {
       out = try(cn(z))
-      if("try-error" %in% class(out)) {
+      if("try-error" %in% class(out), silent=TRUE) {
         warning(paste0("Failure in resolving '", z, "'. See error detail in results."))
-        out <- out[[1]]
+        out <- list(doi=z, error=out[[1]])
       }
       return(out) 
     })
