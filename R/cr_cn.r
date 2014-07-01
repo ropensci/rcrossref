@@ -65,7 +65,13 @@ cr_cn <- function(dois,
   }
 
   if(length(dois) > 1)
-    lapply(dois, cn)
+    lapply(dois, function(z) {
+      out = try(cn(z))
+      if("try-error" %in% class(out)) {
+        warning(paste0("Failure in resolving '", z, "'. See error detail in results."))
+      }
+      return(out) 
+    })
   else
     cn(dois)
 }
