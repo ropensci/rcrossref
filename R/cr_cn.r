@@ -27,8 +27,7 @@
 #' cr_cn(dois, "text", "apa")
 #' }
 
-cr_cn <- function(dois,
-                        format = c("rdf-xml", "turtle", "citeproc-json",
+cr_cn <- function(dois, format = c("rdf-xml", "turtle", "citeproc-json",
                                    "text", "ris", "bibtex", "crossref-xml",
                                    "datacite-xml", "bibentry"),
                         style = NULL,
@@ -73,7 +72,7 @@ cr_cn <- function(dois,
       out = try(cn(z))
       if("try-error" %in% class(out), silent=TRUE) {
         warning(paste0("Failure in resolving '", z, "'. See error detail in results."))
-        out <- list(doi=z, error=out[[1]])
+        out = list(doi=z, error=out[[1]],)
       }
       return(out) 
     })
