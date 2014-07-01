@@ -27,7 +27,7 @@ See \url{http://www.crosscite.org/cn/} for more info on this
 }
 \examples{
 \dontrun{
-cr_cn("10.1126/science.169.3946.635", "citeproc-json")
+cr_cn(dois="10.1126/science.169.3946.635", format="citeproc-json")
 cr_cn("10.1126/science.169.3946.635", "rdf-xml")
 cr_cn("10.1126/science.169.3946.635", "crossref-xml")
 cr_cn("10.1126/science.169.3946.635", "bibtex")
@@ -35,6 +35,10 @@ cr_cn("10.1126/science.169.3946.635", "bibtex")
 cr_cn("10.1126/science.169.3946.635", "bibentry")
 # return an apa style citation - eg. not working right now., 406 error
 cr_cn("10.1126/science.169.3946.635", "text", "apa")
+
+# example with many DOIs
+dois <- cr_r(10)
+cr_cn(dois, "text", "apa")
 }
 }
 \author{
