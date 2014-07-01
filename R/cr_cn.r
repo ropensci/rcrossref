@@ -13,7 +13,7 @@
 #'   	Crossref Content Negotiation API service.
 #' @author Scott Chamberlain \email{myrmecocystus@@gmail.com}
 #' @examples \dontrun{
-#' cr_cn("10.1126/science.169.3946.635", "citeproc-json")
+#' cr_cn(dois="10.1126/science.169.3946.635", format="citeproc-json")
 #' cr_cn("10.1126/science.169.3946.635", "rdf-xml")
 #' cr_cn("10.1126/science.169.3946.635", "crossref-xml")
 #' cr_cn("10.1126/science.169.3946.635", "bibtex")
@@ -21,10 +21,13 @@
 #' cr_cn("10.1126/science.169.3946.635", "bibentry")
 #' # return an apa style citation - eg. not working right now., 406 error
 #' cr_cn("10.1126/science.169.3946.635", "text", "apa")
+#' 
+#' # example with many DOIs
+#' dois <- cr_r(10)
+#' cr_cn(dois, "text", "apa")
 #' }
 
-cr_cn <- function(dois,
-                        format = c("rdf-xml", "turtle", "citeproc-json",
+cr_cn <- function(dois, format = c("rdf-xml", "turtle", "citeproc-json",
                                    "text", "ris", "bibtex", "crossref-xml",
                                    "datacite-xml", "bibentry"),
                         style = NULL,
@@ -69,7 +72,7 @@ cr_cn <- function(dois,
       out = try(cn(z), silent=TRUE)
       if("try-error" %in% class(out)) {
         warning(paste0("Failure in resolving '", z, "'. See error detail in results."))
-        out = list(error=out, doi=z)
+        out = list(error=out[[1]], doi=z)
       }
       return(out) 
     })
