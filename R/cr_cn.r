@@ -1,12 +1,13 @@
 #' Search the CrossRef Metatdata API.
 #'
-#' @import httr
+#' @import httr plyr
 #' @export
 #' 
 #' @param dois Search by a single DOI or many DOIs.
 #' @param format name of the format.
 #' @param style a CSL style (for text format only)
 #' @param locale language locale
+#' @param progress Show a \code{plyr}-style progress bar? Options are "none", "text", "tk", "win, and "time".  See \link[pkg:plyr]{create_progress_bar} for details of each.
 #' @param ... optional additional curl options (debugging tools mostly) passed on to httr::GET
 #' 
 #' @details See \url{http://www.crosscite.org/cn/} for more info on this
@@ -25,6 +26,7 @@
 #' # example with many DOIs
 #' dois <- cr_r(10)
 #' cr_cn(dois, "text", "apa")
+#' cr_cn(dois, "text", "apa", .progress="time")
 #' }
 
 cr_cn <- function(dois,
@@ -32,7 +34,8 @@ cr_cn <- function(dois,
                                    "text", "ris", "bibtex", "crossref-xml",
                                    "datacite-xml", "bibentry"),
                         style = NULL,
-                        locale = "en-US", ...){
+                        locale = "en-US",
+                        .progress="non", ...){
   format <- match.arg(format)
   cn <- function(doi){
     url <- paste("http://dx.doi.org", doi, sep="/")
@@ -69,14 +72,14 @@ cr_cn <- function(dois,
   }
 
   if(length(dois) > 1)
-    lapply(dois, function(z) {
+    llply(dois, function(z) {
       out = try(cn(z), silent=TRUE)
       if("try-error" %in% class(out)) {
         warning(paste0("Failure in resolving '", z, "'. See error detail in results."))
         out <- list(doi=z, error=out[[1]])
       }
       return(out) 
-    })
+    }, .progress=.progress)
   else
     cn(dois)
 }
