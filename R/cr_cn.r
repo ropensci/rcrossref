@@ -7,9 +7,8 @@
 #' @param format name of the format.
 #' @param style a CSL style (for text format only)
 #' @param locale language locale
-#' @param progress Show a \code{plyr}-style progress bar? Options are "none", "text", "tk", "win, and "time".  See \link[pkg:plyr]{create_progress_bar} for details of each.
+#' @param progress Show a \code{plyr}-style progress bar? Options are "none", "text", "tk", "win, and "time".  See \link[pkg:plyr]{create_progress_bar} for details of each. 
 #' @param ... optional additional curl options (debugging tools mostly) passed on to httr::GET
-#' 
 #' @details See \url{http://www.crosscite.org/cn/} for more info on this
 #'   	Crossref Content Negotiation API service.
 #' @author Scott Chamberlain \email{myrmecocystus@@gmail.com}
@@ -35,7 +34,7 @@ cr_cn <- function(dois,
                                    "datacite-xml", "bibentry"),
                         style = NULL,
                         locale = "en-US",
-                        .progress="non", ...){
+                        .progress="none", ...){
   format <- match.arg(format)
   cn <- function(doi){
     url <- paste("http://dx.doi.org", doi, sep="/")
