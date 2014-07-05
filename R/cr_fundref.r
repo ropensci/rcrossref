@@ -2,7 +2,7 @@
 #' 
 #' BEWARE: The API will only work for CrossRef DOIs.
 #'
-#' @import httr RJSONIO assertthat
+#' @import httr RJSONIO assertthat plyr
 #' @export
 #' @param dois Search by a single DOI or many DOIs.
 #' @template args
@@ -25,7 +25,7 @@
 #' }
 
 `cr_fundref_funders` <- function(dois = NULL, query = NULL, filter = NULL, offset = NULL, 
-  limit = NULL,  sample = NULL, sort = NULL, order = NULL, facet=FALSE, works = FALSE, ...)
+  limit = NULL,  sample = NULL, sort = NULL, order = NULL, facet=FALSE, works = FALSE, .progress="none", ...)
 {
   foo <- function(x){
     path <- if(!is.null(x)){
@@ -39,7 +39,7 @@
   }
 
   if(length(dois) > 1){
-    res <- lapply(dois, foo)
+    res <- llply(dois, foo, .progress=.progress)
     res <- lapply(res, "[[", "message")
     names(res) <- dois
     res
@@ -51,6 +51,7 @@
 #' 
 #' BEWARE: The API will only work for CrossRef DOIs.
 #'
+#' @import plyr
 #' @export
 #' @param member_ids One or more member ids. See examples. ALternatively, you can query for them
 #' using the query parameter.
@@ -69,7 +70,7 @@
 #' }
 
 `cr_fundref_members` <- function(member_ids = NULL, query = NULL, filter = NULL, offset = NULL, 
-  limit = NULL, sample = NULL, sort = NULL, order = NULL, facet=FALSE, works = FALSE, ...)
+  limit = NULL, sample = NULL, sort = NULL, order = NULL, facet=FALSE, works = FALSE, .progress="none", ...)
 {
   foo <- function(x){  
     path <- if(!is.null(x)) sprintf("members/%s", x) else "members"
@@ -81,7 +82,7 @@
   }
   
   if(length(member_ids) > 1){
-    res <- lapply(member_ids, foo)
+    res <- llply(member_ids, foo, .progress=.progress)
     res <- lapply(res, "[[", "message")
     names(res) <- member_ids
     res
@@ -92,6 +93,7 @@
 #' 
 #' BEWARE: The API will only work for CrossRef DOIs.
 #'
+#' @import plyr
 #' @export
 #' @param dois Search by a single DOI or many DOIs.
 #' @template args
@@ -127,7 +129,7 @@
 #' }
 
 `cr_fundref_works` <- function(dois = NULL, query = NULL, filter = NULL, offset = NULL, 
-  limit = NULL, sample = NULL, sort = NULL, order = NULL, facet=FALSE, ...)
+  limit = NULL, sample = NULL, sort = NULL, order = NULL, facet=FALSE, .progress="none", ...)
 {
   foo <- function(x){
     path <- if(!is.null(x)) sprintf("works/%s", x) else "works"
@@ -139,7 +141,7 @@
   }
   
   if(length(dois) > 1){
-    res <- lapply(dois, foo)
+    res <- llply(dois, foo, .progress=.progress)
     res <- lapply(res, "[[", "message")
     names(res) <- dois
     res
@@ -161,8 +163,10 @@ filter_handler <- function(x){
 
 #' Check the DOI minting agency on one or more dois
 #'
+#' @import plyr
 #' @export
 #' @param dois (character) One or more article or organization dois.
+#' @param progress Show a \code{plyr}-style progress bar? Options are "none", "text", "tk", "win, and "time".  See \link[pkg:plyr]{create_progress_bar} for details of each.
 #' @param ... Named parameters passed on to httr::GET
 #' @details See \url{bit.ly/1nIjfN5} for more info on the Fundref API service.
 #' @author Scott Chamberlain \email{myrmecocystus@@gmail.com}
@@ -175,10 +179,10 @@ filter_handler <- function(x){
 `cr_agency` <- function(dois = NULL, ...)
 {
   foo <- function(x){
-    fundref_GET(endpoint = sprintf("works/%s/agency", x), args=list(), ...)
+    fundref_GET(endpoint = sprintf("works/%s/agency", x), args=list(), .progress="none",...)
   }
   if(length(dois) > 1){
-    res <- lapply(dois, foo)
+    res <- llply(dois, foo, .progress=.progress)
     res <- lapply(res, "[[", "message")
     names(res) <- dois
     res
