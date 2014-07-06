@@ -5,7 +5,7 @@
 \usage{
 cr_cn(dois, format = c("rdf-xml", "turtle", "citeproc-json", "text", "ris",
   "bibtex", "crossref-xml", "datacite-xml", "bibentry"), style = NULL,
-  locale = "en-US", ...)
+  locale = "en-US", .progress = "none", ...)
 }
 \arguments{
 \item{dois}{Search by a single DOI or many DOIs.}
@@ -17,6 +17,8 @@ cr_cn(dois, format = c("rdf-xml", "turtle", "citeproc-json", "text", "ris",
 \item{locale}{language locale}
 
 \item{...}{optional additional curl options (debugging tools mostly) passed on to httr::GET}
+
+\item{progress}{Show a \code{plyr}-style progress bar? Options are "none", "text", "tk", "win, and "time".  See \link[pkg:plyr]{create_progress_bar} for details of each.}
 }
 \description{
 Search the CrossRef Metatdata API.
@@ -39,6 +41,7 @@ cr_cn("10.1126/science.169.3946.635", "text", "apa")
 # example with many DOIs
 dois <- cr_r(10)
 cr_cn(dois, "text", "apa")
+cr_cn(dois, "text", "apa", .progress="time")
 }
 }
 \author{

@@ -5,7 +5,7 @@
 \usage{
 cr_fundref_works(dois = NULL, query = NULL, filter = NULL,
   offset = NULL, limit = NULL, sample = NULL, sort = NULL,
-  order = NULL, facet = FALSE, ...)
+  order = NULL, facet = FALSE, .progress = "none", ...)
 }
 \arguments{
 \item{dois}{Search by a single DOI or many DOIs.}
@@ -30,6 +30,8 @@ or published.}
 \item{facet}{(logical) Include facet results.}
 
 \item{...}{Named parameters passed on to httr::GET}
+
+\item{progress}{Show a \code{plyr}-style progress bar? Options are "none", "text", "tk", "win, and "time".  See \link[pkg:plyr]{create_progress_bar} for details of each.}
 }
 \description{
 BEWARE: The API will only work for CrossRef DOIs.

@@ -9,6 +9,8 @@ cr_agency(dois = NULL, ...)
 \item{dois}{(character) One or more article or organization dois.}
 
 \item{...}{Named parameters passed on to httr::GET}
+
+\item{progress}{Show a \code{plyr}-style progress bar? Options are "none", "text", "tk", "win, and "time".  See \link[pkg:plyr]{create_progress_bar} for details of each.}
 }
 \description{
 Check the DOI minting agency on one or more dois
