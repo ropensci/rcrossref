@@ -20,4 +20,4 @@ Imports:
     assertthat
 Suggests:
     testthat,
-    roxygen2
+    roxygen2 (>= 4.0.1)
