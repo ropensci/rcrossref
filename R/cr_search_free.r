@@ -1,14 +1,13 @@
 #' Search the CrossRef Metatdata for DOIs using free form references.
 #'
 #' @import httr
-#' @importFrom plyr rbind.fill llply
 #' @importFrom RJSONIO toJSON
 #' @export
-#' 
+#'
 #' @param query Reference query; a character vector of length 1 or greater,
 #' 		comma-separated of course.
 #' @param url Base url for the Crossref metadata API.
-#' 
+#'
 #' @details Have to have at least three terms in each search query.
 #' @seealso \code{\link{cr_search}}, \code{\link{cr_r}}, \code{\link{cr_citation}}
 #' @author Scott Chamberlain \email{myrmecocystus@@gmail.com}

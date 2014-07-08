@@ -1,9 +1,8 @@
 #' Search the CrossRef Metatdata API.
 #'
 #' @import httr RJSONIO
-#' @importFrom plyr ldply llply
 #' @export
-#' 
+#'
 #' @param query Query terms.
 #' @param doi Search by a single DOI or many DOIs.
 #' @param page Page to return from results.
@@ -11,7 +10,7 @@
 #' @param sort Sort either by "score" or "year".
 #' @param year Year to search.
 #' @param type Record type, e.g., "Journal Article" or "Journal Issue"
-#' 
+#'
 #' @details See \url{http://search.labs.crossref.org/help/api} for more info on this
 #' 		Crossref API service.
 #' @seealso \code{\link{cr_r}}, \code{\link{cr_citation}}, \code{\link{cr_search_free}}
@@ -40,7 +39,7 @@
 #' # search for many DOI's
 #' cr_search(doi = c("10.1890/10-0340.1","10.1016/j.fbr.2012.01.001",
 #'                   "10.1111/j.1469-8137.2012.04121.x"))
-#'                   
+#'
 #' # find all the records of articles from a journal ISBN
 #' cr_search(query = "1461-0248", type="Journal Article")
 #' }
