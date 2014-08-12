@@ -5,4 +5,4 @@ travis-tool.sh
 vignettes/margins.sty
 Makefile
 inst/stuff/
-tests/test-all.R
+^appveyor\.yml$

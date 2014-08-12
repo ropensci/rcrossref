@@ -1,6 +1,8 @@
 rcrossref
 =========
 
+[![Build status](https://ci.appveyor.com/api/projects/status/jbo6y7dg4qiq7mol/branch/master)](https://ci.appveyor.com/project/sckott/rcrossref/branch/master)
+
 R interface to the CrossRef API tools
 
 Getting started
