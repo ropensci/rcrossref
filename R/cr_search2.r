@@ -31,7 +31,7 @@ cr_search2 <- function(query, doi = NULL, page = NULL, rows = NULL,
     tt <- GET(url, query=args)
     stop_for_status(tt)
     res <- content(tt, as = "text")
-    out <- fromJSON(res, simplifyWithNames = FALSE)
+    out <- fromJSON(res)
     out2 <- llply(out, replacenull)
     output <- ldply(out2, function(x) as.data.frame(x, stringsAsFactors = FALSE))
     if(nrow(output)==0){"no results"} else{output}

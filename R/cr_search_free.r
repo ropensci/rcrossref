@@ -44,7 +44,7 @@
 	tt <- POST(url, config = c(content_type_json(), accept_json()), body=jsonlite::toJSON(query))
   stop_for_status(tt)
   res <- content(tt, as = "text")
-	out <- fromJSON(res, simplifyWithNames = FALSE)$results
+	out <- fromJSON(res)$results
 	if(length(out)==1){ data.frame(out, stringsAsFactors = FALSE) } else
 		{
 			temp <- llply(out, data.frame, stringsAsFactors = FALSE)
