@@ -43,7 +43,7 @@
 #' cr_search(query = "1461-0248", type="Journal Article")
 #' }
 
-cr_search <- function(query, doi = NULL, page = NULL, rows = NULL,
+`cr_search` <- function(query, doi = NULL, page = NULL, rows = NULL,
 	sort = NULL, year = NULL, type = NULL)
 {
 	url = "http://search.labs.crossref.org/dois"

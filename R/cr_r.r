@@ -20,5 +20,5 @@
 `cr_r` <- function(sample = 10, ...)
 {
   tmp <- cr_works(sample=sample, ...)
-  vapply(tmp$items, "[[", "", "DOI")
+  tmp$items$DOI
 }
