@@ -2,10 +2,11 @@
 #'
 #' BEWARE: The API will only work for CrossRef DOIs.
 #'
-#' @import httr RJSONIO assertthat plyr
 #' @export
+#' 
 #' @param dois Search by a single DOI or many DOIs.
 #' @template args
+#' @template moreargs
 #' @param works (logical) If TRUE, works returned as well, if not then not.
 #' @examples \dontrun{
 #' cr_fundref(query="NSF")

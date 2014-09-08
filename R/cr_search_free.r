@@ -1,7 +1,10 @@
 #' Search the CrossRef Metatdata for DOIs using free form references.
 #'
-#' @import httr
-#' @importFrom jsonlite toJSON
+#' @import httr 
+#' @importFrom assertthat assert_that
+#' @importFrom jsonlite toJSON fromJSON
+#' @importFrom plyr rbind.fill llply ldply
+#' 
 #' @export
 #'
 #' @param query Reference query; a character vector of length 1 or greater,
@@ -30,10 +33,9 @@
 #' vol. 412, no. 4, pp. 2286-2302, Apr. 2011.")
 #'
 #' # Lots of queries
-#' queries <- c("Piwowar sharing data PLOS one",
-#'						 "Priem Scientometrics 2.0 social web",
-#'						 "William Gunn A Crosstalk Between Myeloma Cells",
-#'						 "karthik ram Metapopulation dynamics override local limits")
+#' queries <- c("Piwowar sharing data PLOS one", "Priem Scientometrics 2.0 social web",
+#'	"William Gunn A Crosstalk Between Myeloma Cells", 
+#'  "karthik ram Metapopulation dynamics override local limits")
 #' cr_search_free(queries)
 #' }
 

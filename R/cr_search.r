@@ -1,6 +1,5 @@
 #' Search the CrossRef Metatdata API.
 #'
-#' @import httr RJSONIO
 #' @export
 #'
 #' @param query Query terms.

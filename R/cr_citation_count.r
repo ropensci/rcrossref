@@ -1,14 +1,13 @@
 #' Lookup article info via CrossRef with DOI and get a citation count.
 #'
-#' @import httr
 #' @importFrom XML xmlParse xpathSApply xmlAttrs
 #' @export
-#' 
+#'
 #' @param doi digital object identifier for an article in PLoS Journals
 #' @param url the PLoS API url for the function (should be left to default)
 #' @param key your PLoS API key, either enter, or loads from .Rprofile
 #' @param ... optional additional curl options (debugging tools mostly) passed on to httr::GET
-#' 
+#'
 #' @return citation count
 #' @details See \url{http://labs.crossref.org/openurl/} for more info on this
 #' 		Crossref API service.
@@ -24,7 +23,7 @@ cr_citation_count <- function(doi, url = "http://www.crossref.org/openurl/",
 {
   ## Assemble a url query such as:
   #http://www.crossref.org/openurl/?id=doi:10.3998/3336451.0009.101&noredirect=true&pid=API_KEY&format=unixref
-  args <- list(id = paste("doi:", doi, sep=""), pid = as.character(key), 
+  args <- list(id = paste("doi:", doi, sep=""), pid = as.character(key),
                noredirect = as.logical(TRUE))
 #  args$format=as.character("unixref")
   cite_count <- GET(url, query = args, ...)

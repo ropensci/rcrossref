@@ -1,14 +1,12 @@
 #' Search the CrossRef Metatdata API.
 #'
-#' @import httr plyr
 #' @export
-#' 
+#'
 #' @param dois Search by a single DOI or many DOIs.
 #' @param format name of the format.
 #' @param style a CSL style (for text format only)
 #' @param locale language locale
-#' @param progress Show a \code{plyr}-style progress bar? Options are "none", "text", "tk", "win, and "time".  See \link[pkg:plyr]{create_progress_bar} for details of each. 
-#' @param ... optional additional curl options (debugging tools mostly) passed on to httr::GET
+#' @template moreargs
 #' @details See \url{http://www.crosscite.org/cn/} for more info on this
 #'   	Crossref Content Negotiation API service.
 #' @author Scott Chamberlain \email{myrmecocystus@@gmail.com}
@@ -21,7 +19,7 @@
 #' cr_cn("10.1126/science.169.3946.635", "bibentry")
 #' # return an apa style citation - eg. not working right now., 406 error
 #' cr_cn("10.1126/science.169.3946.635", "text", "apa")
-#' 
+#'
 #' # example with many DOIs
 #' dois <- cr_r(10)
 #' cr_cn(dois, "text", "apa")
@@ -77,13 +75,13 @@ cr_cn <- function(dois,
         warning(paste0("Failure in resolving '", z, "'. See error detail in results."))
         out <- list(doi=z, error=out[[1]])
       }
-      return(out) 
+      return(out)
     }, .progress=.progress)
   else
     cn(dois)
 }
 
-#' @import bibtex 
+#' @import bibtex
 parse_bibtex <- function(x){
   x <- gsub("@[Dd]ata", "@Misc", x)
   writeLines(x, "tmpscratch.bib")

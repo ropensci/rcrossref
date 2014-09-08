@@ -2,16 +2,14 @@
 #'
 #' Options to get formatted citations as bibtext or plain text.
 #'
-#' @import httr
-#' @importFrom XML xmlParse
 #' @export
-#' 
+#'
 #' @param doi digital object identifier for an article in PLoS Journals
 #' @param title return the title of the paper or not (defaults to FALSE)
 #' @param url the PLoS API url for the function (should be left to default)
 #' @param key your PLoS API key, either enter, or loads from .Rprofile
 #' @param ... optional additional curl options (debugging tools mostly) passed on to httr::GET
-#' 
+#'
 #' @return Metadata from DOI in R's bibentry format.
 #' @details See \url{http://labs.crossref.org/openurl/} for more info on this
 #' 		Crossref API service.

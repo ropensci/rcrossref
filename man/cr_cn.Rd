@@ -16,9 +16,10 @@ cr_cn(dois, format = c("rdf-xml", "turtle", "citeproc-json", "text", "ris",
 
 \item{locale}{language locale}
 
-\item{progress}{Show a \code{plyr}-style progress bar? Options are "none", "text", "tk", "win, and "time".  See \link[pkg:plyr]{create_progress_bar} for details of each.}
+\item{.progress}{Show a \code{plyr}-style progress bar? Options are "none", "text", "tk", "win,
+and "time".  See \link[plyr]{create_progress_bar} for details of each.}
 
-\item{...}{optional additional curl options (debugging tools mostly) passed on to httr::GET}
+\item{...}{Named parameters passed on to httr::GET}
 }
 \description{
 Search the CrossRef Metatdata API.

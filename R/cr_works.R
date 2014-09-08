@@ -2,10 +2,11 @@
 #'
 #' BEWARE: The API will only work for CrossRef DOIs.
 #'
-#' @import plyr
 #' @export
+#' 
 #' @param dois Search by a single DOI or many DOIs.
 #' @template args
+#' @template moreargs
 #' @examples \dontrun{
 #' # Works funded by the NSF
 #' cr_works(query="NSF")

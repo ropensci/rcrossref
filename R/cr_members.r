@@ -2,11 +2,12 @@
 #'
 #' BEWARE: The API will only work for CrossRef DOIs.
 #'
-#' @import plyr
 #' @export
+#' 
 #' @param member_ids One or more member ids. See examples. ALternatively, you can query for them
 #' using the query parameter.
 #' @template args
+#' @template moreargs
 #' @param works (logical) If TRUE, works returned as well, if not then not.
 #' @examples \dontrun{
 #' cr_members(member_ids=98)

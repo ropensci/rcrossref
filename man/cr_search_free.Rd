@@ -37,10 +37,9 @@ approach to star-galaxy classification,\\" Monthly Notices of the Royal Astronom
 vol. 412, no. 4, pp. 2286-2302, Apr. 2011.")
 
 # Lots of queries
-queries <- c("Piwowar sharing data PLOS one",
-						 "Priem Scientometrics 2.0 social web",
-						 "William Gunn A Crosstalk Between Myeloma Cells",
-						 "karthik ram Metapopulation dynamics override local limits")
+queries <- c("Piwowar sharing data PLOS one", "Priem Scientometrics 2.0 social web",
+	"William Gunn A Crosstalk Between Myeloma Cells",
+ "karthik ram Metapopulation dynamics override local limits")
 cr_search_free(queries)
 }
 }
