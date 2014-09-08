@@ -9,6 +9,7 @@
 #' @param sort Sort either by "score" or "year".
 #' @param year Year to search.
 #' @param type Record type, e.g., "Journal Article" or "Journal Issue"
+#' @param ... Further args passed to \code{httr::GET} for curl debugging, verbose outputs, etc.
 #'
 #' @details See \url{http://search.labs.crossref.org/help/api} for more info on this
 #' 		Crossref API service.
@@ -41,36 +42,30 @@
 #'
 #' # find all the records of articles from a journal ISBN
 #' cr_search(query = "1461-0248", type="Journal Article")
+#' 
+#' # curl stuff
+#' cr_search(doi = "10.1890/10-0340.1", config=verbose())
+#' cr_search(query = c("renear", "palmer"), rows = 40, config=progress())
 #' }
 
-`cr_search` <- function(query, doi = NULL, page = NULL, rows = NULL,
-	sort = NULL, year = NULL, type = NULL)
+`cr_search` <- function(query=NULL, doi = NULL, page = NULL, rows = NULL, sort = NULL, 
+  year = NULL, type = NULL, ...)
 {
-	url = "http://search.labs.crossref.org/dois"
+  url <- "http://search.labs.crossref.org/dois"
+  if(!is.null(doi)){ doi <- as.character(doi) } else {doi <- doi}
+  if(is.null(doi)){
+    cr_search_GET(url, query, page, rows, sort, year, type, ...)
+  } else
+  {
+    ldply(doi, function(z) cr_search_GET(url, x=z, page, rows, sort, year, type, ...))
+  }
+}
 
-	replacenull <- function(x){
-		x[sapply(x, is.null)] <- NA
-		x
-	}
-	if(!is.null(doi)){ doi <- as.character(doi) } else {doi <- doi}
-	if(is.null(doi)){
-		args <- cr_compact(list(q=query, page=page, rows=rows, sort=sort, year=year, type=type))
-		tt <- GET(url, query=args)
-    stop_for_status(tt)
-		res <- content(tt, as = "text")
-		out <- fromJSON(res)
-		out2 <- llply(out, replacenull)
-		output <- ldply(out2, function(x) as.data.frame(x, stringsAsFactors = FALSE))
-		if(nrow(output)==0){"no results"} else{output}
-	} else
-		{
-			doicall <- function(x) {
-				args <- cr_compact(list(q=x, page=page, rows=rows, sort=sort, year=year, type=type))
-				out <- content(GET(url, query=args))
-				out2 <- llply(out, replacenull)
-				output <- ldply(out2, function(x) as.data.frame(x, stringsAsFactors = FALSE))
-				if(nrow(output)==0){"no results"} else{output}
-			}
-			ldply(doi, doicall)
-		}
+cr_search_GET <- function(url, x, page, rows, sort, year, type, ...){
+  args <- cr_compact(list(q=x, page=page, rows=rows, sort=sort, year=year, type=type))
+  tt <- GET(url, query=args, ...)
+  stop_for_status(tt)
+  res <- content(tt, as = "text")
+  tmp <- fromJSON(res)
+  if(nrow(tmp) == 0) "no results" else tmp
 }

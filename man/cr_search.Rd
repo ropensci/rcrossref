@@ -3,8 +3,8 @@
 \alias{cr_search}
 \title{Search the CrossRef Metatdata API.}
 \usage{
-cr_search(query, doi = NULL, page = NULL, rows = NULL, sort = NULL,
-  year = NULL, type = NULL)
+cr_search(query = NULL, doi = NULL, page = NULL, rows = NULL,
+  sort = NULL, year = NULL, type = NULL, ...)
 }
 \arguments{
 \item{query}{Query terms.}
@@ -20,6 +20,8 @@ cr_search(query, doi = NULL, page = NULL, rows = NULL, sort = NULL,
 \item{year}{Year to search.}
 
 \item{type}{Record type, e.g., "Journal Article" or "Journal Issue"}
+
+\item{...}{Further args passed to \code{httr::GET} for curl debugging, verbose outputs, etc.}
 }
 \description{
 Search the CrossRef Metatdata API.
@@ -56,6 +58,10 @@ cr_search(doi = c("10.1890/10-0340.1","10.1016/j.fbr.2012.01.001",
 
 # find all the records of articles from a journal ISBN
 cr_search(query = "1461-0248", type="Journal Article")
+
+# curl stuff
+cr_search(doi = "10.1890/10-0340.1", config=verbose())
+cr_search(query = c("renear", "palmer"), rows = 40, config=progress())
 }
 }
 \author{
