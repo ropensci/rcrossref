@@ -36,6 +36,7 @@ cr_cn("10.1126/science.169.3946.635", "crossref-xml")
 cr_cn("10.1126/science.169.3946.635", "bibtex")
 # return an R bibentry type
 cr_cn("10.1126/science.169.3946.635", "bibentry")
+cr_cn(dois="10.6084/m9.figshare.97218", format="bibentry")
 # return an apa style citation - eg. not working right now., 406 error
 cr_cn("10.1126/science.169.3946.635", "text", "apa")
 

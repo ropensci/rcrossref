@@ -17,6 +17,7 @@
 #' cr_cn("10.1126/science.169.3946.635", "bibtex")
 #' # return an R bibentry type
 #' cr_cn("10.1126/science.169.3946.635", "bibentry")
+#' cr_cn(dois="10.6084/m9.figshare.97218", format="bibentry")
 #' # return an apa style citation - eg. not working right now., 406 error
 #' cr_cn("10.1126/science.169.3946.635", "text", "apa")
 #'
@@ -26,7 +27,7 @@
 #' cr_cn(dois, "text", "apa", .progress="time")
 #' }
 
-cr_cn <- function(dois,
+`cr_cn` <- function(dois,
                         format = c("rdf-xml", "turtle", "citeproc-json",
                                    "text", "ris", "bibtex", "crossref-xml",
                                    "datacite-xml", "bibentry"),
@@ -36,7 +37,7 @@ cr_cn <- function(dois,
   format <- match.arg(format)
   cn <- function(doi){
     url <- paste("http://dx.doi.org", doi, sep="/")
-    pick<- c(
+    pick <- c(
            "rdf-xml" = "application/rdf+xml",
            "turtle" = "text/turtle",
            "citeproc-json" = "application/vnd.citationstyles.csl+json",
@@ -49,7 +50,13 @@ cr_cn <- function(dois,
     type <- pick[[format]]
     if(format == "text")
       type <- paste(type, "; style = ", style, "; locale = ", locale, sep="")
-    response <- GET(url, add_headers(Accept = type), ...)
+    response <- 
+
+      GET(url, add_headers(Accept = type, followlocation = TRUE), verbose(), ...)
+    
+#     getForm(uri = url, .opts = c(Accept="application/vnd.citationstyles.csl+json"))
+#     curlPerform(url=url, httpheader=c(Accept="application/vnd.citationstyles.csl+json"), followLocation=TRUE, verbose=TRUE)
+
     stop_for_status(response)
     select <- c(
            "rdf-xml" = "text/xml",

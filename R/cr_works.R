@@ -31,7 +31,7 @@
 #' # Sort results
 #' cr_works(query="ecology", sort='relevance', order="asc")
 #' res <- cr_works(query="ecology", sort='score', order="asc")
-#' sapply(res$items, "[[", "score")
+#' res$items$score
 #'
 #' # Get a random number of results
 #' cr_works(sample=1)
