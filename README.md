@@ -19,7 +19,7 @@ API docs
 
 ## Meta
 
-Please report any issues or bugs](https://github.com/ropensci/rcrossref/issues).
+Please [report any issues or bugs](https://github.com/ropensci/rcrossref/issues).
 
 License: MIT
 
