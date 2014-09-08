@@ -44,6 +44,7 @@
 #' cr_search(query = "1461-0248", type="Journal Article")
 #' 
 #' # curl stuff
+#' library('httr')
 #' cr_search(doi = "10.1890/10-0340.1", config=verbose())
 #' cr_search(query = c("renear", "palmer"), rows = 40, config=progress())
 #' }
