@@ -3,7 +3,7 @@
 \alias{cr_agency}
 \title{Check the DOI minting agency on one or more dois}
 \usage{
-cr_agency(dois = NULL, ...)
+cr_agency(dois = NULL, .progress = "none", ...)
 }
 \arguments{
 \item{dois}{(character) One or more article or organization dois.}
