@@ -8,3 +8,4 @@ inst/stuff/
 ^appveyor\.yml$
 ^.*\.Rproj$
 ^\.Rproj\.user$
+README.Rmd
