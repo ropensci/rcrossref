@@ -50,9 +50,7 @@
     type <- pick[[format]]
     if(format == "text")
       type <- paste(type, "; style = ", style, "; locale = ", locale, sep="")
-    response <- 
-
-      GET(url, add_headers(Accept = type, followlocation = TRUE), verbose(), ...)
+    response <- GET(url, add_headers(Accept = type, followlocation = TRUE), ...)
     
 #     getForm(uri = url, .opts = c(Accept="application/vnd.citationstyles.csl+json"))
 #     curlPerform(url=url, httpheader=c(Accept="application/vnd.citationstyles.csl+json"), followLocation=TRUE, verbose=TRUE)

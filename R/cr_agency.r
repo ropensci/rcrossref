@@ -22,5 +22,5 @@
     res <- lapply(res, "[[", "message")
     names(res) <- dois
     res
-  } else { foo(dois)$message }
+  } else { foo(dois, y = .progress)$message }
 }
