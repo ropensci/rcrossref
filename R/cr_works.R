@@ -1,4 +1,4 @@
-#' Search the CrossRef Fundref API - the works endpoint
+#' Search CrossRef works (articles)
 #'
 #' BEWARE: The API will only work for CrossRef DOIs.
 #'

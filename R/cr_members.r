@@ -1,4 +1,4 @@
-#' Search the CrossRef Fundref API - the members endpoint
+#' Search CrossRef members
 #'
 #' BEWARE: The API will only work for CrossRef DOIs.
 #'
