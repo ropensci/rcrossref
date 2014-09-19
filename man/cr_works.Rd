@@ -52,12 +52,14 @@ cr_works(query="renear+-ontologies")
 cr_works(query="global state", filter='has-orcid:true', limit=1)
 # Filter by multiple fields
 cr_works(filter=c(has_orcid=TRUE, from_pub_date='2004-04-04'))
+# Only full text articles
+cr_works(filter=c(has_full_text = TRUE))
 
 # Querying dois
 cr_works(dois='10.1063/1.3593378')
+cr_works('10.1371/journal.pone.0033693')
 cr_works(dois='10.1007/12080.1874-1746')
-cr_works(dois=c('10.1007/12080.1874-1746','10.1007/10452.1573-5125',
-                       '10.1111/(issn)1442-9993'))
+cr_works(dois=c('10.1007/12080.1874-1746','10.1007/10452.1573-5125', '10.1111/(issn)1442-9993'))
 
 # Include facetting in results
 cr_works(query="NSF", facet=TRUE)
@@ -67,7 +69,7 @@ cr_works(query="NSF", facet=TRUE, limit=0)
 # Sort results
 cr_works(query="ecology", sort='relevance', order="asc")
 res <- cr_works(query="ecology", sort='score', order="asc")
-res$items$score
+res$data$score
 
 # Get a random number of results
 cr_works(sample=1)

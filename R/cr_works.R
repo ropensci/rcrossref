@@ -2,6 +2,7 @@
 #'
 #' BEWARE: The API will only work for CrossRef DOIs.
 #'
+#' @importFrom dplyr rbind_all 
 #' @export
 #' 
 #' @param dois Search by a single DOI or many DOIs.
@@ -16,12 +17,14 @@
 #' cr_works(query="global state", filter='has-orcid:true', limit=1)
 #' # Filter by multiple fields
 #' cr_works(filter=c(has_orcid=TRUE, from_pub_date='2004-04-04'))
+#' # Only full text articles
+#' cr_works(filter=c(has_full_text = TRUE))
 #'
 #' # Querying dois
 #' cr_works(dois='10.1063/1.3593378')
+#' cr_works('10.1371/journal.pone.0033693')
 #' cr_works(dois='10.1007/12080.1874-1746')
-#' cr_works(dois=c('10.1007/12080.1874-1746','10.1007/10452.1573-5125',
-#'                        '10.1111/(issn)1442-9993'))
+#' cr_works(dois=c('10.1007/12080.1874-1746','10.1007/10452.1573-5125', '10.1111/(issn)1442-9993'))
 #'
 #' # Include facetting in results
 #' cr_works(query="NSF", facet=TRUE)
@@ -31,7 +34,7 @@
 #' # Sort results
 #' cr_works(query="ecology", sort='relevance', order="asc")
 #' res <- cr_works(query="ecology", sort='score', order="asc")
-#' res$items$score
+#' res$data$score
 #'
 #' # Get a random number of results
 #' cr_works(sample=1)
@@ -47,13 +50,68 @@
     facet <- if(facet) "t" else NULL
     args <- cr_compact(list(query = query, filter = filter, offset = offset, rows = limit,
                             sample = sample, sort = sort, order = order, facet = facet))
-    cr_GET(endpoint = path, args, ...)
+    cr_GET(endpoint = path, args, todf = FALSE, ...)
   }
   
   if(length(dois) > 1){
     res <- llply(dois, foo, .progress=.progress)
     res <- lapply(res, "[[", "message")
-    names(res) <- dois
-    res
-  } else { foo(dois)$message }
+    res <- lapply(res, parse_works)
+    df <- rbind_all(res)
+    df$dois <- dois
+    df
+  } else { 
+    tmp <- foo(dois)
+    meta <- parse_meta(tmp)
+    if(is.null(dois)){
+      list(meta=meta, data=rbind_all(lapply(tmp$message$items, parse_works)), facets=tmp$message$facets)
+    } else {
+      list(meta=meta, data=parse_works(tmp$message), facets=tmp$message$facets)
+    }
+  }
+}
+
+parse_meta <- function(x){
+  x$message[ !names(x$message) %in% c('facets','items') ]
+}
+
+parse_facets <- function(x){
+  # TO DO
+}
+
+parse_works <- function(zzz){
+  keys <- c('subtitle','issued','score','prefix','container-title','reference-count','deposited',
+            'title','type','DOI','URL','source','publisher','indexed','member','page','ISBN',
+            'subject','author','issue','ISSN','volume')
+  manip <- function(which="issued", y){
+    res <- switch(which, 
+                  issued = list(paste0(unlist(y[[which]]$`date-parts`), collapse = "-")),
+                  deposited = list(list(date=paste0(unlist(y[[which]]$`date-parts`), collapse = "-"), timestamp=format(y[[which]]$`timestamp`, digits = 20))),
+                  indexed = list(list(date=paste0(unlist(y[[which]]$`date-parts`), collapse = "-"), timestamp=format(y[[which]]$`timestamp`, digits = 20))),
+                  subtitle = list(y[[which]]),
+                  score = list(y[[which]]),
+                  prefix = list(y[[which]]),
+                  `reference-count` = list(y[[which]]),
+                  page = list(y[[which]]),
+                  type = list(y[[which]]),
+                  DOI = list(y[[which]]),
+                  URL = list(y[[which]]),
+                  source = list(y[[which]]),
+                  publisher = list(y[[which]]),
+                  member = list(y[[which]]),
+                  ISSN = list(paste0(unlist(y[[which]]), collapse = ",")),
+                  subject = list(paste0(unlist(y[[which]]), collapse = ",")),
+                  title = list(paste0(unlist(y[[which]]), collapse = ",")),
+                  `container-title` = list(paste0(unlist(y[[which]]), collapse = ","))
+    )
+    res <- if(is.null(res) || length(res) == 0) NA else res
+    if(length(res[[1]]) > 1){
+      names(res[[1]]) <- paste(which, names(res[[1]]), sep = "_")
+      as.list(unlist(res))
+    } else {
+      names(res) <- which
+      res
+    }
+  }
+  data.frame(as.list(unlist(lapply(keys, manip, y=zzz))), stringsAsFactors = FALSE)
 }
