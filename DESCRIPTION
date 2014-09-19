@@ -17,7 +17,8 @@ Imports:
     httr,
     plyr,
     bibtex,
-    assertthat
+    assertthat,
+    dplyr
 Suggests:
     testthat,
     roxygen2 (>= 4.0.1)

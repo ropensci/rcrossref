@@ -19,7 +19,7 @@ filter_handler <- function(x){
 #' @param args Query args
 #' @param ... curl options
 #' @keywords internal
-cr_GET <- function(endpoint, args, ...)
+cr_GET <- function(endpoint, args, todf=TRUE, ...)
 {
   url <- sprintf("http://api.crossref.org/%s", endpoint)
   response <- GET(url, query = args, ...)
@@ -30,6 +30,6 @@ cr_GET <- function(endpoint, args, ...)
   } else {
     assert_that(response$headers$`content-type` == "application/json;charset=UTF-8")
     res <- content(response, as = "text")
-    jsonlite::fromJSON(res)
+    jsonlite::fromJSON(res, todf)
   }
 }

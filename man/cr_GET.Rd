@@ -3,7 +3,7 @@
 \alias{cr_GET}
 \title{Crossref api internal handler}
 \usage{
-cr_GET(endpoint, args, ...)
+cr_GET(endpoint, args, todf = TRUE, ...)
 }
 \arguments{
 \item{url}{endpoint}
