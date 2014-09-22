@@ -62,7 +62,4 @@ library('httr')
 cr_fundref(dois='10.13039/100000001', config=verbose())
 }
 }
-\author{
-Scott Chamberlain \email{myrmecocystus@gmail.com}
-}
 

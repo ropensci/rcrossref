@@ -58,7 +58,4 @@ library('httr')
 cr_members(member_ids=98, config=verbose())
 }
 }
-\author{
-Scott Chamberlain \email{myrmecocystus@gmail.com}
-}
 

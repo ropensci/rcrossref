@@ -76,7 +76,4 @@ cr_works(sample=1)
 cr_works(sample=10)
 }
 }
-\author{
-Scott Chamberlain \email{myrmecocystus@gmail.com}
-}
 
