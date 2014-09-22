@@ -13,6 +13,3 @@
 #' @details See \url{bit.ly/1nIjfN5} for more info on the Fundref API service.
 #' 
 #' See the filters vignette for options for filters.
-#' 
-#' @author Scott Chamberlain \email{myrmecocystus@@gmail.com}
-#' 

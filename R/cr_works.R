@@ -72,7 +72,19 @@
 }
 
 parse_meta <- function(x){
-  x$message[ !names(x$message) %in% c('facets','items') ]
+  tmp <- x$message[ !names(x$message) %in% c('facets','items') ]
+  st <- tmp$query$`search-terms`
+  data.frame(total_results=tmp$`total-results`, 
+             search_terms=if(is.null(st)) NA else st, 
+             start_index=tmp$query$`start-index`, 
+             items_per_page=tmp$`items-per-page`,
+             stringsAsFactors = FALSE)
+}
+
+convtime <- function(x){
+  tt <- format(x, digits=20)
+  tt <- substr(tt, 1, nchar(tt)-3)
+  as.Date(as.POSIXct(as.numeric(tt), origin="1970-01-01", tz = "GMT"))
 }
 
 parse_facets <- function(x){
@@ -86,8 +98,8 @@ parse_works <- function(zzz){
   manip <- function(which="issued", y){
     res <- switch(which, 
                   issued = list(paste0(unlist(y[[which]]$`date-parts`), collapse = "-")),
-                  deposited = list(list(date=paste0(unlist(y[[which]]$`date-parts`), collapse = "-"), timestamp=format(y[[which]]$`timestamp`, digits = 20))),
-                  indexed = list(list(date=paste0(unlist(y[[which]]$`date-parts`), collapse = "-"), timestamp=format(y[[which]]$`timestamp`, digits = 20))),
+                  deposited = list(paste0(unlist(y[[which]]$`date-parts`), collapse = "-")),
+                  indexed = list(paste0(unlist(y[[which]]$`date-parts`), collapse = "-")),
                   subtitle = list(y[[which]]),
                   score = list(y[[which]]),
                   prefix = list(y[[which]]),
