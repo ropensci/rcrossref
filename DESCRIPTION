@@ -2,9 +2,9 @@ Package: rcrossref
 Description: R Interface to the CrossRef APIs, including metadata search,
     Fundref, etc.
 Title: R Interface to CrossRef APIs
-Version: 0.1.5
+Version: 0.1.6.99
 License: MIT + file LICENSE
-Date: 2014-06-10
+Date: 2014-09-22
 Authors@R: c(person("Carl", "Boettiger", role = c("aut", "cre"), email =
     "cboettig@gmail.com"), person("Ted", "Harte", role = "aut"),
     person("Scott", "Chamberlain", role = "aut"),
