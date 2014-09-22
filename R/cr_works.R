@@ -61,14 +61,14 @@
     res <- lapply(res, parse_works)
     df <- rbind_all(res)
     df$dois <- dois
-    df
+    list(meta=NULL, data=df, facets=NULL)
   } else { 
     tmp <- foo(dois)
-    meta <- parse_meta(tmp)
     if(is.null(dois)){
-      list(meta=meta, data=rbind_all(lapply(tmp$message$items, parse_works)), facets=tmp$message$facets)
+      meta <- parse_meta(tmp)
+      list(meta=meta, data=rbind_all(lapply(tmp$message$items, parse_works)), facets=parse_facets(tmp$message$facets))
     } else {
-      list(meta=meta, data=parse_works(tmp$message), facets=tmp$message$facets)
+      list(meta=NULL, data=parse_works(tmp$message), facets=NULL)
     }
   }
 }
@@ -90,7 +90,7 @@ convtime <- function(x){
 }
 
 parse_facets <- function(x){
-  # TO DO
+  lapply(x, function(z) ldply(z$values))
 }
 
 parse_works <- function(zzz){
