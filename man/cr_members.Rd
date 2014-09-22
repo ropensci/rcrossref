@@ -28,14 +28,14 @@ or published.}
 
 \item{order}{(character) Sort order, one of 'asc' or 'desc'}
 
-\item{facet}{(logical) Include facet results.}
-
 \item{.progress}{Show a \code{plyr}-style progress bar? Options are "none", "text", "tk", "win,
 and "time".  See \link[plyr]{create_progress_bar} for details of each.}
 
 \item{...}{Named parameters passed on to httr::GET}
 
 \item{works}{(logical) If TRUE, works returned as well, if not then not.}
+
+\item{facet}{(logical) Include facet results.}
 }
 \description{
 BEWARE: The API will only work for CrossRef DOIs.

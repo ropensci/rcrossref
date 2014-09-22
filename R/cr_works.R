@@ -8,6 +8,8 @@
 #' @param dois Search by a single DOI or many DOIs.
 #' @template args
 #' @template moreargs
+#' @param facet (logical) Include facet results.
+#' 
 #' @examples \dontrun{
 #' # Works funded by the NSF
 #' cr_works(query="NSF")
@@ -17,7 +19,7 @@
 #' cr_works(query="global state", filter='has-orcid:true', limit=1)
 #' # Filter by multiple fields
 #' cr_works(filter=c(has_orcid=TRUE, from_pub_date='2004-04-04'))
-#' # Only full text articles
+#' # Only full text articles 
 #' cr_works(filter=c(has_full_text = TRUE))
 #'
 #' # Querying dois

@@ -9,6 +9,7 @@
 #' @template args
 #' @template moreargs
 #' @param works (logical) If TRUE, works returned as well, if not then not.
+#' @param facet (logical) Include facet results.
 #' @examples \dontrun{
 #' cr_members(member_ids=98)
 #' cr_members(query='hindawi')
