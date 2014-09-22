@@ -12,10 +12,10 @@
 #' @param facet (logical) Include facet results.
 #' @examples \dontrun{
 #' cr_members(member_ids=98)
+#' cr_members(member_ids=c(10,98,45,1,9))
+#' 
 #' cr_members(query='hindawi')
-#' out <- cr_members(member_ids=c(10,98))
-#' out[['10']]$counts
-#' out[['98']]$coverage
+#' cr_members(query='ecology')
 #'
 #' # curl options
 #' library('httr')
@@ -37,8 +37,38 @@
   
   if(length(member_ids) > 1){
     res <- llply(member_ids, foo, .progress=.progress)
-    res <- lapply(res, "[[", "message")
-    names(res) <- member_ids
-    res
-  } else { foo(member_ids)$message }
+    rbind_all(lapply(res, function(y) parse_members(y$message)))
+#     names(res) <- member_ids
+#     res
+  } else { 
+    tmp <- foo(member_ids)$message
+    if(!"items" %in% names(tmp)){
+      parse_members(tmp) 
+    } else {
+      for(i in seq_along(tmp$items)){
+        if(class(tmp$items[[i]]) == "list"){ 
+          tmp$items[[i]] <- paste_longer(unlist(tmp$items[[i]]))
+        }
+      }
+      tmp$items <- cbind(tmp$items, tmp$items$counts)
+      tmp$items$counts <- NULL
+      tmp$items <- cbind(tmp$items, tmp$items$coverage)
+      tmp$items$coverage <- NULL
+      tmp$items <- cbind(tmp$items, tmp$items$flags)
+      tmp$items$flags <- NULL
+      list(items=tbl_df(tmp$items), data.frame(tmp[!names(tmp) == 'items'], stringsAsFactors = FALSE))
+    }
+  }
+}
+
+parse_members <- function(x){
+  data.frame(id=x$id, primary_name=x$`primary-name`, location=x$location, 
+             last_status_check_time=convtime(x$`last-status-check-time`),
+             names2underscore(x$counts),
+             prefixes=paste_longer(x$prefixes),
+             coverge=names2underscore(x$coverage),
+             flags=names2underscore(x$flags),
+             names=paste_longer(x$names),
+             tokens=paste_longer(x$tokens),
+             stringsAsFactors = FALSE)  
 }
