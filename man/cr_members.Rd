@@ -48,6 +48,7 @@ See the filters vignette for options for filters.
 \examples{
 \dontrun{
 cr_members(member_ids=98)
+cr_members(member_ids=98, works=TRUE)
 cr_members(member_ids=c(10,98,45,1,9))
 
 cr_members(query='hindawi')

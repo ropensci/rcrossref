@@ -9,6 +9,10 @@
 #' @template moreargs
 #' @param facet (logical) Include facet results. Facet data not yet included in output.
 #' @param works (logical) If TRUE, works returned as well, if not then not.
+#' 
+#' @details Note that any one publisher can have more than one DOI. If you want to search on 
+#' all DOIs for a publisher, pass in all DOIs, or see \code{\link{cr_members}}, and pass in the 
+#' \code{member_ids} parameter.
 #'
 #' @examples \dontrun{
 #' cr_prefixes(prefixes="10.1016")

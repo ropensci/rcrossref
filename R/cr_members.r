@@ -13,6 +13,7 @@
 #' @param facet (logical) Include facet results.
 #' @examples \dontrun{
 #' cr_members(member_ids=98)
+#' cr_members(member_ids=98, works=TRUE)
 #' cr_members(member_ids=c(10,98,45,1,9))
 #' 
 #' cr_members(query='hindawi')
@@ -39,8 +40,6 @@
   if(length(member_ids) > 1){
     res <- llply(member_ids, foo, .progress=.progress)
     rbind_all(lapply(res, function(y) parse_members(y$message)))
-#     names(res) <- member_ids
-#     res
   } else { 
     tmp <- foo(member_ids)$message
     if(!"items" %in% names(tmp)){
