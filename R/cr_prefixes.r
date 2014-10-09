@@ -8,6 +8,7 @@
 #' @template args
 #' @template moreargs
 #' @param facet (logical) Include facet results. Facet data not yet included in output.
+#' @param works (logical) If TRUE, works returned as well, if not then not.
 #'
 #' @examples \dontrun{
 #' cr_prefixes(prefixes="10.1016")
