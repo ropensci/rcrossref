@@ -3,6 +3,7 @@
 #' BEWARE: The API will only work for CrossRef DOIs.
 #'
 #' @export
+#' @importFrom dplyr tbl_df
 #' 
 #' @param member_ids One or more member ids. See examples. ALternatively, you can query for them
 #' using the query parameter.
