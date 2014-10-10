@@ -58,5 +58,5 @@
 
 prefixes_GET <- function(x, args, works, ...){
   path <- if(works) sprintf("prefixes/%s/works", x) else sprintf("prefixes/%s", x)
-  cr_GET(endpoint = path, args, todf = FALSE, ...)
+  cr_GET(path, args, todf = FALSE, ...)
 }
