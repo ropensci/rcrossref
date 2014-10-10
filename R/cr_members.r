@@ -15,6 +15,7 @@
 #' cr_members(member_ids=98)
 #' cr_members(member_ids=98, works=TRUE)
 #' cr_members(member_ids=c(10,98,45,1,9))
+#' cr_members(member_ids=c(10,98,45,1,9), works=TRUE)
 #' 
 #' cr_members(query='hindawi')
 #' cr_members(query='ecology')
@@ -28,37 +29,38 @@
   limit = NULL, sample = NULL, sort = NULL, order = NULL, facet=FALSE, works = FALSE, 
   .progress="none", ...)
 {
-  foo <- function(x){
-    path <- if(!is.null(x)) sprintf("members/%s", x) else "members"
-    filter <- filter_handler(filter)
-    facet <- if(facet) "t" else NULL
-    args <- cr_compact(list(query = query, filter = filter, offset = offset, rows = limit,
-                            sample = sample, sort = sort, order = order, facet = facet))
-    cr_GET(path, args, ...)
-  }
+  filter <- filter_handler(filter)
+  facet <- if(facet) "t" else NULL
+  args <- cr_compact(list(query = query, filter = filter, offset = offset, rows = limit,
+                          sample = sample, sort = sort, order = order, facet = facet))
   
   if(length(member_ids) > 1){
-    res <- llply(member_ids, foo, .progress=.progress)
-    rbind_all(lapply(res, function(y) parse_members(y$message)))
-  } else { 
-    tmp <- foo(member_ids)$message
-    if(!"items" %in% names(tmp)){
-      parse_members(tmp) 
-    } else {
-      for(i in seq_along(tmp$items)){
-        if(class(tmp$items[[i]]) == "list"){ 
-          tmp$items[[i]] <- paste_longer(unlist(tmp$items[[i]]))
-        }
-      }
-      tmp$items <- cbind(tmp$items, tmp$items$counts)
-      tmp$items$counts <- NULL
-      tmp$items <- cbind(tmp$items, tmp$items$coverage)
-      tmp$items$coverage <- NULL
-      tmp$items <- cbind(tmp$items, tmp$items$flags)
-      tmp$items$flags <- NULL
-      list(items=tbl_df(tmp$items), data.frame(tmp[!names(tmp) == 'items'], stringsAsFactors = FALSE))
-    }
+    res <- llply(member_ids, member_GET, args=args, works=works, ..., .progress=.progress)
+    out <- lapply(res, "[[", "message")
+    out <- if(works) do.call(c, lapply(out, function(x) lapply(x$items, parse_works))) else lapply(out, parse_members)
+    df <- rbind_all(out)
+    meta <- if(works) data.frame(member_ids=member_ids, do.call(rbind, lapply(res, parse_meta)), stringsAsFactors = FALSE) else NULL
+    facets <- lapply(res, function(x) parse_facets(x$message$facets))
+    names(facets) <- member_ids
+    list(meta=meta, data=df, facets=facets)
+  } else if(length(member_ids) == 1) { 
+    tmp <- member_GET(member_ids, args=args, works=works, ...)
+    out <- if(works) rbind_all(lapply(tmp$message$items, parse_works)) else parse_members(tmp$message)
+    meta <- if(works) data.frame(member_id=member_ids, parse_meta(tmp), stringsAsFactors = FALSE) else NULL
+    list(meta=meta, data=out, facets=parse_facets(tmp$message$facets))
+  } else {
+    tmp <- member_GET(NULL, args=args, works=works, ...)
+    df <- rbind_all(lapply(tmp$message$items, parse_members))
+    meta <- parse_meta(tmp)
+    list(meta=meta, data=df, facets=NULL)
   }
+}
+
+member_GET <- function(x, args, works, ...){
+  path <- if(!is.null(x)){
+    if(works) sprintf("members/%s/works", x) else sprintf("members/%s", x)
+  } else { "members" }
+  cr_GET(path, args, FALSE, ...)
 }
 
 parse_members <- function(x){
