@@ -27,4 +27,4 @@
   list(meta=meta, data=df)
 }
 
-licenses_GET <- function(args, ..) cr_GET("licenses", args, todf = FALSE, ...)
+licenses_GET <- function(args, ...) cr_GET("licenses", args, todf = FALSE, ...)
