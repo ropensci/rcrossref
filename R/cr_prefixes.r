@@ -52,7 +52,7 @@
     tmp <- prefixes_GET(prefixes, args, works=works, ...)
     out <- if(works) rbind_all(lapply(tmp$message$items, parse_works)) else data.frame(tmp$message, stringsAsFactors=FALSE)
     meta <- if(works) data.frame(prefix=prefixes, parse_meta(tmp), stringsAsFactors = FALSE) else NULL
-    list(meta=meta, data=df, facets=parse_facets(tmp$message$facets))
+    list(meta=meta, data=out, facets=parse_facets(tmp$message$facets))
   }
 }
 

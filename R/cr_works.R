@@ -84,9 +84,11 @@ parse_meta <- function(x){
 }
 
 convtime <- function(x){
-  tt <- format(x, digits=20)
-  tt <- substr(tt, 1, nchar(tt)-3)
-  as.Date(as.POSIXct(as.numeric(tt), origin="1970-01-01", tz = "GMT"))
+  if(is.null(x)){ NA } else {
+    tt <- format(x, digits=20)
+    tt <- substr(tt, 1, nchar(tt)-3)
+    as.Date(as.POSIXct(as.numeric(tt), origin="1970-01-01", tz = "GMT"))
+  }
 }
 
 parse_facets <- function(x){
