@@ -26,6 +26,7 @@
 #' # facets
 #' ## if works is FALSE, then facets ignored
 #' cr_prefixes(prefixes="10.1016", works=FALSE, facet=TRUE)
+#' ## get facets back
 #' cr_prefixes(prefixes="10.1016", works=TRUE, facet=TRUE)
 #' cr_prefixes(prefixes=c('10.1016','10.1371'), works=TRUE, facet=TRUE)
 #' }
@@ -45,9 +46,12 @@
     out <- if(works) do.call(c, lapply(out, function(x) lapply(x$items, parse_works))) else lapply(out, data.frame, stringsAsFactors=FALSE)
     df <- rbind_all(out)
     meta <- if(works) data.frame(prefix=prefixes, do.call(rbind, lapply(res, parse_meta)), stringsAsFactors = FALSE) else NULL
-    facets <- lapply(res, function(x) parse_facets(x$message$facets))
-    names(facets) <- prefixes
-    list(meta=meta, data=df, facets=facets)
+    if(facet=='t'){ 
+      ft <- Map(function(x, y){ 
+        rr <- list(parse_facets(x$message$facets)); names(rr) <- y; rr 
+      }, res, prefixes) 
+    } else { ft <- list() } 
+    list(meta=meta, data=df, facets=ft)
   } else {
     tmp <- prefixes_GET(prefixes, args, works=works, ...)
     out <- if(works) rbind_all(lapply(tmp$message$items, parse_works)) else data.frame(tmp$message, stringsAsFactors=FALSE)
@@ -59,4 +63,9 @@
 prefixes_GET <- function(x, args, works, ...){
   path <- if(works) sprintf("prefixes/%s/works", x) else sprintf("prefixes/%s", x)
   cr_GET(path, args, todf = FALSE, ...)
+}
+
+clean_facets <- function(x){
+  if(x[[1]])
+  facets[!is.na(facets)]
 }
