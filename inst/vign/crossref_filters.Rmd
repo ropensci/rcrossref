@@ -1,3 +1,17 @@
+<!--
+%\VignetteEngine{knitr::knitr}
+%\VignetteIndexEntry{Crossref filters}
+-->
+
+```{r echo=FALSE, eval=FALSE}
+knitr::opts_chunk$set(
+  comment = "#>", 
+  warning = FALSE, 
+  message = FALSE,
+  cache = TRUE
+)
+```
+
 ## Crossref Filter Names
 
 These are associated with the Fundref API

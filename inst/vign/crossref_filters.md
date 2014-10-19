@@ -1,3 +1,10 @@
+<!--
+%\VignetteEngine{knitr::knitr}
+%\VignetteIndexEntry{Crossref filters}
+-->
+
+
+
 ## Crossref Filter Names
 
 These are associated with the Fundref API
