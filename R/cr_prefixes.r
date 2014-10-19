@@ -64,8 +64,3 @@ prefixes_GET <- function(x, args, works, ...){
   path <- if(works) sprintf("prefixes/%s/works", x) else sprintf("prefixes/%s", x)
   cr_GET(path, args, todf = FALSE, ...)
 }
-
-clean_facets <- function(x){
-  if(x[[1]])
-  facets[!is.na(facets)]
-}
