@@ -36,6 +36,7 @@
   .progress="none", ...)
 {
   filter <- filter_handler(filter)
+  facet_log <- facet
   facet <- if(facet) "t" else NULL
   args <- cr_compact(list(query = query, filter = filter, offset = offset, rows = limit,
                           sample = sample, sort = sort, order = order, facet = facet))
@@ -46,7 +47,7 @@
     out <- if(works) do.call(c, lapply(out, function(x) lapply(x$items, parse_works))) else lapply(out, data.frame, stringsAsFactors=FALSE)
     df <- rbind_all(out)
     meta <- if(works) data.frame(prefix=prefixes, do.call(rbind, lapply(res, parse_meta)), stringsAsFactors = FALSE) else NULL
-    if(facet=='t'){ 
+    if(facet_log){ 
       ft <- Map(function(x, y){ 
         rr <- list(parse_facets(x$message$facets)); names(rr) <- y; rr 
       }, res, prefixes) 

@@ -1,23 +1,37 @@
 rcrossref
 =========
 
+```{r echo=FALSE}
+knitr::opts_chunk$set(
+  comment = "#>",
+  collapse = TRUE,
+  warning = FALSE, 
+  message = FALSE
+)
+```
+
 [![Build Status](https://api.travis-ci.org/ropensci/rcrossref.png)](https://travis-ci.org/ropensci/rcrossref)
 [![Build status](https://ci.appveyor.com/api/projects/status/jbo6y7dg4qiq7mol/branch/master)](https://ci.appveyor.com/project/sckott/rcrossref/branch/master)
 
-R interface to the CrossRef API tools
+R interface to various CrossRef APIs
 
-Getting started
+CrossRef documentation
 ---------------
 
+<!--
 * [Register](http://www.crossref.org/requestaccount/) an email address with the CrossRef API as you'll need an API key for some functions.
+-->
 
-API docs
+* Crossref API: [https://github.com/CrossRef/rest-api-doc/blob/master/rest_api.md](https://github.com/CrossRef/rest-api-doc/blob/master/rest_api.md)
+* CrossRef [OpenURL](http://www.crossref.org/openurl/)
+* CrossRef [DOI Content Negotiation](http://www.crosscite.org/cn/)
 
+<!--
 * Fundref: [source 1](https://github.com/CrossRef/rest-api-doc/blob/master/funder_kpi_api.md), [source 2](http://crosstech.crossref.org/2014/04/%E2%99%AB-researchers-just-wanna-have-funds-%E2%99%AB.html), [source 3](http://help.crossref.org/#fundref-api)
 * [Content negotiation](http://www.crosscite.org/cn/)
 * [Metadata search]()
 * [Text and data mining (TDM)](http://tdmsupport.crossref.org/)
-
+-->
 
 ## Installation
 
@@ -33,66 +47,109 @@ library('rcrossref')
 ```
 
 
-## Usage
+## Citation search
 
-Citations
+Look up a citation using [OpenURL](http://www.crossref.org/openurl/)
 
 ```{r}
 cr_citation(doi="10.1371/journal.pone.0042793")
 ```
 
-Citation count
+Or use CrossRef's [DOI Content Negotiation](http://www.crosscite.org/cn/) service, where you can citations back in various formats, including `apa`
+
+```{r}
+cr_cn(dois = "10.1126/science.169.3946.635", format = "text", style = "apa")
+```
+
+`bibtex`
+
+```{r}
+cat(cr_cn(dois = "10.1126/science.169.3946.635", format = "bibtex"))
+```
+
+`bibentry`
+
+```{r}
+cr_cn(dois = "10.6084/m9.figshare.97218", format = "bibentry")
+```
+
+
+## Citation count
+
+Citation count, using [OpenURL](http://www.crossref.org/openurl/)
 
 ```{r}
 cr_citation_count(doi="10.1371/journal.pone.0042793")
 ```
 
-Look up funder information with Fundref
+
+
+## Search Crossref metadata API
+
+The following functions all use the [CrossRef API](https://github.com/CrossRef/rest-api-doc/blob/master/rest_api.md).
+
+### Look up funder information
 
 ```{r}
 cr_fundref(query="NSF")
 ```
 
-Check the DOI minting agency
+### Check the DOI minting agency
 
 ```{r}
 cr_agency(dois = '10.13039/100000001')
 ```
 
-Search Crossref metadata
+### Search works (i.e., articles)
 
 ```{r}
 cr_works(filter=c(has_orcid=TRUE, from_pub_date='2004-04-04'), limit=1)
 ```
 
+### Search journals 
+
+```{r}
+cr_journals(issn=c('1803-2427','2326-4225'))
+```
+
+### Search license information
+
+```{r}
+cr_licenses(query = 'elsevier')
+```
+
+### Search based on DOI prefixes
+
+```{r}
+cr_prefixes(prefixes=c('10.1016','10.1371','10.1023','10.4176','10.1093'))
+```
+
+### Search CrossRef members
+
+```{r}
+cr_members(query='ecology', limit = 5)
+```
+
+### Get N random DOIs
+
+`cr_r()` uses the function `cr_works()` internally. 
+
+```{r}
+cr_r()
+```
+
+You can pass in the number of DOIs you want back (default is 10)
+
+```{r}
+cr_r(2)
+```
+
 
 ## Meta
 
-Please [report any issues or bugs](https://github.com/ropensci/rcrossref/issues).
-
-License: MIT
-
-This package is part of the [rOpenSci](http://ropensci.org/packages) project.
-
-To cite package `rcrossref` in publications use:
-
-```coffee
-To cite package ‘rcrossref’ in publications use:
-
-  Carl Boettiger, Ted Harte, Scott Chamberlain and Karthik Ram (2013). rcrossref: R Interface to the CrossRef APIs. R package version 0.1.
-  https://github.com/ropensci/rcrossref
-
-A BibTeX entry for LaTeX users is
-
-  @Manual{,
-    title = {rcrossref: R Interface to the CrossRef APIs},
-    author = {Carl Boettiger and Ted Harte and Scott Chamberlain and Karthik Ram},
-    year = {2013},
-    note = {R package version 0.1},
-    url = {https://github.com/ropensci/rcrossref},
-  }
-```
-
-Get citation information for `rcrossref` in R doing `citation(package = 'rcrossref')`
+* Please [report any issues or bugs](https://github.com/ropensci/rcrossref/issues).
+* License: MIT
+* This package is part of the [rOpenSci](http://ropensci.org/packages) project.
+* Get citation information for `rcrossref` in R doing `citation(package = 'rcrossref')`
 
 [![](http://ropensci.org/public_images/github_footer.png)](http://ropensci.org)
