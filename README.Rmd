@@ -23,6 +23,7 @@ CrossRef documentation
 -->
 
 * Crossref API: [https://github.com/CrossRef/rest-api-doc/blob/master/rest_api.md](https://github.com/CrossRef/rest-api-doc/blob/master/rest_api.md)
+* Crossref [metadata search API](http://search.labs.crossref.org/)
 * CrossRef [OpenURL](http://www.crossref.org/openurl/)
 * CrossRef [DOI Content Negotiation](http://www.crosscite.org/cn/)
 
