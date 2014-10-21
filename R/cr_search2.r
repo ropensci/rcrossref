@@ -1,20 +1,18 @@
-#' Search the CrossRef Metatdata API.
-#'
-#' @export
-#'
-#' @param query Query terms.
-#' @param doi Search by a single DOI or many DOIs.
-#' @param page Page to return from results.
-#' @param rows Number of records to return.
-#' @param sort Sort either by "score" or "year".
-#' @param year Year to search.
-#' @param type Record type, e.g., "Journal Article" or "Journal Issue"
-#'
-#' @details See \url{https://github.com/CrossRef/rest-api-doc} for more info on this
-#'   	Crossref API service.
-#' @examples \dontrun{
-#' cr_search2(query = c("renear", "palmer"))
-#' }
+# Search the CrossRef Metatdata API.
+# 
+# @param query Query terms.
+# @param doi Search by a single DOI or many DOIs.
+# @param page Page to return from results.
+# @param rows Number of records to return.
+# @param sort Sort either by "score" or "year".
+# @param year Year to search.
+# @param type Record type, e.g., "Journal Article" or "Journal Issue"
+# 
+# @details See \url{http://search.labs.crossref.org/} for more info on this
+#   	Crossref API service.
+# @examples \dontrun{
+# cr_search2(query = c("renear", "palmer"))
+# }
 
 cr_search2 <- function(query, doi = NULL, page = NULL, rows = NULL,
                       sort = NULL, year = NULL, type = NULL)
