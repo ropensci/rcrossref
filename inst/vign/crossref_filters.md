@@ -9,7 +9,7 @@
 
 These are associated with the Fundref API
 
-Since these Crossref options use dashes in the names in the API, we provide a crosswalk to these so that you can use underscores wherever they use dashes. Additionally, using colons is not very R like, so if Crossref requires `has-funder:true`, just do `has-funder=TRUE` in R. Pass these options in to the `cr_fundref_works()` function in the filter parameter as a list, e.g., `filter=list(has_funder=TRUE, has_full_text=TRUE)`
+Since these Crossref options use dashes in the names in the API, we provide a crosswalk to these so that you can use underscores wherever they use dashes. Additionally, using colons is not very R like, so if Crossref requires `has-funder:true`, just do `has-funder=TRUE` in R. Pass these options in to the `cr_*()` functions in the filter parameter as a list, e.g., `filter=list(has_funder=TRUE, has_full_text=TRUE)`
 
 Filters allow you to narrow queries. All filter results are lists.  The following filters are supported:
 
