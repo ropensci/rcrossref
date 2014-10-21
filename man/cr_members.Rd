@@ -38,12 +38,10 @@ and "time".  See \link[plyr]{create_progress_bar} for details of each.}
 \item{...}{Named parameters passed on to httr::GET}
 }
 \description{
-BEWARE: The API will only work for CrossRef DOIs.
+Search CrossRef members
 }
 \details{
-See \url{bit.ly/1nIjfN5} for more info on the Fundref API service.
-
-See the filters vignette for options for filters.
+BEWARE: The API will only work for CrossRef DOIs.
 }
 \examples{
 \dontrun{
@@ -59,5 +57,8 @@ cr_members(query='ecology')
 library('httr')
 cr_members(member_ids=98, config=verbose())
 }
+}
+\references{
+\url{https://github.com/CrossRef/rest-api-doc/blob/master/rest_api.md}
 }
 

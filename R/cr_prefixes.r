@@ -1,7 +1,5 @@
 #' Search CrossRef prefixes
 #'
-#' BEWARE: The API will only work for CrossRef DOIs.
-#'
 #' @export
 #'
 #' @param prefixes (character) Publisher prefixes, one or more in a vector or list. Required.
@@ -10,7 +8,9 @@
 #' @param facet (logical) Include facet results. Facet data not yet included in output.
 #' @param works (logical) If TRUE, works returned as well, if not then not.
 #' 
-#' @details Note that any one publisher can have more than one DOI. If you want to search on 
+#' @details BEWARE: The API will only work for CrossRef DOIs.
+#' 
+#' Note that any one publisher can have more than one DOI. If you want to search on 
 #' all DOIs for a publisher, pass in all DOIs, or see \code{\link{cr_members}}, and pass in the 
 #' \code{member_ids} parameter.
 #' 
@@ -24,6 +24,7 @@
 #' owner prefixes, which in turn may control a number of DOIs. When looking at works published by 
 #' a certain organisaton, member IDs and the member routes should be used.
 #'
+#' @references \url{https://github.com/CrossRef/rest-api-doc/blob/master/rest_api.md}
 #' @examples \dontrun{
 #' cr_prefixes(prefixes="10.1016")
 #' cr_prefixes(prefixes="10.1016", works=TRUE)

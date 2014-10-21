@@ -1,7 +1,5 @@
 #' Search CrossRef works (articles)
 #'
-#' BEWARE: The API will only work for CrossRef DOIs.
-#'
 #' @importFrom dplyr rbind_all 
 #' @export
 #' 
@@ -9,6 +7,9 @@
 #' @template args
 #' @template moreargs
 #' @param facet (logical) Include facet results.
+#' 
+#' @details BEWARE: The API will only work for CrossRef DOIs.
+#' @references \url{https://github.com/CrossRef/rest-api-doc/blob/master/rest_api.md}
 #' 
 #' @examples \dontrun{
 #' # Works funded by the NSF

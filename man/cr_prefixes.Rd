@@ -37,12 +37,24 @@ and "time".  See \link[plyr]{create_progress_bar} for details of each.}
 \item{...}{Named parameters passed on to httr::GET}
 }
 \description{
-BEWARE: The API will only work for CrossRef DOIs.
+Search CrossRef prefixes
 }
 \details{
-See \url{bit.ly/1nIjfN5} for more info on the Fundref API service.
+BEWARE: The API will only work for CrossRef DOIs.
 
-See the filters vignette for options for filters.
+Note that any one publisher can have more than one DOI. If you want to search on
+all DOIs for a publisher, pass in all DOIs, or see \code{\link{cr_members}}, and pass in the
+\code{member_ids} parameter.
+
+Notes from CrossRef (quoting them):
+
+The prefix of a CrossRef DOI does NOT indicate who currently owns the DOI. It only
+reflects who originally registered the DOI. CrossRef metadata has an \code{owner_prefix}
+element that records the current owner of the CrossRef DOI in question.
+
+CrossRef also has member IDs for depositing organisations. A single member may control multiple
+owner prefixes, which in turn may control a number of DOIs. When looking at works published by
+a certain organisaton, member IDs and the member routes should be used.
 }
 \examples{
 \dontrun{
@@ -61,5 +73,8 @@ cr_prefixes(prefixes="10.1016", works=FALSE, facet=TRUE)
 cr_prefixes(prefixes="10.1016", works=TRUE, facet=TRUE)
 cr_prefixes(prefixes=c('10.1016','10.1371'), works=TRUE, facet=TRUE)
 }
+}
+\references{
+\url{https://github.com/CrossRef/rest-api-doc/blob/master/rest_api.md}
 }
 

@@ -1,7 +1,5 @@
 #' Search CrossRef members
 #'
-#' BEWARE: The API will only work for CrossRef DOIs.
-#'
 #' @export
 #' @importFrom dplyr tbl_df
 #' 
@@ -11,6 +9,10 @@
 #' @template moreargs
 #' @param works (logical) If TRUE, works returned as well, if not then not.
 #' @param facet (logical) Include facet results.
+#' 
+#' @details BEWARE: The API will only work for CrossRef DOIs.
+#' @references \url{https://github.com/CrossRef/rest-api-doc/blob/master/rest_api.md}
+#' 
 #' @examples \dontrun{
 #' cr_members(member_ids=98)
 #' cr_members(member_ids=98, works=TRUE)

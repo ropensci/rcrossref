@@ -4,7 +4,8 @@
 #' 
 #' @param dois (character) One or more article or organization dois.
 #' @template moreargs
-#' @details See \url{bit.ly/1nIjfN5} for more info on the Fundref API service.
+#' @details BEWARE: The API will only work for CrossRef DOIs.
+#' @references \url{https://github.com/CrossRef/rest-api-doc/blob/master/rest_api.md}
 #' @author Scott Chamberlain \email{myrmecocystus@@gmail.com}
 #' @examples \dontrun{
 #' cr_agency(dois = '10.13039/100000001')

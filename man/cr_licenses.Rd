@@ -30,12 +30,10 @@ and "time".  See \link[plyr]{create_progress_bar} for details of each.}
 \item{...}{Named parameters passed on to httr::GET}
 }
 \description{
-BEWARE: The API will only work for CrossRef DOIs.
+Search CrossRef licenses
 }
 \details{
-See \url{bit.ly/1nIjfN5} for more info on the Fundref API service.
-
-See the filters vignette for options for filters.
+BEWARE: The API will only work for CrossRef DOIs.
 }
 \examples{
 \donttest{
@@ -44,5 +42,8 @@ cr_licenses(query = 'elsevier')
 cr_licenses(filter = c(member=78))
 cr_licenses(filter = c(issn='2090-8091'))
 }
+}
+\references{
+\url{https://github.com/CrossRef/rest-api-doc/blob/master/rest_api.md}
 }
 

@@ -35,12 +35,13 @@ and "time".  See \link[plyr]{create_progress_bar} for details of each.}
 \item{...}{Named parameters passed on to httr::GET}
 }
 \description{
-BEWARE: The API will only work for CrossRef DOIs.
+Search CrossRef journals
 }
 \details{
-See \url{bit.ly/1nIjfN5} for more info on the Fundref API service.
+BEWARE: The API will only work for CrossRef DOIs.
 
-See the filters vignette for options for filters.
+Note that some parameters are ignored unless \code{works=TRUE}: sample, sort,
+order, filter
 }
 \examples{
 \dontrun{
@@ -57,5 +58,8 @@ cr_journals(issn='1803-2427', works=TRUE)
 cr_journals(issn='1803-2427', works=TRUE, sample=1)
 cr_journals(limit=2)
 }
+}
+\references{
+\url{https://github.com/CrossRef/rest-api-doc/blob/master/rest_api.md}
 }
 

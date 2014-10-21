@@ -1,11 +1,11 @@
 #' Search CrossRef licenses
 #'
-#' BEWARE: The API will only work for CrossRef DOIs.
-#'
 #' @export
 #'
 #' @template args
 #' @template moreargs
+#' @details BEWARE: The API will only work for CrossRef DOIs.
+#' @references \url{https://github.com/CrossRef/rest-api-doc/blob/master/rest_api.md}
 #'
 #' @examples \donttest{
 #' cr_licenses()

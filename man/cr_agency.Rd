@@ -17,7 +17,7 @@ and "time".  See \link[plyr]{create_progress_bar} for details of each.}
 Check the DOI minting agency on one or more dois
 }
 \details{
-See \url{bit.ly/1nIjfN5} for more info on the Fundref API service.
+BEWARE: The API will only work for CrossRef DOIs.
 }
 \examples{
 \dontrun{
@@ -28,5 +28,8 @@ res[['10.13039/100000015']]
 }
 \author{
 Scott Chamberlain \email{myrmecocystus@gmail.com}
+}
+\references{
+\url{https://github.com/CrossRef/rest-api-doc/blob/master/rest_api.md}
 }
 

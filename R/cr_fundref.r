@@ -1,7 +1,5 @@
 #' Search the CrossRef Fundref API
 #'
-#' BEWARE: The API will only work for CrossRef DOIs.
-#'
 #' @export
 #' 
 #' @param dois Search by a single DOI or many DOIs.
@@ -9,6 +7,10 @@
 #' @template moreargs
 #' @param works (logical) If TRUE, works returned as well, if not then not.
 #' @param facet (logical) Include facet results.
+#' 
+#' @details BEWARE: The API will only work for CrossRef DOIs.
+#' @references \url{https://github.com/CrossRef/rest-api-doc/blob/master/rest_api.md}
+#' 
 #' @examples \dontrun{
 #' cr_fundref(query="NSF")
 #' cr_fundref(query="NSF", limit=1)

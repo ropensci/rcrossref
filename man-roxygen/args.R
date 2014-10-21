@@ -8,7 +8,3 @@
 #' @param sort (character) Field to sort on, one of score, relevance, updated, deposited, indexed, 
 #' or published.
 #' @param order (character) Sort order, one of 'asc' or 'desc'
-#' 
-#' @details See \url{bit.ly/1nIjfN5} for more info on the Fundref API service.
-#' 
-#' See the filters vignette for options for filters.

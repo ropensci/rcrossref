@@ -1,15 +1,17 @@
 #' Search CrossRef journals
 #'
-#' BEWARE: The API will only work for CrossRef DOIs.
-#'
 #' @export
 #' 
 #' @param issn One or more ISSN's. Format is XXXX-XXXX.
 #' @template args
 #' @template moreargs
 #' @param works (logical) If TRUE, works returned as well, if not then not.
-#' @details Note that some parameters are ignored unless \code{works=TRUE}: sample, sort, 
+#' 
+#' @details  BEWARE: The API will only work for CrossRef DOIs.
+#' 
+#' Note that some parameters are ignored unless \code{works=TRUE}: sample, sort, 
 #' order, filter
+#' @references \url{https://github.com/CrossRef/rest-api-doc/blob/master/rest_api.md}
 #' @examples \dontrun{
 #' cr_journals()
 #' cr_journals(issn="2167-8359")
