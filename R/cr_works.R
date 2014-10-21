@@ -16,7 +16,7 @@
 #' # Works that include renear but not ontologies
 #' cr_works(query="renear+-ontologies")
 #' # Filter
-#' cr_works(query="global state", filter='has-orcid:true', limit=1)
+#' cr_works(query="global state", filter=c(has_orcid=TRUE), limit=3)
 #' # Filter by multiple fields
 #' cr_works(filter=c(has_orcid=TRUE, from_pub_date='2004-04-04'))
 #' # Only full text articles 
@@ -41,6 +41,9 @@
 #' # Get a random number of results
 #' cr_works(sample=1)
 #' cr_works(sample=10)
+#' 
+#' # You can pass in dot separated fields to filter on specific fields
+#' cr_works(filter=c(award.number='CBET-0756451', award.funder='10.13039/100000001'))
 #' }
 
 `cr_works` <- function(dois = NULL, query = NULL, filter = NULL, offset = NULL,
