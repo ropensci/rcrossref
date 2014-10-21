@@ -3,18 +3,20 @@
 \alias{cr_cn}
 \title{Search the CrossRef Metatdata API.}
 \usage{
-cr_cn(dois, format = c("rdf-xml", "turtle", "citeproc-json", "text", "ris",
-  "bibtex", "crossref-xml", "datacite-xml", "bibentry"), style = NULL,
-  locale = "en-US", .progress = "none", ...)
+cr_cn(dois, format = "text", style = "apa", locale = "en-US",
+  .progress = "none", ...)
 }
 \arguments{
 \item{dois}{Search by a single DOI or many DOIs.}
 
-\item{format}{name of the format.}
+\item{format}{Name of the format. One of "rdf-xml", "turtle", "citeproc-json", "text",
+"ris", "bibtex", "crossref-xml", "datacite-xml", or "bibentry"}
 
-\item{style}{a CSL style (for text format only)}
+\item{style}{a CSL style (for text format only). See \code{\link[rcrossref]{get_styles}}
+for options. Default: apa. If there's a style that CrossRef doesn't support you'll get a
+\code{(500) Internal Server Error}}
 
-\item{locale}{language locale}
+\item{locale}{Language locale. See \code{?Sys.getlocale}}
 
 \item{.progress}{Show a \code{plyr}-style progress bar? Options are "none", "text", "tk", "win,
 and "time".  See \link[plyr]{create_progress_bar} for details of each.}
@@ -25,28 +27,41 @@ and "time".  See \link[plyr]{create_progress_bar} for details of each.}
 Search the CrossRef Metatdata API.
 }
 \details{
-See \url{http://www.crosscite.org/cn/} for more info on this
+See \url{http://www.crosscite.org/cn/} for more info on the
   	Crossref Content Negotiation API service.
 }
 \examples{
 \dontrun{
+cr_cn(dois="10.1126/science.169.3946.635")
 cr_cn(dois="10.1126/science.169.3946.635", format="citeproc-json")
 cr_cn("10.1126/science.169.3946.635", "rdf-xml")
 cr_cn("10.1126/science.169.3946.635", "crossref-xml")
 cr_cn("10.1126/science.169.3946.635", "bibtex")
+
 # return an R bibentry type
 cr_cn("10.1126/science.169.3946.635", "bibentry")
-cr_cn(dois="10.6084/m9.figshare.97218", format="bibentry")
-# return an apa style citation - eg. not working right now., 406 error
+cr_cn("10.6084/m9.figshare.97218", "bibentry")
+
+# return an apa style citation
 cr_cn("10.1126/science.169.3946.635", "text", "apa")
+cr_cn("10.1126/science.169.3946.635", "text", "harvard3")
+cr_cn("10.1126/science.169.3946.635", "text", "elsevier-harvard")
+cr_cn("10.1126/science.169.3946.635", "text", "ecoscience")
+cr_cn("10.1126/science.169.3946.635", "text", "heredity")
+cr_cn("10.1126/science.169.3946.635", "text", "oikos")
+
+# Cycle through random styles - print style on each try
+stys <- get_styles()
+foo <- function(x){
+ cat(sprintf("<Style>:\%s\\n", x), sep = "\\n\\n")
+ cr_cn("10.1126/science.169.3946.635", "text", style=x)
+}
+foo(sample(stys, 1))
 
 # example with many DOIs
-dois <- cr_r(10)
+dois <- cr_r(5)
 cr_cn(dois, "text", "apa")
 cr_cn(dois, "text", "apa", .progress="time")
 }
-}
-\author{
-Scott Chamberlain \email{myrmecocystus@gmail.com}
 }
 
