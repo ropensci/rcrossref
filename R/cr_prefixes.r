@@ -13,6 +13,16 @@
 #' @details Note that any one publisher can have more than one DOI. If you want to search on 
 #' all DOIs for a publisher, pass in all DOIs, or see \code{\link{cr_members}}, and pass in the 
 #' \code{member_ids} parameter.
+#' 
+#' Notes from CrossRef (quoting them):
+#' 
+#' The prefix of a CrossRef DOI does NOT indicate who currently owns the DOI. It only 
+#' reflects who originally registered the DOI. CrossRef metadata has an \code{owner_prefix} 
+#' element that records the current owner of the CrossRef DOI in question.
+#' 
+#' CrossRef also has member IDs for depositing organisations. A single member may control multiple 
+#' owner prefixes, which in turn may control a number of DOIs. When looking at works published by 
+#' a certain organisaton, member IDs and the member routes should be used.
 #'
 #' @examples \dontrun{
 #' cr_prefixes(prefixes="10.1016")
