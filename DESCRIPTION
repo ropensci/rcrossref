@@ -19,7 +19,8 @@ Imports:
     plyr,
     bibtex,
     assertthat,
-    dplyr
+    dplyr,
+    stringr
 Suggests:
     testthat,
     roxygen2 (>= 4.0.1),

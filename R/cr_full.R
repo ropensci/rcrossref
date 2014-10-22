@@ -1,5 +1,6 @@
 #' Get full text links from a DOI
 #' 
+#' @importFrom stringr str_extract
 #' @export
 #' @param doi A DOI
 #' @param type One of xml, plain, pdf, or all 
