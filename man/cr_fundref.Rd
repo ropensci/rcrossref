@@ -5,7 +5,7 @@
 \usage{
 cr_fundref(dois = NULL, query = NULL, filter = NULL, offset = NULL,
   limit = NULL, sample = NULL, sort = NULL, order = NULL,
-  facet = FALSE, works = FALSE, .progress = "none", ...)
+  works = FALSE, .progress = "none", ...)
 }
 \arguments{
 \item{dois}{Search by a single DOI or many DOIs.}
@@ -27,14 +27,14 @@ or published.}
 
 \item{order}{(character) Sort order, one of 'asc' or 'desc'}
 
-\item{facet}{(logical) Include facet results.}
-
 \item{works}{(logical) If TRUE, works returned as well, if not then not.}
 
 \item{.progress}{Show a \code{plyr}-style progress bar? Options are "none", "text", "tk", "win,
 and "time".  See \link[plyr]{create_progress_bar} for details of each.}
 
 \item{...}{Named parameters passed on to httr::GET}
+
+\item{facet}{(logical) Include facet results.}
 }
 \description{
 Search the CrossRef Fundref API
@@ -47,13 +47,15 @@ BEWARE: The API will only work for CrossRef DOIs.
 cr_fundref(query="NSF")
 cr_fundref(query="NSF", limit=1)
 cr_fundref(dois='10.13039/100000001')
-cr_fundref(dois='10.13039/100000001', works=TRUE, limit=2)
 out <- cr_fundref(dois=c('10.13039/100000001','10.13039/100000015'))
 out['10.13039/100000001']
 out[['10.13039/100000001']]
 
 cr_fundref(dois='10.13039/100000001')
-cr_fundref(dois='10.13039/100000001')
+cr_fundref(dois='10.13039/100000001', works=TRUE, limit=5)
+
+cr_fundref(dois=c('10.13039/100000001','10.13039/100000015'))
+cr_fundref(dois=c('10.13039/100000001','10.13039/100000015'), works=TRUE)
 
 # Curl options
 library('httr')
