@@ -33,8 +33,6 @@ or published.}
 and "time".  See \link[plyr]{create_progress_bar} for details of each.}
 
 \item{...}{Named parameters passed on to httr::GET}
-
-\item{facet}{(logical) Include facet results.}
 }
 \description{
 Search the CrossRef Fundref API

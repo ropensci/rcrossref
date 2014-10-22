@@ -5,7 +5,6 @@
 #' @param dois Search by a single DOI or many DOIs.
 #' @template args
 #' @template moreargs
-#' @param facet (logical) Include facet results.
 #' @param works (logical) If TRUE, works returned as well, if not then not.
 #' 
 #' @details BEWARE: The API will only work for CrossRef DOIs.
