@@ -18,18 +18,17 @@ Get full text links from a DOI
 \examples{
 \donttest{
 # pdf link
-cr_full_GET(doi = "10.5555/515151", "pdf")
+cr_full(doi = "10.5555/515151", "pdf")
 
 # xml and plain text links
 out <- cr_works(filter=c(has_full_text = TRUE))
 dois <- out$data$DOI
-cr_full_GET(dois[1], "xml")
-cr_full_GET(dois[1], "plain")
-cr_full_GET(dois[1], "all")
+cr_full(dois[1], "xml")
+cr_full(dois[1], "plain")
+cr_full(dois[1], "all")
 
 # No links
-cr_full_GET(doi = cr_r(1), "xml")
-
+cr_full(doi = cr_r(1), "xml")
 }
 }
 
