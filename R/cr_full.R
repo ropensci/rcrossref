@@ -22,7 +22,8 @@
 #' # Get full text
 #' #### DOESN"T WORK YET
 #' ## get DOIs first
-#' out <- cr_works(filter=c(has_full_text = TRUE, license_url='http://creativecommons.org/licenses/by/3.0/deed.en_US'))
+#' out <- cr_works(filter=c(has_full_text = TRUE, 
+#'    license_url='http://creativecommons.org/licenses/by/3.0/deed.en_US'))
 #' out <- cr_works(filter=c(license_url='http://creativecommons.org/licenses/by/3.0/deed.en_US'))
 #' out <- cr_works(filter=c(has_full_text = TRUE))
 #' 
