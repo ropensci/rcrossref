@@ -1,8 +1,7 @@
 #' Get a PMID from a DOI, and vice versa.
 #'
 #' @export
-#' @param dois (character) One or more DOIs
-#' @param pmids (numeric) One or more PMIDs
+#' @param x (character) One or more DOIs or PMIDs
 #' @param simplify (logical) Whether to simplify result to vector.
 #' @param ... Curl args passed on to \code{\link[httr]{GET}}.
 #' @references Uses the \url{http://www.pmid2doi.org/} REST API.

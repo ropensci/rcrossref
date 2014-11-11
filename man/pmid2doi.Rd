@@ -9,13 +9,11 @@ pmid2doi(x, simplify = FALSE, ...)
 doi2pmid(x, simplify = FALSE, ...)
 }
 \arguments{
+\item{x}{(character) One or more DOIs or PMIDs}
+
 \item{simplify}{(logical) Whether to simplify result to vector.}
 
 \item{...}{Curl args passed on to \code{\link[httr]{GET}}.}
-
-\item{dois}{(character) One or more DOIs}
-
-\item{pmids}{(numeric) One or more PMIDs}
 }
 \description{
 Get a PMID from a DOI, and vice versa.
