@@ -74,7 +74,6 @@ cat(cr_cn(dois = "10.1126/science.169.3946.635", format = "bibtex"))
 cr_cn(dois = "10.6084/m9.figshare.97218", format = "bibentry")
 ```
 
-
 ## Citation count
 
 Citation count, using [OpenURL](http://www.crossref.org/openurl/)
@@ -82,8 +81,6 @@ Citation count, using [OpenURL](http://www.crossref.org/openurl/)
 ```{r}
 cr_citation_count(doi="10.1371/journal.pone.0042793")
 ```
-
-
 
 ## Search Crossref metadata API
 
@@ -145,6 +142,35 @@ You can pass in the number of DOIs you want back (default is 10)
 cr_r(2)
 ```
 
+## pmid2doi & doi2pmid
+
+DOIs to PMIDs
+
+```{r}
+doi2pmid("10.1016/0006-2944(75)90147-7")
+```
+
+```{r}
+doi2pmid("10.1016/0006-2944(75)90147-7", TRUE)
+```
+
+```{r}
+doi2pmid(c("10.1016/0006-2944(75)90147-7","10.1186/gb-2008-9-5-r89"))
+```
+
+PMIDs to DOIs
+
+```{r}
+pmid2doi(18507872)
+```
+
+```{r}
+pmid2doi(18507872, TRUE)
+```
+
+```{r}
+pmid2doi(c(1,2,3))
+```
 
 ## Meta
 

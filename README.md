@@ -16,6 +16,7 @@ CrossRef documentation
 -->
 
 * Crossref API: [https://github.com/CrossRef/rest-api-doc/blob/master/rest_api.md](https://github.com/CrossRef/rest-api-doc/blob/master/rest_api.md)
+* Crossref [metadata search API](http://search.labs.crossref.org/)
 * CrossRef [OpenURL](http://www.crossref.org/openurl/)
 * CrossRef [DOI Content Negotiation](http://www.crosscite.org/cn/)
 
@@ -60,7 +61,7 @@ Or use CrossRef's [DOI Content Negotiation](http://www.crosscite.org/cn/) servic
 
 ```r
 cr_cn(dois = "10.1126/science.169.3946.635", format = "text", style = "apa")
-#> [1] "Frank, H. S. (1970). The Structure of Ordinary Water: New data and interpretations are yielding new insights into this fascinating substance. Science, 169(3946), 635â\u0080\u0093641. doi:10.1126/science.169.3946.635\n"
+#> [1] "Frank, H. S. (1970). The Structure of Ordinary Water: New data and interpretations are yielding new insights into this fascinating substance. Science, 169(3946), 635–641. doi:10.1126/science.169.3946.635"
 ```
 
 `bibtex`
@@ -94,7 +95,6 @@ cr_cn(dois = "10.6084/m9.figshare.97218", format = "bibentry")
 #> http://dx.doi.org/10.6084/m9.figshare.97218>.
 ```
 
-
 ## Citation count
 
 Citation count, using [OpenURL](http://www.crossref.org/openurl/)
@@ -105,8 +105,6 @@ cr_citation_count(doi="10.1371/journal.pone.0042793")
 #> [1] 3
 ```
 
-
-
 ## Search Crossref metadata API
 
 The following functions all use the [CrossRef API](https://github.com/CrossRef/rest-api-doc/blob/master/rest_api.md).
@@ -116,7 +114,13 @@ The following functions all use the [CrossRef API](https://github.com/CrossRef/r
 
 ```r
 cr_fundref(query="NSF")
-#> $items
+#> $meta
+#>   total_results search_terms start_index items_per_page
+#> 1             7          NSF           0             20
+#> 
+#> $data
+#> Source: local data frame [7 x 6]
+#> 
 #>             id      location
 #> 1 501100004190        Norway
 #> 2 501100001809         China
@@ -125,52 +129,7 @@ cr_fundref(query="NSF")
 #> 5    100000001 United States
 #> 6    100006445 United States
 #> 7    100000179 United States
-#>                                                                 name
-#> 1                                            Norsk Sykepleierforbund
-#> 2                       National Natural Science Foundation of China
-#> 3                                         National Stroke Foundation
-#> 4                                          National Sleep Foundation
-#> 5                                        National Science Foundation
-#> 6 Center for Hierarchical Manufacturing, National Science Foundation
-#> 7                                         NSF Office of the Director
-#>                                                                         alt-names
-#> 1                                              NSF, Norwegian Nurses Organisation
-#> 2                                                                            NSFC
-#> 3                                                                             NSF
-#> 4                                                                             NSF
-#> 5                                                                             NSF
-#> 6 University of Massachusetts NSF Center for Hierarchical Manufacturing, CHM, NSF
-#> 7                                                                              OD
-#>                                       uri
-#> 1 http://dx.doi.org/10.13039/501100004190
-#> 2 http://dx.doi.org/10.13039/501100001809
-#> 3 http://dx.doi.org/10.13039/501100000930
-#> 4    http://dx.doi.org/10.13039/100003187
-#> 5    http://dx.doi.org/10.13039/100000001
-#> 6    http://dx.doi.org/10.13039/100006445
-#> 7    http://dx.doi.org/10.13039/100000179
-#>                                                                                                                                                            tokens
-#> 1                                                                                                  norsk, sykepleierforbund, nsf, norwegian, nurses, organisation
-#> 2                                                                                                         national, natural, science, foundation, of, china, nsfc
-#> 3                                                                                                                               national, stroke, foundation, nsf
-#> 4                                                                                                                                national, sleep, foundation, nsf
-#> 5                                                                                                                              national, science, foundation, nsf
-#> 6 center, for, hierarchical, manufacturing, national, science, foundation, university, of, massachusetts, nsf, center, for, hierarchical, manufacturing, chm, nsf
-#> 7                                                                                                                              nsf, office, of, the, director, od
-#> 
-#> $`total-results`
-#> [1] 7
-#> 
-#> $query
-#> $query$`search-terms`
-#> [1] "NSF"
-#> 
-#> $query$`start-index`
-#> [1] 0
-#> 
-#> 
-#> $`items-per-page`
-#> [1] 20
+#> Variables not shown: name (chr), alt.names (chr), uri (chr), tokens (chr)
 ```
 
 ### Check the DOI minting agency
@@ -196,7 +155,7 @@ cr_agency(dois = '10.13039/100000001')
 cr_works(filter=c(has_orcid=TRUE, from_pub_date='2004-04-04'), limit=1)
 #> $meta
 #>   total_results search_terms start_index items_per_page
-#> 1         96757           NA           0              1
+#> 1        101194           NA           0              1
 #> 
 #> $data
 #> Source: local data frame [1 x 21]
@@ -241,7 +200,7 @@ cr_licenses(query = 'elsevier')
 #> 
 #>                                            URL work.count
 #> 1  http://creativecommons.org/licenses/by/3.0/          1
-#> 2 http://www.elsevier.com/tdm/userlicense/1.0/         92
+#> 2 http://www.elsevier.com/tdm/userlicense/1.0/         96
 ```
 
 ### Search based on DOI prefixes
@@ -320,11 +279,11 @@ cr_members(query='ecology', limit = 5)
 
 ```r
 cr_r()
-#>  [1] "10.1007/978-1-4615-7237-4_4"      "10.1111/irj.2011.42.issue-3"     
-#>  [3] "10.1080/07303084.1983.10631204"   "10.1109/tei.1986.349102"         
-#>  [5] "10.1016/s1003-6326(14)63252-0"    "10.1088/0029-5515/25/1/006"      
-#>  [7] "10.3764/ajaonline1104.alramstern" "10.1111/j.1744-1722.2006.00030.x"
-#>  [9] "10.2524/jtappij.11.249"           "10.3945/ajcn.112.037143"
+#>  [1] "10.1002/9780470682531.pat0509"    "10.1109/cdc.1997.657781"         
+#>  [3] "10.1117/12.872133"                "10.1097/00061198-200302000-00014"
+#>  [5] "10.1109/mesa.2008.4735646"        "10.1097/aln.0b013e31825e6edf"    
+#>  [7] "10.1016/j.snb.2004.12.105"        "10.1007/bf02956183"              
+#>  [9] "10.1128/jcm.39.3.1157-1160.2001"  "10.1007/978-3-531-92307-9_2"
 ```
 
 You can pass in the number of DOIs you want back (default is 10)
@@ -332,9 +291,57 @@ You can pass in the number of DOIs you want back (default is 10)
 
 ```r
 cr_r(2)
-#> [1] "10.1016/j.fct.2004.11.021"    "10.1016/0272-8842(93)90061-u"
+#> [1] "10.1080/00336297.1969.10519660" "10.1053/ajot.2000.8379"
 ```
 
+## pmid2doi & doi2pmid
+
+DOIs to PMIDs
+
+
+```r
+doi2pmid("10.1016/0006-2944(75)90147-7")
+#>   pmid                          doi
+#> 1    1 10.1016/0006-2944(75)90147-7
+```
+
+
+```r
+doi2pmid("10.1016/0006-2944(75)90147-7", TRUE)
+#> [1] 1
+```
+
+
+```r
+doi2pmid(c("10.1016/0006-2944(75)90147-7","10.1186/gb-2008-9-5-r89"))
+#>       pmid                          doi
+#> 1        1 10.1016/0006-2944(75)90147-7
+#> 2 18507872      10.1186/gb-2008-9-5-r89
+```
+
+PMIDs to DOIs
+
+
+```r
+pmid2doi(18507872)
+#>       pmid                     doi
+#> 1 18507872 10.1186/gb-2008-9-5-r89
+```
+
+
+```r
+pmid2doi(18507872, TRUE)
+#> [1] "10.1186/gb-2008-9-5-r89"
+```
+
+
+```r
+pmid2doi(c(1,2,3))
+#>   pmid                          doi
+#> 1    1 10.1016/0006-2944(75)90147-7
+#> 2    2 10.1016/0006-291X(75)90482-9
+#> 3    3 10.1016/0006-291X(75)90498-2
+```
 
 ## Meta
 
