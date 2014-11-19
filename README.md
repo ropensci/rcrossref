@@ -155,7 +155,7 @@ cr_agency(dois = '10.13039/100000001')
 cr_works(filter=c(has_orcid=TRUE, from_pub_date='2004-04-04'), limit=1)
 #> $meta
 #>   total_results search_terms start_index items_per_page
-#> 1        101194           NA           0              1
+#> 1        102947           NA           0              1
 #> 
 #> $data
 #> Source: local data frame [1 x 21]
@@ -200,7 +200,7 @@ cr_licenses(query = 'elsevier')
 #> 
 #>                                            URL work.count
 #> 1  http://creativecommons.org/licenses/by/3.0/          1
-#> 2 http://www.elsevier.com/tdm/userlicense/1.0/         96
+#> 2 http://www.elsevier.com/tdm/userlicense/1.0/        110
 ```
 
 ### Search based on DOI prefixes
@@ -279,11 +279,11 @@ cr_members(query='ecology', limit = 5)
 
 ```r
 cr_r()
-#>  [1] "10.1002/9780470682531.pat0509"    "10.1109/cdc.1997.657781"         
-#>  [3] "10.1117/12.872133"                "10.1097/00061198-200302000-00014"
-#>  [5] "10.1109/mesa.2008.4735646"        "10.1097/aln.0b013e31825e6edf"    
-#>  [7] "10.1016/j.snb.2004.12.105"        "10.1007/bf02956183"              
-#>  [9] "10.1128/jcm.39.3.1157-1160.2001"  "10.1007/978-3-531-92307-9_2"
+#>  [1] "10.7202/800694ar"               "10.1177/036985646100100503"    
+#>  [3] "10.1084/jem.64.3.425"           "10.1002/chin.200639037"        
+#>  [5] "10.1201/9780203647073.ch15"     "10.7202/1005350ar"             
+#>  [7] "10.1143/jjap.8.293"             "10.1049/mnl.2013.0548"         
+#>  [9] "10.1016/j.jfoodeng.2010.04.003" "10.3917/edd.234.0041"
 ```
 
 You can pass in the number of DOIs you want back (default is 10)
@@ -291,7 +291,7 @@ You can pass in the number of DOIs you want back (default is 10)
 
 ```r
 cr_r(2)
-#> [1] "10.1080/00336297.1969.10519660" "10.1053/ajot.2000.8379"
+#> [1] "10.1007/bf01267899"          "10.1007/978-3-642-93435-3_7"
 ```
 
 ## pmid2doi & doi2pmid
@@ -347,7 +347,12 @@ pmid2doi(c(1,2,3))
 
 * Please [report any issues or bugs](https://github.com/ropensci/rcrossref/issues).
 * License: MIT
-* This package is part of the [rOpenSci](http://ropensci.org/packages) project.
 * Get citation information for `rcrossref` in R doing `citation(package = 'rcrossref')`
+
+---
+
+This package is part of a richer suite called [fulltext](https://github.com/ropensci/fulltext), along with several other packages, that provides the ability to search for and retrieve full text of open access scholarly articles. 
+
+---
 
 [![](http://ropensci.org/public_images/github_footer.png)](http://ropensci.org)

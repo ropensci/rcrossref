@@ -176,7 +176,12 @@ pmid2doi(c(1,2,3))
 
 * Please [report any issues or bugs](https://github.com/ropensci/rcrossref/issues).
 * License: MIT
-* This package is part of the [rOpenSci](http://ropensci.org/packages) project.
 * Get citation information for `rcrossref` in R doing `citation(package = 'rcrossref')`
+
+---
+
+This package is part of a richer suite called [fulltext](https://github.com/ropensci/fulltext), along with several other packages, that provides the ability to search for and retrieve full text of open access scholarly articles. 
+
+---
 
 [![](http://ropensci.org/public_images/github_footer.png)](http://ropensci.org)
