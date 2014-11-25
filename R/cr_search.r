@@ -9,7 +9,7 @@
 #' @param sort Sort either by "score" or "year".
 #' @param year Year to search.
 #' @param type Record type, e.g., "Journal Article" or "Journal Issue"
-#' @param ... Further args passed to \code{httr::GET} for curl debugging, verbose outputs, etc.
+#' @param ... Named parameters passed on to \code{\link[httr]{GET}}
 #'
 #' @details See \url{http://search.labs.crossref.org/help/api} for more info on this
 #' 		Crossref API service.

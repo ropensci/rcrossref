@@ -10,7 +10,7 @@ cr_r(sample = 10, ...)
 Note that a request for 1000 random DOIs will take a few seconds to
 complete, whereas a request for 20 will take ~1 second.}
 
-\item{...}{Further args passed on to cr_fundref_works}
+\item{...}{Further args passed on to \code{\link{cr_works}}}
 }
 \value{
 A character vector of DOIs

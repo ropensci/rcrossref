@@ -4,7 +4,7 @@
 #' @export
 #' @param doi A DOI
 #' @param type One of xml, plain, pdf, or all 
-#' @param ... Further curl args
+#' @param ... Named parameters passed on to \code{\link[httr]{GET}}
 #' @examples \donttest{
 #' # pdf link
 #' cr_full_links(doi = "10.5555/515151", "pdf")

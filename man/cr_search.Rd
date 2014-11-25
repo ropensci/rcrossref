@@ -21,7 +21,7 @@ cr_search(query = NULL, doi = NULL, page = NULL, rows = NULL,
 
 \item{type}{Record type, e.g., "Journal Article" or "Journal Issue"}
 
-\item{...}{Further args passed to \code{httr::GET} for curl debugging, verbose outputs, etc.}
+\item{...}{Named parameters passed on to \code{\link[httr]{GET}}}
 }
 \description{
 Search the CrossRef Metatdata API.

@@ -12,7 +12,7 @@ cr_cn(dois, format = "text", style = "apa", locale = "en-US",
 \item{format}{Name of the format. One of "rdf-xml", "turtle", "citeproc-json", "text",
 "ris", "bibtex", "crossref-xml", "datacite-xml", or "bibentry"}
 
-\item{style}{a CSL style (for text format only). See \code{\link[rcrossref]{get_styles}}
+\item{style}{a CSL style (for text format only). See \code{\link{get_styles}}
 for options. Default: apa. If there's a style that CrossRef doesn't support you'll get a
 \code{(500) Internal Server Error}}
 

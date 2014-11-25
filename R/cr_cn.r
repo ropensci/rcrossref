@@ -5,7 +5,7 @@
 #' @param dois Search by a single DOI or many DOIs.
 #' @param format Name of the format. One of "rdf-xml", "turtle", "citeproc-json", "text", 
 #' "ris", "bibtex", "crossref-xml", "datacite-xml", or "bibentry"
-#' @param style a CSL style (for text format only). See \code{\link[rcrossref]{get_styles}} 
+#' @param style a CSL style (for text format only). See \code{\link{get_styles}} 
 #' for options. Default: apa. If there's a style that CrossRef doesn't support you'll get a 
 #' \code{(500) Internal Server Error}
 #' @param locale Language locale. See \code{?Sys.getlocale}

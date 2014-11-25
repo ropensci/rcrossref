@@ -15,7 +15,7 @@ cr_citation(doi, title = FALSE, url = "http://www.crossref.org/openurl/",
 
 \item{key}{your PLoS API key, either enter, or loads from .Rprofile}
 
-\item{...}{optional additional curl options (debugging tools mostly) passed on to httr::GET}
+\item{...}{Named parameters passed on to \code{\link[httr]{GET}}}
 }
 \value{
 Metadata from DOI in R's bibentry format.

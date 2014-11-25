@@ -10,7 +10,7 @@ cr_full_links(doi, type = "xml", ...)
 
 \item{type}{One of xml, plain, pdf, or all}
 
-\item{...}{Further curl args}
+\item{...}{Named parameters passed on to \code{\link[httr]{GET}}}
 }
 \description{
 Get full text links from a DOI

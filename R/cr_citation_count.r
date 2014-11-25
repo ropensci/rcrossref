@@ -6,7 +6,7 @@
 #' @param doi digital object identifier for an article in PLoS Journals
 #' @param url the PLoS API url for the function (should be left to default)
 #' @param key your PLoS API key, either enter, or loads from .Rprofile
-#' @param ... optional additional curl options (debugging tools mostly) passed on to httr::GET
+#' @param ... Named parameters passed on to \code{\link[httr]{GET}}
 #'
 #' @return citation count
 #' @details See \url{http://labs.crossref.org/openurl/} for more info on this
