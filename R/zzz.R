@@ -52,7 +52,7 @@ cr_GET <- function(endpoint, args, todf=TRUE, ...)
     warning(sprintf("%s: %s %s", response$status_code, doi, response$headers$statusmessage), call. = FALSE)
     list(message=NA)
   } else {
-    assert_that(response$headers$`content-type` == "application/json;charset=UTF-8")
+    stopifnot(response$headers$`content-type` == "application/json;charset=UTF-8")
     res <- content(response, as = "text")
     jsonlite::fromJSON(res, todf)
   }

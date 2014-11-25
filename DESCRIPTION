@@ -21,7 +21,6 @@ Imports:
     httr,
     plyr,
     bibtex,
-    assertthat,
     dplyr,
     stringr
 Suggests:

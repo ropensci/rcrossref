@@ -1,7 +1,6 @@
 #' Search the CrossRef Metatdata for DOIs using free form references.
 #'
 #' @import httr 
-#' @importFrom assertthat assert_that
 #' @importFrom jsonlite toJSON fromJSON
 #' @importFrom plyr rbind.fill llply ldply
 #' 
@@ -45,9 +44,4 @@
   stop_for_status(tt)
   res <- content(tt, as = "text")
 	fromJSON(res)$results
-# 	if(length(out)==1){ data.frame(out, stringsAsFactors = FALSE) } else
-# 		{
-# 			temp <- llply(out, data.frame, stringsAsFactors = FALSE)
-# 			rbind.fill(temp)
-# 		}
 }
