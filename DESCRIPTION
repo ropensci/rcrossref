@@ -1,7 +1,10 @@
 Package: rcrossref
-Description: R Interface to the CrossRef APIs, including metadata search,
-    Fundref, etc.
-Title: R Interface to CrossRef APIs
+Title: R Client for Various CrossRef APIs.
+Description: R client for various CrossRef APIs, including metadata search
+    with their old and search APIs, get citations in various formats 
+    (including bibtex, citeproc-json, rdf-xml, etc.), convert DOIs to PMIDs,
+    and vice versa, get citations for DOIs, and get links to full text of 
+    articles when available. 
 Version: 0.1.9.999
 License: MIT + file LICENSE
 Date: 2014-11-25
