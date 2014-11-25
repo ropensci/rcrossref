@@ -37,12 +37,6 @@ filterchoices <- c(
   'has_update_policy'
 )
 
-#' Crossref api internal handler
-#' 
-#' @param url endpoint
-#' @param args Query args
-#' @param ... curl options
-#' @keywords internal
 cr_GET <- function(endpoint, args, todf=TRUE, ...)
 {
   url <- sprintf("http://api.crossref.org/%s", endpoint)
