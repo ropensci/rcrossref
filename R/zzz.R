@@ -12,7 +12,9 @@ filter_handler <- function(x){
                  license_version='license.version',
                  license_delay='license.delay',
                  full_text_version='full-text.version',
-                 full_text_type='full-text.type')
+                 full_text_type='full-text.type',
+                 award_number='award.number',
+                 award_funder='award.funder')
         } else { x }
       }, USE.NAMES = FALSE)
     }
@@ -26,7 +28,8 @@ filter_handler <- function(x){
   }
 }
 
-others <- c('license_url','license_version','license_delay','full_text_version','full_text_type')
+others <- c('license_url','license_version','license_delay','full_text_version','full_text_type',
+            'award_number','award_funder')
 filterchoices <- c(
   'has_funder','funder','prefix','member','from_index_date','until_index_date',
   'from_deposit_date','until_deposit_date','from_update_date','until_update_date',
@@ -34,7 +37,7 @@ filterchoices <- c(
   'has_license','license_url','license_version','license_delay','has_full_text',
   'full_text_version','full_text_type','public_references','has_references','has_archive',
   'archive','has_orcid','orcid','issn','type','directory','doi','updates','is_update',
-  'has_update_policy'
+  'has_update_policy','container_title','publisher_name','category_name','type_name'
 )
 
 cr_GET <- function(endpoint, args, todf=TRUE, ...)
