@@ -5,12 +5,12 @@ Description: R client for various CrossRef APIs, including metadata search
     (including bibtex, citeproc-json, rdf-xml, etc.), convert DOIs to PMIDs,
     and vice versa, get citations for DOIs, and get links to full text of
     articles when available.
-Version: 0.1.9.999
+Version: 0.2.0
 License: MIT + file LICENSE
 Date: 2014-11-25
-Authors@R: c(person("Carl", "Boettiger", role = c("aut", "cre"), email =
+Authors@R: c(person("Carl", "Boettiger", role = "aut", email =
     "cboettig@gmail.com"), person("Ted", "Hart", role = "aut"),
-    person("Scott", "Chamberlain", role = "aut"),
+    person("Scott", "Chamberlain", role = c("aut", "cre")),
     person("Karthik", "Ram", role = "aut"))
 URL: https://github.com/ropensci/rcrossref
 BugReports: https://github.com/ropensci/rcrossref/issues
