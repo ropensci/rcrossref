@@ -46,11 +46,11 @@ Or use CrossRef's [DOI Content Negotiation](http://www.crosscite.org/cn/) servic
 
 
 ```r
-cr_cn(dois = "10.1126/science.169.3946.635", format = "text", style = "apa")
+cr_cn(dois = "10.1371/journal.pone.0112608", format = "text", style = "apa")
 ```
 
 ```
-## [1] "Frank, H. S. (1970). The Structure of Ordinary Water: New data and interpretations are yielding new insights into this fascinating substance. Science, 169(3946), 635–641. doi:10.1126/science.169.3946.635"
+## [1] "Wang, Q., & Taylor, J. E. (2014). Quantifying Human Mobility Perturbation and Resilience in Hurricane Sandy. PLoS ONE, 9(11), e112608. doi:10.1371/journal.pone.0112608"
 ```
 
 There are a lot more styles. We include a dataset as a character vector within the package, accessible via the `get_styles()` function, e.g., 
@@ -316,16 +316,11 @@ cr_r()
 ```
 
 ```
-##  [1] "10.4018/978-1-59904-897-0.ch012"   
-##  [2] "10.1016/b978-0-12-356250-0.50022-1"
-##  [3] "10.1090/s1079-6762-07-00171-0"     
-##  [4] "10.1038/modpathol.3800588"         
-##  [5] "10.1201/noe9058093578.ch24"        
-##  [6] "10.4324/9780203477182_chapter_13"  
-##  [7] "10.1002/poc.1854"                  
-##  [8] "10.1007/3-540-29668-9_1376"        
-##  [9] "10.1016/s1875-9122(12)70123-2"     
-## [10] "10.1093/leobaeck/49.1.272"
+##  [1] "10.1007/978-1-4757-9826-5_4"      "10.1016/j.brachy.2013.01.042"    
+##  [3] "10.1097/00007611-198112000-00006" "10.2514/1.36856"                 
+##  [5] "10.1109/robot.2005.1570226"       "10.1109/icais.2002.1048129"      
+##  [7] "10.3109/10715769109088927"        "10.1080/713756792"               
+##  [9] "10.1021/bi992505b"                "10.1001/jama.1940.02810440039009"
 ```
 
 You can pass in the number of DOIs you want back (default is 10)
@@ -336,7 +331,7 @@ cr_r(2)
 ```
 
 ```
-## [1] "10.4171/pm/1861"           "10.1007/978-94-017-2653-5"
+## [1] "10.1016/s0891-5849(97)00329-8" "10.1002/pssa.201026396"
 ```
 
 ### The older functions and API

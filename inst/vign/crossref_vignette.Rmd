@@ -41,7 +41,7 @@ cr_citation(doi="10.1371/journal.pone.0042793")
 Or use CrossRef's [DOI Content Negotiation](http://www.crosscite.org/cn/) service, where you can citations back in various formats, including `apa`
 
 ```{r}
-cr_cn(dois = "10.1126/science.169.3946.635", format = "text", style = "apa")
+cr_cn(dois = "10.1371/journal.pone.0112608", format = "text", style = "apa")
 ```
 
 There are a lot more styles. We include a dataset as a character vector within the package, accessible via the `get_styles()` function, e.g., 
