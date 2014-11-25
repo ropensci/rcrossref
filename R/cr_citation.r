@@ -42,6 +42,7 @@ cr_citation <- function(doi, title = FALSE, url = "http://www.crossref.org/openu
 #' @param a crossref XML output
 #' @return a bibentry format of the output
 #' @details internal helper function
+#' @keywords internal
 formatcrossref <- function(a){
  authors <- person(family=as.list(xpathSApply(a, "//surname", xmlValue)),
                   given=as.list(xpathSApply(a, "//given_name", xmlValue)))

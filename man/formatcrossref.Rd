@@ -17,4 +17,5 @@ Convert crossref XML into a bibentry object
 \details{
 internal helper function
 }
+\keyword{internal}
 
