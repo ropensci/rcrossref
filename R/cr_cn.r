@@ -1,4 +1,4 @@
-#' Search the CrossRef Metatdata API.
+#' Get citations in various formats from CrossRef.
 #'
 #' @export
 #'
