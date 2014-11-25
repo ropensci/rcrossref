@@ -1,11 +1,12 @@
 #' Get list of styles from github.com/citation-style-language/styles
 #' @export
+#' @param ... Named parameters passed on to \code{\link[httr]{GET}}
 #' @examples \donttest{
 #' get_styles()[1:5]
 #' }
 
-get_styles <- function(){  
-  comm <- GET("https://api.github.com/repos/citation-style-language/styles/commits?per_page=1")
+get_styles <- function(...){  
+  comm <- GET("https://api.github.com/repos/citation-style-language/styles/commits?per_page=1", ...)
   commres <- content(comm)
   sha <- commres[[1]]$sha
   sty <- GET(sprintf("https://api.github.com/repos/citation-style-language/styles/git/trees/%s", sha))

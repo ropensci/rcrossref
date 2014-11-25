@@ -3,7 +3,10 @@
 \alias{get_styles}
 \title{Get list of styles from github.com/citation-style-language/styles}
 \usage{
-get_styles()
+get_styles(...)
+}
+\arguments{
+\item{...}{Named parameters passed on to \code{\link[httr]{GET}}}
 }
 \description{
 Get list of styles from github.com/citation-style-language/styles
