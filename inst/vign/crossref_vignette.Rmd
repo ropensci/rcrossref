@@ -1,0 +1,210 @@
+<!--
+%\VignetteEngine{knitr::knitr}
+%\VignetteIndexEntry{Crossref vignette}
+-->
+
+```{r echo=FALSE, eval=FALSE}
+knitr::opts_chunk$set(
+  comment = "#>", 
+  warning = FALSE, 
+  message = FALSE,
+  cache = TRUE
+)
+```
+
+## Installation
+
+Install stable version from CRAN
+
+```{r eval=FALSE}
+install.packages("rcrossref")
+```
+
+Or development version from GitHub
+
+```{r eval=FALSE}
+devtools::install_github("ropensci/rcrossref")
+```
+
+```{r}
+library("rcrossref")
+```
+
+## Citation search
+
+Look up a citation using [OpenURL](http://www.crossref.org/openurl/)
+
+```{r}
+cr_citation(doi="10.1371/journal.pone.0042793")
+```
+
+Or use CrossRef's [DOI Content Negotiation](http://www.crosscite.org/cn/) service, where you can citations back in various formats, including `apa`
+
+```{r}
+cr_cn(dois = "10.1126/science.169.3946.635", format = "text", style = "apa")
+```
+
+There are a lot more styles. We include a dataset as a character vector within the package, accessible via the `get_styles()` function, e.g., 
+
+```{r}
+get_styles()[1:5]
+```
+
+`bibtex`
+
+```{r}
+cat(cr_cn(dois = "10.1126/science.169.3946.635", format = "bibtex"))
+```
+
+`bibentry`
+
+```{r}
+cr_cn(dois = "10.6084/m9.figshare.97218", format = "bibentry")
+```
+
+## Citation count
+
+Citation count, using [OpenURL](http://www.crossref.org/openurl/)
+
+```{r}
+cr_citation_count(doi="10.1371/journal.pone.0042793")
+```
+
+## Search Crossref metadata API
+
+There are two functions that use an older Crossre API at [http://search.labs.crossref.org/dois](http://search.labs.crossref.org/dois): `cr_search()` and `cr_search_free()`. You can of course use them, but the newer Crossref API available through various functions (`cr_agency()`, `cr_fundref()`, `cr_journals()`, `cr_licenses()`, `cr_members()`, `cr_prefixes()`, and `cr_works()`) is more powerful and will recieve more support going forward. The following functions (of the newer set just mentioend) all use the [CrossRef API](https://github.com/CrossRef/rest-api-doc/blob/master/rest_api.md).
+
+### Look up funder information
+
+```{r}
+cr_fundref(query="NSF")
+```
+
+### Check the DOI minting agency
+
+```{r}
+cr_agency(dois = '10.13039/100000001')
+```
+
+### Search works (i.e., articles, books, etc.)
+
+```{r}
+cr_works(filter=c(has_orcid=TRUE, from_pub_date='2004-04-04'), limit=1)
+```
+
+### Search journals 
+
+```{r}
+cr_journals(issn=c('1803-2427','2326-4225'))
+```
+
+### Search license information
+
+```{r}
+cr_licenses(query = 'elsevier')
+```
+
+### Search based on DOI prefixes
+
+```{r}
+cr_prefixes(prefixes=c('10.1016','10.1371','10.1023','10.4176','10.1093'))
+```
+
+### Search CrossRef members
+
+```{r}
+cr_members(query='ecology', limit = 5)
+```
+
+### Get N random DOIs
+
+`cr_r()` uses the function `cr_works()` internally. 
+
+```{r}
+cr_r()
+```
+
+You can pass in the number of DOIs you want back (default is 10)
+
+```{r}
+cr_r(2)
+```
+
+### The older functions and API
+
+Search by author
+
+```{r}
+cr_search(query = c("renear", "palmer"), rows = 3, sort = "year")[,-6]
+```
+
+Search by DOI
+
+```{r}
+cr_search(doi = "10.1890/10-0340.1")[,-6]
+```
+
+Free search
+
+```{r}
+queries <- c("Piwowar sharing data PLOS one", "Priem Scientometrics 2.0 social web",
+  "William Gunn A Crosstalk Between Myeloma Cells",
+ "karthik ram Metapopulation dynamics override local limits")
+cr_search_free(queries)[,-4]
+```
+
+## pmid2doi & doi2pmid
+
+DOIs to PMIDs
+
+```{r}
+doi2pmid("10.1016/0006-2944(75)90147-7")
+```
+
+You can pass in more than 1 DOI
+
+```{r}
+doi2pmid(c("10.1016/0006-2944(75)90147-7","10.1186/gb-2008-9-5-r89"))
+```
+
+Optionally simplify result to vector
+
+```{r}
+doi2pmid(c("10.1016/0006-2944(75)90147-7","10.1186/gb-2008-9-5-r89"), TRUE)
+```
+
+PMIDs to DOIs
+
+```{r}
+pmid2doi(18507872)
+```
+
+Pass in more than 1 PMID
+
+```{r}
+pmid2doi(c(1,2,3))
+```
+
+Optionally simplify
+
+```{r}
+pmid2doi(18507872, TRUE)
+```
+
+## Get full text links to works
+
+This is a mostly experimental function so far in that it may not work that often. Publishers can optionally provide links in the metadata they provide to Crossref for full text of the work, but that data is often missing. Find out more about it at [http://tdmsupport.crossref.org/](http://tdmsupport.crossref.org/). Some examples that do work:
+
+Get link to the pdf
+
+```{r}
+cr_full_links(doi = "10.5555/515151", type = "pdf")
+```
+
+Get a bunch of DOIs first, then get many URLs back
+
+```{r}
+out <- cr_works(filter=c(has_full_text = TRUE))
+dois <- out$data$DOI
+sapply(dois[1:5], cr_full_links, type="xml")
+```
