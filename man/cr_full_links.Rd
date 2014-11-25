@@ -33,15 +33,15 @@ cr_full_links(doi = cr_r(1), "xml")
 # Get full text
 #### DOESN"T WORK YET
 ## get DOIs first
-out <- cr_works(filter=c(has_full_text = TRUE,
-   license_url='http://creativecommons.org/licenses/by/3.0/deed.en_US'))
-out <- cr_works(filter=c(license_url='http://creativecommons.org/licenses/by/3.0/deed.en_US'))
-out <- cr_works(filter=c(has_full_text = TRUE))
+# out <- cr_works(filter=c(has_full_text = TRUE,
+#   license_url='http://creativecommons.org/licenses/by/3.0/deed.en_US'))
+# out <- cr_works(filter=c(license_url='http://creativecommons.org/licenses/by/3.0/deed.en_US'))
+# out <- cr_works(filter=c(has_full_text = TRUE))
 
-out <- cr_members(member_ids = 2258, works = TRUE)
-dois <- out$data$DOI
-xml <- cr_full_links(dois[1], "xml")
-cr_full_text(url = xml)
+# out <- cr_members(member_ids = 2258, works = TRUE)
+# dois <- out$data$DOI
+# xml <- cr_full_links(dois[1], "xml")
+# cr_full_text(url = xml)
 }
 }
 

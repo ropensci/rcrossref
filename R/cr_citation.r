@@ -13,7 +13,7 @@
 #' @return Metadata from DOI in R's bibentry format.
 #' @details See \url{http://labs.crossref.org/openurl/} for more info on this
 #' 		Crossref API service.
-#' @seealso \code{\link{cr_search}}, \code{\link{cr_r}}, \code{\link{cr_search_free}}
+#' @seealso \code{\link{cr_cn}} does a very similar thing
 #' @author Carl Boettiger \email{cboettig@@gmail.com}
 #' @examples \dontrun{
 #' cr_citation(doi="10.1371/journal.pone.0042793")

@@ -20,7 +20,7 @@ Get a random set of DOI's through CrossRef.
 }
 \examples{
 \dontrun{
-# Default search gets 20 random DOIs
+# Default search gets 10 random DOIs
 cr_r()
 }
 }
@@ -31,7 +31,6 @@ Scott Chamberlain \email{myrmecocystus@gmail.com}
 \url{http://random.labs.crossref.org/}
 }
 \seealso{
-\code{\link{cr_search}}, \code{\link{cr_citation}},
-\code{\link{cr_search_free}}
+\code{\link{cr_search}}, \code{\link{cr_citation}}, \code{\link{cr_search_free}}
 }
 

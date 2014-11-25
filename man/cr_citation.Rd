@@ -38,6 +38,6 @@ print(cr_citation("10.3998/3336451.0009.101"), style="text")
 Carl Boettiger \email{cboettig@gmail.com}
 }
 \seealso{
-\code{\link{cr_search}}, \code{\link{cr_r}}, \code{\link{cr_search_free}}
+\code{\link{cr_cn}} does a very similar thing
 }
 
