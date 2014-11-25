@@ -9,3 +9,4 @@ inst/stuff/
 ^.*\.Rproj$
 ^\.Rproj\.user$
 README.Rmd
+tests/test-all.R
