@@ -1,7 +1,7 @@
 #' Get full text links from a DOI
 #' 
 #' @importFrom stringr str_extract
-#' @export
+#' @keywords internal
 #' @param doi A DOI
 #' @param type One of xml, plain, pdf, or all 
 #' @param ... Named parameters passed on to \code{\link[httr]{GET}}
@@ -12,33 +12,23 @@
 #' # xml and plain text links
 #' out <- cr_works(filter=c(has_full_text = TRUE))
 #' dois <- out$data$DOI
-#' cr_full_links(dois[1], "xml")
+#' cr_full_links(dois[2], "xml")
 #' cr_full_links(dois[1], "plain")
 #' cr_full_links(dois[1], "all")
 #' 
 #' # No links
 #' cr_full_links(doi = cr_r(1), "xml")
-#' 
-#' # Get full text
-#' #### DOESN"T WORK YET
-#' ## get DOIs first
-#' # out <- cr_works(filter=c(has_full_text = TRUE, 
-#' #   license_url='http://creativecommons.org/licenses/by/3.0/deed.en_US'))
-#' # out <- cr_works(filter=c(license_url='http://creativecommons.org/licenses/by/3.0/deed.en_US'))
-#' # out <- cr_works(filter=c(has_full_text = TRUE))
-#' 
-#' # out <- cr_members(member_ids = 2258, works = TRUE)
-#' # dois <- out$data$DOI
-#' # xml <- cr_full_links(dois[1], "xml")
-#' # cr_full_text(url = xml)
 #' }
 
 cr_full_links <- function(doi, type='xml', ...)
 {
   url <- sprintf("http://dx.doi.org/%s", doi)
-  response <- GET(url, hd(), ...)
-  stopifnot(response$headers$`content-type` == hd()$httpheader[[1]])
-  tt <- response$headers$link
+  res <- GET(url, hd(), ...)
+  stopifnot(res$headers$`content-type` == hd()$httpheader[[1]])
+  # linkres <- GET(res$headers$location, hd())
+  # stopifnot(res$headers$`content-type` == hd()$httpheader[[1]])
+  # tt <- res$headers$location
+  tt <- res$headers$link
   if(is.null(tt)) NULL else get_type(x=tt, y=type)
 }
 

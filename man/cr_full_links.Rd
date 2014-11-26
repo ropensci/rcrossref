@@ -23,25 +23,13 @@ cr_full_links(doi = "10.5555/515151", "pdf")
 # xml and plain text links
 out <- cr_works(filter=c(has_full_text = TRUE))
 dois <- out$data$DOI
-cr_full_links(dois[1], "xml")
+cr_full_links(dois[2], "xml")
 cr_full_links(dois[1], "plain")
 cr_full_links(dois[1], "all")
 
 # No links
 cr_full_links(doi = cr_r(1), "xml")
-
-# Get full text
-#### DOESN"T WORK YET
-## get DOIs first
-# out <- cr_works(filter=c(has_full_text = TRUE,
-#   license_url='http://creativecommons.org/licenses/by/3.0/deed.en_US'))
-# out <- cr_works(filter=c(license_url='http://creativecommons.org/licenses/by/3.0/deed.en_US'))
-# out <- cr_works(filter=c(has_full_text = TRUE))
-
-# out <- cr_members(member_ids = 2258, works = TRUE)
-# dois <- out$data$DOI
-# xml <- cr_full_links(dois[1], "xml")
-# cr_full_text(url = xml)
 }
 }
+\keyword{internal}
 
