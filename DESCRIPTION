@@ -1,5 +1,5 @@
 Package: rcrossref
-Title: R Client for Various CrossRef APIs.
+Title: R Client for Various CrossRef APIs
 Description: R client for various CrossRef APIs, including metadata search
     with their old and search APIs, get citations in various formats
     (including bibtex, citeproc-json, rdf-xml, etc.), convert DOIs to PMIDs,
