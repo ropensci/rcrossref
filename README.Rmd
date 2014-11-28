@@ -172,6 +172,27 @@ pmid2doi(18507872, TRUE)
 pmid2doi(c(1,2,3))
 ```
 
+<!--
+## Get full text links to works
+
+This is a mostly experimental function so far in that it may not work that often. Publishers can optionally provide links in the metadata they provide to Crossref for full text of the work, but that data is often missing. Find out more about it at [http://tdmsupport.crossref.org/](http://tdmsupport.crossref.org/). Some examples that do work:
+
+Get link to the pdf
+
+```{r}
+cr_full_links(doi = "10.5555/515151", type = "pdf")
+```
+
+Get a bunch of DOIs first, then get many URLs back
+
+```{r}
+out <- cr_works(filter=c(has_full_text = TRUE))
+dois <- out$data$DOI
+sapply(dois[1:5], cr_full_links, type="xml")
+```
+-->
+
+
 ## Meta
 
 * Please [report any issues or bugs](https://github.com/ropensci/rcrossref/issues).

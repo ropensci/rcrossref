@@ -177,7 +177,7 @@ cr_works(filter=c(has_orcid=TRUE, from_pub_date='2004-04-04'), limit=1)
 ```
 ## $meta
 ##   total_results search_terms start_index items_per_page
-## 1        104751           NA           0              1
+## 1        106345           NA           0              1
 ## 
 ## $data
 ## Source: local data frame [1 x 21]
@@ -316,11 +316,16 @@ cr_r()
 ```
 
 ```
-##  [1] "10.1007/978-1-4757-9826-5_4"      "10.1016/j.brachy.2013.01.042"    
-##  [3] "10.1097/00007611-198112000-00006" "10.2514/1.36856"                 
-##  [5] "10.1109/robot.2005.1570226"       "10.1109/icais.2002.1048129"      
-##  [7] "10.3109/10715769109088927"        "10.1080/713756792"               
-##  [9] "10.1021/bi992505b"                "10.1001/jama.1940.02810440039009"
+##  [1] "10.1128/microbe.5.454.1"           
+##  [2] "10.1016/0022-3913(72)90197-7"      
+##  [3] "10.1016/s0161-6420(83)34595-4"     
+##  [4] "10.2514/6.1972-782"                
+##  [5] "10.1007/bf01124238"                
+##  [6] "10.1111/j.0954-6820.1980.tb01184.x"
+##  [7] "10.1016/0031-9384(94)90350-6"      
+##  [8] "10.1007/bf01324984"                
+##  [9] "10.1038/ng.2908"                   
+## [10] "10.1140/epjb/e2010-00075-8"
 ```
 
 You can pass in the number of DOIs you want back (default is 10)
@@ -331,7 +336,7 @@ cr_r(2)
 ```
 
 ```
-## [1] "10.1016/s0891-5849(97)00329-8" "10.1002/pssa.201026396"
+## [1] "10.1109/tns.1967.4324779"    "10.1056/nejm190005311422205"
 ```
 
 ### The older functions and API
@@ -345,9 +350,9 @@ cr_search(query = c("renear", "palmer"), rows = 3, sort = "year")[,-6]
 
 ```
 ##                                                    doi     score
-## 1 http://dx.doi.org/10.1016/b978-0-12-382225-3.00329-7 0.4905752
-## 2 http://dx.doi.org/10.1016/b978-0-12-411602-3.00032-9 0.4905752
-## 3 http://dx.doi.org/10.1016/b978-0-12-382225-3.00299-1 0.4292533
+## 1 http://dx.doi.org/10.1016/b978-0-12-382225-3.00329-7 0.4906596
+## 2 http://dx.doi.org/10.1016/b978-0-12-411602-3.00032-9 0.4906596
+## 3 http://dx.doi.org/10.1016/b978-0-12-382225-3.00299-1 0.4293271
 ##   normalizedScore
 ## 1              15
 ## 2              15
@@ -375,7 +380,7 @@ cr_search(doi = "10.1890/10-0340.1")[,-6]
 
 ```
 ##                                   doi    score normalizedScore
-## 1 http://dx.doi.org/10.1890/10-0340.1 18.57804             100
+## 1 http://dx.doi.org/10.1890/10-0340.1 18.58151             100
 ##                                                            title
 ## 1 The arcsine is asinine: the analysis of proportions in ecology
 ##                                                                                                                                           fullCitation
@@ -401,10 +406,10 @@ cr_search_free(queries)[,-4]
 ## 3            William Gunn A Crosstalk Between Myeloma Cells  TRUE
 ## 4 karthik ram Metapopulation dynamics override local limits  TRUE
 ##                                              doi    score
-## 1 http://dx.doi.org/10.1371/journal.pone.0000308 3.347857
-## 2        http://dx.doi.org/10.5210/fm.v15i7.2874 3.712371
-## 3  http://dx.doi.org/10.1634/stemcells.2005-0220 2.821917
-## 4            http://dx.doi.org/10.1890/08-0228.1 3.968295
+## 1 http://dx.doi.org/10.1371/journal.pone.0000308 3.347281
+## 2        http://dx.doi.org/10.5210/fm.v15i7.2874 3.710830
+## 3  http://dx.doi.org/10.1634/stemcells.2005-0220 2.821974
+## 4            http://dx.doi.org/10.1890/08-0228.1 3.967917
 ```
 
 ## pmid2doi & doi2pmid
@@ -480,46 +485,4 @@ pmid2doi(18507872, TRUE)
 
 ```
 ## [1] "10.1186/gb-2008-9-5-r89"
-```
-
-## Get full text links to works
-
-This is a mostly experimental function so far in that it may not work that often. Publishers can optionally provide links in the metadata they provide to Crossref for full text of the work, but that data is often missing. Find out more about it at [http://tdmsupport.crossref.org/](http://tdmsupport.crossref.org/). Some examples that do work:
-
-Get link to the pdf
-
-
-```r
-cr_full_links(doi = "10.5555/515151", type = "pdf")
-```
-
-```
-##                                                               application/pdf 
-## "http://annalsofpsychoceramics.labs.crossref.org/fulltext/10.5555/515151.pdf"
-```
-
-Get a bunch of DOIs first, then get many URLs back
-
-
-```r
-out <- cr_works(filter=c(has_full_text = TRUE))
-dois <- out$data$DOI
-sapply(dois[1:5], cr_full_links, type="xml")
-```
-
-```
-## $`10.1016/s0362-546x(97)00703-7.text/xml`
-## [1] "http://api.elsevier.com/content/article/PII:S0362546X97007037?httpAccept=text/xml"
-## 
-## $`10.1016/s0362-546x(98)00012-1.text/xml`
-## [1] "http://api.elsevier.com/content/article/PII:S0362546X98000121?httpAccept=text/xml"
-## 
-## $`10.1016/s0362-546x(97)00668-8.text/xml`
-## [1] "http://api.elsevier.com/content/article/PII:S0362546X97006688?httpAccept=text/xml"
-## 
-## $`10.1016/s0362-546x(98)00037-6.text/xml`
-## [1] "http://api.elsevier.com/content/article/PII:S0362546X98000376?httpAccept=text/xml"
-## 
-## $`10.1016/s0362-546x(97)00663-9.text/xml`
-## [1] "http://api.elsevier.com/content/article/PII:S0362546X97006639?httpAccept=text/xml"
 ```

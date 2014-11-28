@@ -279,11 +279,11 @@ cr_members(query='ecology', limit = 5)
 
 ```r
 cr_r()
-#>  [1] "10.1016/0031-9422(83)80148-4"   "10.1016/s0009-3084(97)88841-x" 
-#>  [3] "10.1021/ic50133a056"            "10.1093/oseo/instance.00050410"
-#>  [5] "10.1016/0022-3697(57)90115-4"   "10.1109/mue.2009.99"           
-#>  [7] "10.1093/jts/35.2.590-c"         "10.1016/0168-8510(89)90105-x"  
-#>  [9] "10.1007/s10853-012-6700-z"      "10.1080/01410096.2002.9995173"
+#>  [1] "10.1038/098217b0"                 "10.1115/icef2011-60114"          
+#>  [3] "10.12968/chca.2010.7.8.49102"     "10.1111/j.1440-1746.2010.06409.x"
+#>  [5] "10.1017/cbo9781139168564.012"     "10.1037//0021-843x.106.2.230"    
+#>  [7] "10.7152/bippa.v29i0.9482"         "10.1021/es3036779"               
+#>  [9] "10.1016/0197-2456(88)90026-8"     "10.1002/cne.910090123"
 ```
 
 You can pass in the number of DOIs you want back (default is 10)
@@ -291,7 +291,7 @@ You can pass in the number of DOIs you want back (default is 10)
 
 ```r
 cr_r(2)
-#> [1] "10.1016/s1567-5688(07)71246-1" "10.1056/nejm198002213020801"
+#> [1] "10.1176/appi.ajp.159.8.1446" "10.2307/1435747"
 ```
 
 ## pmid2doi & doi2pmid
@@ -342,6 +342,31 @@ pmid2doi(c(1,2,3))
 #> 2    2 10.1016/0006-291X(75)90482-9
 #> 3    3 10.1016/0006-291X(75)90498-2
 ```
+
+<!--
+## Get full text links to works
+
+This is a mostly experimental function so far in that it may not work that often. Publishers can optionally provide links in the metadata they provide to Crossref for full text of the work, but that data is often missing. Find out more about it at [http://tdmsupport.crossref.org/](http://tdmsupport.crossref.org/). Some examples that do work:
+
+Get link to the pdf
+
+
+```r
+cr_full_links(doi = "10.5555/515151", type = "pdf")
+#> Error in eval(expr, envir, enclos): could not find function "cr_full_links"
+```
+
+Get a bunch of DOIs first, then get many URLs back
+
+
+```r
+out <- cr_works(filter=c(has_full_text = TRUE))
+dois <- out$data$DOI
+sapply(dois[1:5], cr_full_links, type="xml")
+#> Error in match.fun(FUN): object 'cr_full_links' not found
+```
+-->
+
 
 ## Meta
 
