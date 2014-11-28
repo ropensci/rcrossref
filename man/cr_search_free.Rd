@@ -18,7 +18,7 @@ Search the CrossRef Metatdata for DOIs using free form references.
 Have to have at least three terms in each search query.
 }
 \examples{
-\dontrun{
+\donttest{
 # search with title, author, year, and journal
 cr_search_free(query = "Piwowar Sharing Detailed Research Data Is Associated with
 Increased Citation Rate PLOS one 2007")

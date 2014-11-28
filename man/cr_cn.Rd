@@ -31,7 +31,7 @@ See \url{http://www.crosscite.org/cn/} for more info on the
   	Crossref Content Negotiation API service.
 }
 \examples{
-\dontrun{
+\donttest{
 cr_cn(dois="10.1126/science.169.3946.635")
 cr_cn(dois="10.1126/science.169.3946.635", format="citeproc-json")
 cr_cn("10.1126/science.169.3946.635", "rdf-xml")

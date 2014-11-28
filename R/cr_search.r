@@ -15,7 +15,7 @@
 #' 		Crossref API service.
 #' @seealso \code{\link{cr_r}}, \code{\link{cr_citation}}, \code{\link{cr_search_free}}
 #' @author Scott Chamberlain \email{myrmecocystus@@gmail.com}
-#' @examples \dontrun{
+#' @examples \donttest{
 #' cr_search(query = c("renear", "palmer"))
 #'
 #' # limit to 4 results

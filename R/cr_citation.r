@@ -15,7 +15,7 @@
 #' 		Crossref API service.
 #' @seealso \code{\link{cr_cn}} does a very similar thing
 #' @author Carl Boettiger \email{cboettig@@gmail.com}
-#' @examples \dontrun{
+#' @examples \donttest{
 #' cr_citation(doi="10.1371/journal.pone.0042793")
 #' print(cr_citation("10.3998/3336451.0009.101"), style="Bibtex")
 #' print(cr_citation("10.3998/3336451.0009.101"), style="text")

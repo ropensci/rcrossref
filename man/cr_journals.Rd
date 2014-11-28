@@ -44,7 +44,7 @@ Note that some parameters are ignored unless \code{works=TRUE}: sample, sort,
 order, filter
 }
 \examples{
-\dontrun{
+\donttest{
 cr_journals()
 cr_journals(issn="2167-8359")
 cr_journals(issn="2167-8359", works=TRUE)

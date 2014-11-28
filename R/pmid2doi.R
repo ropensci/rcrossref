@@ -5,7 +5,7 @@
 #' @param simplify (logical) Whether to simplify result to vector.
 #' @param ... Curl args passed on to \code{\link[httr]{GET}}.
 #' @references Uses the \url{http://www.pmid2doi.org/} REST API.
-#' @examples \dontrun{
+#' @examples \donttest{
 #' # dois to pmids
 #' doi2pmid("10.1016/0006-2944(75)90147-7")
 #' doi2pmid("10.1016/0006-2944(75)90147-7", TRUE)

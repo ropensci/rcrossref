@@ -41,7 +41,7 @@ Search CrossRef works (articles)
 BEWARE: The API will only work for CrossRef DOIs.
 }
 \examples{
-\dontrun{
+\donttest{
 # Works funded by the NSF
 cr_works(query="NSF")
 # Works that include renear but not ontologies

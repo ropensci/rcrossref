@@ -19,7 +19,7 @@ doi2pmid(x, simplify = FALSE, ...)
 Get a PMID from a DOI, and vice versa.
 }
 \examples{
-\dontrun{
+\donttest{
 # dois to pmids
 doi2pmid("10.1016/0006-2944(75)90147-7")
 doi2pmid("10.1016/0006-2944(75)90147-7", TRUE)

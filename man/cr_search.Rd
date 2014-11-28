@@ -31,7 +31,7 @@ See \url{http://search.labs.crossref.org/help/api} for more info on this
 		Crossref API service.
 }
 \examples{
-\dontrun{
+\donttest{
 cr_search(query = c("renear", "palmer"))
 
 # limit to 4 results
