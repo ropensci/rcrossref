@@ -123,12 +123,12 @@ cr_fundref(query="NSF")
 #> 
 #>             id      location
 #> 1 501100004190        Norway
-#> 2 501100001809         China
+#> 2    100000179 United States
 #> 3 501100000930     Australia
 #> 4    100003187 United States
 #> 5    100000001 United States
 #> 6    100006445 United States
-#> 7    100000179 United States
+#> 7 501100001809         China
 #> Variables not shown: name (chr), alt.names (chr), uri (chr), tokens (chr)
 ```
 
@@ -155,7 +155,7 @@ cr_agency(dois = '10.13039/100000001')
 cr_works(filter=c(has_orcid=TRUE, from_pub_date='2004-04-04'), limit=1)
 #> $meta
 #>   total_results search_terms start_index items_per_page
-#> 1        102947           NA           0              1
+#> 1        106345           NA           0              1
 #> 
 #> $data
 #> Source: local data frame [1 x 21]
@@ -200,7 +200,7 @@ cr_licenses(query = 'elsevier')
 #> 
 #>                                            URL work.count
 #> 1  http://creativecommons.org/licenses/by/3.0/          1
-#> 2 http://www.elsevier.com/tdm/userlicense/1.0/        110
+#> 2 http://www.elsevier.com/tdm/userlicense/1.0/        130
 ```
 
 ### Search based on DOI prefixes
@@ -238,14 +238,14 @@ cr_members(query='ecology', limit = 5)
 #> $data
 #> Source: local data frame [5 x 43]
 #> 
-#>     id                                               primary_name
-#> 1  336                      Japanese Society of Microbial Ecology
-#> 2 1950                                  Journal of Vector Ecology
-#> 3 2080                      The Japan Society of Tropical Ecology
-#> 4 2151                      Ecology and Civil Engineering Society
-#> 5 2169 Italian Society of Sivilculture and Forest Ecology (SISEF)
+#>     id                                 primary_name
+#> 1 3947          Korean Association of Human Ecology
+#> 2 2080        The Japan Society of Tropical Ecology
+#> 3 2151        Ecology and Civil Engineering Society
+#> 4 2232 Japanese Society of Health and Human Ecology
+#> 5  336        Japanese Society of Microbial Ecology
 #> Variables not shown: location (chr), last_status_check_time (date),
-#>   backfile.dois (chr), current.dois (chr), X.10.1264. (chr),
+#>   backfile.dois (chr), current.dois (chr), X.10.5934. (chr),
 #>   coverge.resource.links.backfile (chr), coverge.funders.current (chr),
 #>   coverge.funders.backfile (chr), coverge.references.current (chr),
 #>   coverge.references.backfile (chr), coverge.update.policies.backfile
@@ -265,8 +265,8 @@ cr_members(query='ecology', limit = 5)
 #>   flags.deposits.update.policies.backfile (chr),
 #>   flags.deposits.funders.current (chr),
 #>   flags.deposits.update.policies.current (chr), flags.deposits.articles
-#>   (chr), names (chr), tokens (chr), X.10.3376. (chr), X.10.3759. (chr),
-#>   X.10.3825. (chr), X.10.3832. (chr)
+#>   (chr), names (chr), tokens (chr), X.10.3759. (chr), X.10.3825. (chr),
+#>   X.10.3861. (chr), X.10.1264. (chr)
 #> 
 #> $facets
 #> NULL
@@ -279,11 +279,11 @@ cr_members(query='ecology', limit = 5)
 
 ```r
 cr_r()
-#>  [1] "10.7202/800694ar"               "10.1177/036985646100100503"    
-#>  [3] "10.1084/jem.64.3.425"           "10.1002/chin.200639037"        
-#>  [5] "10.1201/9780203647073.ch15"     "10.7202/1005350ar"             
-#>  [7] "10.1143/jjap.8.293"             "10.1049/mnl.2013.0548"         
-#>  [9] "10.1016/j.jfoodeng.2010.04.003" "10.3917/edd.234.0041"
+#>  [1] "10.1016/0031-9422(83)80148-4"   "10.1016/s0009-3084(97)88841-x" 
+#>  [3] "10.1021/ic50133a056"            "10.1093/oseo/instance.00050410"
+#>  [5] "10.1016/0022-3697(57)90115-4"   "10.1109/mue.2009.99"           
+#>  [7] "10.1093/jts/35.2.590-c"         "10.1016/0168-8510(89)90105-x"  
+#>  [9] "10.1007/s10853-012-6700-z"      "10.1080/01410096.2002.9995173"
 ```
 
 You can pass in the number of DOIs you want back (default is 10)
@@ -291,7 +291,7 @@ You can pass in the number of DOIs you want back (default is 10)
 
 ```r
 cr_r(2)
-#> [1] "10.1007/bf01267899"          "10.1007/978-3-642-93435-3_7"
+#> [1] "10.1016/s1567-5688(07)71246-1" "10.1056/nejm198002213020801"
 ```
 
 ## pmid2doi & doi2pmid
