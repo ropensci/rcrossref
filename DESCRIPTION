@@ -22,8 +22,7 @@ Imports:
     httr,
     plyr,
     bibtex,
-    dplyr,
-    stringr
+    dplyr
 Suggests:
     testthat,
     roxygen2 (>= 4.0.1),
