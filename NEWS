@@ -1,3 +1,12 @@
+rcrossref 0.2.1
+===============
+
+MINOR IMPROVEMENTS
+
+* Fixes for man file examples. (#35)
+* `cr_citation()` is deprecated (stil useable, but will be removed in a 
+future version of the package). use `cr_cn()` instead. (#34)
+
 rcrossref 0.2.0
 ===============
 
