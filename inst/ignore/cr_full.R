@@ -32,14 +32,14 @@ cr_full_links <- function(doi, type='xml', ...)
   if(is.null(tt)) NULL else get_type(x=tt, y=type)
 }
 
-# cr_full_text <- function(url, ...)
-# {
-#   res <- GET(url[[1]])
-#   stopifnot(response$headers$`content-type` == hd()$httpheader[[1]])
-#   tt <- response$headers$link
-#   if(is.null(tt)) stop("No full text links", call. = FALSE)
-#   get_type(tt, type)
-# }
+cr_full_text <- function(url, ...)
+{
+  res <- GET(url[[1]])
+#   stopifnot(res$headers$`content-type` == hd()$httpheader[[1]])
+  tt <- res$headers$link
+  if(is.null(tt)) stop("No full text links", call. = FALSE)
+  get_type(tt, type)
+}
 
 hd <- function(header){
   add_headers(Accept = "application/vnd.crossref.unixsd+xml")
