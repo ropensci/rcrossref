@@ -12,3 +12,17 @@
 #' @title R Client for Various CrossRef APIs.
 #' @keywords package
 NULL
+
+#' Deprecated functions in rcrossref
+#' 
+#' \itemize{
+#'  \item \code{\link{cr_citation}}: Crossref is trying to sunset their OpenURL API, which 
+#'  this function uses. So this function will be removed in a future version of this 
+#'  package. See the function \code{\link{cr_cn}}, which does the same things, but with
+#'  more functionality, using the new Crossref API.
+#' }
+#' 
+#' The above function will be removed in a future version of this package.
+#' 
+#' @name rcrossref-deprecated
+NULL

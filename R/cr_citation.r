@@ -3,7 +3,7 @@
 #' Options to get formatted citations as bibtext or plain text.
 #'
 #' @export
-#'
+#' @name cr_citation-deprecated
 #' @param doi digital object identifier for an article in PLoS Journals
 #' @param title return the title of the paper or not (defaults to FALSE)
 #' @param url the PLoS API url for the function (should be left to default)
@@ -13,7 +13,7 @@
 #' @return Metadata from DOI in R's bibentry format.
 #' @details See \url{http://labs.crossref.org/openurl/} for more info on this
 #' 		Crossref API service.
-#' @seealso \code{\link{cr_cn}} does a very similar thing
+#' @seealso Use \code{\link{cr_cn}} instead. It does what this function does, and more.
 #' @author Carl Boettiger \email{cboettig@@gmail.com}
 #' @examples \donttest{
 #' cr_citation(doi="10.1371/journal.pone.0042793")
@@ -24,6 +24,7 @@
 cr_citation <- function(doi, title = FALSE, url = "http://www.crossref.org/openurl/",
 	key = "cboettig@gmail.com", ...)
 {
+  .Deprecated(new = "cr_cn", msg = "Will remove in a future version, see cr_cn()", package = "rcrossref")
   ## Assemble a url query such as:
   #http://www.crossref.org/openurl/?id=doi:10.3998/3336451.0009.101&noredirect=true&pid=API_KEY&format=unixref
   args <- list(id = paste("doi:", doi, sep=""), pid=as.character(key),
