@@ -13,11 +13,12 @@
 #' @details BEWARE: The API will only work for CrossRef DOIs.
 #' @references \url{https://github.com/CrossRef/rest-api-doc/blob/master/rest_api.md}
 #' 
-#' @examples \donttest{
+#' @examples 
+#' \donttest{
 #' cr_members(member_ids=98)
 #' }
 #' 
-#' @examples \dontrun{
+#' \dontrun{
 #' cr_members(member_ids=98, works=TRUE)
 #' cr_members(member_ids=c(10,98,45,1,9))
 #' cr_members(member_ids=c(10,98,45,1,9), works=TRUE)

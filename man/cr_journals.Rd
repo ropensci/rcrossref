@@ -47,6 +47,20 @@ order, filter
 \donttest{
 cr_journals(issn="2167-8359")
 }
+
+\dontrun{
+cr_journals()
+cr_journals(issn="2167-8359", works=TRUE)
+cr_journals(issn=c('1803-2427','2326-4225'))
+cr_journals(query="ecology")
+cr_journals(issn="2167-8359", query='ecology', works=TRUE, sort='score', order="asc")
+cr_journals(issn="2167-8359", query='ecology', works=TRUE, sort='score', order="desc")
+cr_journals(issn="2167-8359", works=TRUE, filter=c(from_pub_date='2014-03-03'))
+cr_journals(query="peerj")
+cr_journals(issn='1803-2427', works=TRUE)
+cr_journals(issn='1803-2427', works=TRUE, sample=1)
+cr_journals(limit=2)
+}
 }
 \references{
 \url{https://github.com/CrossRef/rest-api-doc/blob/master/rest_api.md}

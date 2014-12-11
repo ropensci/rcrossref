@@ -11,7 +11,8 @@
 #' @details BEWARE: The API will only work for CrossRef DOIs.
 #' @references \url{https://github.com/CrossRef/rest-api-doc/blob/master/rest_api.md}
 #' 
-#' @examples \donttest{
+#' @examples 
+#' \donttest{
 #' # Works funded by the NSF
 #' cr_works(query="NSF")
 #' 
@@ -19,7 +20,7 @@
 #' cr_works(query="renear+-ontologies")
 #' }
 #' 
-#' @examples \dontrun{
+#' \dontrun{
 #' # Filter
 #' cr_works(query="global state", filter=c(has_orcid=TRUE), limit=3)
 #' # Filter by multiple fields

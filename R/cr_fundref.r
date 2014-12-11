@@ -10,11 +10,12 @@
 #' @details BEWARE: The API will only work for CrossRef DOIs.
 #' @references \url{https://github.com/CrossRef/rest-api-doc/blob/master/rest_api.md}
 #' 
-#' @examples \donttest{
+#' @examples 
+#' \donttest{
 #' cr_fundref(query="NSF", limit=1)
 #' }
 #' 
-#' @examples \dontrun{
+#' \dontrun{
 #' cr_fundref(query="NSF")
 #' cr_fundref(dois='10.13039/100000001')
 #' out <- cr_fundref(dois=c('10.13039/100000001','10.13039/100000015'))

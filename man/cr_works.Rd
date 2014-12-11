@@ -48,6 +48,38 @@ cr_works(query="NSF")
 # Works that include renear but not ontologies
 cr_works(query="renear+-ontologies")
 }
+
+\dontrun{
+# Filter
+cr_works(query="global state", filter=c(has_orcid=TRUE), limit=3)
+# Filter by multiple fields
+cr_works(filter=c(has_orcid=TRUE, from_pub_date='2004-04-04'))
+# Only full text articles
+cr_works(filter=c(has_full_text = TRUE))
+
+# Querying dois
+cr_works(dois='10.1063/1.3593378')
+cr_works('10.1371/journal.pone.0033693')
+cr_works(dois='10.1007/12080.1874-1746')
+cr_works(dois=c('10.1007/12080.1874-1746','10.1007/10452.1573-5125', '10.1111/(issn)1442-9993'))
+
+# Include facetting in results
+cr_works(query="NSF", facet=TRUE)
+## Get facets only, by setting limit=0
+cr_works(query="NSF", facet=TRUE, limit=0)
+
+# Sort results
+cr_works(query="ecology", sort='relevance', order="asc")
+res <- cr_works(query="ecology", sort='score', order="asc")
+res$data$score
+
+# Get a random number of results
+cr_works(sample=1)
+cr_works(sample=10)
+
+# You can pass in dot separated fields to filter on specific fields
+cr_works(filter=c(award.number='CBET-0756451', award.funder='10.13039/100000001'))
+}
 }
 \references{
 \url{https://github.com/CrossRef/rest-api-doc/blob/master/rest_api.md}

@@ -60,6 +60,22 @@ a certain organisaton, member IDs and the member routes should be used.
 \donttest{
 cr_prefixes(prefixes="10.1016")
 }
+
+\dontrun{
+cr_prefixes(prefixes="10.1016", works=TRUE)
+cr_prefixes(prefixes=c('10.1016','10.1371','10.1023','10.4176','10.1093'))
+cr_prefixes(prefixes=c('10.1016','10.1371'), works=TRUE)
+cr_works(prefixes="10.1016", filter=c(has_full_text=TRUE), limit=5)
+cr_works(prefixes="10.1016", query='ecology', limit=4)
+cr_works(prefixes="10.1016", query='ecology', limit=4)
+
+# facets
+## if works is FALSE, then facets ignored
+cr_prefixes(prefixes="10.1016", works=FALSE, facet=TRUE)
+## get facets back
+cr_prefixes(prefixes="10.1016", works=TRUE, facet=TRUE)
+cr_prefixes(prefixes=c('10.1016','10.1371'), works=TRUE, facet=TRUE)
+}
 }
 \references{
 \url{https://github.com/CrossRef/rest-api-doc/blob/master/rest_api.md}

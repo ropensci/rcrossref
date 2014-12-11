@@ -47,6 +47,19 @@ BEWARE: The API will only work for CrossRef DOIs.
 \donttest{
 cr_members(member_ids=98)
 }
+
+\dontrun{
+cr_members(member_ids=98, works=TRUE)
+cr_members(member_ids=c(10,98,45,1,9))
+cr_members(member_ids=c(10,98,45,1,9), works=TRUE)
+
+cr_members(query='hindawi')
+cr_members(query='ecology')
+
+# curl options
+library('httr')
+cr_members(member_ids=98, config=verbose())
+}
 }
 \references{
 \url{https://github.com/CrossRef/rest-api-doc/blob/master/rest_api.md}

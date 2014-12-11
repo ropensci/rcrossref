@@ -7,11 +7,12 @@
 #' @details BEWARE: The API will only work for CrossRef DOIs.
 #' @references \url{https://github.com/CrossRef/rest-api-doc/blob/master/rest_api.md}
 #'
-#' @examples \donttest{
+#' @examples 
+#' \donttest{
 #' cr_licenses()
 #' }
 #' 
-#' @examples \dontrun{
+#' \dontrun{
 #' cr_licenses(query = 'elsevier')
 #' cr_licenses(filter = c(member=78))
 #' cr_licenses(filter = c(issn='2090-8091'))

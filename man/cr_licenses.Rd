@@ -39,6 +39,12 @@ BEWARE: The API will only work for CrossRef DOIs.
 \donttest{
 cr_licenses()
 }
+
+\dontrun{
+cr_licenses(query = 'elsevier')
+cr_licenses(filter = c(member=78))
+cr_licenses(filter = c(issn='2090-8091'))
+}
 }
 \references{
 \url{https://github.com/CrossRef/rest-api-doc/blob/master/rest_api.md}

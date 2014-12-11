@@ -34,5 +34,39 @@ See \url{http://www.crosscite.org/cn/} for more info on the
 \donttest{
 cr_cn(dois="10.1126/science.169.3946.635")
 }
+
+\dontrun{
+cr_cn(dois="10.1126/science.169.3946.635", format="citeproc-json")
+cr_cn("10.1126/science.169.3946.635", "rdf-xml")
+cr_cn("10.1126/science.169.3946.635", "crossref-xml")
+cr_cn("10.1126/science.169.3946.635", "bibtex")
+
+# return an R bibentry type
+cr_cn("10.1126/science.169.3946.635", "bibentry")
+cr_cn("10.6084/m9.figshare.97218", "bibentry")
+
+# return an apa style citation
+cr_cn("10.1126/science.169.3946.635", "text", "apa")
+cr_cn("10.1126/science.169.3946.635", "text", "harvard3")
+cr_cn("10.1126/science.169.3946.635", "text", "elsevier-harvard")
+cr_cn("10.1126/science.169.3946.635", "text", "ecoscience")
+cr_cn("10.1126/science.169.3946.635", "text", "heredity")
+cr_cn("10.1126/science.169.3946.635", "text", "oikos")
+
+# example with many DOIs
+dois <- cr_r(2)
+cr_cn(dois, "text", "apa")
+
+\dontrun{
+# Cycle through random styles - print style on each try
+stys <- get_styles()
+foo <- function(x){
+ cat(sprintf("<Style>:\%s\\n", x), sep = "\\n\\n")
+ cr_cn("10.1126/science.169.3946.635", "text", style=x)
+}
+foo(sample(stys, 1))
+
+}
+}
 }
 
