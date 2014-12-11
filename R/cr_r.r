@@ -11,7 +11,7 @@
 #' @references \url{http://random.labs.crossref.org/}
 #' @author Scott Chamberlain \email{myrmecocystus@@gmail.com}
 #' @seealso \code{\link{cr_search}}, \code{\link{cr_citation}}, \code{\link{cr_search_free}}
-#' @examples \donttest{
+#' @examples \dontrun{
 #' # Default search gets 10 random DOIs
 #' cr_r()
 #' }

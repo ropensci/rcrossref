@@ -13,7 +13,7 @@
 #' 		Crossref API service.
 #' @seealso \code{\link{cr_search}}, \code{\link{cr_r}}, \code{\link{cr_search_free}}
 #' @author Carl Boettiger \email{cboettig@@gmail.com}
-#' @examples \donttest{
+#' @examples \dontrun{
 #' cr_citation_count(doi="10.1371/journal.pone.0042793")
 #' cr_citation_count(doi="10.1016/j.fbr.2012.01.001")
 #' }

@@ -17,7 +17,9 @@
 #' @author Scott Chamberlain \email{myrmecocystus@@gmail.com}
 #' @examples \donttest{
 #' cr_search(query = c("renear", "palmer"))
+#' }
 #'
+#' @examples \dontrun{
 #' # limit to 4 results
 #' cr_search(query = c("renear", "palmer"), rows = 4)
 #'

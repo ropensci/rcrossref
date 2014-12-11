@@ -33,36 +33,6 @@ See \url{http://search.labs.crossref.org/help/api} for more info on this
 \examples{
 \donttest{
 cr_search(query = c("renear", "palmer"))
-
-# limit to 4 results
-cr_search(query = c("renear", "palmer"), rows = 4)
-
-# get more results than standard
-cr_search(query = c("renear", "palmer"), rows = 40)
-
-# sort results by score
-cr_search(query = c("renear", "palmer"), rows = 10, sort = "score")
-
-# sort results by year
-cr_search(query = c("renear", "palmer"), rows = 10, sort = "year")
-
-# get results for a certain year
-cr_search(query = c("renear", "palmer"), year = 2010)
-
-# search by a single DOI
-cr_search(doi = "10.1890/10-0340.1")
-
-# search for many DOI's
-cr_search(doi = c("10.1890/10-0340.1","10.1016/j.fbr.2012.01.001",
-                  "10.1111/j.1469-8137.2012.04121.x"))
-
-# find all the records of articles from a journal ISBN
-cr_search(query = "1461-0248", type="Journal Article")
-
-# curl stuff
-library('httr')
-cr_search(doi = "10.1890/10-0340.1", config=verbose())
-cr_search(query = c("renear", "palmer"), rows = 40, config=progress())
 }
 }
 \author{

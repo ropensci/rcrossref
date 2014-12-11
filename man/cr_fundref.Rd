@@ -42,22 +42,7 @@ BEWARE: The API will only work for CrossRef DOIs.
 }
 \examples{
 \donttest{
-cr_fundref(query="NSF")
 cr_fundref(query="NSF", limit=1)
-cr_fundref(dois='10.13039/100000001')
-out <- cr_fundref(dois=c('10.13039/100000001','10.13039/100000015'))
-out['10.13039/100000001']
-out[['10.13039/100000001']]
-
-cr_fundref(dois='10.13039/100000001')
-cr_fundref(dois='10.13039/100000001', works=TRUE, limit=5)
-
-cr_fundref(dois=c('10.13039/100000001','10.13039/100000015'))
-cr_fundref(dois=c('10.13039/100000001','10.13039/100000015'), works=TRUE)
-
-# Curl options
-library('httr')
-cr_fundref(dois='10.13039/100000001', config=verbose())
 }
 }
 \references{

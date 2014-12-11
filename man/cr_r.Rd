@@ -19,7 +19,7 @@ A character vector of DOIs
 Get a random set of DOI's through CrossRef.
 }
 \examples{
-\donttest{
+\dontrun{
 # Default search gets 10 random DOIs
 cr_r()
 }
