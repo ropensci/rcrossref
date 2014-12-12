@@ -57,7 +57,6 @@ cr_cn("10.1126/science.169.3946.635", "text", "oikos")
 dois <- cr_r(2)
 cr_cn(dois, "text", "apa")
 
-\dontrun{
 # Cycle through random styles - print style on each try
 stys <- get_styles()
 foo <- function(x){
@@ -65,8 +64,6 @@ foo <- function(x){
  cr_cn("10.1126/science.169.3946.635", "text", style=x)
 }
 foo(sample(stys, 1))
-
-}
 }
 }
 
