@@ -29,6 +29,8 @@ See \url{http://labs.crossref.org/openurl/} for more info on this
 \dontrun{
 cr_citation_count(doi="10.1371/journal.pone.0042793")
 cr_citation_count(doi="10.1016/j.fbr.2012.01.001")
+# DOI not found
+cr_citation_count(doi="10.1016/j.fbr.2012")
 }
 }
 \author{

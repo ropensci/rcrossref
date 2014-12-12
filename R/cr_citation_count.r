@@ -16,6 +16,8 @@
 #' @examples \dontrun{
 #' cr_citation_count(doi="10.1371/journal.pone.0042793")
 #' cr_citation_count(doi="10.1016/j.fbr.2012.01.001")
+#' # DOI not found
+#' cr_citation_count(doi="10.1016/j.fbr.2012")
 #' }
 
 cr_citation_count <- function(doi, url = "http://www.crossref.org/openurl/",
@@ -30,5 +32,9 @@ cr_citation_count <- function(doi, url = "http://www.crossref.org/openurl/",
   stop_for_status(cite_count)
   cite_count_data <- content(cite_count, as = "text")
   ans <- xmlParse(cite_count_data)
-  as.numeric(xpathSApply(ans, "//*[@fl_count]",  function(x) xmlAttrs(x)[["fl_count"]]))
+  if(get_attr(ans, "status") == "unresolved") NA else as.numeric(get_attr(ans, "fl_count"))
+}
+
+get_attr <- function(xml, attr){
+  xpathSApply(xml, sprintf("//*[@%s]", attr), function(x) xmlAttrs(x)[[attr]])
 }
