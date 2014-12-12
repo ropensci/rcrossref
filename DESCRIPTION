@@ -19,7 +19,7 @@ VignetteBuilder: knitr
 Imports:
     jsonlite,
     XML,
-    httr,
+    httr (>= 0.6.0),
     plyr,
     bibtex,
     dplyr
