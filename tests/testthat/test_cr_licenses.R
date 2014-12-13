@@ -26,6 +26,6 @@ test_that("cr_licenses dimensions are correct", {
 
 test_that("cr_licenses fails correctly", {
   library('httr')
-  expect_warning(cr_licenses(config=timeout(0.01)))
+  expect_error(cr_licenses(config=timeout(0.01)))
   expect_equal(NROW(cr_licenses(query = "adfaaf")$data), 0)
 })

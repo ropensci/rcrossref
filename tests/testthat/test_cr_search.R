@@ -30,5 +30,5 @@ test_that("cr_search dimensions are correct", {
 test_that("cr_search fails correctly", {
   library('httr')
   expect_error(cr_search(config=timeout(0.01)))
-  expect_error(cr_search("Asdfadf"))
+  expect_equal(cr_search("Asdfadf"), NULL)
 })

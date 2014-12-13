@@ -4,7 +4,7 @@ test_that("cr_prefixes returns correct class", {
   a <- cr_prefixes(prefixes="10.1016")
   expect_is(a, "list")
   expect_is(a$data, "data.frame")
-  expect_equal(a$facets, NA)
+  expect_equal(a$facets, NULL)
 })
 
 test_that("cr_prefixes paging works correctly", {
