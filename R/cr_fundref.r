@@ -31,6 +31,14 @@
 #' # Curl options
 #' library('httr')
 #' cr_fundref(dois='10.13039/100000001', config=verbose())
+#' 
+#' # If not found, and only 1 DOI given, list of NA elements returned
+#' cr_fundref("adfadfaf")
+#' # If not found, and > 1 DOI given, those not found dropped
+#' cr_fundref(dois=c("adfadfaf","asfasf"))
+#' cr_fundref(dois=c("adfadfaf","asfasf"), works=TRUE)
+#' cr_fundref(dois=c("10.13039/100000001","asfasf"))
+#' cr_fundref(dois=c("10.13039/100000001","asfasf"), works=TRUE)
 #' }
 
 `cr_fundref` <- function(dois = NULL, query = NULL, filter = NULL, offset = NULL,
@@ -43,27 +51,41 @@
   
   if(length(dois) > 1){
     res <- llply(dois, fundref_GET, args=args, works=works, ..., .progress=.progress)
-    out <- lapply(res, "[[", "message")
-    if(works){
-      rbind_all(do.call(c, lapply(out, function(x) lapply(x$items, parse_works))))
-    } else { 
-      tmp <- lapply(out, parse_fund)
-      structure(tmp, .Names=dois)
+    out <- setNames(lapply(res, "[[", "message"), dois)
+    if( any(is.na(out)) ){
+      out <- cr_compact(lapply(out, function(x){
+        if( all(is.na(x)) ) NULL else x
+      }))
+    }
+    if(length(out) == 0){
+      NA
+    } else {
+      if(works){
+        tmp <- lapply(out, function(x) lapply(x$items, parse_works))
+        tmp <- tmp[!sapply(tmp, length) == 0]
+        rbind_all(do.call(c, tmp))
+      } else { 
+        lapply(out, parse_fund)
+      }
     }
   } else { 
     res <- fundref_GET(dois, args=args, works=works, ...) 
-    if(is.null(dois)){
-      list(meta=parse_meta(res), 
-           data=rbind_all(lapply(res$message$items, parse_fundref)))
+    if( all(is.na(res)) ){
+      list(meta=NA, data=NA)
     } else {
-      if(works){
-        wout <- rbind_all(lapply(res$message$items, parse_works))
-        meta <- parse_meta(res)
+      if(is.null(dois)){
+        list(meta=parse_meta(res), 
+             data=rbind_all(lapply(res$message$items, parse_fundref)))
       } else {
-        wout <- parse_fund(res$message)
-        meta <- NULL
+        if(works){
+          wout <- rbind_all(lapply(res$message$items, parse_works))
+          meta <- parse_meta(res)
+        } else {
+          wout <- parse_fund(res$message)
+          meta <- NULL
+        }
+        list(meta=meta, data=wout)
       }
-      list(meta=meta, data=wout)
     }
   }
 }

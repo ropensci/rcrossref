@@ -61,6 +61,14 @@ cr_fundref(dois=c('10.13039/100000001','10.13039/100000015'), works=TRUE)
 # Curl options
 library('httr')
 cr_fundref(dois='10.13039/100000001', config=verbose())
+
+# If not found, and only 1 DOI given, list of NA elements returned
+cr_fundref("adfadfaf")
+# If not found, and > 1 DOI given, those not found dropped
+cr_fundref(dois=c("adfadfaf","asfasf"))
+cr_fundref(dois=c("adfadfaf","asfasf"), works=TRUE)
+cr_fundref(dois=c("10.13039/100000001","asfasf"))
+cr_fundref(dois=c("10.13039/100000001","asfasf"), works=TRUE)
 }
 }
 \references{
