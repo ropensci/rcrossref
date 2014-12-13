@@ -52,8 +52,8 @@
 #' cr_search(query = c("renear", "palmer"), rows = 40, config=progress())
 #' }
 
-`cr_search` <- function(query=NULL, doi = NULL, page = NULL, rows = NULL, sort = NULL, 
-  year = NULL, type = NULL, ...)
+`cr_search` <- function(query=NULL, doi=NULL, page=NULL, rows=NULL, sort=NULL, 
+  year=NULL, type=NULL, ...)
 {
   url <- "http://search.labs.crossref.org/dois"
   if(!is.null(doi)){ doi <- as.character(doi) } else {doi <- doi}
