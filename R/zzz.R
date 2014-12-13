@@ -43,14 +43,15 @@ filterchoices <- c(
 cr_GET <- function(endpoint, args, todf=TRUE, ...)
 {
   url <- sprintf("http://api.crossref.org/%s", endpoint)
-  response <- GET(url, query = args, ...)
-  doi <- gsub("works/|/agency", "", endpoint)
-  if(!response$status_code < 300){
-    warning(sprintf("%s: %s %s", response$status_code, doi, response$headers$statusmessage), call. = FALSE)
-    list(message=NA)
+  res <- GET(url, query = args, ...)
+  doi <- gsub("works/|/agency|funders/", "", endpoint)
+  if(!res$status_code < 300){
+    # warning(sprintf("%s: %s %s", res$status_code, doi, res$headers$statusmessage), call. = FALSE)
+    warning(sprintf("%s: %s not found", res$status_code, doi), call. = FALSE)
+    list(message =  NA)
   } else {
-    stopifnot(response$headers$`content-type` == "application/json;charset=UTF-8")
-    res <- content(response, as = "text")
+    stopifnot(res$headers$`content-type` == "application/json;charset=UTF-8")
+    res <- content(res, as = "text")
     jsonlite::fromJSON(res, todf)
   }
 }

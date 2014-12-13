@@ -53,7 +53,7 @@
   format <- match.arg(format, c("rdf-xml", "turtle", "citeproc-json",
                                 "text", "ris", "bibtex", "crossref-xml",
                                 "datacite-xml", "bibentry"))
-  cn <- function(doi){
+  cn <- function(doi, ...){
     url <- paste("http://dx.doi.org", doi, sep="/")
     pick <- c(
            "rdf-xml" = "application/rdf+xml",
@@ -68,7 +68,7 @@
     type <- pick[[format]]
     if(format == "text")
       type <- paste(type, "; style = ", style, "; locale = ", locale, sep="")
-    response <- GET(url, add_headers(Accept = type, followlocation = TRUE), ...)
+    response <- GET(url, ..., add_headers(Accept = type, followlocation = TRUE))
     stop_for_status(response)
     select <- c(
            "rdf-xml" = "text/xml",
@@ -90,8 +90,8 @@
   }
 
   if(length(dois) > 1)
-    llply(dois, function(z) {
-      out = try(cn(z), silent=TRUE)
+    llply(dois, function(z, ...) {
+      out = try(cn(z, ...), silent=TRUE)
       if("try-error" %in% class(out)) {
         warning(paste0("Failure in resolving '", z, "'. See error detail in results."))
         out <- list(doi=z, error=out[[1]])
@@ -99,7 +99,7 @@
       return(out)
     }, .progress=.progress)
   else
-    cn(dois)
+    cn(dois, ...)
 }
 
 #' @import bibtex
