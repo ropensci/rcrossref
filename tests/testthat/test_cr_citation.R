@@ -11,4 +11,5 @@ test_that("cr_citation returns correct length", {
 test_that("cr_citation fails correctly", {
   library('httr')
   expect_error(suppressWarnings(cr_citation(doi="10.1371/journal.pone.0042793", config=timeout(0.001))))
+  expect_warning(cr_citation(doi="10.1371/journal.pone.0042793"))
 })
