@@ -16,6 +16,7 @@
 #' @examples 
 #' \donttest{
 #' cr_members(member_ids=98)
+#' cr_members(member_ids=340)
 #' }
 #' 
 #' \dontrun{
@@ -46,8 +47,8 @@
     out <- if(works) do.call(c, lapply(out, function(x) lapply(x$items, parse_works))) else lapply(out, parse_members)
     df <- rbind_all(out)
     meta <- if(works) data.frame(member_ids=member_ids, do.call(rbind, lapply(res, parse_meta)), stringsAsFactors = FALSE) else NULL
-    facets <- lapply(res, function(x) parse_facets(x$message$facets))
-    names(facets) <- member_ids
+    facets <- setNames(lapply(res, function(x) parse_facets(x$message$facets)), member_ids)
+    facets <- if(all(vapply(facets, is.null, logical(1)))) NULL else facets
     list(meta=meta, data=df, facets=facets)
   } else if(length(member_ids) == 1) { 
     tmp <- member_GET(member_ids, args=args, works=works, ...)

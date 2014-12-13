@@ -46,6 +46,7 @@ BEWARE: The API will only work for CrossRef DOIs.
 \examples{
 \donttest{
 cr_members(member_ids=98)
+cr_members(member_ids=340)
 }
 
 \dontrun{
