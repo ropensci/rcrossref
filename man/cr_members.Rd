@@ -57,9 +57,17 @@ cr_members(member_ids=c(10,98,45,1,9), works=TRUE)
 cr_members(query='hindawi')
 cr_members(query='ecology')
 
+# facets
+cr_members(member_ids=98, works=TRUE, facet=TRUE)
+
 # curl options
 library('httr')
 cr_members(member_ids=98, config=verbose())
+
+# data not found
+cr_members(query="adfdf")
+cr_members(member_ids=c(323234343434,3434343434), works=TRUE, facet=TRUE)
+cr_members(member_ids=c(323234343434,3434343434,98), works=TRUE, facet=TRUE)
 }
 }
 \references{
