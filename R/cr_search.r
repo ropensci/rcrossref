@@ -71,5 +71,5 @@ cr_search_GET <- function(url, x, page, rows, sort, year, type, ...){
   stop_for_status(tt)
   res <- content(tt, as = "text")
   tmp <- fromJSON(res)
-  if(nrow(tmp) == 0) "no results" else tmp
+  if(NROW(tmp) == 0) NULL else tmp
 }
