@@ -1,6 +1,6 @@
 context("testing cr_fundref")
 
-a <- out <- cr_fundref(dois=c('10.13039/100000001','10.13039/100000015'))
+a <- cr_fundref(dois=c('10.13039/100000001','10.13039/100000015'))
 b <- cr_fundref(dois='10.13039/100000001', works=TRUE, limit=5)
 
 test_that("cr_fundref returns correct class", {
