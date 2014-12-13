@@ -102,7 +102,7 @@ convtime <- function(x){
 
 parse_facets <- function(x){
   tmp <- lapply(x, function(z) ldply(z$values))
-  if(length(tmp) == 0) NA else tmp
+  if(length(tmp) == 0) NULL else tmp
 }
 
 parse_works <- function(zzz){
