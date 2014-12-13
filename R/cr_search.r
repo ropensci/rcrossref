@@ -70,6 +70,11 @@ cr_search_GET <- function(url, x, page, rows, sort, year, type, ...){
   tt <- GET(url, query=args, ...)
   stop_for_status(tt)
   res <- content(tt, as = "text")
-  tmp <- fromJSON(res)
-  if(NROW(tmp) == 0) NULL else tmp
+  tmp <- jsonlite::fromJSON(res)
+  if(NROW(tmp) == 0) NULL else col_classes(tmp, c("character","numeric","integer","character","character","character","numeric"))
+}
+
+asnum <- function(x){
+  tmp <- tryCatch(as.numeric(x), warning=function(w) w)
+  if(is(tmp, "simpleWarning")) x else tmp
 }
