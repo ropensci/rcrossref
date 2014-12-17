@@ -21,5 +21,6 @@ print.tdmurl <- function(x, ...) {
   cat("<url> ", x[[1]], "\n", sep = "")
 }
 
-makeurl <- function(x, y) structure(x, class = "tdmurl", type=pick_type(y, x))
+makeurl <- function(x, y) structure(x, class = "tdmurl", type=match_type(y))
 check_url <- function(x) if(!grepl("http://", x)) stop("Not a proper url") else x
+match_type <- function(x) match.arg(x, c("xml","plain","pdf"))
