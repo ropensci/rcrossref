@@ -172,17 +172,6 @@ parse_urls <- function(x) {
   })
 }
 
-makeurl <- function(x, y) structure(x, class = "tdmurl", type=y)
-print.tdmurl <- function(x, ...) {
-  cat("<url> ", x[[1]], "\n", sep = "")
-}
-
-as.url <- function(x, ...) UseMethod("as.url")
-#' @export
-as.url.character <- function(x, ...) paste0(do_base, "/", x)
-#' @export
-as.url.tdmurl <- function(x, ...) x
-
 # cr_full_text <- function(url, ...)
 # {
 #   res <- GET(url[[1]])
