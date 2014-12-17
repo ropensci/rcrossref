@@ -32,6 +32,11 @@ cr_pdf(url, path = "~/.crossref", overwrite = TRUE, read = TRUE,
 \description{
 Get full text links from a DOI
 }
+\details{
+Note that \code{\link{cr_ft_links}}, \code{\link{cr_ft_text}},
+\code{\link{cr_pdf}}, \code{\link{cr_xml}}, \code{\link{cr_plain}}
+are not vectorized.
+}
 \examples{
 \donttest{
 # pdf link
