@@ -11,7 +11,7 @@
 #' @param verbose (logical) Print progress messages. Default: TRUE
 #' @param ... Named parameters passed on to \code{\link[httr]{GET}}
 #' @details Note that \code{\link{cr_ft_text}}, 
-#' \code{\link{cr_pdf}}, \code{\link{cr_xml}}, \code{\link{cr_plain}} 
+#' \code{\link{cr_ft_pdf}}, \code{\link{cr_ft_xml}}, \code{\link{cr_ft_plain}} 
 #' are not vectorized.
 #' @examples \dontrun{
 #' # pdf link
@@ -91,18 +91,18 @@ get_url <- function(a,b){
 }
 
 #' @export
-#' @rdname cr_ft_links
-cr_txt <- function(url, path = "~/.crossref", overwrite = TRUE, read=TRUE, verbose=TRUE, ...) 
+#' @rdname cr_ft_text
+cr_ft_plain <- function(url, path = "~/.crossref", overwrite = TRUE, read=TRUE, verbose=TRUE, ...) 
   getTEXT(url$plain[[1]], "plain", ...)
 
 #' @export
-#' @rdname cr_ft_links
-cr_xml <- function(url, path = "~/.crossref", overwrite = TRUE, read=TRUE, verbose=TRUE, ...) 
+#' @rdname cr_ft_text
+cr_ft_xml <- function(url, path = "~/.crossref", overwrite = TRUE, read=TRUE, verbose=TRUE, ...) 
   getTEXT(url$xml[[1]], "xml", ...)
 
 #' @export
-#' @rdname cr_ft_links
-cr_pdf <- function(url, path = "~/.crossref", overwrite = TRUE, read=TRUE, verbose=TRUE, ...)
+#' @rdname cr_ft_text
+cr_ft_pdf <- function(url, path = "~/.crossref", overwrite = TRUE, read=TRUE, verbose=TRUE, ...)
   getPDF(url$pdf[[1]], path, overwrite, "pdf", read, verbose, ...)
 
 pick_type <- function(x, z){
