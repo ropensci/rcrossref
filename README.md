@@ -280,11 +280,11 @@ cr_members(query='ecology', limit = 5)
 
 ```r
 cr_r()
-#>  [1] "10.1016/s0079-6700(00)00039-3" "10.14698/jkcce.2013.9.6.151"  
-#>  [3] "10.1016/s0007-1536(57)80054-0" "10.1179/072924705791602054"   
-#>  [5] "10.1007/bf01413845"            "10.1016/j.ijsu.2010.07.063"   
-#>  [7] "10.1142/9789812795885_0026"    "10.1002/tl.7309"              
-#>  [9] "10.1021/jo00138a038"           "10.1007/s12602-014-9167-1"
+#>  [1] "10.1136/bmj.1.793.316"           "10.1049/pe:19880029"            
+#>  [3] "10.1590/s1413-41522007000200013" "10.1007/978-1-4471-5496-9_12"   
+#>  [5] "10.1017/cbo9780511572845.006"    "10.1002/9780470376812.ch3f"     
+#>  [7] "10.1177/1043659613508784"        "10.1002/9783527625659.ch6m"     
+#>  [9] "10.1108/eb042809"                "10.3410/f.717962436.793466256"
 ```
 
 You can pass in the number of DOIs you want back (default is 10)
@@ -292,7 +292,7 @@ You can pass in the number of DOIs you want back (default is 10)
 
 ```r
 cr_r(2)
-#> [1] "10.1109/chicc.2006.4347617" "10.1002/ajmg.1320500303"
+#> [1] "10.1021/ac60228a030"         "10.1016/j.ejcts.2009.10.001"
 ```
 
 ## pmid2doi & doi2pmid
@@ -347,34 +347,55 @@ pmid2doi(c(1,2,3))
 
 ## Get full text links to works
 
-This is a mostly experimental function so far in that it may not work that often. Publishers can optionally provide links in the metadata they provide to Crossref for full text of the work, but that data is often missing. Find out more about it at [http://tdmsupport.crossref.org/](http://tdmsupport.crossref.org/). Some examples that do work:
+Publishers can optionally provide links in the metadata they provide to Crossref for full text of the work, but that data is often missing. Find out more about it at [http://tdmsupport.crossref.org/](http://tdmsupport.crossref.org/).
 
-Get link to the pdf
-
-
-```r
-cr_ft_links(doi = "10.5555/515151", type = "pdf")
-#> <url> http://annalsofpsychoceramics.labs.crossref.org/fulltext/10.5555/515151.pdf
-```
-
-Get a bunch of DOIs first, then get many URLs back
+Get some DOIs for articles that provide full text, and that have `CC-BY 3.0` licenses (i.e., more likely to actually be open)
 
 
 ```r
-out <- cr_works(filter=c(has_full_text = TRUE))
-dois <- out$data$DOI
-sapply(dois[1:5], cr_ft_links, type="xml")
-#>                                                   10.1016/s0362-546x(97)00703-7.xml 
-#> "http://api.elsevier.com/content/article/PII:S0362546X97007037?httpAccept=text/xml" 
-#>                                                   10.1016/s0362-546x(98)00012-1.xml 
-#> "http://api.elsevier.com/content/article/PII:S0362546X98000121?httpAccept=text/xml" 
-#>                                                   10.1016/s0362-546x(97)00668-8.xml 
-#> "http://api.elsevier.com/content/article/PII:S0362546X97006688?httpAccept=text/xml" 
-#>                                                   10.1016/s0362-546x(98)00037-6.xml 
-#> "http://api.elsevier.com/content/article/PII:S0362546X98000376?httpAccept=text/xml" 
-#>                                                   10.1016/s0362-546x(97)00663-9.xml 
-#> "http://api.elsevier.com/content/article/PII:S0362546X97006639?httpAccept=text/xml"
+out <- 
+  cr_works(filter = list(has_full_text = TRUE,
+    license_url="http://creativecommons.org/licenses/by/3.0/"))
+(dois <- out$data$DOI)
+#>  [1] "10.1155/2014/104347" "10.1155/2014/101286" "10.1155/2014/105950"
+#>  [4] "10.1155/2014/128542" "10.1155/2014/139046" "10.1155/2014/137349"
+#>  [7] "10.1155/2014/170795" "10.1155/2014/159704" "10.1155/2014/193154"
+#> [10] "10.1155/2014/201717" "10.1155/2014/190203" "10.1155/2014/179085"
+#> [13] "10.1155/2014/187416" "10.1155/2014/173192" "10.1155/2014/203871"
+#> [16] "10.1155/2014/212751" "10.1155/2014/235238" "10.1155/2014/236965"
+#> [19] "10.1155/2014/240581" "10.1155/2014/234508"
 ```
+
+Then get URLs to full text content
+
+
+```r
+(links <- cr_ft_links(dois[1]))
+#> <url> http://downloads.hindawi.com/journals/sv/2014/104347.xml
+```
+
+Then use those URLs to get full text
+
+
+```r
+cr_ft_text(links, "xml")
+#> <?xml version="1.0"?>
+#> <article xmlns:mml="http://www.w3.org/1998/Math/MathML" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://jats.nlm.nih.gov/publishing/1.1d1/xsd/JATS-journalpublishing1-mathml3.xsd" dtd-version="1.1d1">
+#>   <front>
+#>     <journal-meta>
+#>       <journal-id journal-id-type="publisher-id">SV</journal-id>
+#>       <journal-title-group>
+#>         <journal-title>Shock and Vibration</journal-title>
+#>       </journal-title-group>
+#>       <issn pub-type="epub">1875-9203</issn>
+#>       <issn pub-type="ppub">1070-9622</issn>
+#>       <publisher>
+#>         <publisher-name>Hindawi Publishing Corporation</publisher-name>
+#>       </publisher>
+#>     </journal-meta>
+#> .................... cutoff
+```
+
 
 ## Meta
 

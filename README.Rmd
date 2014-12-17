@@ -187,17 +187,31 @@ out <-
 (dois <- out$data$DOI)
 ```
 
-Then get many URLs back
+Then get URLs to full text content
 
 ```{r}
-# (links <- lapply(dois[1:5], cr_ft_links, type="xml"))
 (links <- cr_ft_links(dois[1]))
 ```
 
 Then use those URLs to get full text
 
-```{r}
+```{r eval=FALSE}
 cr_ft_text(links, "xml")
+#> <?xml version="1.0"?>
+#> <article xmlns:mml="http://www.w3.org/1998/Math/MathML" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://jats.nlm.nih.gov/publishing/1.1d1/xsd/JATS-journalpublishing1-mathml3.xsd" dtd-version="1.1d1">
+#>   <front>
+#>     <journal-meta>
+#>       <journal-id journal-id-type="publisher-id">SV</journal-id>
+#>       <journal-title-group>
+#>         <journal-title>Shock and Vibration</journal-title>
+#>       </journal-title-group>
+#>       <issn pub-type="epub">1875-9203</issn>
+#>       <issn pub-type="ppub">1070-9622</issn>
+#>       <publisher>
+#>         <publisher-name>Hindawi Publishing Corporation</publisher-name>
+#>       </publisher>
+#>     </journal-meta>
+#> .................... cutoff
 ```
 
 
