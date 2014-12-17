@@ -60,7 +60,7 @@
       member_ids <- member_ids[!is.na(out)]
       out <- out[!is.na(out)]
       # continue...
-      out <- if(works) do.call(c, lapply(out, function(x) lapply(x$items, parse_works))) else lapply(out, parse_members)
+      out <- if(works) do.call("c", lapply(out, function(x) lapply(x$items, parse_works))) else lapply(out, parse_members)
       df <- rbind_all(out)
       meta <- if(works) data.frame(member_ids=member_ids, do.call(rbind, lapply(res, parse_meta)), stringsAsFactors = FALSE) else NULL
       facets <- setNames(lapply(res, function(x) parse_facets(x$message$facets)), member_ids)
@@ -69,7 +69,7 @@
     }
   } else if(length(member_ids) == 1) { 
     tmp <- member_GET(member_ids, args=args, works=works, ...)
-    if(is.na(tmp$message)){
+    if(all(is.na(tmp$message))){
       list(meta=NULL, data=NULL, facets=NULL)
     } else {
       out <- if(works) rbind_all(lapply(tmp$message$items, parse_works)) else parse_members(tmp$message)
