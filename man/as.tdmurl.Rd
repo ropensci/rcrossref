@@ -6,11 +6,16 @@
 \alias{as.tdmurl.tdmurl}
 \title{Coerce a url to a tdmurl with a specific type}
 \usage{
-as.tdmurl(x, y)
+as.tdmurl(url, type)
 
-\method{as.tdmurl}{tdmurl}(x, y)
+\method{as.tdmurl}{tdmurl}(url, type)
 
-\method{as.tdmurl}{character}(x, y)
+\method{as.tdmurl}{character}(url, type)
+}
+\arguments{
+\item{url}{A URL.}
+
+\item{type}{A document type, one of xml, pdf, or plain}
 }
 \description{
 Coerce a url to a tdmurl with a specific type
