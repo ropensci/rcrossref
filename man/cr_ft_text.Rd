@@ -100,13 +100,13 @@ out <- cr_members(78, filter=c(has_full_text = TRUE), works = TRUE)
 links <- cr_ft_links(out$data$DOI[1], "all")
 cr_ft_text(links, 'xml') # notice how this is just metadata
 
-## You can use cr_xml, cr_plain, and cr_pdf to go directly to that format
+## You can use cr_ft_xml, cr_ft_plain, and cr_ft_pdf to go directly to that format
 out <-
  cr_works(filter = list(has_full_text = TRUE,
    license_url="http://creativecommons.org/licenses/by/3.0/"))
 (links <- cr_ft_links(out$data$DOI[10], "all"))
-cr_xml(links)
-cr_pdf(links)
+cr_ft_xml(links)
+cr_ft_pdf(links)
 }
 }
 
