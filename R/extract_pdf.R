@@ -2,7 +2,6 @@
 #' 
 #' @export
 #' @param path Path to a file
-#' @param ... further args passed on
 #' @return An object of class xpdf_char
 #' @details 
 #' Download xpdf from \url{http://www.foolabs.com/xpdf/download.html}
@@ -12,8 +11,7 @@
 #' res_xpdf$meta
 #' res_xpdf$data
 #' }
-extract_xpdf <- function(path, ...){
-  cmds <- get_cmds(...)
+extract_xpdf <- function(path){
   path <- path.expand(path)
   system2("pdftotext", shQuote(path))
   newpath <- sub("\\.pdf", ".txt", path)
@@ -61,8 +59,8 @@ pdf_info_via_xpdf <- function(file, options = NULL){
 # nn <- sub(":", "", regmatches(x, m))
 # substring(x, attr(m, "match.length")+2, )
 # 
-# strextract <- function(str, pattern) regmatches(str, regexpr(pattern, str))
-# strtrim <- function(str) gsub("^\\s+|\\s+$", "", str)
+strextract <- function(str, pattern) regmatches(str, regexpr(pattern, str))
+strtrim <- function(str) gsub("^\\s+|\\s+$", "", str)
 
 #   tags <- c("Title", "Subject", "Keywords", "Author", "Creator", 
 #             "Producer", "CreationDate", "ModDate", "Tagged", "Form", 

@@ -4,12 +4,10 @@
 \alias{extract_xpdf}
 \title{Extract text from a single pdf document.}
 \usage{
-extract_xpdf(path, ...)
+extract_xpdf(path)
 }
 \arguments{
 \item{path}{Path to a file}
-
-\item{...}{further args passed on}
 }
 \value{
 An object of class xpdf_char
