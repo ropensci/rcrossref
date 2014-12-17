@@ -61,6 +61,9 @@ cr_journals(query="peerj")
 cr_journals(issn='1803-2427', works=TRUE)
 cr_journals(issn='1803-2427', works=TRUE, sample=1)
 cr_journals(limit=2)
+
+# fails, if you want works, you must give an ISSN
+cr_journals(query = "ecology", filter=c(has_full_text = TRUE), works = TRUE)
 }
 }
 \references{

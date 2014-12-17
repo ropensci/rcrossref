@@ -29,11 +29,16 @@
 #' cr_journals(issn='1803-2427', works=TRUE)
 #' cr_journals(issn='1803-2427', works=TRUE, sample=1)
 #' cr_journals(limit=2)
+#' 
+#' # fails, if you want works, you must give an ISSN
+#' cr_journals(query = "ecology", filter=c(has_full_text = TRUE), works = TRUE)
 #' }
 
 `cr_journals` <- function(issn = NULL, query = NULL, filter = NULL, offset = NULL,
   limit = NULL, sample = NULL, sort = NULL, order = NULL, works=FALSE, .progress="none", ...)
 {
+  if(works) if(is.null(issn)) stop("If `works=TRUE`, you must give a journal ISSN", call. = FALSE)
+  
   foo <- function(x){
     path <- if(!is.null(x)){
       if(works) sprintf("journals/%s/works", x) else sprintf("journals/%s", x)
