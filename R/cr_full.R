@@ -163,7 +163,7 @@ st <- function(x) strsplit(x, "/")[[1]][[2]]
 parse_urls <- function(x) {
   lapply(strsplit(x, ",")[[1]], function(z) {
     zz <- gsub("\\s", "", strsplit(z, ";")[[1]])
-    url <- str_extract(zz[1], "http://[\\?=:_&a-zA-Z\\./0-9-]+")
+    url <- strextract(zz[1], "http://[\\?=:_&a-zA-Z\\./0-9-]+")
     other <- sapply(zz[2:length(zz)], function(w) { 
       nn <- gsub('\\"', "", strsplit(w, "=")[[1]])
       setNames(nn[2], nn[1])
