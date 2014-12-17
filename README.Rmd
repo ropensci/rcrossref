@@ -176,21 +176,30 @@ pmid2doi(c(1,2,3))
 
 ## Get full text links to works
 
-This is a mostly experimental function so far in that it may not work that often. Publishers can optionally provide links in the metadata they provide to Crossref for full text of the work, but that data is often missing. Find out more about it at [http://tdmsupport.crossref.org/](http://tdmsupport.crossref.org/). Some examples that do work:
+Publishers can optionally provide links in the metadata they provide to Crossref for full text of the work, but that data is often missing. Find out more about it at [http://tdmsupport.crossref.org/](http://tdmsupport.crossref.org/).
 
-Get link to the pdf
-
-```{r}
-cr_ft_links(doi = "10.5555/515151", type = "pdf")
-```
-
-Get a bunch of DOIs first, then get many URLs back
+Get some DOIs for articles that provide full text, and that have `CC-BY 3.0` licenses (i.e., more likely to actually be open)
 
 ```{r}
-out <- cr_works(filter=c(has_full_text = TRUE))
-dois <- out$data$DOI
-sapply(dois[1:5], cr_ft_links, type="xml")
+out <- 
+  cr_works(filter = list(has_full_text = TRUE,
+    license_url="http://creativecommons.org/licenses/by/3.0/"))
+(dois <- out$data$DOI)
 ```
+
+Then get many URLs back
+
+```{r}
+# (links <- lapply(dois[1:5], cr_ft_links, type="xml"))
+(links <- cr_ft_links(dois[1]))
+```
+
+Then use those URLs to get full text
+
+```{r}
+cr_ft_text(links, "xml")
+```
+
 
 ## Meta
 
