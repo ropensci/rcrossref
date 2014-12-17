@@ -4,6 +4,9 @@
 #' @param doi A DOI
 #' @param type One of xml, plain, pdf, or all 
 #' @param ... Named parameters passed on to \code{\link[httr]{GET}}
+#' @details Note that \code{\link{cr_ft_links}}, \code{\link{cr_ft_text}}, 
+#' \code{\link{cr_pdf}}, \code{\link{cr_xml}}, \code{\link{cr_plain}} 
+#' are not vectorized.
 #' @examples \donttest{
 #' # pdf link
 #' cr_ft_links(doi = "10.5555/515151", "pdf")
@@ -82,10 +85,18 @@ cr_ft_links <- function(doi, type='xml', ...)
 cr_ft_text <- function(url, type='xml', path = "~/.crossref", overwrite = TRUE, read=TRUE, verbose=TRUE, ...)
 {
   switch( pick_type(type, url),
-         xml = getTEXT(url$xml[[1]], type, ...),
-         plain = getTEXT(url$plain[[1]], type, ...),
-         pdf = getPDF(url$pdf[[1]], path, overwrite, type, read, verbose, ...)
+         xml = getTEXT(get_url(url, 'xml'), type, ...),
+         plain = getTEXT(get_url(url, 'xml'), type, ...),
+         pdf = getPDF(get_url(url, 'pdf'), path, overwrite, type, read, verbose, ...)
   )
+}
+
+# xml = getTEXT(url$xml[[1]], type, ...),
+# plain = getTEXT(url$plain[[1]], type, ...),
+# pdf = getPDF(url$pdf[[1]], path, overwrite, type, read, verbose, ...)
+
+get_url <- function(a,b){
+  if(is(a, "tdmurl")) a[[1]] else a[[b]]
 }
 
 #' @export
@@ -105,7 +116,11 @@ cr_pdf <- function(url, path = "~/.crossref", overwrite = TRUE, read=TRUE, verbo
 
 pick_type <- function(x, z){
   x <- match.arg(x, c("xml","plain","pdf"))
-  avail <- vapply(z, function(x) attr(x, which="type"), character(1), USE.NAMES = FALSE)
+  if(length(z) == 1) {
+    avail <- attr(z, which="type")
+  } else {
+    avail <- vapply(z, function(x) attr(x, which="type"), character(1), USE.NAMES = FALSE)
+  }
   if(!x %in% avail) stop("Chosen type value not available in links", call. = FALSE)
   x
 }
