@@ -43,6 +43,15 @@ Get full text from a DOI
 Note that \code{\link{cr_ft_text}},
 \code{\link{cr_ft_pdf}}, \code{\link{cr_ft_xml}}, \code{\link{cr_ft_plain}}
 are not vectorized.
+
+Note that some links returned will not in fact lead you to full text
+content as you would understandbly think and expect. That is, if you
+use the \code{filter} parameter with e.g., \code{\link{cr_works}} and
+filter to only full text content, some links may actually give back
+only metadata for an article. Elsevier is perhaps the worst offender,
+for one because they have a lot of entries in Crossref TDM, but most
+of the links that are apparently full text are not in facct full text,
+but only metadata.
 }
 \examples{
 \dontrun{
