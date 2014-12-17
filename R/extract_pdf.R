@@ -1,6 +1,5 @@
 #' Extract text from a single pdf document.
 #' 
-#' @import 
 #' @export
 #' @param path Path to a file
 #' @param ... further args passed on

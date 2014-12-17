@@ -17,7 +17,7 @@
 #' cr_ft_links(dois[1], "all")
 #' 
 #' # No links
-#' cr_ft_links(doi = cr_r(1), "xml")
+#' cr_ft_links(cr_r(1), "xml")
 #' 
 #' # get full text
 #' ## elife
@@ -32,21 +32,21 @@
 #' 
 #' ## pensoft
 #' out <- cr_members(2258, filter=c(has_full_text = TRUE), works = TRUE)
-#' ### pdf
-#' links <- cr_ft_links(out$data$DOI[1], "all")
-#' cr_ft_text(links, "pdf", read=FALSE)
-#' cr_ft_text(links, "pdf")
+#' (links <- cr_ft_links(out$data$DOI[1], "all"))
 #' ### xml
 #' cr_ft_text(links, 'xml')
+#' ### pdf
+#' cr_ft_text(links, "pdf", read=FALSE)
+#' cr_ft_text(links, "pdf")
 #' 
 #' ## hindawi
 #' out <- cr_members(98, filter=c(has_full_text = TRUE), works = TRUE)
-#' ### pdf
-#' links <- cr_ft_links(out$data$DOI[1], "all")
-#' cr_ft_text(links, "pdf", read=FALSE)
-#' cr_ft_text(links, "pdf")
+#' (links <- cr_ft_links(out$data$DOI[1], "all"))
 #' ### xml
 #' cr_ft_text(links, 'xml')
+#' ### pdf
+#' cr_ft_text(links, "pdf", read=FALSE)
+#' cr_ft_text(links, "pdf")
 #' 
 #' ## search for works with full text, and with CC-BY 3.0 license
 #' ### you can see available licenses with cr_licenses() function
