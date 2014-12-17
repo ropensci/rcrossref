@@ -19,6 +19,7 @@ CrossRef documentation
 * Crossref [metadata search API](http://search.labs.crossref.org/)
 * CrossRef [OpenURL](http://www.crossref.org/openurl/)
 * CrossRef [DOI Content Negotiation](http://www.crosscite.org/cn/)
+* Text and Data Mining [TDM](http://tdmsupport.crossref.org/)
 
 <!--
 * Fundref: [source 1](https://github.com/CrossRef/rest-api-doc/blob/master/funder_kpi_api.md), [source 2](http://crosstech.crossref.org/2014/04/%E2%99%AB-researchers-just-wanna-have-funds-%E2%99%AB.html), [source 3](http://help.crossref.org/#fundref-api)
@@ -155,7 +156,7 @@ cr_agency(dois = '10.13039/100000001')
 cr_works(filter=c(has_orcid=TRUE, from_pub_date='2004-04-04'), limit=1)
 #> $meta
 #>   total_results search_terms start_index items_per_page
-#> 1        106345           NA           0              1
+#> 1        110358           NA           0              1
 #> 
 #> $data
 #> Source: local data frame [1 x 21]
@@ -168,7 +169,7 @@ cr_works(filter=c(has_orcid=TRUE, from_pub_date='2004-04-04'), limit=1)
 #>   (chr), issue (chr), ISSN (chr), volume (chr)
 #> 
 #> $facets
-#> [1] NA
+#> NULL
 ```
 
 ### Search journals 
@@ -200,7 +201,7 @@ cr_licenses(query = 'elsevier')
 #> 
 #>                                            URL work.count
 #> 1  http://creativecommons.org/licenses/by/3.0/          1
-#> 2 http://www.elsevier.com/tdm/userlicense/1.0/        130
+#> 2 http://www.elsevier.com/tdm/userlicense/1.0/        133
 ```
 
 ### Search based on DOI prefixes
@@ -236,18 +237,18 @@ cr_members(query='ecology', limit = 5)
 #> 1            13      ecology           0              5
 #> 
 #> $data
-#> Source: local data frame [5 x 43]
+#> Source: local data frame [5 x 44]
 #> 
 #>     id                                 primary_name
 #> 1 3947          Korean Association of Human Ecology
-#> 2 2080        The Japan Society of Tropical Ecology
-#> 3 2151        Ecology and Civil Engineering Society
+#> 2 2151        Ecology and Civil Engineering Society
+#> 3 2080        The Japan Society of Tropical Ecology
 #> 4 2232 Japanese Society of Health and Human Ecology
 #> 5  336        Japanese Society of Microbial Ecology
 #> Variables not shown: location (chr), last_status_check_time (date),
-#>   backfile.dois (chr), current.dois (chr), X.10.5934. (chr),
-#>   coverge.resource.links.backfile (chr), coverge.funders.current (chr),
-#>   coverge.funders.backfile (chr), coverge.references.current (chr),
+#>   backfile.dois (chr), current.dois (chr), total.dois (chr), X.10.5934.
+#>   (chr), coverge.resource.links.backfile (chr), coverge.funders.current
+#>   (chr), coverge.funders.backfile (chr), coverge.references.current (chr),
 #>   coverge.references.backfile (chr), coverge.update.policies.backfile
 #>   (chr), coverge.resource.links.current (chr),
 #>   coverge.update.policies.current (chr), coverge.award.numbers.current
@@ -265,7 +266,7 @@ cr_members(query='ecology', limit = 5)
 #>   flags.deposits.update.policies.backfile (chr),
 #>   flags.deposits.funders.current (chr),
 #>   flags.deposits.update.policies.current (chr), flags.deposits.articles
-#>   (chr), names (chr), tokens (chr), X.10.3759. (chr), X.10.3825. (chr),
+#>   (chr), names (chr), tokens (chr), X.10.3825. (chr), X.10.3759. (chr),
 #>   X.10.3861. (chr), X.10.1264. (chr)
 #> 
 #> $facets
@@ -279,11 +280,11 @@ cr_members(query='ecology', limit = 5)
 
 ```r
 cr_r()
-#>  [1] "10.1038/098217b0"                 "10.1115/icef2011-60114"          
-#>  [3] "10.12968/chca.2010.7.8.49102"     "10.1111/j.1440-1746.2010.06409.x"
-#>  [5] "10.1017/cbo9781139168564.012"     "10.1037//0021-843x.106.2.230"    
-#>  [7] "10.7152/bippa.v29i0.9482"         "10.1021/es3036779"               
-#>  [9] "10.1016/0197-2456(88)90026-8"     "10.1002/cne.910090123"
+#>  [1] "10.1016/s0079-6700(00)00039-3" "10.14698/jkcce.2013.9.6.151"  
+#>  [3] "10.1016/s0007-1536(57)80054-0" "10.1179/072924705791602054"   
+#>  [5] "10.1007/bf01413845"            "10.1016/j.ijsu.2010.07.063"   
+#>  [7] "10.1142/9789812795885_0026"    "10.1002/tl.7309"              
+#>  [9] "10.1021/jo00138a038"           "10.1007/s12602-014-9167-1"
 ```
 
 You can pass in the number of DOIs you want back (default is 10)
@@ -291,7 +292,7 @@ You can pass in the number of DOIs you want back (default is 10)
 
 ```r
 cr_r(2)
-#> [1] "10.1176/appi.ajp.159.8.1446" "10.2307/1435747"
+#> [1] "10.1109/chicc.2006.4347617" "10.1002/ajmg.1320500303"
 ```
 
 ## pmid2doi & doi2pmid
@@ -343,7 +344,7 @@ pmid2doi(c(1,2,3))
 #> 3    3 10.1016/0006-291X(75)90498-2
 ```
 
-<!--
+
 ## Get full text links to works
 
 This is a mostly experimental function so far in that it may not work that often. Publishers can optionally provide links in the metadata they provide to Crossref for full text of the work, but that data is often missing. Find out more about it at [http://tdmsupport.crossref.org/](http://tdmsupport.crossref.org/). Some examples that do work:
@@ -352,8 +353,8 @@ Get link to the pdf
 
 
 ```r
-cr_full_links(doi = "10.5555/515151", type = "pdf")
-#> Error in eval(expr, envir, enclos): could not find function "cr_full_links"
+cr_ft_links(doi = "10.5555/515151", type = "pdf")
+#> <url> http://annalsofpsychoceramics.labs.crossref.org/fulltext/10.5555/515151.pdf
 ```
 
 Get a bunch of DOIs first, then get many URLs back
@@ -362,11 +363,18 @@ Get a bunch of DOIs first, then get many URLs back
 ```r
 out <- cr_works(filter=c(has_full_text = TRUE))
 dois <- out$data$DOI
-sapply(dois[1:5], cr_full_links, type="xml")
-#> Error in match.fun(FUN): object 'cr_full_links' not found
+sapply(dois[1:5], cr_ft_links, type="xml")
+#>                                                   10.1016/s0362-546x(97)00703-7.xml 
+#> "http://api.elsevier.com/content/article/PII:S0362546X97007037?httpAccept=text/xml" 
+#>                                                   10.1016/s0362-546x(98)00012-1.xml 
+#> "http://api.elsevier.com/content/article/PII:S0362546X98000121?httpAccept=text/xml" 
+#>                                                   10.1016/s0362-546x(97)00668-8.xml 
+#> "http://api.elsevier.com/content/article/PII:S0362546X97006688?httpAccept=text/xml" 
+#>                                                   10.1016/s0362-546x(98)00037-6.xml 
+#> "http://api.elsevier.com/content/article/PII:S0362546X98000376?httpAccept=text/xml" 
+#>                                                   10.1016/s0362-546x(97)00663-9.xml 
+#> "http://api.elsevier.com/content/article/PII:S0362546X97006639?httpAccept=text/xml"
 ```
--->
-
 
 ## Meta
 
