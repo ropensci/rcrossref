@@ -1,6 +1,5 @@
 #' Get full text links from a DOI
 #' 
-#' @importFrom stringr str_extract
 #' @keywords internal
 #' @param doi A DOI
 #' @param type One of xml, plain, pdf, or all 
@@ -22,13 +21,12 @@
 #' # get full text
 #' ## elife
 #' out <- cr_members(4374, filter=c(has_full_text = TRUE), works = TRUE)
-#' ### pdf
-#' links <- cr_ft_links(out$data$DOI[1], "all")
-#' cr_ft_text(links, read=FALSE)
-#' cr_ft_text(links)
+#' (links <- cr_ft_links(out$data$DOI[10], "all"))
 #' ### xml
-#' links <- cr_ft_links(out$data$DOI[1], "all")
 #' cr_ft_text(links, 'xml')
+#' ### pdf
+#' cr_ft_text(links, "pdf", read=FALSE)
+#' cr_ft_text(links, "pdf")
 #' 
 #' ## pensoft
 #' out <- cr_members(2258, filter=c(has_full_text = TRUE), works = TRUE)
@@ -53,7 +51,7 @@
 #' out <- 
 #'  cr_works(filter = list(has_full_text = TRUE,
 #'    license_url="http://creativecommons.org/licenses/by/3.0/"))
-#' links <- cr_ft_links(out$data$DOI[10], "all")
+#' (links <- cr_ft_links(out$data$DOI[10], "all"))
 #' cr_ft_text(links, 'xml')
 #' 
 #' ## elsevier - they don't actually give full text, ha ha, jokes on us!
@@ -98,7 +96,9 @@ getTEXT <- function(x, type, ...){
 
 getPDF <- function(url, path, overwrite, type, read, verbose, ...) {
   if(!file.exists(path)) dir.create(path, showWarnings = FALSE, recursive = TRUE)
-  filepath <- file.path(path, paste0(basename(url), ".", type))
+  ff <- if( !grepl(type, basename(url)) ) paste0(basename(url), ".", type) else basename(url)
+  filepath <- file.path(path, ff)
+  # filepath <- file.path(path, paste0(basename(url), ".", type))
   if(verbose) message("Downloading pdf...")
   res <- GET(url, accept("application/pdf"), write_disk(path = filepath, overwrite = overwrite), ...)
   writepath <- res$request$writer[[1]]
@@ -122,6 +122,10 @@ get_type <- function(x, y = 'xml') {
   res <- parse_urls(x)
   withtype <- Filter(function(x) any("type" %in% names(x)), res)
   withtype <- setNames(withtype, sapply(withtype, function(x) strsplit(x$type, "/")[[1]][[2]]))
+  if(grepl("elife", res[[1]]$url)) 
+    withtype <- c(withtype, setNames(list(modifyList(withtype[[1]], list(type = "application/xml"))), "xml"))
+  else
+    withtype <- withtype
   if(y == "all"){
     lapply(withtype, function(b) makeurl(b$url, st(b$type)))
   } else {
