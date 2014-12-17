@@ -8,7 +8,7 @@ test_that("cr_journals returns correct class", {
 })
 
 test_that("cr_journals paging works correctly", {
-  expect_equal(NROW(cr_journals(query="ecology", works = TRUE, limit=5)$data), 5)
+  expect_equal(NROW(cr_journals(issn = '1803-2427', works = TRUE, limit=5)$data), 5)
 })
 
 test_that("cr_journals metadata works correctly", {
