@@ -58,6 +58,14 @@
 #' out <- cr_members(78, filter=c(has_full_text = TRUE), works = TRUE)
 #' links <- cr_ft_links(out$data$DOI[1], "all")
 #' cr_ft_text(links, 'xml') # notice how this is just metadata
+#' 
+#' ## You can use cr_xml, cr_plain, and cr_pdf to go directly to that format
+#' out <- 
+#'  cr_works(filter = list(has_full_text = TRUE,
+#'    license_url="http://creativecommons.org/licenses/by/3.0/"))
+#' (links <- cr_ft_links(out$data$DOI[10], "all"))
+#' cr_xml(links)
+#' cr_pdf(links)
 #' }
 
 cr_ft_links <- function(doi, type='xml', ...)
@@ -80,6 +88,21 @@ cr_ft_text <- function(url, type='xml', path = "~/.crossref", overwrite = TRUE, 
   )
 }
 
+#' @export
+#' @rdname cr_ft_links
+cr_txt <- function(url, path = "~/.crossref", overwrite = TRUE, read=TRUE, verbose=TRUE, ...) 
+  getTEXT(url$plain[[1]], "plain", ...)
+
+#' @export
+#' @rdname cr_ft_links
+cr_xml <- function(url, path = "~/.crossref", overwrite = TRUE, read=TRUE, verbose=TRUE, ...) 
+  getTEXT(url$xml[[1]], "xml", ...)
+
+#' @export
+#' @rdname cr_ft_links
+cr_pdf <- function(url, path = "~/.crossref", overwrite = TRUE, read=TRUE, verbose=TRUE, ...)
+  getPDF(url$pdf[[1]], path, overwrite, "pdf", read, verbose, ...)
+
 pick_type <- function(x, z){
   x <- match.arg(x, c("xml","plain","pdf"))
   avail <- vapply(z, function(x) attr(x, which="type"), character(1), USE.NAMES = FALSE)
@@ -90,8 +113,8 @@ pick_type <- function(x, z){
 getTEXT <- function(x, type, ...){
   res <- GET(x, ...)
   switch(type, 
-         xml = xmlParse(content(res, as = "text")),
-         plain = content(res, as = "text"))
+         xml = XML::xmlParse(httr::content(res, as = "text")),
+         plain = httr::content(res, as = "text"))
 }
 
 getPDF <- function(url, path, overwrite, type, read, verbose, ...) {

@@ -3,12 +3,24 @@
 \name{cr_ft_links}
 \alias{cr_ft_links}
 \alias{cr_ft_text}
+\alias{cr_pdf}
+\alias{cr_txt}
+\alias{cr_xml}
 \title{Get full text links from a DOI}
 \usage{
 cr_ft_links(doi, type = "xml", ...)
 
 cr_ft_text(url, type = "xml", path = "~/.crossref", overwrite = TRUE,
   read = TRUE, verbose = TRUE, ...)
+
+cr_txt(url, path = "~/.crossref", overwrite = TRUE, read = TRUE,
+  verbose = TRUE, ...)
+
+cr_xml(url, path = "~/.crossref", overwrite = TRUE, read = TRUE,
+  verbose = TRUE, ...)
+
+cr_pdf(url, path = "~/.crossref", overwrite = TRUE, read = TRUE,
+  verbose = TRUE, ...)
 }
 \arguments{
 \item{doi}{A DOI}
@@ -75,6 +87,14 @@ cr_ft_text(links, 'xml')
 out <- cr_members(78, filter=c(has_full_text = TRUE), works = TRUE)
 links <- cr_ft_links(out$data$DOI[1], "all")
 cr_ft_text(links, 'xml') # notice how this is just metadata
+
+## You can use cr_xml, cr_plain, and cr_pdf to go directly to that format
+out <-
+ cr_works(filter = list(has_full_text = TRUE,
+   license_url="http://creativecommons.org/licenses/by/3.0/"))
+(links <- cr_ft_links(out$data$DOI[10], "all"))
+cr_xml(links)
+cr_pdf(links)
 }
 }
 \keyword{internal}
