@@ -6,8 +6,8 @@ Description: R client for various CrossRef APIs, including metadata search
     and vice versa, get citations for DOIs, and get links to full text of
     articles when available.
 Version: 0.2.2.99
+Date: 2014-12-16
 License: MIT + file LICENSE
-Date: 2014-12-13
 Authors@R: c(person("Carl", "Boettiger", role = "aut"),
     person("Ted", "Hart", role = "aut"),
     person("Scott", "Chamberlain", role = c("aut", "cre"), email =
