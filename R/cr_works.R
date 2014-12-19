@@ -139,5 +139,5 @@ parse_works <- function(zzz){
       res
     }
   }
-  data.frame(as.list(unlist(lapply(keys, manip, y=zzz))), stringsAsFactors = FALSE)
+  if(all(is.na(zzz))) NULL else data.frame(as.list(unlist(lapply(keys, manip, y=zzz))), stringsAsFactors = FALSE)
 }
