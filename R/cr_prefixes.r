@@ -59,7 +59,7 @@
   if(length(prefixes) > 1){
     res <- llply(prefixes, prefixes_GET, args=args, works=works, ..., .progress=.progress)
     out <- lapply(res, "[[", "message")
-    out <- if(works) do.call(c, lapply(out, function(x) lapply(x$items, parse_works))) else lapply(out, data.frame, stringsAsFactors=FALSE)
+    out <- if(works) do.call(c, lapply(out, function(x) lapply(x$items, parse_works))) else lapply(out, DataFrame)
     df <- rbind_all(out)
     meta <- if(works) data.frame(prefix=prefixes, do.call(rbind, lapply(res, parse_meta)), stringsAsFactors = FALSE) else NULL
     if(facet_log){ 
@@ -70,7 +70,7 @@
     list(meta=meta, data=df, facets=ft)
   } else {
     tmp <- prefixes_GET(prefixes, args, works=works, ...)
-    out <- if(works) rbind_all(lapply(tmp$message$items, parse_works)) else data.frame(tmp$message, stringsAsFactors=FALSE)
+    out <- if(works) rbind_all(lapply(tmp$message$items, parse_works)) else DataFrame(tmp$message)
     meta <- if(works) data.frame(prefix=prefixes, parse_meta(tmp), stringsAsFactors = FALSE) else NULL
     list(meta=meta, data=out, facets=parse_facets(tmp$message$facets))
   }
@@ -79,4 +79,9 @@
 prefixes_GET <- function(x, args, works, ...){
   path <- if(works) sprintf("prefixes/%s/works", x) else sprintf("prefixes/%s", x)
   cr_GET(path, args, todf = FALSE, ...)
+}
+
+DataFrame <- function(x){
+  x[ sapply(x, function(y) if(is.null(y) || length(y) == 0) TRUE else FALSE)] <- NA
+  data.frame(x, stringsAsFactors = FALSE)
 }
