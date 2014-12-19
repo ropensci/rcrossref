@@ -42,9 +42,17 @@ cr_licenses()
 }
 
 \dontrun{
+# query for something, e.g. a publisher
 cr_licenses(query = 'elsevier')
+
+# what license types does elsevier support
 cr_licenses(filter = c(member=78))
+
+# filter by an issn of a journal
 cr_licenses(filter = c(issn='2090-8091'))
+
+# What licenses does a reasearcher with a particular ORCID publish under
+cr_licenses(filter = c(orcid='0000-0003-1340-5202'))
 }
 }
 \references{

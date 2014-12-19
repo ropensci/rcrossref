@@ -108,6 +108,11 @@ cr_ft_text(links, 'xml')
 out <- cr_members(78, filter=c(has_full_text = TRUE), works = TRUE)
 links <- cr_ft_links(out$data$DOI[1], "all")
 cr_ft_text(links, 'xml') # notice how this is just metadata
+### elsevier articles that are open access
+#### one license is for open access articles, but none with full text available
+cr_licenses(filter=list(member=78))
+cr_works(filter=list(license_url="http://www.elsevier.com/open-access/userlicense/1.0/",
+                     has_full_text=TRUE))
 
 ## You can use cr_ft_xml, cr_ft_plain, and cr_ft_pdf to go directly to that format
 out <-
