@@ -27,6 +27,8 @@
 #' 
 #' # No links
 #' cr_ft_links(cr_r(1), "xml")
+#' 
+#' cr_ft_links(doi="10.3389/fnagi.2014.00130")
 #' }
 
 cr_ft_links <- function(doi, type='xml', ...)
