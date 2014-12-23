@@ -27,7 +27,9 @@
 #' pmid2doi(18507872, config=verbose())
 #' }
 `pmid2doi` <- function(x, simplify = FALSE, ...){
+  .Defunct(msg = "The web API behind this function is down indefinitely, sorry :(")
   res <- GET(paste0(pdbase(), "doi"), query = list(pmids = pbr(x)), ...)
+  stop_for_status(res)
   stopifnot(res$headers$`content-type` == "application/json;charset=UTF-8")
   df <- jsonlite::fromJSON(content(res, as = "text"))
   if(!simplify) df else df$doi
@@ -36,7 +38,9 @@
 #' @export
 #' @rdname pmid2doi
 `doi2pmid` <- function(x, simplify = FALSE, ...){
+  .Defunct(msg = "The web API behind this function is down indefinitely, sorry :(")
   res <- GET(paste0(pdbase(), "pmid"), query = list(dois = pbr(sapply(x, function(y) paste0('\"', y, '\"')))), ...)
+  stop_for_status(res)
   stopifnot(res$headers$`content-type` == "application/json;charset=UTF-8")
   df <- jsonlite::fromJSON(content(res, as = "text"))
   if(!simplify) df else df$pmid
