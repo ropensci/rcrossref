@@ -42,6 +42,8 @@ cr_ft_links(dois[1], "all")
 
 # No links
 cr_ft_links(cr_r(1), "xml")
+
+cr_ft_links(doi="10.3389/fnagi.2014.00130")
 }
 }
 

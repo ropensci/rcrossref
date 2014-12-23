@@ -21,7 +21,7 @@ Download xpdf from \url{http://www.foolabs.com/xpdf/download.html}
 \examples{
 \donttest{
 path <- "~/github/sac/scott/pdfs/ChamberlainEtal2013Ecosphere.pdf"
-(res_xpdf <- extract_xpdf(path, "xpdf"))
+(res_xpdf <- extract_xpdf(path))
 res_xpdf$meta
 res_xpdf$data
 }
