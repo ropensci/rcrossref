@@ -147,32 +147,7 @@ cr_r(2)
 
 DOIs to PMIDs
 
-```{r}
-doi2pmid("10.1016/0006-2944(75)90147-7")
-```
-
-```{r}
-doi2pmid("10.1016/0006-2944(75)90147-7", TRUE)
-```
-
-```{r}
-doi2pmid(c("10.1016/0006-2944(75)90147-7","10.1186/gb-2008-9-5-r89"))
-```
-
-PMIDs to DOIs
-
-```{r}
-pmid2doi(18507872)
-```
-
-```{r}
-pmid2doi(18507872, TRUE)
-```
-
-```{r}
-pmid2doi(c(1,2,3))
-```
-
+__UPDATE: as of 2014-12-23 the web API behind these functions is down - we'll update the package once the API is up again__
 
 ## Get full text links to works
 

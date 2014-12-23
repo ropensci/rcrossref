@@ -280,16 +280,11 @@ cr_members(query='ecology', limit = 5)
 
 ```r
 cr_r()
-#>  [1] "10.4028/www.scientific.net/ssp.90-91.303"
-#>  [2] "10.1016/j.freeradbiomed.2010.10.268"     
-#>  [3] "10.1039/c3ob90015k"                      
-#>  [4] "10.1007/978-3-642-19677-5_7"             
-#>  [5] "10.1364/ao.45.006602"                    
-#>  [6] "10.1039/ct9038300650"                    
-#>  [7] "10.1007/978-3-540-45278-2_1916"          
-#>  [8] "10.1371/journal.pone.0057476.t001"       
-#>  [9] "10.1109/compel.2014.6877116"             
-#> [10] "10.1016/s1010-5182(06)60303-x"
+#>  [1] "10.2514/6.2000-1767"              "10.2165/00128413-200314140-00061"
+#>  [3] "10.1007/978-3-662-04823-8_9"      "10.1007/978-3-642-38442-4_23"    
+#>  [5] "10.1017/s0040298213001137"        "10.1016/j.jenvman.2014.02.001"   
+#>  [7] "10.1016/s1098-3015(10)72179-3"    "10.1109/ccdc.2012.6244065"       
+#>  [9] "10.1556/maseb.60.2007.4.6"        "10.2307/1596598"
 ```
 
 You can pass in the number of DOIs you want back (default is 10)
@@ -297,51 +292,14 @@ You can pass in the number of DOIs you want back (default is 10)
 
 ```r
 cr_r(2)
-#> [1] "10.1016/0375-9601(69)90653-7"  "10.7861/clinmedicine.6-5-509a"
+#> [1] "10.1109/pac.2005.1590945" "10.1121/1.393324"
 ```
 
 ## pmid2doi & doi2pmid
 
 DOIs to PMIDs
 
-
-```r
-doi2pmid("10.1016/0006-2944(75)90147-7")
-#> Error: res$headers$`content-type` == "application/json;charset=UTF-8" is not TRUE
-```
-
-
-```r
-doi2pmid("10.1016/0006-2944(75)90147-7", TRUE)
-#> Error: res$headers$`content-type` == "application/json;charset=UTF-8" is not TRUE
-```
-
-
-```r
-doi2pmid(c("10.1016/0006-2944(75)90147-7","10.1186/gb-2008-9-5-r89"))
-#> Error: res$headers$`content-type` == "application/json;charset=UTF-8" is not TRUE
-```
-
-PMIDs to DOIs
-
-
-```r
-pmid2doi(18507872)
-#> Error: res$headers$`content-type` == "application/json;charset=UTF-8" is not TRUE
-```
-
-
-```r
-pmid2doi(18507872, TRUE)
-#> Error: res$headers$`content-type` == "application/json;charset=UTF-8" is not TRUE
-```
-
-
-```r
-pmid2doi(c(1,2,3))
-#> Error: res$headers$`content-type` == "application/json;charset=UTF-8" is not TRUE
-```
-
+__UPDATE: as of 2014-12-23 the web API behind these functions is down - we'll update the package once the API is up again__
 
 ## Get full text links to works
 
