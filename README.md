@@ -156,7 +156,7 @@ cr_agency(dois = '10.13039/100000001')
 cr_works(filter=c(has_orcid=TRUE, from_pub_date='2004-04-04'), limit=1)
 #> $meta
 #>   total_results search_terms start_index items_per_page
-#> 1        110358           NA           0              1
+#> 1        111738           NA           0              1
 #> 
 #> $data
 #> Source: local data frame [1 x 21]
@@ -201,7 +201,7 @@ cr_licenses(query = 'elsevier')
 #> 
 #>                                            URL work.count
 #> 1  http://creativecommons.org/licenses/by/3.0/          1
-#> 2 http://www.elsevier.com/tdm/userlicense/1.0/        133
+#> 2 http://www.elsevier.com/tdm/userlicense/1.0/        136
 ```
 
 ### Search based on DOI prefixes
@@ -280,11 +280,16 @@ cr_members(query='ecology', limit = 5)
 
 ```r
 cr_r()
-#>  [1] "10.1136/bmj.1.793.316"           "10.1049/pe:19880029"            
-#>  [3] "10.1590/s1413-41522007000200013" "10.1007/978-1-4471-5496-9_12"   
-#>  [5] "10.1017/cbo9780511572845.006"    "10.1002/9780470376812.ch3f"     
-#>  [7] "10.1177/1043659613508784"        "10.1002/9783527625659.ch6m"     
-#>  [9] "10.1108/eb042809"                "10.3410/f.717962436.793466256"
+#>  [1] "10.4028/www.scientific.net/ssp.90-91.303"
+#>  [2] "10.1016/j.freeradbiomed.2010.10.268"     
+#>  [3] "10.1039/c3ob90015k"                      
+#>  [4] "10.1007/978-3-642-19677-5_7"             
+#>  [5] "10.1364/ao.45.006602"                    
+#>  [6] "10.1039/ct9038300650"                    
+#>  [7] "10.1007/978-3-540-45278-2_1916"          
+#>  [8] "10.1371/journal.pone.0057476.t001"       
+#>  [9] "10.1109/compel.2014.6877116"             
+#> [10] "10.1016/s1010-5182(06)60303-x"
 ```
 
 You can pass in the number of DOIs you want back (default is 10)
@@ -292,7 +297,7 @@ You can pass in the number of DOIs you want back (default is 10)
 
 ```r
 cr_r(2)
-#> [1] "10.1021/ac60228a030"         "10.1016/j.ejcts.2009.10.001"
+#> [1] "10.1016/0375-9601(69)90653-7"  "10.7861/clinmedicine.6-5-509a"
 ```
 
 ## pmid2doi & doi2pmid
@@ -302,22 +307,19 @@ DOIs to PMIDs
 
 ```r
 doi2pmid("10.1016/0006-2944(75)90147-7")
-#>   pmid                          doi
-#> 1    1 10.1016/0006-2944(75)90147-7
+#> Error: res$headers$`content-type` == "application/json;charset=UTF-8" is not TRUE
 ```
 
 
 ```r
 doi2pmid("10.1016/0006-2944(75)90147-7", TRUE)
-#> [1] 1
+#> Error: res$headers$`content-type` == "application/json;charset=UTF-8" is not TRUE
 ```
 
 
 ```r
 doi2pmid(c("10.1016/0006-2944(75)90147-7","10.1186/gb-2008-9-5-r89"))
-#>       pmid                          doi
-#> 1        1 10.1016/0006-2944(75)90147-7
-#> 2 18507872      10.1186/gb-2008-9-5-r89
+#> Error: res$headers$`content-type` == "application/json;charset=UTF-8" is not TRUE
 ```
 
 PMIDs to DOIs
@@ -325,23 +327,19 @@ PMIDs to DOIs
 
 ```r
 pmid2doi(18507872)
-#>       pmid                     doi
-#> 1 18507872 10.1186/gb-2008-9-5-r89
+#> Error: res$headers$`content-type` == "application/json;charset=UTF-8" is not TRUE
 ```
 
 
 ```r
 pmid2doi(18507872, TRUE)
-#> [1] "10.1186/gb-2008-9-5-r89"
+#> Error: res$headers$`content-type` == "application/json;charset=UTF-8" is not TRUE
 ```
 
 
 ```r
 pmid2doi(c(1,2,3))
-#>   pmid                          doi
-#> 1    1 10.1016/0006-2944(75)90147-7
-#> 2    2 10.1016/0006-291X(75)90482-9
-#> 3    3 10.1016/0006-291X(75)90498-2
+#> Error: res$headers$`content-type` == "application/json;charset=UTF-8" is not TRUE
 ```
 
 
@@ -409,4 +407,4 @@ This package is part of a richer suite called [fulltext](https://github.com/rope
 
 ---
 
-[![](http://ropensci.org/public_images/github_footer.png)](http://ropensci.org)
+[![rofooter](http://ropensci.org/public_images/github_footer.png)](http://ropensci.org)
