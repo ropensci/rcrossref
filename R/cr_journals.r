@@ -87,5 +87,5 @@ parse_journal <- function(x){
              stringsAsFactors = FALSE)
 }
 
-paste_longer <- function(w) if(length(w) > 1) paste(w, collapse=", ") else w
+paste_longer <- function(w) if(length(w) > 1) paste(w, collapse=", ") else w[[1]]
 names2underscore <- function(w) t(sapply(w, function(z) gsub("-", "_", z), USE.NAMES = FALSE))
