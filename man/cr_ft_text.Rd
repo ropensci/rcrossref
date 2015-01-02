@@ -8,7 +8,7 @@
 \title{Get full text from a DOI}
 \usage{
 cr_ft_text(url, type = "xml", path = "~/.crossref", overwrite = TRUE,
-  read = TRUE, verbose = TRUE, ...)
+  read = TRUE, verbose = TRUE, cache = TRUE, ...)
 
 cr_ft_plain(url, path = "~/.crossref", overwrite = TRUE, read = TRUE,
   verbose = TRUE, ...)
@@ -33,6 +33,12 @@ the pdf or simply download. If TRUE, you get the text from the pdf back. If FALS
 you only get back the metadata. Default: TRUE}
 
 \item{verbose}{(logical) Print progress messages. Default: TRUE}
+
+\item{cache}{(logical) Use cached files or not. All files are written to your machine
+locally, so this doesn't affect that. This only states whether you want to use
+cached version so that you don't have to download the file again. The steps of
+extracting and reading into R still have to be performed when \code{cache=TRUE}.
+Default: TRUE}
 
 \item{...}{Named parameters passed on to \code{\link[httr]{GET}}}
 }
@@ -75,7 +81,7 @@ out <- cr_members(4374, filter=c(has_full_text = TRUE), works = TRUE)
 ### xml
 cr_ft_text(links, 'xml')
 ### pdf
-cr_ft_text(links, "pdf", read=FALSE)
+cr_ft_text(url = links, type = "pdf", read=FALSE)
 cr_ft_text(links, "pdf")
 
 ## pensoft
@@ -121,6 +127,14 @@ out <-
 (links <- cr_ft_links(out$data$DOI[10], "all"))
 cr_ft_xml(links)
 cr_ft_pdf(links)
+
+# Caching, for PDFs
+out <- cr_members(4374, filter=c(has_full_text = TRUE), works = TRUE)
+(links <- cr_ft_links(out$data$DOI[10], "all"))
+cr_ft_text(links, type = "pdf", cache=FALSE)
+system.time( cacheyes <- cr_ft_text(links, type = "pdf", cache=TRUE) )
+system.time( cacheno <- cr_ft_text(links, type = "pdf", cache=FALSE) )
+identical(cacheyes, cacheno)
 }
 }
 

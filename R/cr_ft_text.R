@@ -9,6 +9,11 @@
 #' the pdf or simply download. If TRUE, you get the text from the pdf back. If FALSE,
 #' you only get back the metadata. Default: TRUE
 #' @param verbose (logical) Print progress messages. Default: TRUE
+#' @param cache (logical) Use cached files or not. All files are written to your machine
+#' locally, so this doesn't affect that. This only states whether you want to use 
+#' cached version so that you don't have to download the file again. The steps of 
+#' extracting and reading into R still have to be performed when \code{cache=TRUE}. 
+#' Default: TRUE
 #' @param ... Named parameters passed on to \code{\link[httr]{GET}}
 #' @details Note that \code{\link{cr_ft_text}},
 #' \code{\link{cr_ft_pdf}}, \code{\link{cr_ft_xml}}, \code{\link{cr_ft_plain}}
@@ -43,7 +48,7 @@
 #' ### xml
 #' cr_ft_text(links, 'xml')
 #' ### pdf
-#' cr_ft_text(links, "pdf", read=FALSE)
+#' cr_ft_text(url = links, type = "pdf", read=FALSE)
 #' cr_ft_text(links, "pdf")
 #'
 #' ## pensoft
@@ -89,14 +94,23 @@
 #' (links <- cr_ft_links(out$data$DOI[10], "all"))
 #' cr_ft_xml(links)
 #' cr_ft_pdf(links)
+#' 
+#' # Caching, for PDFs
+#' out <- cr_members(4374, filter=c(has_full_text = TRUE), works = TRUE)
+#' (links <- cr_ft_links(out$data$DOI[10], "all"))
+#' cr_ft_text(links, type = "pdf", cache=FALSE)
+#' system.time( cacheyes <- cr_ft_text(links, type = "pdf", cache=TRUE) )
+#' system.time( cacheno <- cr_ft_text(links, type = "pdf", cache=FALSE) )
+#' identical(cacheyes, cacheno)
 #' }
 
-cr_ft_text <- function(url, type='xml', path = "~/.crossref", overwrite = TRUE, read=TRUE, verbose=TRUE, ...)
+cr_ft_text <- function(url, type='xml', path = "~/.crossref", overwrite = TRUE, 
+  read=TRUE, verbose=TRUE, cache=TRUE, ...)
 {
   switch( pick_type(type, url),
           xml = getTEXT(get_url(url, 'xml'), type, ...),
           plain = getTEXT(get_url(url, 'xml'), type, ...),
-          pdf = getPDF(get_url(url, 'pdf'), path, overwrite, type, read, verbose, ...)
+          pdf = getPDF(get_url(url, 'pdf'), path, overwrite, type, read, verbose, cache, ...)
   )
 }
 
@@ -137,18 +151,21 @@ getTEXT <- function(x, type, ...){
          plain = httr::content(res, as = "text"))
 }
 
-getPDF <- function(url, path, overwrite, type, read, verbose, ...) {
+getPDF <- function(url, path, overwrite, type, read, verbose, cache, ...) {
   if(!file.exists(path)) dir.create(path, showWarnings = FALSE, recursive = TRUE)
   ff <- if( !grepl(type, basename(url)) ) paste0(basename(url), ".", type) else basename(url)
   filepath <- file.path(path, ff)
-  # filepath <- file.path(path, paste0(basename(url), ".", type))
-  if(verbose) message("Downloading pdf...")
-  res <- GET(url, accept("application/pdf"), write_disk(path = filepath, overwrite = overwrite), ...)
-  writepath <- res$request$writer[[1]]
+  if(cache){
+    if( !file.exists(filepath) ) stop(sprintf("%s not found", filepath), call. = FALSE)
+  } else {
+    if(verbose) message("Downloading pdf...")
+    res <- GET(url, accept("application/pdf"), write_disk(path = filepath, overwrite = overwrite), ...)
+    filepath <- res$request$writer[[1]]
+  }
   if(read){
     if(verbose) message("Exracting text from pdf...")
-    extract_xpdf(path=writepath, ...)
+    extract_xpdf(path=filepath, ...)
   } else {
-    writepath
+    filepath
   }
 }
