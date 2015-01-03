@@ -13,6 +13,10 @@ cr_ft_links(doi, type = "xml", ...)
 
 \item{...}{Named parameters passed on to \code{\link[httr]{GET}}}
 }
+\value{
+\code{NULL} if no full text links given; a list of tdmurl objects if
+links found.
+}
 \description{
 Get full text links from a DOI
 }
@@ -25,12 +29,20 @@ use the \code{filter} parameter with e.g., \code{\link{cr_works}} and
 filter to only full text content, some links may actually give back
 only metadata for an article. Elsevier is perhaps the worst offender,
 for one because they have a lot of entries in Crossref TDM, but most
-of the links that are apparently full text are not in facct full text,
-but only metadata.
+of the links that are apparently full text are not in fact full text,
+but only metadata. You can get full text if you are part of a subscribing
+institution to that specific Elsever content, but otherwise, you're SOL.
+
+Note that there are still some bugs in the data returned form CrossRef.
+For example, for the publisher eLife, they return a single URL with
+content-type application/pdf, but the URL is not for a PDF, but for both
+XML and PDF, and content-type can be set with that URL as either XML or
+PDF to get that type. Anyway, expect changes...
 }
 \examples{
 \dontrun{
 # pdf link
+cr_ft_links(doi = "10.5555/515151", "pdf")
 cr_ft_links(doi = "10.5555/515151", "pdf")
 
 # xml and plain text links
@@ -41,10 +53,10 @@ cr_ft_links(dois[1], "plain")
 cr_ft_links(dois[1], "all")
 
 # No links
-cr_ft_links(cr_r(1), "xml")
+cr_ft_links(cr_r(1))
 
+# No results
 cr_ft_links(doi="10.3389/fnagi.2014.00130")
-
 cr_ft_links(doi = "10.3897/phytokeys.42.7604", type = "all")
 }
 }

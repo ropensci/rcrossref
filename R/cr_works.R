@@ -144,8 +144,12 @@ parse_works <- function(zzz){
 }
 
 parse_license <- function(x){
-  date <- make_date(x[[1]]$start$`date-parts`)
-  data.frame(date=date, x[[1]][!names(x[[1]]) == "start"], stringsAsFactors = FALSE)
+  if(is.null(x)){
+    NULL
+  } else {
+    date <- make_date(x[[1]]$start$`date-parts`)
+    data.frame(date=date, x[[1]][!names(x[[1]]) == "start"], stringsAsFactors = FALSE)
+  }
 }
 
-make_date <- function(x) as.Date(paste0(unlist(x), collapse="-"))
+make_date <- function(x) paste0(unlist(x), collapse="-")
