@@ -60,6 +60,11 @@
 #' cr_ft_text(links, "pdf", read=FALSE)
 #' cr_ft_text(links, "pdf")
 #'
+#' ### another pensoft e.g.
+#' links <- cr_ft_links("10.3897/phytokeys.42.7604", "all")
+#' pdf_read <- cr_ft_text(url = links, type = "pdf", read=FALSE, verbose = FALSE)
+#' pdf <- cr_ft_text(links, "pdf", verbose = FALSE)
+#'
 #' ## hindawi
 #' out <- cr_members(98, filter=c(has_full_text = TRUE), works = TRUE)
 #' (links <- cr_ft_links(out$data$DOI[1], "all"))
@@ -153,15 +158,23 @@ getTEXT <- function(x, type, ...){
 
 getPDF <- function(url, path, overwrite, type, read, verbose, cache, ...) {
   if(!file.exists(path)) dir.create(path, showWarnings = FALSE, recursive = TRUE)
-  ff <- if( !grepl(type, basename(url)) ) paste0(basename(url), ".", type) else basename(url)
-  filepath <- file.path(path, ff)
-  if(cache){
+  
+  # pensoft special handling
+  if( grepl("pensoft", url[[1]]) ){
+    filepath <- file.path(path, paste0(sub("/", ".", attr(url, "doi")), ".pdf"))
+  } else {
+    ff <- if( !grepl(type, basename(url)) ) paste0(basename(url), ".", type) else basename(url)    
+    filepath <- file.path(path, ff)
+  }
+  
+  if(cache && file.exists(filepath)){
     if( !file.exists(filepath) ) stop(sprintf("%s not found", filepath), call. = FALSE)
   } else {
     if(verbose) message("Downloading pdf...")
     res <- GET(url, accept("application/pdf"), write_disk(path = filepath, overwrite = overwrite), ...)
     filepath <- res$request$writer[[1]]
   }
+  
   if(read){
     if(verbose) message("Exracting text from pdf...")
     extract_xpdf(path=filepath, ...)

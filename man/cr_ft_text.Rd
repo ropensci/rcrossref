@@ -93,6 +93,11 @@ cr_ft_text(links, 'xml')
 cr_ft_text(links, "pdf", read=FALSE)
 cr_ft_text(links, "pdf")
 
+### another pensoft e.g.
+links <- cr_ft_links("10.3897/phytokeys.42.7604", "all")
+pdf_read <- cr_ft_text(url = links, type = "pdf", read=FALSE, verbose = FALSE)
+pdf <- cr_ft_text(links, "pdf", verbose = FALSE)
+
 ## hindawi
 out <- cr_members(98, filter=c(has_full_text = TRUE), works = TRUE)
 (links <- cr_ft_links(out$data$DOI[1], "all"))

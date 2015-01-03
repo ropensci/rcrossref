@@ -44,6 +44,8 @@ cr_ft_links(dois[1], "all")
 cr_ft_links(cr_r(1), "xml")
 
 cr_ft_links(doi="10.3389/fnagi.2014.00130")
+
+cr_ft_links(doi = "10.3897/phytokeys.42.7604", type = "all")
 }
 }
 

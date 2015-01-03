@@ -29,6 +29,8 @@
 #' cr_ft_links(cr_r(1), "xml")
 #' 
 #' cr_ft_links(doi="10.3389/fnagi.2014.00130")
+#' 
+#' cr_ft_links(doi = "10.3897/phytokeys.42.7604", type = "all")
 #' }
 
 cr_ft_links <- function(doi, type='xml', ...)
@@ -37,7 +39,7 @@ cr_ft_links <- function(doi, type='xml', ...)
   res <- GET(url, hd_turtle(), ...)
   stopifnot(res$headers$`content-type` == hd_turtle()$httpheader[[1]])
   tt <- res$headers$link
-  if(is.null(tt)) NULL else get_type(x=tt, y=type)
+  if(is.null(tt)) NULL else get_type(x=tt, y=type, z=doi)
 }
 
 hd <- function(header){
@@ -48,7 +50,7 @@ hd_turtle <- function(header){
   add_headers(Accept = "text/turtle")
 }
 
-get_type <- function(x, y = 'xml') {
+get_type <- function(x, y = 'xml', z) {
   res <- parse_urls(x)
   withtype <- Filter(function(x) any("type" %in% names(x)), res)
   withtype <- setNames(withtype, sapply(withtype, function(x) strsplit(x$type, "/")[[1]][[2]]))
@@ -57,10 +59,10 @@ get_type <- function(x, y = 'xml') {
   else
     withtype <- withtype
   if(y == "all"){
-    lapply(withtype, function(b) makeurl(b$url, st(b$type)))
+    lapply(withtype, function(b) makeurl(b$url, st(b$type), z))
   } else {
     y <- match.arg(y, c('xml','plain','pdf'))
-    makeurl(cr_compact(sapply(y, function(r) withtype[[r]]$url)), y)
+    makeurl(cr_compact(sapply(y, function(r) withtype[[r]]$url)), y, z)
     # y <- grep(y, c("text/xml","text/plain","application/xml","application/pdf"), value = TRUE)
   }
 }
