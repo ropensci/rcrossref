@@ -108,12 +108,13 @@ parse_facets <- function(x){
 parse_works <- function(zzz){
   keys <- c('subtitle','issued','score','prefix','container-title','reference-count','deposited',
             'title','type','DOI','URL','source','publisher','indexed','member','page','ISBN',
-            'subject','author','issue','ISSN','volume')
+            'subject','author','issue','ISSN','volume','license')
   manip <- function(which="issued", y){
     res <- switch(which, 
+                  license = list(parse_license(y[[which]])),
                   issued = list(paste0(unlist(y[[which]]$`date-parts`), collapse = "-")),
-                  deposited = list(paste0(unlist(y[[which]]$`date-parts`), collapse = "-")),
-                  indexed = list(paste0(unlist(y[[which]]$`date-parts`), collapse = "-")),
+                  deposited = list(make_date(y[[which]]$`date-parts`)),
+                  indexed = list(make_date(y[[which]]$`date-parts`)),
                   subtitle = list(y[[which]]),
                   score = list(y[[which]]),
                   prefix = list(y[[which]]),
@@ -141,3 +142,10 @@ parse_works <- function(zzz){
   }
   if(all(is.na(zzz))) NULL else data.frame(as.list(unlist(lapply(keys, manip, y=zzz))), stringsAsFactors = FALSE)
 }
+
+parse_license <- function(x){
+  date <- make_date(x[[1]]$start$`date-parts`)
+  data.frame(date=date, x[[1]][!names(x[[1]]) == "start"], stringsAsFactors = FALSE)
+}
+
+make_date <- function(x) as.Date(paste0(unlist(x), collapse="-"))
