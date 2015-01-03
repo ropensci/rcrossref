@@ -64,6 +64,12 @@ cr_ft_links <- function(doi, type='xml', ...)
   }
 }
 
+cr_works_links <- function(dois = NULL, ...)
+{
+  get_links <- function(x) cr_GET(endpoint = sprintf("works/%s", x), list(), FALSE, ...)$message$link
+  setNames(lapply(dois, get_links, ...), dois)
+}
+
 # cr_ft_links <- function(doi, type='xml', ...)
 # {
 #   url <- sprintf("http://dx.doi.org/%s", doi)
