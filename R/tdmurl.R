@@ -3,18 +3,22 @@
 #' @export
 #' @param url A URL.
 #' @param type A document type, one of xml, pdf, or plain
+#' @param doi A DOI, optional, defaults to \code{NULL}
 #' @examples 
 #' as.tdmurl("http://downloads.hindawi.com/journals/bmri/2014/201717.xml", "xml")
 #' as.tdmurl("http://downloads.hindawi.com/journals/bmri/2014/201717.pdf", "pdf")
-as.tdmurl <- function(url, type) UseMethod("as.tdmurl")
+#' out <- as.tdmurl("http://downloads.hindawi.com/journals/bmri/2014/201717.pdf", 
+#'    "pdf", "10.1155/2014/201717")
+#' attributes(out)
+as.tdmurl <- function(url, type, doi) UseMethod("as.tdmurl")
 
 #' @export
 #' @rdname as.tdmurl
-as.tdmurl.tdmurl <- function(url, type) url
+as.tdmurl.tdmurl <- function(url, type, doi) url
 
 #' @export
 #' @rdname as.tdmurl
-as.tdmurl.character <- function(url, type) makeurl(check_url(url), type)
+as.tdmurl.character <- function(url, type, doi=NULL) makeurl(check_url(url), type, doi)
 
 #' @export
 print.tdmurl <- function(x, ...) {

@@ -6,16 +6,18 @@
 \alias{as.tdmurl.tdmurl}
 \title{Coerce a url to a tdmurl with a specific type}
 \usage{
-as.tdmurl(url, type)
+as.tdmurl(url, type, doi)
 
-\method{as.tdmurl}{tdmurl}(url, type)
+\method{as.tdmurl}{tdmurl}(url, type, doi)
 
-\method{as.tdmurl}{character}(url, type)
+\method{as.tdmurl}{character}(url, type, doi = NULL)
 }
 \arguments{
 \item{url}{A URL.}
 
 \item{type}{A document type, one of xml, pdf, or plain}
+
+\item{doi}{A DOI, optional, defaults to \code{NULL}}
 }
 \description{
 Coerce a url to a tdmurl with a specific type
@@ -23,5 +25,8 @@ Coerce a url to a tdmurl with a specific type
 \examples{
 as.tdmurl("http://downloads.hindawi.com/journals/bmri/2014/201717.xml", "xml")
 as.tdmurl("http://downloads.hindawi.com/journals/bmri/2014/201717.pdf", "pdf")
+out <- as.tdmurl("http://downloads.hindawi.com/journals/bmri/2014/201717.pdf",
+   "pdf", "10.1155/2014/201717")
+attributes(out)
 }
 
