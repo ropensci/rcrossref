@@ -17,7 +17,7 @@ test_that("cr_fundref dimensions are correct", {
   expect_equal(length(a), 2)
   expect_equal(NCOL(a[[1]]$data), 8)
   expect_equal(length(b), 2)
-  expect_equal(NCOL(b$data), 21)
+  expect_equal(NCOL(b$data), 25)
 })
 
 test_that("cr_fundref fails correctly", {
