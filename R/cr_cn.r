@@ -4,7 +4,7 @@
 #'
 #' @param dois Search by a single DOI or many DOIs.
 #' @param format Name of the format. One of "rdf-xml", "turtle", "citeproc-json", "text", 
-#' "ris", "bibtex", "crossref-xml", "datacite-xml", or "bibentry"
+#' "ris", "bibtex", "crossref-xml", "datacite-xml","bibentry", or "crossref-tdm"
 #' @param style a CSL style (for text format only). See \code{\link{get_styles}} 
 #' for options. Default: apa. If there's a style that CrossRef doesn't support you'll get a 
 #' \code{(500) Internal Server Error}
@@ -52,7 +52,7 @@
 `cr_cn` <- function(dois, format = "text", style = 'apa', locale = "en-US", .progress="none", ...){
   format <- match.arg(format, c("rdf-xml", "turtle", "citeproc-json",
                                 "text", "ris", "bibtex", "crossref-xml",
-                                "datacite-xml", "bibentry"))
+                                "datacite-xml", "bibentry", "crossref-tdm"))
   cn <- function(doi, ...){
     url <- paste("http://dx.doi.org", doi, sep="/")
     pick <- c(
@@ -64,7 +64,8 @@
            "bibtex" = "application/x-bibtex",
            "crossref-xml" = "application/vnd.crossref.unixref+xml",
            "datacite-xml" = "application/vnd.datacite.datacite+xml",
-           "bibentry" = "application/x-bibtex")
+           "bibentry" = "application/x-bibtex",
+           "crossref-tdm" = "application/vnd.crossref.unixsd+xml")
     type <- pick[[format]]
     if(format == "text")
       type <- paste(type, "; style = ", style, "; locale = ", locale, sep="")
@@ -79,7 +80,8 @@
            "bibtex" = "text/plain",
            "crossref-xml" = "text/xml",
            "datacite-xml" = "text/xml",
-           "bibentry" = "text/plain")
+           "bibentry" = "text/plain",
+           "crossref-tdm" = "text/xml")
     parser <- select[[format]]
     out <- content(response, "parsed", parser, "UTF-8")
     if(format == "text")
