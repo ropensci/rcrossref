@@ -24,9 +24,9 @@ test_that("cr_ft_text gives back right values", {
   expect_match(xpathApply(xml1, "//ref", xmlValue)[[1]], "Ake AssiL")
   expect_match(pdf_read, "~/.crossref")
   
-  nms <- c('Title','Author','Creator','Producer','CreationDate','ModDate','Tagged','Form',
-           'Pages','Encrypted','Page size','File size','Optimized','PDF version')
-  expect_named(pdf$meta, nms)
+#   nms <- c('Title','Author','Creator','Producer','CreationDate','ModDate','Tagged','Form',
+#            'Pages','Encrypted','Page size','File size','Optimized','PDF version')
+#   expect_named(pdf$meta, nms)
 })
 
 test_that("cr_ft_text fails correctly", {
