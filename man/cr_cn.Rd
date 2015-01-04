@@ -11,7 +11,7 @@ cr_cn(dois, format = "text", style = "apa", locale = "en-US",
 \item{dois}{Search by a single DOI or many DOIs.}
 
 \item{format}{Name of the format. One of "rdf-xml", "turtle", "citeproc-json", "text",
-"ris", "bibtex", "crossref-xml", "datacite-xml", or "bibentry"}
+"ris", "bibtex", "crossref-xml", "datacite-xml","bibentry", or "crossref-tdm"}
 
 \item{style}{a CSL style (for text format only). See \code{\link{get_styles}}
 for options. Default: apa. If there's a style that CrossRef doesn't support you'll get a
