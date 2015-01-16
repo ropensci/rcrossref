@@ -1,3 +1,26 @@
+rcrossref 0.3.0
+===============
+
+NEW FEATURES
+
+* New function `extract_pdf()` to extract text from pdfs
+* New function `cr_ft_links()` to get links for full text content of an article (#10)
+* New function `cr_ft_text()` to get links for full text content of an article. In addition,
+`cr_ft_pdf()`, `cr_ft_plain()`, and `cr_ft_xml()` are convenience functions that will get
+the format pdf, plain text, or xml, respectively. You can of course specify format in the 
+`cr_ft_text()` function with the `type` parameter (#10) (#42)
+
+MINOR IMPROVEMENTS
+
+* Filled out more tests (#45)
+
+BUG FIXES
+
+* No longer assign queried doi to the `data.frame` in `cr_works()`, which caused failure if
+a non-Crossref DOI included (#52)
+* `pmid2doi()` and `doi2pmid()` functions removed temporarily as the web service is down 
+temporarily, but will be online again soon from Crososref (#48)
+
 rcrossref 0.2.1
 ===============
 
