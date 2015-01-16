@@ -75,15 +75,6 @@ cr_ft_links(dois[1], "all")
 cr_ft_links(cr_r(1), "xml")
 
 # get full text
-## elife
-out <- cr_members(4374, filter=c(has_full_text = TRUE), works = TRUE)
-(links <- cr_ft_links(out$data$DOI[10], "all"))
-### xml
-cr_ft_text(links, 'xml')
-### pdf
-cr_ft_text(url = links, type = "pdf", read=FALSE)
-cr_ft_text(links, "pdf")
-
 ## pensoft
 out <- cr_members(2258, filter=c(has_full_text = TRUE), works = TRUE)
 (links <- cr_ft_links(out$data$DOI[1], "all"))
@@ -115,16 +106,6 @@ out <-
 (links <- cr_ft_links(out$data$DOI[10], "all"))
 cr_ft_text(links, 'xml')
 
-## elsevier - they don't actually give full text, ha ha, jokes on us!
-out <- cr_members(78, filter=c(has_full_text = TRUE), works = TRUE)
-links <- cr_ft_links(out$data$DOI[1], "all")
-cr_ft_text(links, 'xml') # notice how this is just metadata
-### elsevier articles that are open access
-#### one license is for open access articles, but none with full text available
-cr_licenses(filter=list(member=78))
-cr_works(filter=list(license_url="http://www.elsevier.com/open-access/userlicense/1.0/",
-                     has_full_text=TRUE))
-
 ## You can use cr_ft_xml, cr_ft_plain, and cr_ft_pdf to go directly to that format
 out <-
  cr_works(filter = list(has_full_text = TRUE,
@@ -134,12 +115,29 @@ cr_ft_xml(links)
 cr_ft_pdf(links)
 
 # Caching, for PDFs
-out <- cr_members(4374, filter=c(has_full_text = TRUE), works = TRUE)
+out <- cr_members(2258, filter=c(has_full_text = TRUE), works = TRUE)
 (links <- cr_ft_links(out$data$DOI[10], "all"))
 cr_ft_text(links, type = "pdf", cache=FALSE)
 system.time( cacheyes <- cr_ft_text(links, type = "pdf", cache=TRUE) )
+system.time( cacheyes <- cr_ft_text(links, type = "pdf", cache=TRUE) ) # second time is faster
 system.time( cacheno <- cr_ft_text(links, type = "pdf", cache=FALSE) )
 identical(cacheyes, cacheno)
+
+
+###################### Things to stay away from
+## elife
+#### Stay away from eLife for now, they aren't setting content types right, etc.
+
+## elsevier - they don't actually give full text, ha ha, jokes on us!
+## requires extra authentication, which we may include later on
+out <- cr_members(78, filter=c(has_full_text = TRUE), works = TRUE)
+links <- cr_ft_links(out$data$DOI[1], "all")
+cr_ft_text(links, 'xml') # notice how this is just metadata
+### elsevier articles that are open access
+#### one license is for open access articles, but none with full text available
+cr_licenses(filter=list(member=78))
+cr_works(filter=list(license_url="http://www.elsevier.com/open-access/userlicense/1.0/",
+                     has_full_text=TRUE))
 }
 }
 
