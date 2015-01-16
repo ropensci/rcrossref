@@ -44,7 +44,7 @@ test_that("cr_works dimensions are correct", {
   
   expect_equal(NCOL(a$data), 21)
   expect_equal(NCOL(b$meta), 4)
-  expect_equal(NCOL(e$data), 21)
+  expect_equal(NCOL(e$data), 20)
   expect_equal(NCOL(h$facets$license), 2)
 })
 
