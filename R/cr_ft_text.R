@@ -135,8 +135,8 @@ cr_ft_xml <- function(url, path = "~/.crossref", overwrite = TRUE, read=TRUE, ve
 
 #' @export
 #' @rdname cr_ft_text
-cr_ft_pdf <- function(url, path = "~/.crossref", overwrite = TRUE, read=TRUE, verbose=TRUE, ...)
-  getPDF(url$pdf[[1]], path, overwrite, "pdf", read, verbose, ...)
+cr_ft_pdf <- function(url, path = "~/.crossref", overwrite = TRUE, read=TRUE, cache=FALSE, verbose=TRUE, ...)
+  getPDF(url$pdf[[1]], path, overwrite, "pdf", read, verbose, cache, ...)
 
 pick_type <- function(x, z){
   x <- match.arg(x, c("xml","plain","pdf"))
@@ -156,7 +156,7 @@ getTEXT <- function(x, type, ...){
          plain = httr::content(res, as = "text"))
 }
 
-getPDF <- function(url, path, overwrite, type, read, verbose, cache, ...) {
+getPDF <- function(url, path, overwrite, type, read, verbose, cache=FALSE, ...) {
   if(!file.exists(path)) dir.create(path, showWarnings = FALSE, recursive = TRUE)
   
   # pensoft special handling

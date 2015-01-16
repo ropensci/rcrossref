@@ -17,7 +17,7 @@ cr_ft_xml(url, path = "~/.crossref", overwrite = TRUE, read = TRUE,
   verbose = TRUE, ...)
 
 cr_ft_pdf(url, path = "~/.crossref", overwrite = TRUE, read = TRUE,
-  verbose = TRUE, ...)
+  cache = FALSE, verbose = TRUE, ...)
 }
 \arguments{
 \item{url}{(character) A URL.}
