@@ -69,7 +69,7 @@
     res <- lapply(res, "[[", "message")
     res <- lapply(res, parse_works)
     df <- rbind_all(res)
-    df$dois <- dois
+ #  df$dois <- dois
     list(meta=NULL, data=df, facets=NULL)
   } else { 
     tmp <- foo(dois)
