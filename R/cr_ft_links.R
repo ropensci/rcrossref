@@ -30,7 +30,10 @@
 #' cr_ft_links(doi = "10.5555/515151", "pdf")
 #' cr_ft_links(doi = "10.5555/515151", "pdf")
 #' 
-#' # xml and plain text links
+#' # all links
+#' cr_ft_links(doi = "10.3897/phytokeys.42.7604", type = "all")
+#' 
+#' # Get doi first from other fxn, then pass here
 #' out <- cr_works(filter=c(has_full_text = TRUE))
 #' dois <- out$data$DOI
 #' cr_ft_links(dois[2], "xml")
@@ -42,21 +45,21 @@
 #' 
 #' # No results
 #' cr_ft_links(doi="10.3389/fnagi.2014.00130")
-#' cr_ft_links(doi = "10.3897/phytokeys.42.7604", type = "all")
 #' }
 
 cr_ft_links <- function(doi, type='xml', ...)
 {
   res <- cr_works_links(dois = doi, ...)[[1]]
+  elife <- if(grepl("elife", res[[1]]$URL)) TRUE else FALSE
   if(is.null(res)){
     NULL 
   } else {  
     withtype <- if(type=='all') res else Filter(function(x) grepl(type, x$`content-type`), res)
     withtype <- setNames(withtype, sapply(withtype, function(x) strsplit(x$`content-type`, "/")[[1]][[2]]))
-    if(grepl("elife", res[[1]]$URL))
-      withtype <- c(withtype, setNames(list(modifyList(withtype[[1]], list(type = "application/xml"))), "xml"))
+    if(elife)
+      withtype <- c(withtype, setNames(list(modifyList(withtype[[1]], list(`content-type` = "application/xml"))), "xml"))
     if(type == "all"){
-      lapply(withtype, function(b) makeurl(b$URL, st(b$`content-type`), doi))
+        lapply(withtype, function(b) makeurl(b$URL, st(b$`content-type`), doi))
     } else {
       y <- match.arg(type, c('xml','plain','pdf'))
       makeurl(withtype[[y]]$URL, y, doi)
