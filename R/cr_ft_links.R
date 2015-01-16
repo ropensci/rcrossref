@@ -50,10 +50,10 @@
 cr_ft_links <- function(doi, type='xml', ...)
 {
   res <- cr_works_links(dois = doi, ...)[[1]]
-  elife <- if(grepl("elife", res[[1]]$URL)) TRUE else FALSE
   if(is.null(res)){
     NULL 
   } else {  
+    elife <- if(grepl("elife", res[[1]]$URL)) TRUE else FALSE
     withtype <- if(type=='all') res else Filter(function(x) grepl(type, x$`content-type`), res)
     withtype <- setNames(withtype, sapply(withtype, function(x) strsplit(x$`content-type`, "/")[[1]][[2]]))
     if(elife)
