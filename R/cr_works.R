@@ -69,6 +69,10 @@
     res <- lapply(res, "[[", "message")
     res <- lapply(res, parse_works)
     df <- rbind_all(res)
+    #exclude rows with empty DOI value until CrossRef API supports input validation
+    if(nrow(df[df$DOI == "",]) > 0)
+     warning("only data with valid CrossRef dois returned",  call. = FALSE)
+    df <- df[!df$DOI == "",]
  #  df$dois <- dois
     list(meta=NULL, data=df, facets=NULL)
   } else { 
