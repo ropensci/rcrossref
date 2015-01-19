@@ -8,6 +8,7 @@ e <- cr_works(dois=c('10.1007/12080.1874-1746','10.1007/10452.1573-5125', '10.11
 f <- cr_works(query="NSF", facet=TRUE, limit=0)
 g <- cr_works(sample=1)
 h <- cr_works(query="NSF", facet=TRUE)
+i <- cr_works(dois=c('blblbl', '10.1038/nnano.2014.279'))
 
 test_that("cr_works returns correct class", {
   expect_is(a, "list")
@@ -18,6 +19,7 @@ test_that("cr_works returns correct class", {
   expect_is(f, "list")
   expect_is(g, "list")
   expect_is(h, "list")
+  expect_is(i, "list")
   
   expect_is(a$meta, "data.frame")
   expect_is(a$data, "data.frame")
@@ -30,6 +32,11 @@ test_that("cr_works returns correct class", {
   expect_is(h$facets, "list")
   expect_is(h$facets$license, "data.frame")
   expect_is(h$facets$license$.id, "character")
+  
+  expect_equal(i$meta, NULL)
+  expect_equal(i$facets, NULL)
+  expect_is(i$data, "tbl_df")
+  
 })
 
 test_that("cr_works dimensions are correct", {
@@ -41,6 +48,7 @@ test_that("cr_works dimensions are correct", {
   expect_equal(length(f), 3)
   expect_equal(length(g), 3)
   expect_equal(length(h), 3)
+  expect_equal(length(i), 3)
   
   expect_equal(NCOL(a$data), 21)
   expect_equal(NCOL(b$meta), 4)
@@ -52,4 +60,10 @@ test_that("cr_works fails correctly", {
   library('httr')
   expect_error(cr_works(config=timeout(0.01)))
   expect_equal(NROW(cr_works(query = "adfaaf")$data), 0)
+})
+
+test_that("cr_works warns correctly", {
+  expect_warning(cr_works(dois=c('blblbl', '10.1038/nnano.2014.279')), 
+                 regexp = "only data with valid CrossRef dois returned", all = TRUE)
+  expect_equal(NROW(cr_works(dois=c('blblbl', '10.1038/nnano.2014.279'))$data), 1)
 })

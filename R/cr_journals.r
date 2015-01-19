@@ -54,7 +54,11 @@
     res <- lapply(res, "[[", "message")
     res <- lapply(res, parse_works)
     df <- rbind_all(res)
-    df$issn <- issn
+    #exclude rows with empty ISSN value until CrossRef API supports input validation
+    if(nrow(df[df$ISSN == "",]) > 0)
+      warning("only data with valid ISSN returned",  call. = FALSE)
+    df <- df[!df$ISSN == "",]
+#   df$issn <- issn
     df
   } else {
     tmp <- foo(issn)
