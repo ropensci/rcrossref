@@ -116,7 +116,7 @@ parse_works <- function(zzz){
   manip <- function(which="issued", y){
     res <- switch(which, 
                   license = list(parse_license(y[[which]])),
-                  issued = list(paste0(unlist(y[[which]]$`date-parts`), collapse = "-")),
+                  issued = list(paste0(sprintf("%02d", unlist(y[[which]]$`date-parts`)), collapse = "-")),
                   deposited = list(make_date(y[[which]]$`date-parts`)),
                   indexed = list(make_date(y[[which]]$`date-parts`)),
                   subtitle = list(y[[which]]),
