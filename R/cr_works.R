@@ -156,4 +156,4 @@ parse_license <- function(x){
   }
 }
 
-make_date <- function(x) paste0(unlist(x), collapse="-")
+make_date <- function(x) paste0(sprintf("%02d", unlist(x)), collapse="-")
