@@ -55,13 +55,19 @@ cr_ft_links <- function(doi, type='xml', ...)
   } else {  
     elife <- if(grepl("elife", res[[1]]$URL)) TRUE else FALSE
     withtype <- if(type=='all') res else Filter(function(x) grepl(type, x$`content-type`), res)
-    withtype <- setNames(withtype, sapply(withtype, function(x) strsplit(x$`content-type`, "/")[[1]][[2]]))
+    withtype <- setNames(withtype, sapply(withtype, function(x){
+      if(x$`content-type` == "unspecified"){
+        "unspecified"
+      } else {
+        strsplit(x$`content-type`, "/")[[1]][[2]]
+      }
+    }))
     if(elife)
       withtype <- c(withtype, setNames(list(modifyList(withtype[[1]], list(`content-type` = "application/xml"))), "xml"))
     if(type == "all"){
         lapply(withtype, function(b) makeurl(b$URL, st(b$`content-type`), doi))
     } else {
-      y <- match.arg(type, c('xml','plain','pdf'))
+      y <- match.arg(type, c('xml','plain','pdf','unspecified'))
       makeurl(withtype[[y]]$URL, y, doi)
     }
   }
@@ -71,6 +77,13 @@ cr_works_links <- function(dois = NULL, ...)
 {
   get_links <- function(x) cr_GET(endpoint = sprintf("works/%s", x), list(), FALSE, ...)$message$link
   setNames(lapply(dois, get_links, ...), dois)
+}
+
+st <- function(x){
+  if(grepl("/", x)) 
+    strsplit(x, "/")[[1]][[2]]
+  else
+    x
 }
 
 # cr_ft_links <- function(doi, type='xml', ...)
@@ -106,8 +119,6 @@ cr_works_links <- function(dois = NULL, ...)
 #     # y <- grep(y, c("text/xml","text/plain","application/xml","application/pdf"), value = TRUE)
 #   }
 # }
-
-st <- function(x) strsplit(x, "/")[[1]][[2]]
 
 # parse_urls <- function(x) {
 #   lapply(strsplit(x, ",")[[1]], function(z) {
