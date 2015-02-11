@@ -28,8 +28,6 @@ test_that("cr_members dimensions are correct", {
   expect_equal(length(a), 3)
   expect_equal(length(b), 3)
   expect_equal(length(e), 3)
-  expect_equal(NCOL(a$data), 40)
-  expect_equal(NCOL(b$data), 21)
   expect_equal(length(d$facets), 0)
 })
 
