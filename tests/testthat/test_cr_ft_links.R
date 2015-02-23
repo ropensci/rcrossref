@@ -3,7 +3,7 @@ context("testing cr_ft_links")
 a <- cr_ft_links(doi = "10.5555/515151", "pdf")
 out <- cr_works(filter=c(has_full_text = TRUE))
 dois <- out$data$DOI
-b <- cr_ft_links(dois[2], "xml")
+b <- cr_ft_links(dois[2], "pdf")
 c <- cr_ft_links(dois[1], "plain")
 d <- cr_ft_links(dois[1], "all")
 
@@ -29,7 +29,7 @@ test_that("cr_ft_links dimensions are correct", {
 
 test_that("cr_ft_links gives back right values", {
   expect_equal(attr(a, "type"), "pdf")
-  expect_equal(attr(b, "type"), "xml")
+  expect_equal(attr(b, "type"), "pdf")
   expect_equal(attr(d[[2]], "type"), "plain")
 
   expect_null(cr_ft_links(cr_r(1)))

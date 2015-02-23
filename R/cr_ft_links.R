@@ -55,20 +55,24 @@ cr_ft_links <- function(doi, type='xml', ...)
   } else {  
     elife <- if(grepl("elife", res[[1]]$URL)) TRUE else FALSE
     withtype <- if(type=='all') res else Filter(function(x) grepl(type, x$`content-type`), res)
-    withtype <- setNames(withtype, sapply(withtype, function(x){
-      if(x$`content-type` == "unspecified"){
-        "unspecified"
-      } else {
-        strsplit(x$`content-type`, "/")[[1]][[2]]
-      }
-    }))
-    if(elife)
-      withtype <- c(withtype, setNames(list(modifyList(withtype[[1]], list(`content-type` = "application/xml"))), "xml"))
-    if(type == "all"){
-        lapply(withtype, function(b) makeurl(b$URL, st(b$`content-type`), doi))
+    if(is.null(withtype) || length(withtype) == 0){
+      NULL
     } else {
-      y <- match.arg(type, c('xml','plain','pdf','unspecified'))
-      makeurl(withtype[[y]]$URL, y, doi)
+      withtype <- setNames(withtype, sapply(withtype, function(x){
+        if(x$`content-type` == "unspecified"){
+          "unspecified"
+        } else {
+          strsplit(x$`content-type`, "/")[[1]][[2]]
+        }
+      }))
+      if(elife)
+        withtype <- c(withtype, setNames(list(modifyList(withtype[[1]], list(`content-type` = "application/xml"))), "xml"))
+      if(type == "all"){
+        lapply(withtype, function(b) makeurl(b$URL, st(b$`content-type`), doi))
+      } else {
+        y <- match.arg(type, c('xml','plain','pdf','unspecified'))
+        makeurl(withtype[[y]]$URL, y, doi)
+      }
     }
   }
 }
