@@ -5,6 +5,7 @@ rcrossref
 
 [![Build Status](https://api.travis-ci.org/ropensci/rcrossref.png)](https://travis-ci.org/ropensci/rcrossref)
 [![Build status](https://ci.appveyor.com/api/projects/status/jbo6y7dg4qiq7mol/branch/master)](https://ci.appveyor.com/project/sckott/rcrossref/branch/master)
+[![Coverage Status](https://coveralls.io/repos/ropensci/rcrossref/badge.svg)](https://coveralls.io/r/ropensci/rcrossref)
 
 R interface to various CrossRef APIs
 
@@ -103,7 +104,7 @@ Citation count, using [OpenURL](http://www.crossref.org/openurl/)
 
 ```r
 cr_citation_count(doi="10.1371/journal.pone.0042793")
-#> [1] 3
+#> [1] 5
 ```
 
 ## Search Crossref metadata API
@@ -117,19 +118,20 @@ The following functions all use the [CrossRef API](https://github.com/CrossRef/r
 cr_fundref(query="NSF")
 #> $meta
 #>   total_results search_terms start_index items_per_page
-#> 1             7          NSF           0             20
+#> 1             8          NSF           0             20
 #> 
 #> $data
-#> Source: local data frame [7 x 6]
+#> Source: local data frame [8 x 6]
 #> 
 #>             id      location
 #> 1 501100004190        Norway
 #> 2    100000179 United States
 #> 3 501100000930     Australia
-#> 4    100003187 United States
-#> 5    100000001 United States
-#> 6    100006445 United States
-#> 7 501100001809         China
+#> 4    100008367       Denmark
+#> 5    100003187 United States
+#> 6    100000001 United States
+#> 7    100006445 United States
+#> 8 501100001809         China
 #> Variables not shown: name (chr), alt.names (chr), uri (chr), tokens (chr)
 ```
 
@@ -156,17 +158,19 @@ cr_agency(dois = '10.13039/100000001')
 cr_works(filter=c(has_orcid=TRUE, from_pub_date='2004-04-04'), limit=1)
 #> $meta
 #>   total_results search_terms start_index items_per_page
-#> 1        111738           NA           0              1
+#> 1        128965           NA           0              1
 #> 
 #> $data
-#> Source: local data frame [1 x 21]
+#> Source: local data frame [1 x 24]
 #> 
-#>      issued score                                prefix container.title
-#> 1 2013-6-14     1 http://id.crossref.org/prefix/10.5194  Biogeosciences
-#> Variables not shown: reference.count (chr), deposited (chr), title (chr),
-#>   type (chr), DOI (chr), URL (chr), source (chr), publisher (chr), indexed
-#>   (chr), member (chr), page (chr), ISBN (chr), subject (chr), author
-#>   (chr), issue (chr), ISSN (chr), volume (chr)
+#>    issued score                                prefix
+#> 1 2014-12     1 http://id.crossref.org/prefix/10.1016
+#> Variables not shown: container.title (chr), reference.count (chr),
+#>   deposited (chr), title (chr), type (chr), DOI (chr), URL (chr), source
+#>   (chr), publisher (chr), indexed (chr), member (chr), ISBN (chr), subject
+#>   (chr), author (chr), issue (chr), ISSN (chr), volume (chr), license_date
+#>   (chr), license_content.version (chr), license_delay.in.days (chr),
+#>   license_URL (chr)
 #> 
 #> $facets
 #> NULL
@@ -177,14 +181,14 @@ cr_works(filter=c(has_orcid=TRUE, from_pub_date='2004-04-04'), limit=1)
 
 ```r
 cr_journals(issn=c('1803-2427','2326-4225'))
-#> Source: local data frame [2 x 13]
+#> Source: local data frame [2 x 12]
 #> 
 #>   issued container.title deposited
 #> 1                                 
 #> 2                                 
 #> Variables not shown: title (chr), publisher (chr), indexed (chr), ISBN
 #>   (chr), subject (chr), author (chr), issue (chr), ISSN (chr), volume
-#>   (chr), issn (chr)
+#>   (chr)
 ```
 
 ### Search license information
@@ -201,7 +205,7 @@ cr_licenses(query = 'elsevier')
 #> 
 #>                                            URL work.count
 #> 1  http://creativecommons.org/licenses/by/3.0/          1
-#> 2 http://www.elsevier.com/tdm/userlicense/1.0/        136
+#> 2 http://www.elsevier.com/tdm/userlicense/1.0/        145
 ```
 
 ### Search based on DOI prefixes
@@ -234,10 +238,10 @@ cr_prefixes(prefixes=c('10.1016','10.1371','10.1023','10.4176','10.1093'))
 cr_members(query='ecology', limit = 5)
 #> $meta
 #>   total_results search_terms start_index items_per_page
-#> 1            13      ecology           0              5
+#> 1            15      ecology           0              5
 #> 
 #> $data
-#> Source: local data frame [5 x 44]
+#> Source: local data frame [5 x 40]
 #> 
 #>     id                                 primary_name
 #> 1 3947          Korean Association of Human Ecology
@@ -246,7 +250,7 @@ cr_members(query='ecology', limit = 5)
 #> 4 2232 Japanese Society of Health and Human Ecology
 #> 5  336        Japanese Society of Microbial Ecology
 #> Variables not shown: location (chr), last_status_check_time (date),
-#>   backfile.dois (chr), current.dois (chr), total.dois (chr), X.10.5934.
+#>   backfile.dois (chr), current.dois (chr), total.dois (chr), prefixes
 #>   (chr), coverge.resource.links.backfile (chr), coverge.funders.current
 #>   (chr), coverge.funders.backfile (chr), coverge.references.current (chr),
 #>   coverge.references.backfile (chr), coverge.update.policies.backfile
@@ -266,8 +270,7 @@ cr_members(query='ecology', limit = 5)
 #>   flags.deposits.update.policies.backfile (chr),
 #>   flags.deposits.funders.current (chr),
 #>   flags.deposits.update.policies.current (chr), flags.deposits.articles
-#>   (chr), names (chr), tokens (chr), X.10.3825. (chr), X.10.3759. (chr),
-#>   X.10.3861. (chr), X.10.1264. (chr)
+#>   (chr), names (chr), tokens (chr)
 #> 
 #> $facets
 #> NULL
@@ -280,11 +283,11 @@ cr_members(query='ecology', limit = 5)
 
 ```r
 cr_r()
-#>  [1] "10.2514/6.2000-1767"              "10.2165/00128413-200314140-00061"
-#>  [3] "10.1007/978-3-662-04823-8_9"      "10.1007/978-3-642-38442-4_23"    
-#>  [5] "10.1017/s0040298213001137"        "10.1016/j.jenvman.2014.02.001"   
-#>  [7] "10.1016/s1098-3015(10)72179-3"    "10.1109/ccdc.2012.6244065"       
-#>  [9] "10.1556/maseb.60.2007.4.6"        "10.2307/1596598"
+#>  [1] "10.1038/sj.bjp.0703555"        "10.1371/journal.pone.0073244" 
+#>  [3] "10.1016/s0025-7125(05)70153-x" "10.1056/nejm191510141731606"  
+#>  [5] "10.1016/0003-2697(87)90455-6"  "10.3791/2167"                 
+#>  [7] "10.1016/s0140-6736(02)35531-4" "10.1007/bf01875730"           
+#>  [9] "10.1080/10509580008570115"     "10.5194/gh-58-286-2003"
 ```
 
 You can pass in the number of DOIs you want back (default is 10)
@@ -292,7 +295,7 @@ You can pass in the number of DOIs you want back (default is 10)
 
 ```r
 cr_r(2)
-#> [1] "10.1109/pac.2005.1590945" "10.1121/1.393324"
+#> [1] "10.1038/sj.bdj.2008.1110" "10.1172/jci111793"
 ```
 
 ## pmid2doi & doi2pmid
@@ -313,13 +316,13 @@ out <-
   cr_works(filter = list(has_full_text = TRUE,
     license_url="http://creativecommons.org/licenses/by/3.0/"))
 (dois <- out$data$DOI)
-#>  [1] "10.1155/2014/104347" "10.1155/2014/101286" "10.1155/2014/105950"
-#>  [4] "10.1155/2014/128542" "10.1155/2014/139046" "10.1155/2014/137349"
-#>  [7] "10.1155/2014/170795" "10.1155/2014/159704" "10.1155/2014/193154"
-#> [10] "10.1155/2014/201717" "10.1155/2014/190203" "10.1155/2014/179085"
-#> [13] "10.1155/2014/187416" "10.1155/2014/173192" "10.1155/2014/203871"
-#> [16] "10.1155/2014/212751" "10.1155/2014/235238" "10.1155/2014/236965"
-#> [19] "10.1155/2014/240581" "10.1155/2014/234508"
+#>  [1] "10.1063/1.4905851"   "10.1063/1.4905271"   "10.1063/1.4905272"  
+#>  [4] "10.1155/2014/214587" "10.1155/2014/245347" "10.1155/2014/340936"
+#>  [7] "10.1155/2014/902492" "10.1155/2014/524940" "10.1155/2014/137231"
+#> [10] "10.1155/2014/598762" "10.1155/2014/256879" "10.1155/2014/182303"
+#> [13] "10.1155/2014/954604" "10.1155/2014/846581" "10.1155/2014/258409"
+#> [16] "10.1155/2014/164714" "10.1155/2014/687608" "10.7167/2013/140791"
+#> [19] "10.1155/2011/549537" "10.1155/2011/285130"
 ```
 
 Then get URLs to full text content
@@ -327,7 +330,7 @@ Then get URLs to full text content
 
 ```r
 (links <- cr_ft_links(dois[1]))
-#> <url> http://downloads.hindawi.com/journals/sv/2014/104347.xml
+#> NULL
 ```
 
 Then use those URLs to get full text

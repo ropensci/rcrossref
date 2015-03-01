@@ -1,17 +1,13 @@
-language: c
+language: r
 
-script: "./travis-tool.sh run_tests"
+r_github_packages:
+ - jimhester/covr
 
+after_success:
+ - Rscript -e 'library(covr); coveralls()'
+  
 before_script:
-- curl -OL http://raw.github.com/craigcitro/r-travis/master/scripts/travis-tool.sh
-- chmod 755 ./travis-tool.sh
-- sudo apt-get update
-- sudo apt-get install poppler-utils
-- "./travis-tool.sh bootstrap"
-- "./travis-tool.sh install_deps"
-
-on_failure:
-  - ./travis-tool.sh dump_logs
+ - sudo apt-get install poppler-utils
 
 notifications:
   email:
