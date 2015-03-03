@@ -13,14 +13,11 @@
 #' @details Have to have at least three terms in each search query.
 #' @seealso \code{\link{cr_search}}, \code{\link{cr_r}}, \code{\link{cr_citation}}
 #' @author Scott Chamberlain \email{myrmecocystus@@gmail.com}
-#' @examples
-#' \donttest{
+#' @examples \dontrun{
 #' # search with title, author, year, and journal
 #' cr_search_free(query = "Piwowar Sharing Detailed Research Data Is Associated with 
 #' Increased Citation Rate PLOS one 2007")
-#' }
 #' 
-#' \dontrun{
 #' cr_search_free(query="Renear 2012") # too few words, need at least 3
 #'
 #' cr_search_free(query=c("Renear 2012","Piwowar sharing data PLOS one")) # multiple queries

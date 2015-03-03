@@ -45,12 +45,10 @@ Search CrossRef members
 BEWARE: The API will only work for CrossRef DOIs.
 }
 \examples{
-\donttest{
+\dontrun{
 cr_members(member_ids=98)
 cr_members(member_ids=340)
-}
 
-\dontrun{
 cr_members(member_ids=98, works=TRUE)
 cr_members(member_ids=c(10,98,45,1,9))
 cr_members(member_ids=c(10,98,45,1,9), works=TRUE)

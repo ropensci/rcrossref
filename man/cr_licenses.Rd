@@ -35,11 +35,8 @@ Search CrossRef licenses
 BEWARE: The API will only work for CrossRef DOIs.
 }
 \examples{
-\donttest{
-cr_licenses()
-}
-
 \dontrun{
+cr_licenses()
 # query for something, e.g. a publisher
 cr_licenses(query = 'elsevier')
 }

@@ -1,7 +1,7 @@
 #' Get list of styles from github.com/citation-style-language/styles
 #' @export
 #' @param ... Named parameters passed on to \code{\link[httr]{GET}}
-#' @examples \donttest{
+#' @examples \dontrun{
 #' get_styles()[1:5]
 #' }
 

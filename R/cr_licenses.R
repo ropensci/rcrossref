@@ -20,12 +20,8 @@
 #' @details NOTE: The API route behind this function does not support filters any more, so
 #' the \code{filter} parameter has been removed.
 #'
-#' @examples 
-#' \donttest{
+#' @examples \dontrun{
 #' cr_licenses()
-#' }
-#' 
-#' \dontrun{
 #' # query for something, e.g. a publisher
 #' cr_licenses(query = 'elsevier')
 #' }

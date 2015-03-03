@@ -7,12 +7,8 @@
 #' @details BEWARE: The API will only work for CrossRef DOIs.
 #' @references \url{https://github.com/CrossRef/rest-api-doc/blob/master/rest_api.md}
 #' @author Scott Chamberlain \email{myrmecocystus@@gmail.com}
-#' @examples 
-#' \donttest{
+#' @examples \dontrun{
 #' cr_agency(dois = '10.13039/100000001')
-#' }
-#' 
-#' \dontrun{
 #' res <- cr_agency(dois = c('10.13039/100000001','10.13039/100000015'))
 #' res[['10.13039/100000015']]
 #' }

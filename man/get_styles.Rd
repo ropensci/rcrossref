@@ -13,7 +13,7 @@ get_styles(...)
 Get list of styles from github.com/citation-style-language/styles
 }
 \examples{
-\donttest{
+\dontrun{
 get_styles()[1:5]
 }
 }

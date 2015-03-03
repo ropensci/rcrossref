@@ -19,7 +19,7 @@ Extract text from a single pdf document.
 Download xpdf from \url{http://www.foolabs.com/xpdf/download.html}
 }
 \examples{
-\donttest{
+\dontrun{
 path <- "~/github/sac/scott/pdfs/ChamberlainEtal2013Ecosphere.pdf"
 (res_xpdf <- extract_xpdf(path))
 res_xpdf$meta

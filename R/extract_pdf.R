@@ -5,7 +5,7 @@
 #' @return An object of class xpdf_char
 #' @details 
 #' Download xpdf from \url{http://www.foolabs.com/xpdf/download.html}
-#' @examples \donttest{
+#' @examples \dontrun{
 #' path <- "~/github/sac/scott/pdfs/ChamberlainEtal2013Ecosphere.pdf"
 #' (res_xpdf <- extract_xpdf(path))
 #' res_xpdf$meta

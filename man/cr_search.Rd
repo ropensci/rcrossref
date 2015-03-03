@@ -32,11 +32,9 @@ See \url{http://search.labs.crossref.org/help/api} for more info on this
 		Crossref API service.
 }
 \examples{
-\donttest{
-cr_search(query = c("renear", "palmer"))
-}
-
 \dontrun{
+cr_search(query = c("renear", "palmer"))
+
 # limit to 4 results
 cr_search(query = c("renear", "palmer"), rows = 4)
 

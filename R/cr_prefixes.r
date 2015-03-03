@@ -25,12 +25,8 @@
 #' a certain organisaton, member IDs and the member routes should be used.
 #'
 #' @references \url{https://github.com/CrossRef/rest-api-doc/blob/master/rest_api.md}
-#' @examples 
-#' \donttest{
+#' @examples \dontrun{
 #' cr_prefixes(prefixes="10.1016")
-#' }
-#' 
-#' \dontrun{
 #' cr_prefixes(prefixes="10.1016", works=TRUE)
 #' cr_prefixes(prefixes=c('10.1016','10.1371','10.1023','10.4176','10.1093'))
 #' cr_prefixes(prefixes=c('10.1016','10.1371'), works=TRUE)
