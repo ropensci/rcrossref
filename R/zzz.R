@@ -31,7 +31,8 @@ filter_handler <- function(x){
 }
 
 asl <- function(x) {
-  if(is.logical(x)) {
+  x <- tolower(x)
+  if(is.logical(x) || x == "true" || x == "false") {
     if(x) {
       return('true')
     } else {
@@ -74,7 +75,16 @@ cr_GET <- function(endpoint, args, todf=TRUE, ...)
 }
 
 get_err <- function(x) {
-  content(x)$message[[1]]$message
+  tmp <- content(x)
+  if(is(tmp, "list")) {
+    tmp$message[[1]]$message
+  } else {
+    if(is(tmp, "HTMLInternalDocument")) {
+      return("Server error - check your query - or api.crossref.org may be experiencing problems")
+    } else {
+      return(tmp)
+    }
+  }
 }
 
 col_classes <- function(d, colClasses) {

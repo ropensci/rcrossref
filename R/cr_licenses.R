@@ -6,6 +6,8 @@
 #' @template moreargs
 #' @details BEWARE: The API will only work for CrossRef DOIs.
 #' @references \url{https://github.com/CrossRef/rest-api-doc/blob/master/rest_api.md}
+#' @details NOTE: The API route behind this function does not support filters any more, so
+#' the \code{filter} parameter has been removed.
 #'
 #' @examples 
 #' \donttest{
@@ -15,22 +17,16 @@
 #' \dontrun{
 #' # query for something, e.g. a publisher
 #' cr_licenses(query = 'elsevier')
-#' 
-#' # what license types does elsevier support
-#' cr_licenses(filter = c(member=78))
-#' 
-#' # filter by an issn of a journal
-#' cr_licenses(filter = c(issn='2090-8091'))
-#' 
-#' # What licenses does a reasearcher with a particular ORCID publish under
-#' cr_licenses(filter = c(orcid='0000-0003-1340-5202'))
 #' }
 
-`cr_licenses` <- function(query = NULL, filter = NULL, offset = NULL, limit = NULL, sample = NULL, 
-  sort = NULL, order = NULL, .progress="none", ...)
-{
-  filter <- filter_handler(filter)
-  args <- cr_compact(list(query = query, filter = filter, offset = offset, rows = limit,
+`cr_licenses` <- function(query = NULL, offset = NULL, limit = NULL, sample = NULL, 
+  sort = NULL, order = NULL, .progress="none", ...) {
+  
+  calls <- names(sapply(match.call(expand.dots = TRUE), deparse))[-1]
+  if("filter" %in% calls)
+    stop("The parameter filter has been removed")
+  
+  args <- cr_compact(list(query = query, offset = offset, rows = limit,
                           sample = sample, sort = sort, order = order))
   
   tmp <- licenses_GET(args=args, ...)

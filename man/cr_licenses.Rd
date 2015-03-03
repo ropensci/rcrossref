@@ -4,13 +4,11 @@
 \alias{cr_licenses}
 \title{Search CrossRef licenses}
 \usage{
-cr_licenses(query = NULL, filter = NULL, offset = NULL, limit = NULL,
-  sample = NULL, sort = NULL, order = NULL, .progress = "none", ...)
+cr_licenses(query = NULL, offset = NULL, limit = NULL, sample = NULL,
+  sort = NULL, order = NULL, .progress = "none", ...)
 }
 \arguments{
 \item{query}{Query terms}
-
-\item{filter}{Filter options. See details.}
 
 \item{offset}{Number of record to start at, from 1 to infinity.}
 
@@ -29,6 +27,8 @@ or published.}
 and "time".  See \code{\link[plyr]{create_progress_bar}} for details of each.}
 
 \item{...}{Named parameters passed on to \code{\link[httr]{GET}}}
+
+\item{filter}{Filter options. See details.}
 }
 \description{
 Search CrossRef licenses
@@ -44,15 +44,6 @@ cr_licenses()
 \dontrun{
 # query for something, e.g. a publisher
 cr_licenses(query = 'elsevier')
-
-# what license types does elsevier support
-cr_licenses(filter = c(member=78))
-
-# filter by an issn of a journal
-cr_licenses(filter = c(issn='2090-8091'))
-
-# What licenses does a reasearcher with a particular ORCID publish under
-cr_licenses(filter = c(orcid='0000-0003-1340-5202'))
 }
 }
 \references{

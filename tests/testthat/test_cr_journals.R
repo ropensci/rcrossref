@@ -24,7 +24,7 @@ test_that("cr_journals fails correctly", {
 test_that("cr_journals warns correctly", {
   expect_warning(cr_journals(issn=c('blblbl', '1932-6203')), 
                  regexp = "only data with valid ISSN returned", all = TRUE)
-  expect_equal(NROW(cr_journals(issn=c('blblbl', '1932-6203'))), 1)
-  expect_is(cr_journals(issn=c('blblbl', '1932-6203')), "tbl_df")
+  expect_equal(NROW(suppressWarnings(cr_journals(issn=c('blblbl', '1932-6203')))), 1)
+  expect_is(suppressWarnings(cr_journals(issn=c('blblbl', '1932-6203'))), "tbl_df")
 })
 

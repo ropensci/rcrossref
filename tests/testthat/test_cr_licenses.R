@@ -2,7 +2,6 @@ context("testing cr_licenses")
 
 a <- cr_licenses()
 b <- cr_licenses(query = 'elsevier')
-c <- cr_licenses(filter = c(member=78))
 
 test_that("cr_licenses returns correct class", {
   expect_is(a, "list")
@@ -28,4 +27,5 @@ test_that("cr_licenses fails correctly", {
   library('httr')
   expect_error(cr_licenses(config=timeout(0.01)))
   expect_equal(NROW(cr_licenses(query = "adfaaf")$data), 0)
+  expect_error(cr_licenses(filter=''))
 })
