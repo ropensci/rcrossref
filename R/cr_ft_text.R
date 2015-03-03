@@ -10,22 +10,22 @@
 #' you only get back the metadata. Default: TRUE
 #' @param verbose (logical) Print progress messages. Default: TRUE
 #' @param cache (logical) Use cached files or not. All files are written to your machine
-#' locally, so this doesn't affect that. This only states whether you want to use 
-#' cached version so that you don't have to download the file again. The steps of 
-#' extracting and reading into R still have to be performed when \code{cache=TRUE}. 
+#' locally, so this doesn't affect that. This only states whether you want to use
+#' cached version so that you don't have to download the file again. The steps of
+#' extracting and reading into R still have to be performed when \code{cache=TRUE}.
 #' Default: TRUE
 #' @param ... Named parameters passed on to \code{\link[httr]{GET}}
 #' @details Note that \code{\link{cr_ft_text}},
 #' \code{\link{cr_ft_pdf}}, \code{\link{cr_ft_xml}}, \code{\link{cr_ft_plain}}
 #' are not vectorized.
-#' 
-#' Note that some links returned will not in fact lead you to full text 
-#' content as you would understandbly think and expect. That is, if you 
-#' use the \code{filter} parameter with e.g., \code{\link{cr_works}} and 
+#'
+#' Note that some links returned will not in fact lead you to full text
+#' content as you would understandbly think and expect. That is, if you
+#' use the \code{filter} parameter with e.g., \code{\link{cr_works}} and
 #' filter to only full text content, some links may actually give back
-#' only metadata for an article. Elsevier is perhaps the worst offender, 
+#' only metadata for an article. Elsevier is perhaps the worst offender,
 #' for one because they have a lot of entries in Crossref TDM, but most
-#' of the links that are apparently full text are not in facct full text, 
+#' of the links that are apparently full text are not in facct full text,
 #' but only metadata.
 #' @examples \dontrun{
 #' # pdf link
@@ -80,7 +80,7 @@
 #' (links <- cr_ft_links(out$data$DOI[10], "all"))
 #' cr_ft_xml(links)
 #' cr_ft_pdf(links)
-#' 
+#'
 #' # Caching, for PDFs
 #' out <- cr_members(2258, filter=c(has_full_text = TRUE), works = TRUE)
 #' (links <- cr_ft_links(out$data$DOI[10], "all"))
@@ -89,25 +89,24 @@
 #' system.time( cacheyes <- cr_ft_text(links, type = "pdf", cache=TRUE) ) # second time is faster
 #' system.time( cacheno <- cr_ft_text(links, type = "pdf", cache=FALSE) )
 #' identical(cacheyes, cacheno)
-#' 
-#' 
+#'
+#'
 #' ###################### Things to stay away from
 #' ## elife
-#' #### Stay away from eLife for now, they aren't setting content types right, etc. 
-#' 
+#' #### Stay away from eLife for now, they aren't setting content types right, etc.
+#'
 #' ## elsevier - they don't actually give full text, ha ha, jokes on us!
 #' ## requires extra authentication, which we may include later on
-#' out <- cr_members(78, filter=c(has_full_text = TRUE), works = TRUE)
-#' links <- cr_ft_links(out$data$DOI[1], "all")
-#' cr_ft_text(links, 'xml') # notice how this is just metadata
+#' # out <- cr_members(78, filter=c(has_full_text = TRUE), works = TRUE)
+#' # links <- cr_ft_links(out$data$DOI[1], "all")
+#' # cr_ft_text(links, 'xml') # notice how this is just metadata
 #' ### elsevier articles that are open access
 #' #### one license is for open access articles, but none with full text available
-#' cr_licenses(filter=list(member=78))
-#' cr_works(filter=list(license_url="http://www.elsevier.com/open-access/userlicense/1.0/",
+#' # cr_works(filter=list(license_url="http://www.elsevier.com/open-access/userlicense/1.0/",
 #'                      has_full_text=TRUE))
 #' }
 
-cr_ft_text <- function(url, type='xml', path = "~/.crossref", overwrite = TRUE, 
+cr_ft_text <- function(url, type='xml', path = "~/.crossref", overwrite = TRUE,
   read=TRUE, verbose=TRUE, cache=TRUE, ...)
 {
   switch( pick_type(type, url),
@@ -156,15 +155,15 @@ getTEXT <- function(x, type, ...){
 
 getPDF <- function(url, path, overwrite, type, read, verbose, cache=FALSE, ...) {
   if(!file.exists(path)) dir.create(path, showWarnings = FALSE, recursive = TRUE)
-  
+
   # pensoft special handling
   if( grepl("pensoft", url[[1]]) ){
     filepath <- file.path(path, paste0(sub("/", ".", attr(url, "doi")), ".pdf"))
   } else {
-    ff <- if( !grepl(type, basename(url)) ) paste0(basename(url), ".", type) else basename(url)    
+    ff <- if( !grepl(type, basename(url)) ) paste0(basename(url), ".", type) else basename(url)
     filepath <- file.path(path, ff)
   }
-  
+
   if(cache && file.exists(filepath)){
     if( !file.exists(filepath) ) stop(sprintf("%s not found", filepath), call. = FALSE)
   } else {
@@ -172,7 +171,7 @@ getPDF <- function(url, path, overwrite, type, read, verbose, cache=FALSE, ...) 
     res <- GET(url, accept("application/pdf"), write_disk(path = filepath, overwrite = overwrite), ...)
     filepath <- res$request$writer[[1]]
   }
-  
+
   if(read){
     if(verbose) message("Exracting text from pdf...")
     extract_xpdf(path=filepath, ...)
