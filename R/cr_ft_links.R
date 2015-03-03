@@ -34,16 +34,14 @@
 #' cr_ft_links(doi = "10.3897/phytokeys.42.7604", type = "all")
 #' 
 #' # Get doi first from other fxn, then pass here
-#' out <- cr_works(filter=c(has_full_text = TRUE))
+#' out <- cr_works(filter=c(has_full_text = TRUE), limit = 50)
 #' dois <- out$data$DOI
 #' cr_ft_links(dois[2], "xml")
 #' cr_ft_links(dois[1], "plain")
 #' cr_ft_links(dois[1], "all")
 #' 
-#' # No links
+#' # (most likely) No links
 #' cr_ft_links(cr_r(1))
-#' 
-#' # No results
 #' cr_ft_links(doi="10.3389/fnagi.2014.00130")
 #' }
 
