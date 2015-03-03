@@ -40,6 +40,6 @@ Get a PMID from a DOI, and vice versa.
 }
 }
 \references{
-Uses the \url{http://www.pmid2doi.org/} REST API.
+Uses the http://www.pmid2doi.org/ REST API. Its currently unavailable.
 }
 

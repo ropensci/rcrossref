@@ -4,7 +4,7 @@
 #' @param x (character) One or more DOIs or PMIDs
 #' @param simplify (logical) Whether to simplify result to vector.
 #' @param ... Curl args passed on to \code{\link[httr]{GET}}.
-#' @references Uses the \url{http://www.pmid2doi.org/} REST API.
+#' @references Uses the http://www.pmid2doi.org/ REST API. Its currently unavailable.
 #' @examples \dontrun{
 #' # get a pmid from a doi
 #' # doi2pmid("10.1016/0006-2944(75)90147-7")
