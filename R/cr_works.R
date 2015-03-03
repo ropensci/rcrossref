@@ -55,7 +55,7 @@
 `cr_works` <- function(dois = NULL, query = NULL, filter = NULL, offset = NULL,
   limit = NULL, sample = NULL, sort = NULL, order = NULL, facet=FALSE, .progress="none", ...)
 {
-  foo <- function(x){
+  foo <- function(x, ...){
     path <- if(!is.null(x)) sprintf("works/%s", x) else "works"
     filter <- filter_handler(filter)
     facet <- if(facet) "t" else NULL
@@ -65,7 +65,7 @@
   }
   
   if(length(dois) > 1){
-    res <- llply(dois, foo, .progress=.progress)
+    res <- llply(dois, foo, .progress=.progress, ...)
     res <- lapply(res, "[[", "message")
     res <- lapply(res, parse_works)
     df <- rbind_all(res)
@@ -76,7 +76,7 @@
  #  df$dois <- dois
     list(meta=NULL, data=df, facets=NULL)
   } else { 
-    tmp <- foo(dois)
+    tmp <- foo(dois, ...)
     if(is.null(dois)){
       meta <- parse_meta(tmp)
       list(meta=meta, data=rbind_all(lapply(tmp$message$items, parse_works)), facets=parse_facets(tmp$message$facets))

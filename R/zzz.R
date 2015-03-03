@@ -1,9 +1,10 @@
 cr_compact <- function(x) Filter(Negate(is.null), x)
 
 filter_handler <- function(x){
-  if(is.null(x)){ NULL } else {
+  if(is.null(x)) { 
+    NULL 
+  } else {
     nn <- names(x)
-#     nn <- match.arg(nn, filterchoices, TRUE)
     if(any(nn %in% others)){
       nn <- sapply(nn, function(x) {
         if(x %in% others){
@@ -20,11 +21,24 @@ filter_handler <- function(x){
     }
     newnn <- gsub("_", "-", nn)
     names(x) <- newnn
+    x <- sapply(x, asl)
     args <- list()
     for(i in seq_along(x)){
       args[[i]] <- paste(names(x[i]), unname(x[i]), sep = ":")
     }
     paste0(args, collapse = ",")
+  }
+}
+
+asl <- function(x) {
+  if(is.logical(x)) {
+    if(x) {
+      return('true')
+    } else {
+      return('false')
+    }
+  } else {
+    return(x)
   }
 }
 
@@ -43,17 +57,24 @@ filterchoices <- c(
 cr_GET <- function(endpoint, args, todf=TRUE, ...)
 {
   url <- sprintf("http://api.crossref.org/%s", endpoint)
-  res <- GET(url, query = args, ...)
+  if(length(args) == 0) {
+    res <- GET(url, ...)
+  } else {
+    res <- GET(url, query = args, ...)
+  }
   doi <- gsub("works/|/agency|funders/", "", endpoint)
   if(!res$status_code < 300){
-    # warning(sprintf("%s: %s %s", res$status_code, doi, res$headers$statusmessage), call. = FALSE)
-    warning(sprintf("%s: %s not found", res$status_code, doi), call. = FALSE)
+    warning(sprintf("%s: %s", res$status_code, get_err(res)), call. = FALSE)
     list(message =  NA)
   } else {
     stopifnot(res$headers$`content-type` == "application/json;charset=UTF-8")
     res <- content(res, as = "text")
     jsonlite::fromJSON(res, todf)
   }
+}
+
+get_err <- function(x) {
+  content(x)$message[[1]]$message
 }
 
 col_classes <- function(d, colClasses) {
