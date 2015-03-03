@@ -27,8 +27,6 @@ or published.}
 and "time".  See \code{\link[plyr]{create_progress_bar}} for details of each.}
 
 \item{...}{Named parameters passed on to \code{\link[httr]{GET}}}
-
-\item{filter}{Filter options. See details.}
 }
 \description{
 Search CrossRef licenses

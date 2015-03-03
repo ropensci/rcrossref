@@ -2,8 +2,19 @@
 #'
 #' @export
 #'
-#' @template args
-#' @template moreargs
+#' @param query Query terms
+#' @param offset Number of record to start at, from 1 to infinity.
+#' @param limit Number of results to return in the query. Not relavant when searching with specific
+#' dois. Default: 20. Max: 1000
+#' @param sample (integer) Number of random results to return. when you use the sample parameter, 
+#' the rows and offset parameters are ignored.
+#' @param sort (character) Field to sort on, one of score, relevance, updated, deposited, indexed, 
+#' or published.
+#' @param order (character) Sort order, one of 'asc' or 'desc'
+#' @param .progress Show a \code{plyr}-style progress bar? Options are "none", "text", "tk", "win, 
+#' and "time".  See \code{\link[plyr]{create_progress_bar}} for details of each.
+#' @param ... Named parameters passed on to \code{\link[httr]{GET}}
+#' 
 #' @details BEWARE: The API will only work for CrossRef DOIs.
 #' @references \url{https://github.com/CrossRef/rest-api-doc/blob/master/rest_api.md}
 #' @details NOTE: The API route behind this function does not support filters any more, so
