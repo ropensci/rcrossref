@@ -19,13 +19,15 @@
 
 `cr_agency` <- function(dois = NULL, .progress="none", ...)
 {
-  foo <- function(x, y){
+  foo <- function(x, y, ...){
     cr_GET(endpoint = sprintf("works/%s/agency", x), args=list(), .progress=y, ...)
   }
   if(length(dois) > 1){
-    res <- llply(dois, foo, y=.progress)
+    res <- llply(dois, foo, y=.progress, ...)
     res <- lapply(res, "[[", "message")
     names(res) <- dois
     res
-  } else { foo(dois, y = .progress)$message }
+  } else { 
+    foo(dois, y = .progress, ...)$message 
+  }
 }
