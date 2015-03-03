@@ -18,7 +18,6 @@ CrossRef documentation
 
 * Crossref API: [https://github.com/CrossRef/rest-api-doc/blob/master/rest_api.md](https://github.com/CrossRef/rest-api-doc/blob/master/rest_api.md)
 * Crossref [metadata search API](http://search.labs.crossref.org/)
-* CrossRef [OpenURL](http://www.crossref.org/openurl/)
 * CrossRef [DOI Content Negotiation](http://www.crosscite.org/cn/)
 * Text and Data Mining [TDM](http://tdmsupport.crossref.org/)
 
@@ -47,18 +46,7 @@ library('rcrossref')
 
 ## Citation search
 
-Look up a citation using [OpenURL](http://www.crossref.org/openurl/)
-
-
-```r
-cr_citation(doi="10.1371/journal.pone.0042793")
-#> Calvo R, Zheng Y, Kumar S, Olgiati A, Berkman L and Mock N (2012).
-#> "Well-Being and Social Capital on Planet Earth: Cross-National
-#> Evidence from 142 Countries." _PLoS ONE_, *7*. <URL:
-#> http://dx.doi.org/10.1371/journal.pone.0042793>.
-```
-
-Or use CrossRef's [DOI Content Negotiation](http://www.crosscite.org/cn/) service, where you can citations back in various formats, including `apa`
+Use CrossRef's [DOI Content Negotiation](http://www.crosscite.org/cn/) service, where you can citations back in various formats, including `apa`
 
 
 ```r
@@ -99,7 +87,7 @@ cr_cn(dois = "10.6084/m9.figshare.97218", format = "bibentry")
 
 ## Citation count
 
-Citation count, using [OpenURL](http://www.crossref.org/openurl/)
+Citation count, using OpenURL
 
 
 ```r
@@ -158,7 +146,7 @@ cr_agency(dois = '10.13039/100000001')
 cr_works(filter=c(has_orcid=TRUE, from_pub_date='2004-04-04'), limit=1)
 #> $meta
 #>   total_results search_terms start_index items_per_page
-#> 1        128965           NA           0              1
+#> 1        128970           NA           0              1
 #> 
 #> $data
 #> Source: local data frame [1 x 24]
@@ -283,11 +271,11 @@ cr_members(query='ecology', limit = 5)
 
 ```r
 cr_r()
-#>  [1] "10.1038/sj.bjp.0703555"        "10.1371/journal.pone.0073244" 
-#>  [3] "10.1016/s0025-7125(05)70153-x" "10.1056/nejm191510141731606"  
-#>  [5] "10.1016/0003-2697(87)90455-6"  "10.3791/2167"                 
-#>  [7] "10.1016/s0140-6736(02)35531-4" "10.1007/bf01875730"           
-#>  [9] "10.1080/10509580008570115"     "10.5194/gh-58-286-2003"
+#>  [1] "10.1007/978-3-642-27772-6_367-2" "10.1021/ac60169a776"            
+#>  [3] "10.1093/eurheartj/6.suppl_h.h61" "10.4188/jte.53.197"             
+#>  [5] "10.1016/0043-1354(86)90038-2"    "10.2753/eue1056-4934300444"     
+#>  [7] "10.1016/j.jallcom.2005.05.004"   "10.5956/jriet.33.795"           
+#>  [9] "10.1109/mspec.1982.6366904"      "10.1007/s00531-001-0232-0"
 ```
 
 You can pass in the number of DOIs you want back (default is 10)
@@ -295,7 +283,7 @@ You can pass in the number of DOIs you want back (default is 10)
 
 ```r
 cr_r(2)
-#> [1] "10.1038/sj.bdj.2008.1110" "10.1172/jci111793"
+#> [1] "10.1016/0165-0270(90)90118-y" "10.2307/2713659"
 ```
 
 ## pmid2doi & doi2pmid

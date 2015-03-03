@@ -25,7 +25,6 @@ CrossRef documentation
 
 * Crossref API: [https://github.com/CrossRef/rest-api-doc/blob/master/rest_api.md](https://github.com/CrossRef/rest-api-doc/blob/master/rest_api.md)
 * Crossref [metadata search API](http://search.labs.crossref.org/)
-* CrossRef [OpenURL](http://www.crossref.org/openurl/)
 * CrossRef [DOI Content Negotiation](http://www.crosscite.org/cn/)
 * Text and Data Mining [TDM](http://tdmsupport.crossref.org/)
 
@@ -52,13 +51,7 @@ library('rcrossref')
 
 ## Citation search
 
-Look up a citation using [OpenURL](http://www.crossref.org/openurl/)
-
-```{r}
-cr_citation(doi="10.1371/journal.pone.0042793")
-```
-
-Or use CrossRef's [DOI Content Negotiation](http://www.crosscite.org/cn/) service, where you can citations back in various formats, including `apa`
+Use CrossRef's [DOI Content Negotiation](http://www.crosscite.org/cn/) service, where you can citations back in various formats, including `apa`
 
 ```{r}
 cr_cn(dois = "10.1126/science.169.3946.635", format = "text", style = "apa")
@@ -78,7 +71,7 @@ cr_cn(dois = "10.6084/m9.figshare.97218", format = "bibentry")
 
 ## Citation count
 
-Citation count, using [OpenURL](http://www.crossref.org/openurl/)
+Citation count, using OpenURL
 
 ```{r}
 cr_citation_count(doi="10.1371/journal.pone.0042793")

@@ -93,7 +93,7 @@ cr_cn(dois = "10.6084/m9.figshare.97218", format = "bibentry")
 
 ## Citation count
 
-Citation count, using [OpenURL](http://www.crossref.org/openurl/)
+Citation count, using OpenURL
 
 
 ```r
@@ -304,16 +304,11 @@ cr_r()
 ```
 
 ```
-##  [1] "10.1139/o88-104"                  
-##  [2] "10.1021/ed018p452"                
-##  [3] "10.2528/pierl07112302"            
-##  [4] "10.1086/484040"                   
-##  [5] "10.1088/0953-8984/13/34/326"      
-##  [6] "10.1371/journal.pone.0053055.g003"
-##  [7] "10.2307/2870256"                  
-##  [8] "10.1787/qna-v2013-3-table32-en"   
-##  [9] "10.1016/j.ecolmodel.2013.11.013"  
-## [10] "10.1007/bf02593237"
+##  [1] "10.1016/j.bbrc.2006.06.185"    "10.1017/s0007087406008739"    
+##  [3] "10.1016/s0140-6736(53)91360-9" "10.1007/978-3-642-36897-4_4"  
+##  [5] "10.1056/nejmoa0908806"         "10.3139/9783446432758"        
+##  [7] "10.1016/0010-7824(94)90111-2"  "10.1109/aps.1991.175215"      
+##  [9] "10.1145/170791.170817"         "10.1163/9780080548692"
 ```
 
 You can pass in the number of DOIs you want back (default is 10)
@@ -324,8 +319,7 @@ cr_r(2)
 ```
 
 ```
-## [1] "10.1111/j.1753-4887.1979.tb02193.x"
-## [2] "10.1080/15438627.2014.973555"
+## [1] "10.3989/ic.1995.v47.i437.1072"    "10.1016/j.preteyeres.2015.01.004"
 ```
 
 ### The older functions and API
@@ -334,26 +328,22 @@ Search by author
 
 
 ```r
-cr_search(query = c("renear", "palmer"), rows = 3, sort = "year")[,-6]
+cr_search(query = c("renear", "palmer"), rows = 3, sort = "year")[1:2,-6]
 ```
 
 ```
-##                                                    doi     score
-## 1       http://dx.doi.org/10.1136/flgastro-2014-100540 0.4935921
-## 2       http://dx.doi.org/10.1097/aln.0000000000000554 0.4935921
-## 3 http://dx.doi.org/10.1016/b978-0-12-799959-3.00016-1 0.4935921
-##   normalizedScore                                              title
-## 1              15 New and emerging endoscopic haemostasis techniques
-## 2              15                  Tilting at Aortocaval Compression
-## 3              15       iBPM—Intelligent Business Process Management
-##                                                                                                                           fullCitation
-## 1                  R. Palmer, B. Braden, 2015, 'New and emerging endoscopic haemostasis techniques', <i>Frontline Gastroenterology</i>
-## 2                      Craig M. Palmer, 2015, 'Tilting at Aortocaval Compression', <i>Anesthesiology</i>, vol. 122, no. 2, pp. 231-232
-## 3 Nathaniel Palmer, 2015, 'iBPM—Intelligent Business Process Management', <i>The Business Process Management Handbook</i>, pp. 349-361
+##                                              doi     score normalizedScore
+## 1 http://dx.doi.org/10.1136/flgastro-2014-100540 0.4935921              15
+## 2 http://dx.doi.org/10.1097/aln.0000000000000554 0.4935921              15
+##                                                title
+## 1 New and emerging endoscopic haemostasis techniques
+## 2                  Tilting at Aortocaval Compression
+##                                                                                                          fullCitation
+## 1 R. Palmer, B. Braden, 2015, 'New and emerging endoscopic haemostasis techniques', <i>Frontline Gastroenterology</i>
+## 2     Craig M. Palmer, 2015, 'Tilting at Aortocaval Compression', <i>Anesthesiology</i>, vol. 122, no. 2, pp. 231-232
 ##   year
 ## 1 2015
 ## 2 2015
-## 3 2015
 ```
 
 Search by DOI

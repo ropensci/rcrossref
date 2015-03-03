@@ -58,7 +58,7 @@ cr_cn(dois = "10.6084/m9.figshare.97218", format = "bibentry")
 
 ## Citation count
 
-Citation count, using [OpenURL](http://www.crossref.org/openurl/)
+Citation count, using OpenURL
 
 ```{r}
 cr_citation_count(doi="10.1371/journal.pone.0042793")
@@ -129,7 +129,7 @@ cr_r(2)
 Search by author
 
 ```{r}
-cr_search(query = c("renear", "palmer"), rows = 3, sort = "year")[,-6]
+cr_search(query = c("renear", "palmer"), rows = 3, sort = "year")[1:2,-6]
 ```
 
 Search by DOI
