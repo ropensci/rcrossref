@@ -19,7 +19,7 @@ BUG FIXES
 * No longer assign queried doi to the `data.frame` in `cr_works()`, which caused failure if
 a non-Crossref DOI included (#52)
 * `pmid2doi()` and `doi2pmid()` functions removed temporarily as the web service is down 
-temporarily, but will be online again soon from Crososref (#48)
+temporarily, but will be online again soon from Crossref (#48)
 
 rcrossref 0.2.1
 ===============
