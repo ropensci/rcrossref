@@ -32,7 +32,7 @@ test_that("cr_ft_links gives back right values", {
   expect_equal(attr(b, "type"), "pdf")
   expect_equal(attr(d[[2]], "type"), "plain")
 
-  expect_null(cr_ft_links(cr_r(1)))
+  expect_null(cr_ft_links("10.1007/978-1-4302-1089-4"))
 })
 
 test_that("cr_ft_links fails correctly", {
