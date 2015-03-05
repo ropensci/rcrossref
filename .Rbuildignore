@@ -11,4 +11,3 @@ inst/stuff/
 README.Rmd
 cran-comments.md
 ^\.httr-oauth$
-tests/test-all.R
