@@ -4,7 +4,7 @@
 #'
 #' @param dois Search by a single DOI or many DOIs.
 #' @param format Name of the format. One of "rdf-xml", "turtle", "citeproc-json", "text", 
-#' "ris", "bibtex", "crossref-xml", "datacite-xml","bibentry", or "crossref-tdm"
+#' "ris", "bibtex" (default), "crossref-xml", "datacite-xml","bibentry", or "crossref-tdm"
 #' @param style a CSL style (for text format only). See \code{\link{get_styles}} 
 #' for options. Default: apa. If there's a style that CrossRef doesn't support you'll get a 
 #' \code{(500) Internal Server Error}
@@ -13,12 +13,17 @@
 #' @details See \url{http://www.crosscite.org/cn/} for more info on the
 #'   	Crossref Content Negotiation API service.
 #'
+#' DataCite DOIs: Some values of the \code{format} parameter won't work with DataCite DOIs, 
+#' but most do. See examples below.
+#' 
+#' See \code{\link{cr_agency}}
+#'
 #' @examples \dontrun{
 #' cr_cn(dois="10.1126/science.169.3946.635")
-#' cr_cn(dois="10.1126/science.169.3946.635", format="citeproc-json")
+#' cr_cn(dois="10.1126/science.169.3946.635", "citeproc-json")
 #' cr_cn("10.1126/science.169.3946.635", "rdf-xml")
 #' cr_cn("10.1126/science.169.3946.635", "crossref-xml")
-#' cr_cn("10.1126/science.169.3946.635", "bibtex")
+#' cr_cn("10.1126/science.169.3946.635", "text")
 #' 
 #' # return an R bibentry type
 #' cr_cn("10.1126/science.169.3946.635", "bibentry")
@@ -43,9 +48,31 @@
 #'  cr_cn("10.1126/science.169.3946.635", "text", style=x)
 #' }
 #' foo(sample(stys, 1))
+#' 
+#' # Using DataCite DOIs
+#' ## some formats don't work
+#' # cr_cn("10.5284/1011335", "text")
+#' # cr_cn("10.5284/1011335", "crossref-xml")
+#' # cr_cn("10.5284/1011335", "crossref-tdm")
+#' ## But most do work
+#' cr_cn("10.5284/1011335", "datacite-xml")
+#' cr_cn("10.5284/1011335", "rdf-xml")
+#' cr_cn("10.5284/1011335", "turtle")
+#' cr_cn("10.5284/1011335", "citeproc-json")
+#' cr_cn("10.5284/1011335", "ris")
+#' cr_cn("10.5284/1011335", "bibtex")
+#' cr_cn("10.5284/1011335", "bibentry")
+#' cr_cn("10.5284/1011335", "bibtex")
+#' 
+#' dois <- c('10.5167/UZH-30455','10.5167/UZH-49216','10.5167/UZH-503',
+#'           '10.5167/UZH-38402','10.5167/UZH-41217')
+#' cat(cr_cn(dois[1]))
+#' cat(cr_cn(dois[2]))
+#' cat(cr_cn(dois[3]))
+#' cat(cr_cn(dois[4]))
 #' }
 
-`cr_cn` <- function(dois, format = "text", style = 'apa', locale = "en-US", .progress="none", ...){
+`cr_cn` <- function(dois, format = "bibtex", style = 'apa', locale = "en-US", .progress="none", ...){
   format <- match.arg(format, c("rdf-xml", "turtle", "citeproc-json",
                                 "text", "ris", "bibtex", "crossref-xml",
                                 "datacite-xml", "bibentry", "crossref-tdm"))
@@ -66,25 +93,27 @@
     if(format == "text")
       type <- paste(type, "; style = ", style, "; locale = ", locale, sep="")
     response <- GET(url, ..., add_headers(Accept = type, followlocation = TRUE))
-    stop_for_status(response)
-    select <- c(
-           "rdf-xml" = "text/xml",
-           "turtle" = "text/plain",
-           "citeproc-json" = "application/json",
-           "text" = "text/plain",
-           "ris" = "text/plain",
-           "bibtex" = "text/plain",
-           "crossref-xml" = "text/xml",
-           "datacite-xml" = "text/xml",
-           "bibentry" = "text/plain",
-           "crossref-tdm" = "text/xml")
-    parser <- select[[format]]
-    out <- content(response, "parsed", parser, "UTF-8")
-    if(format == "text")
-      out <- gsub("\n", "", out)
-    if(format == "bibentry")
-      out <- parse_bibtex(out)
-    out
+    warn_status(response)
+    if(response$status_code < 202) {
+      select <- c(
+        "rdf-xml" = "text/xml",
+        "turtle" = "text/plain",
+        "citeproc-json" = "application/json",
+        "text" = "text/plain",
+        "ris" = "text/plain",
+        "bibtex" = "text/plain",
+        "crossref-xml" = "text/xml",
+        "datacite-xml" = "text/xml",
+        "bibentry" = "text/plain",
+        "crossref-tdm" = "text/xml")
+      parser <- select[[format]]
+      out <- content(response, "parsed", parser, "UTF-8")
+      if(format == "text")
+        out <- gsub("\n", "", out)
+      if(format == "bibentry")
+        out <- parse_bibtex(out)
+      out
+    }
   }
 
   if(length(dois) > 1)
@@ -107,4 +136,20 @@ parse_bibtex <- function(x){
   output <- read.bib("tmpscratch.bib")
   unlink("tmpscratch.bib")
   output
+}
+
+warn_status <- function(x) {
+  if(x$status_code > 202) {
+    mssg <- content(x)
+    if(!is.character(mssg)) {
+      mssg <- if(x$status_code == 406) {
+        "(406) - probably bad format type"
+      } else {
+        http_status(x)$message
+      }
+    } else {
+      mssg <- paste(sprintf("(%s)", x$status_code), "-", mssg)
+    }
+    warning(sprintf("%s w/ %s", gsub("%2F", "/", httr::parse_url(x$url)$path), mssg))
+  }
 }
