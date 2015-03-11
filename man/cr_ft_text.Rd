@@ -107,9 +107,8 @@ out <-
 cr_ft_text(links, 'xml')
 
 ## You can use cr_ft_xml, cr_ft_plain, and cr_ft_pdf to go directly to that format
-out <-
- cr_works(filter = list(has_full_text = TRUE,
-   license_url="http://creativecommons.org/licenses/by/3.0/"))
+licenseurl <- "http://creativecommons.org/licenses/by/3.0/"
+out <- cr_works(filter = list(has_full_text = TRUE, license_url = licenseurl))
 (links <- cr_ft_links(out$data$DOI[10], "all"))
 cr_ft_xml(links)
 cr_ft_pdf(links)
@@ -136,7 +135,7 @@ identical(cacheyes, cacheno)
 ### elsevier articles that are open access
 #### one license is for open access articles, but none with full text available
 # cr_works(filter=list(license_url="http://www.elsevier.com/open-access/userlicense/1.0/",
-                     has_full_text=TRUE))
+#                      has_full_text=TRUE))
 }
 }
 

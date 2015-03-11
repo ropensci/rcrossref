@@ -17,14 +17,10 @@ and "time".  See \code{\link[plyr]{create_progress_bar}} for details of each.}
 \description{
 Check the DOI minting agency on one or more dois
 }
-\details{
-BEWARE: The API will only work for CrossRef DOIs.
-}
 \examples{
 \dontrun{
 cr_agency(dois = '10.13039/100000001')
-res <- cr_agency(dois = c('10.13039/100000001','10.13039/100000015'))
-res[['10.13039/100000015']]
+cr_agency(dois = c('10.13039/100000001','10.13039/100000015','10.5284/1011335'))
 }
 }
 \author{
