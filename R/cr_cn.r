@@ -3,18 +3,21 @@
 #' @export
 #'
 #' @param dois Search by a single DOI or many DOIs.
-#' @param format Name of the format. One of "rdf-xml", "turtle", "citeproc-json", "text", 
-#' "ris", "bibtex" (default), "crossref-xml", "datacite-xml","bibentry", or "crossref-tdm"
+#' @param format Name of the format. One of "rdf-xml", "turtle", "citeproc-json", 
+#' "text", "ris", "bibtex" (default), "crossref-xml", "datacite-xml","bibentry", 
+#' or "crossref-tdm"
 #' @param style a CSL style (for text format only). See \code{\link{get_styles}} 
-#' for options. Default: apa. If there's a style that CrossRef doesn't support you'll get a 
-#' \code{(500) Internal Server Error}
+#' for options. Default: apa. If there's a style that CrossRef doesn't support 
+#' you'll get a  \code{(500) Internal Server Error}
 #' @param locale Language locale. See \code{?Sys.getlocale}
+#' @param raw (logical) Return raw text in the format given by \code{format} 
+#' parameter. Default: FALSE
 #' @template moreargs
 #' @details See \url{http://www.crosscite.org/cn/} for more info on the
-#'   	Crossref Content Negotiation API service.
+#' Crossref Content Negotiation API service.
 #'
-#' DataCite DOIs: Some values of the \code{format} parameter won't work with DataCite DOIs, 
-#' but most do. See examples below.
+#' DataCite DOIs: Some values of the \code{format} parameter won't work with 
+#' DataCite DOIs, but most do. See examples below.
 #' 
 #' See \code{\link{cr_agency}}
 #'
@@ -70,14 +73,19 @@
 #' cat(cr_cn(dois[2]))
 #' cat(cr_cn(dois[3]))
 #' cat(cr_cn(dois[4]))
+#' 
+#' # Get raw output
+#' cr_cn(dois = "10.1002/app.27716", format = "citeproc-json", raw = TRUE)
 #' }
 
-`cr_cn` <- function(dois, format = "bibtex", style = 'apa', locale = "en-US", .progress="none", ...){
+`cr_cn` <- function(dois, format = "bibtex", style = 'apa', 
+                    locale = "en-US", raw = FALSE, .progress="none", ...) {
+  
   format <- match.arg(format, c("rdf-xml", "turtle", "citeproc-json",
                                 "text", "ris", "bibtex", "crossref-xml",
                                 "datacite-xml", "bibentry", "crossref-tdm"))
   cn <- function(doi, ...){
-    url <- paste("http://dx.doi.org", doi, sep="/")
+    url <- paste("http://dx.doi.org", doi, sep = "/")
     pick <- c(
            "rdf-xml" = "application/rdf+xml",
            "turtle" = "text/turtle",
@@ -90,11 +98,12 @@
            "bibentry" = "application/x-bibtex",
            "crossref-tdm" = "application/vnd.crossref.unixsd+xml")
     type <- pick[[format]]
-    if(format == "text")
-      type <- paste(type, "; style = ", style, "; locale = ", locale, sep="")
+    if (format == "text") {
+      type <- paste(type, "; style = ", style, "; locale = ", locale, sep = "")
+    }
     response <- GET(url, ..., add_headers(Accept = type, followlocation = TRUE))
     warn_status(response)
-    if(response$status_code < 202) {
+    if (response$status_code < 202) {
       select <- c(
         "rdf-xml" = "text/xml",
         "turtle" = "text/plain",
@@ -107,26 +116,33 @@
         "bibentry" = "text/plain",
         "crossref-tdm" = "text/xml")
       parser <- select[[format]]
-      out <- content(response, "parsed", parser, "UTF-8")
-      if(format == "text")
-        out <- gsub("\n", "", out)
-      if(format == "bibentry")
-        out <- parse_bibtex(out)
-      out
+      if (raw) {
+        content(response, "text")
+      } else {
+        out <- content(response, "parsed", parser, "UTF-8")
+        if (format == "text") {
+          out <- gsub("\n", "", out)
+        }
+        if (format == "bibentry") {
+          out <- parse_bibtex(out)
+        }
+        out
+      }
     }
   }
 
-  if(length(dois) > 1)
+  if (length(dois) > 1) {
     llply(dois, function(z, ...) {
-      out = try(cn(z, ...), silent=TRUE)
-      if("try-error" %in% class(out)) {
+      out = try(cn(z, ...), silent = TRUE)
+      if ("try-error" %in% class(out)) {
         warning(paste0("Failure in resolving '", z, "'. See error detail in results."))
-        out <- list(doi=z, error=out[[1]])
+        out <- list(doi = z, error = out[[1]])
       }
       return(out)
-    }, .progress=.progress)
-  else
+    }, .progress = .progress)
+  } else {
     cn(dois, ...)
+  }
 }
 
 #' @import bibtex

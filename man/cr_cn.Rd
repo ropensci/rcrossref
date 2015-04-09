@@ -5,19 +5,23 @@
 \title{Get citations in various formats from CrossRef.}
 \usage{
 cr_cn(dois, format = "bibtex", style = "apa", locale = "en-US",
-  .progress = "none", ...)
+  raw = FALSE, .progress = "none", ...)
 }
 \arguments{
 \item{dois}{Search by a single DOI or many DOIs.}
 
-\item{format}{Name of the format. One of "rdf-xml", "turtle", "citeproc-json", "text",
-"ris", "bibtex" (default), "crossref-xml", "datacite-xml","bibentry", or "crossref-tdm"}
+\item{format}{Name of the format. One of "rdf-xml", "turtle", "citeproc-json",
+"text", "ris", "bibtex" (default), "crossref-xml", "datacite-xml","bibentry",
+or "crossref-tdm"}
 
 \item{style}{a CSL style (for text format only). See \code{\link{get_styles}}
-for options. Default: apa. If there's a style that CrossRef doesn't support you'll get a
-\code{(500) Internal Server Error}}
+for options. Default: apa. If there's a style that CrossRef doesn't support
+you'll get a  \code{(500) Internal Server Error}}
 
 \item{locale}{Language locale. See \code{?Sys.getlocale}}
+
+\item{raw}{(logical) Return raw text in the format given by \code{format}
+parameter. Default: FALSE}
 
 \item{.progress}{Show a \code{plyr}-style progress bar? Options are "none", "text", "tk", "win,
 and "time".  See \code{\link[plyr]{create_progress_bar}} for details of each.}
@@ -29,10 +33,10 @@ Get citations in various formats from CrossRef.
 }
 \details{
 See \url{http://www.crosscite.org/cn/} for more info on the
-  	Crossref Content Negotiation API service.
+Crossref Content Negotiation API service.
 
-DataCite DOIs: Some values of the \code{format} parameter won't work with DataCite DOIs,
-but most do. See examples below.
+DataCite DOIs: Some values of the \code{format} parameter won't work with
+DataCite DOIs, but most do. See examples below.
 
 See \code{\link{cr_agency}}
 }
@@ -89,6 +93,9 @@ cat(cr_cn(dois[1]))
 cat(cr_cn(dois[2]))
 cat(cr_cn(dois[3]))
 cat(cr_cn(dois[4]))
+
+# Get raw output
+cr_cn(dois = "10.1002/app.27716", format = "citeproc-json", raw = TRUE)
 }
 }
 
