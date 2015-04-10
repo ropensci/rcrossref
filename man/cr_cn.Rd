@@ -11,8 +11,9 @@ cr_cn(dois, format = "bibtex", style = "apa", locale = "en-US",
 \item{dois}{Search by a single DOI or many DOIs.}
 
 \item{format}{Name of the format. One of "rdf-xml", "turtle", "citeproc-json",
-"text", "ris", "bibtex" (default), "crossref-xml", "datacite-xml","bibentry",
-or "crossref-tdm"}
+"citeproc-json-ish", "text", "ris", "bibtex" (default), "crossref-xml",
+"datacite-xml","bibentry", or "crossref-tdm". The format "citeproc-json-ish"
+is a format that is not quite proper citeproc-json}
 
 \item{style}{a CSL style (for text format only). See \code{\link{get_styles}}
 for options. Default: apa. If there's a style that CrossRef doesn't support
@@ -39,11 +40,15 @@ DataCite DOIs: Some values of the \code{format} parameter won't work with
 DataCite DOIs, but most do. See examples below.
 
 See \code{\link{cr_agency}}
+
+Note that the format type \code{citeproc-json} uses the CrossRef API at
+\code{api.crossref.org}, while all others use \code{http://dx.doi.org}.
 }
 \examples{
 \dontrun{
 cr_cn(dois="10.1126/science.169.3946.635")
 cr_cn(dois="10.1126/science.169.3946.635", "citeproc-json")
+cr_cn(dois="10.1126/science.169.3946.635", "citeproc-json-ish")
 cr_cn("10.1126/science.169.3946.635", "rdf-xml")
 cr_cn("10.1126/science.169.3946.635", "crossref-xml")
 cr_cn("10.1126/science.169.3946.635", "text")

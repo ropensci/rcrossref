@@ -4,8 +4,9 @@
 #'
 #' @param dois Search by a single DOI or many DOIs.
 #' @param format Name of the format. One of "rdf-xml", "turtle", "citeproc-json", 
-#' "text", "ris", "bibtex" (default), "crossref-xml", "datacite-xml","bibentry", 
-#' or "crossref-tdm"
+#' "citeproc-json-ish", "text", "ris", "bibtex" (default), "crossref-xml", 
+#' "datacite-xml","bibentry", or "crossref-tdm". The format "citeproc-json-ish"
+#' is a format that is not quite proper citeproc-json
 #' @param style a CSL style (for text format only). See \code{\link{get_styles}} 
 #' for options. Default: apa. If there's a style that CrossRef doesn't support 
 #' you'll get a  \code{(500) Internal Server Error}
@@ -20,10 +21,14 @@
 #' DataCite DOIs, but most do. See examples below.
 #' 
 #' See \code{\link{cr_agency}}
+#' 
+#' Note that the format type \code{citeproc-json} uses the CrossRef API at 
+#' \code{api.crossref.org}, while all others use \code{http://dx.doi.org}.
 #'
 #' @examples \dontrun{
 #' cr_cn(dois="10.1126/science.169.3946.635")
 #' cr_cn(dois="10.1126/science.169.3946.635", "citeproc-json")
+#' cr_cn(dois="10.1126/science.169.3946.635", "citeproc-json-ish")
 #' cr_cn("10.1126/science.169.3946.635", "rdf-xml")
 #' cr_cn("10.1126/science.169.3946.635", "crossref-xml")
 #' cr_cn("10.1126/science.169.3946.635", "text")
@@ -82,14 +87,16 @@
                     locale = "en-US", raw = FALSE, .progress="none", ...) {
   
   format <- match.arg(format, c("rdf-xml", "turtle", "citeproc-json",
-                                "text", "ris", "bibtex", "crossref-xml",
-                                "datacite-xml", "bibentry", "crossref-tdm"))
+                                "citeproc-json-ish", "text", "ris", "bibtex", 
+                                "crossref-xml", "datacite-xml", "bibentry", 
+                                "crossref-tdm"))
   cn <- function(doi, ...){
     url <- paste("http://dx.doi.org", doi, sep = "/")
     pick <- c(
            "rdf-xml" = "application/rdf+xml",
            "turtle" = "text/turtle",
-           "citeproc-json" = "application/vnd.citationstyles.csl+json",
+           "citeproc-json" = "transform/application/vnd.citationstyles.csl+json",
+           "citeproc-json-ish" = "application/vnd.citationstyles.csl+json",
            "text" = "text/x-bibliography",
            "ris" = "application/x-research-info-systems",
            "bibtex" = "application/x-bibtex",
@@ -98,16 +105,21 @@
            "bibentry" = "application/x-bibtex",
            "crossref-tdm" = "application/vnd.crossref.unixsd+xml")
     type <- pick[[format]]
-    if (format == "text") {
-      type <- paste(type, "; style = ", style, "; locale = ", locale, sep = "")
+    if (format == "citeproc-json") {
+      response <- GET(file.path("http://api.crossref.org/works", doi, type), ...)
+    } else {
+      if (format == "text") {
+        type <- paste(type, "; style = ", style, "; locale = ", locale, sep = "")
+      }
+      response <- GET(url, ..., add_headers(Accept = type, followlocation = TRUE))
     }
-    response <- GET(url, ..., add_headers(Accept = type, followlocation = TRUE))
     warn_status(response)
     if (response$status_code < 202) {
       select <- c(
         "rdf-xml" = "text/xml",
         "turtle" = "text/plain",
         "citeproc-json" = "application/json",
+        "citeproc-json-ish" = "application/json",
         "text" = "text/plain",
         "ris" = "text/plain",
         "bibtex" = "text/plain",
