@@ -5,7 +5,7 @@ rcrossref
 knitr::opts_chunk$set(
   comment = "#>",
   collapse = TRUE,
-  warning = FALSE, 
+  warning = FALSE,
   message = FALSE
 )
 ```
@@ -13,6 +13,7 @@ knitr::opts_chunk$set(
 [![Build Status](https://api.travis-ci.org/ropensci/rcrossref.png)](https://travis-ci.org/ropensci/rcrossref)
 [![Build status](https://ci.appveyor.com/api/projects/status/jbo6y7dg4qiq7mol/branch/master)](https://ci.appveyor.com/project/sckott/rcrossref/branch/master)
 [![Coverage Status](https://coveralls.io/repos/ropensci/rcrossref/badge.svg)](https://coveralls.io/r/ropensci/rcrossref)
+[![cran version](http://www.r-pkg.org/badges/version/rcrossref)](http://cran.rstudio.com/web/packages/rcrossref)
 
 R interface to various CrossRef APIs
 
@@ -99,7 +100,7 @@ cr_agency(dois = '10.13039/100000001')
 cr_works(filter=c(has_orcid=TRUE, from_pub_date='2004-04-04'), limit=1)
 ```
 
-### Search journals 
+### Search journals
 
 ```{r}
 cr_journals(issn=c('1803-2427','2326-4225'))
@@ -125,7 +126,7 @@ cr_members(query='ecology', limit = 5)
 
 ### Get N random DOIs
 
-`cr_r()` uses the function `cr_works()` internally. 
+`cr_r()` uses the function `cr_works()` internally.
 
 ```{r}
 cr_r()
@@ -150,7 +151,7 @@ Publishers can optionally provide links in the metadata they provide to Crossref
 Get some DOIs for articles that provide full text, and that have `CC-BY 3.0` licenses (i.e., more likely to actually be open)
 
 ```{r}
-out <- 
+out <-
   cr_works(filter = list(has_full_text = TRUE,
     license_url="http://creativecommons.org/licenses/by/3.0/"))
 (dois <- out$data$DOI)
@@ -192,7 +193,7 @@ cr_ft_text(links, "xml")
 
 ---
 
-This package is part of a richer suite called [fulltext](https://github.com/ropensci/fulltext), along with several other packages, that provides the ability to search for and retrieve full text of open access scholarly articles. 
+This package is part of a richer suite called [fulltext](https://github.com/ropensci/fulltext), along with several other packages, that provides the ability to search for and retrieve full text of open access scholarly articles.
 
 ---
 
