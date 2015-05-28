@@ -26,7 +26,7 @@
 #' \code{api.crossref.org}, while all others use \code{http://dx.doi.org}.
 #'
 #' @examples \dontrun{
-#' cr_cn(dois="10.1126/science.169.3946.635")
+#' cr_cn(dois="10.16126/science.169.3946.635")
 #' cr_cn(dois="10.1126/science.169.3946.635", "citeproc-json")
 #' cr_cn(dois="10.1126/science.169.3946.635", "citeproc-json-ish")
 #' cr_cn("10.1126/science.169.3946.635", "rdf-xml")
