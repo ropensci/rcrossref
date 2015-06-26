@@ -153,27 +153,30 @@ getTEXT <- function(x, type, ...){
 }
 
 getPDF <- function(url, path, overwrite, type, read, verbose, cache=FALSE, ...) {
-  if(!file.exists(path)) dir.create(path, showWarnings = FALSE, recursive = TRUE)
+  if (!file.exists(path)) dir.create(path, showWarnings = FALSE, recursive = TRUE)
 
   # pensoft special handling
-  if( grepl("pensoft", url[[1]]) ){
+  if ( grepl("pensoft", url[[1]]) ) {
     filepath <- file.path(path, paste0(sub("/", ".", attr(url, "doi")), ".pdf"))
   } else {
-    ff <- if( !grepl(type, basename(url)) ) paste0(basename(url), ".", type) else basename(url)
+    ff <- if ( !grepl(type, basename(url)) ) paste0(basename(url), ".", type) else basename(url)
     filepath <- file.path(path, ff)
   }
 
-  if(cache && file.exists(filepath)){
-    if( !file.exists(filepath) ) stop(sprintf("%s not found", filepath), call. = FALSE)
+  filepath <- path.expand(filepath)
+  if (cache && file.exists(filepath)) {
+    if ( !file.exists(filepath) ) {
+      stop( sprintf("%s not found", filepath), call. = FALSE)
+    }
   } else {
-    if(verbose) message("Downloading pdf...")
+    if (verbose) message("Downloading pdf...")
     res <- GET(url, accept("application/pdf"), write_disk(path = filepath, overwrite = overwrite), ...)
-    filepath <- res$request$writer[[1]]
+    filepath <- res$request$output$path
   }
 
-  if(read){
-    if(verbose) message("Exracting text from pdf...")
-    extract_xpdf(path=filepath, ...)
+  if (read) {
+    if (verbose) message("Exracting text from pdf...")
+    extract_xpdf(path = filepath, ...)
   } else {
     filepath
   }

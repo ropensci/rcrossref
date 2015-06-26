@@ -36,7 +36,9 @@
 #' 
 #' # facets
 #' ## if works is FALSE, then facets ignored
-#' cr_prefixes(prefixes="10.1016", works=FALSE, facet=TRUE)
+#' ###### FIXME
+#' # cr_prefixes(prefixes="10.1016", works=FALSE, facet=TRUE)
+#' 
 #' ## get facets back
 #' cr_prefixes(prefixes="10.1016", works=TRUE, facet=TRUE)
 #' cr_prefixes(prefixes=c('10.1016','10.1371'), works=TRUE, facet=TRUE)

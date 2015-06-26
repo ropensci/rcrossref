@@ -29,7 +29,6 @@ See \url{http://www.crosscite.org/cn/} for more info on the
 }
 \examples{
 \dontrun{
-crosscite("10.1038/jid.2009.433")
 crosscite("10.5284/1011335")
 crosscite(c('10.5169/SEALS-52668','10.2314/GBV:493109919','10.2314/GBV:493105263',
    '10.2314/GBV:487077911','10.2314/GBV:607866403'))

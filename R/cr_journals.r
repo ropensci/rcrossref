@@ -27,7 +27,7 @@
 #' cr_journals(limit=2)
 #' 
 #' # fails, if you want works, you must give an ISSN
-#' cr_journals(query = "ecology", filter=c(has_full_text = TRUE), works = TRUE)
+#' # cr_journals(query = "ecology", filter=c(has_full_text = TRUE), works = TRUE)
 #' }
 
 `cr_journals` <- function(issn = NULL, query = NULL, filter = NULL, offset = NULL,
