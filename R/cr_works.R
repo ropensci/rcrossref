@@ -53,9 +53,9 @@
   limit = NULL, sample = NULL, sort = NULL, order = NULL, facet=FALSE, .progress="none", ...)
 {
   foo <- function(x, ...){
-    path <- if(!is.null(x)) sprintf("works/%s", x) else "works"
+    path <- if (!is.null(x)) sprintf("works/%s", x) else "works"
     filter <- filter_handler(filter)
-    facet <- if(facet) "t" else NULL
+    facet <- if (facet) "t" else NULL
     args <- cr_compact(list(query = query, filter = filter, offset = offset, rows = limit,
                             sample = sample, sort = sort, order = order, facet = facet))
     cr_GET(endpoint = path, args, todf = FALSE, ...)
