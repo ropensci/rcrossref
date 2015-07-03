@@ -1,9 +1,10 @@
 #' Search the CrossRef Metatdata for DOIs using free form references.
 #'
-#' @import httr 
+#' @importFrom httr GET POST stop_for_status content_type_json accept_json content
+#' write_disk accept http_status parse_url add_headers
 #' @importFrom jsonlite toJSON fromJSON
 #' @importFrom plyr rbind.fill llply ldply
-#' 
+#'
 #' @export
 #'
 #' @param query Reference query; a character vector of length 1 or greater,
@@ -15,9 +16,9 @@
 #' @author Scott Chamberlain \email{myrmecocystus@@gmail.com}
 #' @examples \dontrun{
 #' # search with title, author, year, and journal
-#' cr_search_free(query = "Piwowar Sharing Detailed Research Data Is Associated with 
+#' cr_search_free(query = "Piwowar Sharing Detailed Research Data Is Associated with
 #' Increased Citation Rate PLOS one 2007")
-#' 
+#'
 #' cr_search_free(query="Renear 2012") # too few words, need at least 3
 #'
 #' cr_search_free(query=c("Renear 2012","Piwowar sharing data PLOS one")) # multiple queries
@@ -27,13 +28,13 @@
 #' cr_search(doi = doi)
 #'
 #' # Queries can be quite complex too
-#' cr_search_free("M. Henrion, D. J. Mortlock, D. J. Hand, and A. Gandy, \"A Bayesian 
-#' approach to star-galaxy classification,\" Monthly Notices of the Royal Astronomical Society, 
+#' cr_search_free("M. Henrion, D. J. Mortlock, D. J. Hand, and A. Gandy, \"A Bayesian
+#' approach to star-galaxy classification,\" Monthly Notices of the Royal Astronomical Society,
 #' vol. 412, no. 4, pp. 2286-2302, Apr. 2011.")
 #'
 #' # Lots of queries
 #' queries <- c("Piwowar sharing data PLOS one", "Priem Scientometrics 2.0 social web",
-#'	"William Gunn A Crosstalk Between Myeloma Cells", 
+#'	"William Gunn A Crosstalk Between Myeloma Cells",
 #'  "karthik ram Metapopulation dynamics override local limits")
 #' cr_search_free(queries)
 #' }

@@ -5,7 +5,7 @@ Description: Client for various CrossRef APIs, including metadata search
     (including bibtex, citeproc-json, rdf-xml, etc.), convert DOIs to PMIDs,
     and vice versa, get citations for DOIs, and get links to full text of
     articles when available.
-Version: 0.3.2.9200
+Version: 0.3.3.9300
 License: MIT + file LICENSE
 Authors@R: c(person("Carl", "Boettiger", role = "aut"),
     person("Ted", "Hart", role = "aut"),
@@ -16,9 +16,12 @@ URL: https://github.com/ropensci/rcrossref
 BugReports: https://github.com/ropensci/rcrossref/issues
 VignetteBuilder: knitr
 Imports:
+    utils,
+    methods,
+    stats,
     jsonlite,
     XML,
-    httr (>= 0.6.0),
+    httr (>= 1.0.0),
     plyr,
     bibtex,
     dplyr

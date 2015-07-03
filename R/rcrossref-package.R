@@ -9,6 +9,9 @@
 #' Note that functions that use the OpenURL service are now deprecated, and will be defunct 
 #' soon.
 #'
+#' @importFrom utils modifyList
+#' @importFrom methods is as
+#' @importFrom stats setNames
 #' @name rcrossref-package
 #' @aliases rcrossref
 #' @docType package

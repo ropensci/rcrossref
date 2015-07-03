@@ -157,7 +157,7 @@
   }
 }
 
-#' @import bibtex
+#' @importFrom bibtex read.bib
 parse_bibtex <- function(x){
   x <- gsub("@[Dd]ata", "@Misc", x)
   writeLines(x, "tmpscratch.bib")
