@@ -32,16 +32,16 @@ filter_handler <- function(x){
   }
 }
 
-asl <- function(x) {
-  # x <- tolower(x)
-  if (is.logical(x) || x == "true" || x == "false") {
-    if (x) {
+asl <- function(z) {
+  # z <- tolower(z)
+  if (is.logical(z) || tolower(z) == "true" || tolower(z) == "false") {
+    if (z) {
       return('true')
     } else {
       return('false')
     }
   } else {
-    return(x)
+    return(z)
   }
 }
 
