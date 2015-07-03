@@ -35,5 +35,5 @@ test_that("cr_ft_links gives back right values", {
 
 test_that("cr_ft_links fails correctly", {
   expect_error(cr_ft_links(), 'argument "doi" is missing')
-  expect_null(cr_ft_links("3434"))
+  expect_null(suppressWarnings(cr_ft_links(doi = "3434")))
 })

@@ -58,7 +58,6 @@ test_that("cr_works fails correctly", {
 })
 
 test_that("cr_works warns correctly", {
-  expect_warning(cr_works(dois=c('blblbl', '10.1038/nnano.2014.279')), 
-                 regexp = "only data with valid CrossRef dois returned", all = TRUE)
+  expect_warning(cr_works(dois=c('blblbl', '10.1038/nnano.2014.279')), "Resource not found")
   expect_equal(NROW(suppressWarnings(cr_works(dois=c('blblbl', '10.1038/nnano.2014.279'))$data)), 1)
 })

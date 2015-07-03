@@ -45,10 +45,9 @@
 #' cr_ft_links(doi="10.3389/fnagi.2014.00130")
 #' }
 
-cr_ft_links <- function(doi, type='xml', ...)
-{
+cr_ft_links <- function(doi, type='xml', ...) {
   res <- cr_works_links(dois = doi, ...)[[1]]
-  if(is.null(res)){
+  if (is.null(unlist(res))) {
     NULL 
   } else {  
     elife <- if(grepl("elife", res[[1]]$URL)) TRUE else FALSE
@@ -75,9 +74,17 @@ cr_ft_links <- function(doi, type='xml', ...)
   }
 }
 
-cr_works_links <- function(dois = NULL, ...)
-{
-  get_links <- function(x) cr_GET(endpoint = sprintf("works/%s", x), list(), FALSE, ...)$message$link
+cr_works_links <- function(dois = NULL, ...) {
+  # get_links <- function(x) cr_GET(sprintf("works/%s", x), NULL, FALSE, ...)$message$link
+  get_links <- function(x) {
+    tmp <- cr_GET(sprintf("works/%s", x), NULL, FALSE)
+    trylinks <- tryCatch(tmp$message$link, error = function(e) e)
+    if (is(trylinks, "error")) {
+      NULL
+    } else {
+      trylinks
+    }
+  }
   setNames(lapply(dois, get_links, ...), dois)
 }
 
