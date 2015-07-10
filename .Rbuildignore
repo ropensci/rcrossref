@@ -12,3 +12,5 @@ inst/vign/cache/
 README.Rmd
 cran-comments.md
 ^\.httr-oauth$
+NEWS.md
+

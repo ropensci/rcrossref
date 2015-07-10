@@ -1,38 +1,53 @@
+rcrossref 0.3.4
+===============
+
+### NEW FEATURES
+
+* Added new function `crosscite()` to work with the
+[Citeproc service](http://crosscite.org/citeproc/) (#60)
+
+### BUG FIXES
+
+* Fixed problems related to `httr` `v1` (#65)
+* Import all non-base R functions (#64)
+* The agency route was down used by the `cr_agency()` function,
+back up and fixed now (#63)
+
 rcrossref 0.3.0
 ===============
 
-NEW FEATURES
+### NEW FEATURES
 
 * New function `extract_pdf()` to extract text from pdfs
 * New function `cr_ft_links()` to get links for full text content of an article (#10)
 * New function `cr_ft_text()` to get links for full text content of an article. In addition,
 `cr_ft_pdf()`, `cr_ft_plain()`, and `cr_ft_xml()` are convenience functions that will get
-the format pdf, plain text, or xml, respectively. You can of course specify format in the 
+the format pdf, plain text, or xml, respectively. You can of course specify format in the
 `cr_ft_text()` function with the `type` parameter (#10) (#42)
 
-MINOR IMPROVEMENTS
+### MINOR IMPROVEMENTS
 
 * Filled out more tests (#45)
 
-BUG FIXES
+### BUG FIXES
 
 * No longer assign queried doi to the `data.frame` in `cr_works()`, which caused failure if
 a non-Crossref DOI included (#52)
-* `pmid2doi()` and `doi2pmid()` functions removed temporarily as the web service is down 
+* `pmid2doi()` and `doi2pmid()` functions removed temporarily as the web service is down
 temporarily, but will be online again soon from Crossref (#48)
 
 rcrossref 0.2.1
 ===============
 
-MINOR IMPROVEMENTS
+### MINOR IMPROVEMENTS
 
 * Fixes for man file examples. (#35)
-* `cr_citation()` is deprecated (stil useable, but will be removed in a 
+* `cr_citation()` is deprecated (stil useable, but will be removed in a
 future version of the package). use `cr_cn()` instead. (#34)
 
 rcrossref 0.2.0
 ===============
 
-NEW FEATURES
+### NEW FEATURES
 
 * released to CRAN
