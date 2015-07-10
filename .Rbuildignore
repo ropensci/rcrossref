@@ -1,10 +1,11 @@
-man-roxygen/
 .travis.yml
 .DS_Store
+man-roxygen/
 travis-tool.sh
 vignettes/margins.sty
 Makefile
 inst/stuff/
+inst/vign/cache/
 ^appveyor\.yml$
 ^.*\.Rproj$
 ^\.Rproj\.user$

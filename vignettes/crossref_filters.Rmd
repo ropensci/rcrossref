@@ -1,6 +1,7 @@
 <!--
 %\VignetteEngine{knitr::knitr}
 %\VignetteIndexEntry{Crossref filters}
+%\VignetteEncoding{UTF-8}
 -->
 
 

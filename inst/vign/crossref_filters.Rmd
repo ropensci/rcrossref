@@ -1,9 +1,10 @@
 <!--
 %\VignetteEngine{knitr::knitr}
 %\VignetteIndexEntry{Crossref filters}
+%\VignetteEncoding{UTF-8}
 -->
 
-```{r echo=FALSE, eval=FALSE}
+```{r echo=FALSE}
 knitr::opts_chunk$set(
   comment = "#>",
   warning = FALSE,

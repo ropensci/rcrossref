@@ -2,3 +2,4 @@ testing.R
 .Rproj.user
 .Rhistory
 .httr-oauth
+inst/vign/cache/

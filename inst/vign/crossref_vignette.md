@@ -1,6 +1,7 @@
 <!--
 %\VignetteEngine{knitr::knitr}
 %\VignetteIndexEntry{Crossref vignette}
+%\VignetteEncoding{UTF-8}
 -->
 
 
@@ -36,7 +37,7 @@ cr_cn(dois = "10.1371/journal.pone.0112608", format = "text", style = "apa")
 ```
 
 ```
-## [1] "Wang, Q., & Taylor, J. E. (2014). Quantifying Human Mobility Perturbation and Resilience in Hurricane Sandy. PLoS ONE, 9(11), e112608. doi:10.1371/journal.pone.0112608"
+#> [1] "Wang, Q., & Taylor, J. E. (2014). Quantifying Human Mobility Perturbation and Resilience in Hurricane Sandy. PLoS ONE, 9(11), e112608. doi:10.1371/journal.pone.0112608"
 ```
 
 There are a lot more styles. We include a dataset as a character vector within the package, accessible via the `get_styles()` function, e.g., 
@@ -47,11 +48,11 @@ get_styles()[1:5]
 ```
 
 ```
-## [1] "academy-of-management-review"                   
-## [2] "acm-sig-proceedings-long-author-list"           
-## [3] "acm-sig-proceedings"                            
-## [4] "acm-sigchi-proceedings-extended-abstract-format"
-## [5] "acm-sigchi-proceedings"
+#> [1] "academy-of-management-review"                   
+#> [2] "acm-sig-proceedings-long-author-list"           
+#> [3] "acm-sig-proceedings"                            
+#> [4] "acm-sigchi-proceedings-extended-abstract-format"
+#> [5] "acm-sigchi-proceedings"
 ```
 
 `bibtex`
@@ -62,19 +63,19 @@ cat(cr_cn(dois = "10.1126/science.169.3946.635", format = "bibtex"))
 ```
 
 ```
-## @article{Frank_1970,
-## 	doi = {10.1126/science.169.3946.635},
-## 	url = {http://dx.doi.org/10.1126/science.169.3946.635},
-## 	year = 1970,
-## 	month = {aug},
-## 	publisher = {American Association for the Advancement of Science ({AAAS})},
-## 	volume = {169},
-## 	number = {3946},
-## 	pages = {635--641},
-## 	author = {H. S. Frank},
-## 	title = {The Structure of Ordinary Water: New data and interpretations are yielding new insights into this fascinating substance},
-## 	journal = {Science}
-## }
+#> @article{Frank_1970,
+#> 	doi = {10.1126/science.169.3946.635},
+#> 	url = {http://dx.doi.org/10.1126/science.169.3946.635},
+#> 	year = 1970,
+#> 	month = {aug},
+#> 	publisher = {American Association for the Advancement of Science ({AAAS})},
+#> 	volume = {169},
+#> 	number = {3946},
+#> 	pages = {635--641},
+#> 	author = {H. S. Frank},
+#> 	title = {The Structure of Ordinary Water: New data and interpretations are yielding new insights into this fascinating substance},
+#> 	journal = {Science}
+#> }
 ```
 
 `bibentry`
@@ -85,10 +86,9 @@ cr_cn(dois = "10.6084/m9.figshare.97218", format = "bibentry")
 ```
 
 ```
-## Boettiger; C (2012). "Regime shifts in ecology and evolution (PhD
-## Dissertation)." <URL:
-## http://dx.doi.org/10.6084/m9.figshare.97218>, <URL:
-## http://dx.doi.org/10.6084/m9.figshare.97218>.
+#> Boettiger; C (2012). "Regime shifts in ecology and evolution (PhD
+#> Dissertation)." <URL: http://doi.org/10.6084/m9.figshare.97218>,
+#> <URL: http://dx.doi.org/10.6084/m9.figshare.97218>.
 ```
 
 ## Citation count
@@ -101,7 +101,7 @@ cr_citation_count(doi="10.1371/journal.pone.0042793")
 ```
 
 ```
-## [1] 5
+#> [1] 6
 ```
 
 ## Search Crossref metadata API
@@ -116,23 +116,23 @@ cr_fundref(query="NSF")
 ```
 
 ```
-## $meta
-##   total_results search_terms start_index items_per_page
-## 1             8          NSF           0             20
-## 
-## $data
-## Source: local data frame [8 x 6]
-## 
-##             id      location
-## 1 501100004190        Norway
-## 2    100000179 United States
-## 3 501100000930     Australia
-## 4    100008367       Denmark
-## 5    100003187 United States
-## 6    100000001 United States
-## 7    100006445 United States
-## 8 501100001809         China
-## Variables not shown: name (chr), alt.names (chr), uri (chr), tokens (chr)
+#> $meta
+#>   total_results search_terms start_index items_per_page
+#> 1             8          NSF           0             20
+#> 
+#> $data
+#> Source: local data frame [8 x 6]
+#> 
+#>             id      location
+#> 1 501100004190        Norway
+#> 2    100000179 United States
+#> 3    100006445 United States
+#> 4    100003187 United States
+#> 5 501100001809         China
+#> 6 501100000930     Australia
+#> 7    100008367       Denmark
+#> 8    100000001 United States
+#> Variables not shown: name (chr), alt.names (chr), uri (chr), tokens (chr)
 ```
 
 ### Check the DOI minting agency
@@ -143,15 +143,15 @@ cr_agency(dois = '10.13039/100000001')
 ```
 
 ```
-## $DOI
-## [1] "10.13039/100000001"
-## 
-## $agency
-## $agency$id
-## [1] "crossref"
-## 
-## $agency$label
-## [1] "CrossRef"
+#> $DOI
+#> [1] "10.13039/100000001"
+#> 
+#> $agency
+#> $agency$id
+#> [1] "crossref"
+#> 
+#> $agency$label
+#> [1] "CrossRef"
 ```
 
 ### Search works (i.e., articles, books, etc.)
@@ -162,24 +162,24 @@ cr_works(filter=c(has_orcid=TRUE, from_pub_date='2004-04-04'), limit=1)
 ```
 
 ```
-## $meta
-##   total_results search_terms start_index items_per_page
-## 1        128970           NA           0              1
-## 
-## $data
-## Source: local data frame [1 x 24]
-## 
-##    issued score                                prefix
-## 1 2014-12     1 http://id.crossref.org/prefix/10.1016
-## Variables not shown: container.title (chr), reference.count (chr),
-##   deposited (chr), title (chr), type (chr), DOI (chr), URL (chr), source
-##   (chr), publisher (chr), indexed (chr), member (chr), ISBN (chr), subject
-##   (chr), author (chr), issue (chr), ISSN (chr), volume (chr), license_date
-##   (chr), license_content.version (chr), license_delay.in.days (chr),
-##   license_URL (chr)
-## 
-## $facets
-## NULL
+#> $meta
+#>   total_results search_terms start_index items_per_page
+#> 1        229074           NA           0              1
+#> 
+#> $data
+#> Source: local data frame [1 x 25]
+#> 
+#>    issued score                                prefix
+#> 1 2015-02     1 http://id.crossref.org/prefix/10.1016
+#> Variables not shown: container.title (chr), reference.count (chr),
+#>   deposited (chr), title (chr), type (chr), DOI (chr), URL (chr), source
+#>   (chr), publisher (chr), indexed (chr), member (chr), page (chr), ISBN
+#>   (chr), subject (chr), author (chr), issue (chr), ISSN (chr), volume
+#>   (chr), license_date (chr), license_content.version (chr),
+#>   license_delay.in.days (chr), license_URL (chr)
+#> 
+#> $facets
+#> NULL
 ```
 
 ### Search journals 
@@ -190,14 +190,14 @@ cr_journals(issn=c('1803-2427','2326-4225'))
 ```
 
 ```
-## Source: local data frame [2 x 12]
-## 
-##   issued container.title deposited
-## 1                                 
-## 2                                 
-## Variables not shown: title (chr), publisher (chr), indexed (chr), ISBN
-##   (chr), subject (chr), author (chr), issue (chr), ISSN (chr), volume
-##   (chr)
+#> Source: local data frame [2 x 12]
+#> 
+#>   issued container.title deposited
+#> 1                                 
+#> 2                                 
+#> Variables not shown: title (chr), publisher (chr), indexed (chr), ISBN
+#>   (chr), subject (chr), author (chr), issue (chr), ISSN (chr), volume
+#>   (chr)
 ```
 
 ### Search license information
@@ -208,16 +208,22 @@ cr_licenses(query = 'elsevier')
 ```
 
 ```
-## $meta
-##   total_results search_terms start_index items_per_page
-## 1             2     elsevier           0             20
-## 
-## $data
-## Source: local data frame [2 x 2]
-## 
-##                                            URL work.count
-## 1  http://creativecommons.org/licenses/by/3.0/          1
-## 2 http://www.elsevier.com/tdm/userlicense/1.0/        145
+#> $meta
+#>   total_results search_terms start_index items_per_page
+#> 1             7     elsevier           0             20
+#> 
+#> $data
+#> Source: local data frame [7 x 2]
+#> 
+#>                                                                           URL
+#> 1                           http://creativecommons.org/licenses/by-nc-nd/3.0/
+#> 2                           http://creativecommons.org/licenses/by-nc-nd/4.0/
+#> 3                                 http://creativecommons.org/licenses/by/3.0/
+#> 4                        http://www.elsevier.com/open-access/userlicense/1.0/
+#> 5                                http://www.elsevier.com/tdm/userlicense/1.0/
+#> 6 © 2007 Elsevier Masson SAS. All rights reserved. The patient figure in Figu
+#> 7 © 2012, Elsevier Inc., All Rights Reserved. Figure 8, part (B) (images of H
+#> Variables not shown: work.count (int)
 ```
 
 ### Search based on DOI prefixes
@@ -228,22 +234,22 @@ cr_prefixes(prefixes=c('10.1016','10.1371','10.1023','10.4176','10.1093'))
 ```
 
 ```
-## $meta
-## NULL
-## 
-## $data
-## Source: local data frame [5 x 3]
-## 
-##                               member                              name
-## 1   http://id.crossref.org/member/78                       Elsevier BV
-## 2  http://id.crossref.org/member/340  Public Library of Science (PLoS)
-## 3  http://id.crossref.org/member/297 Springer Science + Business Media
-## 4 http://id.crossref.org/member/1989              Co-Action Publishing
-## 5  http://id.crossref.org/member/286     Oxford University Press (OUP)
-## Variables not shown: prefix (chr)
-## 
-## $facets
-## list()
+#> $meta
+#> NULL
+#> 
+#> $data
+#> Source: local data frame [5 x 3]
+#> 
+#>                               member                              name
+#> 1   http://id.crossref.org/member/78                       Elsevier BV
+#> 2  http://id.crossref.org/member/340  Public Library of Science (PLoS)
+#> 3  http://id.crossref.org/member/297 Springer Science + Business Media
+#> 4 http://id.crossref.org/member/1989              Co-Action Publishing
+#> 5  http://id.crossref.org/member/286     Oxford University Press (OUP)
+#> Variables not shown: prefix (chr)
+#> 
+#> $facets
+#> list()
 ```
 
 ### Search CrossRef members
@@ -254,44 +260,44 @@ cr_members(query='ecology', limit = 5)
 ```
 
 ```
-## $meta
-##   total_results search_terms start_index items_per_page
-## 1            15      ecology           0              5
-## 
-## $data
-## Source: local data frame [5 x 40]
-## 
-##     id                                 primary_name
-## 1 3947          Korean Association of Human Ecology
-## 2 2151        Ecology and Civil Engineering Society
-## 3 2080        The Japan Society of Tropical Ecology
-## 4 2232 Japanese Society of Health and Human Ecology
-## 5  336        Japanese Society of Microbial Ecology
-## Variables not shown: location (chr), last_status_check_time (date),
-##   backfile.dois (chr), current.dois (chr), total.dois (chr), prefixes
-##   (chr), coverge.resource.links.backfile (chr), coverge.funders.current
-##   (chr), coverge.funders.backfile (chr), coverge.references.current (chr),
-##   coverge.references.backfile (chr), coverge.update.policies.backfile
-##   (chr), coverge.resource.links.current (chr),
-##   coverge.update.policies.current (chr), coverge.award.numbers.current
-##   (chr), coverge.orcids.current (chr), coverge.orcids.backfile (chr),
-##   coverge.award.numbers.backfile (chr), coverge.licenses.current (chr),
-##   coverge.licenses.backfile (chr), flags.deposits.award.numbers.backfile
-##   (chr), flags.deposits (chr), flags.deposits.licenses.backfile (chr),
-##   flags.deposits.resource.links.backfile (chr),
-##   flags.deposits.licenses.current (chr), flags.deposits.orcids.current
-##   (chr), flags.deposits.funders.backfile (chr),
-##   flags.deposits.references.current (chr), flags.deposits.orcids.backfile
-##   (chr), flags.deposits.references.backfile (chr),
-##   flags.deposits.resource.links.current (chr),
-##   flags.deposits.award.numbers.current (chr),
-##   flags.deposits.update.policies.backfile (chr),
-##   flags.deposits.funders.current (chr),
-##   flags.deposits.update.policies.current (chr), flags.deposits.articles
-##   (chr), names (chr), tokens (chr)
-## 
-## $facets
-## NULL
+#> $meta
+#>   total_results search_terms start_index items_per_page
+#> 1            17      ecology           0              5
+#> 
+#> $data
+#> Source: local data frame [5 x 40]
+#> 
+#>     id                                 primary_name
+#> 1 3947          Korean Association of Human Ecology
+#> 2 2151        Ecology and Civil Engineering Society
+#> 3 2080        The Japan Society of Tropical Ecology
+#> 4 2232 Japanese Society of Health and Human Ecology
+#> 5  336        Japanese Society of Microbial Ecology
+#> Variables not shown: location (chr), last_status_check_time (date),
+#>   backfile.dois (chr), current.dois (chr), total.dois (chr), prefixes
+#>   (chr), coverge.resource.links.backfile (chr), coverge.funders.current
+#>   (chr), coverge.funders.backfile (chr), coverge.references.current (chr),
+#>   coverge.references.backfile (chr), coverge.update.policies.backfile
+#>   (chr), coverge.resource.links.current (chr),
+#>   coverge.update.policies.current (chr), coverge.award.numbers.current
+#>   (chr), coverge.orcids.current (chr), coverge.orcids.backfile (chr),
+#>   coverge.award.numbers.backfile (chr), coverge.licenses.current (chr),
+#>   coverge.licenses.backfile (chr), flags.deposits.award.numbers.backfile
+#>   (chr), flags.deposits (chr), flags.deposits.licenses.backfile (chr),
+#>   flags.deposits.resource.links.backfile (chr),
+#>   flags.deposits.licenses.current (chr), flags.deposits.orcids.current
+#>   (chr), flags.deposits.funders.backfile (chr),
+#>   flags.deposits.references.current (chr), flags.deposits.orcids.backfile
+#>   (chr), flags.deposits.references.backfile (chr),
+#>   flags.deposits.resource.links.current (chr),
+#>   flags.deposits.award.numbers.current (chr),
+#>   flags.deposits.update.policies.backfile (chr),
+#>   flags.deposits.funders.current (chr),
+#>   flags.deposits.update.policies.current (chr), flags.deposits.articles
+#>   (chr), names (chr), tokens (chr)
+#> 
+#> $facets
+#> NULL
 ```
 
 ### Get N random DOIs
@@ -304,11 +310,11 @@ cr_r()
 ```
 
 ```
-##  [1] "10.1016/j.bbrc.2006.06.185"    "10.1017/s0007087406008739"    
-##  [3] "10.1016/s0140-6736(53)91360-9" "10.1007/978-3-642-36897-4_4"  
-##  [5] "10.1056/nejmoa0908806"         "10.3139/9783446432758"        
-##  [7] "10.1016/0010-7824(94)90111-2"  "10.1109/aps.1991.175215"      
-##  [9] "10.1145/170791.170817"         "10.1163/9780080548692"
+#>  [1] "10.1109/vetecs.2006.1683416"  "10.1163/_eifo_dum_dcl189"    
+#>  [3] "10.1353/lan.1990.0039"        "10.5860/choice.37-2350"      
+#>  [5] "10.1007/bf02246477"           "10.1049/ip-a-1.1982.0040"    
+#>  [7] "10.1021/bi00398a067"          "10.2172/656490"              
+#>  [9] "10.1007/bf00431474"           "10.1016/0021-9614(83)90029-0"
 ```
 
 You can pass in the number of DOIs you want back (default is 10)
@@ -319,7 +325,7 @@ cr_r(2)
 ```
 
 ```
-## [1] "10.3989/ic.1995.v47.i437.1072"    "10.1016/j.preteyeres.2015.01.004"
+#> [1] "10.1097/00007890-200607152-01210" "10.2106/jbjs.ss.m.00201"
 ```
 
 ### The older functions and API
@@ -332,18 +338,18 @@ cr_search(query = c("renear", "palmer"), rows = 3, sort = "year")[1:2,-6]
 ```
 
 ```
-##                                              doi     score normalizedScore
-## 1 http://dx.doi.org/10.1136/flgastro-2014-100540 0.4935921              15
-## 2 http://dx.doi.org/10.1097/aln.0000000000000554 0.4935921              15
-##                                                title
-## 1 New and emerging endoscopic haemostasis techniques
-## 2                  Tilting at Aortocaval Compression
-##                                                                                                          fullCitation
-## 1 R. Palmer, B. Braden, 2015, 'New and emerging endoscopic haemostasis techniques', <i>Frontline Gastroenterology</i>
-## 2     Craig M. Palmer, 2015, 'Tilting at Aortocaval Compression', <i>Anesthesiology</i>, vol. 122, no. 2, pp. 231-232
-##   year
-## 1 2015
-## 2 2015
+#>                                                   doi     score
+#> 1 http://dx.doi.org/10.13110/merrpalmquar1982.61.1.fm 0.7023144
+#> 2 http://dx.doi.org/10.13110/merrpalmquar1982.61.2.fm 0.7023144
+#>   normalizedScore        title
+#> 1              21 Front Matter
+#> 2              21 Front Matter
+#>                                                                        fullCitation
+#> 1 2015, 'Front Matter', <i>Merrill-Palmer Quarterly</i>, vol. 61, no. 1, pp. i-viii
+#> 2   2015, 'Front Matter', <i>Merrill-Palmer Quarterly</i>, vol. 61, no. 2, pp. i-ii
+#>   year
+#> 1 2015
+#> 2 2015
 ```
 
 Search by DOI
@@ -354,14 +360,14 @@ cr_search(doi = "10.1890/10-0340.1")[,-6]
 ```
 
 ```
-##                                   doi    score normalizedScore
-## 1 http://dx.doi.org/10.1890/10-0340.1 18.59906             100
-##                                                            title
-## 1 The arcsine is asinine: the analysis of proportions in ecology
-##                                                                                                                                           fullCitation
-## 1 David I. Warton, Francis K. C. Hui, 2011, 'The arcsine is asinine: the analysis of proportions in ecology', <i>Ecology</i>, vol. 92, no. 1, pp. 3-10
-##   year
-## 1 2011
+#>                                   doi    score normalizedScore
+#> 1 http://dx.doi.org/10.1890/10-0340.1 18.66866             100
+#>                                                            title
+#> 1 The arcsine is asinine: the analysis of proportions in ecology
+#>                                                                                                                                           fullCitation
+#> 1 David I. Warton, Francis K. C. Hui, 2011, 'The arcsine is asinine: the analysis of proportions in ecology', <i>Ecology</i>, vol. 92, no. 1, pp. 3-10
+#>   year
+#> 1 2011
 ```
 
 Free search
@@ -375,14 +381,14 @@ cr_search_free(queries)[,-4]
 ```
 
 ```
-##                                                        text match
-## 1                             Piwowar sharing data PLOS one  TRUE
-## 2                       Priem Scientometrics 2.0 social web  TRUE
-## 3            William Gunn A Crosstalk Between Myeloma Cells  TRUE
-## 4 karthik ram Metapopulation dynamics override local limits  TRUE
-##                                              doi    score
-## 1 http://dx.doi.org/10.1371/journal.pone.0000308 3.353533
-## 2        http://dx.doi.org/10.5210/fm.v15i7.2874 3.747504
-## 3  http://dx.doi.org/10.1634/stemcells.2005-0220 2.833707
-## 4            http://dx.doi.org/10.1890/08-0228.1 3.966986
+#>                                                        text match
+#> 1                             Piwowar sharing data PLOS one  TRUE
+#> 2                       Priem Scientometrics 2.0 social web  TRUE
+#> 3            William Gunn A Crosstalk Between Myeloma Cells  TRUE
+#> 4 karthik ram Metapopulation dynamics override local limits  TRUE
+#>                                              doi    score
+#> 1 http://dx.doi.org/10.1371/journal.pone.0000308 3.348134
+#> 2        http://dx.doi.org/10.5210/fm.v15i7.2874 3.593655
+#> 3  http://dx.doi.org/10.1634/stemcells.2005-0220 2.830429
+#> 4            http://dx.doi.org/10.1890/08-0228.1 3.965847
 ```
