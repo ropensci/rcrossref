@@ -13,30 +13,29 @@ knitr::opts_chunk$set(
 [![Build Status](https://api.travis-ci.org/ropensci/rcrossref.png)](https://travis-ci.org/ropensci/rcrossref)
 [![Build status](https://ci.appveyor.com/api/projects/status/jbo6y7dg4qiq7mol/branch/master)](https://ci.appveyor.com/project/sckott/rcrossref/branch/master)
 [![Coverage Status](https://coveralls.io/repos/ropensci/rcrossref/badge.svg)](https://coveralls.io/r/ropensci/rcrossref)
+[![rstudio mirror downloads](http://cranlogs.r-pkg.org/badges/rcrossref)](https://github.com/metacran/cranlogs.app)
 [![cran version](http://www.r-pkg.org/badges/version/rcrossref)](http://cran.rstudio.com/web/packages/rcrossref)
 
 R interface to various CrossRef APIs
+====================================
 
-CrossRef documentation
----------------
 
-<!--
-* [Register](http://www.crossref.org/requestaccount/) an email address with the CrossRef API as you'll need an API key for some functions.
--->
+## CrossRef documentation
 
 * Crossref API: [https://github.com/CrossRef/rest-api-doc/blob/master/rest_api.md](https://github.com/CrossRef/rest-api-doc/blob/master/rest_api.md)
 * Crossref [metadata search API](http://search.labs.crossref.org/)
 * CrossRef [DOI Content Negotiation](http://www.crosscite.org/cn/)
 * Text and Data Mining [TDM](http://tdmsupport.crossref.org/)
 
-<!--
-* Fundref: [source 1](https://github.com/CrossRef/rest-api-doc/blob/master/funder_kpi_api.md), [source 2](http://crosstech.crossref.org/2014/04/%E2%99%AB-researchers-just-wanna-have-funds-%E2%99%AB.html), [source 3](http://help.crossref.org/#fundref-api)
-* [Content negotiation](http://www.crosscite.org/cn/)
-* [Metadata search]()
-* [Text and data mining (TDM)](http://tdmsupport.crossref.org/)
--->
-
 ## Installation
+
+Stable version from CRAN
+
+```{r eval=FALSE}
+install.packages("rcrossref")
+```
+
+Or development version from GitHub
 
 ```{r eval=FALSE}
 install.packages("devtools")
@@ -75,7 +74,7 @@ cr_cn(dois = "10.6084/m9.figshare.97218", format = "bibentry")
 Citation count, using OpenURL
 
 ```{r}
-cr_citation_count(doi="10.1371/journal.pone.0042793")
+cr_citation_count(doi = "10.1371/journal.pone.0042793")
 ```
 
 ## Search Crossref metadata API
@@ -85,7 +84,7 @@ The following functions all use the [CrossRef API](https://github.com/CrossRef/r
 ### Look up funder information
 
 ```{r}
-cr_fundref(query="NSF")
+cr_fundref(query = "NSF")
 ```
 
 ### Check the DOI minting agency
@@ -97,13 +96,13 @@ cr_agency(dois = '10.13039/100000001')
 ### Search works (i.e., articles)
 
 ```{r}
-cr_works(filter=c(has_orcid=TRUE, from_pub_date='2004-04-04'), limit=1)
+cr_works(filter = c(has_orcid = TRUE, from_pub_date = '2004-04-04'), limit = 1)
 ```
 
 ### Search journals
 
 ```{r}
-cr_journals(issn=c('1803-2427','2326-4225'))
+cr_journals(issn = c('1803-2427','2326-4225'))
 ```
 
 ### Search license information
@@ -115,13 +114,13 @@ cr_licenses(query = 'elsevier')
 ### Search based on DOI prefixes
 
 ```{r}
-cr_prefixes(prefixes=c('10.1016','10.1371','10.1023','10.4176','10.1093'))
+cr_prefixes(prefixes = c('10.1016','10.1371','10.1023','10.4176','10.1093'))
 ```
 
 ### Search CrossRef members
 
 ```{r}
-cr_members(query='ecology', limit = 5)
+cr_members(query = 'ecology', limit = 5)
 ```
 
 ### Get N random DOIs
@@ -153,7 +152,7 @@ Get some DOIs for articles that provide full text, and that have `CC-BY 3.0` lic
 ```{r}
 out <-
   cr_works(filter = list(has_full_text = TRUE,
-    license_url="http://creativecommons.org/licenses/by/3.0/"))
+    license_url = "http://creativecommons.org/licenses/by/3.0/"))
 (dois <- out$data$DOI)
 ```
 

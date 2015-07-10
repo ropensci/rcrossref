@@ -6,30 +6,30 @@ rcrossref
 [![Build Status](https://api.travis-ci.org/ropensci/rcrossref.png)](https://travis-ci.org/ropensci/rcrossref)
 [![Build status](https://ci.appveyor.com/api/projects/status/jbo6y7dg4qiq7mol/branch/master)](https://ci.appveyor.com/project/sckott/rcrossref/branch/master)
 [![Coverage Status](https://coveralls.io/repos/ropensci/rcrossref/badge.svg)](https://coveralls.io/r/ropensci/rcrossref)
+[![rstudio mirror downloads](http://cranlogs.r-pkg.org/badges/rcrossref)](https://github.com/metacran/cranlogs.app)
 [![cran version](http://www.r-pkg.org/badges/version/rcrossref)](http://cran.rstudio.com/web/packages/rcrossref)
 
 R interface to various CrossRef APIs
+====================================
 
-CrossRef documentation
----------------
 
-<!--
-* [Register](http://www.crossref.org/requestaccount/) an email address with the CrossRef API as you'll need an API key for some functions.
--->
+## CrossRef documentation
 
 * Crossref API: [https://github.com/CrossRef/rest-api-doc/blob/master/rest_api.md](https://github.com/CrossRef/rest-api-doc/blob/master/rest_api.md)
 * Crossref [metadata search API](http://search.labs.crossref.org/)
 * CrossRef [DOI Content Negotiation](http://www.crosscite.org/cn/)
 * Text and Data Mining [TDM](http://tdmsupport.crossref.org/)
 
-<!--
-* Fundref: [source 1](https://github.com/CrossRef/rest-api-doc/blob/master/funder_kpi_api.md), [source 2](http://crosstech.crossref.org/2014/04/%E2%99%AB-researchers-just-wanna-have-funds-%E2%99%AB.html), [source 3](http://help.crossref.org/#fundref-api)
-* [Content negotiation](http://www.crosscite.org/cn/)
-* [Metadata search]()
-* [Text and data mining (TDM)](http://tdmsupport.crossref.org/)
--->
-
 ## Installation
+
+Stable version from CRAN
+
+
+```r
+install.packages("rcrossref")
+```
+
+Or development version from GitHub
 
 
 ```r
@@ -81,9 +81,8 @@ cat(cr_cn(dois = "10.1126/science.169.3946.635", format = "bibtex"))
 ```r
 cr_cn(dois = "10.6084/m9.figshare.97218", format = "bibentry")
 #> Boettiger; C (2012). "Regime shifts in ecology and evolution (PhD
-#> Dissertation)." <URL:
-#> http://dx.doi.org/10.6084/m9.figshare.97218>, <URL:
-#> http://dx.doi.org/10.6084/m9.figshare.97218>.
+#> Dissertation)." <URL: http://doi.org/10.6084/m9.figshare.97218>,
+#> <URL: http://dx.doi.org/10.6084/m9.figshare.97218>.
 ```
 
 ## Citation count
@@ -92,8 +91,8 @@ Citation count, using OpenURL
 
 
 ```r
-cr_citation_count(doi="10.1371/journal.pone.0042793")
-#> [1] 5
+cr_citation_count(doi = "10.1371/journal.pone.0042793")
+#> [1] 6
 ```
 
 ## Search Crossref metadata API
@@ -104,7 +103,7 @@ The following functions all use the [CrossRef API](https://github.com/CrossRef/r
 
 
 ```r
-cr_fundref(query="NSF")
+cr_fundref(query = "NSF")
 #> $meta
 #>   total_results search_terms start_index items_per_page
 #> 1             8          NSF           0             20
@@ -115,12 +114,12 @@ cr_fundref(query="NSF")
 #>             id      location
 #> 1 501100004190        Norway
 #> 2    100000179 United States
-#> 3 501100000930     Australia
-#> 4    100008367       Denmark
-#> 5    100003187 United States
-#> 6    100000001 United States
-#> 7    100006445 United States
-#> 8 501100001809         China
+#> 3    100006445 United States
+#> 4    100003187 United States
+#> 5 501100001809         China
+#> 6 501100000930     Australia
+#> 7    100008367       Denmark
+#> 8    100000001 United States
 #> Variables not shown: name (chr), alt.names (chr), uri (chr), tokens (chr)
 ```
 
@@ -144,32 +143,32 @@ cr_agency(dois = '10.13039/100000001')
 
 
 ```r
-cr_works(filter=c(has_orcid=TRUE, from_pub_date='2004-04-04'), limit=1)
+cr_works(filter = c(has_orcid = TRUE, from_pub_date = '2004-04-04'), limit = 1)
 #> $meta
 #>   total_results search_terms start_index items_per_page
-#> 1        128970           NA           0              1
+#> 1        229074           NA           0              1
 #> 
 #> $data
-#> Source: local data frame [1 x 24]
+#> Source: local data frame [1 x 25]
 #> 
 #>    issued score                                prefix
-#> 1 2014-12     1 http://id.crossref.org/prefix/10.1016
+#> 1 2015-02     1 http://id.crossref.org/prefix/10.1016
 #> Variables not shown: container.title (chr), reference.count (chr),
 #>   deposited (chr), title (chr), type (chr), DOI (chr), URL (chr), source
-#>   (chr), publisher (chr), indexed (chr), member (chr), ISBN (chr), subject
-#>   (chr), author (chr), issue (chr), ISSN (chr), volume (chr), license_date
-#>   (chr), license_content.version (chr), license_delay.in.days (chr),
-#>   license_URL (chr)
+#>   (chr), publisher (chr), indexed (chr), member (chr), page (chr), ISBN
+#>   (chr), subject (chr), author (chr), issue (chr), ISSN (chr), volume
+#>   (chr), license_date (chr), license_content.version (chr),
+#>   license_delay.in.days (chr), license_URL (chr)
 #> 
 #> $facets
 #> NULL
 ```
 
-### Search journals 
+### Search journals
 
 
 ```r
-cr_journals(issn=c('1803-2427','2326-4225'))
+cr_journals(issn = c('1803-2427','2326-4225'))
 #> Source: local data frame [2 x 12]
 #> 
 #>   issued container.title deposited
@@ -187,21 +186,27 @@ cr_journals(issn=c('1803-2427','2326-4225'))
 cr_licenses(query = 'elsevier')
 #> $meta
 #>   total_results search_terms start_index items_per_page
-#> 1             2     elsevier           0             20
+#> 1             7     elsevier           0             20
 #> 
 #> $data
-#> Source: local data frame [2 x 2]
+#> Source: local data frame [7 x 2]
 #> 
-#>                                            URL work.count
-#> 1  http://creativecommons.org/licenses/by/3.0/          1
-#> 2 http://www.elsevier.com/tdm/userlicense/1.0/        145
+#>                                                                           URL
+#> 1                           http://creativecommons.org/licenses/by-nc-nd/3.0/
+#> 2                           http://creativecommons.org/licenses/by-nc-nd/4.0/
+#> 3                                 http://creativecommons.org/licenses/by/3.0/
+#> 4                        http://www.elsevier.com/open-access/userlicense/1.0/
+#> 5                                http://www.elsevier.com/tdm/userlicense/1.0/
+#> 6 © 2007 Elsevier Masson SAS. All rights reserved. The patient figure in Figu
+#> 7 © 2012, Elsevier Inc., All Rights Reserved. Figure 8, part (B) (images of H
+#> Variables not shown: work.count (int)
 ```
 
 ### Search based on DOI prefixes
 
 
 ```r
-cr_prefixes(prefixes=c('10.1016','10.1371','10.1023','10.4176','10.1093'))
+cr_prefixes(prefixes = c('10.1016','10.1371','10.1023','10.4176','10.1093'))
 #> $meta
 #> NULL
 #> 
@@ -224,10 +229,10 @@ cr_prefixes(prefixes=c('10.1016','10.1371','10.1023','10.4176','10.1093'))
 
 
 ```r
-cr_members(query='ecology', limit = 5)
+cr_members(query = 'ecology', limit = 5)
 #> $meta
 #>   total_results search_terms start_index items_per_page
-#> 1            15      ecology           0              5
+#> 1            17      ecology           0              5
 #> 
 #> $data
 #> Source: local data frame [5 x 40]
@@ -267,16 +272,21 @@ cr_members(query='ecology', limit = 5)
 
 ### Get N random DOIs
 
-`cr_r()` uses the function `cr_works()` internally. 
+`cr_r()` uses the function `cr_works()` internally.
 
 
 ```r
 cr_r()
-#>  [1] "10.1007/978-3-642-27772-6_367-2" "10.1021/ac60169a776"            
-#>  [3] "10.1093/eurheartj/6.suppl_h.h61" "10.4188/jte.53.197"             
-#>  [5] "10.1016/0043-1354(86)90038-2"    "10.2753/eue1056-4934300444"     
-#>  [7] "10.1016/j.jallcom.2005.05.004"   "10.5956/jriet.33.795"           
-#>  [9] "10.1109/mspec.1982.6366904"      "10.1007/s00531-001-0232-0"
+#>  [1] "10.1016/s1090-3798(08)70717-7"    
+#>  [2] "10.5006/0010-9312-5.12.416"       
+#>  [3] "10.1016/s0092-8240(74)80059-5"    
+#>  [4] "10.1002/jps.10429"                
+#>  [5] "10.1371/journal.pone.0036908.g005"
+#>  [6] "10.1086/270400"                   
+#>  [7] "10.4327/jsnfs.57.179"             
+#>  [8] "10.1126/science.164.3885.1224-a"  
+#>  [9] "10.2307/208505"                   
+#> [10] "10.1079/9781845930691.0163"
 ```
 
 You can pass in the number of DOIs you want back (default is 10)
@@ -284,7 +294,7 @@ You can pass in the number of DOIs you want back (default is 10)
 
 ```r
 cr_r(2)
-#> [1] "10.1016/0165-0270(90)90118-y" "10.2307/2713659"
+#> [1] "10.12775/ae.2010.012" "10.1375/anft.29.1.51"
 ```
 
 ## pmid2doi & doi2pmid
@@ -301,17 +311,20 @@ Get some DOIs for articles that provide full text, and that have `CC-BY 3.0` lic
 
 
 ```r
-out <- 
+out <-
   cr_works(filter = list(has_full_text = TRUE,
-    license_url="http://creativecommons.org/licenses/by/3.0/"))
+    license_url = "http://creativecommons.org/licenses/by/3.0/"))
 (dois <- out$data$DOI)
-#>  [1] "10.1063/1.4905851"   "10.1063/1.4905271"   "10.1063/1.4905272"  
-#>  [4] "10.1155/2014/214587" "10.1155/2014/245347" "10.1155/2014/340936"
-#>  [7] "10.1155/2014/902492" "10.1155/2014/524940" "10.1155/2014/137231"
-#> [10] "10.1155/2014/598762" "10.1155/2014/256879" "10.1155/2014/182303"
-#> [13] "10.1155/2014/954604" "10.1155/2014/846581" "10.1155/2014/258409"
-#> [16] "10.1155/2014/164714" "10.1155/2014/687608" "10.7167/2013/140791"
-#> [19] "10.1155/2011/549537" "10.1155/2011/285130"
+#>  [1] "10.1063/1.4905851"         "10.1063/1.4905271"        
+#>  [3] "10.1063/1.4905272"         "10.1155/2014/214587"      
+#>  [5] "10.1155/2014/245347"       "10.1155/2014/340936"      
+#>  [7] "10.1155/2014/902492"       "10.1155/2014/524940"      
+#>  [9] "10.1155/2014/137231"       "10.1155/2014/598762"      
+#> [11] "10.1155/2014/256879"       "10.1155/2014/182303"      
+#> [13] "10.1155/2014/954604"       "10.1155/2014/846581"      
+#> [15] "10.1155/2014/164714"       "10.1155/2014/687608"      
+#> [17] "10.1155/s1110724303209050" "10.1155/s0161171203203203"
+#> [19] "10.1155/s0161171203211480" "10.1002/cfg.287"
 ```
 
 Then get URLs to full text content
@@ -353,7 +366,7 @@ cr_ft_text(links, "xml")
 
 ---
 
-This package is part of a richer suite called [fulltext](https://github.com/ropensci/fulltext), along with several other packages, that provides the ability to search for and retrieve full text of open access scholarly articles. 
+This package is part of a richer suite called [fulltext](https://github.com/ropensci/fulltext), along with several other packages, that provides the ability to search for and retrieve full text of open access scholarly articles.
 
 ---
 
