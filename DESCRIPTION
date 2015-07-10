@@ -3,7 +3,7 @@ Title: Client for Various 'CrossRef' 'APIs'
 Description: Client for various 'CrossRef' 'APIs', including 'metadata' search
     with their old and newer search 'APIs', get 'citations' in various formats
     (including 'bibtex', 'citeproc-json', 'rdf-xml', etc.), convert 'DOIs' 
-    to 'PMIDs', and vice versa, get citations for 'DOIs', and get links to 
+    to 'PMIDs', and 'vice versa', get citations for 'DOIs', and get links to 
     full text of articles when available.
 Version: 0.3.3.9300
 License: MIT + file LICENSE
