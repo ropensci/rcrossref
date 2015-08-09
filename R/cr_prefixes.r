@@ -48,6 +48,7 @@
   limit = NULL, sample = NULL, sort = NULL, order = NULL, facet=FALSE, works = FALSE, 
   .progress="none", ...)
 {
+  check_limit(limit)
   filter <- filter_handler(filter)
   facet_log <- facet
   facet <- if(facet) "t" else NULL

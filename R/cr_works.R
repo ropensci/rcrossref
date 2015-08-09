@@ -50,8 +50,9 @@
 #' }
 
 `cr_works` <- function(dois = NULL, query = NULL, filter = NULL, offset = NULL,
-  limit = NULL, sample = NULL, sort = NULL, order = NULL, facet=FALSE, .progress="none", ...)
-{
+  limit = NULL, sample = NULL, sort = NULL, order = NULL, facet=FALSE, .progress="none", ...) {
+  
+  check_limit(limit)
   foo <- function(x, ...){
     path <- if (!is.null(x)) sprintf("works/%s", x) else "works"
     filter <- filter_handler(filter)
@@ -61,49 +62,52 @@
     cr_GET(endpoint = path, args, todf = FALSE, ...)
   }
   
-  if(length(dois) > 1){
-    res <- llply(dois, foo, .progress=.progress, ...)
+  if (length(dois) > 1) {
+    res <- llply(dois, foo, .progress = .progress, ...)
     res <- lapply(res, "[[", "message")
     res <- lapply(res, parse_works)
     df <- rbind_all(res)
     #exclude rows with empty DOI value until CrossRef API supports input validation
-    if(nrow(df[df$DOI == "",]) > 0)
+    if (nrow(df[df$DOI == "", ]) > 0)
      warning("only data with valid CrossRef dois returned",  call. = FALSE)
     df <- df[!df$DOI == "",]
- #  df$dois <- dois
-    list(meta=NULL, data=df, facets=NULL)
+    list(meta = NULL, data = df, facets = NULL)
   } else { 
     tmp <- foo(dois, ...)
-    if(is.null(dois)){
+    if (is.null(dois)) {
       meta <- parse_meta(tmp)
-      list(meta=meta, data=rbind_all(lapply(tmp$message$items, parse_works)), facets=parse_facets(tmp$message$facets))
+      list(meta = meta, 
+           data = rbind_all(lapply(tmp$message$items, parse_works)), 
+           facets = parse_facets(tmp$message$facets))
     } else {
-      list(meta=NULL, data=parse_works(tmp$message), facets=NULL)
+      list(meta = NULL, data = parse_works(tmp$message), facets = NULL)
     }
   }
 }
 
-parse_meta <- function(x){
+parse_meta <- function(x) {
   tmp <- x$message[ !names(x$message) %in% c('facets','items') ]
   st <- tmp$query$`search-terms`
-  data.frame(total_results=tmp$`total-results`, 
-             search_terms=if(is.null(st)) NA else st, 
-             start_index=tmp$query$`start-index`, 
-             items_per_page=tmp$`items-per-page`,
+  data.frame(total_results = tmp$`total-results`, 
+             search_terms = if (is.null(st)) NA else st, 
+             start_index = tmp$query$`start-index`, 
+             items_per_page = tmp$`items-per-page`,
              stringsAsFactors = FALSE)
 }
 
 convtime <- function(x){
-  if(is.null(x)){ NA } else {
-    tt <- format(x, digits=20)
-    tt <- substr(tt, 1, nchar(tt)-3)
-    as.Date(as.POSIXct(as.numeric(tt), origin="1970-01-01", tz = "GMT"))
+  if (is.null(x)) { 
+    NA 
+  } else {
+    tt <- format(x, digits = 20)
+    tt <- substr(tt, 1, nchar(tt) - 3)
+    as.Date(as.POSIXct(as.numeric(tt), origin = "1970-01-01", tz = "GMT"))
   }
 }
 
 parse_facets <- function(x){
   tmp <- lapply(x, function(z) ldply(z$values))
-  if(length(tmp) == 0) NULL else tmp
+  if (length(tmp) == 0) NULL else tmp
 }
 
 parse_works <- function(zzz){
@@ -132,8 +136,8 @@ parse_works <- function(zzz){
                   title = list(paste0(unlist(y[[which]]), collapse = ",")),
                   `container-title` = list(paste0(unlist(y[[which]]), collapse = ","))
     )
-    res <- if(is.null(res) || length(res) == 0) NA else res
-    if(length(res[[1]]) > 1){
+    res <- if (is.null(res) || length(res) == 0) NA else res
+    if (length(res[[1]]) > 1) {
       names(res[[1]]) <- paste(which, names(res[[1]]), sep = "_")
       as.list(unlist(res))
     } else {
@@ -141,16 +145,16 @@ parse_works <- function(zzz){
       res
     }
   }
-  if(all(is.na(zzz))) NULL else data.frame(as.list(unlist(lapply(keys, manip, y=zzz))), stringsAsFactors = FALSE)
+  if (all(is.na(zzz))) NULL else data.frame(as.list(unlist(lapply(keys, manip, y = zzz))), stringsAsFactors = FALSE)
 }
 
 parse_license <- function(x){
-  if(is.null(x)){
+  if (is.null(x)) {
     NULL
   } else {
     date <- make_date(x[[1]]$start$`date-parts`)
-    data.frame(date=date, x[[1]][!names(x[[1]]) == "start"], stringsAsFactors = FALSE)
+    data.frame(date = date, x[[1]][!names(x[[1]]) == "start"], stringsAsFactors = FALSE)
   }
 }
 
-make_date <- function(x) paste0(sprintf("%02d", unlist(x)), collapse="-")
+make_date <- function(x) paste0(sprintf("%02d", unlist(x)), collapse = "-")

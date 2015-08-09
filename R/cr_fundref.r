@@ -41,6 +41,7 @@
   limit = NULL,  sample = NULL, sort = NULL, order = NULL, works = FALSE, 
   .progress="none", ...)
 {
+  check_limit(limit)
   filter <- filter_handler(filter)
   args <- cr_compact(list(query = query, filter = filter, offset = offset, rows = limit,
                           sample = sample, sort = sort, order = order))

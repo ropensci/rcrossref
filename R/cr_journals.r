@@ -33,6 +33,7 @@
 `cr_journals` <- function(issn = NULL, query = NULL, filter = NULL, offset = NULL,
   limit = NULL, sample = NULL, sort = NULL, order = NULL, works=FALSE, .progress="none", ...)
 {
+  check_limit(limit)
   if(works) if(is.null(issn)) stop("If `works=TRUE`, you must give a journal ISSN", call. = FALSE)
   
   foo <- function(x){

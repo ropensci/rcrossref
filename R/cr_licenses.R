@@ -33,6 +33,7 @@
   if("filter" %in% calls)
     stop("The parameter filter has been removed")
   
+  check_limit(limit)
   args <- cr_compact(list(query = query, offset = offset, rows = limit,
                           sample = sample, sort = sort, order = order))
   

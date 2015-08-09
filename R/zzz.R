@@ -67,7 +67,7 @@ cr_GET <- function(endpoint, args, todf=TRUE, ...) {
   doi <- gsub("works/|/agency|funders/", "", endpoint)
   if (!res$status_code < 300) {
     warning(sprintf("%s: %s", res$status_code, get_err(res)), call. = FALSE)
-    list(message =  NA)
+    list(message = NA)
   } else {
     stopifnot(res$headers$`content-type` == "application/json;charset=UTF-8")
     res <- content(res, as = "text")
@@ -99,4 +99,13 @@ col_classes <- function(d, colClasses) {
            factor = as.factor(d[[i]]),
            as(d[[i]], colClasses[i]) ))
   d
+}
+
+check_limit <- function(x) {
+  if (!is.null(x)) {
+    if (x > 1000) {
+      stop("limit parameter must be 1000 or less", 
+           call. = FALSE)
+    }
+  }
 }

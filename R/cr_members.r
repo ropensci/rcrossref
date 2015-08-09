@@ -39,8 +39,9 @@
 
 `cr_members` <- function(member_ids = NULL, query = NULL, filter = NULL, offset = NULL,
   limit = NULL, sample = NULL, sort = NULL, order = NULL, facet=FALSE, works = FALSE, 
-  .progress="none", ...)
-{
+  .progress="none", ...) {
+  
+  check_limit(limit)
   filter <- filter_handler(filter)
   facet <- if(facet) "t" else NULL
   args <- cr_compact(list(query = query, filter = filter, offset = offset, rows = limit,
