@@ -57,7 +57,7 @@ filterchoices <- c(
   'has_update_policy','container_title','publisher_name','category_name','type_name'
 )
 
-cr_GET <- function(endpoint, args, todf=TRUE, ...) {
+cr_GET <- function(endpoint, args, todf = TRUE, on_error = warning, ...) {
   url <- sprintf("http://api.crossref.org/%s", endpoint)
   if (length(args) == 0) {
     res <- GET(url, ...)
@@ -66,7 +66,7 @@ cr_GET <- function(endpoint, args, todf=TRUE, ...) {
   }
   doi <- gsub("works/|/agency|funders/", "", endpoint)
   if (!res$status_code < 300) {
-    warning(sprintf("%s: %s", res$status_code, get_err(res)), call. = FALSE)
+    on_error(sprintf("%s: %s", res$status_code, get_err(res)), call. = FALSE)
     list(message = NA)
   } else {
     stopifnot(res$headers$`content-type` == "application/json;charset=UTF-8")
@@ -108,4 +108,8 @@ check_limit <- function(x) {
            call. = FALSE)
     }
   }
+}
+
+ifnullna <- function(x) {
+  if (is.null(x)) NA else x
 }
