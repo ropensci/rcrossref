@@ -1,14 +1,26 @@
-language: r
+language: c
+sudo: required
 
-r_github_packages:
- - jimhester/robustr
- - jimhester/covr
+before_install:
+  - curl -OL https://raw.githubusercontent.com/metacran/r-builder/master/pkg-build.sh
+  - chmod 755 pkg-build.sh
+  - ./pkg-build.sh bootstrap
 
-after_success:
- - Rscript -e 'covr::codecov()'
+install:
+  - ./pkg-build.sh install_deps
+  - ./pkg-build.sh install_github jimhester/covr
 
 before_script:
  - sudo apt-get install poppler-utils
+
+script:
+  - ./pkg-build.sh run_tests
+
+after_failure:
+  - ./pkg-build.sh dump_logs
+
+after_success:
+  - Rscript -e 'covr::codecov()'
 
 notifications:
   email:
@@ -16,3 +28,9 @@ notifications:
     on_failure: change
   slack:
     secure: Q8AQQdRyHJC8fcyc5vD+H25QHfi6mkU8r7tKMxPLkA5RFkHQsOoO+9eUSH6g55rUw3EyIcj7SUbxmbjH4dhh3RNeLz+OmEcUzwKK1kza0VUWOgRwytHY66oigUFwewYwn+D+bNUYhcA/iXkBtlEx/oI+C9MSP2qR+Bd9AYfc5nw=
+
+env:
+  matrix:
+    - RVERSION=oldrel
+    - RVERSION=release
+    - RVERSION=devel
