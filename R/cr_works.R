@@ -113,7 +113,7 @@ parse_facets <- function(x){
 parse_works <- function(zzz){
   keys <- c('subtitle','issued','score','prefix','container-title','reference-count','deposited',
             'title','type','DOI','URL','source','publisher','indexed','member','page','ISBN',
-            'subject','author','issue','ISSN','volume','license')
+            'subject','author','issue','ISSN','volume','license','link')
   manip <- function(which="issued", y){
     res <- switch(which, 
                   license = list(parse_license(y[[which]])),
@@ -134,7 +134,8 @@ parse_works <- function(zzz){
                   ISSN = list(paste0(unlist(y[[which]]), collapse = ",")),
                   subject = list(paste0(unlist(y[[which]]), collapse = ",")),
                   title = list(paste0(unlist(y[[which]]), collapse = ",")),
-                  `container-title` = list(paste0(unlist(y[[which]]), collapse = ","))
+                  `container-title` = list(paste0(unlist(y[[which]]), collapse = ",")),
+                  link = list(get_links(y[[which]]))
     )
     res <- if (is.null(res) || length(res) == 0) NA else res
     if (length(res[[1]]) > 1) {

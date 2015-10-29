@@ -104,3 +104,17 @@ parse_members <- function(x){
              tokens = paste_longer(x$tokens),
              stringsAsFactors = FALSE)  
 }
+
+# links = get_links(x$link),
+
+get_links <- function(v) {
+  if (!is.null(v)) {
+    lout <- list()
+    for (i in seq_along(v)) {
+      lout[[i]] <- data.frame(setNames(v[[i]], paste0("link", i, "_", names(v[[i]]))), stringsAsFactors = FALSE)
+    }
+    do.call("cbind", lout)
+  } else {
+    NULL
+  }
+}
