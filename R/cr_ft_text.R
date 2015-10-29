@@ -103,20 +103,32 @@
 #' #### one license is for open access articles, but none with full text available
 #' # cr_works(filter=list(license_url="http://www.elsevier.com/open-access/userlicense/1.0/",
 #' #                      has_full_text=TRUE))
+#' 
+#' # new work
+#' out <- cr_members(78, filter=c(has_full_text = TRUE), works = TRUE)
+#' ## set key first
+#' # Sys.setenv(CROSSREF_TDM_ELSEVIER = "your-key")
+#' ## XML
+#' link <- cr_ft_links(out$data$DOI[1], "xml")
+#' res <- cr_ft_text(url = link, type = "xml")
+#' ## plain text
+#' link <- cr_ft_links(out$data$DOI[1], "plain")
+#' res <- cr_ft_text(url = link, "plain")
 #' }
 
 cr_ft_text <- function(url, type='xml', path = "~/.crossref", overwrite = TRUE,
-  read=TRUE, verbose=TRUE, cache=TRUE, ...)
-{
+  read=TRUE, verbose=TRUE, cache=TRUE, ...) {
+  
+  auth <- cr_auth(url, type)
   switch( pick_type(type, url),
-          xml = getTEXT(get_url(url, 'xml'), type, ...),
-          plain = getTEXT(get_url(url, 'xml'), type, ...),
-          pdf = getPDF(get_url(url, 'pdf'), path, overwrite, type, read, verbose, cache, ...)
+          xml = getTEXT(get_url(url, 'xml'), type, auth, ...),
+          plain = getTEXT(get_url(url, 'xml'), type, auth, ...),
+          pdf = getPDF(get_url(url, 'pdf'), path, auth, overwrite, type, read, verbose, cache, ...)
   )
 }
 
 get_url <- function(a,b){
-  if(is(a, "tdmurl")) a[[1]] else a[[b]]
+  if (is(a, "tdmurl")) a[[1]] else a[[b]]
 }
 
 #' @export
@@ -136,23 +148,45 @@ cr_ft_pdf <- function(url, path = "~/.crossref", overwrite = TRUE, read=TRUE, ca
 
 pick_type <- function(x, z){
   x <- match.arg(x, c("xml","plain","pdf"))
-  if(length(z) == 1) {
-    avail <- attr(z, which="type")
+  if (length(z) == 1) {
+    avail <- attr(z, which = "type")
   } else {
-    avail <- vapply(z, function(x) attr(x, which="type"), character(1), USE.NAMES = FALSE)
+    avail <- vapply(z, function(x) attr(x, which = "type"), character(1), USE.NAMES = FALSE)
   }
-  if(!x %in% avail) stop("Chosen type not available in links", call. = FALSE)
+  if (!x %in% avail) stop("Chosen type not available in links", call. = FALSE)
   x
 }
 
-getTEXT <- function(x, type, ...){
-  res <- GET(x, ...)
+cr_auth <- function(url, type) {
+  mem <- attr(url, "member")
+  mem_num <- basename(mem)
+  if (mem_num %in% c(78)) {
+    type <- switch(type,
+                   xml = "text/xml",
+                   plain = "text/plain",
+                   pdf = "application/pdf"
+    )
+    if (mem_num == 78) {
+      key <- Sys.getenv("CROSSREF_TDM_ELSEVIER")
+      add_headers(`X-ELS-APIKey` = key, Accept = type)
+    } else {
+      NULL
+    }
+    # add_headers(`CR-TDM-Client_Token` = key, Accept = type)
+    # add_headers(`CR-Clickthrough-Client-Token` = key, Accept = type)
+  } else {
+    NULL
+  }
+}
+
+getTEXT <- function(x, type, auth, ...){
+  res <- GET(x, auth, ...)
   switch(type,
          xml = XML::xmlParse(httr::content(res, as = "text")),
          plain = httr::content(res, as = "text"))
 }
 
-getPDF <- function(url, path, overwrite, type, read, verbose, cache=FALSE, ...) {
+getPDF <- function(url, path, auth, overwrite, type, read, verbose, cache=FALSE, ...) {
   if (!file.exists(path)) dir.create(path, showWarnings = FALSE, recursive = TRUE)
 
   # pensoft special handling
