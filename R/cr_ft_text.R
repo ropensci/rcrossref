@@ -90,30 +90,25 @@
 #' identical(cacheyes, cacheno)
 #'
 #'
-#' ###################### Things to stay away from
 #' ## elife
 #' #### Stay away from eLife for now, they aren't setting content types right, etc.
 #'
-#' ## elsevier - they don't actually give full text, ha ha, jokes on us!
-#' ## requires extra authentication, which we may include later on
-#' # out <- cr_members(78, filter=c(has_full_text = TRUE), works = TRUE)
-#' # links <- cr_ft_links(out$data$DOI[1], "all")
-#' # cr_ft_text(links, 'xml') # notice how this is just metadata
-#' ### elsevier articles that are open access
-#' #### one license is for open access articles, but none with full text available
-#' # cr_works(filter=list(license_url="http://www.elsevier.com/open-access/userlicense/1.0/",
-#' #                      has_full_text=TRUE))
-#' 
-#' # new work
+#' ## elsevier
+#' ## requires extra authentication
 #' out <- cr_members(78, filter=c(has_full_text = TRUE), works = TRUE)
 #' ## set key first
 #' # Sys.setenv(CROSSREF_TDM_ELSEVIER = "your-key")
 #' ## XML
 #' link <- cr_ft_links(out$data$DOI[1], "xml")
-#' res <- cr_ft_text(url = link, type = "xml")
+#' # res <- cr_ft_text(url = link, type = "xml")
 #' ## plain text
 #' link <- cr_ft_links(out$data$DOI[1], "plain")
-#' res <- cr_ft_text(url = link, "plain")
+#' # res <- cr_ft_text(url = link, "plain")
+#' 
+#' ### elsevier OA articles
+#' #### one license is for open access articles, but none with full text available
+#' # cr_works(filter=list(license_url="http://www.elsevier.com/open-access/userlicense/1.0/",
+#' #                      has_full_text=TRUE))
 #' }
 
 cr_ft_text <- function(url, type='xml', path = "~/.crossref", overwrite = TRUE,
