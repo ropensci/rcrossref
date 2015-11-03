@@ -3,7 +3,7 @@ context("testing cr_cn")
 test_that("cr_cn returns", {
   skip_on_cran()
   
-  b <- cr_cn(dois="10.1126/science.169.3946.635", format="citeproc-json")
+  b <- cr_cn(dois = "10.1126/science.169.3946.635", format = "citeproc-json")
   c <- cr_cn("10.1126/science.169.3946.635", "rdf-xml")
   d <- cr_cn("10.1126/science.169.3946.635", "crossref-xml")
   e <- cr_cn("10.1126/science.169.3946.635", "bibentry")
@@ -17,7 +17,7 @@ test_that("cr_cn returns", {
   expect_is(f, "character")
   
   # correct values
-  expect_match(b$subject[[1]], "General")
+  expect_match(b$`container-title`, "Science")
   expect_match(unclass(e)[[1]]$year, "1970")
 })
 

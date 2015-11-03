@@ -105,6 +105,13 @@
 #' link <- cr_ft_links(out$data$DOI[1], "plain")
 #' # res <- cr_ft_text(url = link, "plain")
 #' 
+#' ## IEEE
+#' link <- "http://ieeexplore.ieee.org/iel5/23/5658062/05604718.pdf?arnumber=5604718"
+#'
+#' out <- cr_members(263, filter=c(has_full_text = TRUE), works = TRUE)
+#' link <- cr_ft_links(out$data$DOI[20], "pdf")
+#' res <- cr_ft_text(url = link, type = "pdf")
+#' 
 #' ### elsevier OA articles
 #' #### one license is for open access articles, but none with full text available
 #' # cr_works(filter=list(license_url="http://www.elsevier.com/open-access/userlicense/1.0/",
@@ -118,12 +125,13 @@ cr_ft_text <- function(url, type='xml', path = "~/.crossref", overwrite = TRUE,
   switch( pick_type(type, url),
           xml = getTEXT(get_url(url, 'xml'), type, auth, ...),
           plain = getTEXT(get_url(url, 'xml'), type, auth, ...),
-          pdf = getPDF(get_url(url, 'pdf'), path, auth, overwrite, type, read, verbose, cache, ...)
+          pdf = getPDF(url = get_url(url, 'pdf'), path, auth, overwrite, type, read, verbose, cache, ...)
   )
 }
 
-get_url <- function(a,b){
-  if (is(a, "tdmurl")) a[[1]] else a[[b]]
+get_url <- function(a, b){
+  url <- if (is(a, "tdmurl")) a[[1]] else a[[b]]
+  sub("\\?.+", "", url)  
 }
 
 #' @export
@@ -155,18 +163,23 @@ pick_type <- function(x, z){
 cr_auth <- function(url, type) {
   mem <- attr(url, "member")
   mem_num <- basename(mem)
-  if (mem_num %in% c(78)) {
+  if (mem_num %in% c(78, 263)) {
     type <- switch(type,
                    xml = "text/xml",
                    plain = "text/plain",
                    pdf = "application/pdf"
     )
-    if (mem_num == 78) {
-      key <- Sys.getenv("CROSSREF_TDM_ELSEVIER")
-      add_headers(`X-ELS-APIKey` = key, Accept = type)
-    } else {
-      NULL
-    }
+    switch(mem_num, 
+        `78` = {
+          key <- Sys.getenv("CROSSREF_TDM_ELSEVIER")
+          add_headers(`X-ELS-APIKey` = key, Accept = type)
+        },
+        `263` = {
+          key <- Sys.getenv("CROSSREF_TDM")
+          add_headers(`CR-TDM-Client_Token` = key, Accept = type)
+          # add_headers(`CR-Clickthrough-Client-Token` = key, Accept = type)
+        }
+    )
     # add_headers(`CR-TDM-Client_Token` = key, Accept = type)
     # add_headers(`CR-Clickthrough-Client-Token` = key, Accept = type)
   } else {
@@ -199,7 +212,7 @@ getPDF <- function(url, path, auth, overwrite, type, read, verbose, cache=FALSE,
     }
   } else {
     if (verbose) message("Downloading pdf...")
-    res <- GET(url, accept("application/pdf"), write_disk(path = filepath, overwrite = overwrite), ...)
+    res <- GET(url, accept("application/pdf"), write_disk(path = filepath, overwrite = overwrite), auth, verbose())
     filepath <- res$request$output$path
   }
 

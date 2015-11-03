@@ -7,8 +7,8 @@ test_that("cr_ft_links returns correct class", {
   a <- cr_ft_links(doi = "10.5555/515151", "pdf")
   out <- cr_works(filter = c(has_full_text = TRUE), limit = 50)
   dois <- out$data$DOI
-  b <- cr_ft_links("10.7554/elife.04389", "pdf")
-  d <- cr_ft_links("10.1016/s0016-5085(03)02155-3", "all")
+  b <- cr_ft_links("10.7554/elife.06200", "pdf")
+  d <- cr_ft_links("10.3897/phytokeys.42.7604", "all")
   
   expect_is(a, "tdmurl")
   expect_is(a[[1]], "character")
@@ -30,7 +30,7 @@ test_that("cr_ft_links returns correct class", {
   
   expect_equal(attr(a, "type"), "pdf")
   expect_equal(attr(b, "type"), "pdf")
-  expect_equal(attr(d[[2]], "type"), "plain")
+  expect_equal(attr(d[[2]], "type"), "xml")
 
   expect_null(cr_ft_links("10.1007/978-1-4302-1089-4"))
 })

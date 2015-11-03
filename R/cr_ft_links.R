@@ -47,11 +47,11 @@
 
 cr_ft_links <- function(doi, type='xml', ...) {
   res <- cr_works_links(dois = doi, ...)[[1]]
-  if (is.null(unlist(res))) {
+  if (is.null(unlist(res$links))) {
     NULL 
   } else {  
     elife <- if (grepl("elife", res$links[[1]]$URL)) TRUE else FALSE
-    withtype <- if (type == 'all') res else Filter(function(x) grepl(type, x$`content-type`), res$links)
+    withtype <- if (type == 'all') res$links else Filter(function(x) grepl(type, x$`content-type`), res$links)
     if (is.null(withtype) || length(withtype) == 0) {
       NULL
     } else {
