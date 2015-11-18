@@ -131,7 +131,11 @@ cr_ft_text <- function(url, type='xml', path = "~/.crossref", overwrite = TRUE,
 
 get_url <- function(a, b){
   url <- if (is(a, "tdmurl")) a[[1]] else a[[b]]
-  sub("\\?.+", "", url)  
+  if (grepl("pensoft", url)) {
+    url
+  } else {
+    sub("\\?.+", "", url)
+  }
 }
 
 #' @export
@@ -169,7 +173,7 @@ cr_auth <- function(url, type) {
                    plain = "text/plain",
                    pdf = "application/pdf"
     )
-    switch(mem_num, 
+    switch(mem_num,
         `78` = {
           key <- Sys.getenv("CROSSREF_TDM_ELSEVIER")
           add_headers(`X-ELS-APIKey` = key, Accept = type)
@@ -199,7 +203,12 @@ getPDF <- function(url, path, auth, overwrite, type, read, verbose, cache=FALSE,
 
   # pensoft special handling
   if ( grepl("pensoft", url[[1]]) ) {
-    filepath <- file.path(path, paste0(sub("/", ".", attr(url, "doi")), ".pdf"))
+    doi <- attr(url, "doi")
+    if (is.null(doi)) {
+      tmp <- strsplit(url, "=")[[1]]
+      doi <- tmp[length(tmp)]
+    }
+    filepath <- file.path(path, paste0(sub("/", ".", doi), ".pdf"))
   } else {
     ff <- if ( !grepl(type, basename(url)) ) paste0(basename(url), ".", type) else basename(url)
     filepath <- file.path(path, ff)
