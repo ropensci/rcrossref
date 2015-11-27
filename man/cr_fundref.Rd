@@ -48,6 +48,12 @@ BEWARE: The API will only work for CrossRef DOIs.
 
 This function name changing to \code{cr_funders} in the next version - both work for now
 }
+\section{NOTE}{
+
+Funders without IDs don't show up on the /funders route, and in this 
+function. Some funders don't have assigned IDs in Crossref's system, 
+so won't show up in searches.
+}
 \examples{
 \dontrun{
 cr_fundref(query="NSF", limit=1)

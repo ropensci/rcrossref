@@ -12,6 +12,11 @@
 #' This function name changing to \code{cr_funders} in the next version - both work for now
 #' @references \url{https://github.com/CrossRef/rest-api-doc/blob/master/rest_api.md}
 #' 
+#' @section NOTE:
+#' Funders without IDs don't show up on the /funders route, and in this 
+#' function. Some funders don't have assigned IDs in Crossref's system, 
+#' so won't show up in searches. 
+#' 
 #' @examples \dontrun{
 #' cr_fundref(query="NSF", limit=1)
 #' cr_fundref(query="NSF")
