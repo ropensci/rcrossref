@@ -8,6 +8,8 @@
 #' @param works (logical) If TRUE, works returned as well, if not then not.
 #' 
 #' @details BEWARE: The API will only work for CrossRef DOIs.
+#' 
+#' This function name changing to \code{cr_funders} in the next version - both work for now
 #' @references \url{https://github.com/CrossRef/rest-api-doc/blob/master/rest_api.md}
 #' 
 #' @examples \dontrun{
@@ -36,11 +38,66 @@
 #' cr_fundref(dois=c("10.13039/100000001","asfasf"))
 #' cr_fundref(dois=c("10.13039/100000001","asfasf"), works=TRUE)
 #' }
-
 `cr_fundref` <- function(dois = NULL, query = NULL, filter = NULL, offset = NULL,
   limit = NULL,  sample = NULL, sort = NULL, order = NULL, works = FALSE, 
-  .progress="none", ...)
-{
+  .progress="none", ...) {
+  
+  .Deprecated(msg = "function name changing to cr_funders in the next version\nboth work for now")
+  
+  check_limit(limit)
+  filter <- filter_handler(filter)
+  args <- cr_compact(list(query = query, filter = filter, offset = offset, rows = limit,
+                          sample = sample, sort = sort, order = order))
+  
+  if(length(dois) > 1){
+    res <- llply(dois, fundref_GET, args=args, works=works, ..., .progress=.progress)
+    out <- setNames(lapply(res, "[[", "message"), dois)
+    if( any(is.na(out)) ){
+      out <- cr_compact(lapply(out, function(x){
+        if( all(is.na(x)) ) NULL else x
+      }))
+    }
+    if(length(out) == 0){
+      NA
+    } else {
+      if(works){
+        tmp <- lapply(out, function(x) lapply(x$items, parse_works))
+        tmp <- tmp[!sapply(tmp, length) == 0]
+        rbind_all(do.call(c, tmp))
+      } else { 
+        lapply(out, parse_fund)
+      }
+    }
+  } else { 
+    res <- fundref_GET(dois, args=args, works=works, ...) 
+    if( all(is.na(res)) ){
+      list(meta=NA, data=NA)
+    } else {
+      if(is.null(dois)){
+        list(meta=parse_meta(res), 
+             data=rbind_all(lapply(res$message$items, parse_fundref)))
+      } else {
+        if(works){
+          wout <- rbind_all(lapply(res$message$items, parse_works))
+          meta <- parse_meta(res)
+        } else {
+          wout <- parse_fund(res$message)
+          meta <- NULL
+        }
+        list(meta=meta, data=wout)
+      }
+    }
+  }
+}
+
+#' @export
+#' @rdname cr_fundref
+`cr_funders` <- function(dois = NULL, query = NULL, filter = NULL, offset = NULL,
+                         limit = NULL,  sample = NULL, sort = NULL, order = NULL, works = FALSE, 
+                         .progress="none", ...) {
+  
+  .Deprecated(msg = "function name changing to cr_funders in the next version\nboth work for now")
+  
   check_limit(limit)
   filter <- filter_handler(filter)
   args <- cr_compact(list(query = query, filter = filter, offset = offset, rows = limit,
