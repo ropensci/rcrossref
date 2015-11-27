@@ -2,9 +2,9 @@
 #'
 #' @export
 #' @name filters
-#' @param x (character) Optional filter name. If not given, all filters 
+#' @param x (character) Optional filter name. If not given, all filters
 #' returned.
-#' @details Note that all filter names in this package have dashes replaced 
+#' @details Note that all filter names in this package have dashes replaced
 #' with underscores as dashes cause problems in an R console.
 #' @examples
 #' filter_names()

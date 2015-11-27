@@ -11,14 +11,14 @@ filter_names()
 filter_details(x = NULL)
 }
 \arguments{
-\item{x}{(character) Optional filter name. If not given, all filters 
+\item{x}{(character) Optional filter name. If not given, all filters
 returned.}
 }
 \description{
 Get filter details and names.
 }
 \details{
-Note that all filter names in this package have dashes replaced 
+Note that all filter names in this package have dashes replaced
 with underscores as dashes cause problems in an R console.
 }
 \examples{
