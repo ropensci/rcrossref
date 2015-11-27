@@ -4,8 +4,8 @@
 \alias{cr_licenses}
 \title{Search CrossRef licenses}
 \usage{
-cr_licenses(query = NULL, offset = NULL, limit = NULL, sample = NULL,
-  sort = NULL, order = NULL, .progress = "none", ...)
+cr_licenses(query = NULL, offset = NULL, limit = NULL, sort = NULL,
+  order = NULL, .progress = "none", ...)
 }
 \arguments{
 \item{query}{Query terms}
@@ -14,9 +14,6 @@ cr_licenses(query = NULL, offset = NULL, limit = NULL, sample = NULL,
 
 \item{limit}{Number of results to return in the query. Not relavant when searching with specific
 dois. Default: 20. Max: 1000}
-
-\item{sample}{(integer) Number of random results to return. when you use the sample parameter, 
-the rows and offset parameters are ignored.}
 
 \item{sort}{(character) Field to sort on, one of score, relevance, updated, deposited, indexed, 
 or published.}

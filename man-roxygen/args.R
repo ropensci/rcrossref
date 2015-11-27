@@ -4,7 +4,7 @@
 #' @param limit Number of results to return in the query. Not relavant when searching with specific
 #' dois. Default: 20. Max: 1000
 #' @param sample (integer) Number of random results to return. when you use the sample parameter, 
-#' the rows and offset parameters are ignored.
+#' the rows and offset parameters are ignored. Ignored unless \code{works=TRUE}
 #' @param sort (character) Field to sort on, one of score, relevance, updated, deposited, indexed, 
 #' or published.
 #' @param order (character) Sort order, one of 'asc' or 'desc'

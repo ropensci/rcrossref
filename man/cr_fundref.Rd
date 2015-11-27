@@ -26,7 +26,7 @@ cr_funders(dois = NULL, query = NULL, filter = NULL, offset = NULL,
 dois. Default: 20. Max: 1000}
 
 \item{sample}{(integer) Number of random results to return. when you use the sample parameter, 
-the rows and offset parameters are ignored.}
+the rows and offset parameters are ignored. Ignored unless \code{works=TRUE}}
 
 \item{sort}{(character) Field to sort on, one of score, relevance, updated, deposited, indexed, 
 or published.}

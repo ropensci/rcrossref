@@ -6,8 +6,6 @@
 #' @param offset Number of record to start at, from 1 to infinity.
 #' @param limit Number of results to return in the query. Not relavant when searching with specific
 #' dois. Default: 20. Max: 1000
-#' @param sample (integer) Number of random results to return. when you use the sample parameter, 
-#' the rows and offset parameters are ignored.
 #' @param sort (character) Field to sort on, one of score, relevance, updated, deposited, indexed, 
 #' or published.
 #' @param order (character) Sort order, one of 'asc' or 'desc'
@@ -26,7 +24,7 @@
 #' cr_licenses(query = 'elsevier')
 #' }
 
-`cr_licenses` <- function(query = NULL, offset = NULL, limit = NULL, sample = NULL, 
+`cr_licenses` <- function(query = NULL, offset = NULL, limit = NULL,
   sort = NULL, order = NULL, .progress="none", ...) {
   
   calls <- names(sapply(match.call(expand.dots = TRUE), deparse))[-1]
@@ -35,7 +33,7 @@
   
   check_limit(limit)
   args <- cr_compact(list(query = query, offset = offset, rows = limit,
-                          sample = sample, sort = sort, order = order))
+                          sort = sort, order = order))
   
   tmp <- licenses_GET(args=args, ...)
   df <- rbind_all(lapply(tmp$message$items, data.frame, stringsAsFactors=FALSE))
