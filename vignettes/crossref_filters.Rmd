@@ -56,5 +56,13 @@ Filters allow you to narrow queries. All filter results are lists.  The followin
 | `type_name` | | metadata for records with an exacty matching type label |
 | `award_number` |{`award_number`} |metadata for records with a matching award nunber. Optionally combine with `award_funder` |
 | `award_funder` | {`funder doi or id`} | metadata for records with an award with matching funder. Optionally combine with `award_number` |
+| `from_created_date` | {`date`} | metadata first deposited since (inclusive) `{date}` |
+| `until_created_date` | {`date`} | metadata first deposited before (inclusive) `{date}` |
+| `affiliation` | | metadata for records with at least one contributor with the given affiliation |
+| `has_affiliation`| | metadata for records that have any affiliation information |
+| `article_number` | | metadata for records with a given article number |
+| `alternative_id` | | metadata for records with the given alternative ID, which may be a publisher_specific ID, or any other identifier a publisher may have provided |
+| `assertion_group` | | metadata for records with an assertion in a particular group |
+| `assertion` | | metadata for records with a particular named assertion |
 
 [^*]: Not implemented yet.
