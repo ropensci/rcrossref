@@ -1,7 +1,6 @@
 #' Crosscite - citation formatter
 #'
 #' @export
-#'
 #' @param dois Search by a single DOI or many DOIs.
 #' @param style a CSL style (for text format only). See \code{\link{get_styles}} 
 #' for options. Default: apa. If there's a style that CrossRef doesn't support you'll get a 
@@ -10,6 +9,9 @@
 #' @template moreargs
 #' @details See \url{http://www.crosscite.org/cn/} for more info on the
 #'   	Crossref Content Negotiation API service.
+#'   	
+#' This function is now deprecated. It will be removed in the next version
+#' of this package. Use \code{\link{cr_cn}} instead.
 #'
 #' @examples \dontrun{
 #' crosscite("10.5284/1011335")
@@ -18,6 +20,8 @@
 #' }
 
 `crosscite` <- function(dois, style = 'apa', locale = "en-US", .progress = "none", ...) {
+  .Deprecated(new = "cr_cn", package = "rcrossref", 
+              msg = "crosscite is deprecated - will be removed in next version, use cr_cn")
   if(length(dois) > 1) {
     llply(dois, function(z, ...) {
       out = try(ccite(z, style, locale, ...), silent=TRUE)

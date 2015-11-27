@@ -26,6 +26,9 @@ Crosscite - citation formatter
 \details{
 See \url{http://www.crosscite.org/cn/} for more info on the
   	Crossref Content Negotiation API service.
+  	
+This function is now deprecated. It will be removed in the next version
+of this package. Use \code{\link{cr_cn}} instead.
 }
 \examples{
 \dontrun{
