@@ -55,6 +55,8 @@ cr_works(query="global state", filter=c(has_orcid=TRUE), limit=3)
 cr_works(filter=c(has_orcid=TRUE, from_pub_date='2004-04-04'))
 # Only full text articles 
 cr_works(filter=c(has_full_text = TRUE))
+# has affilitation data
+cr_works(filter=c(has_affiliation = TRUE))
 
 # Querying dois
 cr_works(dois='10.1063/1.3593378')
