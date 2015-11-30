@@ -57,7 +57,7 @@ test_that("cr_works fails correctly", {
   skip_on_cran()
   
   library('httr')
-  expect_error(cr_works(config=timeout(0.01)))
+  expect_error(cr_works(config = timeout(0.01)))
   expect_equal(NROW(cr_works(query = "adfaaf")$data), 0)
 })
 
@@ -65,6 +65,22 @@ test_that("cr_works fails correctly", {
 test_that("cr_works warns correctly", {
   skip_on_cran()
   
-  expect_warning(cr_works(dois=c('blblbl', '10.1038/nnano.2014.279')), "only data with valid")
-  expect_equal(NROW(suppressWarnings(cr_works(dois=c('blblbl', '10.1038/nnano.2014.279'))$data)), 1)
+  expect_warning(cr_works(dois = c('blblbl', '10.1038/nnano.2014.279')), "only data with valid")
+  expect_equal(NROW(suppressWarnings(cr_works(dois = c('blblbl', '10.1038/nnano.2014.279'))$data)), 1)
+})
+
+
+test_that("cr_works - parses links data correctly", {
+  skip_on_cran()
+  
+  aa <- cr_works(limit = 10)
+  bb <- cr_works(filter = c(has_full_text = TRUE), limit = 10)
+  
+  expect_is(aa, "list")
+  expect_is(bb, "list")
+  
+  expect_false(any(grepl("link", names(aa$data))))
+  expect_true(any(grepl("link", names(bb$data))))
+  
+  expect_true(grepl("http", bb$data$link_link1_URL[1]))
 })
