@@ -16,7 +16,7 @@
 #' id_converter("PMC2883744", "pmcid")
 #' 
 #' # error, wrong type passed for id given
-#' id_converter("PMC2883744", "doi")
+#' # id_converter("PMC2883744", "doi")
 #' }
 `id_converter` <- function(x, type = "doi", ...){
   args <- list(tool = "my_tool", email = "my_email@example.com", 
@@ -27,4 +27,3 @@
 }
 
 idcon_base <- function() "http://www.ncbi.nlm.nih.gov/pmc/utils/idconv/v1.0"
-# http://www.ncbi.nlm.nih.gov/pmc/utils/idconv/v1.0/?tool=my_tool&email=my_email@example.com&ids=10.1038/ng.590&idtype=doi&format=json

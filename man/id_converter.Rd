@@ -28,7 +28,7 @@ id_converter("20495566", "pmid")
 id_converter("PMC2883744", "pmcid")
 
 # error, wrong type passed for id given
-id_converter("PMC2883744", "doi")
+# id_converter("PMC2883744", "doi")
 }
 }
 \references{
