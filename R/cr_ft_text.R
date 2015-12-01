@@ -50,7 +50,7 @@
 #' ### pdf
 #' cr_ft_text(links, "pdf", read=FALSE)
 #' cr_ft_text(links, "pdf")
-#'
+#' 
 #' ### another pensoft e.g.
 #' links <- cr_ft_links("10.3897/phytokeys.42.7604", "all")
 #' pdf_read <- cr_ft_text(url = links, type = "pdf", read=FALSE, verbose = FALSE)
@@ -104,18 +104,6 @@
 #' ## plain text
 #' link <- cr_ft_links(out$data$DOI[1], "plain")
 #' # res <- cr_ft_text(url = link, "plain")
-#' 
-#' ## IEEE
-#' link <- "http://ieeexplore.ieee.org/iel5/23/5658062/05604718.pdf?arnumber=5604718"
-#'
-#' out <- cr_members(263, filter=c(has_full_text = TRUE), works = TRUE)
-#' link <- cr_ft_links(out$data$DOI[20], "pdf")
-#' res <- cr_ft_text(url = link, type = "pdf")
-#' 
-#' ### elsevier OA articles
-#' #### one license is for open access articles, but none with full text available
-#' # cr_works(filter=list(license_url="http://www.elsevier.com/open-access/userlicense/1.0/",
-#' #                      has_full_text=TRUE))
 #' }
 
 cr_ft_text <- function(url, type='xml', path = "~/.crossref", overwrite = TRUE,
@@ -140,18 +128,21 @@ get_url <- function(a, b){
 
 #' @export
 #' @rdname cr_ft_text
-cr_ft_plain <- function(url, path = "~/.crossref", overwrite = TRUE, read=TRUE, verbose=TRUE, ...)
-  getTEXT(url$plain[[1]], "plain", ...)
+cr_ft_plain <- function(url, path = "~/.crossref", overwrite = TRUE, read=TRUE, verbose=TRUE, ...) {
+  getTEXT(url$plain[[1]], "plain", cr_auth(url, 'plain'), ...)
+}
 
 #' @export
 #' @rdname cr_ft_text
-cr_ft_xml <- function(url, path = "~/.crossref", overwrite = TRUE, read=TRUE, verbose=TRUE, ...)
-  getTEXT(url$xml[[1]], "xml", ...)
+cr_ft_xml <- function(url, path = "~/.crossref", overwrite = TRUE, read=TRUE, verbose=TRUE, ...) {
+  getTEXT(url$xml[[1]], "xml", cr_auth(url, 'xml'), ...)
+}
 
 #' @export
 #' @rdname cr_ft_text
-cr_ft_pdf <- function(url, path = "~/.crossref", overwrite = TRUE, read=TRUE, cache=FALSE, verbose=TRUE, ...)
-  getPDF(url$pdf[[1]], path, overwrite, "pdf", read, verbose, cache, ...)
+cr_ft_pdf <- function(url, path = "~/.crossref", overwrite = TRUE, read=TRUE, cache=FALSE, verbose=TRUE, ...) {
+  getPDF(url$pdf[[1]], path, cr_auth(url, 'pdf'), overwrite, "pdf", read, verbose, cache, ...)
+}
 
 pick_type <- function(x, z){
   x <- match.arg(x, c("xml","plain","pdf"))
@@ -221,7 +212,7 @@ getPDF <- function(url, path, auth, overwrite, type, read, verbose, cache=FALSE,
     }
   } else {
     if (verbose) message("Downloading pdf...")
-    res <- GET(url, accept("application/pdf"), write_disk(path = filepath, overwrite = overwrite), auth, verbose())
+    res <- GET(url, accept("application/pdf"), write_disk(path = filepath, overwrite = overwrite), auth)
     filepath <- res$request$output$path
   }
 
