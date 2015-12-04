@@ -93,24 +93,25 @@
   cn <- function(doi, ...){
     url <- paste("http://dx.doi.org", doi, sep = "/")
     pick <- c(
-           "rdf-xml" = "application/rdf+xml",
-           "turtle" = "text/turtle",
+           "rdf-xml" = "transform/application/rdf+xml",
+           "turtle" = "transform/text/turtle",
            "citeproc-json" = "transform/application/vnd.citationstyles.csl+json",
-           "citeproc-json-ish" = "application/vnd.citationstyles.csl+json",
+           "citeproc-json-ish" = "transform/application/vnd.citationstyles.csl+json",
            "text" = "text/x-bibliography",
-           "ris" = "application/x-research-info-systems",
-           "bibtex" = "application/x-bibtex",
-           "crossref-xml" = "application/vnd.crossref.unixref+xml",
+           "ris" = "transform/application/x-research-info-systems",
+           "bibtex" = "transform/application/x-bibtex",
+           "crossref-xml" = "transform/application/vnd.crossref.unixref+xml",
            "datacite-xml" = "application/vnd.datacite.datacite+xml",
-           "bibentry" = "application/x-bibtex",
-           "crossref-tdm" = "application/vnd.crossref.unixsd+xml")
+           "bibentry" = "transform/application/x-bibtex",
+           "crossref-tdm" = "transform/application/vnd.crossref.unixsd+xml")
     type <- pick[[format]]
-    if (format == "citeproc-json") {
+    if (!format %in% c("text", "datacite-xml")) {
+   # if (format == "citeproc-json") {
       response <- GET(file.path("http://api.crossref.org/works", doi, type), ...)
     } else {
       if (format == "text") {
         type <- paste(type, "; style = ", style, "; locale = ", locale, sep = "")
-      }
+        }
       response <- GET(url, ..., add_headers(Accept = type, followlocation = TRUE))
     }
     warn_status(response)
