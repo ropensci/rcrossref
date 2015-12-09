@@ -1,30 +1,33 @@
 #' Get citations in various formats from CrossRef.
-#'
+#' 
 #' @export
-#'
+#' 
 #' @param dois Search by a single DOI or many DOIs.
-#' @param format Name of the format. One of "rdf-xml", "turtle", "citeproc-json", 
-#' "citeproc-json-ish", "text", "ris", "bibtex" (default), "crossref-xml", 
-#' "datacite-xml","bibentry", or "crossref-tdm". The format "citeproc-json-ish"
-#' is a format that is not quite proper citeproc-json
-#' @param style a CSL style (for text format only). See \code{\link{get_styles}} 
-#' for options. Default: apa. If there's a style that CrossRef doesn't support 
-#' you'll get a  \code{(500) Internal Server Error}
+#' @param format Name of the format. One of "rdf-xml", "turtle", 
+#'   "citeproc-json", "citeproc-json-ish", "text", "ris", "bibtex" (default), 
+#'   "crossref-xml", "datacite-xml","bibentry", or "crossref-tdm". The format 
+#'   "citeproc-json-ish" is a format that is not quite proper citeproc-json
+#' @param style a CSL style (for text format only). See \code{\link{get_styles}}
+#'   for options. Default: apa. If there's a style that CrossRef doesn't support
+#'   you'll get a  \code{(500) Internal Server Error}
 #' @param locale Language locale. See \code{?Sys.getlocale}
 #' @param raw (logical) Return raw text in the format given by \code{format} 
-#' parameter. Default: FALSE
+#'   parameter. Default: FALSE
 #' @template moreargs
-#' @details See \url{http://www.crosscite.org/cn/} for more info on the
-#' Crossref Content Negotiation API service.
-#'
-#' DataCite DOIs: Some values of the \code{format} parameter won't work with 
-#' DataCite DOIs, but most do. See examples below.
-#' 
-#' See \code{\link{cr_agency}}
-#' 
-#' Note that the format type \code{citeproc-json} uses the CrossRef API at 
-#' \code{api.crossref.org}, while all others use \code{http://dx.doi.org}.
-#'
+#' @details See \url{http://www.crosscite.org/cn/} for more info on the Crossref
+#'   Content Negotiation API service.
+#'   
+#'   DataCite DOIs: Some values of the \code{format} parameter won't work with 
+#'   DataCite DOIs, but most do. See examples below.
+#'   
+#'   See \code{\link{cr_agency}}
+#'   
+#'   Note that the format type \code{citeproc-json} uses the CrossRef API at 
+#'   \code{api.crossref.org}, while all others are content negotiated via
+#'   \code{http://data.crossref.org}, \code{http://data.datacite.org} or 
+#'   \code{http://data.medra.org}. DOI agency is checked first (see 
+#'   \code{\link{cr_agency}}).
+#'   
 #' @examples \dontrun{
 #' cr_cn(dois="10.1126/science.169.3946.635")
 #' cr_cn(dois="10.1126/science.169.3946.635", "citeproc-json")
@@ -44,7 +47,7 @@
 #' cr_cn("10.1126/science.169.3946.635", "text", "ecoscience")
 #' cr_cn("10.1126/science.169.3946.635", "text", "heredity")
 #' cr_cn("10.1126/science.169.3946.635", "text", "oikos")
-#'
+#' 
 #' # example with many DOIs
 #' dois <- cr_r(2)
 #' cr_cn(dois, "text", "apa")
@@ -186,9 +189,10 @@ warn_status <- function(x) {
   }
 }
 
-#' Get doi agency to identify resource location
+#' Get doi agency id to identify resource location
 #' 
 #' @param x doi
+#' @keywords internal
 GET_agency_id <- function(x, ...){
   if(is.null(x))
     stop("no doi for doi agency check provided")
