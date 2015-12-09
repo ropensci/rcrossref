@@ -10,13 +10,13 @@ cr_cn(dois, format = "bibtex", style = "apa", locale = "en-US",
 \arguments{
 \item{dois}{Search by a single DOI or many DOIs.}
 
-\item{format}{Name of the format. One of "rdf-xml", "turtle", "citeproc-json", 
-"citeproc-json-ish", "text", "ris", "bibtex" (default), "crossref-xml", 
-"datacite-xml","bibentry", or "crossref-tdm". The format "citeproc-json-ish"
-is a format that is not quite proper citeproc-json}
+\item{format}{Name of the format. One of "rdf-xml", "turtle", 
+"citeproc-json", "citeproc-json-ish", "text", "ris", "bibtex" (default), 
+"crossref-xml", "datacite-xml","bibentry", or "crossref-tdm". The format 
+"citeproc-json-ish" is a format that is not quite proper citeproc-json}
 
-\item{style}{a CSL style (for text format only). See \code{\link{get_styles}} 
-for options. Default: apa. If there's a style that CrossRef doesn't support 
+\item{style}{a CSL style (for text format only). See \code{\link{get_styles}}
+for options. Default: apa. If there's a style that CrossRef doesn't support
 you'll get a  \code{(500) Internal Server Error}}
 
 \item{locale}{Language locale. See \code{?Sys.getlocale}}
@@ -33,16 +33,19 @@ and "time".  See \code{\link[plyr]{create_progress_bar}} for details of each.}
 Get citations in various formats from CrossRef.
 }
 \details{
-See \url{http://www.crosscite.org/cn/} for more info on the
-Crossref Content Negotiation API service.
-
-DataCite DOIs: Some values of the \code{format} parameter won't work with 
-DataCite DOIs, but most do. See examples below.
-
-See \code{\link{cr_agency}}
-
-Note that the format type \code{citeproc-json} uses the CrossRef API at 
-\code{api.crossref.org}, while all others use \code{http://dx.doi.org}.
+See \url{http://www.crosscite.org/cn/} for more info on the Crossref
+  Content Negotiation API service.
+  
+  DataCite DOIs: Some values of the \code{format} parameter won't work with 
+  DataCite DOIs, but most do. See examples below.
+  
+  See \code{\link{cr_agency}}
+  
+  Note that the format type \code{citeproc-json} uses the CrossRef API at 
+  \code{api.crossref.org}, while all others are content negotiated via
+  \code{http://data.crossref.org}, \code{http://data.datacite.org} or 
+  \code{http://data.medra.org}. DOI agency is checked first (see 
+  \code{\link{cr_agency}}).
 }
 \examples{
 \dontrun{
