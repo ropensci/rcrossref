@@ -90,8 +90,12 @@
                                 "citeproc-json-ish", "text", "ris", "bibtex", 
                                 "crossref-xml", "datacite-xml", "bibentry", 
                                 "crossref-tdm"))
+
   cn <- function(doi, ...){
-    url <- paste("http://dx.doi.org", doi, sep = "/")
+    agency_id <- GET_agency_id(doi)
+    if(is.na(agency_id))
+      stop("no resource location found", doi, message, call. = FALSE)
+    url <- paste0("http://data.", agency_id, ".org/", doi)
     pick <- c(
            "rdf-xml" = "application/rdf+xml",
            "turtle" = "text/turtle",
@@ -181,3 +185,13 @@ warn_status <- function(x) {
     warning(sprintf("%s w/ %s", gsub("%2F", "/", httr::parse_url(x$url)$path), mssg))
   }
 }
+
+#' Get doi agency to identify resource location
+#' 
+#' @param x doi
+GET_agency_id <- function(x, ...){
+  if(is.null(x))
+    stop("no doi for doi agency check provided")
+  cr_agency(x)$agency$id
+}
+
