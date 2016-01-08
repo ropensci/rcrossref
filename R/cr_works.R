@@ -1,6 +1,5 @@
 #' Search CrossRef works (articles)
 #'
-#' @importFrom dplyr rbind_all 
 #' @export
 #' 
 #' @param dois Search by a single DOI or many DOIs.
@@ -49,38 +48,55 @@
 #' 
 #' # You can pass in dot separated fields to filter on specific fields
 #' cr_works(filter=c(award.number='CBET-0756451', award.funder='10.13039/100000001'))
+#' 
+#' # Use the cursor for deep paging
+#' cr_works(query="NSF", cursor = "*", cursor_max = 500, limit = 100)
+#' cr_works(query="NSF", cursor = "*", cursor_max = 500, limit = 100, facet = TRUE)
 #' }
 
 `cr_works` <- function(dois = NULL, query = NULL, filter = NULL, offset = NULL,
-  limit = NULL, sample = NULL, sort = NULL, order = NULL, facet=FALSE, .progress="none", ...) {
+  limit = NULL, sample = NULL, sort = NULL, order = NULL, facet=FALSE, 
+  cursor = NULL, cursor_max = 5000, .progress="none", ...) {
   
   check_limit(limit)
-  foo <- function(x, ...){
+  filter <- filter_handler(filter)
+  facet <- if (facet) "t" else NULL
+  args <- cr_compact(list(query = query, filter = filter, offset = offset, rows = limit,
+                          sample = sample, sort = sort, order = order, facet = facet,
+                          cursor = cursor))
+  
+  foo <- function(x, args, cursor_max, ...) {
     path <- if (!is.null(x)) sprintf("works/%s", x) else "works"
-    filter <- filter_handler(filter)
-    facet <- if (facet) "t" else NULL
-    args <- cr_compact(list(query = query, filter = filter, offset = offset, rows = limit,
-                            sample = sample, sort = sort, order = order, facet = facet))
-    cr_GET(endpoint = path, args, todf = FALSE, ...)
+    if (!is.null(cursor)) {
+      rr <- Requestor$new(path = path, args = args, cursor_max = cursor_max, ...)
+      rr$GETcursor()
+      rr$parse()
+    } else {
+      cr_GET(endpoint = path, args, todf = FALSE, ...)
+    }
   }
   
   if (length(dois) > 1) {
-    res <- llply(dois, foo, .progress = .progress, ...)
+    res <- llply(dois, foo, args = args, cursor_max = cursor_max, .progress = .progress, ...)
     res <- lapply(res, "[[", "message")
     res <- lapply(res, parse_works)
-    df <- rbind_all(res)
+    df <- bind_rows(res)
     #exclude rows with empty DOI value until CrossRef API supports input validation
     if (nrow(df[df$DOI == "", ]) > 0)
-     warning("only data with valid CrossRef dois returned",  call. = FALSE)
-    df <- df[!df$DOI == "",]
+     warning("only data with valid CrossRef DOIs returned",  call. = FALSE)
+    df <- df[!df$DOI == "", ]
     list(meta = NULL, data = df, facets = NULL)
   } else { 
-    tmp <- foo(dois, ...)
+    tmp <- foo(dois, args = args, cursor_max = cursor_max, ...)
     if (is.null(dois)) {
-      meta <- parse_meta(tmp)
-      list(meta = meta, 
-           data = rbind_all(lapply(tmp$message$items, parse_works)),
-           facets = parse_facets(tmp$message$facets))
+      if (!is.null(cursor)) {
+        tmp
+      } else {
+        meta <- parse_meta(tmp)
+        list(meta = meta,
+             data = bind_rows(lapply(tmp$message$items, parse_works)),
+             facets = parse_facets(tmp$message$facets))
+      }
     } else {
       list(meta = NULL, data = parse_works(tmp$message), facets = NULL)
     }

@@ -6,7 +6,8 @@
 \usage{
 cr_works(dois = NULL, query = NULL, filter = NULL, offset = NULL,
   limit = NULL, sample = NULL, sort = NULL, order = NULL,
-  facet = FALSE, .progress = "none", ...)
+  facet = FALSE, cursor = NULL, cursor_max = 5000, .progress = "none",
+  ...)
 }
 \arguments{
 \item{dois}{Search by a single DOI or many DOIs.}
@@ -80,6 +81,10 @@ cr_works(sample=10)
 
 # You can pass in dot separated fields to filter on specific fields
 cr_works(filter=c(award.number='CBET-0756451', award.funder='10.13039/100000001'))
+
+# Use the cursor for deep paging
+cr_works(query="NSF", cursor = "*", cursor_max = 500, limit = 100)
+cr_works(query="NSF", cursor = "*", cursor_max = 500, limit = 100, facet = TRUE)
 }
 }
 \references{

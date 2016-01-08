@@ -24,7 +24,8 @@ Imports:
     httr (>= 1.0.0),
     plyr,
     bibtex,
-    dplyr
+    dplyr,
+    R6
 Suggests:
     testthat,
     roxygen2 (>= 4.0.1),

@@ -12,6 +12,8 @@
 #' @importFrom utils modifyList
 #' @importFrom methods is as
 #' @importFrom stats setNames
+#' @importFrom dplyr rbind_all bind_rows
+#' @importFrom R6 R6Class
 #' @name rcrossref-package
 #' @aliases rcrossref
 #' @docType package
