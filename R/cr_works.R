@@ -60,6 +60,7 @@
   cursor = NULL, cursor_max = 5000, .progress="none", ...) {
   
   check_limit(limit)
+  if (!is(cursor_max, "integer")) stop("cursor_max must be an integer", call. = FALSE)
   filter <- filter_handler(filter)
   facet <- if (facet) "t" else NULL
   args <- cr_compact(list(query = query, filter = filter, offset = offset, rows = limit,

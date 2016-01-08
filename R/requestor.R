@@ -1,15 +1,3 @@
-# sacbox::load_defaults(cr_works)
-# path="works"
-# query="NSF"
-# cursor="*"
-# limit=100
-# cursor_max=500
-# (args <- cr_compact(list(query = query, filter = filter, offset = offset, rows = limit, cursor = cursor)))
-# 
-# rr <- Requestor$new(path = path, args = args, cursor_max = cursor_max)
-# rr$GETcursor()
-# rr$parse()
-
 Requestor <- R6::R6Class("Requestor",
   public = list(
   path = NA,
