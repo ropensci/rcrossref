@@ -12,8 +12,14 @@
 #' @importFrom utils modifyList
 #' @importFrom methods is as
 #' @importFrom stats setNames
-#' @importFrom dplyr rbind_all bind_rows
+#' @importFrom dplyr rbind_all bind_rows tbl_df
 #' @importFrom R6 R6Class
+#' @importFrom XML xmlParse xpathSApply xmlAttrs
+#' @importFrom bibtex read.bib
+#' @importFrom httr GET POST stop_for_status content_type_json accept_json content
+#' write_disk accept http_status parse_url add_headers
+#' @importFrom jsonlite toJSON fromJSON
+#' @importFrom plyr rbind.fill llply ldply
 #' @name rcrossref-package
 #' @aliases rcrossref
 #' @docType package

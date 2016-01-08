@@ -1,7 +1,6 @@
 #' Search CrossRef members
 #'
 #' @export
-#' @importFrom dplyr tbl_df
 #' 
 #' @param member_ids One or more member ids. See examples. ALternatively, you can query for them
 #' using the query parameter.

@@ -1,6 +1,5 @@
 #' Lookup article info via CrossRef with DOI and get a citation count.
 #'
-#' @importFrom XML xmlParse xpathSApply xmlAttrs
 #' @export
 #'
 #' @param doi digital object identifier for an article in PLoS Journals
