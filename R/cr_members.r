@@ -6,6 +6,7 @@
 #' using the query parameter.
 #' @template args
 #' @template moreargs
+#' @template cursor_args
 #' @param works (logical) If TRUE, works returned as well, if not then not.
 #' @param facet (logical) Include facet results.
 #' 
@@ -30,6 +31,10 @@
 #' library('httr')
 #' cr_members(member_ids=98, config=verbose())
 #' 
+#' # Use the cursor for deep paging
+#' cr_members(member_ids=98, works = TRUE, cursor = "*", cursor_max = 500, limit = 100)
+#' cr_members(member_ids=c(10, 98, 45), works = TRUE, cursor = "*", cursor_max = 200, limit = 100)
+#' 
 #' # data not found
 #' # cr_members(query="adfdf")
 #' # cr_members(member_ids=c(323234343434,3434343434), works=TRUE, facet=TRUE)
@@ -38,40 +43,55 @@
 
 `cr_members` <- function(member_ids = NULL, query = NULL, filter = NULL, offset = NULL,
   limit = NULL, sample = NULL, sort = NULL, order = NULL, facet=FALSE, works = FALSE, 
-  .progress="none", ...) {
+  cursor = NULL, cursor_max = 5000, .progress="none", ...) {
   
   check_limit(limit)
   filter <- filter_handler(filter)
   facet <- if (facet) "t" else NULL
   args <- cr_compact(list(query = query, filter = filter, offset = offset, rows = limit,
-                          sample = sample, sort = sort, order = order, facet = facet))
+                          sample = sample, sort = sort, order = order, facet = facet,
+                          cursor = cursor))
   
   if (length(member_ids) > 1) {
-    res <- llply(member_ids, member_GET, args = args, works = works, ..., .progress = .progress)
-    out <- lapply(res, "[[", "message")
-    if ( all(is.na(out)) ) {
-      list(meta = NULL, data = NULL, facets = NULL)
-    } else {
-      # remove any slots not found
-      res <- res[!is.na(out)]
-      member_ids <- member_ids[!is.na(out)]
-      out <- out[!is.na(out)]
-      # continue...
-      out <- if (works) do.call("c", lapply(out, function(x) lapply(x$items, parse_works))) else lapply(out, parse_members)
-      df <- rbind_all(out)
-      meta <- if (works) data.frame(member_ids = member_ids, do.call(rbind, lapply(res, parse_meta)), stringsAsFactors = FALSE) else NULL
-      facets <- setNames(lapply(res, function(x) parse_facets(x$message$facets)), member_ids)
+    res <- llply(member_ids, member_GET, args = args, works = works,  
+                 cursor = cursor, cursor_max = cursor_max, ..., .progress = .progress)
+    if (!is.null(cursor)) {
+      out <- lapply(res, "[[", "data")
+      df <- bind_rows(out)
+      facets <- setNames(lapply(res, function(x) parse_facets(x$facets)), member_ids)
       facets <- if (all(vapply(facets, is.null, logical(1)))) NULL else facets
-      list(meta = meta, data = df, facets = facets)
+      list(data = df, facets = facets)
+    } else {
+      out <- lapply(res, "[[", "message")
+      if ( all(is.na(out)) ) {
+        list(meta = NULL, data = NULL, facets = NULL)
+      } else {
+        # remove any slots not found
+        res <- res[!is.na(out)]
+        member_ids <- member_ids[!is.na(out)]
+        out <- out[!is.na(out)]
+        # continue...
+        out <- if (works) do.call("c", lapply(out, function(x) lapply(x$items, parse_works))) else lapply(out, parse_members)
+        df <- rbind_all(out)
+        meta <- if (works) data.frame(member_ids = member_ids, do.call(rbind, lapply(res, parse_meta)), stringsAsFactors = FALSE) else NULL
+        facets <- setNames(lapply(res, function(x) parse_facets(x$message$facets)), member_ids)
+        facets <- if (all(vapply(facets, is.null, logical(1)))) NULL else facets
+        list(meta = meta, data = df, facets = facets)
+      }
     }
   } else if (length(member_ids) == 1) { 
-    tmp <- member_GET(member_ids, args = args, works = works, ...)
-    if (all(is.na(tmp$message))) {
-      list(meta = NULL, data = NULL, facets = NULL)
+    tmp <- member_GET(member_ids, args = args, works = works, 
+                      cursor = cursor, cursor_max = cursor_max, ...)
+    if (!is.null(cursor)) {
+      tmp
     } else {
-      out <- if (works) rbind_all(lapply(tmp$message$items, parse_works)) else parse_members(tmp$message)
-      meta <- if (works) data.frame(member_id = member_ids, parse_meta(tmp), stringsAsFactors = FALSE) else NULL
-      list(meta = meta, data = out, facets = parse_facets(tmp$message$facets))
+      if (all(is.na(tmp$message))) {
+        list(meta = NULL, data = NULL, facets = NULL)
+      } else {
+        out <- if (works) rbind_all(lapply(tmp$message$items, parse_works)) else parse_members(tmp$message)
+        meta <- if (works) data.frame(member_id = member_ids, parse_meta(tmp), stringsAsFactors = FALSE) else NULL
+        list(meta = meta, data = out, facets = parse_facets(tmp$message$facets))
+      }
     }
   } else {
     tmp <- member_GET(NULL, args = args, works = works, ...)
@@ -81,13 +101,20 @@
   }
 }
 
-member_GET <- function(x, args, works, ...){
+member_GET <- function(x, args, works, cursor = NULL, cursor_max = NULL, ...){
   path <- if (!is.null(x)) {
     if (works) sprintf("members/%s/works", x) else sprintf("members/%s", x)
   } else { 
     "members" 
   }
-  cr_GET(path, args, FALSE, on_error = stop, ...)
+  
+  if (!is.null(cursor) && works) {
+    rr <- Requestor$new(path = path, args = args, cursor_max = cursor_max, ...)
+    rr$GETcursor()
+    rr$parse()
+  } else {
+    cr_GET(path, args, FALSE, on_error = stop, ...)
+  }
 }
 
 parse_members <- function(x){

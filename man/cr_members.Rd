@@ -6,7 +6,8 @@
 \usage{
 cr_members(member_ids = NULL, query = NULL, filter = NULL,
   offset = NULL, limit = NULL, sample = NULL, sort = NULL,
-  order = NULL, facet = FALSE, works = FALSE, .progress = "none", ...)
+  order = NULL, facet = FALSE, works = FALSE, cursor = NULL,
+  cursor_max = 5000, .progress = "none", ...)
 }
 \arguments{
 \item{member_ids}{One or more member ids. See examples. ALternatively, you can query for them
@@ -32,6 +33,17 @@ or published.}
 \item{facet}{(logical) Include facet results.}
 
 \item{works}{(logical) If TRUE, works returned as well, if not then not.}
+
+\item{cursor}{(character) Cursor character string to do deep paging. Default is None.
+Pass in '*' to start deep paging. Any combination of query, filters and facets may be
+used with deep paging cursors. While rows may be specified along with cursor, offset
+and sample cannot be used.
+See https://github.com/CrossRef/rest-api-doc/blob/master/rest_api.md#deep-paging-with-cursors}
+
+\item{cursor_max}{(integer) Max records to retrieve. Only used when cursor param used. 
+Because deep paging can result in continuous requests until all are retrieved, use this
+parameter to set a maximum number of records. Of course, if there are less records
+found than this value, you will get only those found.}
 
 \item{.progress}{Show a \code{plyr}-style progress bar? Options are "none", "text", "tk", "win, 
 and "time".  See \code{\link[plyr]{create_progress_bar}} for details of each.}
@@ -62,6 +74,10 @@ cr_members(member_ids=98, works=TRUE, facet=TRUE)
 # curl options
 library('httr')
 cr_members(member_ids=98, config=verbose())
+
+# Use the cursor for deep paging
+cr_members(member_ids=98, works = TRUE, cursor = "*", cursor_max = 500, limit = 100)
+cr_members(member_ids=c(10, 98, 45), works = TRUE, cursor = "*", cursor_max = 200, limit = 100)
 
 # data not found
 # cr_members(query="adfdf")

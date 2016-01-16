@@ -6,7 +6,8 @@
 \usage{
 cr_journals(issn = NULL, query = NULL, filter = NULL, offset = NULL,
   limit = NULL, sample = NULL, sort = NULL, order = NULL,
-  works = FALSE, .progress = "none", ...)
+  works = FALSE, cursor = NULL, cursor_max = 5000, .progress = "none",
+  ...)
 }
 \arguments{
 \item{issn}{One or more ISSN's. Format is XXXX-XXXX.}
@@ -29,6 +30,17 @@ or published.}
 \item{order}{(character) Sort order, one of 'asc' or 'desc'}
 
 \item{works}{(logical) If TRUE, works returned as well, if not then not.}
+
+\item{cursor}{(character) Cursor character string to do deep paging. Default is None.
+Pass in '*' to start deep paging. Any combination of query, filters and facets may be
+used with deep paging cursors. While rows may be specified along with cursor, offset
+and sample cannot be used.
+See https://github.com/CrossRef/rest-api-doc/blob/master/rest_api.md#deep-paging-with-cursors}
+
+\item{cursor_max}{(integer) Max records to retrieve. Only used when cursor param used. 
+Because deep paging can result in continuous requests until all are retrieved, use this
+parameter to set a maximum number of records. Of course, if there are less records
+found than this value, you will get only those found.}
 
 \item{.progress}{Show a \code{plyr}-style progress bar? Options are "none", "text", "tk", "win, 
 and "time".  See \code{\link[plyr]{create_progress_bar}} for details of each.}
@@ -58,6 +70,11 @@ cr_journals(query="peerj")
 cr_journals(issn='1803-2427', works=TRUE)
 cr_journals(issn='1803-2427', works=TRUE, sample=1)
 cr_journals(limit=2)
+
+# Use the cursor for deep paging
+cr_journals(issn='1932-6203', works = TRUE, cursor = "*", cursor_max = 500, limit = 100)
+cr_journals(c('1932-6203', '0028-0836'), works = TRUE, cursor = "*",
+   cursor_max = 300, limit = 100)
 
 # fails, if you want works, you must give an ISSN
 # cr_journals(query = "ecology", filter=c(has_full_text = TRUE), works = TRUE)

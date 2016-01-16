@@ -67,19 +67,9 @@
                           sample = sample, sort = sort, order = order, facet = facet,
                           cursor = cursor))
   
-  foo <- function(x, args, cursor_max, ...) {
-    path <- if (!is.null(x)) sprintf("works/%s", x) else "works"
-    if (!is.null(cursor)) {
-      rr <- Requestor$new(path = path, args = args, cursor_max = cursor_max, ...)
-      rr$GETcursor()
-      rr$parse()
-    } else {
-      cr_GET(endpoint = path, args, todf = FALSE, ...)
-    }
-  }
-  
   if (length(dois) > 1) {
-    res <- llply(dois, foo, args = args, cursor_max = cursor_max, .progress = .progress, ...)
+    res <- llply(dois, cr_get_cursor, args = args, cursor = cursor, 
+                 cursor_max = cursor_max, .progress = .progress, ...)
     res <- lapply(res, "[[", "message")
     res <- lapply(res, parse_works)
     df <- bind_rows(res)
@@ -89,7 +79,8 @@
     df <- df[!df$DOI == "", ]
     list(meta = NULL, data = df, facets = NULL)
   } else { 
-    tmp <- foo(dois, args = args, cursor_max = cursor_max, ...)
+    tmp <- cr_get_cursor(dois, args = args, cursor = cursor, 
+                         cursor_max = cursor_max, ...)
     if (is.null(dois)) {
       if (!is.null(cursor)) {
         tmp
@@ -102,6 +93,17 @@
     } else {
       list(meta = NULL, data = parse_works(tmp$message), facets = NULL)
     }
+  }
+}
+
+cr_get_cursor <- function(x, args, cursor, cursor_max, ...) {
+  path <- if (!is.null(x)) sprintf("works/%s", x) else "works"
+  if (!is.null(cursor)) {
+    rr <- Requestor$new(path = path, args = args, cursor_max = cursor_max, ...)
+    rr$GETcursor()
+    rr$parse()
+  } else {
+    cr_GET(endpoint = path, args, todf = FALSE, ...)
   }
 }
 

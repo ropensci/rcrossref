@@ -5,6 +5,7 @@
 #' @param issn One or more ISSN's. Format is XXXX-XXXX.
 #' @template args
 #' @template moreargs
+#' @template cursor_args
 #' @param works (logical) If TRUE, works returned as well, if not then not.
 #' 
 #' @details  BEWARE: The API will only work for CrossRef DOIs.
@@ -26,53 +27,78 @@
 #' cr_journals(issn='1803-2427', works=TRUE, sample=1)
 #' cr_journals(limit=2)
 #' 
+#' # Use the cursor for deep paging
+#' cr_journals(issn='1932-6203', works = TRUE, cursor = "*", cursor_max = 500, limit = 100)
+#' cr_journals(c('1932-6203', '0028-0836'), works = TRUE, cursor = "*",
+#'    cursor_max = 300, limit = 100)
+#' 
 #' # fails, if you want works, you must give an ISSN
 #' # cr_journals(query = "ecology", filter=c(has_full_text = TRUE), works = TRUE)
 #' }
 
 `cr_journals` <- function(issn = NULL, query = NULL, filter = NULL, offset = NULL,
-  limit = NULL, sample = NULL, sort = NULL, order = NULL, works=FALSE, .progress="none", ...)
-{
-  check_limit(limit)
-  if(works) if(is.null(issn)) stop("If `works=TRUE`, you must give a journal ISSN", call. = FALSE)
+  limit = NULL, sample = NULL, sort = NULL, order = NULL, works=FALSE, 
+  cursor = NULL, cursor_max = 5000, .progress="none", ...) {
   
-  foo <- function(x){
-    path <- if(!is.null(x)){
-      if(works) sprintf("journals/%s/works", x) else sprintf("journals/%s", x)
-    } else { "journals" }
-    filter <- filter_handler(filter)
-    args <- cr_compact(list(query = query, filter = filter, offset = offset, rows = limit,
-                            sample = sample, sort = sort, order = order))
-    cr_GET(endpoint = path, args, todf = FALSE, ...)
+  check_limit(limit)
+  if (works) if (is.null(issn)) stop("If `works=TRUE`, you must give a journal ISSN", call. = FALSE)
+  filter <- filter_handler(filter)
+  args <- cr_compact(list(query = query, filter = filter, offset = offset, rows = limit,
+                          sample = sample, sort = sort, order = order, cursor = cursor))
+  
+  if (length(issn) > 1) {
+    res <- llply(issn, journal_GET, args = args, works = works, 
+                 cursor = cursor, cursor_max = cursor_max, ..., .progress = .progress)
+    if (!is.null(cursor)) {
+      out <- lapply(res, "[[", "data")
+      bind_rows(out)
+    } else {
+      res <- lapply(res, "[[", "message")
+      res <- lapply(res, parse_works)
+      df <- rbind_all(res)
+      #exclude rows with empty ISSN value until CrossRef API supports input validation
+      if (nrow(df[df$ISSN == "", ]) > 0) {
+        warning("only data with valid ISSN returned",  call. = FALSE)
+      }
+      df <- df[!df$ISSN == "", ]
+      df
+    }
+  } else {
+    tmp <- journal_GET(issn, args, works, cursor, cursor_max, ...)
+    if (!is.null(cursor)) {
+      tmp
+    } else {
+      if (!is.null(issn)) {
+        if (works) { 
+          meta <- parse_meta(tmp)
+          dat <- rbind_all(lapply(tmp$message$items, parse_works)) 
+        } else {
+          meta <- NULL
+          dat <- parse_journal(tmp$message)
+        }
+        list(meta = meta, data = dat)
+      } else {
+        fxn <- if (works) parse_works else parse_journal
+        meta <- parse_meta(tmp)
+        list(meta = meta, data = rbind_all(lapply(tmp$message$items, fxn)))
+      }
+    }
+  }
+}
+
+journal_GET <- function(x, args, works, cursor = NULL, cursor_max = NULL, ...){
+  path <- if (!is.null(x)) {
+    if (works) sprintf("journals/%s/works", x) else sprintf("journals/%s", x)
+  } else { 
+    "journals" 
   }
   
-  if(length(issn) > 1){
-    res <- llply(issn, foo, .progress=.progress)
-    res <- lapply(res, "[[", "message")
-    res <- lapply(res, parse_works)
-    df <- rbind_all(res)
-    #exclude rows with empty ISSN value until CrossRef API supports input validation
-    if(nrow(df[df$ISSN == "",]) > 0)
-      warning("only data with valid ISSN returned",  call. = FALSE)
-    df <- df[!df$ISSN == "",]
-#   df$issn <- issn
-    df
+  if (!is.null(cursor) && works) {
+    rr <- Requestor$new(path = path, args = args, cursor_max = cursor_max, ...)
+    rr$GETcursor()
+    rr$parse()
   } else {
-    tmp <- foo(issn)
-    if(!is.null(issn)){
-      if(works){ 
-        meta <- parse_meta(tmp)
-        dat <- rbind_all(lapply(tmp$message$items, parse_works)) 
-      } else {
-        meta <- NULL
-        dat <- parse_journal(tmp$message)
-      }
-      list(meta=meta, data=dat)
-    } else {
-      fxn <- if(works) parse_works else parse_journal
-      meta <- parse_meta(tmp)
-      list(meta=meta, data=rbind_all(lapply(tmp$message$items, fxn)))
-    }
+    cr_GET(endpoint = path, args, todf = FALSE, on_error = stop, ...)
   }
 }
 

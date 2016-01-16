@@ -5,6 +5,7 @@
 #' @param prefixes (character) Publisher prefixes, one or more in a vector or list. Required.
 #' @template args
 #' @template moreargs
+#' @template cursor_args
 #' @param facet (logical) Include facet results. Facet data not yet included in output.
 #' @param works (logical) If TRUE, works returned as well, if not then not.
 #' 
@@ -42,45 +43,69 @@
 #' ## get facets back
 #' cr_prefixes(prefixes="10.1016", works=TRUE, facet=TRUE)
 #' cr_prefixes(prefixes=c('10.1016','10.1371'), works=TRUE, facet=TRUE)
+#' 
+#' # Use the cursor for deep paging
+#' cr_prefixes("10.1016", works = TRUE, cursor = "*", cursor_max = 500, limit = 100)
+#' cr_prefixes(c('10.1016', '10.1371'), works = TRUE, cursor = "*",
+#'    cursor_max = 300, limit = 100) 
 #' }
 
 `cr_prefixes` <- function(prefixes, query = NULL, filter = NULL, offset = NULL,
   limit = NULL, sample = NULL, sort = NULL, order = NULL, facet=FALSE, works = FALSE, 
-  .progress="none", ...)
-{
+  cursor = NULL, cursor_max = 5000, .progress="none", ...) {
+  
   check_limit(limit)
   filter <- filter_handler(filter)
   facet_log <- facet
-  facet <- if(facet) "t" else NULL
+  facet <- if (facet) "t" else NULL
   args <- cr_compact(list(query = query, filter = filter, offset = offset, rows = limit,
-                          sample = sample, sort = sort, order = order, facet = facet))
+                          sample = sample, sort = sort, order = order, facet = facet,
+                          cursor = cursor))
 
-  if(length(prefixes) > 1){
-    res <- llply(prefixes, prefixes_GET, args=args, works=works, ..., .progress=.progress)
-    out <- lapply(res, "[[", "message")
-    out <- if(works) do.call(c, lapply(out, function(x) lapply(x$items, parse_works))) else lapply(out, DataFrame)
-    df <- rbind_all(out)
-    meta <- if(works) data.frame(prefix=prefixes, do.call(rbind, lapply(res, parse_meta)), stringsAsFactors = FALSE) else NULL
-    if(facet_log){ 
-      ft <- Map(function(x, y){ 
-        rr <- list(parse_facets(x$message$facets)); names(rr) <- y; rr 
-      }, res, prefixes) 
-    } else { ft <- list() } 
-    list(meta=meta, data=df, facets=ft)
+  if (length(prefixes) > 1) {
+    res <- llply(prefixes, prefixes_GET, args = args, works = works, 
+                 cursor = cursor, cursor_max = cursor_max, ..., .progress = .progress)
+    if (!is.null(cursor)) {
+      out <- lapply(res, "[[", "data")
+      bind_rows(out)
+    } else {
+      out <- lapply(res, "[[", "message")
+      out <- if (works) do.call(c, lapply(out, function(x) lapply(x$items, parse_works))) else lapply(out, DataFrame)
+      df <- rbind_all(out)
+      meta <- if (works) data.frame(prefix = prefixes, do.call(rbind, lapply(res, parse_meta)), stringsAsFactors = FALSE) else NULL
+      if (facet_log) { 
+        ft <- Map(function(x, y) {
+          rr <- list(parse_facets(x$message$facets)); names(rr) <- y; rr 
+        }, res, prefixes) 
+      } else {
+        ft <- list() 
+      }
+      list(meta = meta, data = df, facets = ft)
+    }
   } else {
-    tmp <- prefixes_GET(prefixes, args, works=works, ...)
-    out <- if(works) rbind_all(lapply(tmp$message$items, parse_works)) else DataFrame(tmp$message)
-    meta <- if(works) data.frame(prefix=prefixes, parse_meta(tmp), stringsAsFactors = FALSE) else NULL
-    list(meta=meta, data=out, facets=parse_facets(tmp$message$facets))
+    tmp <- prefixes_GET(prefixes, args, works = works, cursor = cursor, cursor_max = cursor_max, ...)
+    if (!is.null(cursor)) {
+      tmp
+    } else {
+      out <- if (works) rbind_all(lapply(tmp$message$items, parse_works)) else DataFrame(tmp$message)
+      meta <- if (works) data.frame(prefix = prefixes, parse_meta(tmp), stringsAsFactors = FALSE) else NULL
+      list(meta = meta, data = out, facets = parse_facets(tmp$message$facets))
+    }
   }
 }
 
-prefixes_GET <- function(x, args, works, ...){
-  path <- if(works) sprintf("prefixes/%s/works", x) else sprintf("prefixes/%s", x)
-  cr_GET(path, args, todf = FALSE, ...)
+prefixes_GET <- function(x, args, works, cursor = NULL, cursor_max = NULL, ...){
+  path <- if (works) sprintf("prefixes/%s/works", x) else sprintf("prefixes/%s", x)
+  if (!is.null(cursor) && works) {
+    rr <- Requestor$new(path = path, args = args, cursor_max = cursor_max, ...)
+    rr$GETcursor()
+    rr$parse()
+  } else {
+    cr_GET(path, args, todf = FALSE, ...)
+  }
 }
 
 DataFrame <- function(x){
-  x[ sapply(x, function(y) if(is.null(y) || length(y) == 0) TRUE else FALSE)] <- NA
+  x[ sapply(x, function(y) if (is.null(y) || length(y) == 0) TRUE else FALSE)] <- NA
   data.frame(x, stringsAsFactors = FALSE)
 }
