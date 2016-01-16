@@ -137,6 +137,59 @@ link <- cr_ft_links(out$data$DOI[1], "xml")
 ## plain text
 link <- cr_ft_links(out$data$DOI[1], "plain")
 # res <- cr_ft_text(url = link, "plain")
+
+## Wiley
+Sys.setenv(CROSSREF_TDM = "your-key")
+
+### all wiley
+out <- cr_members(311, filter=c(has_full_text = TRUE, type = 'journal-article'), works = TRUE)
+dois <- out$data$DOI[1:10]
+res <- list()
+for (i in seq_along(dois)) {
+ tmp <- cr_ft_links(dois[i], "all")
+ tmp <- setNames(tmp, "pdf")
+ attr(tmp[[1]], "type") <- "pdf"
+ res[[i]] <- cr_ft_text(tmp, type = "pdf", cache=FALSE)
+}
+res
+
+#### older dates 
+out <- cr_members(311, filter=c(has_full_text = TRUE, 
+     type = 'journal-article', until_created_date = "2013-12-31"), works = TRUE)
+     
+dois <- out$data$DOI[1:10]
+res <- list()
+for (i in seq_along(dois)) {
+ tmp <- cr_ft_links(dois[i], "all")
+ tmp <- setNames(tmp, "pdf")
+ attr(tmp[[1]], "type") <- "pdf"
+ res[[i]] <- cr_ft_text(tmp, type = "pdf", cache=FALSE)
+}
+res
+
+### wiley subset with CC By 4.0 license
+lic <- "http://creativecommons.org/licenses/by/4.0/"
+out <- cr_members(311, filter=c(has_full_text = TRUE, license.url = lic), works = TRUE)
+dois <- out$data$DOI[1:10]
+res <- list()
+for (i in seq_along(dois)) {
+ tmp <- cr_ft_links(dois[i], "all")
+ tmp <- setNames(tmp, "pdf")
+ attr(tmp[[1]], "type") <- "pdf"
+ res[[i]] <- cr_ft_text(tmp, type = "pdf", cache=FALSE)
+}
+
+### wiley subset with CC By 3.0 license
+lic <- "http://creativecommons.org/licenses/by/3.0/"
+out <- cr_members(311, filter=c(has_full_text = TRUE, license.url = lic), works = TRUE)
+dois <- out$data$DOI[1:5]
+res <- list()
+for (i in seq_along(dois)) {
+ tmp <- cr_ft_links(dois[i], "all")
+ tmp <- setNames(tmp, "pdf")
+ attr(tmp[[1]], "type") <- "pdf"
+ res[[i]] <- cr_ft_text(tmp, type = "pdf", cache=FALSE)
+}
 }
 }
 

@@ -1,13 +1,29 @@
 #' R Client for Various CrossRef APIs.
 #' 
+#' @section Crossref APIs:
 #' rcrossref interacts with the main Crossref metadata search API at 
 #' \url{https://github.com/CrossRef/rest-api-doc/blob/master/rest_api.md}, the old metadata
 #' search API at \url{http://search.labs.crossref.org/}, their DOI Content Negotiation  
 #' service at \url{http://www.crosscite.org/cn/}, and the \emph{Text and Data Mining} 
 #' project \url{http://tdmsupport.crossref.org/}.
 #' 
+#' @section Deprecated and Defunct:
 #' Note that functions that use the OpenURL service are now deprecated, and will be defunct 
 #' soon.
+#' 
+#' @section What am I actually searching?:
+#' When you use the \code{cr_*()} functions in this package, you are using the Crossref 
+#' search API described at \url{https://github.com/CrossRef/rest-api-doc/blob/master/rest_api.md}.
+#' When you search with query terms, on Crossref servers they are not searching full text, or 
+#' even abstracts of articles, but only what is available in the data that is returned to you. 
+#' That is, they search article titles, authors, etc. For some discussion on this, see
+#' \url{https://github.com/CrossRef/rest-api-doc/issues/101}.
+#' 
+#' @section Text mining:
+#' We provide the ability to do text mining in this package. See functions 
+#' \code{\link{cr_ft_links}} and \code{\link{cr_ft_text}}. However, another package
+#' \pkg{fulltext} is designed solely for text mining, so try it for serious text 
+#' mining. 
 #'
 #' @importFrom utils modifyList
 #' @importFrom methods is as
@@ -23,6 +39,5 @@
 #' @name rcrossref-package
 #' @aliases rcrossref
 #' @docType package
-#' @title R Client for Various CrossRef APIs.
 #' @keywords package
 NULL

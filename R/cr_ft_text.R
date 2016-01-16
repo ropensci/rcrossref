@@ -104,6 +104,59 @@
 #' ## plain text
 #' link <- cr_ft_links(out$data$DOI[1], "plain")
 #' # res <- cr_ft_text(url = link, "plain")
+#' 
+#' ## Wiley
+#' Sys.setenv(CROSSREF_TDM = "your-key")
+#' 
+#' ### all wiley
+#' out <- cr_members(311, filter=c(has_full_text = TRUE, type = 'journal-article'), works = TRUE)
+#' dois <- out$data$DOI[1:10]
+#' res <- list()
+#' for (i in seq_along(dois)) {
+#'  tmp <- cr_ft_links(dois[i], "all")
+#'  tmp <- setNames(tmp, "pdf")
+#'  attr(tmp[[1]], "type") <- "pdf"
+#'  res[[i]] <- cr_ft_text(tmp, type = "pdf", cache=FALSE)
+#' }
+#' res
+#' 
+#' #### older dates 
+#' out <- cr_members(311, filter=c(has_full_text = TRUE, 
+#'      type = 'journal-article', until_created_date = "2013-12-31"), works = TRUE)
+#'      
+#' dois <- out$data$DOI[1:10]
+#' res <- list()
+#' for (i in seq_along(dois)) {
+#'  tmp <- cr_ft_links(dois[i], "all")
+#'  tmp <- setNames(tmp, "pdf")
+#'  attr(tmp[[1]], "type") <- "pdf"
+#'  res[[i]] <- cr_ft_text(tmp, type = "pdf", cache=FALSE)
+#' }
+#' res
+#' 
+#' ### wiley subset with CC By 4.0 license
+#' lic <- "http://creativecommons.org/licenses/by/4.0/"
+#' out <- cr_members(311, filter=c(has_full_text = TRUE, license.url = lic), works = TRUE)
+#' dois <- out$data$DOI[1:10]
+#' res <- list()
+#' for (i in seq_along(dois)) {
+#'  tmp <- cr_ft_links(dois[i], "all")
+#'  tmp <- setNames(tmp, "pdf")
+#'  attr(tmp[[1]], "type") <- "pdf"
+#'  res[[i]] <- cr_ft_text(tmp, type = "pdf", cache=FALSE)
+#' }
+#' 
+#' ### wiley subset with CC By 3.0 license
+#' lic <- "http://creativecommons.org/licenses/by/3.0/"
+#' out <- cr_members(311, filter=c(has_full_text = TRUE, license.url = lic), works = TRUE)
+#' dois <- out$data$DOI[1:5]
+#' res <- list()
+#' for (i in seq_along(dois)) {
+#'  tmp <- cr_ft_links(dois[i], "all")
+#'  tmp <- setNames(tmp, "pdf")
+#'  attr(tmp[[1]], "type") <- "pdf"
+#'  res[[i]] <- cr_ft_text(tmp, type = "pdf", cache=FALSE)
+#' }
 #' }
 
 cr_ft_text <- function(url, type='xml', path = "~/.crossref", overwrite = TRUE,
@@ -147,7 +200,7 @@ cr_ft_pdf <- function(url, path = "~/.crossref", overwrite = TRUE, read=TRUE, ca
 pick_type <- function(x, z){
   x <- match.arg(x, c("xml","plain","pdf"))
   if (length(z) == 1) {
-    avail <- attr(z, which = "type")
+    avail <- attr(z[[1]], which = "type")
   } else {
     avail <- vapply(z, function(x) attr(x, which = "type"), character(1), USE.NAMES = FALSE)
   }
@@ -158,7 +211,7 @@ pick_type <- function(x, z){
 cr_auth <- function(url, type) {
   mem <- attr(url, "member")
   mem_num <- basename(mem)
-  if (mem_num %in% c(78, 263)) {
+  if (mem_num %in% c(78, 263, 311)) {
     type <- switch(type,
                    xml = "text/xml",
                    plain = "text/plain",
@@ -173,6 +226,10 @@ cr_auth <- function(url, type) {
           key <- Sys.getenv("CROSSREF_TDM")
           add_headers(`CR-TDM-Client_Token` = key, Accept = type)
           # add_headers(`CR-Clickthrough-Client-Token` = key, Accept = type)
+        },
+        `311` = {
+          add_headers(`CR-Clickthrough-Client-Token` = Sys.getenv("CROSSREF_TDM"), 
+                      Accept = type)
         }
     )
     # add_headers(`CR-TDM-Client_Token` = key, Accept = type)
@@ -212,13 +269,17 @@ getPDF <- function(url, path, auth, overwrite, type, read, verbose, cache=FALSE,
     }
   } else {
     if (verbose) message("Downloading pdf...")
-    res <- GET(url, accept("application/pdf"), write_disk(path = filepath, overwrite = overwrite), auth)
+    res <- GET(url, 
+               accept("application/pdf"), 
+               write_disk(path = filepath, overwrite = overwrite), 
+               auth, 
+               config(followlocation = TRUE), ...)
     filepath <- res$request$output$path
   }
 
   if (read) {
     if (verbose) message("Exracting text from pdf...")
-    extract_xpdf(path = filepath, ...)
+    extract_xpdf(path = filepath)
   } else {
     filepath
   }
