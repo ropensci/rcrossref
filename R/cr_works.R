@@ -143,14 +143,14 @@ parse_works <- function(zzz){
                   created = list(make_date(y[[which]]$`date-parts`)),
                   deposited = list(make_date(y[[which]]$`date-parts`)),
                   DOI = list(y[[which]]),
-                  funder = list(y[[which]]),
+                  #funder = list(parse_awards(y[[which]])),
                   indexed = list(make_date(y[[which]]$`date-parts`)),
                   ISBN = list(paste0(unlist(y[[which]]), collapse = ",")),
                   ISSN = list(paste0(unlist(y[[which]]), collapse = ",")),
                   issue = list(y[[which]]),
                   issued = list(paste0(sprintf("%02d", unlist(y[[which]]$`date-parts`)), collapse = "-")),
                   license = list(parse_license(y[[which]])),
-                  link = list(get_links(y[[which]])),
+                  #link = list(get_links(y[[which]])),
                   member = list(y[[which]]),
                   page = list(y[[which]]),
                   prefix = list(y[[which]]),
@@ -176,6 +176,7 @@ parse_works <- function(zzz){
       res
     }
   }
+  
   out_tmp <- if (all(is.na(zzz))) {
     NULL 
   } else {
@@ -184,7 +185,16 @@ parse_works <- function(zzz){
   
   out_tmp$assertion <- list(parse_todf(zzz$assertion))
   out_tmp$author <- list(parse_todf(zzz$author))
+  out_tmp$funder <- list(parse_todf(zzz$funder))
+  out_tmp$link <- list(parse_todf(zzz$link))
   return(out_tmp)
+}
+
+parse_awards <- function(x) {
+  as.list(setNames(
+    vapply(x, function(z) paste0(unlist(z$award), collapse = ","), ""),
+    vapply(x, "[[", "", "name")
+  ))
 }
 
 parse_license <- function(x){
@@ -201,6 +211,12 @@ parse_todf <- function(x){
     NULL
   } else {
     rbind_all(lapply(x, function(w) {
+      if ("list" %in% vapply(w, class, "")) {
+        w <- unlist(w, recursive = FALSE)
+        if ("list" %in% vapply(w, class, "")) {
+          w <- unlist(w, recursive = FALSE)
+        }
+      }
       w[sapply(w, function(b) length(b) == 0)] <- NULL
       data.frame(w, stringsAsFactors = FALSE)
     }))

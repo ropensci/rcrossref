@@ -73,14 +73,75 @@ test_that("cr_works warns correctly", {
 test_that("cr_works - parses links data correctly", {
   skip_on_cran()
   
-  aa <- cr_works(limit = 10)
+  aa <- cr_works(filter = c(has_full_text = FALSE), limit = 10)
   bb <- cr_works(filter = c(has_full_text = TRUE), limit = 10)
   
   expect_is(aa, "list")
   expect_is(bb, "list")
   
-  expect_false(any(grepl("link", names(aa$data))))
-  expect_true(any(grepl("link", names(bb$data))))
+  expect_equal(length(Filter(Negate(is.null), aa$data$link)), 0)
+  expect_that(length(Filter(Negate(is.null), bb$data$link)), not(equals(0)))
   
-  expect_true(grepl("http", bb$data$link_link1_URL[1]))
+  expect_is(bb$data$link[[1]], "data.frame")
+  expect_match(bb$data$link[[1]]$URL, "http")
+})
+
+test_that("cr_works - parses funders correctly", {
+  doi <- "10.1515/crelle-2013-0024"
+  aa <- cr_works(doi)
+  
+  expect_is(aa, "list")
+  expect_is(aa$data, "data.frame")
+  expect_is(aa$data$container.title, "character")
+  expect_equal(aa$facets, NULL)
+  expect_is(aa$data$funder, "list")
+  expect_is(aa$data$funder[[1]], "data.frame")
+  expect_true(any(grepl("funder", names(aa$data))))
+  
+  doi <- "10.1186/isrctn11093872"
+  bb <- cr_works(doi)
+  expect_true(any(grepl("funder", names(bb$data))))
+  expect_named(bb$data$funder[[1]], c("name", "DOI"))
+  
+  doi <- "10.1145/2831244.2831252"
+  cc <- cr_works(doi)
+  expect_true(any(grepl("funder", names(cc$data))))
+  expect_named(cc$data$funder[[1]], c("award", "name"))
+  
+  doi <- "10.1145/2834800.2834802"
+  dd <- cr_works(doi)
+  expect_true(any(grepl("funder", names(dd$data))))
+  expect_named(dd$data$funder[[1]], c("award", "name", "DOI"))
+  
+  doi <- "10.1145/2834800.2834802"
+  dd <- cr_works(doi)
+  expect_true(any(grepl("funder", names(dd$data))))
+  expect_named(dd$data$funder[[1]], c("award", "name", "DOI"))
+  
+  doi <- "10.1145/2832099.2832103"
+  ee <- cr_works(doi)
+  expect_true(any(grepl("funder", names(ee$data))))
+  expect_named(ee$data$funder[[1]], c("award", "name", "DOI"))
+  
+  doi <- "10.1016/j.pediatrneurol.2015.06.002"
+  ff <- cr_works(doi)
+  expect_true(any(grepl("funder", names(ff$data))))
+  expect_named(ff$data$funder[[1]], c("doi.asserted.by", "name", "DOI"))
+  
+  doi <- "10.1016/j.tcs.2015.06.001"
+  gg <- cr_works(doi)
+  expect_true(any(grepl("funder", names(gg$data))))
+  expect_named(gg$data$funder[[1]], c("award", "doi.asserted.by", "name", "DOI"))
+  
+  doi <- "10.1016/j.ffa.2015.10.008"
+  hh <- cr_works(doi)
+  expect_true(any(grepl("funder", names(hh$data))))
+  expect_named(hh$data$funder[[1]], c("award1", "award2", "award3", "doi.asserted.by", "name", "DOI"))
+})
+
+test_that("cr_works - parses affiliation inside authors correctly", {
+  doi <- "10.4018/978-1-4666-9588-7.les2"
+  aa <- cr_works(doi)
+  expect_true(any(grepl("author", names(aa$data))))
+  expect_named(aa$data$author[[1]], c("affiliation.name", "family", "given"))
 })

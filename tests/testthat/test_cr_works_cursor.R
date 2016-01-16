@@ -1,4 +1,4 @@
-context("cr_works - cursor")
+context("testing cr_works - cursor")
 
 test_that("cr_works cursor basic functionality works", {
   skip_on_cran()

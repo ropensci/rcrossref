@@ -104,8 +104,6 @@ parse_members <- function(x){
              stringsAsFactors = FALSE)  
 }
 
-# links = get_links(x$link),
-
 get_links <- function(v) {
   if (!is.null(v)) {
     lout <- list()
