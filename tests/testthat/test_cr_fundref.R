@@ -4,11 +4,11 @@ context("testing cr_fundref")
 test_that("cr_fundref returns", {
   skip_on_cran()
   
-  a <- cr_fundref(dois=c('10.13039/100000001','10.13039/100000015'))
-  b <- cr_fundref(dois='10.13039/100000001', works=TRUE, limit=5)
+  a <- suppressWarnings(cr_fundref(dois=c('10.13039/100000001','10.13039/100000015')))
+  b <- suppressWarnings(cr_fundref(dois='10.13039/100000001', works=TRUE, limit=5))
   
   # correct clases
-  expect_is(cr_fundref(query="NSF", limit=1), "list")
+  expect_is(suppressWarnings(cr_fundref(query="NSF", limit=1)), "list")
   expect_is(a, "list")
   expect_is(a[[1]]$data, "data.frame")
   expect_is(a[[1]]$descendants, "character")
@@ -25,5 +25,6 @@ test_that("cr_fundref fails correctly", {
   skip_on_cran()
   
   library('httr')
-  expect_warning(cr_fundref(dois='10.13039/100000001afasfasdf'))
+  expect_error(suppressWarnings(cr_fundref(dois='10.13039/100000001afasfasdf')), 
+               "Resource not found")
 })
