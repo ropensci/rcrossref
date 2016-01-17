@@ -24,8 +24,10 @@ you'll get a  \code{(500) Internal Server Error}}
 \item{raw}{(logical) Return raw text in the format given by \code{format} 
 parameter. Default: FALSE}
 
-\item{.progress}{Show a \code{plyr}-style progress bar? Options are "none", "text", "tk", "win, 
-and "time".  See \code{\link[plyr]{create_progress_bar}} for details of each.}
+\item{.progress}{Show a \code{plyr}-style progress bar? Options are "none", "text", 
+"tk", "win", and "time".  See \code{\link[plyr]{create_progress_bar}} for details 
+of each. Only used when passing in multiple ids (e.g., multiple DOIs, DOI prefixes,
+etc.)}
 
 \item{...}{Named parameters passed on to \code{\link[httr]{GET}}}
 }

@@ -32,6 +32,9 @@
 #' cr_works('10.1371/journal.pone.0033693')
 #' cr_works(dois='10.1007/12080.1874-1746')
 #' cr_works(dois=c('10.1007/12080.1874-1746','10.1007/10452.1573-5125', '10.1111/(issn)1442-9993'))
+#' 
+#' # progress bar
+#' cr_works(dois=c('10.1007/12080.1874-1746','10.1007/10452.1573-5125'), .progress="text")
 #'
 #' # Include facetting in results
 #' cr_works(query="NSF", facet=TRUE)
@@ -78,7 +81,7 @@
      warning("only data with valid CrossRef DOIs returned",  call. = FALSE)
     df <- df[!df$DOI == "", ]
     list(meta = NULL, data = df, facets = NULL)
-  } else { 
+  } else {
     tmp <- cr_get_cursor(dois, args = args, cursor = cursor, 
                          cursor_max = cursor_max, ...)
     if (is.null(dois)) {

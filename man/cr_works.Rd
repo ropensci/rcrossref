@@ -42,8 +42,10 @@ Because deep paging can result in continuous requests until all are retrieved, u
 parameter to set a maximum number of records. Of course, if there are less records
 found than this value, you will get only those found.}
 
-\item{.progress}{Show a \code{plyr}-style progress bar? Options are "none", "text", "tk", "win, 
-and "time".  See \code{\link[plyr]{create_progress_bar}} for details of each.}
+\item{.progress}{Show a \code{plyr}-style progress bar? Options are "none", "text", 
+"tk", "win", and "time".  See \code{\link[plyr]{create_progress_bar}} for details 
+of each. Only used when passing in multiple ids (e.g., multiple DOIs, DOI prefixes,
+etc.)}
 
 \item{...}{Named parameters passed on to \code{\link[httr]{GET}}}
 }
@@ -75,6 +77,9 @@ cr_works(dois='10.1063/1.3593378')
 cr_works('10.1371/journal.pone.0033693')
 cr_works(dois='10.1007/12080.1874-1746')
 cr_works(dois=c('10.1007/12080.1874-1746','10.1007/10452.1573-5125', '10.1111/(issn)1442-9993'))
+
+# progress bar
+cr_works(dois=c('10.1007/12080.1874-1746','10.1007/10452.1573-5125'), .progress="text")
 
 # Include facetting in results
 cr_works(query="NSF", facet=TRUE)
