@@ -13,7 +13,7 @@ cr_works(dois = NULL, query = NULL, filter = NULL, offset = NULL,
 cr_works_(dois = NULL, query = NULL, filter = NULL, offset = NULL,
   limit = NULL, sample = NULL, sort = NULL, order = NULL,
   facet = FALSE, cursor = NULL, cursor_max = 5000, .progress = "none",
-  parse = TRUE, ...)
+  parse = FALSE, ...)
 }
 \arguments{
 \item{dois}{Search by a single DOI or many DOIs.}
@@ -54,6 +54,9 @@ of each. Only used when passing in multiple ids (e.g., multiple DOIs, DOI prefix
 etc.)}
 
 \item{...}{Named parameters passed on to \code{\link[httr]{GET}}}
+
+\item{parse}{(logical) Whether to output json \code{FALSE} or parse to 
+list \code{TRUE}. Default: \code{FALSE}}
 }
 \description{
 Search CrossRef works (articles)
@@ -119,11 +122,11 @@ cr_works(filter=c(award.number='CBET-0756451', award.funder='10.13039/100000001'
 cr_works(query="NSF", cursor = "*", cursor_max = 300, limit = 100)
 cr_works(query="NSF", cursor = "*", cursor_max = 300, limit = 100, facet = TRUE)
 
-# Low level function - does no parsing to data.frame, get a list or json
+# Low level function - does no parsing to data.frame, get json or a list
 cr_works_(query = "NSF")
-cr_works_(query = "NSF", parse=FALSE)
+cr_works_(query = "NSF", parse=TRUE)
 cr_works_(query="NSF", cursor = "*", cursor_max = 300, limit = 100)
-cr_works_(query="NSF", cursor = "*", cursor_max = 300, limit = 100, parse=FALSE)
+cr_works_(query="NSF", cursor = "*", cursor_max = 300, limit = 100, parse=TRUE)
 }
 }
 \references{

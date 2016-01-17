@@ -7,6 +7,8 @@
 #' @template moreargs
 #' @template cursor_args
 #' @param facet (logical) Include facet results.
+#' @param parse (logical) Whether to output json \code{FALSE} or parse to 
+#' list \code{TRUE}. Default: \code{FALSE}
 #' 
 #' @section Beware: 
 #' The API will only work for CrossRef DOIs.
@@ -67,11 +69,11 @@
 #' cr_works(query="NSF", cursor = "*", cursor_max = 300, limit = 100)
 #' cr_works(query="NSF", cursor = "*", cursor_max = 300, limit = 100, facet = TRUE)
 #' 
-#' # Low level function - does no parsing to data.frame, get a list or json
+#' # Low level function - does no parsing to data.frame, get json or a list
 #' cr_works_(query = "NSF")
-#' cr_works_(query = "NSF", parse=FALSE)
+#' cr_works_(query = "NSF", parse=TRUE)
 #' cr_works_(query="NSF", cursor = "*", cursor_max = 300, limit = 100)
-#' cr_works_(query="NSF", cursor = "*", cursor_max = 300, limit = 100, parse=FALSE)
+#' cr_works_(query="NSF", cursor = "*", cursor_max = 300, limit = 100, parse=TRUE)
 #' }
 
 `cr_works` <- function(dois = NULL, query = NULL, filter = NULL, offset = NULL,
@@ -119,7 +121,7 @@
 #' @rdname cr_works
 `cr_works_` <- function(dois = NULL, query = NULL, filter = NULL, offset = NULL,
   limit = NULL, sample = NULL, sort = NULL, order = NULL, facet=FALSE, 
-  cursor = NULL, cursor_max = 5000, .progress="none", parse=TRUE, ...) {
+  cursor = NULL, cursor_max = 5000, .progress="none", parse=FALSE, ...) {
   
   check_limit(limit)
   if (cursor_max != as.integer(cursor_max)) stop("cursor_max must be an integer", call. = FALSE)
