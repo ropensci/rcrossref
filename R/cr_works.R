@@ -8,7 +8,17 @@
 #' @template cursor_args
 #' @param facet (logical) Include facet results.
 #' 
-#' @details BEWARE: The API will only work for CrossRef DOIs.
+#' @section Beware: 
+#' The API will only work for CrossRef DOIs.
+#' 
+#' @section Functions:
+#' \itemize{
+#'  \item \code{cr_works()} - Does data request and parses to data.frame for 
+#'  easy downstream consumption
+#'  \item \code{cr_works_()} - Does data request, and gives back lists or json,
+#'  with no attempt to parse to data.frame's
+#' }
+#' 
 #' @references \url{https://github.com/CrossRef/rest-api-doc/blob/master/rest_api.md}
 #' 
 #' @examples \dontrun{
@@ -54,8 +64,14 @@
 #' cr_works(filter=c(award.number='CBET-0756451', award.funder='10.13039/100000001'))
 #' 
 #' # Use the cursor for deep paging
-#' cr_works(query="NSF", cursor = "*", cursor_max = 500, limit = 100)
-#' cr_works(query="NSF", cursor = "*", cursor_max = 500, limit = 100, facet = TRUE)
+#' cr_works(query="NSF", cursor = "*", cursor_max = 300, limit = 100)
+#' cr_works(query="NSF", cursor = "*", cursor_max = 300, limit = 100, facet = TRUE)
+#' 
+#' # Low level function - does no parsing to data.frame, get a list or json
+#' cr_works_(query = "NSF")
+#' cr_works_(query = "NSF", parse=FALSE)
+#' cr_works_(query="NSF", cursor = "*", cursor_max = 300, limit = 100)
+#' cr_works_(query="NSF", cursor = "*", cursor_max = 300, limit = 100, parse=FALSE)
 #' }
 
 `cr_works` <- function(dois = NULL, query = NULL, filter = NULL, offset = NULL,
@@ -99,14 +115,50 @@
   }
 }
 
+#' @export
+#' @rdname cr_works
+`cr_works_` <- function(dois = NULL, query = NULL, filter = NULL, offset = NULL,
+  limit = NULL, sample = NULL, sort = NULL, order = NULL, facet=FALSE, 
+  cursor = NULL, cursor_max = 5000, .progress="none", parse=TRUE, ...) {
+  
+  check_limit(limit)
+  if (cursor_max != as.integer(cursor_max)) stop("cursor_max must be an integer", call. = FALSE)
+  filter <- filter_handler(filter)
+  facet <- if (facet) "t" else NULL
+  args <- cr_compact(list(query = query, filter = filter, offset = offset, rows = limit,
+                          sample = sample, sort = sort, order = order, facet = facet,
+                          cursor = cursor))
+  
+  if (length(dois) > 1) {
+    llply(dois, cr_get_cursor_, args = args, cursor = cursor, 
+          cursor_max = cursor_max, parse = parse, .progress = .progress, ...)
+  } else {
+    cr_get_cursor_(dois, args = args, cursor = cursor, 
+                   cursor_max = cursor_max, parse = parse, ...)
+  }
+}
+
 cr_get_cursor <- function(x, args, cursor, cursor_max, ...) {
   path <- if (!is.null(x)) sprintf("works/%s", x) else "works"
   if (!is.null(cursor)) {
-    rr <- Requestor$new(path = path, args = args, cursor_max = cursor_max, ...)
+    rr <- Requestor$new(path = path, args = args, cursor_max = cursor_max, 
+                        should_parse = TRUE, ...)
     rr$GETcursor()
     rr$parse()
   } else {
     cr_GET(endpoint = path, args, todf = FALSE, ...)
+  }
+}
+
+cr_get_cursor_ <- function(x, args, cursor, cursor_max, parse, ...) {
+  path <- if (!is.null(x)) sprintf("works/%s", x) else "works"
+  if (!is.null(cursor)) {
+    rr <- Requestor$new(path = path, args = args, cursor_max = cursor_max, 
+                        should_parse = parse, ...)
+    rr$GETcursor()
+    rr$cursor_out
+  } else {
+    cr_GET(endpoint = path, args, todf = FALSE, parse = parse, ...)
   }
 }
 

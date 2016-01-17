@@ -109,7 +109,8 @@ member_GET <- function(x, args, works, cursor = NULL, cursor_max = NULL, ...){
   }
   
   if (!is.null(cursor) && works) {
-    rr <- Requestor$new(path = path, args = args, cursor_max = cursor_max, ...)
+    rr <- Requestor$new(path = path, args = args, cursor_max = cursor_max, 
+                        should_parse = TRUE, ...)
     rr$GETcursor()
     rr$parse()
   } else {

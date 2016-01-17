@@ -2,12 +2,18 @@
 % Please edit documentation in R/cr_works.R
 \name{cr_works}
 \alias{cr_works}
+\alias{cr_works_}
 \title{Search CrossRef works (articles)}
 \usage{
 cr_works(dois = NULL, query = NULL, filter = NULL, offset = NULL,
   limit = NULL, sample = NULL, sort = NULL, order = NULL,
   facet = FALSE, cursor = NULL, cursor_max = 5000, .progress = "none",
   ...)
+
+cr_works_(dois = NULL, query = NULL, filter = NULL, offset = NULL,
+  limit = NULL, sample = NULL, sort = NULL, order = NULL,
+  facet = FALSE, cursor = NULL, cursor_max = 5000, .progress = "none",
+  parse = TRUE, ...)
 }
 \arguments{
 \item{dois}{Search by a single DOI or many DOIs.}
@@ -52,8 +58,19 @@ etc.)}
 \description{
 Search CrossRef works (articles)
 }
-\details{
-BEWARE: The API will only work for CrossRef DOIs.
+\section{Beware}{
+ 
+The API will only work for CrossRef DOIs.
+}
+
+\section{Functions}{
+
+\itemize{
+ \item \code{cr_works()} - Does data request and parses to data.frame for 
+ easy downstream consumption
+ \item \code{cr_works_()} - Does data request, and gives back lists or json,
+ with no attempt to parse to data.frame's
+}
 }
 \examples{
 \dontrun{
@@ -99,8 +116,14 @@ cr_works(sample=10)
 cr_works(filter=c(award.number='CBET-0756451', award.funder='10.13039/100000001'))
 
 # Use the cursor for deep paging
-cr_works(query="NSF", cursor = "*", cursor_max = 500, limit = 100)
-cr_works(query="NSF", cursor = "*", cursor_max = 500, limit = 100, facet = TRUE)
+cr_works(query="NSF", cursor = "*", cursor_max = 300, limit = 100)
+cr_works(query="NSF", cursor = "*", cursor_max = 300, limit = 100, facet = TRUE)
+
+# Low level function - does no parsing to data.frame, get a list or json
+cr_works_(query = "NSF")
+cr_works_(query = "NSF", parse=FALSE)
+cr_works_(query="NSF", cursor = "*", cursor_max = 300, limit = 100)
+cr_works_(query="NSF", cursor = "*", cursor_max = 300, limit = 100, parse=FALSE)
 }
 }
 \references{

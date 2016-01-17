@@ -13,7 +13,7 @@
 
 `cr_agency` <- function(dois = NULL, .progress="none", ...) {
   foo <- function(x, y, ...){
-    cr_GET(endpoint = sprintf("works/%s/agency", x), args = list(), .progress = y, ...)
+    cr_GET(endpoint = sprintf("works/%s/agency", x), args = list(), parse = TRUE, ...)
   }
   if (length(dois) > 1) {
     res <- llply(dois, foo, y = .progress, ...)
@@ -21,6 +21,6 @@
     names(res) <- dois
     res
   } else { 
-    foo(dois, y = .progress, ...)$message 
+    foo(dois, ...)$message 
   }
 }
