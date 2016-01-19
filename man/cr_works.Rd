@@ -2,12 +2,18 @@
 % Please edit documentation in R/cr_works.R
 \name{cr_works}
 \alias{cr_works}
+\alias{cr_works_}
 \title{Search CrossRef works (articles)}
 \usage{
 cr_works(dois = NULL, query = NULL, filter = NULL, offset = NULL,
   limit = NULL, sample = NULL, sort = NULL, order = NULL,
   facet = FALSE, cursor = NULL, cursor_max = 5000, .progress = "none",
   ...)
+
+cr_works_(dois = NULL, query = NULL, filter = NULL, offset = NULL,
+  limit = NULL, sample = NULL, sort = NULL, order = NULL,
+  facet = FALSE, cursor = NULL, cursor_max = 5000, .progress = "none",
+  parse = FALSE, ...)
 }
 \arguments{
 \item{dois}{Search by a single DOI or many DOIs.}
@@ -29,7 +35,7 @@ or published.}
 
 \item{order}{(character) Sort order, one of 'asc' or 'desc'}
 
-\item{facet}{(logical) Include facet results.}
+\item{facet}{(logical) Include facet results. Default: \code{FALSE}}
 
 \item{cursor}{(character) Cursor character string to do deep paging. Default is None.
 Pass in '*' to start deep paging. Any combination of query, filters and facets may be
@@ -48,12 +54,26 @@ of each. Only used when passing in multiple ids (e.g., multiple DOIs, DOI prefix
 etc.)}
 
 \item{...}{Named parameters passed on to \code{\link[httr]{GET}}}
+
+\item{parse}{(logical) Whether to output json \code{FALSE} or parse to 
+list \code{TRUE}. Default: \code{FALSE}}
 }
 \description{
 Search CrossRef works (articles)
 }
-\details{
-BEWARE: The API will only work for CrossRef DOIs.
+\section{Beware}{
+ 
+The API will only work for CrossRef DOIs.
+}
+
+\section{Functions}{
+
+\itemize{
+ \item \code{cr_works()} - Does data request and parses to data.frame for 
+ easy downstream consumption
+ \item \code{cr_works_()} - Does data request, and gives back json (default) or lists,
+ with no attempt to parse to data.frame's
+}
 }
 \examples{
 \dontrun{
@@ -99,8 +119,14 @@ cr_works(sample=10)
 cr_works(filter=c(award.number='CBET-0756451', award.funder='10.13039/100000001'))
 
 # Use the cursor for deep paging
-cr_works(query="NSF", cursor = "*", cursor_max = 500, limit = 100)
-cr_works(query="NSF", cursor = "*", cursor_max = 500, limit = 100, facet = TRUE)
+cr_works(query="NSF", cursor = "*", cursor_max = 300, limit = 100)
+cr_works(query="NSF", cursor = "*", cursor_max = 300, limit = 100, facet = TRUE)
+
+# Low level function - does no parsing to data.frame, get json or a list
+cr_works_(query = "NSF")
+cr_works_(query = "NSF", parse=TRUE)
+cr_works_(query="NSF", cursor = "*", cursor_max = 300, limit = 100)
+cr_works_(query="NSF", cursor = "*", cursor_max = 300, limit = 100, parse=TRUE)
 }
 }
 \references{

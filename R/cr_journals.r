@@ -6,7 +6,10 @@
 #' @template args
 #' @template moreargs
 #' @template cursor_args
+#' @param facet (logical) Include facet results. Default: \code{FALSE}
 #' @param works (logical) If TRUE, works returned as well, if not then not.
+#' @param parse (logical) Whether to output json \code{FALSE} or parse to 
+#' list \code{TRUE}. Default: \code{FALSE}
 #' 
 #' @details  BEWARE: The API will only work for CrossRef DOIs.
 #' 
@@ -34,17 +37,23 @@
 #' 
 #' # fails, if you want works, you must give an ISSN
 #' # cr_journals(query = "ecology", filter=c(has_full_text = TRUE), works = TRUE)
+#' 
+#' # Low level function - does no parsing to data.frame, get json or a list
+#' cr_journals_(query = 'ecology')
+#' cr_journals_("2167-8359")
+#' cr_journals_(query = 'ecology', parse=TRUE)
+#' cr_journals_("2167-8359", works = TRUE, cursor = "*", 
+#'    cursor_max = 300, limit = 100)
+#' cr_journals_("2167-8359", works = TRUE, cursor = "*", 
+#'    cursor_max = 300, limit = 100, parse = TRUE)
 #' }
 
 `cr_journals` <- function(issn = NULL, query = NULL, filter = NULL, offset = NULL,
-  limit = NULL, sample = NULL, sort = NULL, order = NULL, works=FALSE, 
+  limit = NULL, sample = NULL, sort = NULL, order = NULL, facet = FALSE, works=FALSE, 
   cursor = NULL, cursor_max = 5000, .progress="none", ...) {
   
-  check_limit(limit)
   if (works) if (is.null(issn)) stop("If `works=TRUE`, you must give a journal ISSN", call. = FALSE)
-  filter <- filter_handler(filter)
-  args <- cr_compact(list(query = query, filter = filter, offset = offset, rows = limit,
-                          sample = sample, sort = sort, order = order, cursor = cursor))
+  args <- prep_args(query, filter, offset, limit, sample, sort, order, facet, cursor)
   
   if (length(issn) > 1) {
     res <- llply(issn, journal_GET, args = args, works = works, 
@@ -86,6 +95,23 @@
   }
 }
 
+#' @export
+#' @rdname cr_journals
+`cr_journals_` <- function(issn = NULL, query = NULL, filter = NULL, offset = NULL,
+  limit = NULL, sample = NULL, sort = NULL, order = NULL, facet = FALSE, works=FALSE, 
+  cursor = NULL, cursor_max = 5000, .progress="none", parse=FALSE, ...) {
+  
+  if (works) if (is.null(issn)) stop("If `works=TRUE`, you must give a journal ISSN", call. = FALSE)
+  args <- prep_args(query, filter, offset, limit, sample, sort, order, facet, cursor)
+  if (length(issn) > 1) {
+    llply(issn, journal_GET_, args = args, works = works, 
+          cursor = cursor, cursor_max = cursor_max, 
+          parse = parse, ..., .progress = .progress)
+  } else {
+    journal_GET_(issn, args, works, cursor, cursor_max, parse, ...)
+  }
+}
+
 journal_GET <- function(x, args, works, cursor = NULL, cursor_max = NULL, ...){
   path <- if (!is.null(x)) {
     if (works) sprintf("journals/%s/works", x) else sprintf("journals/%s", x)
@@ -94,11 +120,29 @@ journal_GET <- function(x, args, works, cursor = NULL, cursor_max = NULL, ...){
   }
   
   if (!is.null(cursor) && works) {
-    rr <- Requestor$new(path = path, args = args, cursor_max = cursor_max, ...)
+    rr <- Requestor$new(path = path, args = args, cursor_max = cursor_max, 
+                        should_parse = TRUE, ...)
     rr$GETcursor()
     rr$parse()
   } else {
-    cr_GET(endpoint = path, args, todf = FALSE, on_error = stop, ...)
+    cr_GET(endpoint = path, args, todf = FALSE, on_error = stop, parse = TRUE, ...)
+  }
+}
+
+journal_GET_ <- function(x, args, works, cursor = NULL, cursor_max = NULL, parse, ...){
+  path <- if (!is.null(x)) {
+    if (works) sprintf("journals/%s/works", x) else sprintf("journals/%s", x)
+  } else { 
+    "journals" 
+  }
+  
+  if (!is.null(cursor) && works) {
+    rr <- Requestor$new(path = path, args = args, cursor_max = cursor_max, 
+                        should_parse = parse, ...)
+    rr$GETcursor()
+    rr$cursor_out
+  } else {
+    cr_GET(endpoint = path, args, todf = FALSE, on_error = stop, parse = parse, ...)
   }
 }
 

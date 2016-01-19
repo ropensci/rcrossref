@@ -2,18 +2,24 @@
 % Please edit documentation in R/cr_fundref.r
 \name{cr_fundref}
 \alias{cr_funders}
+\alias{cr_funders_}
 \alias{cr_fundref}
 \title{Search the CrossRef Fundref API}
 \usage{
 cr_fundref(dois = NULL, query = NULL, filter = NULL, offset = NULL,
   limit = NULL, sample = NULL, sort = NULL, order = NULL,
-  works = FALSE, cursor = NULL, cursor_max = 5000, .progress = "none",
-  ...)
+  facet = FALSE, works = FALSE, cursor = NULL, cursor_max = 5000,
+  .progress = "none", ...)
 
 cr_funders(dois = NULL, query = NULL, filter = NULL, offset = NULL,
   limit = NULL, sample = NULL, sort = NULL, order = NULL,
-  works = FALSE, cursor = NULL, cursor_max = 5000, .progress = "none",
-  ...)
+  facet = FALSE, works = FALSE, cursor = NULL, cursor_max = 5000,
+  .progress = "none", ...)
+
+cr_funders_(dois = NULL, query = NULL, filter = NULL, offset = NULL,
+  limit = NULL, sample = NULL, sort = NULL, order = NULL,
+  facet = FALSE, works = FALSE, cursor = NULL, cursor_max = 5000,
+  .progress = "none", parse = FALSE, ...)
 }
 \arguments{
 \item{dois}{Search by a single DOI or many DOIs.}
@@ -35,6 +41,8 @@ or published.}
 
 \item{order}{(character) Sort order, one of 'asc' or 'desc'}
 
+\item{facet}{(logical) Include facet results. Default: \code{FALSE}}
+
 \item{works}{(logical) If TRUE, works returned as well, if not then not.}
 
 \item{cursor}{(character) Cursor character string to do deep paging. Default is None.
@@ -54,6 +62,9 @@ of each. Only used when passing in multiple ids (e.g., multiple DOIs, DOI prefix
 etc.)}
 
 \item{...}{Named parameters passed on to \code{\link[httr]{GET}}}
+
+\item{parse}{(logical) Whether to output json \code{FALSE} or parse to 
+list \code{TRUE}. Default: \code{FALSE}}
 }
 \description{
 Search the CrossRef Fundref API
@@ -71,35 +82,44 @@ so won't show up in searches.
 }
 \examples{
 \dontrun{
-cr_fundref(query="NSF", limit=1)
-cr_fundref(query="NSF")
-cr_fundref(dois='10.13039/100000001')
-out <- cr_fundref(dois=c('10.13039/100000001','10.13039/100000015'))
+cr_funders(query="NSF", limit=1)
+cr_funders(query="NSF")
+cr_funders(dois='10.13039/100000001')
+out <- cr_funders(dois=c('10.13039/100000001','10.13039/100000015'))
 out['10.13039/100000001']
 out[['10.13039/100000001']]
 
-cr_fundref(dois='10.13039/100000001')
-cr_fundref(dois='10.13039/100000001', works=TRUE, limit=5)
+cr_funders(dois='10.13039/100000001')
+cr_funders(dois='10.13039/100000001', works=TRUE, limit=5)
 
-cr_fundref(dois=c('10.13039/100000001','10.13039/100000015'))
-cr_fundref(dois=c('10.13039/100000001','10.13039/100000015'), works=TRUE)
+cr_funders(dois=c('10.13039/100000001','10.13039/100000015'))
+cr_funders(dois=c('10.13039/100000001','10.13039/100000015'), works=TRUE)
 
 # Curl options
 library('httr')
-cr_fundref(dois='10.13039/100000001', config=verbose())
+cr_funders(dois='10.13039/100000001', config=verbose())
 
 # If not found, and only 1 DOI given, list of NA elements returned
-cr_fundref("adfadfaf")
+cr_funders("adfadfaf")
 # If not found, and > 1 DOI given, those not found dropped
-cr_fundref(dois=c("adfadfaf","asfasf"))
-cr_fundref(dois=c("adfadfaf","asfasf"), works=TRUE)
-cr_fundref(dois=c("10.13039/100000001","asfasf"))
-cr_fundref(dois=c("10.13039/100000001","asfasf"), works=TRUE)
+cr_funders(dois=c("adfadfaf","asfasf"))
+cr_funders(dois=c("adfadfaf","asfasf"), works=TRUE)
+cr_funders(dois=c("10.13039/100000001","asfasf"))
+cr_funders(dois=c("10.13039/100000001","asfasf"), works=TRUE)
 
 # Use the cursor for deep paging
 cr_funders('100000001', works = TRUE, cursor = "*", cursor_max = 500, limit = 100)
 cr_funders(c('100000001', '100000002'), works = TRUE, cursor = "*",
    cursor_max = 300, limit = 100) 
+   
+# Low level function - does no parsing to data.frame, get json or a list
+cr_funders_(query = 'nsf')
+cr_funders_('10.13039/100000001')
+cr_funders_(query = 'science', parse=TRUE)
+cr_funders_('10.13039/100000001', works = TRUE, cursor = "*", 
+   cursor_max = 300, limit = 100)
+cr_funders_('10.13039/100000001', works = TRUE, cursor = "*", 
+   cursor_max = 300, limit = 100, parse = TRUE)
 }
 }
 \references{

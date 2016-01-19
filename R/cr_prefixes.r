@@ -6,8 +6,10 @@
 #' @template args
 #' @template moreargs
 #' @template cursor_args
-#' @param facet (logical) Include facet results. Facet data not yet included in output.
+#' @param facet (logical) Include facet results. Default: \code{FALSE}
 #' @param works (logical) If TRUE, works returned as well, if not then not.
+#' @param parse (logical) Whether to output json \code{FALSE} or parse to 
+#' list \code{TRUE}. Default: \code{FALSE}
 #' 
 #' @details BEWARE: The API will only work for CrossRef DOIs.
 #' 
@@ -35,10 +37,8 @@
 #' cr_works(prefixes="10.1016", query='ecology', limit=4)
 #' cr_works(prefixes="10.1016", query='ecology', limit=4)
 #' 
-#' # facets
-#' ## if works is FALSE, then facets ignored
-#' ###### FIXME
-#' # cr_prefixes(prefixes="10.1016", works=FALSE, facet=TRUE)
+#' # facets - only avail. when works=TRUE
+#' cr_prefixes(prefixes="10.1016", works=TRUE, facet=TRUE)
 #' 
 #' ## get facets back
 #' cr_prefixes(prefixes="10.1016", works=TRUE, facet=TRUE)
@@ -48,20 +48,23 @@
 #' cr_prefixes("10.1016", works = TRUE, cursor = "*", cursor_max = 500, limit = 100)
 #' cr_prefixes(c('10.1016', '10.1371'), works = TRUE, cursor = "*",
 #'    cursor_max = 300, limit = 100) 
+#'    
+#' # Low level function - does no parsing to data.frame, get json or a list
+#' cr_prefixes_("10.1016")
+#' cr_prefixes_(c('10.1016', '10.1371'))
+#' cr_prefixes_("10.1016", works = TRUE, query = 'ecology', limit = 10)
+#' cr_prefixes_("10.1016", works = TRUE, query = 'ecology', parse=TRUE, limit = 10)
+#' cr_prefixes_("10.1016", works = TRUE, cursor = "*", 
+#'    cursor_max = 300, limit = 100)
+#' cr_prefixes_("10.1016", works = TRUE, cursor = "*", 
+#'    cursor_max = 300, limit = 100, parse = TRUE)
 #' }
 
 `cr_prefixes` <- function(prefixes, query = NULL, filter = NULL, offset = NULL,
   limit = NULL, sample = NULL, sort = NULL, order = NULL, facet=FALSE, works = FALSE, 
   cursor = NULL, cursor_max = 5000, .progress="none", ...) {
   
-  check_limit(limit)
-  filter <- filter_handler(filter)
-  facet_log <- facet
-  facet <- if (facet) "t" else NULL
-  args <- cr_compact(list(query = query, filter = filter, offset = offset, rows = limit,
-                          sample = sample, sort = sort, order = order, facet = facet,
-                          cursor = cursor))
-
+  args <- prep_args(query, filter, offset, limit, sample, sort, order, facet, cursor)
   if (length(prefixes) > 1) {
     res <- llply(prefixes, prefixes_GET, args = args, works = works, 
                  cursor = cursor, cursor_max = cursor_max, ..., .progress = .progress)
@@ -73,9 +76,9 @@
       out <- if (works) do.call(c, lapply(out, function(x) lapply(x$items, parse_works))) else lapply(out, DataFrame)
       df <- rbind_all(out)
       meta <- if (works) data.frame(prefix = prefixes, do.call(rbind, lapply(res, parse_meta)), stringsAsFactors = FALSE) else NULL
-      if (facet_log) { 
+      if (facet) { 
         ft <- Map(function(x, y) {
-          rr <- list(parse_facets(x$message$facets)); names(rr) <- y; rr 
+          rr <- list(parse_facets(x$message$facets)); names(rr) <- y; rr
         }, res, prefixes) 
       } else {
         ft <- list() 
@@ -94,14 +97,44 @@
   }
 }
 
+#' @export
+#' @rdname cr_prefixes
+`cr_prefixes_` <- function(prefixes, query = NULL, filter = NULL, offset = NULL,
+  limit = NULL, sample = NULL, sort = NULL, order = NULL, facet=FALSE, works = FALSE, 
+  cursor = NULL, cursor_max = 5000, .progress="none", parse=FALSE, ...) {
+  
+  args <- prep_args(query, filter, offset, limit, sample, sort, order, facet, cursor)
+  if (length(prefixes) > 1) {
+    llply(prefixes, prefixes_GET_, args = args, works = works, 
+          cursor = cursor, cursor_max = cursor_max, parse = parse, 
+          ..., .progress = .progress)
+  } else {
+    prefixes_GET_(prefixes, args, works = works, cursor = cursor, 
+                  cursor_max = cursor_max, parse = parse, ...)
+  }
+}
+
 prefixes_GET <- function(x, args, works, cursor = NULL, cursor_max = NULL, ...){
   path <- if (works) sprintf("prefixes/%s/works", x) else sprintf("prefixes/%s", x)
   if (!is.null(cursor) && works) {
-    rr <- Requestor$new(path = path, args = args, cursor_max = cursor_max, ...)
+    rr <- Requestor$new(path = path, args = args, cursor_max = cursor_max, 
+                        should_parse = TRUE, ...)
     rr$GETcursor()
     rr$parse()
   } else {
     cr_GET(path, args, todf = FALSE, ...)
+  }
+}
+
+prefixes_GET_ <- function(x, args, works, cursor = NULL, cursor_max = NULL, parse, ...){
+  path <- if (works) sprintf("prefixes/%s/works", x) else sprintf("prefixes/%s", x)
+  if (!is.null(cursor) && works) {
+    rr <- Requestor$new(path = path, args = args, cursor_max = cursor_max, 
+                        should_parse = parse, ...)
+    rr$GETcursor()
+    rr$cursor_out
+  } else {
+    cr_GET(path, args, todf = FALSE, parse = parse, ...)
   }
 }
 

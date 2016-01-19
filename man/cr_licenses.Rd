@@ -2,10 +2,14 @@
 % Please edit documentation in R/cr_licenses.R
 \name{cr_licenses}
 \alias{cr_licenses}
+\alias{cr_licenses_}
 \title{Search CrossRef licenses}
 \usage{
 cr_licenses(query = NULL, offset = NULL, limit = NULL, sort = NULL,
   order = NULL, .progress = "none", ...)
+
+cr_licenses_(query = NULL, offset = NULL, limit = NULL, sort = NULL,
+  order = NULL, .progress = "none", parse = FALSE, ...)
 }
 \arguments{
 \item{query}{Query terms}
@@ -24,6 +28,9 @@ or published.}
 and "time".  See \code{\link[plyr]{create_progress_bar}} for details of each.}
 
 \item{...}{Named parameters passed on to \code{\link[httr]{GET}}}
+
+\item{parse}{(logical) Whether to output json \code{FALSE} or parse to 
+list \code{TRUE}. Default: \code{FALSE}}
 }
 \description{
 Search CrossRef licenses
@@ -39,6 +46,11 @@ the \code{filter} parameter has been removed.
 cr_licenses()
 # query for something, e.g. a publisher
 cr_licenses(query = 'elsevier')
+
+# Low level function - does no parsing to data.frame, get json or a list
+cr_licenses_()
+cr_licenses_(query = "elsevier")
+cr_licenses_(query = "elsevier", parse=TRUE)
 }
 }
 \references{

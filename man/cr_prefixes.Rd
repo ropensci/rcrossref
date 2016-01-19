@@ -2,12 +2,18 @@
 % Please edit documentation in R/cr_prefixes.r
 \name{cr_prefixes}
 \alias{cr_prefixes}
+\alias{cr_prefixes_}
 \title{Search CrossRef prefixes}
 \usage{
 cr_prefixes(prefixes, query = NULL, filter = NULL, offset = NULL,
   limit = NULL, sample = NULL, sort = NULL, order = NULL,
   facet = FALSE, works = FALSE, cursor = NULL, cursor_max = 5000,
   .progress = "none", ...)
+
+cr_prefixes_(prefixes, query = NULL, filter = NULL, offset = NULL,
+  limit = NULL, sample = NULL, sort = NULL, order = NULL,
+  facet = FALSE, works = FALSE, cursor = NULL, cursor_max = 5000,
+  .progress = "none", parse = FALSE, ...)
 }
 \arguments{
 \item{prefixes}{(character) Publisher prefixes, one or more in a vector or list. Required.}
@@ -29,7 +35,7 @@ or published.}
 
 \item{order}{(character) Sort order, one of 'asc' or 'desc'}
 
-\item{facet}{(logical) Include facet results. Facet data not yet included in output.}
+\item{facet}{(logical) Include facet results. Default: \code{FALSE}}
 
 \item{works}{(logical) If TRUE, works returned as well, if not then not.}
 
@@ -50,6 +56,9 @@ of each. Only used when passing in multiple ids (e.g., multiple DOIs, DOI prefix
 etc.)}
 
 \item{...}{Named parameters passed on to \code{\link[httr]{GET}}}
+
+\item{parse}{(logical) Whether to output json \code{FALSE} or parse to 
+list \code{TRUE}. Default: \code{FALSE}}
 }
 \description{
 Search CrossRef prefixes
@@ -81,10 +90,8 @@ cr_works(prefixes="10.1016", filter=c(has_full_text=TRUE), limit=5)
 cr_works(prefixes="10.1016", query='ecology', limit=4)
 cr_works(prefixes="10.1016", query='ecology', limit=4)
 
-# facets
-## if works is FALSE, then facets ignored
-###### FIXME
-# cr_prefixes(prefixes="10.1016", works=FALSE, facet=TRUE)
+# facets - only avail. when works=TRUE
+cr_prefixes(prefixes="10.1016", works=TRUE, facet=TRUE)
 
 ## get facets back
 cr_prefixes(prefixes="10.1016", works=TRUE, facet=TRUE)
@@ -94,6 +101,16 @@ cr_prefixes(prefixes=c('10.1016','10.1371'), works=TRUE, facet=TRUE)
 cr_prefixes("10.1016", works = TRUE, cursor = "*", cursor_max = 500, limit = 100)
 cr_prefixes(c('10.1016', '10.1371'), works = TRUE, cursor = "*",
    cursor_max = 300, limit = 100) 
+   
+# Low level function - does no parsing to data.frame, get json or a list
+cr_prefixes_("10.1016")
+cr_prefixes_(c('10.1016', '10.1371'))
+cr_prefixes_("10.1016", works = TRUE, query = 'ecology', limit = 10)
+cr_prefixes_("10.1016", works = TRUE, query = 'ecology', parse=TRUE, limit = 10)
+cr_prefixes_("10.1016", works = TRUE, cursor = "*", 
+   cursor_max = 300, limit = 100)
+cr_prefixes_("10.1016", works = TRUE, cursor = "*", 
+   cursor_max = 300, limit = 100, parse = TRUE)
 }
 }
 \references{

@@ -22,6 +22,18 @@ test_that("cr_prefixes metadata works correctly", {
   expect_equal(cr_works(prefixes="10.1016", query='ecology', limit=4)$meta$items_per_page, 4)
 })
 
+test_that("cr_prefixes facet works correctly", {
+  skip_on_cran()
+  
+  aa <- cr_prefixes(prefixes="10.1016", works=TRUE, facet=TRUE, limit = 10)
+  
+  expect_is(aa, "list")
+  expect_named(aa, c('meta', 'data', 'facets'))
+  expect_is(aa$facets, 'list')
+  expect_is(aa$facets$affiliation, 'data.frame')
+  expect_is(aa$facets$orcid, 'data.frame')
+})
+
 test_that("cr_prefixes fails correctly", {
   skip_on_cran()
   

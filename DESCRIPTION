@@ -5,13 +5,14 @@ Description: Client for various 'CrossRef' 'APIs', including 'metadata' search
     (including 'bibtex', 'citeproc-json', 'rdf-xml', etc.), convert 'DOIs'
     to 'PMIDs', and 'vice versa', get citations for 'DOIs', and get links to
     full text of articles when available.
-Version: 0.3.7.9030
+Version: 0.3.8.9400
 License: MIT + file LICENSE
-Authors@R: c(person("Carl", "Boettiger", role = "aut"),
+Authors@R: c(
+    person("Scott", "Chamberlain", role = c("aut", "cre"), email = "myrmecocystus@gmail.com"),
+    person("Carl", "Boettiger", role = "aut"),
     person("Ted", "Hart", role = "aut"),
-    person("Scott", "Chamberlain", role = c("aut", "cre"), email =
-    "myrmecocystus@gmail.com"),
-    person("Karthik", "Ram", role = "aut"))
+    person("Karthik", "Ram", role = "aut")
+    )
 URL: https://github.com/ropensci/rcrossref
 BugReports: https://github.com/ropensci/rcrossref/issues
 VignetteBuilder: knitr

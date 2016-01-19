@@ -13,7 +13,7 @@ asl <- function(z) {
   }
 }
 
-cr_GET <- function(endpoint, args, todf = TRUE, on_error = warning, ...) {
+cr_GET <- function(endpoint, args, todf = TRUE, on_error = warning, parse = TRUE, ...) {
   url <- sprintf("http://api.crossref.org/%s", endpoint)
   if (length(args) == 0) {
     res <- GET(url, ...)
@@ -27,7 +27,7 @@ cr_GET <- function(endpoint, args, todf = TRUE, on_error = warning, ...) {
   } else {
     stopifnot(res$headers$`content-type` == "application/json;charset=UTF-8")
     res <- content(res, as = "text")
-    jsonlite::fromJSON(res, todf)
+    if (parse) jsonlite::fromJSON(res, todf) else res
   }
 }
 
@@ -68,4 +68,14 @@ check_limit <- function(x) {
 
 ifnullna <- function(x) {
   if (is.null(x)) NA else x
+}
+
+prep_args <- function(query, filter, offset, limit, sample, sort, order, facet, cursor) {
+  check_limit(limit)
+  filter <- filter_handler(filter)
+  facet <- if (facet) "t" else NULL
+  cr_compact(list(query = query, filter = filter, offset = offset, rows = limit,
+                  sample = sample, sort = sort, order = order, facet = facet,
+                  cursor = cursor))
+  
 }
