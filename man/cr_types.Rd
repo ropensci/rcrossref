@@ -2,12 +2,18 @@
 % Please edit documentation in R/cr_types.R
 \name{cr_types}
 \alias{cr_types}
+\alias{cr_types_}
 \title{Search CrossRef types}
 \usage{
 cr_types(types = NULL, query = NULL, filter = NULL, offset = NULL,
   limit = NULL, sample = NULL, sort = NULL, order = NULL,
   facet = FALSE, works = FALSE, cursor = NULL, cursor_max = 5000,
   .progress = "none", ...)
+
+cr_types_(types = NULL, query = NULL, filter = NULL, offset = NULL,
+  limit = NULL, sample = NULL, sort = NULL, order = NULL,
+  facet = FALSE, works = FALSE, cursor = NULL, cursor_max = 5000,
+  .progress = "none", parse = FALSE, ...)
 }
 \arguments{
 \item{types}{(character) Type identifier, e.g., journal}
@@ -50,6 +56,9 @@ of each. Only used when passing in multiple ids (e.g., multiple DOIs, DOI prefix
 etc.)}
 
 \item{...}{Named parameters passed on to \code{\link[httr]{GET}}}
+
+\item{parse}{(logical) Whether to output json \code{FALSE} or parse to 
+list \code{TRUE}. Default: \code{FALSE}}
 }
 \description{
 Search CrossRef types
@@ -78,8 +87,16 @@ cr_types(c('monograph', 'book-set'), works = TRUE, cursor = "*",
 ### you get results, but query param is silently dropped
 cr_types(query = "ecology")
 
-# print progress
+# print progress - only works when passing more than one type
 cr_types(c('monograph', 'book-set'), works=TRUE, .progress='text')
+
+# Low level function - does no parsing to data.frame, get json or a list
+cr_types_('monograph')
+cr_types_('monograph', parse = TRUE)
+cr_types_("journal-article", works = TRUE, cursor = "*", 
+   cursor_max = 300, limit = 100)
+cr_types_("journal-article", works = TRUE, cursor = "*", 
+   cursor_max = 300, limit = 100, parse = TRUE)
 }
 }
 \references{

@@ -9,6 +9,8 @@
 #' @template cursor_args
 #' @param works (logical) If TRUE, works returned as well, if not then not.
 #' @param facet (logical) Include facet results.
+#' @param parse (logical) Whether to output json \code{FALSE} or parse to 
+#' list \code{TRUE}. Default: \code{FALSE}
 #' 
 #' @details BEWARE: The API will only work for CrossRef DOIs.
 #' @references \url{https://github.com/CrossRef/rest-api-doc/blob/master/rest_api.md}
@@ -39,19 +41,21 @@
 #' # cr_members(query="adfdf")
 #' # cr_members(member_ids=c(323234343434,3434343434), works=TRUE, facet=TRUE)
 #' # cr_members(member_ids=c(323234343434,3434343434,98), works=TRUE, facet=TRUE)
+#' 
+#' # Low level function - does no parsing to data.frame, get json or a list
+#' cr_members_(query = 'hindawi')
+#' cr_members_(member_ids = 98)
+#' cr_members_(query = 'hindawi', parse=TRUE)
+#' cr_members_(member_ids = 98, works = TRUE, cursor = "*", 
+#'    cursor_max = 300, limit = 100)
+#' cr_members_(member_ids = 98, works = TRUE, cursor = "*", 
+#'    cursor_max = 300, limit = 100, parse=TRUE)
 #' }
-
 `cr_members` <- function(member_ids = NULL, query = NULL, filter = NULL, offset = NULL,
   limit = NULL, sample = NULL, sort = NULL, order = NULL, facet=FALSE, works = FALSE, 
   cursor = NULL, cursor_max = 5000, .progress="none", ...) {
   
-  check_limit(limit)
-  filter <- filter_handler(filter)
-  facet <- if (facet) "t" else NULL
-  args <- cr_compact(list(query = query, filter = filter, offset = offset, rows = limit,
-                          sample = sample, sort = sort, order = order, facet = facet,
-                          cursor = cursor))
-  
+  args <- prep_args(query, filter, offset, limit, sample, sort, order, facet, cursor)
   if (length(member_ids) > 1) {
     res <- llply(member_ids, member_GET, args = args, works = works,  
                  cursor = cursor, cursor_max = cursor_max, ..., .progress = .progress)
@@ -101,6 +105,22 @@
   }
 }
 
+#' @export
+#' @rdname cr_members
+`cr_members_` <- function(member_ids = NULL, query = NULL, filter = NULL, offset = NULL,
+  limit = NULL, sample = NULL, sort = NULL, order = NULL, facet=FALSE, works = FALSE, 
+  cursor = NULL, cursor_max = 5000, .progress="none", parse=FALSE, ...) {
+  
+  args <- prep_args(query, filter, offset, limit, sample, sort, order, facet, cursor)
+  if (length(member_ids) > 1) {
+    llply(member_ids, member_GET_, args = args, works = works,  
+          cursor = cursor, cursor_max = cursor_max, parse = parse, .progress = .progress, ...)
+  } else { 
+    member_GET_(member_ids, args = args, works = works, 
+               cursor = cursor, cursor_max = cursor_max, parse = parse, ...)
+  }
+}
+
 member_GET <- function(x, args, works, cursor = NULL, cursor_max = NULL, ...){
   path <- if (!is.null(x)) {
     if (works) sprintf("members/%s/works", x) else sprintf("members/%s", x)
@@ -114,7 +134,24 @@ member_GET <- function(x, args, works, cursor = NULL, cursor_max = NULL, ...){
     rr$GETcursor()
     rr$parse()
   } else {
-    cr_GET(path, args, FALSE, on_error = stop, ...)
+    cr_GET(path, args, FALSE, on_error = stop, parse = TRUE, ...)
+  }
+}
+
+member_GET_ <- function(x, args, works, cursor = NULL, cursor_max = NULL, parse, ...) {
+  path <- if (!is.null(x)) {
+    if (works) sprintf("members/%s/works", x) else sprintf("members/%s", x)
+  } else { 
+    "members" 
+  }
+  
+  if (!is.null(cursor) && works) {
+    rr <- Requestor$new(path = path, args = args, cursor_max = cursor_max, 
+                        should_parse = parse, ...)
+    rr$GETcursor()
+    rr$cursor_out
+  } else {
+    cr_GET(path, args, FALSE, on_error = stop, parse = parse, ...)
   }
 }
 

@@ -2,12 +2,18 @@
 % Please edit documentation in R/cr_members.r
 \name{cr_members}
 \alias{cr_members}
+\alias{cr_members_}
 \title{Search CrossRef members}
 \usage{
 cr_members(member_ids = NULL, query = NULL, filter = NULL,
   offset = NULL, limit = NULL, sample = NULL, sort = NULL,
   order = NULL, facet = FALSE, works = FALSE, cursor = NULL,
   cursor_max = 5000, .progress = "none", ...)
+
+cr_members_(member_ids = NULL, query = NULL, filter = NULL,
+  offset = NULL, limit = NULL, sample = NULL, sort = NULL,
+  order = NULL, facet = FALSE, works = FALSE, cursor = NULL,
+  cursor_max = 5000, .progress = "none", parse = FALSE, ...)
 }
 \arguments{
 \item{member_ids}{One or more member ids. See examples. ALternatively, you can query for them
@@ -51,6 +57,9 @@ of each. Only used when passing in multiple ids (e.g., multiple DOIs, DOI prefix
 etc.)}
 
 \item{...}{Named parameters passed on to \code{\link[httr]{GET}}}
+
+\item{parse}{(logical) Whether to output json \code{FALSE} or parse to 
+list \code{TRUE}. Default: \code{FALSE}}
 }
 \description{
 Search CrossRef members
@@ -85,6 +94,15 @@ cr_members(member_ids=c(10, 98, 45), works = TRUE, cursor = "*", cursor_max = 20
 # cr_members(query="adfdf")
 # cr_members(member_ids=c(323234343434,3434343434), works=TRUE, facet=TRUE)
 # cr_members(member_ids=c(323234343434,3434343434,98), works=TRUE, facet=TRUE)
+
+# Low level function - does no parsing to data.frame, get json or a list
+cr_members_(query = 'hindawi')
+cr_members_(member_ids = 98)
+cr_members_(query = 'hindawi', parse=TRUE)
+cr_members_(member_ids = 98, works = TRUE, cursor = "*", 
+   cursor_max = 300, limit = 100)
+cr_members_(member_ids = 98, works = TRUE, cursor = "*", 
+   cursor_max = 300, limit = 100, parse=TRUE)
 }
 }
 \references{

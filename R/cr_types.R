@@ -8,6 +8,8 @@
 #' @template cursor_args
 #' @param facet (logical) Include facet results. Facet data not yet included in output.
 #' @param works (logical) If TRUE, works returned as well, if not then not.
+#' @param parse (logical) Whether to output json \code{FALSE} or parse to 
+#' list \code{TRUE}. Default: \code{FALSE}
 #' 
 #' @details BEWARE: The API will only work for CrossRef DOIs.
 #'
@@ -32,22 +34,23 @@
 #' ### you get results, but query param is silently dropped
 #' cr_types(query = "ecology")
 #' 
-#' # print progress
+#' # print progress - only works when passing more than one type
 #' cr_types(c('monograph', 'book-set'), works=TRUE, .progress='text')
+#' 
+#' # Low level function - does no parsing to data.frame, get json or a list
+#' cr_types_('monograph')
+#' cr_types_('monograph', parse = TRUE)
+#' cr_types_("journal-article", works = TRUE, cursor = "*", 
+#'    cursor_max = 300, limit = 100)
+#' cr_types_("journal-article", works = TRUE, cursor = "*", 
+#'    cursor_max = 300, limit = 100, parse = TRUE)
 #' }
 
 `cr_types` <- function(types = NULL, query = NULL, filter = NULL, offset = NULL, limit = NULL, 
   sample = NULL, sort = NULL, order = NULL, facet=FALSE, works = FALSE, 
   cursor = NULL, cursor_max = 5000, .progress="none", ...) {
   
-  check_limit(limit)
-  filter <- filter_handler(filter)
-  facet_log <- facet
-  facet <- if (facet) "t" else NULL
-  args <- cr_compact(list(query = query, filter = filter, offset = offset, rows = limit,
-                          sample = sample, sort = sort, order = order, facet = facet,
-                          cursor = cursor))
-  
+  args <- prep_args(query, filter, offset, limit, sample, sort, order, facet, cursor)
   if (length(types) > 1) {
     res <- llply(types, types_GET, args = args, works = works, 
                  cursor = cursor, cursor_max = cursor_max, ..., .progress = .progress)
@@ -59,7 +62,7 @@
       out <- if (works) do.call(c, lapply(out, function(x) lapply(x$items, parse_works))) else lapply(out, DataFrame)
       df <- rbind_all(out)
       meta <- if (works) data.frame(types = types, do.call(rbind, lapply(res, parse_meta)), stringsAsFactors = FALSE) else NULL
-      if (facet_log) { 
+      if (facet) { 
         ft <- Map(function(x, y){ 
           rr <- list(parse_facets(x$message$facets)); names(rr) <- y; rr 
         }, res, types) 
@@ -70,7 +73,7 @@
     }
   } else {
     res <- types_GET(types, args, works = works, cursor = cursor, 
-                     cursor_max = cursor_max, ..., .progress = .progress)
+                     cursor_max = cursor_max, ...)
     if (!is.null(cursor)) {
       res
     } else {
@@ -95,6 +98,22 @@
   }
 }
 
+#' @export
+#' @rdname cr_types
+`cr_types_` <- function(types = NULL, query = NULL, filter = NULL, offset = NULL, limit = NULL, 
+  sample = NULL, sort = NULL, order = NULL, facet=FALSE, works = FALSE, 
+  cursor = NULL, cursor_max = 5000, .progress="none", parse=FALSE, ...) {
+  
+  args <- prep_args(query, filter, offset, limit, sample, sort, order, facet, cursor)
+  if (length(types) > 1) {
+    llply(types, types_GET_, args = args, works = works, 
+          cursor = cursor, cursor_max = cursor_max, parse = parse, ..., .progress = .progress)
+  } else {
+    types_GET_(types, args, works = works, cursor = cursor, 
+              cursor_max = cursor_max, parse = parse, ...)
+  }
+}
+
 types_GET <- function(x, args, works, cursor = NULL, cursor_max = NULL, ...){
   path <- if (!is.null(x)) {
     if (works) sprintf("types/%s/works", x) else sprintf("types/%s", x)
@@ -109,6 +128,23 @@ types_GET <- function(x, args, works, cursor = NULL, cursor_max = NULL, ...){
     rr$parse()
   } else {
     cr_GET(path, args, todf = FALSE, on_error = stop, ...)
+  }
+}
+
+types_GET_ <- function(x, args, works, cursor = NULL, cursor_max = NULL, parse, ...){
+  path <- if (!is.null(x)) {
+    if (works) sprintf("types/%s/works", x) else sprintf("types/%s", x)
+  } else { 
+    "types" 
+  }
+  
+  if (!is.null(cursor) && works) {
+    rr <- Requestor$new(path = path, args = args, cursor_max = cursor_max,
+                        should_parse = parse, ...)
+    rr$GETcursor()
+    rr$cursor_out
+  } else {
+    cr_GET(path, args, todf = FALSE, on_error = stop, parse = parse, ...)
   }
 }
 

@@ -2,12 +2,18 @@
 % Please edit documentation in R/cr_journals.r
 \name{cr_journals}
 \alias{cr_journals}
+\alias{cr_journals_}
 \title{Search CrossRef journals}
 \usage{
 cr_journals(issn = NULL, query = NULL, filter = NULL, offset = NULL,
   limit = NULL, sample = NULL, sort = NULL, order = NULL,
-  works = FALSE, cursor = NULL, cursor_max = 5000, .progress = "none",
-  ...)
+  facet = FALSE, works = FALSE, cursor = NULL, cursor_max = 5000,
+  .progress = "none", ...)
+
+cr_journals_(issn = NULL, query = NULL, filter = NULL, offset = NULL,
+  limit = NULL, sample = NULL, sort = NULL, order = NULL,
+  facet = FALSE, works = FALSE, cursor = NULL, cursor_max = 5000,
+  .progress = "none", parse = FALSE, ...)
 }
 \arguments{
 \item{issn}{One or more ISSN's. Format is XXXX-XXXX.}
@@ -48,6 +54,9 @@ of each. Only used when passing in multiple ids (e.g., multiple DOIs, DOI prefix
 etc.)}
 
 \item{...}{Named parameters passed on to \code{\link[httr]{GET}}}
+
+\item{parse}{(logical) Whether to output json \code{FALSE} or parse to 
+list \code{TRUE}. Default: \code{FALSE}}
 }
 \description{
 Search CrossRef journals
@@ -80,6 +89,15 @@ cr_journals(c('1932-6203', '0028-0836'), works = TRUE, cursor = "*",
 
 # fails, if you want works, you must give an ISSN
 # cr_journals(query = "ecology", filter=c(has_full_text = TRUE), works = TRUE)
+
+# Low level function - does no parsing to data.frame, get json or a list
+cr_journals_(query = 'ecology')
+cr_journals_("2167-8359")
+cr_journals_(query = 'ecology', parse=TRUE)
+cr_journals_("2167-8359", works = TRUE, cursor = "*", 
+   cursor_max = 300, limit = 100)
+cr_journals_("2167-8359", works = TRUE, cursor = "*", 
+   cursor_max = 300, limit = 100, parse = TRUE)
 }
 }
 \references{

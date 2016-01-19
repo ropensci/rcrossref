@@ -69,3 +69,13 @@ check_limit <- function(x) {
 ifnullna <- function(x) {
   if (is.null(x)) NA else x
 }
+
+prep_args <- function(query, filter, offset, limit, sample, sort, order, facet, cursor) {
+  check_limit(limit)
+  filter <- filter_handler(filter)
+  facet <- if (facet) "t" else NULL
+  cr_compact(list(query = query, filter = filter, offset = offset, rows = limit,
+                  sample = sample, sort = sort, order = order, facet = facet,
+                  cursor = cursor))
+  
+}

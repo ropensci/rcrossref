@@ -71,7 +71,7 @@ The API will only work for CrossRef DOIs.
 \itemize{
  \item \code{cr_works()} - Does data request and parses to data.frame for 
  easy downstream consumption
- \item \code{cr_works_()} - Does data request, and gives back lists or json,
+ \item \code{cr_works_()} - Does data request, and gives back json (default) or lists,
  with no attempt to parse to data.frame's
 }
 }

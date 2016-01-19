@@ -17,7 +17,7 @@
 #' \itemize{
 #'  \item \code{cr_works()} - Does data request and parses to data.frame for 
 #'  easy downstream consumption
-#'  \item \code{cr_works_()} - Does data request, and gives back lists or json,
+#'  \item \code{cr_works_()} - Does data request, and gives back json (default) or lists,
 #'  with no attempt to parse to data.frame's
 #' }
 #' 
@@ -80,13 +80,8 @@
   limit = NULL, sample = NULL, sort = NULL, order = NULL, facet=FALSE, 
   cursor = NULL, cursor_max = 5000, .progress="none", ...) {
   
-  check_limit(limit)
   if (cursor_max != as.integer(cursor_max)) stop("cursor_max must be an integer", call. = FALSE)
-  filter <- filter_handler(filter)
-  facet <- if (facet) "t" else NULL
-  args <- cr_compact(list(query = query, filter = filter, offset = offset, rows = limit,
-                          sample = sample, sort = sort, order = order, facet = facet,
-                          cursor = cursor))
+  args <- prep_args(query, filter, offset, limit, sample, sort, order, facet, cursor)
   
   if (length(dois) > 1) {
     res <- llply(dois, cr_get_cursor, args = args, cursor = cursor, 
@@ -120,16 +115,11 @@
 #' @export
 #' @rdname cr_works
 `cr_works_` <- function(dois = NULL, query = NULL, filter = NULL, offset = NULL,
-  limit = NULL, sample = NULL, sort = NULL, order = NULL, facet=FALSE, 
+  limit = NULL, sample = NULL, sort = NULL, order = NULL, facet=FALSE,
   cursor = NULL, cursor_max = 5000, .progress="none", parse=FALSE, ...) {
   
-  check_limit(limit)
   if (cursor_max != as.integer(cursor_max)) stop("cursor_max must be an integer", call. = FALSE)
-  filter <- filter_handler(filter)
-  facet <- if (facet) "t" else NULL
-  args <- cr_compact(list(query = query, filter = filter, offset = offset, rows = limit,
-                          sample = sample, sort = sort, order = order, facet = facet,
-                          cursor = cursor))
+  args <- prep_args(query, filter, offset, limit, sample, sort, order, facet, cursor)
   
   if (length(dois) > 1) {
     llply(dois, cr_get_cursor_, args = args, cursor = cursor, 
