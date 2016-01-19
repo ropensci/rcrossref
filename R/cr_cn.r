@@ -18,7 +18,12 @@
 #'   Content Negotiation API service.
 #'   
 #'   DataCite DOIs: Some values of the \code{format} parameter won't work with 
-#'   DataCite DOIs, but most do. See examples below.
+#'   DataCite DOIs, i.e. "citeproc-json", "crossref-xml", "crossref-tdm", "onix-xml". 
+#'   
+#'   MEDRA DOIs only work with "rdf-xml", "turtle", "citeproc-json-ish", "ris", 
+#'   "bibtex", "bibentry", "onix-xml".
+#'   
+#'   See examples below.
 #'   
 #'   See \code{\link{cr_agency}}
 #'   
@@ -26,7 +31,7 @@
 #'   \code{api.crossref.org}, while all others are content negotiated via
 #'   \code{http://data.crossref.org}, \code{http://data.datacite.org} or 
 #'   \code{http://data.medra.org}. DOI agency is checked first (see 
-#'   \code{\link{cr_agency}}).
+#'   \code{\link{cr_agency}}). 
 #'   
 #' @examples \dontrun{
 #' cr_cn(dois="10.1126/science.169.3946.635")
@@ -92,13 +97,19 @@
   format <- match.arg(format, c("rdf-xml", "turtle", "citeproc-json",
                                 "citeproc-json-ish", "text", "ris", "bibtex", 
                                 "crossref-xml", "datacite-xml", "bibentry", 
-                                "crossref-tdm"))
+                                "crossref-tdm", "onix-xml"))
 
   cn <- function(doi, ...){
     agency_id <- GET_agency_id(doi)
     if(is.na(agency_id))
       stop("no resource location found", doi, message, call. = FALSE)
     url <- paste0("http://data.", agency_id, ".org/", doi)
+    # check cn data provider
+    if(!format %in% supported_cn_types[[agency_id]])
+      stop(paste0("Format '", format, "' for '", doi, 
+                  "' is not supported by the DOI registration agency: '",
+                  agency_id, "'.\nTry one of the following formats: ", 
+                  paste0(supported_cn_types[[agency_id]], collapse = ", ")))
     pick <- c(
            "rdf-xml" = "application/rdf+xml",
            "turtle" = "text/turtle",
@@ -110,7 +121,8 @@
            "crossref-xml" = "application/vnd.crossref.unixref+xml",
            "datacite-xml" = "application/vnd.datacite.datacite+xml",
            "bibentry" = "application/x-bibtex",
-           "crossref-tdm" = "application/vnd.crossref.unixsd+xml")
+           "crossref-tdm" = "application/vnd.crossref.unixsd+xml",
+           "onix-xml" = "application/vnd.medra.onixdoi+xml")
     type <- pick[[format]]
     if (format == "citeproc-json") {
       response <- GET(file.path("http://api.crossref.org/works", doi, type), ...)
@@ -133,7 +145,8 @@
         "crossref-xml" = "text/xml",
         "datacite-xml" = "text/xml",
         "bibentry" = "text/plain",
-        "crossref-tdm" = "text/xml")
+        "crossref-tdm" = "text/xml",
+        "onix-xml" = "text/xml")
       parser <- select[[format]]
       if (raw) {
         content(response, "text")
@@ -198,3 +211,12 @@ GET_agency_id <- function(x, ...){
   cr_agency(x)$agency$id
 }
 
+# Supported content types
+# See http://www.crosscite.org/cn/
+supported_cn_types <- list(
+  crossref = c("rdf-xml", "turtle", "citeproc-json", "citeproc-json-ish", "text", "ris", "bibtex", 
+               "crossref-xml", "bibentry", "crossref-tdm"),
+  datacite = c("rdf-xml", "turtle", "datacite-xml", "citeproc-json-ish", "text", "ris", "bibtex", 
+               "bibentry"),
+  medra = c("rdf-xml", "turtle", "citeproc-json-ish", "ris", "bibtex", "bibentry", "onix-xml")
+)
