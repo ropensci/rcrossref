@@ -35,7 +35,7 @@ or published.}
 
 \item{order}{(character) Sort order, one of 'asc' or 'desc'}
 
-\item{facet}{(logical) Include facet results. Facet data not yet included in output.}
+\item{facet}{(logical) Include facet results. Default: \code{FALSE}}
 
 \item{works}{(logical) If TRUE, works returned as well, if not then not.}
 

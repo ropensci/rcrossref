@@ -8,7 +8,7 @@
 #' @template moreargs
 #' @template cursor_args
 #' @param works (logical) If TRUE, works returned as well, if not then not.
-#' @param facet (logical) Include facet results.
+#' @param facet (logical) Include facet results. Default: \code{FALSE}
 #' @param parse (logical) Whether to output json \code{FALSE} or parse to 
 #' list \code{TRUE}. Default: \code{FALSE}
 #' 

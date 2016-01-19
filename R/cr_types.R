@@ -6,7 +6,7 @@
 #' @template args
 #' @template moreargs
 #' @template cursor_args
-#' @param facet (logical) Include facet results. Facet data not yet included in output.
+#' @param facet (logical) Include facet results. Default: \code{FALSE}
 #' @param works (logical) If TRUE, works returned as well, if not then not.
 #' @param parse (logical) Whether to output json \code{FALSE} or parse to 
 #' list \code{TRUE}. Default: \code{FALSE}
