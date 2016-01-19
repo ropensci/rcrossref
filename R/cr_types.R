@@ -22,7 +22,7 @@
 #' cr_types(c('monograph', 'book-set'), works=TRUE)
 #' 
 #' ## get facets back
-#' cr_types("journal-article", works=TRUE, facet=TRUE)
+#' cr_types("journal-article", works=TRUE, facet=TRUE)$facets
 #' cr_types(c('monograph', 'book-set'), works=TRUE, facet=TRUE)
 #' 
 #' # Use the cursor for deep paging
@@ -47,7 +47,7 @@
 #' }
 
 `cr_types` <- function(types = NULL, query = NULL, filter = NULL, offset = NULL, limit = NULL, 
-  sample = NULL, sort = NULL, order = NULL, facet=FALSE, works = FALSE, 
+  sample = NULL, sort = NULL, order = NULL, facet = FALSE, works = FALSE, 
   cursor = NULL, cursor_max = 5000, .progress="none", ...) {
   
   args <- prep_args(query, filter, offset, limit, sample, sort, order, facet, cursor)
@@ -91,7 +91,7 @@
             wout <- parse_type(res$message)
             meta <- NULL
           }
-          list(meta = meta, data = wout)
+          list(meta = meta, data = wout, facets = parse_facets(res$message$facets))
         }
       }
     }

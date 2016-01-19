@@ -75,7 +75,7 @@ cr_types(c('monograph', 'book-set', 'book', 'book-track'))
 cr_types(c('monograph', 'book-set'), works=TRUE)
 
 ## get facets back
-cr_types("journal-article", works=TRUE, facet=TRUE)
+cr_types("journal-article", works=TRUE, facet=TRUE)$facets
 cr_types(c('monograph', 'book-set'), works=TRUE, facet=TRUE)
 
 # Use the cursor for deep paging

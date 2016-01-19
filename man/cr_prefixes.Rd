@@ -90,10 +90,8 @@ cr_works(prefixes="10.1016", filter=c(has_full_text=TRUE), limit=5)
 cr_works(prefixes="10.1016", query='ecology', limit=4)
 cr_works(prefixes="10.1016", query='ecology', limit=4)
 
-# facets
-## if works is FALSE, then facets ignored
-###### FIXME
-# cr_prefixes(prefixes="10.1016", works=FALSE, facet=TRUE)
+# facets - only avail. when works=TRUE
+cr_prefixes(prefixes="10.1016", works=TRUE, facet=TRUE)
 
 ## get facets back
 cr_prefixes(prefixes="10.1016", works=TRUE, facet=TRUE)

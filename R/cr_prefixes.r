@@ -37,10 +37,8 @@
 #' cr_works(prefixes="10.1016", query='ecology', limit=4)
 #' cr_works(prefixes="10.1016", query='ecology', limit=4)
 #' 
-#' # facets
-#' ## if works is FALSE, then facets ignored
-#' ###### FIXME
-#' # cr_prefixes(prefixes="10.1016", works=FALSE, facet=TRUE)
+#' # facets - only avail. when works=TRUE
+#' cr_prefixes(prefixes="10.1016", works=TRUE, facet=TRUE)
 #' 
 #' ## get facets back
 #' cr_prefixes(prefixes="10.1016", works=TRUE, facet=TRUE)
@@ -80,7 +78,7 @@
       meta <- if (works) data.frame(prefix = prefixes, do.call(rbind, lapply(res, parse_meta)), stringsAsFactors = FALSE) else NULL
       if (facet) { 
         ft <- Map(function(x, y) {
-          rr <- list(parse_facets(x$message$facets)); names(rr) <- y; rr 
+          rr <- list(parse_facets(x$message$facets)); names(rr) <- y; rr
         }, res, prefixes) 
       } else {
         ft <- list() 
