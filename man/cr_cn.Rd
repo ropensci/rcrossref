@@ -83,7 +83,7 @@ cr_cn(dois, "text", "apa")
 stys <- get_styles()
 foo <- function(x){
  cat(sprintf("<Style>:\%s\\n", x), sep = "\\n\\n")
- cr_cn("10.1126/science.169.3946.635", "text", style=x)
+ cat(cr_cn("10.1126/science.169.3946.635", "text", style=x))
 }
 foo(sample(stys, 1))
 
@@ -100,7 +100,6 @@ cr_cn("10.5284/1011335", "citeproc-json")
 cr_cn("10.5284/1011335", "ris")
 cr_cn("10.5284/1011335", "bibtex")
 cr_cn("10.5284/1011335", "bibentry")
-cr_cn("10.5284/1011335", "bibtex")
 
 dois <- c('10.5167/UZH-30455','10.5167/UZH-49216','10.5167/UZH-503',
           '10.5167/UZH-38402','10.5167/UZH-41217')
@@ -108,6 +107,9 @@ cat(cr_cn(dois[1]))
 cat(cr_cn(dois[2]))
 cat(cr_cn(dois[3]))
 cat(cr_cn(dois[4]))
+
+# Using Medra DOIs
+cr_cn("10.3233/ISU-150780", "onix-xml")
 
 # Get raw output
 cr_cn(dois = "10.1002/app.27716", format = "citeproc-json", raw = TRUE)

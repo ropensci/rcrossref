@@ -61,7 +61,7 @@
 #' stys <- get_styles()
 #' foo <- function(x){
 #'  cat(sprintf("<Style>:%s\n", x), sep = "\n\n")
-#'  cr_cn("10.1126/science.169.3946.635", "text", style=x)
+#'  cat(cr_cn("10.1126/science.169.3946.635", "text", style=x))
 #' }
 #' foo(sample(stys, 1))
 #' 
@@ -78,7 +78,6 @@
 #' cr_cn("10.5284/1011335", "ris")
 #' cr_cn("10.5284/1011335", "bibtex")
 #' cr_cn("10.5284/1011335", "bibentry")
-#' cr_cn("10.5284/1011335", "bibtex")
 #' 
 #' dois <- c('10.5167/UZH-30455','10.5167/UZH-49216','10.5167/UZH-503',
 #'           '10.5167/UZH-38402','10.5167/UZH-41217')
@@ -86,6 +85,9 @@
 #' cat(cr_cn(dois[2]))
 #' cat(cr_cn(dois[3]))
 #' cat(cr_cn(dois[4]))
+#' 
+#' # Using Medra DOIs
+#' cr_cn("10.3233/ISU-150780", "onix-xml")
 #' 
 #' # Get raw output
 #' cr_cn(dois = "10.1002/app.27716", format = "citeproc-json", raw = TRUE)
@@ -101,15 +103,17 @@
 
   cn <- function(doi, ...){
     agency_id <- GET_agency_id(doi)
-    if(is.na(agency_id))
+    if (is.na(agency_id)) {
       stop("no resource location found", doi, message, call. = FALSE)
+    }
     url <- paste0("http://data.", agency_id, ".org/", doi)
     # check cn data provider
-    if(!format %in% supported_cn_types[[agency_id]])
+    if (!format %in% supported_cn_types[[agency_id]]) {
       stop(paste0("Format '", format, "' for '", doi, 
                   "' is not supported by the DOI registration agency: '",
                   agency_id, "'.\nTry one of the following formats: ", 
                   paste0(supported_cn_types[[agency_id]], collapse = ", ")))
+    }
     pick <- c(
            "rdf-xml" = "application/rdf+xml",
            "turtle" = "text/turtle",
@@ -186,10 +190,10 @@ parse_bibtex <- function(x){
 }
 
 warn_status <- function(x) {
-  if(x$status_code > 202) {
+  if (x$status_code > 202) {
     mssg <- content(x)
-    if(!is.character(mssg)) {
-      mssg <- if(x$status_code == 406) {
+    if (!is.character(mssg)) {
+      mssg <- if (x$status_code == 406) {
         "(406) - probably bad format type"
       } else {
         http_status(x)$message
@@ -205,9 +209,10 @@ warn_status <- function(x) {
 #' 
 #' @param x doi
 #' @keywords internal
-GET_agency_id <- function(x, ...){
-  if(is.null(x))
-    stop("no doi for doi agency check provided")
+GET_agency_id <- function(x, ...) {
+  if (is.null(x)) {
+    stop("no doi for doi agency check provided", call. = FALSE)
+  }
   cr_agency(x)$agency$id
 }
 
