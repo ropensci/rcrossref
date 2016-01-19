@@ -39,7 +39,12 @@ See \url{http://www.crosscite.org/cn/} for more info on the Crossref
   Content Negotiation API service.
   
   DataCite DOIs: Some values of the \code{format} parameter won't work with 
-  DataCite DOIs, but most do. See examples below.
+  DataCite DOIs, i.e. "citeproc-json", "crossref-xml", "crossref-tdm", "onix-xml". 
+  
+  MEDRA DOIs only work with "rdf-xml", "turtle", "citeproc-json-ish", "ris", 
+  "bibtex", "bibentry", "onix-xml".
+  
+  See examples below.
   
   See \code{\link{cr_agency}}
   
