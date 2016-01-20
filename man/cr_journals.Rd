@@ -57,7 +57,7 @@ etc.)}
 
 \item{...}{Named parameters passed on to \code{\link[httr]{GET}}}
 
-\item{parse}{(logical) Whether to output json \code{FALSE} or parse to 
+\item{parse}{(logical) Whether to output json \code{FALSE} or parse to
 list \code{TRUE}. Default: \code{FALSE}}
 }
 \description{
@@ -66,7 +66,7 @@ Search CrossRef journals
 \details{
 BEWARE: The API will only work for CrossRef DOIs.
 
-Note that some parameters are ignored unless \code{works=TRUE}: sample, sort, 
+Note that some parameters are ignored unless \code{works=TRUE}: sample, sort,
 order, filter
 }
 \examples{
@@ -96,9 +96,9 @@ cr_journals(c('1932-6203', '0028-0836'), works = TRUE, cursor = "*",
 cr_journals_(query = 'ecology')
 cr_journals_("2167-8359")
 cr_journals_(query = 'ecology', parse=TRUE)
-cr_journals_("2167-8359", works = TRUE, cursor = "*", 
+cr_journals_("2167-8359", works = TRUE, cursor = "*",
    cursor_max = 300, limit = 100)
-cr_journals_("2167-8359", works = TRUE, cursor = "*", 
+cr_journals_("2167-8359", works = TRUE, cursor = "*",
    cursor_max = 300, limit = 100, parse = TRUE)
 }
 }

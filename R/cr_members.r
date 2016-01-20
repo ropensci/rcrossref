@@ -134,7 +134,7 @@ member_GET <- function(x, args, works, cursor = NULL, cursor_max = NULL, ...){
     rr$GETcursor()
     rr$parse()
   } else {
-    cr_GET(path, args, FALSE, on_error = stop, parse = TRUE, ...)
+    cr_GET(path, args, FALSE, parse = TRUE, ...)
   }
 }
 
@@ -151,7 +151,7 @@ member_GET_ <- function(x, args, works, cursor = NULL, cursor_max = NULL, parse,
     rr$GETcursor()
     rr$cursor_out
   } else {
-    cr_GET(path, args, FALSE, on_error = stop, parse = parse, ...)
+    cr_GET(path, args, FALSE, parse = parse, ...)
   }
 }
 

@@ -73,8 +73,8 @@
 #' ## But most do work
 #' cr_cn("10.5284/1011335", "datacite-xml")
 #' cr_cn("10.5284/1011335", "rdf-xml")
-#' cr_cn("10.5284/1011335", "turtle")
-#' cr_cn("10.5284/1011335", "citeproc-json")
+#' # cr_cn("10.5284/1011335", "turtle")
+#' cr_cn("10.5284/1011335", "citeproc-json-ish")
 #' cr_cn("10.5284/1011335", "ris")
 #' cr_cn("10.5284/1011335", "bibtex")
 #' cr_cn("10.5284/1011335", "bibentry")

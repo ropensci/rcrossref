@@ -127,7 +127,7 @@ types_GET <- function(x, args, works, cursor = NULL, cursor_max = NULL, ...){
     rr$GETcursor()
     rr$parse()
   } else {
-    cr_GET(path, args, todf = FALSE, on_error = stop, ...)
+    cr_GET(path, args, todf = FALSE, ...)
   }
 }
 
@@ -144,7 +144,7 @@ types_GET_ <- function(x, args, works, cursor = NULL, cursor_max = NULL, parse, 
     rr$GETcursor()
     rr$cursor_out
   } else {
-    cr_GET(path, args, todf = FALSE, on_error = stop, parse = parse, ...)
+    cr_GET(path, args, todf = FALSE, parse = parse, ...)
   }
 }
 

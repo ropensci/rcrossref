@@ -39,8 +39,6 @@
 #' library('httr')
 #' cr_funders(dois='10.13039/100000001', config=verbose())
 #' 
-#' # If not found, and only 1 DOI given, list of NA elements returned
-#' cr_funders("adfadfaf")
 #' # If not found, and > 1 DOI given, those not found dropped
 #' cr_funders(dois=c("adfadfaf","asfasf"))
 #' cr_funders(dois=c("adfadfaf","asfasf"), works=TRUE)
@@ -152,7 +150,7 @@ fundref_GET <- function(x, args, works, cursor = NULL, cursor_max = NULL, ...){
     rr$GETcursor()
     rr$parse()
   } else {
-    cr_GET(path, args, todf = FALSE, on_error = stop, ...)
+    cr_GET(path, args, todf = FALSE, ...)
   }
 }
 
@@ -169,7 +167,7 @@ fundref_GET_ <- function(x, args, works, cursor = NULL, cursor_max = NULL, parse
     rr$GETcursor()
     rr$cursor_out
   } else {
-    cr_GET(path, args, todf = FALSE, on_error = stop, parse = parse, ...)
+    cr_GET(path, args, todf = FALSE, parse = parse, ...)
   }
 }
 

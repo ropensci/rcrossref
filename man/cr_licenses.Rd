@@ -19,17 +19,17 @@ cr_licenses_(query = NULL, offset = NULL, limit = NULL, sort = NULL,
 \item{limit}{Number of results to return in the query. Not relavant when searching with specific
 dois. Default: 20. Max: 1000}
 
-\item{sort}{(character) Field to sort on, one of score, relevance, updated, deposited, indexed, 
+\item{sort}{(character) Field to sort on, one of score, relevance, updated, deposited, indexed,
 or published.}
 
 \item{order}{(character) Sort order, one of 'asc' or 'desc'}
 
-\item{.progress}{Show a \code{plyr}-style progress bar? Options are "none", "text", "tk", "win, 
+\item{.progress}{Show a \code{plyr}-style progress bar? Options are "none", "text", "tk", "win,
 and "time".  See \code{\link[plyr]{create_progress_bar}} for details of each.}
 
 \item{...}{Named parameters passed on to \code{\link[httr]{GET}}}
 
-\item{parse}{(logical) Whether to output json \code{FALSE} or parse to 
+\item{parse}{(logical) Whether to output json \code{FALSE} or parse to
 list \code{TRUE}. Default: \code{FALSE}}
 }
 \description{
