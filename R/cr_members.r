@@ -99,7 +99,7 @@
     }
   } else {
     tmp <- member_GET(NULL, args = args, works = works, ...)
-    if (is.na(tmp$message)) {
+    if (all(is.na(tmp$message))) {
       list(meta = NULL, data = NULL, facets = NULL)
     } else {
       df <- rbind_all(lapply(tmp$message$items, parse_members))
