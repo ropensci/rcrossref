@@ -1,14 +1,43 @@
 rcrossref 0.5.0
 ===============
 
+Skipped `v0.4` to `v0.5` because of many changes - as described below.
+
 ### NEW FEATURES
 
-* xxxx (#xx)
+* Support added for 'deep paging' with the newer Crossref search API. Two new params added to each function: `cursor`, which accepts a cursor alphanumeric string or the special `*`, which indicates that you want to initiate deep paging; `cursor_max`, which is not in the Crossref API, but just used here in this package to indicate where to stop - otherwise, you'd get all results, even if there was 70 million, for example. A new internal `R6` class used to make cursor requests easy (#77)
+* New function `id_converter()` to get a PMID from a DOI and vice versa (#49)
+* Added a Code of Conduct.
+* New function `cr_types()`, along with its low level equivalent `cr_types_()` for when you just want a list or json back (#92)
+* New suite of functions composing a low-level API for the Crossref search API. These functions only do data request, and return json or a list, and do not attempt to parse to a data.frame. The new functions: `cr_funders_()`, `cr_journals_()`, `cr_licenses_()`, `cr_members_()`, `cr_prefixes_()`, `cr_types_()`, `cr_works_()`. These functions are a bit faster, and aren't subject to parsing errors in the event of a change in the Crossref API. (#93)
+* Added new `filter_names()` and `filter_details()` functions to get information on what filters
+are available, the expected values, and what they mean.
+
+### MINOR IMPROVEMENTS
+
+* Added documentation for new filter types, and added them to list of filters for `filter_names()` and `filter_details()` (#73)
+* `cr_funders()` alias added to `cr_fundref()` (#74)
+* Made note in docs that funders without IDs don't show up on the `/funders` route,s in `cr_funders()` (#79)
+* Made note in docs that `sample` parameter ignored unless `works=TRUE` (#81)
+* Added note to docs that only what is returned in the API is what is searched when you search the Crossref API - that is, abstracts and full text aren't searched (#91)
+* `cr_cn()` now checks that the user supplied content-type is supported for the DOI minting agency associated with the DOI (#88) (thanks @njahn82)
+* Removed `.progress` parameter use internally where it wasn't applicable.
+* `sample` parameter dropped from `cr_licenses()`.
+* `cr_works()` parsing changed. We now don't attempt to flatten nested arrays, but instead give them back as data.frame's nested within the main data.frame. For example, `author` often has many entries, so we return that as a single column, but indexing to that column gives back a data.frame with a row for each author, and N number of columns. Hopefully this doesn't break too much code downstream :)
+* Additional text added to the package level man file (`?rcrossref`) to explain: what you're actually searching when you search; deprecated and defunct functions; and explanation of high vs. low level API.
 
 ### BUG FIXES
 
-* xxxx (#xx)
-* xxxx (#xx)
+* Fix to `cr_members()` to warn on error instead of stop during parsing (#68)
+* Fix to internal parser for `cr_works()` to output links data, for full text links (#70)
+* Minor fix in `cr_cn()` example that didn't work (#80)
+* Fixed parsing of `affiliation` data inside `author` object in Crossref search API returned data (#84)
+* Fixed parsing of funder `award` slot in Crossref search API returned data (#90)
+
+### DEPRECATED
+
+* `crosscite()` deprecated, will be removed in a future version of this package (#78)
+* `cr_fundref()` now has a deprecated message, and will be removed in the next version (#74)
 
 rcrossref 0.3.4
 ===============
