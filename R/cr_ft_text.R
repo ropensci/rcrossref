@@ -85,13 +85,10 @@
 #' (links <- cr_ft_links(out$data$DOI[10], "all"))
 #' cr_ft_text(links, type = "pdf", cache=FALSE)
 #' system.time( cacheyes <- cr_ft_text(links, type = "pdf", cache=TRUE) )
-#' system.time( cacheyes <- cr_ft_text(links, type = "pdf", cache=TRUE) ) # second time is faster
+#' # second time should be faster
+#' system.time( cacheyes <- cr_ft_text(links, type = "pdf", cache=TRUE) )
 #' system.time( cacheno <- cr_ft_text(links, type = "pdf", cache=FALSE) )
 #' identical(cacheyes, cacheno)
-#'
-#'
-#' ## elife
-#' #### Stay away from eLife for now, they aren't setting content types right, etc.
 #'
 #' ## elsevier
 #' ## requires extra authentication
@@ -111,52 +108,40 @@
 #' ### all wiley
 #' out <- cr_members(311, filter=c(has_full_text = TRUE, type = 'journal-article'), works = TRUE)
 #' dois <- out$data$DOI[1:10]
-#' res <- list()
-#' for (i in seq_along(dois)) {
-#'  tmp <- cr_ft_links(dois[i], "all")
-#'  tmp <- setNames(tmp, "pdf")
-#'  attr(tmp[[1]], "type") <- "pdf"
-#'  res[[i]] <- cr_ft_text(tmp, type = "pdf", cache=FALSE)
-#' }
-#' res
+#' # res <- list()
+#' # for (i in seq_along(dois)) {
+#' #   tmp <- cr_ft_links(dois[i], "all")
+#' #   tmp <- setNames(tmp, "pdf")
+#' #   attr(tmp[[1]], "type") <- "pdf"
+#' #   res[[i]] <- cr_ft_text(tmp, type = "pdf", cache=FALSE)
+#' # }
+#' # res
 #' 
 #' #### older dates 
 #' out <- cr_members(311, filter=c(has_full_text = TRUE, 
-#'      type = 'journal-article', until_created_date = "2013-12-31"), works = TRUE)
+#'       type = 'journal-article', until_created_date = "2013-12-31"), works = TRUE)
 #'      
 #' dois <- out$data$DOI[1:10]
-#' res <- list()
-#' for (i in seq_along(dois)) {
-#'  tmp <- cr_ft_links(dois[i], "all")
-#'  tmp <- setNames(tmp, "pdf")
-#'  attr(tmp[[1]], "type") <- "pdf"
-#'  res[[i]] <- cr_ft_text(tmp, type = "pdf", cache=FALSE)
-#' }
-#' res
+#' # res <- list()
+#' # for (i in seq_along(dois)) {
+#' #   tmp <- cr_ft_links(dois[i], "all")
+#' #   tmp <- setNames(tmp, "pdf")
+#' #   attr(tmp[[1]], "type") <- "pdf"
+#' #   res[[i]] <- cr_ft_text(tmp, type = "pdf", cache=FALSE)
+#' # }
+#' # res
 #' 
 #' ### wiley subset with CC By 4.0 license
 #' lic <- "http://creativecommons.org/licenses/by/4.0/"
 #' out <- cr_members(311, filter=c(has_full_text = TRUE, license.url = lic), works = TRUE)
 #' dois <- out$data$DOI[1:10]
-#' res <- list()
-#' for (i in seq_along(dois)) {
-#'  tmp <- cr_ft_links(dois[i], "all")
-#'  tmp <- setNames(tmp, "pdf")
-#'  attr(tmp[[1]], "type") <- "pdf"
-#'  res[[i]] <- cr_ft_text(tmp, type = "pdf", cache=FALSE)
-#' }
-#' 
-#' ### wiley subset with CC By 3.0 license
-#' lic <- "http://creativecommons.org/licenses/by/3.0/"
-#' out <- cr_members(311, filter=c(has_full_text = TRUE, license.url = lic), works = TRUE)
-#' dois <- out$data$DOI[1:5]
-#' res <- list()
-#' for (i in seq_along(dois)) {
-#'  tmp <- cr_ft_links(dois[i], "all")
-#'  tmp <- setNames(tmp, "pdf")
-#'  attr(tmp[[1]], "type") <- "pdf"
-#'  res[[i]] <- cr_ft_text(tmp, type = "pdf", cache=FALSE)
-#' }
+#' # res <- list()
+#' # for (i in seq_along(dois)) {
+#' #   tmp <- cr_ft_links(dois[i], "all")
+#' #   tmp <- setNames(tmp, "pdf")
+#' #   attr(tmp[[1]], "type") <- "pdf"
+#' #   res[[i]] <- cr_ft_text(tmp, type = "pdf", cache=FALSE)
+#' # }
 #' }
 
 cr_ft_text <- function(url, type='xml', path = "~/.crossref", overwrite = TRUE,

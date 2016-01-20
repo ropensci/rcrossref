@@ -1,3 +1,15 @@
+rcrossref 0.5.0
+===============
+
+### NEW FEATURES
+
+* xxxx (#xx)
+
+### BUG FIXES
+
+* xxxx (#xx)
+* xxxx (#xx)
+
 rcrossref 0.3.4
 ===============
 
