@@ -99,9 +99,13 @@
     }
   } else {
     tmp <- member_GET(NULL, args = args, works = works, ...)
-    df <- rbind_all(lapply(tmp$message$items, parse_members))
-    meta <- parse_meta(tmp)
-    list(meta = meta, data = df, facets = NULL)
+    if (is.na(tmp$message)) {
+      list(meta = NULL, data = NULL, facets = NULL)
+    } else {
+      df <- rbind_all(lapply(tmp$message$items, parse_members))
+      meta <- parse_meta(tmp)
+      list(meta = meta, data = df, facets = NULL)
+    }
   }
 }
 
