@@ -92,7 +92,7 @@ Citation count, using OpenURL
 
 ```r
 cr_citation_count(doi = "10.1371/journal.pone.0042793")
-#> [1] 6
+#> [1] 7
 ```
 
 ## Search Crossref metadata API
@@ -112,14 +112,15 @@ cr_fundref(query = "NSF")
 #> Source: local data frame [8 x 6]
 #> 
 #>             id      location
-#> 1 501100004190        Norway
-#> 2    100000179 United States
-#> 3    100006445 United States
-#> 4    100003187 United States
-#> 5 501100001809         China
-#> 6 501100000930     Australia
-#> 7    100008367       Denmark
-#> 8    100000001 United States
+#>          (chr)         (chr)
+#> 1 501100000930     Australia
+#> 2    100000001 United States
+#> 3    100003187 United States
+#> 4    100008367       Denmark
+#> 5 501100004190        Norway
+#> 6    100000179 United States
+#> 7    100006445 United States
+#> 8 501100001809         China
 #> Variables not shown: name (chr), alt.names (chr), uri (chr), tokens (chr)
 ```
 
@@ -146,19 +147,19 @@ cr_agency(dois = '10.13039/100000001')
 cr_works(filter = c(has_orcid = TRUE, from_pub_date = '2004-04-04'), limit = 1)
 #> $meta
 #>   total_results search_terms start_index items_per_page
-#> 1        229074           NA           0              1
+#> 1        243524           NA           0              1
 #> 
 #> $data
-#> Source: local data frame [1 x 25]
+#> Source: local data frame [1 x 23]
 #> 
-#>    issued score                                prefix
-#> 1 2015-02     1 http://id.crossref.org/prefix/10.1016
-#> Variables not shown: container.title (chr), reference.count (chr),
-#>   deposited (chr), title (chr), type (chr), DOI (chr), URL (chr), source
-#>   (chr), publisher (chr), indexed (chr), member (chr), page (chr), ISBN
-#>   (chr), subject (chr), author (chr), issue (chr), ISSN (chr), volume
-#>   (chr), license_date (chr), license_content.version (chr),
-#>   license_delay.in.days (chr), license_URL (chr)
+#>   alternative.id container.title    created  deposited
+#>            (chr)           (chr)      (chr)      (chr)
+#> 1                                2015-11-11 2015-11-11
+#> Variables not shown: DOI (chr), funder (chr), indexed (chr), ISBN (chr),
+#>   ISSN (chr), issued (chr), link (chr), member (chr), prefix (chr),
+#>   publisher (chr), reference.count (chr), score (chr), source (chr),
+#>   subject (chr), title (chr), type (chr), URL (chr), assertion (chr),
+#>   author (chr)
 #> 
 #> $facets
 #> NULL
@@ -169,14 +170,14 @@ cr_works(filter = c(has_orcid = TRUE, from_pub_date = '2004-04-04'), limit = 1)
 
 ```r
 cr_journals(issn = c('1803-2427','2326-4225'))
-#> Source: local data frame [2 x 12]
+#> Source: local data frame [2 x 15]
 #> 
-#>   issued container.title deposited
-#> 1                                 
-#> 2                                 
-#> Variables not shown: title (chr), publisher (chr), indexed (chr), ISBN
-#>   (chr), subject (chr), author (chr), issue (chr), ISSN (chr), volume
-#>   (chr)
+#>   alternative.id container.title created deposited funder indexed  ISBN
+#>            (chr)           (chr)   (chr)     (chr)  (chr)   (chr) (chr)
+#> 1                                                  <NULL>              
+#> 2                                                  <NULL>              
+#> Variables not shown: ISSN (chr), issued (chr), link (chr), publisher
+#>   (chr), subject (chr), title (chr), assertion (chr), author (chr)
 ```
 
 ### Search license information
@@ -186,19 +187,24 @@ cr_journals(issn = c('1803-2427','2326-4225'))
 cr_licenses(query = 'elsevier')
 #> $meta
 #>   total_results search_terms start_index items_per_page
-#> 1             7     elsevier           0             20
+#> 1            11     elsevier           0             20
 #> 
 #> $data
-#> Source: local data frame [7 x 2]
+#> Source: local data frame [11 x 2]
 #> 
-#>                                                                           URL
-#> 1                           http://creativecommons.org/licenses/by-nc-nd/3.0/
-#> 2                           http://creativecommons.org/licenses/by-nc-nd/4.0/
-#> 3                                 http://creativecommons.org/licenses/by/3.0/
-#> 4                        http://www.elsevier.com/open-access/userlicense/1.0/
-#> 5                                http://www.elsevier.com/tdm/userlicense/1.0/
-#> 6 © 2007 Elsevier Masson SAS. All rights reserved. The patient figure in Figu
-#> 7 © 2012, Elsevier Inc., All Rights Reserved. Figure 8, part (B) (images of H
+#>                                                                            URL
+#>                                                                          (chr)
+#> 1                            http://creativecommons.org/licenses/by-nc-nd/3.0/
+#> 2                            http://creativecommons.org/licenses/by-nc-nd/4.0/
+#> 3                                  http://creativecommons.org/licenses/by/3.0/
+#> 4                                   http://doi.wiley.com/10.1002/tdm_license_1
+#> 5                            http://onlinelibrary.wiley.com/termsAndConditions
+#> 6         http://www.acm.org/publications/policies/copyright_policy#Background
+#> 7                         http://www.elsevier.com/open-access/userlicense/1.0/
+#> 8                                 http://www.elsevier.com/tdm/userlicense/1.0/
+#> 9                                                  http://www.springer.com/tdm
+#> 10 © 2007 Elsevier Masson SAS. All rights reserved. The patient figure in Figu
+#> 11 © 2012, Elsevier Inc., All Rights Reserved. Figure 8, part (B) (images of H
 #> Variables not shown: work.count (int)
 ```
 
@@ -214,6 +220,7 @@ cr_prefixes(prefixes = c('10.1016','10.1371','10.1023','10.4176','10.1093'))
 #> Source: local data frame [5 x 3]
 #> 
 #>                               member                              name
+#>                                (chr)                             (chr)
 #> 1   http://id.crossref.org/member/78                       Elsevier BV
 #> 2  http://id.crossref.org/member/340  Public Library of Science (PLoS)
 #> 3  http://id.crossref.org/member/297 Springer Science + Business Media
@@ -237,34 +244,35 @@ cr_members(query = 'ecology', limit = 5)
 #> $data
 #> Source: local data frame [5 x 40]
 #> 
-#>     id                                 primary_name
-#> 1 3947          Korean Association of Human Ecology
-#> 2 2151        Ecology and Civil Engineering Society
-#> 3 2080        The Japan Society of Tropical Ecology
-#> 4 2232 Japanese Society of Health and Human Ecology
-#> 5  336        Japanese Society of Microbial Ecology
+#>      id                                             primary_name
+#>   (int)                                                    (chr)
+#> 1  7052                         Chinese Journal of Plant Ecology
+#> 2  6933                          Knowledge Ecology International
+#> 3  7278 Korean Society of Ecology and Infrastructure Engineering
+#> 4  7745                             Institute of Applied Ecology
+#> 5   336                    Japanese Society of Microbial Ecology
 #> Variables not shown: location (chr), last_status_check_time (date),
 #>   backfile.dois (chr), current.dois (chr), total.dois (chr), prefixes
-#>   (chr), coverge.resource.links.backfile (chr), coverge.funders.current
-#>   (chr), coverge.funders.backfile (chr), coverge.references.current (chr),
-#>   coverge.references.backfile (chr), coverge.update.policies.backfile
-#>   (chr), coverge.resource.links.current (chr),
-#>   coverge.update.policies.current (chr), coverge.award.numbers.current
-#>   (chr), coverge.orcids.current (chr), coverge.orcids.backfile (chr),
-#>   coverge.award.numbers.backfile (chr), coverge.licenses.current (chr),
-#>   coverge.licenses.backfile (chr), flags.deposits.award.numbers.backfile
-#>   (chr), flags.deposits (chr), flags.deposits.licenses.backfile (chr),
-#>   flags.deposits.resource.links.backfile (chr),
-#>   flags.deposits.licenses.current (chr), flags.deposits.orcids.current
-#>   (chr), flags.deposits.funders.backfile (chr),
-#>   flags.deposits.references.current (chr), flags.deposits.orcids.backfile
-#>   (chr), flags.deposits.references.backfile (chr),
-#>   flags.deposits.resource.links.current (chr),
-#>   flags.deposits.award.numbers.current (chr),
+#>   (chr), coverge.funders.backfile (chr), coverge.licenses.backfile (chr),
+#>   coverge.funders.current (chr), coverge.resource.links.backfile (chr),
+#>   coverge.orcids.backfile (chr), coverge.update.policies.current (chr),
+#>   coverge.orcids.current (chr), coverge.references.backfile (chr),
+#>   coverge.award.numbers.backfile (chr), coverge.update.policies.backfile
+#>   (chr), coverge.licenses.current (chr), coverge.award.numbers.current
+#>   (chr), coverge.resource.links.current (chr), coverge.references.current
+#>   (chr), flags.deposits.orcids.current (chr), flags.deposits (chr),
 #>   flags.deposits.update.policies.backfile (chr),
-#>   flags.deposits.funders.current (chr),
-#>   flags.deposits.update.policies.current (chr), flags.deposits.articles
-#>   (chr), names (chr), tokens (chr)
+#>   flags.deposits.award.numbers.current (chr),
+#>   flags.deposits.resource.links.current (chr), flags.deposits.articles
+#>   (chr), flags.deposits.funders.current (chr),
+#>   flags.deposits.references.backfile (chr),
+#>   flags.deposits.licenses.backfile (chr),
+#>   flags.deposits.award.numbers.backfile (chr),
+#>   flags.deposits.references.current (chr),
+#>   flags.deposits.resource.links.backfile (chr),
+#>   flags.deposits.orcids.backfile (chr), flags.deposits.funders.backfile
+#>   (chr), flags.deposits.update.policies.current (chr),
+#>   flags.deposits.licenses.current (chr), names (chr), tokens (chr)
 #> 
 #> $facets
 #> NULL
@@ -277,16 +285,16 @@ cr_members(query = 'ecology', limit = 5)
 
 ```r
 cr_r()
-#>  [1] "10.1016/s1090-3798(08)70717-7"    
-#>  [2] "10.5006/0010-9312-5.12.416"       
-#>  [3] "10.1016/s0092-8240(74)80059-5"    
-#>  [4] "10.1002/jps.10429"                
-#>  [5] "10.1371/journal.pone.0036908.g005"
-#>  [6] "10.1086/270400"                   
-#>  [7] "10.4327/jsnfs.57.179"             
-#>  [8] "10.1126/science.164.3885.1224-a"  
-#>  [9] "10.2307/208505"                   
-#> [10] "10.1079/9781845930691.0163"
+#>  [1] "10.1021/ic970087y"                       
+#>  [2] "10.1097/00007890-200607152-02639"        
+#>  [3] "10.5958/2322-0430.2015.00022.0"          
+#>  [4] "10.1016/j.amepre.2009.04.012"            
+#>  [5] "10.2220/biomedres.25.93"                 
+#>  [6] "10.1002/jps.3030471107"                  
+#>  [7] "10.4028/www.scientific.net/amm.44-47.247"
+#>  [8] "10.1103/physrevlett.54.2493"             
+#>  [9] "10.1016/s1957-2557(08)71672-9"           
+#> [10] "10.1355/ae31-1b"
 ```
 
 You can pass in the number of DOIs you want back (default is 10)
@@ -294,7 +302,7 @@ You can pass in the number of DOIs you want back (default is 10)
 
 ```r
 cr_r(2)
-#> [1] "10.12775/ae.2010.012" "10.1375/anft.29.1.51"
+#> [1] "10.1159/000274260"         "10.1109/leos.2009.5343345"
 ```
 
 ## pmid2doi & doi2pmid
@@ -315,16 +323,16 @@ out <-
   cr_works(filter = list(has_full_text = TRUE,
     license_url = "http://creativecommons.org/licenses/by/3.0/"))
 (dois <- out$data$DOI)
-#>  [1] "10.1063/1.4905851"         "10.1063/1.4905271"        
-#>  [3] "10.1063/1.4905272"         "10.1155/2014/214587"      
-#>  [5] "10.1155/2014/245347"       "10.1155/2014/340936"      
-#>  [7] "10.1155/2014/902492"       "10.1155/2014/524940"      
-#>  [9] "10.1155/2014/137231"       "10.1155/2014/598762"      
-#> [11] "10.1155/2014/256879"       "10.1155/2014/182303"      
-#> [13] "10.1155/2014/954604"       "10.1155/2014/846581"      
-#> [15] "10.1155/2014/164714"       "10.1155/2014/687608"      
-#> [17] "10.1155/s1110724303209050" "10.1155/s0161171203203203"
-#> [19] "10.1155/s0161171203211480" "10.1002/cfg.287"
+#>  [1] "10.1155/2015/108274"        "10.1016/j.susc.2014.02.008"
+#>  [3] "10.1155/2014/152487"        "10.1016/j.susc.2014.03.018"
+#>  [5] "10.1155/2014/101496"        "10.1155/2014/156438"       
+#>  [7] "10.1155/1989/60313"         "10.1155/2008/683505"       
+#>  [9] "10.1155/2009/867380"        "10.1155/2009/316249"       
+#> [11] "10.4061/2010/147142"        "10.1155/2010/285376"       
+#> [13] "10.5402/2011/736062"        "10.1155/2011/434375"       
+#> [15] "10.1155/2011/891593"        "10.1155/2010/282464"       
+#> [17] "10.1155/2011/875028"        "10.1155/2011/463704"       
+#> [19] "10.1155/2011/129341"        "10.1155/2011/814794"
 ```
 
 Then get URLs to full text content
@@ -332,7 +340,7 @@ Then get URLs to full text content
 
 ```r
 (links <- cr_ft_links(dois[1]))
-#> NULL
+#> <url> http://downloads.hindawi.com/journals/cmmm/2015/108274.xml
 ```
 
 Then use those URLs to get full text
