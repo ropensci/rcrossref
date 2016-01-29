@@ -38,3 +38,8 @@ test_that("cr_journals warns correctly", {
   expect_is(suppressWarnings(cr_journals(issn=c('blblbl', '1932-6203'))), "tbl_df")
 })
 
+test_that("ISSNs that used to fail badly - should fail better now", {
+  expect_warning(cr_journals("0413-6597"), "Resource not found")
+  expect_warning(cr_journals(c('1932-6203', '1803-2427', "0413-6597")), "Resource not found")
+  expect_equal(NROW(suppressMessages(suppressWarnings(cr_journals(c('1932-6203', '1803-2427', "0413-6597"))))), 2)
+})

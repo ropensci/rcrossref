@@ -22,11 +22,11 @@ cr_GET <- function(endpoint, args, todf = TRUE, on_error = warning, parse = TRUE
   }
   doi <- gsub("works/|/agency|funders/", "", endpoint)
   if (!res$status_code < 300) {
-    on_error(sprintf("%s: %s", res$status_code, get_err(res)), call. = FALSE)
-    list(message = NA)
+    on_error(sprintf("%s: %s - (%s)", res$status_code, get_err(res), doi), call. = FALSE)
+    list(message = NULL)
   } else {
     stopifnot(res$headers$`content-type` == "application/json;charset=UTF-8")
-    res <- content(res, as = "text")
+    res <- content(res, as = "text", encoding = "UTF-8")
     if (parse) jsonlite::fromJSON(res, todf) else res
   }
 }
@@ -36,7 +36,7 @@ get_err <- function(x) {
   if (is(tmp, "list")) {
     tmp$message[[1]]$message
   } else {
-    if (is(tmp, "HTMLInternalDocument")) {
+    if (any(class(tmp) %in% c("HTMLInternalDocument", "xml_document"))) {
       return("Server error - check your query - or api.crossref.org may be experiencing problems")
     } else {
       return(tmp)

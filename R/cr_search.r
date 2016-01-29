@@ -53,18 +53,19 @@
   year=NULL, type=NULL, ...)
 {
   url <- "http://search.labs.crossref.org/dois"
-  if(!is.null(doi)){ doi <- as.character(doi) } else {doi <- doi}
-  if(is.null(doi)){
+  if (!is.null(doi)) { 
+    doi <- as.character(doi) 
+  }
+  if (is.null(doi)) {
     cr_search_GET(url, query, page, rows, sort, year, type, ...)
-  } else
-  {
-    ldply(doi, function(z) cr_search_GET(url, x=z, page, rows, sort, year, type, ...))
+  } else {
+    ldply(doi, function(z) cr_search_GET(url, x = z, page, rows, sort, year, type, ...))
   }
 }
 
 cr_search_GET <- function(url, x, page, rows, sort, year, type, ...){
   args <- cr_compact(list(q=x, page=page, rows=rows, sort=sort, year=year, type=type))
-  tt <- GET(url, query=args, ...)
+  tt <- GET(url, query = args, ...)
   stop_for_status(tt)
   res <- content(tt, as = "text")
   tmp <- jsonlite::fromJSON(res)

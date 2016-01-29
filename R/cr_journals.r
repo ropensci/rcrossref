@@ -63,6 +63,8 @@
       bind_rows(out)
     } else {
       res <- lapply(res, "[[", "message")
+      # remove NULLs
+      res <- cr_compact(res)
       res <- lapply(res, parse_works)
       df <- rbind_all(res)
       #exclude rows with empty ISSN value until CrossRef API supports input validation
@@ -83,7 +85,7 @@
           dat <- rbind_all(lapply(tmp$message$items, parse_works))
         } else {
           meta <- NULL
-          dat <- parse_journal(tmp$message)
+          dat <- if (is.null(tmp$message)) NULL else parse_journal(tmp$message)
         }
         list(meta = meta, data = dat)
       } else {
@@ -147,16 +149,16 @@ journal_GET_ <- function(x, args, works, cursor = NULL, cursor_max = NULL, parse
 }
 
 parse_journal <- function(x){
-  if(!is.null(x$flags)) names(x$flags) <- names2underscore(names(x$flags)) else x$flags <- NA
-  if(!is.null(x$coverage)) names(x$coverage) <- names2underscore(names(x$coverage)) else x$coverage <- NA
-  if(!is.null(x$counts)) names(x$counts) <- names2underscore(names(x$counts)) else x$counts <- NA
-  data.frame(title=x$title, publisher=x$publisher, issn=paste_longer(x$ISSN[[1]]),
-             last_status_check_time=convtime(x$`last-status-check-time`),
+  if (!is.null(x$flags)) names(x$flags) <- names2underscore(names(x$flags)) else x$flags <- NA
+  if (!is.null(x$coverage)) names(x$coverage) <- names2underscore(names(x$coverage)) else x$coverage <- NA
+  if (!is.null(x$counts)) names(x$counts) <- names2underscore(names(x$counts)) else x$counts <- NA
+  data.frame(title = x$title, publisher = x$publisher, issn = paste_longer(x$ISSN[[1]]),
+             last_status_check_time = convtime(x$`last-status-check-time`),
              x$flags,
              x$coverage,
              x$counts,
              stringsAsFactors = FALSE)
 }
 
-paste_longer <- function(w) if(length(w) > 1) paste(w, collapse=", ") else w[[1]]
+paste_longer <- function(w) if (length(w) > 1) paste(w, collapse = ", ") else w[[1]]
 names2underscore <- function(w) t(sapply(w, function(z) gsub("-", "_", z), USE.NAMES = FALSE))

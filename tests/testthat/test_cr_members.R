@@ -41,7 +41,7 @@ test_that("cr_members fails correctly", {
   expect_error(cr_members(config=timeout(0.01)))
   expect_equal(NROW(cr_members(query = "adfaaf")$data), 0)
   
-  expect_warning(cr_members(member_ids=c(323234343434,3434343434), works=TRUE, facet=TRUE), 
+  expect_warning(cr_members(member_ids=c(323234343434, 3434343434), works=TRUE, facet=TRUE), 
                  "Server error - check your query")
   expect_warning(cr_members(member_ids=c(323234343434,3434343434,98), works=TRUE, facet=TRUE), 
                  "Server error - check your query")

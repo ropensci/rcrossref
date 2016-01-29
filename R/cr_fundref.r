@@ -96,7 +96,7 @@
     if (!is.null(cursor)) {
       res
     } else {
-      if (all(is.na(res))) {
+      if (is.null(res$message)) {
         list(meta = NA, data = NA)
       } else {
         if (is.null(dois)) {
