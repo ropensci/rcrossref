@@ -50,7 +50,7 @@
 #' ### pdf
 #' cr_ft_text(links, "pdf", read=FALSE)
 #' cr_ft_text(links, "pdf")
-#' 
+#'
 #' ### another pensoft e.g.
 #' links <- cr_ft_links("10.3897/phytokeys.42.7604", "all")
 #' pdf_read <- cr_ft_text(url = links, type = "pdf", read=FALSE, verbose = FALSE)
@@ -101,10 +101,10 @@
 #' ## plain text
 #' link <- cr_ft_links(out$data$DOI[1], "plain")
 #' # res <- cr_ft_text(url = link, "plain")
-#' 
+#'
 #' ## Wiley
 #' Sys.setenv(CROSSREF_TDM = "your-key")
-#' 
+#'
 #' ### all wiley
 #' out <- cr_members(311, filter=c(has_full_text = TRUE, type = 'journal-article'), works = TRUE)
 #' dois <- out$data$DOI[1:10]
@@ -116,11 +116,11 @@
 #' #   res[[i]] <- cr_ft_text(tmp, type = "pdf", cache=FALSE)
 #' # }
 #' # res
-#' 
-#' #### older dates 
-#' out <- cr_members(311, filter=c(has_full_text = TRUE, 
+#'
+#' #### older dates
+#' out <- cr_members(311, filter=c(has_full_text = TRUE,
 #'       type = 'journal-article', until_created_date = "2013-12-31"), works = TRUE)
-#'      
+#'
 #' dois <- out$data$DOI[1:10]
 #' # res <- list()
 #' # for (i in seq_along(dois)) {
@@ -130,7 +130,7 @@
 #' #   res[[i]] <- cr_ft_text(tmp, type = "pdf", cache=FALSE)
 #' # }
 #' # res
-#' 
+#'
 #' ### wiley subset with CC By 4.0 license
 #' lic <- "http://creativecommons.org/licenses/by/4.0/"
 #' out <- cr_members(311, filter=c(has_full_text = TRUE, license.url = lic), works = TRUE)
@@ -146,7 +146,7 @@
 
 cr_ft_text <- function(url, type='xml', path = "~/.crossref", overwrite = TRUE,
   read=TRUE, verbose=TRUE, cache=TRUE, ...) {
-  
+
   auth <- cr_auth(url, type)
   switch( pick_type(type, url),
           xml = getTEXT(get_url(url, 'xml'), type, auth, ...),
@@ -213,7 +213,7 @@ cr_auth <- function(url, type) {
           # add_headers(`CR-Clickthrough-Client-Token` = key, Accept = type)
         },
         `311` = {
-          add_headers(`CR-Clickthrough-Client-Token` = Sys.getenv("CROSSREF_TDM"), 
+          add_headers(`CR-Clickthrough-Client-Token` = Sys.getenv("CROSSREF_TDM"),
                       Accept = type)
         }
     )
@@ -227,8 +227,8 @@ cr_auth <- function(url, type) {
 getTEXT <- function(x, type, auth, ...){
   res <- GET(x, auth, ...)
   switch(type,
-         xml = XML::xmlParse(httr::content(res, as = "text")),
-         plain = httr::content(res, as = "text"))
+         xml = XML::xmlParse(ct_utf8(res)),
+         plain = ct_utf8(res))
 }
 
 getPDF <- function(url, path, auth, overwrite, type, read, verbose, cache=FALSE, ...) {
@@ -254,10 +254,10 @@ getPDF <- function(url, path, auth, overwrite, type, read, verbose, cache=FALSE,
     }
   } else {
     if (verbose) message("Downloading pdf...")
-    res <- GET(url, 
-               accept("application/pdf"), 
-               write_disk(path = filepath, overwrite = overwrite), 
-               auth, 
+    res <- GET(url,
+               accept("application/pdf"),
+               write_disk(path = filepath, overwrite = overwrite),
+               auth,
                config(followlocation = TRUE), ...)
     filepath <- res$request$output$path
   }

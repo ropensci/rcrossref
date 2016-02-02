@@ -9,8 +9,8 @@ crosscite(dois, style = "apa", locale = "en-US", .progress = "none", ...)
 \arguments{
 \item{dois}{Search by a single DOI or many DOIs.}
 
-\item{style}{a CSL style (for text format only). See \code{\link{get_styles}} 
-for options. Default: apa. If there's a style that CrossRef doesn't support you'll get a 
+\item{style}{a CSL style (for text format only). See \code{\link{get_styles}}
+for options. Default: apa. If there's a style that CrossRef doesn't support you'll get a
 \code{(500) Internal Server Error}}
 
 \item{locale}{Language locale. See \code{?Sys.getlocale}}
@@ -28,7 +28,7 @@ Crosscite - citation formatter
 \details{
 See \url{http://www.crosscite.org/cn/} for more info on the
   	Crossref Content Negotiation API service.
-  	
+
 This function is now deprecated. It will be removed in the next version
 of this package. Use \code{\link{cr_cn}} instead.
 }

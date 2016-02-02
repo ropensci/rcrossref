@@ -29,8 +29,7 @@ cr_citation_count <- function(doi, url = "http://www.crossref.org/openurl/",
 #  args$format=as.character("unixref")
   cite_count <- GET(url, query = args, ...)
   stop_for_status(cite_count)
-  cite_count_data <- content(cite_count, as = "text")
-  ans <- xmlParse(cite_count_data)
+  ans <- xmlParse(ct_utf8(cite_count))
   if(get_attr(ans, "status") == "unresolved") NA else as.numeric(get_attr(ans, "fl_count"))
 }
 

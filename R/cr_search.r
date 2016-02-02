@@ -17,7 +17,7 @@
 #' @author Scott Chamberlain \email{myrmecocystus@@gmail.com}
 #' @examples \dontrun{
 #' cr_search(query = c("renear", "palmer"))
-#' 
+#'
 #' # limit to 4 results
 #' cr_search(query = c("renear", "palmer"), rows = 4)
 #'
@@ -42,19 +42,19 @@
 #'
 #' # find all the records of articles from a journal ISBN
 #' cr_search(query = "1461-0248", type="Journal Article")
-#' 
+#'
 #' # curl stuff
 #' library('httr')
 #' cr_search(doi = "10.1890/10-0340.1", config=verbose())
 #' cr_search(query = c("renear", "palmer"), rows = 40, config=progress())
 #' }
 
-`cr_search` <- function(query=NULL, doi=NULL, page=NULL, rows=NULL, sort=NULL, 
-  year=NULL, type=NULL, ...)
-{
-  url <- "http://search.labs.crossref.org/dois"
-  if (!is.null(doi)) { 
-    doi <- as.character(doi) 
+`cr_search` <- function(query=NULL, doi=NULL, page=NULL, rows=NULL, sort=NULL,
+  year=NULL, type=NULL, ...) {
+  #url <- "http://search.labs.crossref.org/dois"
+  url <- "http://search.crossref.org/dois"
+  if (!is.null(doi)) {
+    doi <- as.character(doi)
   }
   if (is.null(doi)) {
     cr_search_GET(url, query, page, rows, sort, year, type, ...)
@@ -64,15 +64,16 @@
 }
 
 cr_search_GET <- function(url, x, page, rows, sort, year, type, ...){
-  args <- cr_compact(list(q=x, page=page, rows=rows, sort=sort, year=year, type=type))
+  args <- cr_compact(list(q = x, page = page, rows = rows,
+                          sort = sort, year = year, type = type))
   tt <- GET(url, query = args, ...)
   stop_for_status(tt)
-  res <- content(tt, as = "text")
+  res <- ct_utf8(tt)
   tmp <- jsonlite::fromJSON(res)
-  if(NROW(tmp) == 0) NULL else col_classes(tmp, c("character","numeric","integer","character","character","character","numeric"))
+  if (NROW(tmp) == 0) NULL else col_classes(tmp, c("character","numeric","integer","character","character","character","numeric"))
 }
 
 asnum <- function(x){
-  tmp <- tryCatch(as.numeric(x), warning=function(w) w)
-  if(is(tmp, "simpleWarning")) x else tmp
+  tmp <- tryCatch(as.numeric(x), warning = function(w) w)
+  if (is(tmp, "simpleWarning")) x else tmp
 }

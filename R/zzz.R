@@ -1,5 +1,7 @@
 cr_compact <- function(x) Filter(Negate(is.null), x)
 
+ct_utf8 <- function(x) httr::content(x, as = "text", encoding = "UTF-8")
+
 asl <- function(z) {
   # z <- tolower(z)
   if (is.logical(z) || tolower(z) == "true" || tolower(z) == "false") {
@@ -26,13 +28,13 @@ cr_GET <- function(endpoint, args, todf = TRUE, on_error = warning, parse = TRUE
     list(message = NULL)
   } else {
     stopifnot(res$headers$`content-type` == "application/json;charset=UTF-8")
-    res <- content(res, as = "text", encoding = "UTF-8")
+    res <- ct_utf8(res)
     if (parse) jsonlite::fromJSON(res, todf) else res
   }
 }
 
 get_err <- function(x) {
-  tmp <- content(x)
+  tmp <- jsonlite::fromJSON(ct_utf8(x), FALSE)
   if (is(tmp, "list")) {
     tmp$message[[1]]$message
   } else {
@@ -66,16 +68,28 @@ check_limit <- function(x) {
   }
 }
 
+check_number <- function(x) {
+  call <- deparse(substitute(x))
+  if (!is.null(x)) {
+    tt <- tryCatch(as.numeric(x), warning = function(w) w)
+    if (is(tt, "warning") || !class(x) %in% c('integer', 'numeric')) {
+      stop(call, " value illegal, must be an integer", call. = FALSE)
+    }
+  }
+}
+
 ifnullna <- function(x) {
   if (is.null(x)) NA else x
 }
 
 prep_args <- function(query, filter, offset, limit, sample, sort, order, facet, cursor) {
   check_limit(limit)
+  check_number(offset)
+  check_number(sample)
   filter <- filter_handler(filter)
   facet <- if (facet) "t" else NULL
   cr_compact(list(query = query, filter = filter, offset = offset, rows = limit,
                   sample = sample, sort = sort, order = order, facet = facet,
                   cursor = cursor))
-  
+
 }

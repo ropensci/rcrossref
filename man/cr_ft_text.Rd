@@ -150,10 +150,10 @@ dois <- out$data$DOI[1:10]
 # }
 # res
 
-#### older dates 
-out <- cr_members(311, filter=c(has_full_text = TRUE, 
+#### older dates
+out <- cr_members(311, filter=c(has_full_text = TRUE,
       type = 'journal-article', until_created_date = "2013-12-31"), works = TRUE)
-     
+
 dois <- out$data$DOI[1:10]
 # res <- list()
 # for (i in seq_along(dois)) {

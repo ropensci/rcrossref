@@ -22,8 +22,8 @@
   args <- list(tool = "my_tool", email = "my_email@example.com", 
                ids = x, idtype = type, format = "json")
   res <- GET(idcon_base(), query = args, ...)
-  if (res$status_code > 201) stop(content(res)$message, call. = FALSE)
-  jsonlite::fromJSON(content(res, as = "text"))
+  if (res$status_code > 201) stop(jsonlite::fromJSON(ct_utf8(res))$message, call. = FALSE)
+  jsonlite::fromJSON(ct_utf8(res))
 }
 
 idcon_base <- function() "http://www.ncbi.nlm.nih.gov/pmc/utils/idconv/v1.0"

@@ -38,6 +38,6 @@
 {
 	tt <- POST(url, config = c(content_type_json(), accept_json()), body=jsonlite::toJSON(query))
   stop_for_status(tt)
-  res <- content(tt, as = "text")
+  res <- ct_utf8(tt)
 	fromJSON(res)$results
 }

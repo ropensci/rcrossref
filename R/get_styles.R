@@ -5,13 +5,13 @@
 #' get_styles()[1:5]
 #' }
 
-get_styles <- function(...){  
+get_styles <- function(...){
   comm <- GET("https://api.github.com/repos/citation-style-language/styles/commits?per_page=1", ...)
-  commres <- content(comm)
+  commres <- jsonlite::fromJSON(ct_utf8(comm), FALSE)
   sha <- commres[[1]]$sha
   sty <- GET(sprintf("https://api.github.com/repos/citation-style-language/styles/git/trees/%s", sha))
-  res <- content(sty)
+  res <- jsonlite::fromJSON(ct_utf8(sty), FALSE)
   files <- sapply(res$tree, "[[", "path")
   csls <- grep("\\.csl", files, value = TRUE)
-  vapply(csls, function(x) strsplit(x, "\\.csl")[[1]][[1]], "", USE.NAMES = FALSE) 
+  vapply(csls, function(x) strsplit(x, "\\.csl")[[1]][[1]], "", USE.NAMES = FALSE)
 }
