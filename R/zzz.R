@@ -34,7 +34,14 @@ cr_GET <- function(endpoint, args, todf = TRUE, on_error = warning, parse = TRUE
 }
 
 get_err <- function(x) {
-  tmp <- jsonlite::fromJSON(ct_utf8(x), FALSE)
+  xx <- ct_utf8(x)
+  if (x$headers$`content-type` == "text/plain") {
+    tmp <- xx
+  } else if (x$headers$`content-type` == "application/json;charset=UTF-8") {
+    tmp <- jsonlite::fromJSON(xx, FALSE)
+  } else {
+    tmp <- xx
+  }
   if (is(tmp, "list")) {
     tmp$message[[1]]$message
   } else {

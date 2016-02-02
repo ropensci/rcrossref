@@ -64,6 +64,9 @@
 }
 
 cr_search_GET <- function(url, x, page, rows, sort, year, type, ...){
+  if (!is.null(x)) {
+    if (length(x) > 1) x <- paste0(x, collapse = " ")
+  }
   args <- cr_compact(list(q = x, page = page, rows = rows,
                           sort = sort, year = year, type = type))
   tt <- GET(url, query = args, ...)

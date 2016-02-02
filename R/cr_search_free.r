@@ -34,9 +34,8 @@
 #' cr_search_free(queries)
 #' }
 
-`cr_search_free` <- function(query, url = "http://search.crossref.org/links")
-{
-	tt <- POST(url, config = c(content_type_json(), accept_json()), body=jsonlite::toJSON(query))
+`cr_search_free` <- function(query, url = "http://search.crossref.org/links") {
+	tt <- POST(url, config = c(content_type_json(), accept_json()), body = jsonlite::toJSON(query))
   stop_for_status(tt)
   res <- ct_utf8(tt)
 	fromJSON(res)$results
