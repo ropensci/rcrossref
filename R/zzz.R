@@ -37,6 +37,9 @@ get_err <- function(x) {
   xx <- ct_utf8(x)
   if (x$headers$`content-type` == "text/plain") {
     tmp <- xx
+  } else if (x$headers$`content-type` == "text/html") {
+    html <- XML::htmlParse(xx)
+    tmp <- XML::xpathSApply(html, '//h3[@class="info"]', xmlValue)
   } else if (x$headers$`content-type` == "application/json;charset=UTF-8") {
     tmp <- jsonlite::fromJSON(xx, FALSE)
   } else {
