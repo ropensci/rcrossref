@@ -34,6 +34,7 @@
 #' # xml and plain text links
 #' out <- cr_works(filter=c(has_full_text = TRUE))
 #' dois <- out$data$DOI
+#' cr_ft_links(dois[1], "pdf")
 #' cr_ft_links(dois[2], "xml")
 #' cr_ft_links(dois[1], "plain")
 #' cr_ft_links(dois[1], "all")
@@ -227,7 +228,7 @@ cr_auth <- function(url, type) {
 getTEXT <- function(x, type, auth, ...){
   res <- GET(x, auth, ...)
   switch(type,
-         xml = XML::xmlParse(ct_utf8(res)),
+         xml = xml2::read_xml(ct_utf8(res)),
          plain = ct_utf8(res))
 }
 

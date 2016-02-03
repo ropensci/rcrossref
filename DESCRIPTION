@@ -21,7 +21,6 @@ Imports:
     methods,
     stats,
     jsonlite,
-    XML,
     httr (>= 1.0.0),
     plyr,
     bibtex,
@@ -29,6 +28,5 @@ Imports:
     R6
 Suggests:
     testthat,
-    roxygen2 (>= 4.0.1),
     knitr
 RoxygenNote: 5.0.1

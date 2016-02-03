@@ -38,8 +38,8 @@ get_err <- function(x) {
   if (x$headers$`content-type` == "text/plain") {
     tmp <- xx
   } else if (x$headers$`content-type` == "text/html") {
-    html <- XML::htmlParse(xx)
-    tmp <- XML::xpathSApply(html, '//h3[@class="info"]', xmlValue)
+    html <- xml2::read_html(xx)
+    tmp <- xml2::xml_text(xml2::xml_find_one(html, '//h3[@class="info"]'))
   } else if (x$headers$`content-type` == "application/json;charset=UTF-8") {
     tmp <- jsonlite::fromJSON(xx, FALSE)
   } else {

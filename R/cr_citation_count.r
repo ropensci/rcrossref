@@ -23,16 +23,14 @@ cr_citation_count <- function(doi, url = "http://www.crossref.org/openurl/",
 	key = "cboettig@ropensci.org", ...)
 {
   ## Assemble a url query such as:
-  #http://www.crossref.org/openurl/?id=doi:10.3998/3336451.0009.101&noredirect=true&pid=API_KEY&format=unixref
-  args <- list(id = paste("doi:", doi, sep=""), pid = as.character(key),
+  args <- list(id = paste("doi:", doi, sep = ""), pid = as.character(key),
                noredirect = as.logical(TRUE))
-#  args$format=as.character("unixref")
   cite_count <- GET(url, query = args, ...)
   stop_for_status(cite_count)
-  ans <- xmlParse(ct_utf8(cite_count))
-  if(get_attr(ans, "status") == "unresolved") NA else as.numeric(get_attr(ans, "fl_count"))
+  ans <- xml2::read_xml(ct_utf8(cite_count))
+  if (get_attr(ans, "status") == "unresolved") NA else as.numeric(get_attr(ans, "fl_count"))
 }
 
 get_attr <- function(xml, attr){
-  xpathSApply(xml, sprintf("//*[@%s]", attr), function(x) xmlAttrs(x)[[attr]])
+  xml2::xml_attr(xml2::xml_find_all(xml, sprintf("//*[@%s]", attr)), attr)
 }
