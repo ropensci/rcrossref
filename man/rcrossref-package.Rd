@@ -19,8 +19,8 @@ project \url{http://tdmsupport.crossref.org/}.
 
 \section{Deprecated and Defunct}{
 
-Note that functions that use the OpenURL service are now deprecated, and will be defunct 
-soon.
+See \code{\link{rcrossref-deprecated}} and \code{\link{rcrossref-defunct}} for 
+details.
 }
 
 \section{What am I actually searching?}{

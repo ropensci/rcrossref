@@ -37,9 +37,6 @@
 #' cr_search(doi = "10.1890/10-0340.1")
 #'
 #' # search for many DOI's
-#' cr_search(doi = c("10.1890/10-0340.1","10.1016/j.fbr.2012.01.001",
-#'                   "10.1111/j.1469-8137.2012.04121.x"))
-#'
 #' # find all the records of articles from a journal ISBN
 #' cr_search(query = "1461-0248", type="Journal Article")
 #'
@@ -51,6 +48,9 @@
 
 `cr_search` <- function(query=NULL, doi=NULL, page=NULL, rows=NULL, sort=NULL,
   year=NULL, type=NULL, ...) {
+  
+  .Deprecated(package = "rcrossref",
+              msg = "cr_search is deprecated, and will be removed in next version, see cr_works et al.")
   #url <- "http://search.labs.crossref.org/dois"
   url <- "http://search.crossref.org/dois"
   if (!is.null(doi)) {
