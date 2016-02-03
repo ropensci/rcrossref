@@ -22,6 +22,7 @@ Imports:
     stats,
     jsonlite,
     httr (>= 1.0.0),
+    xml2,
     plyr,
     bibtex,
     dplyr,
