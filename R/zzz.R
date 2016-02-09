@@ -17,8 +17,8 @@ asl <- function(z) {
 
 make_rcrossref_ua <- function() {
   c(
-    user_agent(rcrossref_ua()),
-    add_headers(`X-USER-AGENT` = rcrossref_ua())
+    httr::user_agent(rcrossref_ua()),
+    httr::add_headers(`X-USER-AGENT` = rcrossref_ua())
   )
 }
 

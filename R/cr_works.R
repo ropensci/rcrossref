@@ -226,17 +226,18 @@ parse_works <- function(zzz){
     }
   }
   
-  out_tmp <- if (all(is.na(zzz))) {
+  if (is.null(zzz)) {
     NULL 
+  } else if (all(is.na(zzz))) {
+    NULL
   } else {
-    data.frame(as.list(unlist(lapply(keys, manip, y = zzz))), stringsAsFactors = FALSE)
+    out_tmp <- data.frame(as.list(unlist(lapply(keys, manip, y = zzz))), stringsAsFactors = FALSE)
+    out_tmp$assertion <- list(parse_todf(zzz$assertion))
+    out_tmp$author <- list(parse_todf(zzz$author))
+    out_tmp$funder <- list(parse_todf(zzz$funder))
+    out_tmp$link <- list(parse_todf(zzz$link))
+    return(out_tmp)
   }
-  
-  out_tmp$assertion <- list(parse_todf(zzz$assertion))
-  out_tmp$author <- list(parse_todf(zzz$author))
-  out_tmp$funder <- list(parse_todf(zzz$funder))
-  out_tmp$link <- list(parse_todf(zzz$link))
-  return(out_tmp)
 }
 
 parse_awards <- function(x) {
