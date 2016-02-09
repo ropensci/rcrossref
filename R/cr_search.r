@@ -69,7 +69,7 @@ cr_search_GET <- function(url, x, page, rows, sort, year, type, ...){
   }
   args <- cr_compact(list(q = x, page = page, rows = rows,
                           sort = sort, year = year, type = type))
-  tt <- GET(url, query = args, ...)
+  tt <- GET(url, query = args, make_rcrossref_ua(), ...)
   stop_for_status(tt)
   res <- ct_utf8(tt)
   tmp <- jsonlite::fromJSON(res)

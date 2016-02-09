@@ -38,7 +38,7 @@
 
 ccite <- function(doi, style, locale, ...) {
   args <- cr_compact(list(doi = doi, style = style, locale = locale))
-  res <- GET(ccurl(), query = args, ...)
+  res <- GET(ccurl(), query = args, make_rcrossref_ua(), ...)
   stop_for_status(res)
   gsub("\n", "", ct_utf8(res))
 }

@@ -15,12 +15,26 @@ asl <- function(z) {
   }
 }
 
+make_rcrossref_ua <- function() {
+  c(
+    user_agent(rcrossref_ua()),
+    add_headers(`X-USER-AGENT` = rcrossref_ua())
+  )
+}
+
+rcrossref_ua <- function() {
+  versions <- c(paste0("r-curl/", utils::packageVersion("curl")),
+                paste0("httr/", utils::packageVersion("httr")),
+                sprintf("rOpenSci(rcrossref/%s)", utils::packageVersion("rcrossref")))
+  paste0(versions, collapse = " ")
+}
+
 cr_GET <- function(endpoint, args, todf = TRUE, on_error = warning, parse = TRUE, ...) {
   url <- sprintf("http://api.crossref.org/%s", endpoint)
   if (length(args) == 0) {
-    res <- GET(url, ...)
+    res <- GET(url, make_rcrossref_ua(), ...)
   } else {
-    res <- GET(url, query = args, ...)
+    res <- GET(url, query = args, make_rcrossref_ua(), ...)
   }
   doi <- gsub("works/|/agency|funders/", "", endpoint)
   if (!res$status_code < 300) {

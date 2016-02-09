@@ -129,12 +129,15 @@
            "onix-xml" = "application/vnd.medra.onixdoi+xml")
     type <- pick[[format]]
     if (format == "citeproc-json") {
-      response <- GET(file.path("http://api.crossref.org/works", doi, type), ...)
+      response <- GET(file.path("http://api.crossref.org/works", doi, type), 
+                      make_rcrossref_ua(), ...)
     } else {
       if (format == "text") {
         type <- paste(type, "; style = ", style, "; locale = ", locale, sep = "")
       }
-      response <- GET(url, ..., add_headers(Accept = type, followlocation = TRUE))
+      response <- GET(url, ..., 
+                      make_rcrossref_ua(),
+                      add_headers(Accept = type, followlocation = TRUE))
     }
     warn_status(response)
     if (response$status_code < 202) {
