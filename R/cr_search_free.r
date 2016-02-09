@@ -36,7 +36,7 @@
 
 `cr_search_free` <- function(query, url = "http://search.crossref.org/links") {
   .Deprecated(package = "rcrossref",
-              msg = "cr_search is deprecated, and will be removed in next version, see cr_works et al.")
+              msg = "cr_search_free is deprecated, and will be removed in next version, see cr_works et al.")
 	tt <- POST(url, config = c(content_type_json(), accept_json()), body = jsonlite::toJSON(query))
   stop_for_status(tt)
   res <- ct_utf8(tt)

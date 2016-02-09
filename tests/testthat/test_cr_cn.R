@@ -7,7 +7,7 @@ test_that("cr_cn returns", {
   c <- cr_cn("10.1126/science.169.3946.635", "rdf-xml")
   d <- cr_cn("10.1126/science.169.3946.635", "crossref-xml")
   e <- cr_cn("10.1126/science.169.3946.635", "bibentry")
-  f <- cr_cn("10.1126/science.169.3946.635", "text", "apa")
+  f <- cr_cn(dois = "10.1126/science.169.3946.635", format = "text", style = "apa")
   g <- cr_cn("10.5604/20831862.1134311", "crossref-tdm")
   h <- cr_cn("10.3233/ISU-150780", "onix-xml")
   
