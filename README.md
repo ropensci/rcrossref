@@ -147,7 +147,7 @@ cr_agency(dois = '10.13039/100000001')
 cr_works(filter = c(has_orcid = TRUE, from_pub_date = '2004-04-04'), limit = 1)
 #> $meta
 #>   total_results search_terms start_index items_per_page
-#> 1        243524           NA           0              1
+#> 1        254101           NA           0              1
 #> 
 #> $data
 #> Source: local data frame [1 x 23]
@@ -285,16 +285,11 @@ cr_members(query = 'ecology', limit = 5)
 
 ```r
 cr_r()
-#>  [1] "10.1021/ic970087y"                       
-#>  [2] "10.1097/00007890-200607152-02639"        
-#>  [3] "10.5958/2322-0430.2015.00022.0"          
-#>  [4] "10.1016/j.amepre.2009.04.012"            
-#>  [5] "10.2220/biomedres.25.93"                 
-#>  [6] "10.1002/jps.3030471107"                  
-#>  [7] "10.4028/www.scientific.net/amm.44-47.247"
-#>  [8] "10.1103/physrevlett.54.2493"             
-#>  [9] "10.1016/s1957-2557(08)71672-9"           
-#> [10] "10.1355/ae31-1b"
+#>  [1] "10.5594/j16363"                   "10.1093/icsidreview/23.1.164"    
+#>  [3] "10.1007/bf03302528"               "10.1163/1877-8054_cmri_com_24648"
+#>  [5] "10.1080/08911916.1996.11643918"   "10.1007/978-94-011-1472-1_34"    
+#>  [7] "10.4267/10608/4227"               "10.1103/physrevd.36.527"         
+#>  [9] "10.1002/pam.20136"                "10.1016/j.ijleo.2015.09.110"
 ```
 
 You can pass in the number of DOIs you want back (default is 10)
@@ -302,7 +297,7 @@ You can pass in the number of DOIs you want back (default is 10)
 
 ```r
 cr_r(2)
-#> [1] "10.1159/000274260"         "10.1109/leos.2009.5343345"
+#> [1] "10.1201/b19172-3"        "10.4236/msce.2013.15009"
 ```
 
 ## pmid2doi & doi2pmid
