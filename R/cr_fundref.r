@@ -82,11 +82,19 @@
         NA
       } else {
         if (works) {
-          tmp <- lapply(out, function(x) lapply(x$items, parse_works))
-          tmp <- tmp[!sapply(tmp, length) == 0]
-          rbind_all(do.call(c, tmp))
-        } else { 
-          lapply(out, parse_fund)
+          if (all(sapply(out, function(z) length(z$items)) == 0)) {
+            NA
+          } else {
+            tmp <- lapply(out, function(x) lapply(x$items, parse_works))
+            tmp <- tmp[!sapply(tmp, length) == 0]
+            rbind_all(do.call('c', tmp))
+          }
+        } else {
+          if (all(sapply(out, function(z) length(z)) == 0)) {
+            NA
+          } else {
+            lapply(out, parse_fund)
+          }
         }
       }
     }
@@ -171,16 +179,20 @@ fundref_GET_ <- function(x, args, works, cursor = NULL, cursor_max = NULL, parse
   }
 }
 
-parse_fund <- function(x){
-  desc <- unlist(x$descendants)
-  hier <- data.frame(id=names(unlist(x$`hierarchy-names`)), 
-             name=unname(unlist(x$`hierarchy-names`)), stringsAsFactors = FALSE)
-  df <- data.frame(name=x$name, location=x$location, work_count=x$`work-count`, 
-                   descendant_work_count=x$`descendant-work-count`,
-                   id=x$id, tokens=paste0(x$tokens, collapse = ", "), 
-                   alt.names=paste0(x$`alt-names`, collapse = ", "), 
-                   uri=x$uri, stringsAsFactors = FALSE)
-  list(data=df, descendants=desc, hierarchy=hier)
+parse_fund <- function(x) {
+  if (is.null(x) || is.na(x)) {
+    NA
+  } else {
+    desc <- unlist(x$descendants)
+    hier <- data.frame(id=names(unlist(x$`hierarchy-names`)), 
+                       name=unname(unlist(x$`hierarchy-names`)), stringsAsFactors = FALSE)
+    df <- data.frame(name=x$name, location=x$location, work_count=x$`work-count`, 
+                     descendant_work_count=x$`descendant-work-count`,
+                     id=x$id, tokens=paste0(x$tokens, collapse = ", "), 
+                     alt.names=paste0(x$`alt-names`, collapse = ", "), 
+                     uri=x$uri, stringsAsFactors = FALSE)
+    list(data=df, descendants=desc, hierarchy=hier)
+  }
 }
 
 parse_fundref <- function(zzz){
