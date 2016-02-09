@@ -1,3 +1,33 @@
+rcrossref 0.5.2
+===============
+
+### NEW FEATURES
+
+* User-agent string is passed with every request to Crossref with 
+names and versions of this package, and its HTTP dependency packages: `httr`
+and `curl` (which `httr` depends on). Will potentially be useful to 
+Crossref to know how many requests come from this R client (#100)
+
+### DEPRECATED
+
+* `cr_search()` and `cr_search_free()` use old Crossref web services, so 
+are now marked deprecated, and will throw a deprecation message, but can 
+still be used. They will both be defunct in `v0.6` of this package (#99) 
+
+### MINOR IMPROVEMENTS
+
+* `XML` replaced with `xml2` (#98)
+* `httr::content()` calls: all parse to text then parse content 
+manually. in addition, encoding explicitly set to `UTF-8` on 
+`httr::content()` calls (#98)
+
+### BUG FIXES
+
+* Bug fix to `cr_journals()` - fix to parse correctly on some failed requests 
+(#97) thanks @nkorf
+* Bug fix to `cr_fundref()/cr_funders()` - parsing wasn't working correctly in 
+all cases
+
 rcrossref 0.5.0
 ===============
 
