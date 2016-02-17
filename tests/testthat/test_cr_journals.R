@@ -33,7 +33,7 @@ test_that("cr_journals warns correctly", {
   skip_on_cran()
   
   expect_warning(cr_journals(issn=c('blblbl', '1932-6203')), 
-                 regexp = "Resource not found", all = TRUE)
+                 regexp = "only data with valid ISSN returned", all = TRUE)
   expect_equal(NROW(suppressWarnings(cr_journals(issn=c('blblbl', '1932-6203')))), 1)
   expect_is(suppressWarnings(cr_journals(issn=c('blblbl', '1932-6203'))), "tbl_df")
 })

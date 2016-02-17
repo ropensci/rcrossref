@@ -84,10 +84,9 @@
           meta <- parse_meta(tmp)
           dat <- rbind_all(lapply(tmp$message$items, parse_works))
         } else {
-          meta <- NULL
           dat <- if (is.null(tmp$message)) NULL else parse_journal(tmp$message)
         }
-        list(meta = meta, data = dat)
+        list(meta = NULL, data = dat)
       } else {
         fxn <- if (works) parse_works else parse_journal
         meta <- parse_meta(tmp)
@@ -160,5 +159,9 @@ parse_journal <- function(x){
              stringsAsFactors = FALSE)
 }
 
-paste_longer <- function(w) if (length(w) > 1) paste(w, collapse = ", ") else w[[1]]
+paste_longer <- function(w) {
+  w <- if (length(w) > 1) paste(w, collapse = ", ") else w[[1]]
+  if (is.null(w)) NA else w
+}
+
 names2underscore <- function(w) t(sapply(w, function(z) gsub("-", "_", z), USE.NAMES = FALSE))
