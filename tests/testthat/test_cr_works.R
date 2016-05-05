@@ -80,7 +80,7 @@ test_that("cr_works - parses links data correctly", {
   expect_is(bb, "list")
   
   expect_equal(length(Filter(Negate(is.null), aa$data$link)), 0)
-  expect_that(length(Filter(Negate(is.null), bb$data$link)), not(equals(0)))
+  expect_gt(length(Filter(Negate(is.null), bb$data$link)), 0)
   
   expect_is(bb$data$link[[1]], "data.frame")
   expect_match(bb$data$link[[1]]$URL, "http")
