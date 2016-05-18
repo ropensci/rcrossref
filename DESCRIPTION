@@ -29,5 +29,6 @@ Imports:
     R6
 Suggests:
     testthat,
-    knitr
+    knitr,
+    covr
 RoxygenNote: 5.0.1

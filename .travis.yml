@@ -1,18 +1,18 @@
 language: r
-sudo: required
+sudo: false
+cache: packages
 
-r_github_packages:
-  - jimhester/covr
+addons:
+  apt:
+    packages:
+      - poppler-utils
 
 after_success:
   - Rscript -e 'covr::codecov()'
 
-before_script:
- - sudo apt-get install poppler-utils
-
 notifications:
   email:
-    on_success: change
-    on_failure: change
+    on_success: never
+    on_failure: never
   slack:
     secure: Q8AQQdRyHJC8fcyc5vD+H25QHfi6mkU8r7tKMxPLkA5RFkHQsOoO+9eUSH6g55rUw3EyIcj7SUbxmbjH4dhh3RNeLz+OmEcUzwKK1kza0VUWOgRwytHY66oigUFwewYwn+D+bNUYhcA/iXkBtlEx/oI+C9MSP2qR+Bd9AYfc5nw=
