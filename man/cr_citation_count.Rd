@@ -2,25 +2,27 @@
 % Please edit documentation in R/cr_citation_count.r
 \name{cr_citation_count}
 \alias{cr_citation_count}
-\title{Lookup article info via CrossRef with DOI and get a citation count.}
+\title{Get a citation count via CrossRef OpenURL}
 \usage{
 cr_citation_count(doi, url = "http://www.crossref.org/openurl/",
   key = "cboettig@ropensci.org", ...)
 }
 \arguments{
-\item{doi}{digital object identifier for an article in PLoS Journals}
+\item{doi}{(character) digital object identifier for an article}
 
-\item{url}{the PLoS API url for the function (should be left to default)}
+\item{url}{(character) the url for the function (should be left to default)}
 
-\item{key}{your PLoS API key, either enter, or loads from .Rprofile}
+\item{key}{your Crossref OpenURL email address, either enter, or loads 
+from \code{.Rprofile}. We use a default, so you don't need to pass this.}
 
-\item{...}{Named parameters passed on to \code{\link[httr]{GET}}}
+\item{...}{Curl options passed on to \code{\link[httr]{GET}}}
 }
 \value{
-citation count
+single numeric value - the citation count, or NA if not found or
+no count available
 }
 \description{
-Lookup article info via CrossRef with DOI and get a citation count.
+Get a citation count via CrossRef OpenURL
 }
 \details{
 See \url{http://labs.crossref.org/openurl/} for more info on this
@@ -38,6 +40,6 @@ cr_citation_count(doi="10.1016/j.fbr.2012")
 Carl Boettiger \email{cboettig@gmail.com}
 }
 \seealso{
-\code{\link{cr_search}}, \code{\link{cr_r}}, \code{\link{cr_search_free}}
+\code{\link{cr_search}}, \code{\link{cr_r}}
 }
 
