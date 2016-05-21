@@ -260,7 +260,7 @@ getPDF <- function(url, path, auth, overwrite, type, read, verbose, cache=FALSE,
                write_disk(path = filepath, overwrite = overwrite),
                auth,
                config(followlocation = TRUE), ...)
-    warn_for_status(res)
+    httr::warn_for_status(res)
     if (res$status_code < 202) {
       filepath <- res$request$output$path
     } else {
