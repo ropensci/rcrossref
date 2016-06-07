@@ -70,7 +70,7 @@
                  cursor = cursor, cursor_max = cursor_max, ..., .progress = .progress)
     if (!is.null(cursor)) {
       out <- lapply(res, "[[", "data")
-      bind_rows(out)
+      tbl_df(bind_rows(out))
     } else {
       out <- setNames(lapply(res, "[[", "message"), dois)
       if (any(is.na(out))) {
@@ -87,7 +87,7 @@
           } else {
             tmp <- lapply(out, function(x) lapply(x$items, parse_works))
             tmp <- tmp[!sapply(tmp, length) == 0]
-            bind_rows(do.call('c', tmp))
+            tbl_df(bind_rows(do.call('c', tmp)))
           }
         } else {
           if (all(sapply(out, function(z) length(z)) == 0)) {
@@ -109,10 +109,10 @@
       } else {
         if (is.null(dois)) {
           list(meta = parse_meta(res),
-               data = bind_rows(lapply(res$message$items, parse_fundref)))
+               data = tbl_df(bind_rows(lapply(res$message$items, parse_fundref))))
         } else {
           if (works) {
-            wout <- bind_rows(lapply(res$message$items, parse_works))
+            wout <- tbl_df(bind_rows(lapply(res$message$items, parse_works)))
             meta <- parse_meta(res)
           } else {
             wout <- parse_fund(res$message)

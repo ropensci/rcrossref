@@ -88,7 +88,7 @@
                  cursor_max = cursor_max, .progress = .progress, ...)
     res <- lapply(res, "[[", "message")
     res <- lapply(res, parse_works)
-    df <- bind_rows(res)
+    df <- tbl_df(bind_rows(res))
     #exclude rows with empty DOI value until CrossRef API supports input validation
     if (nrow(df[df$DOI == "", ]) > 0)
      warning("only data with valid CrossRef DOIs returned",  call. = FALSE)
@@ -103,7 +103,7 @@
       } else {
         meta <- parse_meta(tmp)
         list(meta = meta,
-             data = bind_rows(lapply(tmp$message$items, parse_works)),
+             data = tbl_df(bind_rows(lapply(tmp$message$items, parse_works))),
              facets = parse_facets(tmp$message$facets))
       }
     } else {
@@ -260,7 +260,7 @@ parse_todf <- function(x){
   if (is.null(x)) {
     NULL
   } else {
-    bind_rows(lapply(x, function(w) {
+    tbl_df(bind_rows(lapply(x, function(w) {
       if ("list" %in% vapply(w, class, "")) {
         w <- unlist(w, recursive = FALSE)
         if ("list" %in% vapply(w, class, "")) {
@@ -269,7 +269,7 @@ parse_todf <- function(x){
       }
       w[sapply(w, function(b) length(b) == 0)] <- NULL
       data.frame(w, stringsAsFactors = FALSE)
-    }))
+    })))
   }
 }
 
