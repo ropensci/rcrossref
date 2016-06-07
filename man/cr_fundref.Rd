@@ -63,7 +63,7 @@ etc.)}
 
 \item{...}{Named parameters passed on to \code{\link[httr]{GET}}}
 
-\item{parse}{(logical) Whether to output json \code{FALSE} or parse to 
+\item{parse}{(logical) Whether to output json \code{FALSE} or parse to
 list \code{TRUE}. Default: \code{FALSE}}
 }
 \description{
@@ -76,8 +76,8 @@ This function name changing to \code{cr_funders} in the next version - both work
 }
 \section{NOTE}{
 
-Funders without IDs don't show up on the /funders route, and in this 
-function. Some funders don't have assigned IDs in Crossref's system, 
+Funders without IDs don't show up on the /funders route, and in this
+function. Some funders don't have assigned IDs in Crossref's system,
 so won't show up in searches.
 }
 \examples{
@@ -108,15 +108,15 @@ cr_funders(dois=c("10.13039/100000001","asfasf"), works=TRUE)
 # Use the cursor for deep paging
 cr_funders('100000001', works = TRUE, cursor = "*", cursor_max = 500, limit = 100)
 cr_funders(c('100000001', '100000002'), works = TRUE, cursor = "*",
-   cursor_max = 300, limit = 100) 
-   
+   cursor_max = 300, limit = 100)
+
 # Low level function - does no parsing to data.frame, get json or a list
 cr_funders_(query = 'nsf')
 cr_funders_('10.13039/100000001')
 cr_funders_(query = 'science', parse=TRUE)
-cr_funders_('10.13039/100000001', works = TRUE, cursor = "*", 
+cr_funders_('10.13039/100000001', works = TRUE, cursor = "*",
    cursor_max = 300, limit = 100)
-cr_funders_('10.13039/100000001', works = TRUE, cursor = "*", 
+cr_funders_('10.13039/100000001', works = TRUE, cursor = "*",
    cursor_max = 300, limit = 100, parse = TRUE)
 }
 }

@@ -55,21 +55,21 @@ etc.)}
 
 \item{...}{Named parameters passed on to \code{\link[httr]{GET}}}
 
-\item{parse}{(logical) Whether to output json \code{FALSE} or parse to 
+\item{parse}{(logical) Whether to output json \code{FALSE} or parse to
 list \code{TRUE}. Default: \code{FALSE}}
 }
 \description{
 Search CrossRef works (articles)
 }
 \section{Beware}{
- 
+
 The API will only work for CrossRef DOIs.
 }
 
 \section{Functions}{
 
 \itemize{
- \item \code{cr_works()} - Does data request and parses to data.frame for 
+ \item \code{cr_works()} - Does data request and parses to data.frame for
  easy downstream consumption
  \item \code{cr_works_()} - Does data request, and gives back json (default) or lists,
  with no attempt to parse to data.frame's
@@ -87,7 +87,7 @@ cr_works(query="renear+-ontologies")
 cr_works(query="global state", filter=c(has_orcid=TRUE), limit=3)
 # Filter by multiple fields
 cr_works(filter=c(has_orcid=TRUE, from_pub_date='2004-04-04'))
-# Only full text articles 
+# Only full text articles
 cr_works(filter=c(has_full_text = TRUE))
 # has affilitation data
 cr_works(filter=c(has_affiliation = TRUE))

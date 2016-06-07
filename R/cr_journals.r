@@ -66,7 +66,7 @@
       # remove NULLs
       res <- cr_compact(res)
       res <- lapply(res, parse_works)
-      df <- rbind_all(res)
+      df <- bind_rows(res)
       #exclude rows with empty ISSN value until CrossRef API supports input validation
       if (nrow(df[df$ISSN == "", ]) > 0) {
         warning("only data with valid ISSN returned",  call. = FALSE)
@@ -82,7 +82,7 @@
       if (!is.null(issn)) {
         if (works) {
           meta <- parse_meta(tmp)
-          dat <- rbind_all(lapply(tmp$message$items, parse_works))
+          dat <- bind_rows(lapply(tmp$message$items, parse_works))
         } else {
           dat <- if (is.null(tmp$message)) NULL else parse_journal(tmp$message)
         }
@@ -90,7 +90,7 @@
       } else {
         fxn <- if (works) parse_works else parse_journal
         meta <- parse_meta(tmp)
-        list(meta = meta, data = rbind_all(lapply(tmp$message$items, fxn)))
+        list(meta = meta, data = bind_rows(lapply(tmp$message$items, fxn)))
       }
     }
   }

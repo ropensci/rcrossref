@@ -57,7 +57,7 @@ etc.)}
 
 \item{...}{Named parameters passed on to \code{\link[httr]{GET}}}
 
-\item{parse}{(logical) Whether to output json \code{FALSE} or parse to 
+\item{parse}{(logical) Whether to output json \code{FALSE} or parse to
 list \code{TRUE}. Default: \code{FALSE}}
 }
 \description{
@@ -82,7 +82,7 @@ cr_types(c('monograph', 'book-set'), works=TRUE, facet=TRUE)
 cr_types("journal-article", works = TRUE, cursor = "*", cursor_max = 500, limit = 100)
 cr_types(c('monograph', 'book-set'), works = TRUE, cursor = "*",
    cursor_max = 300, limit = 100)
-   
+
 # query doesn't work unless using works=TRUE
 ### you get results, but query param is silently dropped
 cr_types(query = "ecology")
@@ -93,9 +93,9 @@ cr_types(c('monograph', 'book-set'), works=TRUE, .progress='text')
 # Low level function - does no parsing to data.frame, get json or a list
 cr_types_('monograph')
 cr_types_('monograph', parse = TRUE)
-cr_types_("journal-article", works = TRUE, cursor = "*", 
+cr_types_("journal-article", works = TRUE, cursor = "*",
    cursor_max = 300, limit = 100)
-cr_types_("journal-article", works = TRUE, cursor = "*", 
+cr_types_("journal-article", works = TRUE, cursor = "*",
    cursor_max = 300, limit = 100, parse = TRUE)
 }
 }

@@ -58,7 +58,7 @@ etc.)}
 
 \item{...}{Named parameters passed on to \code{\link[httr]{GET}}}
 
-\item{parse}{(logical) Whether to output json \code{FALSE} or parse to 
+\item{parse}{(logical) Whether to output json \code{FALSE} or parse to
 list \code{TRUE}. Default: \code{FALSE}}
 }
 \description{
@@ -99,9 +99,9 @@ cr_members(member_ids=c(10, 98, 45), works = TRUE, cursor = "*", cursor_max = 20
 cr_members_(query = 'hindawi')
 cr_members_(member_ids = 98)
 cr_members_(query = 'hindawi', parse=TRUE)
-cr_members_(member_ids = 98, works = TRUE, cursor = "*", 
+cr_members_(member_ids = 98, works = TRUE, cursor = "*",
    cursor_max = 300, limit = 100)
-cr_members_(member_ids = 98, works = TRUE, cursor = "*", 
+cr_members_(member_ids = 98, works = TRUE, cursor = "*",
    cursor_max = 300, limit = 100, parse=TRUE)
 }
 }
