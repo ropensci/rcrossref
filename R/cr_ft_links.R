@@ -43,12 +43,22 @@
 #' # (most likely) No links
 #' cr_ft_links(cr_r(1))
 #' cr_ft_links(doi="10.3389/fnagi.2014.00130")
+#' 
+#' # DOIs that don't have full text URLs in Crossref
+#' doi <- '10.3386/w17454'
+#' cr_ft_links(doi)
 #' }
 
 cr_ft_links <- function(doi, type='xml', ...) {
   res <- cr_works_links(dois = doi, ...)[[1]]
   if (is.null(unlist(res$links))) {
-    NULL 
+    res <- Crosswalk$new(doi = doi)
+    res$make_url()
+    if (inherits(res$url, "character") && res$included) {
+      return(res$url)
+    } else {
+      return(NULL)
+    }
   } else {  
     elife <- if (grepl("elife", res$links[[1]]$URL)) TRUE else FALSE
     withtype <- if (type == 'all') res$links else Filter(function(x) grepl(type, x$`content-type`), res$links)
