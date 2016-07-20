@@ -206,7 +206,8 @@ cr_auth <- function(url, type) {
     switch(mem_num,
         `78` = {
           key <- Sys.getenv("CROSSREF_TDM_ELSEVIER")
-          add_headers(`X-ELS-APIKey` = key, Accept = type)
+          #add_headers(`X-ELS-APIKey` = key, Accept = type)
+          add_headers(`CR-Clickthrough-Client-Token` = key, Accept = type)
         },
         `263` = {
           key <- Sys.getenv("CROSSREF_TDM")
