@@ -1,3 +1,12 @@
+rcrossref 0.5.4
+===============
+
+### MINOR IMPROVEMENTS
+
+* Improved documentation for `cr_citation_count()` to remove PLOS
+reference as the function isn't only for PLOS works (#108)
+* Changed use of `dplyr::rbind_all()` to `dplyr::bind_rows()` (#113)
+
 rcrossref 0.5.2
 ===============
 
