@@ -18,6 +18,6 @@
 
 `cr_r` <- function(sample = 10, ...) {
   tmp <- cr_works(sample = sample, ...)
-  dois <- tryCatch(tmp$data$DOI, error = function(e) e)
+  dois <- suppressWarnings(tryCatch(tmp$data$DOI, error = function(e) e))
   if (inherits(dois, "error")) NULL else dois
 }
