@@ -5,7 +5,7 @@ Description: Client for various 'CrossRef' 'APIs', including 'metadata' search
     (including 'bibtex', 'citeproc-json', 'rdf-xml', etc.), convert 'DOIs'
     to 'PMIDs', and 'vice versa', get citations for 'DOIs', and get links to
     full text of articles when available.
-Version: 0.5.2.9910
+Version: 0.5.3.9991
 License: MIT + file LICENSE
 Authors@R: c(
     person("Scott", "Chamberlain", role = c("aut", "cre"), email = "myrmecocystus@gmail.com"),
@@ -25,7 +25,7 @@ Imports:
     xml2,
     plyr,
     bibtex,
-    dplyr,
+    dplyr (>= 0.5.0),
     R6
 Suggests:
     testthat,
