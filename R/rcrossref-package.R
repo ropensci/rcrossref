@@ -50,6 +50,9 @@
 #' write_disk accept http_status parse_url add_headers config user_agent
 #' @importFrom jsonlite toJSON fromJSON
 #' @importFrom plyr rbind.fill llply ldply
+#' @importFrom shiny h4 fillRow htmlOutput renderUI textInput actionButton req
+#' HTML observeEvent updateTextInput stopApp dialogViewer runGadget uiOutput
+#' @importFrom miniUI miniPage gadgetTitleBar miniContentPanel
 #' @name rcrossref-package
 #' @aliases rcrossref
 #' @docType package

@@ -1,0 +1,4 @@
+Name: Add Crossref Citations
+Description: Add a new bibliography entry through Crossref DOI
+Binding: crAddins
+Interactive: true
