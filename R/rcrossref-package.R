@@ -53,6 +53,7 @@
 #' @importFrom shiny h4 fillRow htmlOutput renderUI textInput actionButton req
 #' HTML observeEvent updateTextInput stopApp dialogViewer runGadget uiOutput
 #' @importFrom miniUI miniPage gadgetTitleBar miniContentPanel
+#' @importFrom stringr str_detect str_match
 #' @name rcrossref-package
 #' @aliases rcrossref
 #' @docType package

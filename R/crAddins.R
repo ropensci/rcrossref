@@ -22,6 +22,7 @@ crAddins <- function() {
     })
     
     preview_message <- reactiveValues(added = 0, error = 0)
+    
     output$preview <- function(){
       if(is.null(input$entered_dois))return(NULL)
       if(input$entered_dois == "" & preview_message$added == 1){return(
@@ -58,11 +59,47 @@ crAddins <- function() {
       }
     }
     
+    parsename <- function(name, isRegx = TRUE){
+      if(isRegx){
+        paste0("\\n\\t", name)
+      }else{
+        paste0("\n\t", name)
+      }
+    } 
+    
+    extract_bib <- function(bib, name, regex){
+      regex_full <- paste0(
+        parsename(name), "\\s=\\s", regex
+      )
+      out <- str_match(bib, regex_full)
+      return(out[2])
+    }
+    
+    correct_bib <- function(bib){
+      out <- bib
+      if(!str_detect(bib, parsename("author"))){
+        title <- "Untitle"
+        if(str_detect(bib, parsename("title"))){
+          title <- extract_bib(bib, "title", "[^\\w]*(\\w*)")
+        }
+        original <- paste0("\\{.*,", parsename("doi"))
+        if(str_detect(bib, parsename("year"))){
+          year <- extract_bib(bib, "year", "(\\d*)")
+          new <- paste0("\\{", title, "_", year, ",", parsename("doi", F))
+        }else{
+          new <- paste0("\\{", title, ",", parsename("doi", F))
+        }
+        out <- sub(original, new, bib)
+      }
+      return(out)
+    }
+    
     observeEvent(input$add_citations, {
       bib_to_write <- suppressWarnings(try(cr_cn(dois = input$entered_dois),
                                            silent = TRUE))
       if(class(bib_to_write) != "try-error"){
         if(!"crossref.bib" %in% list.files()){file.create("crossref.bib")}
+        bib_to_write <- correct_bib(bib_to_write)
         write(paste0(bib_to_write, "\n"), "crossref.bib", append = T)
         updateTextInput(session, "entered_dois", value = "")
         preview_message$added <- 1

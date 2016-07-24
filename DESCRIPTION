@@ -28,9 +28,10 @@ Imports:
     dplyr (>= 0.5.0),
     R6,
     shiny,
-    miniUI
+    miniUI,
+    stringr
 Suggests:
     testthat,
     knitr,
     covr
-RoxygenNote: 5.0.1.9000
+RoxygenNote: 5.0.1
