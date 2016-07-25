@@ -52,6 +52,7 @@
 #' @importFrom plyr rbind.fill llply ldply
 #' @importFrom shiny h4 fillRow htmlOutput renderUI textInput actionButton req
 #' HTML observeEvent updateTextInput stopApp dialogViewer runGadget uiOutput
+#' reactiveValues
 #' @importFrom miniUI miniPage gadgetTitleBar miniContentPanel
 #' @importFrom stringr str_detect str_match
 #' @name rcrossref-package
