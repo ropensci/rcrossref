@@ -98,7 +98,7 @@
     tmp <- cr_get_cursor(dois, args = args, cursor = cursor,
                          cursor_max = cursor_max, ...)
     if (is.null(dois)) {
-      if (!is.null(cursor)) {
+      if (!is.null(cursor) || is.null(tmp$message)) {
         tmp
       } else {
         meta <- parse_meta(tmp)
