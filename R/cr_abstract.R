@@ -3,7 +3,7 @@
 #' @export
 #' @param doi (character) a DOI, required.
 #' @param ... Named parameters passed on to \code{\link[httr]{GET}}
-#' @examples
+#' @examples \dontrun{
 #' # abstract found
 #' cr_abstract(doi = '10.1109/TASC.2010.2088091')
 #' 
@@ -15,9 +15,8 @@
 #' cr_abstract(doi = '10.1371/journal.pone.0033693')
 #' cr_abstract(doi = '10.1007/12080.1874-1746')
 #' 
-#' dois <- cr_r(100)
-#' cr_abstract(dois[1])
-#' res <- lapply(dois, cr_abstract)
+#' cr_abstract(cr_r(1))
+#' }
 cr_abstract <- function(doi, ...) {
   url <- paste0('http://api.crossref.org/works/', doi, '.xml')
   res <- GET(url, make_rcrossref_ua(), config(followlocation = 1), ...)

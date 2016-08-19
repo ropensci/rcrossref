@@ -15,6 +15,7 @@ cr_abstract(doi, ...)
 Get abstract
 }
 \examples{
+\dontrun{
 # abstract found
 cr_abstract(doi = '10.1109/TASC.2010.2088091')
 
@@ -26,8 +27,7 @@ cr_abstract(doi = '10.1126/science.169.3946.635')
 cr_abstract(doi = '10.1371/journal.pone.0033693')
 cr_abstract(doi = '10.1007/12080.1874-1746')
 
-dois <- cr_r(100)
-cr_abstract(dois[1])
-res <- lapply(dois, cr_abstract)
+cr_abstract(cr_r(1))
+}
 }
 

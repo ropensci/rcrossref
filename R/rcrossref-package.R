@@ -44,7 +44,7 @@
 #' @importFrom stats setNames
 #' @importFrom dplyr bind_rows tbl_df
 #' @importFrom R6 R6Class
-#' @importFrom xml2 read_xml xml_attr xml_find_all
+#' @importFrom xml2 read_xml xml_attr xml_find_all xml_find_first xml_text
 #' @importFrom bibtex read.bib
 #' @importFrom httr GET POST stop_for_status content_type_json accept_json content
 #' write_disk accept http_status parse_url add_headers config user_agent
