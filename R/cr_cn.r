@@ -91,6 +91,11 @@
 #' 
 #' # Get raw output
 #' cr_cn(dois = "10.1002/app.27716", format = "citeproc-json", raw = TRUE)
+#' 
+#' # sometimes messy DOIs even work
+#' ## in this case, a DOI minting agency can't be found
+#' ## but we proceed anyway, just assuming it's "crossref"
+#' cr_cn("10.1890/0012-9615(1999)069[0569:EDILSA]2.0.CO;2")
 #' }
 
 `cr_cn` <- function(dois, format = "bibtex", style = 'apa', 
@@ -104,9 +109,12 @@
   cn <- function(doi, ...){
     agency_id <- suppressWarnings(GET_agency_id(doi))
     if (is.null(agency_id)) {
-      stop(doi, " not found", call. = FALSE)
+      warning(doi, " agency not found - proceeding with 'crossref' ...", call. = FALSE)
+      agency_id <- "crossref"
     }
+    
     url <- paste0("http://data.", agency_id, ".org/", doi)
+    
     # check cn data provider
     if (!format %in% supported_cn_types[[agency_id]]) {
       stop(paste0("Format '", format, "' for '", doi, 
@@ -213,7 +221,14 @@ warn_status <- function(x) {
     } else {
       mssg <- paste(sprintf("(%s)", x$status_code), "-", mssg)
     }
-    warning(sprintf("%s w/ %s", gsub("%2F", "/", httr::parse_url(x$url)$path), mssg))
+    warning(
+      sprintf(
+        "%s w/ %s", 
+        gsub("%2F", "/", httr::parse_url(x$url)$path), 
+        mssg
+      ),
+      call. = FALSE
+    )
   }
 }
 

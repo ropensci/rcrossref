@@ -32,6 +32,20 @@ test_that("cr_cn fails correctly", {
   expect_error(cr_cn(dois="10.1126/science.169.3946.635", config=timeout(0.01)))
 })
 
+test_that("DOIs with no agency found still work, at least some do", {
+  # throws warning
+  expect_warning(
+    cr_cn("10.1890/0012-9615(1999)069[0569:EDILSA]2.0.CO;2"),
+    "agency not found - proceeding with 'crossref'"
+  )
+  
+  # but it is successful
+  expect_is(
+    suppressWarnings(cr_cn("10.1890/0012-9615(1999)069[0569:EDILSA]2.0.CO;2")),
+    "character"
+  )
+})
+
 test_that("cr_cn checks if doi agency supports format", {
   skip_on_cran()
   
