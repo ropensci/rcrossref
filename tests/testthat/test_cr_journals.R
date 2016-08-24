@@ -32,10 +32,10 @@ test_that("cr_journals fails correctly", {
 test_that("cr_journals warns correctly", {
   skip_on_cran()
   
-  expect_warning(cr_journals(issn=c('blblbl', '1932-6203')), 
-                 regexp = "only data with valid ISSN returned", all = TRUE)
-  expect_equal(NROW(suppressWarnings(cr_journals(issn=c('blblbl', '1932-6203')))), 1)
-  expect_is(suppressWarnings(cr_journals(issn=c('blblbl', '1932-6203'))), "tbl_df")
+  expect_warning(cr_journals(issn = c('blblbl', '1932-6203')), 
+                 regexp = "Resource not found", all = TRUE)
+  expect_equal(NROW(suppressWarnings(cr_journals(issn = c('blblbl', '1932-6203')))), 1)
+  expect_is(suppressWarnings(cr_journals(issn = c('blblbl', '1932-6203'))), "tbl_df")
 })
 
 test_that("ISSNs that used to fail badly - should fail better now", {

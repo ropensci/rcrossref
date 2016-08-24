@@ -147,11 +147,12 @@ journal_GET_ <- function(x, args, works, cursor = NULL, cursor_max = NULL, parse
   }
 }
 
-parse_journal <- function(x){
+parse_journal <- function(x) {
   if (!is.null(x$flags)) names(x$flags) <- names2underscore(names(x$flags)) else x$flags <- NA
   if (!is.null(x$coverage)) names(x$coverage) <- names2underscore(names(x$coverage)) else x$coverage <- NA
   if (!is.null(x$counts)) names(x$counts) <- names2underscore(names(x$counts)) else x$counts <- NA
-  data.frame(title = x$title, publisher = x$publisher, issn = paste_longer(x$ISSN[[1]]),
+  issn <- if (length(x$ISSN) == 0) NULL else x$ISSN[[1]]
+  data.frame(title = x$title, publisher = x$publisher, issn = paste_longer(issn),
              last_status_check_time = convtime(x$`last-status-check-time`),
              x$flags,
              x$coverage,

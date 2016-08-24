@@ -102,9 +102,9 @@
                                 "crossref-tdm", "onix-xml"))
 
   cn <- function(doi, ...){
-    agency_id <- GET_agency_id(doi)
-    if (is.na(agency_id)) {
-      stop("no resource location found", doi, message, call. = FALSE)
+    agency_id <- suppressWarnings(GET_agency_id(doi))
+    if (is.null(agency_id)) {
+      stop(doi, " not found", call. = FALSE)
     }
     url <- paste0("http://data.", agency_id, ".org/", doi)
     # check cn data provider
@@ -180,7 +180,10 @@
     llply(dois, function(z, ...) {
       out = try(cn(z, ...), silent = TRUE)
       if ("try-error" %in% class(out)) {
-        warning(paste0("Failure in resolving '", z, "'. See error detail in results."))
+        warning(
+          paste0("Failure in resolving '", z, "'. See error detail in results."), 
+          call. = FALSE
+        )
         out <- list(doi = z, error = out[[1]])
       }
       return(out)
