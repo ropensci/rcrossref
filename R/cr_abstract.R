@@ -8,14 +8,14 @@
 #' cr_abstract(doi = '10.1109/TASC.2010.2088091')
 #' 
 #' # doi not found
-#' cr_abstract(doi = '10.5284/1011335')
+#' # cr_abstract(doi = '10.5284/1011335')
 #' 
 #' # abstract not found, throws warning
-#' cr_abstract(doi = '10.1126/science.169.3946.635')
-#' cr_abstract(doi = '10.1371/journal.pone.0033693')
-#' cr_abstract(doi = '10.1007/12080.1874-1746')
+#' # cr_abstract(doi = '10.1126/science.169.3946.635')
+#' # cr_abstract(doi = '10.1371/journal.pone.0033693')
+#' # cr_abstract(doi = '10.1007/12080.1874-1746')
 #' 
-#' cr_abstract(cr_r(1))
+#' # cr_abstract(cr_r(1))
 #' }
 cr_abstract <- function(doi, ...) {
   url <- paste0('http://api.crossref.org/works/', doi, '.xml')

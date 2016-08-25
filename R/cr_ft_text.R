@@ -73,28 +73,30 @@
 #' ### you can see available licenses with cr_licenses() function
 #' out <-
 #'  cr_works(filter = list(has_full_text = TRUE,
-#'    license_url="http://creativecommons.org/licenses/by/3.0/"))
-#' (links <- cr_ft_links(out$data$DOI[10], "all"))
-#' cr_ft_text(links, 'xml')
+#'    license_url="http://creativecommons.org/licenses/by/3.0/"), 
+#'    limit = 100)
+#' (links <- cr_ft_links(out$data$DOI[40], "all"))
+#' # cr_ft_text(links, 'xml')
 #'
 #' ## You can use cr_ft_xml, cr_ft_plain, and cr_ft_pdf to go directly to 
 #' ## that format
 #' licenseurl <- "http://creativecommons.org/licenses/by/3.0/"
 #' out <- cr_works(
-#'   filter = list(has_full_text = TRUE, license_url = licenseurl))
-#' (links <- cr_ft_links(out$data$DOI[10], "all"))
+#'   filter = list(has_full_text = TRUE, license_url = licenseurl), 
+#'   limit = 100)
+#' (links <- cr_ft_links(out$data$DOI[50], "all"))
 #' cr_ft_xml(links)
-#' cr_ft_pdf(links)
+#' #cr_ft_pdf(links)
 #'
-#' # Caching, for PDFs
-#' out <- cr_members(2258, filter=c(has_full_text = TRUE), works = TRUE)
-#' (links <- cr_ft_links(out$data$DOI[10], "all"))
-#' cr_ft_text(links, type = "pdf", cache=FALSE)
-#' system.time( cacheyes <- cr_ft_text(links, type = "pdf", cache=TRUE) )
-#' # second time should be faster
-#' system.time( cacheyes <- cr_ft_text(links, type = "pdf", cache=TRUE) )
-#' system.time( cacheno <- cr_ft_text(links, type = "pdf", cache=FALSE) )
-#' identical(cacheyes, cacheno)
+#' ### Caching, for PDFs
+#' # out <- cr_members(2258, filter=c(has_full_text = TRUE), works = TRUE)
+#' # (links <- cr_ft_links(out$data$DOI[10], "all"))
+#' # cr_ft_text(links, type = "pdf", cache=FALSE)
+#' # system.time( cacheyes <- cr_ft_text(links, type = "pdf", cache=TRUE) )
+#' ### second time should be faster
+#' # system.time( cacheyes <- cr_ft_text(links, type = "pdf", cache=TRUE) )
+#' # system.time( cacheno <- cr_ft_text(links, type = "pdf", cache=FALSE) )
+#' # identical(cacheyes, cacheno)
 #'
 #' ## elsevier
 #' ## requires extra authentication
@@ -178,6 +180,9 @@ get_url <- function(a, b){
 #' @rdname cr_ft_text
 cr_ft_plain <- function(url, path = "~/.crossref", overwrite = TRUE, read=TRUE, 
                         verbose=TRUE, ...) {
+  if (is.null(url$plain[[1]])) {
+    stop("no plain text link found", call. = FALSE)
+  }
   getTEXT(url$plain[[1]], "plain", cr_auth(url, 'plain'), ...)
 }
 
@@ -185,6 +190,9 @@ cr_ft_plain <- function(url, path = "~/.crossref", overwrite = TRUE, read=TRUE,
 #' @rdname cr_ft_text
 cr_ft_xml <- function(url, path = "~/.crossref", overwrite = TRUE, read=TRUE, 
                       verbose=TRUE, ...) {
+  if (is.null(url$xml[[1]])) {
+    stop("no xml link found", call. = FALSE)
+  }
   getTEXT(url$xml[[1]], "xml", cr_auth(url, 'xml'), ...)
 }
 
@@ -192,6 +200,9 @@ cr_ft_xml <- function(url, path = "~/.crossref", overwrite = TRUE, read=TRUE,
 #' @rdname cr_ft_text
 cr_ft_pdf <- function(url, path = "~/.crossref", overwrite = TRUE, read=TRUE, 
                       cache=FALSE, verbose=TRUE, ...) {
+  if (is.null(url$pdf[[1]])) {
+    stop("no pdf link found", call. = FALSE)
+  }
   getPDF(url$pdf[[1]], path, cr_auth(url, 'pdf'), overwrite, "pdf", 
          read, verbose, cache, ...)
 }

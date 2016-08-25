@@ -106,28 +106,30 @@ cr_ft_text(links, "pdf")
 ### you can see available licenses with cr_licenses() function
 out <-
  cr_works(filter = list(has_full_text = TRUE,
-   license_url="http://creativecommons.org/licenses/by/3.0/"))
-(links <- cr_ft_links(out$data$DOI[10], "all"))
-cr_ft_text(links, 'xml')
+   license_url="http://creativecommons.org/licenses/by/3.0/"), 
+   limit = 100)
+(links <- cr_ft_links(out$data$DOI[40], "all"))
+# cr_ft_text(links, 'xml')
 
 ## You can use cr_ft_xml, cr_ft_plain, and cr_ft_pdf to go directly to 
 ## that format
 licenseurl <- "http://creativecommons.org/licenses/by/3.0/"
 out <- cr_works(
-  filter = list(has_full_text = TRUE, license_url = licenseurl))
-(links <- cr_ft_links(out$data$DOI[10], "all"))
+  filter = list(has_full_text = TRUE, license_url = licenseurl), 
+  limit = 100)
+(links <- cr_ft_links(out$data$DOI[50], "all"))
 cr_ft_xml(links)
-cr_ft_pdf(links)
+#cr_ft_pdf(links)
 
-# Caching, for PDFs
-out <- cr_members(2258, filter=c(has_full_text = TRUE), works = TRUE)
-(links <- cr_ft_links(out$data$DOI[10], "all"))
-cr_ft_text(links, type = "pdf", cache=FALSE)
-system.time( cacheyes <- cr_ft_text(links, type = "pdf", cache=TRUE) )
-# second time should be faster
-system.time( cacheyes <- cr_ft_text(links, type = "pdf", cache=TRUE) )
-system.time( cacheno <- cr_ft_text(links, type = "pdf", cache=FALSE) )
-identical(cacheyes, cacheno)
+### Caching, for PDFs
+# out <- cr_members(2258, filter=c(has_full_text = TRUE), works = TRUE)
+# (links <- cr_ft_links(out$data$DOI[10], "all"))
+# cr_ft_text(links, type = "pdf", cache=FALSE)
+# system.time( cacheyes <- cr_ft_text(links, type = "pdf", cache=TRUE) )
+### second time should be faster
+# system.time( cacheyes <- cr_ft_text(links, type = "pdf", cache=TRUE) )
+# system.time( cacheno <- cr_ft_text(links, type = "pdf", cache=FALSE) )
+# identical(cacheyes, cacheno)
 
 ## elsevier
 ## requires extra authentication

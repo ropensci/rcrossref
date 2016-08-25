@@ -21,8 +21,8 @@ found no problems related to this new version.
 
 -------
 
-This submission includes a few minor changes: improve documentation
-and use new function for one of the package imports.
+This submission includes a new function, an RStudio Addin, and
+a number of bug fixes.
 
 Thanks!
 Scott Chamberlain
