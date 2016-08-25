@@ -22,7 +22,8 @@
   args <- list(tool = "my_tool", email = "my_email@example.com", 
                ids = x, idtype = type, format = "json")
   res <- GET(idcon_base(), query = args, ...)
-  if (res$status_code > 201) stop(jsonlite::fromJSON(ct_utf8(res))$message, call. = FALSE)
+  if (res$status_code > 201) stop(jsonlite::fromJSON(ct_utf8(res))$message, 
+                                  call. = FALSE)
   jsonlite::fromJSON(ct_utf8(res))
 }
 

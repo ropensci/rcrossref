@@ -8,12 +8,14 @@ These functions still work but will be removed (defunct) in the next version.
 }
 \details{
 \itemize{
- \item \code{\link{cr_search}}: The functionality of this function can be achieved with
- the new Crossref API. See functions \code{\link{cr_works}} et al.
- \item \code{\link{cr_search_free}}: The functionality of this function can be achieved with
- the new Crossref API. See functions \code{\link{cr_works}} et al.
- \item \code{\link{crosscite}}: The functionality of this function can be achieved with
- \code{\link{cr_cn}}
+ \item \code{\link{cr_search}}: The functionality of this function can 
+ be achieved with the new Crossref API. See functions \code{\link{cr_works}} 
+ et al.
+ \item \code{\link{cr_search_free}}: The functionality of this function can 
+ be achieved with the new Crossref API. See functions \code{\link{cr_works}} 
+ et al.
+ \item \code{\link{crosscite}}: The functionality of this function can be 
+ achieved with \code{\link{cr_cn}}
 }
 }
 

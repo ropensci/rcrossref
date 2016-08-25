@@ -16,7 +16,8 @@ cr_prefixes_(prefixes, query = NULL, filter = NULL, offset = NULL,
   .progress = "none", parse = FALSE, ...)
 }
 \arguments{
-\item{prefixes}{(character) Publisher prefixes, one or more in a vector or list. Required.}
+\item{prefixes}{(character) Publisher prefixes, one or more in a vector or 
+list. Required.}
 
 \item{query}{Query terms}
 
@@ -66,19 +67,21 @@ Search CrossRef prefixes
 \details{
 BEWARE: The API will only work for CrossRef DOIs.
 
-Note that any one publisher can have more than one DOI. If you want to search on
-all DOIs for a publisher, pass in all DOIs, or see \code{\link{cr_members}}, and pass in the
-\code{member_ids} parameter.
+Note that any one publisher can have more than one DOI. If you want to 
+search on all DOIs for a publisher, pass in all DOIs, or see 
+\code{\link{cr_members}}, and pass in the \code{member_ids} parameter.
 
 Notes from CrossRef (quoting them):
 
-The prefix of a CrossRef DOI does NOT indicate who currently owns the DOI. It only
-reflects who originally registered the DOI. CrossRef metadata has an \code{owner_prefix}
-element that records the current owner of the CrossRef DOI in question.
+The prefix of a CrossRef DOI does NOT indicate who currently owns the DOI. 
+It only reflects who originally registered the DOI. CrossRef metadata has 
+an \code{owner_prefix} element that records the current owner of the 
+CrossRef DOI in question.
 
-CrossRef also has member IDs for depositing organisations. A single member may control multiple
-owner prefixes, which in turn may control a number of DOIs. When looking at works published by
-a certain organisaton, member IDs and the member routes should be used.
+CrossRef also has member IDs for depositing organisations. A single member 
+may control multiple owner prefixes, which in turn may control a number of 
+DOIs. When looking at works published by a certain organisaton, member 
+IDs and the member routes should be used.
 }
 \examples{
 \dontrun{
@@ -98,7 +101,8 @@ cr_prefixes(prefixes="10.1016", works=TRUE, facet=TRUE)
 cr_prefixes(prefixes=c('10.1016','10.1371'), works=TRUE, facet=TRUE)
 
 # Use the cursor for deep paging
-cr_prefixes("10.1016", works = TRUE, cursor = "*", cursor_max = 500, limit = 100)
+cr_prefixes("10.1016", works = TRUE, cursor = "*", cursor_max = 500, 
+   limit = 100)
 cr_prefixes(c('10.1016', '10.1371'), works = TRUE, cursor = "*",
    cursor_max = 300, limit = 100)
 
@@ -106,7 +110,8 @@ cr_prefixes(c('10.1016', '10.1371'), works = TRUE, cursor = "*",
 cr_prefixes_("10.1016")
 cr_prefixes_(c('10.1016', '10.1371'))
 cr_prefixes_("10.1016", works = TRUE, query = 'ecology', limit = 10)
-cr_prefixes_("10.1016", works = TRUE, query = 'ecology', parse=TRUE, limit = 10)
+cr_prefixes_("10.1016", works = TRUE, query = 'ecology', parse=TRUE, 
+   limit = 10)
 cr_prefixes_("10.1016", works = TRUE, cursor = "*",
    cursor_max = 300, limit = 100)
 cr_prefixes_("10.1016", works = TRUE, cursor = "*",

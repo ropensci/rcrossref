@@ -72,7 +72,8 @@ Search the CrossRef Fundref API
 \details{
 BEWARE: The API will only work for CrossRef DOIs.
 
-This function name changing to \code{cr_funders} in the next version - both work for now
+This function name changing to \code{cr_funders} in the next version - 
+both work for now
 }
 \section{NOTE}{
 
@@ -106,7 +107,8 @@ cr_funders(dois=c("10.13039/100000001","asfasf"))
 cr_funders(dois=c("10.13039/100000001","asfasf"), works=TRUE)
 
 # Use the cursor for deep paging
-cr_funders('100000001', works = TRUE, cursor = "*", cursor_max = 500, limit = 100)
+cr_funders('100000001', works = TRUE, cursor = "*", cursor_max = 500, 
+   limit = 100)
 cr_funders(c('100000001', '100000002'), works = TRUE, cursor = "*",
    cursor_max = 300, limit = 100)
 

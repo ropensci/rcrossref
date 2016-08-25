@@ -20,7 +20,8 @@ Download xpdf from \url{http://www.foolabs.com/xpdf/download.html}
 }
 \examples{
 \dontrun{
-path <- system.file("examples", "MairChamberlain2014RJournal.pdf", package = "rcrossref")
+path <- system.file("examples", "MairChamberlain2014RJournal.pdf", 
+   package = "rcrossref")
 (res_xpdf <- extract_xpdf(path))
 res_xpdf$meta
 res_xpdf$data

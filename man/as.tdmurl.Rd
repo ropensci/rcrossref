@@ -24,8 +24,10 @@ Coerce a url to a tdmurl with a specific type
 }
 \examples{
 \dontrun{
-as.tdmurl("http://downloads.hindawi.com/journals/bmri/2014/201717.xml", "xml")
-as.tdmurl("http://downloads.hindawi.com/journals/bmri/2014/201717.pdf", "pdf")
+as.tdmurl("http://downloads.hindawi.com/journals/bmri/2014/201717.xml", 
+   "xml")
+as.tdmurl("http://downloads.hindawi.com/journals/bmri/2014/201717.pdf", 
+   "pdf")
 out <- as.tdmurl("http://downloads.hindawi.com/journals/bmri/2014/201717.pdf", 
    "pdf", "10.1155/2014/201717")
 attributes(out)

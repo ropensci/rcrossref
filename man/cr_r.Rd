@@ -32,6 +32,7 @@ Scott Chamberlain \email{myrmecocystus@gmail.com}
 \url{http://random.labs.crossref.org/}
 }
 \seealso{
-\code{\link{cr_search}}, \code{\link{cr_citation}}, \code{\link{cr_search_free}}
+\code{\link{cr_search}}, \code{\link{cr_citation}}, 
+\code{\link{cr_search_free}}
 }
 

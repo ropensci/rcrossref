@@ -8,11 +8,13 @@ These functions are gone, no longer available.
 }
 \details{
 \itemize{
- \item \code{\link{cr_citation}}: Crossref is trying to sunset their OpenURL API, which 
- this function uses. So this function is now removed. See the function \code{\link{cr_cn}}, 
- which does the same things, but with more functionality, using the new Crossref API.
- \item \code{\link{pmid2doi}} and \code{\link{doi2pmid}}: The API behind these functions
- is down for good, see \code{\link{id_converter}} for similar functionality.
+ \item \code{\link{cr_citation}}: Crossref is trying to sunset their 
+ OpenURL API, which  this function uses. So this function is now removed. 
+ See the function \code{\link{cr_cn}}, which does the same things, but with 
+ more functionality, using the new Crossref API.
+ \item \code{\link{pmid2doi}} and \code{\link{doi2pmid}}: The API behind 
+ these functions is down for good, see \code{\link{id_converter}} for 
+ similar functionality.
 }
 }
 

@@ -25,7 +25,8 @@ cr_search2 <- function(query, doi = NULL, page = NULL, rows = NULL,
   }
   if(!is.null(doi)){ doi <- as.character(doi) } else {doi <- doi}
   if(is.null(doi)){
-    args <- cr_compact(list(q=query, page=page, rows=rows, sort=sort, year=year, type=type))
+    args <- cr_compact(list(q=query, page=page, rows=rows, sort=sort, 
+                            year=year, type=type))
     tt <- GET(url, query=args)
     stop_for_status(tt)
     res <- ct_utf8(tt)
@@ -36,10 +37,12 @@ cr_search2 <- function(query, doi = NULL, page = NULL, rows = NULL,
   } else
   {
     doicall <- function(x) {
-      args <- cr_compact(list(q=x, page=page, rows=rows, sort=sort, year=year, type=type))
+      args <- cr_compact(list(q=x, page=page, rows=rows, sort=sort, 
+                              year=year, type=type))
       out <- ct_utf8(GET(url, query=args))
       out2 <- llply(out, replacenull)
-      output <- ldply(out2, function(x) as.data.frame(x, stringsAsFactors = FALSE))
+      output <- ldply(out2, function(x) as.data.frame(x, 
+                                                      stringsAsFactors = FALSE))
       if(nrow(output)==0){"no results"} else{output}
     }
     ldply(doi, doicall)

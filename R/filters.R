@@ -89,7 +89,7 @@ filter_list <- c(
   'assertion_group', 'assertion', 'article_number', 'alternative_id'
 )
 
-filter_deets = list(
+filter_deets <- list(
   "has_funder" = list("possible_values" = NA, "description" = "metadata which includes one or more funder entry" ),
   "funder" = list("possible_values" = "{funder_id}", "description" = "metadata which include the {funder_id} in FundRef data" ),
   "prefix" = list("possible_values" = "{owner_prefix}", "description" = "metadata belonging to a DOI owner prefix {owner_prefix} (e.g. '10.1016' )" ),

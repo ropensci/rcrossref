@@ -11,9 +11,10 @@
 #' @param type Record type, e.g., "Journal Article" or "Journal Issue"
 #' @param ... Named parameters passed on to \code{\link[httr]{GET}}
 #'
-#' @details See \url{http://search.labs.crossref.org/help/api} for more info on this
-#' 		Crossref API service.
-#' @seealso \code{\link{cr_r}}, \code{\link{cr_citation}}, \code{\link{cr_search_free}}
+#' @details See \url{http://search.labs.crossref.org/help/api} for more 
+#' info on this Crossref API service.
+#' @seealso \code{\link{cr_r}}, \code{\link{cr_citation}}, 
+#' \code{\link{cr_search_free}}
 #' @author Scott Chamberlain \email{myrmecocystus@@gmail.com}
 #' @examples \dontrun{
 #' cr_search(query = c("renear", "palmer"))
@@ -49,9 +50,10 @@
 `cr_search` <- function(query=NULL, doi=NULL, page=NULL, rows=NULL, sort=NULL,
   year=NULL, type=NULL, ...) {
   
-  .Deprecated(package = "rcrossref",
-              msg = "cr_search is deprecated, and will be removed in next version, see cr_works et al.")
-  #url <- "http://search.labs.crossref.org/dois"
+  .Deprecated(
+    package = "rcrossref",
+    msg = "cr_search is deprecated, and will be removed in next version, see cr_works et al."
+  )
   url <- "http://search.crossref.org/dois"
   if (!is.null(doi)) {
     doi <- as.character(doi)
@@ -59,7 +61,8 @@
   if (is.null(doi)) {
     cr_search_GET(url, query, page, rows, sort, year, type, ...)
   } else {
-    ldply(doi, function(z) cr_search_GET(url, x = z, page, rows, sort, year, type, ...))
+    ldply(doi, function(z) cr_search_GET(url, x = z, page, rows, sort, 
+                                         year, type, ...))
   }
 }
 
@@ -73,10 +76,18 @@ cr_search_GET <- function(url, x, page, rows, sort, year, type, ...){
   stop_for_status(tt)
   res <- ct_utf8(tt)
   tmp <- jsonlite::fromJSON(res)
-  if (NROW(tmp) == 0) NULL else col_classes(tmp, c("character","numeric","integer","character","character","character","numeric"))
+  if (NROW(tmp) == 0) {
+    NULL 
+  } else {
+    col_classes(
+      tmp, 
+      c("character","numeric","integer","character",
+        "character","character","numeric")
+    )
+  }
 }
 
 asnum <- function(x){
   tmp <- tryCatch(as.numeric(x), warning = function(w) w)
-  if (is(tmp, "simpleWarning")) x else tmp
+  if (inherits(tmp, "simpleWarning")) x else tmp
 }

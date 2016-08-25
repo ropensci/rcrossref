@@ -51,11 +51,15 @@ cr_ft_links <- function(doi, type='xml', ...) {
     NULL 
   } else {  
     elife <- if (grepl("elife", res$links[[1]]$URL)) TRUE else FALSE
-    withtype <- if (type == 'all') res$links else Filter(function(x) grepl(type, x$`content-type`), res$links)
+    withtype <- if (type == 'all') {
+      res$links 
+    } else {
+      Filter(function(x) grepl(type, x$`content-type`), res$links)
+    }
     if (is.null(withtype) || length(withtype) == 0) {
       NULL
     } else {
-      withtype <- setNames(withtype, sapply(withtype, function(x){
+      withtype <- stats::setNames(withtype, sapply(withtype, function(x){
         if (x$`content-type` == "unspecified") {
           "unspecified"
         } else {
@@ -63,11 +67,23 @@ cr_ft_links <- function(doi, type='xml', ...) {
         }
       }))
       if (elife) {
-        withtype <- c(withtype, setNames(list(modifyList(withtype[[1]], list(`content-type` = "application/xml"))), "xml"))
+        withtype <- 
+          c(
+            withtype, 
+            stats::setNames(
+              list(
+                modifyList(
+                  withtype[[1]], 
+                  list(`content-type` = "application/xml"))
+              ), 
+            "xml")
+          )
       }
       
       if (type == "all") {
-        out <- lapply(withtype, function(b) makeurl(b$URL, st(b$`content-type`), doi))
+        out <- lapply(
+          withtype, function(b) makeurl(b$URL, st(b$`content-type`), doi)
+        )
       } else {
         y <- match.arg(type, c('xml','plain','pdf','unspecified'))
         out <- makeurl(withtype[[y]]$URL, y, doi)
@@ -79,17 +95,16 @@ cr_ft_links <- function(doi, type='xml', ...) {
 }
 
 cr_works_links <- function(dois = NULL, ...) {
-  # get_links <- function(x) cr_GET(sprintf("works/%s", x), NULL, FALSE, ...)$message$link
   get_links <- function(x) {
     tmp <- cr_GET(sprintf("works/%s", x), NULL, FALSE)
     trylinks <- tryCatch(tmp$message$link, error = function(e) e)
-    if (is(trylinks, "error")) {
+    if (inherits(trylinks, "error")) {
       NULL
     } else {
       list(links = trylinks, member = tmp$message$member)
     }
   }
-  setNames(lapply(dois, get_links, ...), dois)
+  stats::setNames(lapply(dois, get_links, ...), dois)
 }
 
 st <- function(x){

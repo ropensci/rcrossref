@@ -4,16 +4,18 @@
 #' @param url (character) A URL.
 #' @param type (character) One of xml, plain, pdf, or all
 #' @param path (character) Path to store pdfs in. Default: \code{~/.crossref/}
-#' @param overwrite (logical) Overwrite file if it exists already? Default: TRUE
-#' @param read (logical) If reading a pdf, this toggles whether we extract text from
-#' the pdf or simply download. If TRUE, you get the text from the pdf back. If FALSE,
-#' you only get back the metadata. Default: TRUE
-#' @param verbose (logical) Print progress messages. Default: TRUE
-#' @param cache (logical) Use cached files or not. All files are written to your machine
-#' locally, so this doesn't affect that. This only states whether you want to use
-#' cached version so that you don't have to download the file again. The steps of
-#' extracting and reading into R still have to be performed when \code{cache=TRUE}.
-#' Default: TRUE
+#' @param overwrite (logical) Overwrite file if it exists already? 
+#' Default: \code{TRUE}
+#' @param read (logical) If reading a pdf, this toggles whether we extract 
+#' text from the pdf or simply download. If \code{TRUE}, you get the text from 
+#' the pdf back. If \code{FALSE}, you only get back the metadata. 
+#' Default: \code{TRUE}
+#' @param verbose (logical) Print progress messages. Default: \code{TRUE}
+#' @param cache (logical) Use cached files or not. All files are written to 
+#' your machine locally, so this doesn't affect that. This only states whether 
+#' you want to use cached version so that you don't have to download the file 
+#' again. The steps of extracting and reading into R still have to be performed
+#' when \code{cache=TRUE}. Default: \code{TRUE}
 #' @param ... Named parameters passed on to \code{\link[httr]{GET}}
 #' @details Note that \code{\link{cr_ft_text}},
 #' \code{\link{cr_ft_pdf}}, \code{\link{cr_ft_xml}}, \code{\link{cr_ft_plain}}
@@ -54,7 +56,8 @@
 #'
 #' ### another pensoft e.g.
 #' links <- cr_ft_links("10.3897/phytokeys.42.7604", "all")
-#' pdf_read <- cr_ft_text(url = links, type = "pdf", read=FALSE, verbose = FALSE)
+#' pdf_read <- cr_ft_text(url = links, type = "pdf", read=FALSE, 
+#'   verbose = FALSE)
 #' pdf <- cr_ft_text(links, "pdf", verbose = FALSE)
 #'
 #' ## hindawi
@@ -74,9 +77,11 @@
 #' (links <- cr_ft_links(out$data$DOI[10], "all"))
 #' cr_ft_text(links, 'xml')
 #'
-#' ## You can use cr_ft_xml, cr_ft_plain, and cr_ft_pdf to go directly to that format
+#' ## You can use cr_ft_xml, cr_ft_plain, and cr_ft_pdf to go directly to 
+#' ## that format
 #' licenseurl <- "http://creativecommons.org/licenses/by/3.0/"
-#' out <- cr_works(filter = list(has_full_text = TRUE, license_url = licenseurl))
+#' out <- cr_works(
+#'   filter = list(has_full_text = TRUE, license_url = licenseurl))
 #' (links <- cr_ft_links(out$data$DOI[10], "all"))
 #' cr_ft_xml(links)
 #' cr_ft_pdf(links)
@@ -107,7 +112,8 @@
 #' Sys.setenv(CROSSREF_TDM = "your-key")
 #'
 #' ### all wiley
-#' out <- cr_members(311, filter=c(has_full_text = TRUE, type = 'journal-article'), works = TRUE)
+#' out <- cr_members(311, filter=c(has_full_text = TRUE, 
+#'    type = 'journal-article'), works = TRUE)
 #' dois <- out$data$DOI[1:10]
 #' # res <- list()
 #' # for (i in seq_along(dois)) {
@@ -120,7 +126,8 @@
 #'
 #' #### older dates
 #' out <- cr_members(311, filter=c(has_full_text = TRUE,
-#'       type = 'journal-article', until_created_date = "2013-12-31"), works = TRUE)
+#'       type = 'journal-article', until_created_date = "2013-12-31"), 
+#'       works = TRUE)
 #'
 #' dois <- out$data$DOI[1:10]
 #' # res <- list()
@@ -134,7 +141,8 @@
 #'
 #' ### wiley subset with CC By 4.0 license
 #' lic <- "http://creativecommons.org/licenses/by/4.0/"
-#' out <- cr_members(311, filter=c(has_full_text = TRUE, license.url = lic), works = TRUE)
+#' out <- cr_members(311, filter=c(has_full_text = TRUE, license.url = lic), 
+#'    works = TRUE)
 #' dois <- out$data$DOI[1:10]
 #' # res <- list()
 #' # for (i in seq_along(dois)) {
@@ -152,12 +160,13 @@ cr_ft_text <- function(url, type='xml', path = "~/.crossref", overwrite = TRUE,
   switch( pick_type(type, url),
           xml = getTEXT(get_url(url, 'xml'), type, auth, ...),
           plain = getTEXT(get_url(url, 'xml'), type, auth, ...),
-          pdf = getPDF(url = get_url(url, 'pdf'), path, auth, overwrite, type, read, verbose, cache, ...)
+          pdf = getPDF(url = get_url(url, 'pdf'), path, auth, overwrite, type, 
+                       read, verbose, cache, ...)
   )
 }
 
 get_url <- function(a, b){
-  url <- if (is(a, "tdmurl")) a[[1]] else a[[b]]
+  url <- if (inherits(a, "tdmurl")) a[[1]] else a[[b]]
   if (grepl("pensoft", url)) {
     url
   } else {
@@ -167,20 +176,24 @@ get_url <- function(a, b){
 
 #' @export
 #' @rdname cr_ft_text
-cr_ft_plain <- function(url, path = "~/.crossref", overwrite = TRUE, read=TRUE, verbose=TRUE, ...) {
+cr_ft_plain <- function(url, path = "~/.crossref", overwrite = TRUE, read=TRUE, 
+                        verbose=TRUE, ...) {
   getTEXT(url$plain[[1]], "plain", cr_auth(url, 'plain'), ...)
 }
 
 #' @export
 #' @rdname cr_ft_text
-cr_ft_xml <- function(url, path = "~/.crossref", overwrite = TRUE, read=TRUE, verbose=TRUE, ...) {
+cr_ft_xml <- function(url, path = "~/.crossref", overwrite = TRUE, read=TRUE, 
+                      verbose=TRUE, ...) {
   getTEXT(url$xml[[1]], "xml", cr_auth(url, 'xml'), ...)
 }
 
 #' @export
 #' @rdname cr_ft_text
-cr_ft_pdf <- function(url, path = "~/.crossref", overwrite = TRUE, read=TRUE, cache=FALSE, verbose=TRUE, ...) {
-  getPDF(url$pdf[[1]], path, cr_auth(url, 'pdf'), overwrite, "pdf", read, verbose, cache, ...)
+cr_ft_pdf <- function(url, path = "~/.crossref", overwrite = TRUE, read=TRUE, 
+                      cache=FALSE, verbose=TRUE, ...) {
+  getPDF(url$pdf[[1]], path, cr_auth(url, 'pdf'), overwrite, "pdf", 
+         read, verbose, cache, ...)
 }
 
 pick_type <- function(x, z){
@@ -188,7 +201,8 @@ pick_type <- function(x, z){
   if (length(z) == 1) {
     avail <- attr(z[[1]], which = "type")
   } else {
-    avail <- vapply(z, function(x) attr(x, which = "type"), character(1), USE.NAMES = FALSE)
+    avail <- vapply(z, function(x) attr(x, which = "type"), character(1), 
+                    USE.NAMES = FALSE)
   }
   if (!x %in% avail) stop("Chosen type not available in links", call. = FALSE)
   x
@@ -215,8 +229,9 @@ cr_auth <- function(url, type) {
           # add_headers(`CR-Clickthrough-Client-Token` = key, Accept = type)
         },
         `311` = {
-          add_headers(`CR-Clickthrough-Client-Token` = Sys.getenv("CROSSREF_TDM"),
-                      Accept = type)
+          add_headers(
+            `CR-Clickthrough-Client-Token` = Sys.getenv("CROSSREF_TDM"),
+            Accept = type)
         }
     )
     # add_headers(`CR-TDM-Client_Token` = key, Accept = type)
@@ -233,8 +248,11 @@ getTEXT <- function(x, type, auth, ...){
          plain = ct_utf8(res))
 }
 
-getPDF <- function(url, path, auth, overwrite, type, read, verbose, cache=FALSE, ...) {
-  if (!file.exists(path)) dir.create(path, showWarnings = FALSE, recursive = TRUE)
+getPDF <- function(url, path, auth, overwrite, type, read, verbose, 
+                   cache=FALSE, ...) {
+  if (!file.exists(path)) {
+    dir.create(path, showWarnings = FALSE, recursive = TRUE)
+  }
 
   # pensoft special handling
   if ( grepl("pensoft", url[[1]]) ) {
@@ -245,7 +263,11 @@ getPDF <- function(url, path, auth, overwrite, type, read, verbose, cache=FALSE,
     }
     filepath <- file.path(path, paste0(sub("/", ".", doi), ".pdf"))
   } else {
-    ff <- if ( !grepl(type, basename(url)) ) paste0(basename(url), ".", type) else basename(url)
+    ff <- if (!grepl(type, basename(url))) {
+      paste0(basename(url), ".", type) 
+    } else {
+      basename(url)
+    }
     filepath <- file.path(path, ff)
   }
 

@@ -1,3 +1,26 @@
+rcrossref 0.5.8
+===============
+
+### NEW FEATURES
+
+* Addded an RStudio Addin for searching for citations. See `?rcrossref` for 
+more. Addin authored by Hao Zhu @haozhu233 (#114)
+* New function `cr_abstract()` that tries to get an abstract via XML provided by 
+Crossref - NOTE: an abstract is rarely available though (#116)
+
+### BUG FIXES
+
+* Fixed bug in `cr_cn()` where DOIs with no minting agency found were
+failing because we were previously stopping when no agency found. 
+Now, we just assume Crossref and move on from there. (#117) 
+thanks @dfalster !
+* Fix to `cr_r()` when number requested > 100. Actual fix is in
+`cr_works()`. Max for sample used to be 1000, asked this on the 
+Crossref API forum, 
+see <https://github.com/CrossRef/rest-api-doc/issues/146> (#115)
+* Fix to `cr_journals()` in internal parsing, was failing in cases
+where `ISSN` array was of length zero
+
 rcrossref 0.5.4
 ===============
 

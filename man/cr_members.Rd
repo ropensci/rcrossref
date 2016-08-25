@@ -16,8 +16,8 @@ cr_members_(member_ids = NULL, query = NULL, filter = NULL,
   cursor_max = 5000, .progress = "none", parse = FALSE, ...)
 }
 \arguments{
-\item{member_ids}{One or more member ids. See examples. ALternatively, you can query for them
-using the query parameter.}
+\item{member_ids}{One or more member ids. See examples. ALternatively, 
+you can query for them using the query parameter.}
 
 \item{query}{Query terms}
 
@@ -87,13 +87,15 @@ library('httr')
 cr_members(member_ids=98, config=verbose())
 
 # Use the cursor for deep paging
-cr_members(member_ids=98, works = TRUE, cursor = "*", cursor_max = 500, limit = 100)
-cr_members(member_ids=c(10, 98, 45), works = TRUE, cursor = "*", cursor_max = 200, limit = 100)
+cr_members(member_ids=98, works = TRUE, cursor = "*", 
+   cursor_max = 500, limit = 100)
+cr_members(member_ids=c(10, 98, 45), works = TRUE, cursor = "*", 
+   cursor_max = 200, limit = 100)
 
 # data not found
 # cr_members(query="adfdf")
 # cr_members(member_ids=c(323234343434,3434343434), works=TRUE, facet=TRUE)
-# cr_members(member_ids=c(323234343434,3434343434,98), works=TRUE, facet=TRUE)
+# cr_members(member_ids=c(323234343434,3434343434,98), works=TRUE,facet=TRUE)
 
 # Low level function - does no parsing to data.frame, get json or a list
 cr_members_(query = 'hindawi')

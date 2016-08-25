@@ -13,8 +13,11 @@
 #'
 #' @details BEWARE: The API will only work for CrossRef DOIs.
 #'
-#' This function name changing to \code{cr_funders} in the next version - both work for now
-#' @references \url{https://github.com/CrossRef/rest-api-doc/blob/master/rest_api.md}
+#' This function name changing to \code{cr_funders} in the next version - 
+#' both work for now
+#' 
+#' @references 
+#' \url{https://github.com/CrossRef/rest-api-doc/blob/master/rest_api.md}
 #'
 #' @section NOTE:
 #' Funders without IDs don't show up on the /funders route, and in this
@@ -46,7 +49,8 @@
 #' cr_funders(dois=c("10.13039/100000001","asfasf"), works=TRUE)
 #'
 #' # Use the cursor for deep paging
-#' cr_funders('100000001', works = TRUE, cursor = "*", cursor_max = 500, limit = 100)
+#' cr_funders('100000001', works = TRUE, cursor = "*", cursor_max = 500, 
+#'    limit = 100)
 #' cr_funders(c('100000001', '100000002'), works = TRUE, cursor = "*",
 #'    cursor_max = 300, limit = 100)
 #'
@@ -60,19 +64,24 @@
 #'    cursor_max = 300, limit = 100, parse = TRUE)
 #' }
 `cr_fundref` <- function(dois = NULL, query = NULL, filter = NULL, offset = NULL,
-  limit = NULL,  sample = NULL, sort = NULL, order = NULL, facet=FALSE, works = FALSE,
-  cursor = NULL, cursor_max = 5000, .progress="none", ...) {
+  limit = NULL,  sample = NULL, sort = NULL, order = NULL, facet=FALSE, 
+  works = FALSE, cursor = NULL, cursor_max = 5000, .progress="none", ...) {
 
-  .Deprecated(msg = "function name changing to cr_funders in the next version\nboth work for now")
-  args <- prep_args(query, filter, offset, limit, sample, sort, order, facet, cursor)
+  .Deprecated(
+  msg = 
+  "function name changing to cr_funders in the next version\nboth work for now"
+  )
+  args <- prep_args(query, filter, offset, limit, sample, sort, 
+                    order, facet, cursor)
   if (length(dois) > 1) {
     res <- llply(dois, fundref_GET, args = args, works = works,
-                 cursor = cursor, cursor_max = cursor_max, ..., .progress = .progress)
+                 cursor = cursor, cursor_max = cursor_max, ..., 
+                 .progress = .progress)
     if (!is.null(cursor)) {
       out <- lapply(res, "[[", "data")
       tbl_df(bind_rows(out))
     } else {
-      out <- setNames(lapply(res, "[[", "message"), dois)
+      out <- stats::setNames(lapply(res, "[[", "message"), dois)
       if (any(is.na(out))) {
         out <- cr_compact(lapply(out, function(x) {
           if (all(is.na(x))) NULL else x
@@ -108,8 +117,10 @@
         list(meta = NA, data = NA)
       } else {
         if (is.null(dois)) {
-          list(meta = parse_meta(res),
-               data = tbl_df(bind_rows(lapply(res$message$items, parse_fundref))))
+          list(
+            meta = parse_meta(res),
+            data = tbl_df(bind_rows(lapply(res$message$items, parse_fundref)))
+          )
         } else {
           if (works) {
             wout <- tbl_df(bind_rows(lapply(res$message$items, parse_works)))
@@ -131,14 +142,17 @@
 
 #' @export
 #' @rdname cr_fundref
-`cr_funders_` <- function(dois = NULL, query = NULL, filter = NULL, offset = NULL,
-  limit = NULL,  sample = NULL, sort = NULL, order = NULL, facet=FALSE, works = FALSE,
-  cursor = NULL, cursor_max = 5000, .progress="none", parse=FALSE, ...) {
+`cr_funders_` <- function(dois = NULL, query = NULL, filter = NULL, 
+  offset = NULL, limit = NULL,  sample = NULL, sort = NULL, order = NULL, 
+  facet=FALSE, works = FALSE, cursor = NULL, cursor_max = 5000, 
+  .progress="none", parse=FALSE, ...) {
 
-  args <- prep_args(query, filter, offset, limit, sample, sort, order, facet, cursor)
+  args <- prep_args(query, filter, offset, limit, sample, sort, order, 
+                    facet, cursor)
   if (length(dois) > 1) {
     llply(dois, fundref_GET_, args = args, works = works,
-          cursor = cursor, cursor_max = cursor_max, parse = parse, ..., .progress = .progress)
+          cursor = cursor, cursor_max = cursor_max, parse = parse, ..., 
+          .progress = .progress)
   } else {
     fundref_GET_(dois, args = args, works = works, cursor = cursor,
                 cursor_max = cursor_max, parse = parse, ...)
@@ -162,7 +176,8 @@ fundref_GET <- function(x, args, works, cursor = NULL, cursor_max = NULL, ...){
   }
 }
 
-fundref_GET_ <- function(x, args, works, cursor = NULL, cursor_max = NULL, parse, ...){
+fundref_GET_ <- function(x, args, works, cursor = NULL, cursor_max = NULL, 
+                         parse, ...){
   path <- if (!is.null(x)) {
     if (works) sprintf("funders/%s/works", x) else sprintf("funders/%s", x)
   } else {
@@ -185,7 +200,8 @@ parse_fund <- function(x) {
   } else {
     desc <- unlist(x$descendants)
     hier <- data.frame(id=names(unlist(x$`hierarchy-names`)),
-                       name=unname(unlist(x$`hierarchy-names`)), stringsAsFactors = FALSE)
+                       name=unname(unlist(x$`hierarchy-names`)), 
+                       stringsAsFactors = FALSE)
     df <- data.frame(name=x$name, location=x$location, work_count=x$`work-count`,
                      descendant_work_count=x$`descendant-work-count`,
                      id=x$id, tokens=paste0(x$tokens, collapse = ", "),
@@ -215,5 +231,6 @@ parse_fundref <- function(zzz){
       res
     }
   }
-  data.frame(as.list(unlist(lapply(keys, manip, y=zzz))), stringsAsFactors = FALSE)
+  data.frame(as.list(unlist(lapply(keys, manip, y=zzz))), 
+             stringsAsFactors = FALSE)
 }

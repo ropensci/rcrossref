@@ -13,7 +13,8 @@
 #'
 #' @details BEWARE: The API will only work for CrossRef DOIs.
 #'
-#' @references \url{https://github.com/CrossRef/rest-api-doc/blob/master/rest_api.md}
+#' @references 
+#' \url{https://github.com/CrossRef/rest-api-doc/blob/master/rest_api.md}
 #' @examples \dontrun{
 #' cr_types()
 #' cr_types("monograph")
@@ -26,7 +27,8 @@
 #' cr_types(c('monograph', 'book-set'), works=TRUE, facet=TRUE)
 #'
 #' # Use the cursor for deep paging
-#' cr_types("journal-article", works = TRUE, cursor = "*", cursor_max = 500, limit = 100)
+#' cr_types("journal-article", works = TRUE, cursor = "*", 
+#'    cursor_max = 500, limit = 100)
 #' cr_types(c('monograph', 'book-set'), works = TRUE, cursor = "*",
 #'    cursor_max = 300, limit = 100)
 #'
@@ -46,22 +48,36 @@
 #'    cursor_max = 300, limit = 100, parse = TRUE)
 #' }
 
-`cr_types` <- function(types = NULL, query = NULL, filter = NULL, offset = NULL, limit = NULL,
-  sample = NULL, sort = NULL, order = NULL, facet = FALSE, works = FALSE,
-  cursor = NULL, cursor_max = 5000, .progress="none", ...) {
+`cr_types` <- function(types = NULL, query = NULL, filter = NULL, 
+  offset = NULL, limit = NULL, sample = NULL, sort = NULL, order = NULL, 
+  facet = FALSE, works = FALSE, cursor = NULL, cursor_max = 5000, 
+  .progress="none", ...) {
 
-  args <- prep_args(query, filter, offset, limit, sample, sort, order, facet, cursor)
+  args <- prep_args(query, filter, offset, limit, sample, sort, order, 
+                    facet, cursor)
   if (length(types) > 1) {
     res <- llply(types, types_GET, args = args, works = works,
-                 cursor = cursor, cursor_max = cursor_max, ..., .progress = .progress)
+                 cursor = cursor, cursor_max = cursor_max, ..., 
+                 .progress = .progress)
     if (!is.null(cursor)) {
       out <- lapply(res, "[[", "data")
       bind_rows(out)
     } else {
       out <- lapply(res, "[[", "message")
-      out <- if (works) do.call(c, lapply(out, function(x) lapply(x$items, parse_works))) else lapply(out, DataFrame)
+      out <- if (works) {
+        do.call(c, lapply(out, function(x) lapply(x$items, parse_works))) 
+      } else {
+        lapply(out, DataFrame)
+      }
       df <- bind_rows(out)
-      meta <- if (works) data.frame(types = types, do.call(rbind, lapply(res, parse_meta)), stringsAsFactors = FALSE) else NULL
+      meta <- if (works) {
+        data.frame(
+          types = types, 
+          do.call(rbind, lapply(res, parse_meta)), 
+          stringsAsFactors = FALSE) 
+      } else {
+        NULL
+      }
       if (facet) {
         ft <- Map(function(x, y){
           rr <- list(parse_facets(x$message$facets)); names(rr) <- y; rr
@@ -91,7 +107,11 @@
             wout <- parse_type(res$message)
             meta <- NULL
           }
-          list(meta = meta, data = wout, facets = parse_facets(res$message$facets))
+          list(
+            meta = meta, 
+            data = wout, 
+            facets = parse_facets(res$message$facets)
+          )
         }
       }
     }
@@ -100,14 +120,17 @@
 
 #' @export
 #' @rdname cr_types
-`cr_types_` <- function(types = NULL, query = NULL, filter = NULL, offset = NULL, limit = NULL,
-  sample = NULL, sort = NULL, order = NULL, facet=FALSE, works = FALSE,
-  cursor = NULL, cursor_max = 5000, .progress="none", parse=FALSE, ...) {
+`cr_types_` <- function(types = NULL, query = NULL, filter = NULL, 
+  offset = NULL, limit = NULL, sample = NULL, sort = NULL, order = NULL, 
+  facet=FALSE, works = FALSE, cursor = NULL, cursor_max = 5000, 
+  .progress="none", parse=FALSE, ...) {
 
-  args <- prep_args(query, filter, offset, limit, sample, sort, order, facet, cursor)
+  args <- prep_args(query, filter, offset, limit, sample, sort, order, 
+                    facet, cursor)
   if (length(types) > 1) {
     llply(types, types_GET_, args = args, works = works,
-          cursor = cursor, cursor_max = cursor_max, parse = parse, ..., .progress = .progress)
+          cursor = cursor, cursor_max = cursor_max, parse = parse, ..., 
+          .progress = .progress)
   } else {
     types_GET_(types, args, works = works, cursor = cursor,
               cursor_max = cursor_max, parse = parse, ...)
@@ -131,7 +154,8 @@ types_GET <- function(x, args, works, cursor = NULL, cursor_max = NULL, ...){
   }
 }
 
-types_GET_ <- function(x, args, works, cursor = NULL, cursor_max = NULL, parse, ...){
+types_GET_ <- function(x, args, works, cursor = NULL, cursor_max = NULL, 
+                       parse, ...){
   path <- if (!is.null(x)) {
     if (works) sprintf("types/%s/works", x) else sprintf("types/%s", x)
   } else {

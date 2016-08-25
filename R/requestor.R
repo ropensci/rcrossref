@@ -14,7 +14,8 @@ Requestor <- R6::R6Class("Requestor",
     if (!missing(should_parse)) self$should_parse <- should_parse
   },
   GETcursor = function(...) {
-    res <- cr_GET(self$path, self$args, todf = FALSE, parse = self$should_parse, ...)
+    res <- cr_GET(self$path, self$args, todf = FALSE, 
+                  parse = self$should_parse, ...)
     if (self$should_parse) {
       cu <- res$message$`next-cursor`
       tot <- length(res$message$items)
@@ -31,8 +32,9 @@ Requestor <- R6::R6Class("Requestor",
     totcount <- totals
     while (!is.null(cu) && self$cursor_max > totcount && totcount < max_avail) {
       iter <- iter + 1
-      self$args$cursor = cu
-      res <- cr_GET(endpoint = self$path, self$args, todf = FALSE, parse = self$should_parse)
+      self$args$cursor <- cu
+      res <- cr_GET(endpoint = self$path, self$args, todf = FALSE, 
+                    parse = self$should_parse)
       if (self$should_parse) {
         cu <- res$message$`next-cursor`
         tot <- length(res$message$items)
@@ -44,15 +46,18 @@ Requestor <- R6::R6Class("Requestor",
       self$cursor_out[[iter]] <- res
       totals[iter] <- tot
       totcount <- sum(totals)
-      # totcount <- sum(vapply(self$cursor_out, function(z) length(z$message$items), 1))
     }
   },
   parse = function(parse = TRUE) {
     x <- self$cursor_out
     meta <- parse_meta(x[[1]])
     list(meta = meta,
-         data = bind_rows(lapply(x, function(z) bind_rows(lapply(z$message$items, parse_works)))),
-         facets = cr_compact(lapply(x, function(z) parse_facets(z$message$facets)))
+         data = bind_rows(lapply(x, function(z) {
+           bind_rows(lapply(z$message$items, parse_works))
+         })),
+         facets = cr_compact(
+           lapply(x, function(z) parse_facets(z$message$facets))
+          )
     )
   }
 ))
@@ -62,7 +67,7 @@ empty <- function(l) {
     length(z) == 0
   }
   tmp <- Filter(Negate(is_length_zero), l)
-  if (length(tmp) == 1 && is(tmp, "list")) {
+  if (length(tmp) == 1 && inherits(tmp, "list")) {
     tmp[[1]]
   } else {
     tmp

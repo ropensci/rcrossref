@@ -26,19 +26,21 @@ cr_ft_pdf(url, path = "~/.crossref", overwrite = TRUE, read = TRUE,
 
 \item{path}{(character) Path to store pdfs in. Default: \code{~/.crossref/}}
 
-\item{overwrite}{(logical) Overwrite file if it exists already? Default: TRUE}
+\item{overwrite}{(logical) Overwrite file if it exists already? 
+Default: \code{TRUE}}
 
-\item{read}{(logical) If reading a pdf, this toggles whether we extract text from
-the pdf or simply download. If TRUE, you get the text from the pdf back. If FALSE,
-you only get back the metadata. Default: TRUE}
+\item{read}{(logical) If reading a pdf, this toggles whether we extract 
+text from the pdf or simply download. If \code{TRUE}, you get the text from 
+the pdf back. If \code{FALSE}, you only get back the metadata. 
+Default: \code{TRUE}}
 
-\item{verbose}{(logical) Print progress messages. Default: TRUE}
+\item{verbose}{(logical) Print progress messages. Default: \code{TRUE}}
 
-\item{cache}{(logical) Use cached files or not. All files are written to your machine
-locally, so this doesn't affect that. This only states whether you want to use
-cached version so that you don't have to download the file again. The steps of
-extracting and reading into R still have to be performed when \code{cache=TRUE}.
-Default: TRUE}
+\item{cache}{(logical) Use cached files or not. All files are written to 
+your machine locally, so this doesn't affect that. This only states whether 
+you want to use cached version so that you don't have to download the file 
+again. The steps of extracting and reading into R still have to be performed
+when \code{cache=TRUE}. Default: \code{TRUE}}
 
 \item{...}{Named parameters passed on to \code{\link[httr]{GET}}}
 }
@@ -87,7 +89,8 @@ cr_ft_text(links, "pdf")
 
 ### another pensoft e.g.
 links <- cr_ft_links("10.3897/phytokeys.42.7604", "all")
-pdf_read <- cr_ft_text(url = links, type = "pdf", read=FALSE, verbose = FALSE)
+pdf_read <- cr_ft_text(url = links, type = "pdf", read=FALSE, 
+  verbose = FALSE)
 pdf <- cr_ft_text(links, "pdf", verbose = FALSE)
 
 ## hindawi
@@ -107,9 +110,11 @@ out <-
 (links <- cr_ft_links(out$data$DOI[10], "all"))
 cr_ft_text(links, 'xml')
 
-## You can use cr_ft_xml, cr_ft_plain, and cr_ft_pdf to go directly to that format
+## You can use cr_ft_xml, cr_ft_plain, and cr_ft_pdf to go directly to 
+## that format
 licenseurl <- "http://creativecommons.org/licenses/by/3.0/"
-out <- cr_works(filter = list(has_full_text = TRUE, license_url = licenseurl))
+out <- cr_works(
+  filter = list(has_full_text = TRUE, license_url = licenseurl))
 (links <- cr_ft_links(out$data$DOI[10], "all"))
 cr_ft_xml(links)
 cr_ft_pdf(links)
@@ -140,7 +145,8 @@ link <- cr_ft_links(out$data$DOI[1], "plain")
 Sys.setenv(CROSSREF_TDM = "your-key")
 
 ### all wiley
-out <- cr_members(311, filter=c(has_full_text = TRUE, type = 'journal-article'), works = TRUE)
+out <- cr_members(311, filter=c(has_full_text = TRUE, 
+   type = 'journal-article'), works = TRUE)
 dois <- out$data$DOI[1:10]
 # res <- list()
 # for (i in seq_along(dois)) {
@@ -153,7 +159,8 @@ dois <- out$data$DOI[1:10]
 
 #### older dates
 out <- cr_members(311, filter=c(has_full_text = TRUE,
-      type = 'journal-article', until_created_date = "2013-12-31"), works = TRUE)
+      type = 'journal-article', until_created_date = "2013-12-31"), 
+      works = TRUE)
 
 dois <- out$data$DOI[1:10]
 # res <- list()
@@ -167,7 +174,8 @@ dois <- out$data$DOI[1:10]
 
 ### wiley subset with CC By 4.0 license
 lic <- "http://creativecommons.org/licenses/by/4.0/"
-out <- cr_members(311, filter=c(has_full_text = TRUE, license.url = lic), works = TRUE)
+out <- cr_members(311, filter=c(has_full_text = TRUE, license.url = lic), 
+   works = TRUE)
 dois <- out$data$DOI[1:10]
 # res <- list()
 # for (i in seq_along(dois)) {

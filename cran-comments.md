@@ -23,3 +23,6 @@ found no problems related to this new version.
 
 This submission includes a few minor changes: improve documentation
 and use new function for one of the package imports.
+
+Thanks!
+Scott Chamberlain

@@ -76,21 +76,26 @@ cr_journals()
 cr_journals(issn="2167-8359", works=TRUE)
 cr_journals(issn=c('1803-2427','2326-4225'))
 cr_journals(query="ecology")
-cr_journals(issn="2167-8359", query='ecology', works=TRUE, sort='score', order="asc")
-cr_journals(issn="2167-8359", query='ecology', works=TRUE, sort='score', order="desc")
-cr_journals(issn="2167-8359", works=TRUE, filter=c(from_pub_date='2014-03-03'))
+cr_journals(issn="2167-8359", query='ecology', works=TRUE, 
+   sort='score', order="asc")
+cr_journals(issn="2167-8359", query='ecology', works=TRUE, sort='score', 
+   order="desc")
+cr_journals(issn="2167-8359", works=TRUE, 
+   filter=c(from_pub_date='2014-03-03'))
 cr_journals(query="peerj")
 cr_journals(issn='1803-2427', works=TRUE)
 cr_journals(issn='1803-2427', works=TRUE, sample=1)
 cr_journals(limit=2)
 
 # Use the cursor for deep paging
-cr_journals(issn='1932-6203', works = TRUE, cursor = "*", cursor_max = 500, limit = 100)
+cr_journals(issn='1932-6203', works = TRUE, cursor = "*", cursor_max = 500, 
+   limit = 100)
 cr_journals(c('1932-6203', '0028-0836'), works = TRUE, cursor = "*",
    cursor_max = 300, limit = 100)
 
 # fails, if you want works, you must give an ISSN
-# cr_journals(query = "ecology", filter=c(has_full_text = TRUE), works = TRUE)
+# cr_journals(query = "ecology", filter=c(has_full_text = TRUE), 
+#    works = TRUE)
 
 # Low level function - does no parsing to data.frame, get json or a list
 cr_journals_(query = 'ecology')

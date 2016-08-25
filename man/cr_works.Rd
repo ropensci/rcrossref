@@ -71,8 +71,8 @@ The API will only work for CrossRef DOIs.
 \itemize{
  \item \code{cr_works()} - Does data request and parses to data.frame for
  easy downstream consumption
- \item \code{cr_works_()} - Does data request, and gives back json (default) or lists,
- with no attempt to parse to data.frame's
+ \item \code{cr_works_()} - Does data request, and gives back json (default) 
+ or lists, with no attempt to parse to data.frame's
 }
 }
 \examples{
@@ -96,10 +96,12 @@ cr_works(filter=c(has_affiliation = TRUE))
 cr_works(dois='10.1063/1.3593378')
 cr_works('10.1371/journal.pone.0033693')
 cr_works(dois='10.1007/12080.1874-1746')
-cr_works(dois=c('10.1007/12080.1874-1746','10.1007/10452.1573-5125', '10.1111/(issn)1442-9993'))
+cr_works(dois=c('10.1007/12080.1874-1746','10.1007/10452.1573-5125', 
+   '10.1111/(issn)1442-9993'))
 
 # progress bar
-cr_works(dois=c('10.1007/12080.1874-1746','10.1007/10452.1573-5125'), .progress="text")
+cr_works(dois=c('10.1007/12080.1874-1746','10.1007/10452.1573-5125'), 
+   .progress="text")
 
 # Include facetting in results
 cr_works(query="NSF", facet=TRUE)
@@ -116,17 +118,20 @@ cr_works(sample=1)
 cr_works(sample=10)
 
 # You can pass in dot separated fields to filter on specific fields
-cr_works(filter=c(award.number='CBET-0756451', award.funder='10.13039/100000001'))
+cr_works(filter=c(award.number='CBET-0756451', 
+   award.funder='10.13039/100000001'))
 
 # Use the cursor for deep paging
 cr_works(query="NSF", cursor = "*", cursor_max = 300, limit = 100)
-cr_works(query="NSF", cursor = "*", cursor_max = 300, limit = 100, facet = TRUE)
+cr_works(query="NSF", cursor = "*", cursor_max = 300, limit = 100, 
+   facet = TRUE)
 
 # Low level function - does no parsing to data.frame, get json or a list
 cr_works_(query = "NSF")
 cr_works_(query = "NSF", parse=TRUE)
 cr_works_(query="NSF", cursor = "*", cursor_max = 300, limit = 100)
-cr_works_(query="NSF", cursor = "*", cursor_max = 300, limit = 100, parse=TRUE)
+cr_works_(query="NSF", cursor = "*", cursor_max = 300, limit = 100, 
+   parse=TRUE)
 }
 }
 \references{

@@ -28,8 +28,8 @@ cr_search(query = NULL, doi = NULL, page = NULL, rows = NULL,
 Search the CrossRef Metatdata API.
 }
 \details{
-See \url{http://search.labs.crossref.org/help/api} for more info on this
-		Crossref API service.
+See \url{http://search.labs.crossref.org/help/api} for more 
+info on this Crossref API service.
 }
 \examples{
 \dontrun{
@@ -67,6 +67,7 @@ cr_search(query = c("renear", "palmer"), rows = 40, config=progress())
 Scott Chamberlain \email{myrmecocystus@gmail.com}
 }
 \seealso{
-\code{\link{cr_r}}, \code{\link{cr_citation}}, \code{\link{cr_search_free}}
+\code{\link{cr_r}}, \code{\link{cr_citation}}, 
+\code{\link{cr_search_free}}
 }
 

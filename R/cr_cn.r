@@ -18,7 +18,8 @@
 #'   Content Negotiation API service.
 #'   
 #'   DataCite DOIs: Some values of the \code{format} parameter won't work with 
-#'   DataCite DOIs, i.e. "citeproc-json", "crossref-xml", "crossref-tdm", "onix-xml". 
+#'   DataCite DOIs, i.e. "citeproc-json", "crossref-xml", "crossref-tdm", 
+#'     "onix-xml". 
 #'   
 #'   MEDRA DOIs only work with "rdf-xml", "turtle", "citeproc-json-ish", "ris", 
 #'   "bibtex", "bibentry", "onix-xml".
@@ -109,7 +110,8 @@
   cn <- function(doi, ...){
     agency_id <- suppressWarnings(GET_agency_id(doi))
     if (is.null(agency_id)) {
-      warning(doi, " agency not found - proceeding with 'crossref' ...", call. = FALSE)
+      warning(doi, " agency not found - proceeding with 'crossref' ...", 
+              call. = FALSE)
       agency_id <- "crossref"
     }
     
@@ -125,7 +127,8 @@
     pick <- c(
            "rdf-xml" = "application/rdf+xml",
            "turtle" = "text/turtle",
-           "citeproc-json" = "transform/application/vnd.citationstyles.csl+json",
+           "citeproc-json" = 
+             "transform/application/vnd.citationstyles.csl+json",
            "citeproc-json-ish" = "application/vnd.citationstyles.csl+json",
            "text" = "text/x-bibliography",
            "ris" = "application/x-research-info-systems",
@@ -141,7 +144,8 @@
                       make_rcrossref_ua(), ...)
     } else {
       if (format == "text") {
-        type <- paste(type, "; style = ", style, "; locale = ", locale, sep = "")
+        type <- paste(type, "; style = ", style, "; locale = ", locale, 
+                      sep = "")
       }
       response <- GET(url, ..., 
                       make_rcrossref_ua(),
@@ -186,10 +190,11 @@
 
   if (length(dois) > 1) {
     llply(dois, function(z, ...) {
-      out = try(cn(z, ...), silent = TRUE)
+      out <- try(cn(z, ...), silent = TRUE)
       if ("try-error" %in% class(out)) {
         warning(
-          paste0("Failure in resolving '", z, "'. See error detail in results."), 
+          paste0("Failure in resolving '", z, 
+                 "'. See error detail in results."),
           call. = FALSE
         )
         out <- list(doi = z, error = out[[1]])
@@ -246,9 +251,11 @@ GET_agency_id <- function(x, ...) {
 # Supported content types
 # See http://www.crosscite.org/cn/
 supported_cn_types <- list(
-  crossref = c("rdf-xml", "turtle", "citeproc-json", "citeproc-json-ish", "text", "ris", "bibtex", 
-               "crossref-xml", "bibentry", "crossref-tdm"),
-  datacite = c("rdf-xml", "turtle", "datacite-xml", "citeproc-json-ish", "text", "ris", "bibtex", 
-               "bibentry"),
-  medra = c("rdf-xml", "turtle", "citeproc-json-ish", "ris", "bibtex", "bibentry", "onix-xml")
+  crossref = c("rdf-xml", "turtle", "citeproc-json", "citeproc-json-ish", 
+               "text", "ris", "bibtex", "crossref-xml", "bibentry", 
+               "crossref-tdm"),
+  datacite = c("rdf-xml", "turtle", "datacite-xml", "citeproc-json-ish", "text",
+               "ris", "bibtex", "bibentry"),
+  medra = c("rdf-xml", "turtle", "citeproc-json-ish", "ris", "bibtex", 
+            "bibentry", "onix-xml")
 )

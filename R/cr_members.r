@@ -2,8 +2,8 @@
 #'
 #' @export
 #'
-#' @param member_ids One or more member ids. See examples. ALternatively, you can query for them
-#' using the query parameter.
+#' @param member_ids One or more member ids. See examples. ALternatively, 
+#' you can query for them using the query parameter.
 #' @template args
 #' @template moreargs
 #' @template cursor_args
@@ -13,7 +13,8 @@
 #' list \code{TRUE}. Default: \code{FALSE}
 #'
 #' @details BEWARE: The API will only work for CrossRef DOIs.
-#' @references \url{https://github.com/CrossRef/rest-api-doc/blob/master/rest_api.md}
+#' @references 
+#' \url{https://github.com/CrossRef/rest-api-doc/blob/master/rest_api.md}
 #'
 #' @examples \dontrun{
 #' cr_members(member_ids=98)
@@ -34,13 +35,15 @@
 #' cr_members(member_ids=98, config=verbose())
 #'
 #' # Use the cursor for deep paging
-#' cr_members(member_ids=98, works = TRUE, cursor = "*", cursor_max = 500, limit = 100)
-#' cr_members(member_ids=c(10, 98, 45), works = TRUE, cursor = "*", cursor_max = 200, limit = 100)
+#' cr_members(member_ids=98, works = TRUE, cursor = "*", 
+#'    cursor_max = 500, limit = 100)
+#' cr_members(member_ids=c(10, 98, 45), works = TRUE, cursor = "*", 
+#'    cursor_max = 200, limit = 100)
 #'
 #' # data not found
 #' # cr_members(query="adfdf")
 #' # cr_members(member_ids=c(323234343434,3434343434), works=TRUE, facet=TRUE)
-#' # cr_members(member_ids=c(323234343434,3434343434,98), works=TRUE, facet=TRUE)
+#' # cr_members(member_ids=c(323234343434,3434343434,98), works=TRUE,facet=TRUE)
 #'
 #' # Low level function - does no parsing to data.frame, get json or a list
 #' cr_members_(query = 'hindawi')
@@ -55,14 +58,16 @@
   limit = NULL, sample = NULL, sort = NULL, order = NULL, facet=FALSE, works = FALSE,
   cursor = NULL, cursor_max = 5000, .progress="none", ...) {
 
-  args <- prep_args(query, filter, offset, limit, sample, sort, order, facet, cursor)
+  args <- prep_args(query, filter, offset, limit, sample, sort, order, 
+                    facet, cursor)
   if (length(member_ids) > 1) {
     res <- llply(member_ids, member_GET, args = args, works = works,
-                 cursor = cursor, cursor_max = cursor_max, ..., .progress = .progress)
+                 cursor = cursor, cursor_max = cursor_max, ..., 
+                 .progress = .progress)
     if (!is.null(cursor)) {
       out <- lapply(res, "[[", "data")
       df <- tbl_df(bind_rows(out))
-      facets <- setNames(lapply(res, function(x) parse_facets(x$facets)), member_ids)
+      facets <- stats::setNames(lapply(res, function(x) parse_facets(x$facets)), member_ids)
       facets <- if (all(vapply(facets, is.null, logical(1)))) NULL else facets
       list(data = df, facets = facets)
     } else {
@@ -77,7 +82,7 @@
         outdat <- if (works) do.call("c", lapply(out, function(x) lapply(x$items, parse_works))) else lapply(out, parse_members)
         df <- tbl_df(bind_rows(outdat))
         meta <- if (works) data.frame(member_ids = member_ids, do.call(rbind, lapply(res, parse_meta)), stringsAsFactors = FALSE) else NULL
-        facets <- setNames(lapply(res, function(x) parse_facets(x$message$facets)), member_ids)
+        facets <- stats::setNames(lapply(res, function(x) parse_facets(x$message$facets)), member_ids)
         facets <- if (all(vapply(facets, is.null, logical(1)))) NULL else facets
         list(meta = meta, data = df, facets = facets)
       }
@@ -110,14 +115,17 @@
 
 #' @export
 #' @rdname cr_members
-`cr_members_` <- function(member_ids = NULL, query = NULL, filter = NULL, offset = NULL,
-  limit = NULL, sample = NULL, sort = NULL, order = NULL, facet=FALSE, works = FALSE,
-  cursor = NULL, cursor_max = 5000, .progress="none", parse=FALSE, ...) {
+`cr_members_` <- function(member_ids = NULL, query = NULL, filter = NULL, 
+  offset = NULL, limit = NULL, sample = NULL, sort = NULL, order = NULL, 
+  facet=FALSE, works = FALSE, cursor = NULL, cursor_max = 5000, 
+  .progress="none", parse=FALSE, ...) {
 
-  args <- prep_args(query, filter, offset, limit, sample, sort, order, facet, cursor)
+  args <- prep_args(query, filter, offset, limit, sample, sort, 
+                    order, facet, cursor)
   if (length(member_ids) > 1) {
     llply(member_ids, member_GET_, args = args, works = works,
-          cursor = cursor, cursor_max = cursor_max, parse = parse, .progress = .progress, ...)
+          cursor = cursor, cursor_max = cursor_max, parse = parse, 
+          .progress = .progress, ...)
   } else {
     member_GET_(member_ids, args = args, works = works,
                cursor = cursor, cursor_max = cursor_max, parse = parse, ...)
@@ -141,7 +149,8 @@ member_GET <- function(x, args, works, cursor = NULL, cursor_max = NULL, ...){
   }
 }
 
-member_GET_ <- function(x, args, works, cursor = NULL, cursor_max = NULL, parse, ...) {
+member_GET_ <- function(x, args, works, cursor = NULL, cursor_max = NULL, 
+                        parse, ...) {
   path <- if (!is.null(x)) {
     if (works) sprintf("members/%s/works", x) else sprintf("members/%s", x)
   } else {
@@ -176,7 +185,11 @@ get_links <- function(v) {
   if (!is.null(v)) {
     lout <- list()
     for (i in seq_along(v)) {
-      lout[[i]] <- data.frame(setNames(v[[i]], paste0("link", i, "_", names(v[[i]]))), stringsAsFactors = FALSE)
+      lout[[i]] <- 
+        data.frame(
+          stats::setNames(v[[i]], paste0("link", i, "_", names(v[[i]]))), 
+          stringsAsFactors = FALSE
+        )
     }
     do.call("cbind", lout)
   } else {

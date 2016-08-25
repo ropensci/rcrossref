@@ -59,7 +59,7 @@ get_err <- function(x) {
   } else {
     tmp <- xx
   }
-  if (is(tmp, "list")) {
+  if (inherits(tmp, "list")) {
     tmp$message[[1]]$message
   } else {
     if (any(class(tmp) %in% c("HTMLInternalDocument", "xml_document"))) {
@@ -79,7 +79,7 @@ col_classes <- function(d, colClasses) {
            Date = as.Date(d[[i]], origin = '1970-01-01'),
            POSIXct = as.POSIXct(d[[i]], origin = '1970-01-01'),
            factor = as.factor(d[[i]]),
-           as(d[[i]], colClasses[i]) ))
+           as(d[[i]], colClasses[i])))
   d
 }
 
@@ -96,7 +96,7 @@ check_number <- function(x) {
   call <- deparse(substitute(x))
   if (!is.null(x)) {
     tt <- tryCatch(as.numeric(x), warning = function(w) w)
-    if (is(tt, "warning") || !class(x) %in% c('integer', 'numeric')) {
+    if (inherits(tt, "warning") || !class(x) %in% c('integer', 'numeric')) {
       stop(call, " value illegal, must be an integer", call. = FALSE)
     }
   }

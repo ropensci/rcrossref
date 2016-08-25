@@ -79,7 +79,8 @@ cr_types("journal-article", works=TRUE, facet=TRUE)$facets
 cr_types(c('monograph', 'book-set'), works=TRUE, facet=TRUE)
 
 # Use the cursor for deep paging
-cr_types("journal-article", works = TRUE, cursor = "*", cursor_max = 500, limit = 100)
+cr_types("journal-article", works = TRUE, cursor = "*", 
+   cursor_max = 500, limit = 100)
 cr_types(c('monograph', 'book-set'), works = TRUE, cursor = "*",
    cursor_max = 300, limit = 100)
 

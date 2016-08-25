@@ -9,9 +9,9 @@ crosscite(dois, style = "apa", locale = "en-US", .progress = "none", ...)
 \arguments{
 \item{dois}{Search by a single DOI or many DOIs.}
 
-\item{style}{a CSL style (for text format only). See \code{\link{get_styles}}
-for options. Default: apa. If there's a style that CrossRef doesn't support you'll get a
-\code{(500) Internal Server Error}}
+\item{style}{a CSL style (for text format only). See 
+\code{\link{get_styles}} for options. Default: apa. If there's a style that 
+CrossRef doesn't support you'll get a \code{(500) Internal Server Error}}
 
 \item{locale}{Language locale. See \code{?Sys.getlocale}}
 
@@ -35,8 +35,9 @@ of this package. Use \code{\link{cr_cn}} instead.
 \examples{
 \dontrun{
 crosscite("10.5284/1011335")
-crosscite(c('10.5169/SEALS-52668','10.2314/GBV:493109919','10.2314/GBV:493105263',
-   '10.2314/GBV:487077911','10.2314/GBV:607866403'))
+crosscite(c('10.5169/SEALS-52668','10.2314/GBV:493109919',
+   '10.2314/GBV:493105263', '10.2314/GBV:487077911',
+   '10.2314/GBV:607866403'))
 }
 }
 

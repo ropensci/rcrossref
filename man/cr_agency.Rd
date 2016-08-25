@@ -22,7 +22,8 @@ Check the DOI minting agency on one or more dois
 \examples{
 \dontrun{
 cr_agency(dois = '10.13039/100000001')
-cr_agency(dois = c('10.13039/100000001','10.13039/100000015','10.5284/1011335'))
+cr_agency(
+  dois = c('10.13039/100000001','10.13039/100000015','10.5284/1011335'))
 }
 }
 \author{

@@ -29,7 +29,11 @@ cr_citation_count <- function(doi, url = "http://www.crossref.org/openurl/",
   cite_count <- GET(url, query = args, make_rcrossref_ua(), ...)
   stop_for_status(cite_count)
   ans <- xml2::read_xml(ct_utf8(cite_count))
-  if (get_attr(ans, "status") == "unresolved") NA else as.numeric(get_attr(ans, "fl_count"))
+  if (get_attr(ans, "status") == "unresolved") {
+    NA 
+  } else {
+    as.numeric(get_attr(ans, "fl_count"))
+  }
 }
 
 get_attr <- function(xml, attr){
