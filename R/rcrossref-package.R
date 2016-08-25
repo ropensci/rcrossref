@@ -52,6 +52,7 @@
 #' will be appended to that file. Addin authored by Hao Zhu 
 #' \url{https://github.com/haozhu233}
 #' 
+#' @importFrom methods as
 #' @importFrom utils modifyList packageVersion
 #' @importFrom dplyr bind_rows tbl_df
 #' @importFrom R6 R6Class
