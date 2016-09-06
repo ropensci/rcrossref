@@ -49,7 +49,16 @@ test_that("DOIs with no agency found still work, at least some do", {
 test_that("cr_cn checks if doi agency supports format", {
   skip_on_cran()
   
-  expect_error(cr_cn(dois = "10.3233/ISU-150780", format = "crossref-tdm"))
-  expect_error(cr_cn("10.4225/55/5568087BB3A88", "citeproc-json"))
-  expect_error(cr_cn("10.1126/science.169.3946.635", "onix-xml"))
+  expect_error(
+    cr_cn(dois = "10.3233/ISU-150780", format = "crossref-tdm"),
+    "not supported by the DOI registration agency: 'medra'"
+  )
+  expect_error(
+    cr_cn("10.4225/55/5568087BB3A88", "citeproc-json"),
+    "not supported by the DOI registration agency: 'datacite'"
+  )
+  expect_error(
+    cr_cn("10.1126/science.169.3946.635", "onix-xml"),
+    "not supported by the DOI registration agency: 'crossref'"
+  )
 })
