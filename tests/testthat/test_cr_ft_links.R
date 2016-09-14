@@ -8,7 +8,7 @@ test_that("cr_ft_links returns correct class", {
   out <- cr_works(filter = c(has_full_text = TRUE), limit = 50)
   dois <- out$data$DOI
   b <- cr_ft_links("10.7554/elife.06200", "pdf")
-  d <- cr_ft_links("10.3897/phytokeys.42.7604", "all")
+  d <- cr_ft_links("10.3897/phytokeys.52.5250", "all")
   
   expect_is(a, "tdmurl")
   expect_is(a[[1]], "character")
