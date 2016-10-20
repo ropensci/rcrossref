@@ -46,7 +46,7 @@ cr_ft_links(doi = "10.5555/515151", "pdf")
 cr_ft_links(doi = "10.5555/515151", "pdf")
 
 # all links
-cr_ft_links(doi = "10.3897/phytokeys.42.7604", type = "all")
+cr_ft_links(doi = "10.3897/phytokeys.52.5250", type = "all")
 
 # Get doi first from other fxn, then pass here
 out <- cr_works(filter=c(has_full_text = TRUE), limit = 50)

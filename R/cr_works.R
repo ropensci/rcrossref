@@ -39,6 +39,10 @@
 #' cr_works(filter=c(has_full_text = TRUE))
 #' # has affilitation data
 #' cr_works(filter=c(has_affiliation = TRUE))
+#' # has abstract
+#' cr_works(filter=c(has_abstract = TRUE))
+#' # has clinical trial number
+#' cr_works(filter=c(has_clinical_trial_number = TRUE))
 #'
 #' # Querying dois
 #' cr_works(dois='10.1063/1.3593378')
@@ -198,45 +202,45 @@ parse_works <- function(zzz){
             'deposited','DOI','funder','indexed','ISBN','ISSN','issue',
             'issued','license', 'link','member','page','prefix','publisher',
             'reference-count','score','source', 'subject','subtitle','title',
-            'type','update-policy','URL','volume')
-  manip <- function(which="issued", y){
-    res <- switch(which,
-                  `alternative-id` = list(paste0(unlist(y[[which]]), 
-                                                 collapse = ",")),
-                  `archive` = list(y[[which]]),
-                  `container-title` = list(paste0(unlist(y[[which]]), 
-                                                  collapse = ",")),
-                  created = list(make_date(y[[which]]$`date-parts`)),
-                  deposited = list(make_date(y[[which]]$`date-parts`)),
-                  DOI = list(y[[which]]),
-                  #funder = list(parse_awards(y[[which]])),
-                  indexed = list(make_date(y[[which]]$`date-parts`)),
-                  ISBN = list(paste0(unlist(y[[which]]), collapse = ",")),
-                  ISSN = list(paste0(unlist(y[[which]]), collapse = ",")),
-                  issue = list(y[[which]]),
-                  issued = list(
-                    paste0(
-                      sprintf("%02d", 
-                              unlist(y[[which]]$`date-parts`)), collapse = "-")
-                  ),
-                  license = list(parse_license(y[[which]])),
-                  #link = list(get_links(y[[which]])),
-                  member = list(y[[which]]),
-                  page = list(y[[which]]),
-                  prefix = list(y[[which]]),
-                  publisher = list(y[[which]]),
-                  `reference-count` = list(y[[which]]),
-                  score = list(y[[which]]),
-                  source = list(y[[which]]),
-                  subject = list(paste0(unlist(y[[which]]), collapse = ",")),
-                  subtitle = list(y[[which]]),
-                  title = list(paste0(unlist(y[[which]]), collapse = ",")),
-                  type = list(y[[which]]),
-                  `update-policy` = list(y[[which]]),
-                  URL = list(y[[which]]),
-                  volume = list(y[[which]])
+            'type','update-policy','URL','volume','abstract')
+  manip <- function(which="issued", y) {
+    res <- switch(
+      which,
+      `alternative-id` = list(paste0(unlist(y[[which]]), 
+                                     collapse = ",")),
+      `archive` = list(y[[which]]),
+      `container-title` = list(paste0(unlist(y[[which]]), 
+                                      collapse = ",")),
+      created = list(make_date(y[[which]]$`date-parts`)),
+      deposited = list(make_date(y[[which]]$`date-parts`)),
+      DOI = list(y[[which]]),
+      indexed = list(make_date(y[[which]]$`date-parts`)),
+      ISBN = list(paste0(unlist(y[[which]]), collapse = ",")),
+      ISSN = list(paste0(unlist(y[[which]]), collapse = ",")),
+      issue = list(y[[which]]),
+      issued = list(
+        paste0(
+          sprintf("%02d", 
+                  unlist(y[[which]]$`date-parts`)), collapse = "-")
+      ),
+      license = list(parse_license(y[[which]])),
+      member = list(y[[which]]),
+      page = list(y[[which]]),
+      prefix = list(y[[which]]),
+      publisher = list(y[[which]]),
+      `reference-count` = list(y[[which]]),
+      score = list(y[[which]]),
+      source = list(y[[which]]),
+      subject = list(paste0(unlist(y[[which]]), collapse = ",")),
+      subtitle = list(y[[which]]),
+      title = list(paste0(unlist(y[[which]]), collapse = ",")),
+      type = list(y[[which]]),
+      `update-policy` = list(y[[which]]),
+      URL = list(y[[which]]),
+      volume = list(y[[which]]),
+      abstract = list(y[[which]])
     )
-
+    
     res <- if (is.null(res) || length(res) == 0) NA else res
     if (length(res[[1]]) > 1) {
       names(res[[1]]) <- paste(which, names(res[[1]]), sep = "_")
@@ -254,10 +258,11 @@ parse_works <- function(zzz){
   } else {
     out_tmp <- data.frame(as.list(unlist(lapply(keys, manip, y = zzz))), 
                           stringsAsFactors = FALSE)
-    out_tmp$assertion <- list(parse_todf(zzz$assertion))
-    out_tmp$author <- list(parse_todf(zzz$author))
-    out_tmp$funder <- list(parse_todf(zzz$funder))
-    out_tmp$link <- list(parse_todf(zzz$link))
+    out_tmp$assertion <- list(parse_todf(zzz$assertion)) %||% NULL
+    out_tmp$author <- list(parse_todf(zzz$author)) %||% NULL
+    out_tmp$funder <- list(parse_todf(zzz$funder)) %||% NULL
+    out_tmp$link <- list(parse_todf(zzz$link)) %||% NULL
+    out_tmp$`clinical-trial-number` <- list(parse_todf(zzz$`clinical-trial-number`)) %||% NULL
     return(out_tmp)
   }
 }
@@ -276,6 +281,14 @@ parse_license <- function(x){
     date <- make_date(x[[1]]$start$`date-parts`)
     data.frame(date = date, x[[1]][!names(x[[1]]) == "start"], 
                stringsAsFactors = FALSE)
+  }
+}
+
+parse_ctn <- function(x){
+  if (is.null(x)) {
+    NULL
+  } else {
+    stats::setNames(x[[1]], c('number', 'registry'))
   }
 }
 
