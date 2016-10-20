@@ -7,9 +7,7 @@
 cr_r(sample = 10, ...)
 }
 \arguments{
-\item{sample}{The number of returned random DOIs. Maximum is 1000, default 20.
-Note that a request for 1000 random DOIs will take a few seconds to
-complete, whereas a request for 20 will take ~1 second.}
+\item{sample}{The number of returned random DOIs. Maximum: 100. Default: 20.}
 
 \item{...}{Further args passed on to \code{\link{cr_works}}}
 }
@@ -23,16 +21,12 @@ Get a random set of DOI's through CrossRef.
 \dontrun{
 # Default search gets 10 random DOIs
 cr_r()
+
+# Get 30 DOIs
+cr_r(30)
 }
 }
 \author{
 Scott Chamberlain \email{myrmecocystus@gmail.com}
-}
-\references{
-\url{http://random.labs.crossref.org/}
-}
-\seealso{
-\code{\link{cr_search}}, \code{\link{cr_citation}}, 
-\code{\link{cr_search_free}}
 }
 
