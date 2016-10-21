@@ -4,7 +4,8 @@
 #' rcrossref interacts with the main Crossref metadata search API at
 #' \url{https://github.com/CrossRef/rest-api-doc/blob/master/rest_api.md}, 
 #' the old metadata search API at \url{http://search.labs.crossref.org/}, their 
-#' DOI Content Negotiation service at \url{http://www.crosscite.org/cn/}, and 
+#' DOI Content Negotiation service at 
+#' \url{http://citation.crosscite.org/docs.html}, and 
 #' the \emph{Text and Data Mining} project \url{http://tdmsupport.crossref.org/}
 #'
 #' @section Deprecated and Defunct:

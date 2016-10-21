@@ -84,7 +84,7 @@ The following functions all use the [CrossRef API](https://github.com/CrossRef/r
 ### Look up funder information
 
 ```{r}
-cr_fundref(query = "NSF")
+cr_funders(query = "NSF")
 ```
 
 ### Check the DOI minting agency

@@ -14,8 +14,8 @@
 #' @param raw (logical) Return raw text in the format given by \code{format} 
 #'   parameter. Default: FALSE
 #' @template moreargs
-#' @details See \url{http://www.crosscite.org/cn/} for more info on the Crossref
-#'   Content Negotiation API service.
+#' @details See \url{http://citation.crosscite.org/docs.html} for more info 
+#' on the Crossref Content Negotiation API service.
 #'   
 #'   DataCite DOIs: Some values of the \code{format} parameter won't work with 
 #'   DataCite DOIs, i.e. "citeproc-json", "crossref-xml", "crossref-tdm", 

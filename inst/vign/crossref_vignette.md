@@ -29,7 +29,7 @@ library("rcrossref")
 
 ## Citation search
 
-CrossRef's [DOI Content Negotiation](http://www.crosscite.org/cn/) service, where you can citations back in various formats, including `apa`
+CrossRef's [DOI Content Negotiation](http://citation.crosscite.org/docs.html) service, where you can citations back in various formats, including `apa`
 
 
 ```r
@@ -112,7 +112,7 @@ There are two functions that use an older Crossre API: `cr_search()` and `cr_sea
 
 
 ```r
-cr_fundref(query="NSF")
+cr_funders(query="NSF")
 ```
 
 ```
@@ -121,19 +121,19 @@ cr_fundref(query="NSF")
 #> 1             8          NSF           0             20
 #> 
 #> $data
-#> Source: local data frame [8 x 6]
-#> 
+#> # A tibble: 8 × 6
 #>             id      location
-#>          (chr)         (chr)
-#> 1 501100000930     Australia
-#> 2    100000001 United States
-#> 3    100003187 United States
-#> 4    100008367       Denmark
-#> 5 501100004190        Norway
-#> 6    100000179 United States
-#> 7    100006445 United States
+#>          <chr>         <chr>
+#> 1    100003187 United States
+#> 2    100008367       Denmark
+#> 3 501100004190        Norway
+#> 4    100000179 United States
+#> 5    100006445 United States
+#> 6 501100000930     Australia
+#> 7    100000001 United States
 #> 8 501100001809         China
-#> Variables not shown: name (chr), alt.names (chr), uri (chr), tokens (chr)
+#> # ... with 4 more variables: name <chr>, alt.names <chr>, uri <chr>,
+#> #   tokens <chr>
 ```
 
 ### Check the DOI minting agency

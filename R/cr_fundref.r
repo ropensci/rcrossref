@@ -63,14 +63,10 @@
 #' cr_funders_('10.13039/100000001', works = TRUE, cursor = "*",
 #'    cursor_max = 300, limit = 100, parse = TRUE)
 #' }
-`cr_fundref` <- function(dois = NULL, query = NULL, filter = NULL, offset = NULL,
+`cr_funders` <- function(dois = NULL, query = NULL, filter = NULL, offset = NULL,
   limit = NULL,  sample = NULL, sort = NULL, order = NULL, facet=FALSE, 
   works = FALSE, cursor = NULL, cursor_max = 5000, .progress="none", ...) {
 
-  .Deprecated(
-  msg = 
-  "function name changing to cr_funders in the next version\nboth work for now"
-  )
   args <- prep_args(query, filter, offset, limit, sample, sort, 
                     order, facet, cursor)
   if (length(dois) > 1) {
@@ -137,11 +133,7 @@
 }
 
 #' @export
-#' @rdname cr_fundref
-`cr_funders` <- `cr_fundref`
-
-#' @export
-#' @rdname cr_fundref
+#' @rdname cr_funders
 `cr_funders_` <- function(dois = NULL, query = NULL, filter = NULL, 
   offset = NULL, limit = NULL,  sample = NULL, sort = NULL, order = NULL, 
   facet=FALSE, works = FALSE, cursor = NULL, cursor_max = 5000, 

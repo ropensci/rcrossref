@@ -8,14 +8,22 @@ These functions still work but will be removed (defunct) in the next version.
 }
 \details{
 \itemize{
- \item \code{\link{cr_search}}: The functionality of this function can 
- be achieved with the new Crossref API. See functions \code{\link{cr_works}} 
- et al.
- \item \code{\link{cr_search_free}}: The functionality of this function can 
- be achieved with the new Crossref API. See functions \code{\link{cr_works}} 
- et al.
- \item \code{\link{crosscite}}: The functionality of this function can be 
- achieved with \code{\link{cr_cn}}
+ \item \code{\link{cr_ft_text}}: This function and other text mining
+ functions are being incorporated in a new package \code{crminer}.
+ \item \code{\link{cr_ft_links}}: This function and other text mining
+ functions are being incorporated in a new package \code{crminer}.
+ \item \code{\link{cr_ft_pdf}}: This function and other text mining
+ functions are being incorporated in a new package \code{crminer}.
+ \item \code{\link{cr_ft_plain}}: This function and other text mining
+ functions are being incorporated in a new package \code{crminer}.
+ \item \code{\link{cr_ft_text}}: This function and other text mining
+ functions are being incorporated in a new package \code{crminer}.
+ \item \code{\link{cr_ft_xml}}: This function and other text mining
+ functions are being incorporated in a new package \code{crminer}.
+ \item \code{\link{as.tdmurl}}: This function and other text mining
+ functions are being incorporated in a new package \code{crminer}.
+ \item \code{\link{extract_xpdf}}: This function and other text mining
+ functions are being incorporated in a new package \code{crminer}.
 }
 }
 

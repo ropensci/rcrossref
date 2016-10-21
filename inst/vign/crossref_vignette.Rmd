@@ -33,7 +33,7 @@ library("rcrossref")
 
 ## Citation search
 
-CrossRef's [DOI Content Negotiation](http://www.crosscite.org/cn/) service, where you can citations back in various formats, including `apa`
+CrossRef's [DOI Content Negotiation](http://citation.crosscite.org/docs.html) service, where you can citations back in various formats, including `apa`
 
 ```{r}
 cr_cn(dois = "10.1371/journal.pone.0112608", format = "text", style = "apa")
@@ -72,7 +72,7 @@ There are two functions that use an older Crossre API: `cr_search()` and `cr_sea
 ### Look up funder information
 
 ```{r}
-cr_fundref(query="NSF")
+cr_funders(query="NSF")
 ```
 
 ### Check the DOI minting agency

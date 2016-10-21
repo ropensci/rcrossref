@@ -35,8 +35,8 @@ etc.)}
 Get citations in various formats from CrossRef.
 }
 \details{
-See \url{http://www.crosscite.org/cn/} for more info on the Crossref
-  Content Negotiation API service.
+See \url{http://citation.crosscite.org/docs.html} for more info 
+on the Crossref Content Negotiation API service.
   
   DataCite DOIs: Some values of the \code{format} parameter won't work with 
   DataCite DOIs, i.e. "citeproc-json", "crossref-xml", "crossref-tdm", 
