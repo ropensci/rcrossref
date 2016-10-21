@@ -28,7 +28,8 @@ Imports:
     R6,
     shiny,
     miniUI,
-    stringr
+    stringr,
+    rappdirs
 Suggests:
     roxygen2 (>= 5.0.1),
     testthat,

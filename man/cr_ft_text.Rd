@@ -7,16 +7,16 @@
 \alias{cr_ft_xml}
 \title{Get full text from a DOI}
 \usage{
-cr_ft_text(url, type = "xml", path = "~/.crossref", overwrite = TRUE,
+cr_ft_text(url, type = "xml", path = cr_cache_path(), overwrite = TRUE,
   read = TRUE, verbose = TRUE, cache = TRUE, ...)
 
-cr_ft_plain(url, path = "~/.crossref", overwrite = TRUE, read = TRUE,
+cr_ft_plain(url, path = cr_cache_path(), overwrite = TRUE, read = TRUE,
   verbose = TRUE, ...)
 
-cr_ft_xml(url, path = "~/.crossref", overwrite = TRUE, read = TRUE,
+cr_ft_xml(url, path = cr_cache_path(), overwrite = TRUE, read = TRUE,
   verbose = TRUE, ...)
 
-cr_ft_pdf(url, path = "~/.crossref", overwrite = TRUE, read = TRUE,
+cr_ft_pdf(url, path = cr_cache_path(), overwrite = TRUE, read = TRUE,
   cache = FALSE, verbose = TRUE, ...)
 }
 \arguments{
@@ -24,7 +24,10 @@ cr_ft_pdf(url, path = "~/.crossref", overwrite = TRUE, read = TRUE,
 
 \item{type}{(character) One of xml, plain, pdf, or all}
 
-\item{path}{(character) Path to store pdfs in. Default: \code{~/.crossref/}}
+\item{path}{(character) Path to store pdfs in. By default we use 
+\code{paste0(rappdirs::user_cache_dir(), "/crossref")}, but you can 
+set this directory to something different. Ignored unless getting 
+pdf}
 
 \item{overwrite}{(logical) Overwrite file if it exists already? 
 Default: \code{TRUE}}
