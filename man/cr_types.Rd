@@ -8,12 +8,12 @@
 cr_types(types = NULL, query = NULL, filter = NULL, offset = NULL,
   limit = NULL, sample = NULL, sort = NULL, order = NULL,
   facet = FALSE, works = FALSE, cursor = NULL, cursor_max = 5000,
-  .progress = "none", ...)
+  .progress = "none", flq = NULL, ...)
 
 cr_types_(types = NULL, query = NULL, filter = NULL, offset = NULL,
   limit = NULL, sample = NULL, sort = NULL, order = NULL,
   facet = FALSE, works = FALSE, cursor = NULL, cursor_max = 5000,
-  .progress = "none", parse = FALSE, ...)
+  .progress = "none", parse = FALSE, flq = NULL, ...)
 }
 \arguments{
 \item{types}{(character) Type identifier, e.g., journal}
@@ -55,6 +55,19 @@ found than this value, you will get only those found.}
 "tk", "win", and "time".  See \code{\link[plyr]{create_progress_bar}} for details 
 of each. Only used when passing in multiple ids (e.g., multiple DOIs, DOI prefixes,
 etc.)}
+
+\item{flq}{field queries. One or more field queries. Acceptable set of 
+field query parameters are: 
+\itemize{
+ \item query.title    - Query title and subtitle
+ \item query.container-title    - Query container-title aka. publication name
+ \item query.author - Query author first and given names
+ \item query.editor - Query editor first and given names
+ \item query.chair    - Query chair first and given names
+ \item query.translator - Query translator first and given names
+ \item query.contributor    - Query author, editor, chair and translator 
+ first and given names
+}}
 
 \item{...}{Named parameters passed on to \code{\link[httr]{GET}}}
 
@@ -99,6 +112,11 @@ cr_types_("journal-article", works = TRUE, cursor = "*",
    cursor_max = 300, limit = 100)
 cr_types_("journal-article", works = TRUE, cursor = "*",
    cursor_max = 300, limit = 100, parse = TRUE)
+   
+# field queries
+## query.container-title
+cr_types("journal-article", works = TRUE,
+  flq = c(`query.container-title` = 'Ecology'))
 }
 }
 \references{

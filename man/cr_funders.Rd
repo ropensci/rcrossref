@@ -8,12 +8,12 @@
 cr_funders(dois = NULL, query = NULL, filter = NULL, offset = NULL,
   limit = NULL, sample = NULL, sort = NULL, order = NULL,
   facet = FALSE, works = FALSE, cursor = NULL, cursor_max = 5000,
-  .progress = "none", ...)
+  .progress = "none", flq = NULL, ...)
 
 cr_funders_(dois = NULL, query = NULL, filter = NULL, offset = NULL,
   limit = NULL, sample = NULL, sort = NULL, order = NULL,
   facet = FALSE, works = FALSE, cursor = NULL, cursor_max = 5000,
-  .progress = "none", parse = FALSE, ...)
+  .progress = "none", parse = FALSE, flq = NULL, ...)
 }
 \arguments{
 \item{dois}{Search by a single DOI or many DOIs.}
@@ -55,6 +55,19 @@ found than this value, you will get only those found.}
 "tk", "win", and "time".  See \code{\link[plyr]{create_progress_bar}} for details 
 of each. Only used when passing in multiple ids (e.g., multiple DOIs, DOI prefixes,
 etc.)}
+
+\item{flq}{field queries. One or more field queries. Acceptable set of 
+field query parameters are: 
+\itemize{
+ \item query.title    - Query title and subtitle
+ \item query.container-title    - Query container-title aka. publication name
+ \item query.author - Query author first and given names
+ \item query.editor - Query editor first and given names
+ \item query.chair    - Query chair first and given names
+ \item query.translator - Query translator first and given names
+ \item query.contributor    - Query author, editor, chair and translator 
+ first and given names
+}}
 
 \item{...}{Named parameters passed on to \code{\link[httr]{GET}}}
 
@@ -115,6 +128,11 @@ cr_funders_('10.13039/100000001', works = TRUE, cursor = "*",
    cursor_max = 300, limit = 100)
 cr_funders_('10.13039/100000001', works = TRUE, cursor = "*",
    cursor_max = 300, limit = 100, parse = TRUE)
+   
+# field queries
+## query.container-title
+cr_funders('10.13039/100000001', works = TRUE,
+  flq = c(`query.container-title` = 'Ecology'))
 }
 }
 \references{

@@ -106,16 +106,43 @@ ifnullna <- function(x) {
   if (is.null(x)) NA else x
 }
 
-prep_args <- function(query, filter, offset, limit, sample, sort, order, facet, cursor) {
+flq_set <- c(
+  'query.title',
+  'query.container-title',
+  'query.author',
+  'query.editor',
+  'query.chair',
+  'query.translator',
+  'query.contributor'
+)
+
+field_query_handler <- function(x) {
+  if (is.null(x)) {
+    NULL
+  } else {
+    if (!all(names(x) %in% flq_set)) {
+      stop("field query not in acceptable set, see ?cr_works", call. = FALSE)
+    }
+    as.list(x)
+  }
+}
+
+prep_args <- function(query, filter, offset, limit, sample, sort, 
+                      order, facet, cursor, flq) {
   check_limit(limit)
   check_number(offset)
   check_number(sample)
   filter <- filter_handler(filter)
+  flq <- field_query_handler(flq)
   facet <- if (facet) "t" else NULL
-  cr_compact(list(query = query, filter = filter, offset = offset, rows = limit,
-                  sample = sample, sort = sort, order = order, facet = facet,
-                  cursor = cursor))
-
+  cr_compact(
+    c(
+      list(query = query, filter = filter, offset = offset, rows = limit,
+           sample = sample, sort = sort, order = order, facet = facet,
+           cursor = cursor),
+      flq
+    )
+  )
 }
 
 `%||%` <- function(x, y) if (is.null(x) || length(x) == 0) y else x

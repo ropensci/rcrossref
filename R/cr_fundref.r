@@ -6,6 +6,7 @@
 #' @template args
 #' @template moreargs
 #' @template cursor_args
+#' @template field_queries
 #' @param facet (logical) Include facet results. Default: \code{FALSE}
 #' @param works (logical) If TRUE, works returned as well, if not then not.
 #' @param parse (logical) Whether to output json \code{FALSE} or parse to
@@ -62,13 +63,18 @@
 #'    cursor_max = 300, limit = 100)
 #' cr_funders_('10.13039/100000001', works = TRUE, cursor = "*",
 #'    cursor_max = 300, limit = 100, parse = TRUE)
+#'    
+#' # field queries
+#' ## query.container-title
+#' cr_funders('10.13039/100000001', works = TRUE,
+#'   flq = c(`query.container-title` = 'Ecology'))
 #' }
 `cr_funders` <- function(dois = NULL, query = NULL, filter = NULL, offset = NULL,
   limit = NULL,  sample = NULL, sort = NULL, order = NULL, facet=FALSE, 
-  works = FALSE, cursor = NULL, cursor_max = 5000, .progress="none", ...) {
+  works = FALSE, cursor = NULL, cursor_max = 5000, .progress="none", flq = NULL, ...) {
 
   args <- prep_args(query, filter, offset, limit, sample, sort, 
-                    order, facet, cursor)
+                    order, facet, cursor, flq)
   if (length(dois) > 1) {
     res <- llply(dois, fundref_GET, args = args, works = works,
                  cursor = cursor, cursor_max = cursor_max, ..., 
@@ -137,10 +143,10 @@
 `cr_funders_` <- function(dois = NULL, query = NULL, filter = NULL, 
   offset = NULL, limit = NULL,  sample = NULL, sort = NULL, order = NULL, 
   facet=FALSE, works = FALSE, cursor = NULL, cursor_max = 5000, 
-  .progress="none", parse=FALSE, ...) {
+  .progress="none", parse=FALSE, flq = NULL, ...) {
 
   args <- prep_args(query, filter, offset, limit, sample, sort, order, 
-                    facet, cursor)
+                    facet, cursor, flq)
   if (length(dois) > 1) {
     llply(dois, fundref_GET_, args = args, works = works,
           cursor = cursor, cursor_max = cursor_max, parse = parse, ..., 

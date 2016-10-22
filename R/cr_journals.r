@@ -6,6 +6,7 @@
 #' @template args
 #' @template moreargs
 #' @template cursor_args
+#' @template field_queries
 #' @param facet (logical) Include facet results. Default: \code{FALSE}
 #' @param works (logical) If TRUE, works returned as well, if not then not.
 #' @param parse (logical) Whether to output json \code{FALSE} or parse to
@@ -52,11 +53,15 @@
 #'    cursor_max = 300, limit = 100)
 #' cr_journals_("2167-8359", works = TRUE, cursor = "*",
 #'    cursor_max = 300, limit = 100, parse = TRUE)
+#'    
+#' # field queries
+#' ## query.author
+#' cr_journals("2167-8359", works = TRUE, flq = c(`query.author` = 'Jane'))
 #' }
 
 `cr_journals` <- function(issn = NULL, query = NULL, filter = NULL, offset = NULL,
   limit = NULL, sample = NULL, sort = NULL, order = NULL, facet = FALSE, works=FALSE,
-  cursor = NULL, cursor_max = 5000, .progress="none", ...) {
+  cursor = NULL, cursor_max = 5000, .progress="none", flq = NULL, ...) {
 
   if (works) {
     if (is.null(issn)) {
@@ -64,7 +69,7 @@
     }
   }
   args <- prep_args(query, filter, offset, limit, sample, 
-                    sort, order, facet, cursor)
+                    sort, order, facet, cursor, flq)
 
   if (length(issn) > 1) {
     res <- llply(issn, journal_GET, args = args, works = works,
@@ -117,7 +122,7 @@
 `cr_journals_` <- function(issn = NULL, query = NULL, filter = NULL, 
   offset = NULL, limit = NULL, sample = NULL, sort = NULL, order = NULL, 
   facet = FALSE, works=FALSE, cursor = NULL, cursor_max = 5000, 
-  .progress="none", parse=FALSE, ...) {
+  .progress="none", parse=FALSE, flq = NULL, ...) {
 
   if (works) {
     if (is.null(issn)) {
@@ -125,7 +130,7 @@
     }
   }
   args <- prep_args(query, filter, offset, limit, sample, sort, order, 
-                    facet, cursor)
+                    facet, cursor, flq)
   if (length(issn) > 1) {
     llply(issn, journal_GET_, args = args, works = works,
           cursor = cursor, cursor_max = cursor_max,

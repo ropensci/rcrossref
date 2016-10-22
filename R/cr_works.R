@@ -6,6 +6,7 @@
 #' @template args
 #' @template moreargs
 #' @template cursor_args
+#' @template field_queries
 #' @param facet (logical) Include facet results. Default: \code{FALSE}
 #' @param parse (logical) Whether to output json \code{FALSE} or parse to
 #' list \code{TRUE}. Default: \code{FALSE}
@@ -84,17 +85,29 @@
 #' cr_works_(query="NSF", cursor = "*", cursor_max = 300, limit = 100)
 #' cr_works_(query="NSF", cursor = "*", cursor_max = 300, limit = 100, 
 #'    parse=TRUE)
+#'    
+#' # field queries
+#' ## query.author
+#' res <- cr_works(query = "ecology", flq = c(query.author = 'Boettiger'))
+#'
+#' ## query.container-title
+#' res <- cr_works(query = "ecology", 
+#'   flq = c(`query.container-title` = 'Ecology'))
+#' 
+#' ## query.author and query.title
+#' res <- cr_works(query = "ecology", 
+#'   flq = c(query.author = 'Smith', query.title = 'cell'))
 #' }
 
 `cr_works` <- function(dois = NULL, query = NULL, filter = NULL, offset = NULL,
   limit = NULL, sample = NULL, sort = NULL, order = NULL, facet=FALSE,
-  cursor = NULL, cursor_max = 5000, .progress="none", ...) {
+  cursor = NULL, cursor_max = 5000, .progress="none", flq = NULL, ...) {
 
   if (cursor_max != as.integer(cursor_max)) {
     stop("cursor_max must be an integer", call. = FALSE)
   }
   args <- prep_args(query, filter, offset, limit, sample, sort, order, 
-                    facet, cursor)
+                    facet, cursor, flq)
 
   if (length(dois) > 1) {
     res <- llply(dois, cr_get_cursor, args = args, cursor = cursor,
@@ -131,13 +144,13 @@
 #' @rdname cr_works
 `cr_works_` <- function(dois = NULL, query = NULL, filter = NULL, offset = NULL,
   limit = NULL, sample = NULL, sort = NULL, order = NULL, facet=FALSE,
-  cursor = NULL, cursor_max = 5000, .progress="none", parse=FALSE, ...) {
+  cursor = NULL, cursor_max = 5000, .progress="none", parse=FALSE, flq = NULL, ...) {
 
   if (cursor_max != as.integer(cursor_max)) {
     stop("cursor_max must be an integer", call. = FALSE)
   }
   args <- prep_args(query, filter, offset, limit, sample, sort, order, 
-                    facet, cursor)
+                    facet, cursor, flq)
 
   if (length(dois) > 1) {
     llply(dois, cr_get_cursor_, args = args, cursor = cursor,
