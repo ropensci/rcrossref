@@ -24,7 +24,7 @@ R interface to various CrossRef APIs
 
 * Crossref API: [https://github.com/CrossRef/rest-api-doc/blob/master/rest_api.md](https://github.com/CrossRef/rest-api-doc/blob/master/rest_api.md)
 * Crossref [metadata search API](http://search.labs.crossref.org/)
-* CrossRef [DOI Content Negotiation](http://www.crosscite.org/cn/)
+* CrossRef [DOI Content Negotiation](http://citation.crosscite.org/docs.html)
 * Text and Data Mining [TDM](http://tdmsupport.crossref.org/)
 
 ## Installation
@@ -51,7 +51,7 @@ library('rcrossref')
 
 ## Citation search
 
-Use CrossRef's [DOI Content Negotiation](http://www.crosscite.org/cn/) service, where you can citations back in various formats, including `apa`
+Use CrossRef's [DOI Content Negotiation](http://citation.crosscite.org/docs.html) service, where you can citations back in various formats, including `apa`
 
 ```{r}
 cr_cn(dois = "10.1126/science.169.3946.635", format = "text", style = "apa")

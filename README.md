@@ -17,7 +17,7 @@ R interface to various CrossRef APIs
 
 * Crossref API: [https://github.com/CrossRef/rest-api-doc/blob/master/rest_api.md](https://github.com/CrossRef/rest-api-doc/blob/master/rest_api.md)
 * Crossref [metadata search API](http://search.labs.crossref.org/)
-* CrossRef [DOI Content Negotiation](http://www.crosscite.org/cn/)
+* CrossRef [DOI Content Negotiation](http://citation.crosscite.org/docs.html)
 * Text and Data Mining [TDM](http://tdmsupport.crossref.org/)
 
 ## Installation
@@ -47,7 +47,7 @@ library('rcrossref')
 
 ## Citation search
 
-Use CrossRef's [DOI Content Negotiation](http://www.crosscite.org/cn/) service, where you can citations back in various formats, including `apa`
+Use CrossRef's [DOI Content Negotiation](http://citation.crosscite.org/docs.html) service, where you can citations back in various formats, including `apa`
 
 
 ```r
@@ -148,7 +148,7 @@ cr_agency(dois = '10.13039/100000001')
 cr_works(filter = c(has_orcid = TRUE, from_pub_date = '2004-04-04'), limit = 1)
 #> $meta
 #>   total_results search_terms start_index items_per_page
-#> 1        419209           NA           0              1
+#> 1        419228           NA           0              1
 #> 
 #> $data
 #> # A tibble: 1 × 24
@@ -299,11 +299,16 @@ cr_members(query = 'ecology', limit = 5)
 
 ```r
 cr_r()
-#>  [1] "10.1007/springerreference_78003" "10.1093/llc/6.4.307"            
-#>  [3] "10.3917/riges.374.0067"          "10.1016/0091-3057(79)90213-2"   
-#>  [5] "10.5594/j03208"                  "10.1039/c1jm14024h"             
-#>  [7] "10.1039/c4ra09007a"              "10.1542/peds.2010-2702"         
-#>  [9] "10.1016/s0140-6736(74)93081-5"   "10.1177/0885066603018003009"
+#>  [1] "10.1039/ct8885300641"                
+#>  [2] "10.1063/1.1709474"                   
+#>  [3] "10.1111/j.1708-8305.1996.tb00750.x"  
+#>  [4] "10.1037//1076-898x.2.3.270"          
+#>  [5] "10.4337/9781783471171.00028"         
+#>  [6] "10.1007/978-1-349-07777-9_4"         
+#>  [7] "10.1111/b.9781405116749.2003.00054.x"
+#>  [8] "10.1016/j.crvi.2004.09.010"          
+#>  [9] "10.1002/uog.15794"                   
+#> [10] "10.14731/kjis.2013.12.11.2.295"
 ```
 
 You can pass in the number of DOIs you want back (default is 10)
@@ -311,7 +316,7 @@ You can pass in the number of DOIs you want back (default is 10)
 
 ```r
 cr_r(2)
-#> [1] "10.1080/14942119.2016.1157994" "10.2307/201048"
+#> [1] "10.1038/scibx.2008.713"          "10.1007/978-3-642-41714-6_91906"
 ```
 
 ## pmid2doi & doi2pmid
