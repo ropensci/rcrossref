@@ -20,7 +20,7 @@ test_that("cr_ft_text works: pdf", {
   #expect_equal(length(xml1), 2)
   expect_equal(length(pdf_read), 1)
   expect_equal(length(pdf), 2)
-  expect_equal(length(pdf$meta), 14)
+  expect_gt(length(pdf$meta), 5)
   expect_equal(length(pdf$data), 1)
 })
 
