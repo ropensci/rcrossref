@@ -9,6 +9,8 @@ context("cr_ft_text")
 # xml1 <- cr_ft_text(links, 'xml')
 
 test_that("cr_ft_text works: pdf", {
+  skip_on_cran()
+  
   links <- cr_ft_links("10.1155/mbd.1994.183", "all")
   pdf_read <- cr_ft_text(links, "pdf", read = FALSE, verbose = FALSE)
   pdf <- cr_ft_text(links, "pdf", verbose = FALSE)
@@ -31,6 +33,8 @@ test_that("cr_ft_text works: pdf", {
 # })
 
 test_that("cr_ft_text fails correctly", {
+  skip_on_cran()
+  
   expect_error(cr_ft_text(), 'argument "url" is missing')
   expect_error(cr_ft_text("3434"), "a character vector argument expected")
   

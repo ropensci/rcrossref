@@ -87,6 +87,8 @@ test_that("cr_works - parses links data correctly", {
 })
 
 test_that("cr_works - parses funders correctly", {
+  skip_on_cran()
+  
   doi <- "10.1515/crelle-2013-0024"
   aa <- cr_works(doi)
   
@@ -140,6 +142,8 @@ test_that("cr_works - parses funders correctly", {
 })
 
 test_that("cr_works - parses affiliation inside authors correctly", {
+  skip_on_cran()
+  
   doi <- "10.4018/978-1-4666-9588-7.les2"
   aa <- cr_works(doi)
   expect_true(any(grepl("author", names(aa$data))))
