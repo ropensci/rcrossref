@@ -10,15 +10,15 @@ context("cr_ft_text")
 
 test_that("cr_ft_text works: pdf", {
   skip_on_cran()
-  
+
   links <- cr_ft_links("10.1155/mbd.1994.183", "all")
   pdf_read <- cr_ft_text(links, "pdf", read = FALSE, verbose = FALSE)
   pdf <- cr_ft_text(links, "pdf", verbose = FALSE)
-  
+
   #expect_is(xml1, "xml_document")
   expect_is(pdf_read, "character")
   expect_is(pdf, "xpdf_char")
-  
+
   #expect_equal(length(xml1), 2)
   expect_equal(length(pdf_read), 1)
   expect_equal(length(pdf), 2)
@@ -34,10 +34,12 @@ test_that("cr_ft_text works: pdf", {
 
 test_that("cr_ft_text fails correctly", {
   skip_on_cran()
-  
+
   expect_error(cr_ft_text(), 'argument "url" is missing')
   expect_error(cr_ft_text("3434"), "a character vector argument expected")
-  
+
   links <- cr_ft_links("10.1155/mbd.1994.183", "all")
   expect_error(cr_ft_text(links, type = "adfasf"), "'arg' should be one of")
 })
+
+Sys.sleep(1)

@@ -3,13 +3,13 @@ context("testing cr_members")
 
 test_that("cr_members returns", {
   skip_on_cran()
-  
+
   a <- cr_members(member_ids=98)
   b <- cr_members(member_ids=98, works=TRUE)
   c <- cr_members(member_ids=c(10,98,45,1,9))
   d <- cr_members(member_ids=c(10,98,45,1,9), works=TRUE)
   e <- cr_members(query='ecology')
-  
+
   # correct class
   expect_is(a, "list")
   expect_null(a$meta)
@@ -21,7 +21,7 @@ test_that("cr_members returns", {
   expect_is(b$data, "data.frame")
   expect_is(b$data, "tbl_df")
   expect_is(b$data$URL, "character")
-  
+
   expect_is(c, "list")
   expect_is(d, "list")
   expect_is(e, "list")
@@ -36,17 +36,19 @@ test_that("cr_members returns", {
 
 test_that("cr_members fails correctly", {
   skip_on_cran()
-  
+
   library('httr')
   expect_error(cr_members(config=timeout(0.01)))
   expect_equal(NROW(cr_members(query = "adfaaf")$data), 0)
-  
-  expect_warning(cr_members(member_ids=c(323234343434, 3434343434), works=TRUE, facet=TRUE), 
+
+  expect_warning(cr_members(member_ids=c(323234343434, 3434343434), works=TRUE, facet=TRUE),
                  "java.lang.NumberFormatException:")
-  expect_warning(cr_members(member_ids=c(323234343434,3434343434,98), works=TRUE, facet=TRUE), 
+  expect_warning(cr_members(member_ids=c(323234343434,3434343434,98), works=TRUE, facet=TRUE),
                  "java.lang.NumberFormatException:")
-  
+
   # fails due to facet not supported
-  expect_warning(cr_members(facet = TRUE), 
+  expect_warning(cr_members(facet = TRUE),
                "This route does not support facet")
 })
+
+Sys.sleep(1)

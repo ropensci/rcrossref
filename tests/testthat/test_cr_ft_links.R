@@ -3,13 +3,13 @@ context("testing cr_ft_links")
 
 test_that("cr_ft_links returns correct class", {
   skip_on_cran()
-  
+
   a <- cr_ft_links(doi = "10.5555/515151", "pdf")
   out <- cr_works(filter = c(has_full_text = TRUE), limit = 50)
   dois <- out$data$DOI
   b <- cr_ft_links("10.7554/elife.06200", "pdf")
   d <- cr_ft_links("10.3897/phytokeys.52.5250", "all")
-  
+
   expect_is(a, "tdmurl")
   expect_is(a[[1]], "character")
 
@@ -27,7 +27,7 @@ test_that("cr_ft_links returns correct class", {
   expect_equal(length(d[[1]]), 1)
 
   # gives back right values
-  
+
   expect_equal(attr(a, "type"), "pdf")
   expect_equal(attr(b, "type"), "pdf")
   expect_equal(attr(d[[2]], "type"), "xml")
@@ -37,7 +37,9 @@ test_that("cr_ft_links returns correct class", {
 
 test_that("cr_ft_links fails correctly", {
   skip_on_cran()
-  
+
   expect_error(cr_ft_links(), 'argument "doi" is missing')
   expect_null(suppressWarnings(cr_ft_links(doi = "3434")))
 })
+
+Sys.sleep(1)

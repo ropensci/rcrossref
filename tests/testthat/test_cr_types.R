@@ -8,7 +8,7 @@ test_that("cr_types returns correct class", {
   expect_is(aa$data, "data.frame")
   expect_gt(NROW(aa$data), 10)
   expect_equal(aa$facets, NULL) # there is no facets slot
-  
+
   bb <- cr_types("monograph")
   expect_is(bb, "list")
   expect_is(bb$data, "data.frame")
@@ -17,12 +17,12 @@ test_that("cr_types returns correct class", {
 
 test_that("cr_types paging works correctly", {
   skip_on_cran()
-  
+
   # doens't work when works=FALSE
   aa <- cr_types(limit = 3)
   expect_is(aa, "list")
   expect_gt(NROW(aa$data), 3)
-  
+
   # works when works=TRUE
   bb <- cr_types("monograph", works=TRUE, limit = 3)
   expect_is(bb, "list")
@@ -54,3 +54,5 @@ test_that("cr_types fails correctly", {
   library('httr')
   expect_error(cr_types(types="monograph", config=timeout(0.001)))
 })
+
+Sys.sleep(1)

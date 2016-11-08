@@ -13,6 +13,8 @@
 #' res_xpdf$data
 #' }
 extract_xpdf <- function(path){
+  .Deprecated(new = "crm_extract", package = "rcrossref", msg = "Removed - see cr_cn()")
+  
   path <- path.expand(path)
   system2("pdftotext", shQuote(path))
   newpath <- sub("\\.pdf", ".txt", path)
