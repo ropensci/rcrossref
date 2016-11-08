@@ -1,3 +1,39 @@
+rcrossref 0.6.0
+===============
+
+### NEW FEATURES
+
+* Added support for field queries (see 
+<https://github.com/CrossRef/rest-api-doc/blob/master/rest_api.md#field-queries>
+for information on them). Means that you can query on specific fields rather
+than using `query` parameter which queries across all fields (#111)
+* Now using `rappdirs` for local storage and caching for `cr_ft_text`  (#106)
+
+### MINOR IMPROVEMENTS
+
+* Added to man files where appropriate new 10K max value for the 
+`offset` parameter (#126)
+* Added to pkg level man file new rate limit headers included, 
+and how users can get to those, via `config=verbose()` call (#124)
+* Better failure modes on input parameters, still more work to do 
+surely (#101)
+* sleeping now between tests to avoid making crossref rate  
+limit gate keepers mad (#125)
+* `cr_search` and `cr_search_free` are now defunct. They were marked
+deprecated in previous version, and warned of defunctifying, and now 
+they are defunct. Similar functionality can be done with e.g., `cr_works()`
+(#102)
+* `crosscite` is now defunct. The functionality of this function can be 
+achieved with `cr_cn()` (#82)
+* `cr_fundref` is now defunct. Crossref changed their name `fundref` 
+to `funders`, so we've changed our function, see `cr_funders()` (#83)
+* parameter `sample` maximum value is now 100, was previously 1000. 
+documentation updated. (#118)
+* New filters `has-clinical-trial-number` and `has-abstract` added to 
+the package, see `?filters` for help (#120)
+
+
+
 rcrossref 0.5.8
 ===============
 
