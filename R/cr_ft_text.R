@@ -32,6 +32,12 @@
 #' for one because they have a lot of entries in Crossref TDM, but most
 #' of the links that are apparently full text are not in facct full text,
 #' but only metadata.
+#' 
+#' @note This function is deprecated, and will be removed in the next 
+#' version. All text mining functionality will be moved to the new 
+#' package \code{crminer}.
+#' @family textmining
+#' 
 #' @examples \dontrun{
 #' # pdf link
 #' cr_ft_links(doi = "10.5555/515151", "pdf")
@@ -160,7 +166,8 @@
 
 cr_ft_text <- function(url, type='xml', path = cr_cache_path(), overwrite = TRUE,
   read=TRUE, verbose=TRUE, cache=TRUE, ...) {
-
+  
+  .Deprecated("crm_text", "crminer", "Will be removed in next version")
   auth <- cr_auth(url, type)
   switch( pick_type(type, url),
           xml = getTEXT(get_url(url, 'xml'), type, auth, ...),
@@ -185,6 +192,8 @@ get_url <- function(a, b){
 #' @rdname cr_ft_text
 cr_ft_plain <- function(url, path = cr_cache_path(), overwrite = TRUE, read=TRUE, 
                         verbose=TRUE, ...) {
+  
+  .Deprecated("crm_plain", "crminer", "Will be removed in next version")
   if (is.null(url$plain[[1]])) {
     stop("no plain text link found", call. = FALSE)
   }
@@ -195,6 +204,8 @@ cr_ft_plain <- function(url, path = cr_cache_path(), overwrite = TRUE, read=TRUE
 #' @rdname cr_ft_text
 cr_ft_xml <- function(url, path = cr_cache_path(), overwrite = TRUE, read=TRUE, 
                       verbose=TRUE, ...) {
+  
+  .Deprecated("crm_xml", "crminer", "Will be removed in next version")
   if (is.null(url$xml[[1]])) {
     stop("no xml link found", call. = FALSE)
   }
@@ -205,6 +216,8 @@ cr_ft_xml <- function(url, path = cr_cache_path(), overwrite = TRUE, read=TRUE,
 #' @rdname cr_ft_text
 cr_ft_pdf <- function(url, path = cr_cache_path(), overwrite = TRUE, read=TRUE, 
                       cache=FALSE, verbose=TRUE, ...) {
+  
+  .Deprecated("crm_pdf", "crminer", "Will be removed in next version")
   if (is.null(url$pdf[[1]])) {
     stop("no pdf link found", call. = FALSE)
   }

@@ -18,6 +18,11 @@ Extract text from a single pdf document.
 \details{
 Download xpdf from \url{http://www.foolabs.com/xpdf/download.html}
 }
+\note{
+This function is deprecated, and will be removed in the next 
+version. All text mining functionality will be moved to the new 
+package \code{crminer}.
+}
 \examples{
 \dontrun{
 path <- system.file("examples", "MairChamberlain2014RJournal.pdf", 
@@ -26,5 +31,9 @@ path <- system.file("examples", "MairChamberlain2014RJournal.pdf",
 res_xpdf$meta
 res_xpdf$data
 }
+}
+\seealso{
+Other textmining: \code{\link{as.tdmurl}},
+  \code{\link{cr_ft_links}}, \code{\link{cr_ft_text}}
 }
 

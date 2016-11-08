@@ -22,6 +22,11 @@ as.tdmurl(url, type, doi)
 \description{
 Coerce a url to a tdmurl with a specific type
 }
+\note{
+This function is deprecated, and will be removed in the next 
+version. All text mining functionality will be moved to the new 
+package \code{crminer}.
+}
 \examples{
 \dontrun{
 as.tdmurl("http://downloads.hindawi.com/journals/bmri/2014/201717.xml", 
@@ -32,5 +37,9 @@ out <- as.tdmurl("http://downloads.hindawi.com/journals/bmri/2014/201717.pdf",
    "pdf", "10.1155/2014/201717")
 attributes(out)
 }
+}
+\seealso{
+Other textmining: \code{\link{cr_ft_links}},
+  \code{\link{cr_ft_text}}, \code{\link{extract_xpdf}}
 }
 

@@ -5,6 +5,10 @@
 #' @return An object of class xpdf_char
 #' @details 
 #' Download xpdf from \url{http://www.foolabs.com/xpdf/download.html}
+#' @note This function is deprecated, and will be removed in the next 
+#' version. All text mining functionality will be moved to the new 
+#' package \code{crminer}.
+#' @family textmining
 #' @examples \dontrun{
 #' path <- system.file("examples", "MairChamberlain2014RJournal.pdf", 
 #'    package = "rcrossref")
@@ -13,8 +17,7 @@
 #' res_xpdf$data
 #' }
 extract_xpdf <- function(path){
-  .Deprecated(new = "crm_extract", package = "rcrossref", msg = "Removed - see cr_cn()")
-  
+  .Deprecated("crm_extract", "crminer", "Will be removed in next version")
   path <- path.expand(path)
   system2("pdftotext", shQuote(path))
   newpath <- sub("\\.pdf", ".txt", path)

@@ -64,6 +64,11 @@ for one because they have a lot of entries in Crossref TDM, but most
 of the links that are apparently full text are not in facct full text,
 but only metadata.
 }
+\note{
+This function is deprecated, and will be removed in the next 
+version. All text mining functionality will be moved to the new 
+package \code{crminer}.
+}
 \examples{
 \dontrun{
 # pdf link
@@ -190,5 +195,9 @@ dois <- out$data$DOI[1:10]
 #   res[[i]] <- cr_ft_text(tmp, type = "pdf", cache=FALSE)
 # }
 }
+}
+\seealso{
+Other textmining: \code{\link{as.tdmurl}},
+  \code{\link{cr_ft_links}}, \code{\link{extract_xpdf}}
 }
 

@@ -39,6 +39,11 @@ content-type application/pdf, but the URL is not for a PDF, but for both
 XML and PDF, and content-type can be set with that URL as either XML or
 PDF to get that type. Anyway, expect changes...
 }
+\note{
+This function is deprecated, and will be removed in the next 
+version. All text mining functionality will be moved to the new 
+package \code{crminer}.
+}
 \examples{
 \dontrun{
 # pdf link
@@ -59,5 +64,9 @@ cr_ft_links(dois[1], "all")
 cr_ft_links(cr_r(1))
 cr_ft_links(doi="10.3389/fnagi.2014.00130")
 }
+}
+\seealso{
+Other textmining: \code{\link{as.tdmurl}},
+  \code{\link{cr_ft_text}}, \code{\link{extract_xpdf}}
 }
 
