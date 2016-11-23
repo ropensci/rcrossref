@@ -38,4 +38,5 @@ test_that("cr_r 0 defaults to 20", {
   expect_equal(length(cr_r(0)), 20)
 })
 
-Sys.sleep(1)
+Sys.sleep(2)
+

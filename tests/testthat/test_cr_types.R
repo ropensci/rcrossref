@@ -55,4 +55,5 @@ test_that("cr_types fails correctly", {
   expect_error(cr_types(types="monograph", config=timeout(0.001)))
 })
 
-Sys.sleep(1)
+Sys.sleep(2)
+

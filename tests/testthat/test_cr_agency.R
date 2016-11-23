@@ -20,4 +20,4 @@ test_that("cr_ageny fails correctly", {
   expect_error(cr_agency(dois = cr_r(3), config=timeout(0.01)))
 })
 
-Sys.sleep(1)
+Sys.sleep(2)

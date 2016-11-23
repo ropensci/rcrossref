@@ -42,4 +42,5 @@ test_that("cr_ft_text fails correctly", {
   expect_error(cr_ft_text(links, type = "adfasf"), "'arg' should be one of")
 })
 
-Sys.sleep(1)
+Sys.sleep(2)
+

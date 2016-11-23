@@ -46,4 +46,5 @@ test_that("ISSNs that used to fail badly - should fail better now", {
   expect_equal(NROW(suppressMessages(suppressWarnings(cr_journals(c('1932-6203', '1803-2427', "0413-6597"))))), 2)
 })
 
-Sys.sleep(1)
+Sys.sleep(2)
+

@@ -65,4 +65,5 @@ test_that("cr_cn checks if doi agency supports format", {
   )
 })
 
-Sys.sleep(1)
+Sys.sleep(2)
+

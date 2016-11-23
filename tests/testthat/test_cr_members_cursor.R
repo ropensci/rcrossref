@@ -25,4 +25,5 @@ test_that("cr_members cursor fails correctly", {
                "cursor_max must be an integer")
 })
 
-Sys.sleep(1)
+Sys.sleep(2)
+

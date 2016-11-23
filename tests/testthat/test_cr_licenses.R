@@ -34,4 +34,5 @@ test_that("cr_licenses fails correctly", {
   expect_error(cr_licenses(filter=''))
 })
 
-Sys.sleep(1)
+Sys.sleep(2)
+

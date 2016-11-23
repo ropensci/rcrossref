@@ -23,5 +23,3 @@ test_that("cr_works cursor fails correctly", {
   expect_error(cr_works(cursor_max = 3.4),
                "cursor_max must be an integer")
 })
-
-Sys.sleep(1)

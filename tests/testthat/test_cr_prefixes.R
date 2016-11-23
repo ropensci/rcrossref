@@ -41,4 +41,5 @@ test_that("cr_prefixes fails correctly", {
   expect_error(cr_works(prefixes="10.1016", query='ecology', limit=4, config=timeout(0.001)))
 })
 
-Sys.sleep(1)
+Sys.sleep(2)
+

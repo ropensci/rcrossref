@@ -51,4 +51,5 @@ test_that("cr_members fails correctly", {
                "This route does not support facet")
 })
 
-Sys.sleep(1)
+Sys.sleep(2)
+

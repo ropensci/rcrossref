@@ -45,4 +45,5 @@ test_that("as.tdmurl fails correctly", {
   expect_error(as.tdmurl("http://stuff", "bbb"), "'arg' should be one of")
 })
 
-Sys.sleep(1)
+Sys.sleep(2)
+

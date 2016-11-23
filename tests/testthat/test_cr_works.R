@@ -150,4 +150,5 @@ test_that("cr_works - parses affiliation inside authors correctly", {
   expect_named(aa$data$author[[1]], c("affiliation.name", "family", "given"))
 })
 
-Sys.sleep(1)
+Sys.sleep(2)
+

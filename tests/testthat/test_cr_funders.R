@@ -29,4 +29,5 @@ test_that("cr_funders fails correctly", {
                "Resource not found")
 })
 
-Sys.sleep(1)
+Sys.sleep(2)
+

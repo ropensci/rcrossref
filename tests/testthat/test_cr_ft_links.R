@@ -42,4 +42,5 @@ test_that("cr_ft_links fails correctly", {
   expect_null(suppressWarnings(cr_ft_links(doi = "3434")))
 })
 
-Sys.sleep(1)
+Sys.sleep(2)
+

@@ -23,4 +23,5 @@ test_that("cr_citation_count fails correctly", {
   expect_equal(cr_citation_count("10.1371/journal.pone.004"), NA)
 })
 
-Sys.sleep(1)
+Sys.sleep(2)
+
