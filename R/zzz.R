@@ -53,7 +53,7 @@ get_err <- function(x) {
     tmp <- xx
   } else if (x$headers$`content-type` == "text/html") {
     html <- xml2::read_html(xx)
-    tmp <- xml2::xml_text(xml2::xml_find_one(html, '//h3[@class="info"]'))
+    tmp <- xml2::xml_text(xml2::xml_find_first(html, '//h3[@class="info"]'))
   } else if (x$headers$`content-type` == "application/json;charset=UTF-8") {
     tmp <- jsonlite::fromJSON(xx, FALSE)
   } else {
