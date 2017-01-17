@@ -26,7 +26,18 @@ Get a citation count via CrossRef OpenURL
 }
 \details{
 See \url{http://labs.crossref.org/openurl/} for more info on this
-		Crossref API service.
+Crossref API service.
+
+This number is also known as \strong{cited-by}. 
+
+Note that this number may be out of sync/may not match that that the 
+publisher is showing (if they show it) for the same DOI/article. 
+
+We've contacted Crossref about this, and they have confirmed this. 
+Unfortunately, we can not do anything about this.
+
+I would imagine it's best to use this data instead of from the publishers,
+and this data you can get programatically :)
 }
 \examples{
 \dontrun{
