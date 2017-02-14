@@ -12,14 +12,17 @@ test_that("cr_prefixes returns correct class", {
 test_that("cr_prefixes paging works correctly", {
   skip_on_cran()
 
-  expect_equal(NROW(cr_works(prefixes="10.1016", filter=c(has_full_text=TRUE), limit=5)$data), 5)
-  expect_equal(NCOL(cr_works(prefixes="10.1016", query='ecology', limit=4)$meta), 4)
+  expect_equal(NROW(cr_works(prefixes="10.1016", filter=c(has_full_text=TRUE), 
+                             limit=5)$data), 5)
+  expect_equal(NCOL(cr_works(prefixes="10.1016", 
+                             query='ecology', limit=4)$meta), 4)
 })
 
 test_that("cr_prefixes metadata works correctly", {
   skip_on_cran()
 
-  expect_equal(cr_works(prefixes="10.1016", query='ecology', limit=4)$meta$items_per_page, 4)
+  expect_equal(cr_works(prefixes="10.1016", query='ecology', 
+                        limit=4)$meta$items_per_page, 4)
 })
 
 test_that("cr_prefixes facet works correctly", {
@@ -37,8 +40,16 @@ test_that("cr_prefixes facet works correctly", {
 test_that("cr_prefixes fails correctly", {
   skip_on_cran()
 
+  # curl timeout
   library('httr')
-  expect_error(cr_works(prefixes="10.1016", query='ecology', limit=4, config=timeout(0.001)))
+  expect_error(cr_works(prefixes="10.1016", query='ecology', 
+                        limit=4, config=timeout(0.001)))
+  
+  # prefix not found
+  expect_warning(
+    cr_prefixes_(prefixes = c("10.1038", "10.1684", "10.1109")),
+    "404: Resource not found. - \\(prefixes/10.1684\\)"
+  )
 })
 
 Sys.sleep(2)

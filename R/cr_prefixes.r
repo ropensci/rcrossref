@@ -75,7 +75,8 @@
 
 `cr_prefixes` <- function(prefixes, query = NULL, filter = NULL, offset = NULL,
   limit = NULL, sample = NULL, sort = NULL, order = NULL, facet=FALSE, 
-  works = FALSE, cursor = NULL, cursor_max = 5000, .progress="none", flq = NULL, ...) {
+  works = FALSE, cursor = NULL, cursor_max = 5000, .progress="none", 
+  flq = NULL, ...) {
 
   args <- prep_args(query, filter, offset, limit, sample, sort, order, 
                     facet, cursor, flq)
@@ -172,7 +173,8 @@ prefixes_GET_ <- function(x, args, works, cursor = NULL, cursor_max = NULL, pars
   }
 }
 
-DataFrame <- function(x){
+DataFrame <- function(x) {
+  if (is.null(x) || length(x) == 0) return(data.frame(NULL))
   x[ sapply(x, function(y) if (is.null(y) || length(y) == 0) TRUE else FALSE)] <- NA
   data.frame(x, stringsAsFactors = FALSE)
 }
