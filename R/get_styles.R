@@ -4,7 +4,6 @@
 #' @examples \dontrun{
 #' get_styles()[1:5]
 #' }
-
 get_styles <- function(...){
   comm <- GET("https://api.github.com/repos/citation-style-language/styles/commits?per_page=1", ...)
   commres <- jsonlite::fromJSON(ct_utf8(comm), FALSE)
