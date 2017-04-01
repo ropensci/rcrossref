@@ -49,7 +49,9 @@ cr_GET <- function(endpoint, args, todf = TRUE, on_error = warning, parse = TRUE
 
 get_err <- function(x) {
   xx <- ct_utf8(x)
-  if (x$headers$`content-type` == "text/plain") {
+  if (is.null(x$headers$`content-type`)) {
+    tmp <- xx
+  } else if (x$headers$`content-type` == "text/plain") {
     tmp <- xx
   } else if (x$headers$`content-type` == "text/html") {
     html <- xml2::read_html(xx)

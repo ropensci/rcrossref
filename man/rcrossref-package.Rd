@@ -2,8 +2,8 @@
 % Please edit documentation in R/rcrossref-package.R
 \docType{package}
 \name{rcrossref-package}
-\alias{rcrossref}
 \alias{rcrossref-package}
+\alias{rcrossref}
 \title{R Client for Various CrossRef APIs.}
 \description{
 R Client for Various CrossRef APIs.
@@ -89,5 +89,5 @@ citations will be added to a file called \code{crossref.bib}. New citations
 will be appended to that file. Addin authored by Hao Zhu 
 \url{https://github.com/haozhu233}
 }
-\keyword{package}
 
+\keyword{package}

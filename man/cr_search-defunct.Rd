@@ -10,4 +10,3 @@ cr_search(...)
 Search the CrossRef Metatdata API.
 }
 \keyword{internal}
-

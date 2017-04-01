@@ -91,6 +91,7 @@ The API will only work for CrossRef DOIs.
  or lists, with no attempt to parse to data.frame's
 }
 }
+
 \examples{
 \dontrun{
 # Works funded by the NSF
@@ -169,4 +170,3 @@ res <- cr_works(query = "ecology",
 \references{
 \url{https://github.com/CrossRef/rest-api-doc/blob/master/rest_api.md}
 }
-

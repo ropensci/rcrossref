@@ -30,4 +30,3 @@ cr_abstract(doi = '10.1109/TASC.2010.2088091')
 # cr_abstract(cr_r(1))
 }
 }
-

@@ -69,4 +69,3 @@ cr_ft_links(doi="10.3389/fnagi.2014.00130")
 Other textmining: \code{\link{as.tdmurl}},
   \code{\link{cr_ft_text}}, \code{\link{extract_xpdf}}
 }
-

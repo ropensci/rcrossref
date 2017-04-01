@@ -10,4 +10,3 @@ cr_citation(...)
 This function is defunct
 }
 \keyword{internal}
-

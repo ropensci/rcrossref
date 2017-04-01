@@ -124,4 +124,3 @@ cr_types("journal-article", works = TRUE,
 \references{
 \url{https://github.com/CrossRef/rest-api-doc/blob/master/rest_api.md}
 }
-

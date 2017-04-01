@@ -47,10 +47,9 @@ cr_citation_count(doi="10.1016/j.fbr.2012.01.001")
 cr_citation_count(doi="10.1016/j.fbr.2012")
 }
 }
-\author{
-Carl Boettiger \email{cboettig@gmail.com}
-}
 \seealso{
 \code{\link{cr_search}}, \code{\link{cr_r}}
 }
-
+\author{
+Carl Boettiger \email{cboettig@gmail.com}
+}

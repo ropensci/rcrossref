@@ -130,4 +130,3 @@ cr_journals("2167-8359", works = TRUE, flq = c(`query.author` = 'Jane'))
 \references{
 \url{https://github.com/CrossRef/rest-api-doc/blob/master/rest_api.md}
 }
-

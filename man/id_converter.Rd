@@ -34,4 +34,3 @@ id_converter("PMC2883744", "pmcid")
 \references{
 Uses the http://www.ncbi.nlm.nih.gov/pmc/tools/id-converter-api/
 }
-

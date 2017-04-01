@@ -10,4 +10,3 @@ crosscite(...)
 Crosscite - citation formatter
 }
 \keyword{internal}
-

@@ -130,4 +130,3 @@ cr_members(98, works = TRUE, flq = c(`query.container-title` = 'Ecology'))
 \references{
 \url{https://github.com/CrossRef/rest-api-doc/blob/master/rest_api.md}
 }
-

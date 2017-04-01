@@ -36,4 +36,3 @@ res_xpdf$data
 Other textmining: \code{\link{as.tdmurl}},
   \code{\link{cr_ft_links}}, \code{\link{cr_ft_text}}
 }
-

@@ -17,4 +17,3 @@ Get list of styles from github.com/citation-style-language/styles
 get_styles()[1:5]
 }
 }
-

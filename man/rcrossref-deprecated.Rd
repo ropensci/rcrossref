@@ -26,4 +26,3 @@ These functions still work but will be removed (defunct) in the next version.
  functions are being incorporated in a new package \code{crminer}.
 }
 }
-

@@ -29,4 +29,3 @@ cr_r(30)
 \author{
 Scott Chamberlain \email{myrmecocystus@gmail.com}
 }
-

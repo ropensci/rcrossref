@@ -57,4 +57,3 @@ cr_licenses_(query = "elsevier", parse=TRUE)
 \references{
 \url{https://github.com/CrossRef/rest-api-doc/blob/master/rest_api.md}
 }
-

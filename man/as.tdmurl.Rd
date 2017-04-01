@@ -2,8 +2,8 @@
 % Please edit documentation in R/tdmurl.R
 \name{as.tdmurl}
 \alias{as.tdmurl}
-\alias{as.tdmurl.character}
 \alias{as.tdmurl.tdmurl}
+\alias{as.tdmurl.character}
 \title{Coerce a url to a tdmurl with a specific type}
 \usage{
 as.tdmurl(url, type, doi)
@@ -42,4 +42,3 @@ attributes(out)
 Other textmining: \code{\link{cr_ft_links}},
   \code{\link{cr_ft_text}}, \code{\link{extract_xpdf}}
 }
-

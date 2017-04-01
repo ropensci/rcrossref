@@ -121,4 +121,3 @@ cr_cn(dois = "10.1002/app.27716", format = "citeproc-json", raw = TRUE)
 cr_cn("10.1890/0012-9615(1999)069[0569:EDILSA]2.0.CO;2")
 }
 }
-

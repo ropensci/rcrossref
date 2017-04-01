@@ -10,4 +10,3 @@ cr_search_free(...)
 Search the CrossRef Metatdata for DOIs using free form references.
 }
 \keyword{internal}
-

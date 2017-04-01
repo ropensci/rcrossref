@@ -91,6 +91,7 @@ Funders without IDs don't show up on the /funders route, and in this
 function. Some funders don't have assigned IDs in Crossref's system,
 so won't show up in searches.
 }
+
 \examples{
 \dontrun{
 cr_funders(query="NSF", limit=1)
@@ -140,4 +141,3 @@ cr_funders('10.13039/100000001', works = TRUE,
 \references{
 \url{https://github.com/CrossRef/rest-api-doc/blob/master/rest_api.md}
 }
-

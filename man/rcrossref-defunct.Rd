@@ -27,4 +27,3 @@ These functions are gone, no longer available.
  to "funders", so we've changed our function, see \code{\link{cr_funders}}
 }
 }
-
