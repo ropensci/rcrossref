@@ -103,42 +103,48 @@ test_that("cr_works - parses funders correctly", {
   doi <- "10.1186/isrctn11093872"
   bb <- cr_works(doi)
   expect_true(any(grepl("funder", names(bb$data))))
-  expect_named(bb$data$funder[[1]], c("name", "DOI"))
+  expect_named(bb$data$funder[[1]], c("DOI", "name", "doi.asserted.by"))
 
   doi <- "10.1145/2831244.2831252"
   cc <- cr_works(doi)
   expect_true(any(grepl("funder", names(cc$data))))
-  expect_named(cc$data$funder[[1]], c("award", "name"))
+  expect_named(cc$data$funder[[1]], c("name", "award"))
 
   doi <- "10.1145/2834800.2834802"
   dd <- cr_works(doi)
   expect_true(any(grepl("funder", names(dd$data))))
-  expect_named(dd$data$funder[[1]], c("award", "name", "DOI"))
+  expect_named(dd$data$funder[[1]], 
+               c("DOI", "name", "doi.asserted.by", "award"))
 
   doi <- "10.1145/2834800.2834802"
   dd <- cr_works(doi)
   expect_true(any(grepl("funder", names(dd$data))))
-  expect_named(dd$data$funder[[1]], c("award", "name", "DOI"))
+  expect_named(dd$data$funder[[1]], 
+               c("DOI", "name", "doi.asserted.by", "award"))
 
   doi <- "10.1145/2832099.2832103"
   ee <- cr_works(doi)
   expect_true(any(grepl("funder", names(ee$data))))
-  expect_named(ee$data$funder[[1]], c("award", "name", "DOI"))
+  expect_named(ee$data$funder[[1]], 
+               c("DOI", "name", "doi.asserted.by", "award"))
 
   doi <- "10.1016/j.pediatrneurol.2015.06.002"
   ff <- cr_works(doi)
   expect_true(any(grepl("funder", names(ff$data))))
-  expect_named(ff$data$funder[[1]], c("doi.asserted.by", "name", "DOI"))
+  expect_named(ff$data$funder[[1]], c("DOI", "name", "doi.asserted.by"))
 
   doi <- "10.1016/j.tcs.2015.06.001"
   gg <- cr_works(doi)
   expect_true(any(grepl("funder", names(gg$data))))
-  expect_named(gg$data$funder[[1]], c("award", "doi.asserted.by", "name", "DOI"))
+  expect_named(gg$data$funder[[1]], 
+               c("DOI", "name", "doi.asserted.by", "award"))
 
   doi <- "10.1016/j.ffa.2015.10.008"
   hh <- cr_works(doi)
   expect_true(any(grepl("funder", names(hh$data))))
-  expect_named(hh$data$funder[[1]], c("award1", "award2", "award3", "doi.asserted.by", "name", "DOI"))
+  expect_named(
+    hh$data$funder[[1]], 
+    c("DOI", "name", "doi.asserted.by", "award1", "award2", "award3"))
 })
 
 test_that("cr_works - parses affiliation inside authors correctly", {
@@ -147,7 +153,7 @@ test_that("cr_works - parses affiliation inside authors correctly", {
   doi <- "10.4018/978-1-4666-9588-7.les2"
   aa <- cr_works(doi)
   expect_true(any(grepl("author", names(aa$data))))
-  expect_named(aa$data$author[[1]], c("affiliation.name", "family", "given"))
+  expect_named(aa$data$author[[1]], c("given", "family", "affiliation.name"))
 })
 
 Sys.sleep(2)

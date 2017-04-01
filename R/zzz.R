@@ -50,7 +50,12 @@ cr_GET <- function(endpoint, args, todf = TRUE, on_error = warning, parse = TRUE
 get_err <- function(x) {
   xx <- ct_utf8(x)
   if (is.null(x$headers$`content-type`)) {
-    tmp <- xx
+    rr <- tryCatch(jsonlite::fromJSON(xx), error = function(e) e)
+    if (inherits(rr, "error")) {
+      tmp <- xx
+    } else {
+      tmp <- rr$message$description
+    }
   } else if (x$headers$`content-type` == "text/plain") {
     tmp <- xx
   } else if (x$headers$`content-type` == "text/html") {
