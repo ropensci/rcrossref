@@ -12,16 +12,21 @@ test_that("cr_prefixes returns correct class", {
 test_that("cr_prefixes paging works correctly", {
   skip_on_cran()
 
-  expect_equal(NROW(cr_works(prefixes="10.1016", filter=c(has_full_text=TRUE),
-                             limit=5)$data), 5)
-  expect_equal(NCOL(cr_works(prefixes="10.1016",
-                             query='ecology', limit=4)$meta), 4)
+  expect_equal(NROW(
+    cr_prefixes(prefixes="10.1016", works = TRUE, 
+                filter=c(has_full_text=TRUE),
+                limit=5)$data
+    ), 
+    5
+  )
+  expect_equal(NCOL(cr_prefixes(prefixes="10.1016", works = TRUE,
+                             query='ecology', limit=4)$meta), 5)
 })
 
 test_that("cr_prefixes metadata works correctly", {
   skip_on_cran()
 
-  expect_equal(cr_works(prefixes="10.1016", query='ecology',
+  expect_equal(cr_prefixes(prefixes="10.1016", query='ecology', works = TRUE,
                         limit=4)$meta$items_per_page, 4)
 })
 
