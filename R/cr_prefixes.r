@@ -2,42 +2,42 @@
 #'
 #' @export
 #'
-#' @param prefixes (character) Publisher prefixes, one or more in a vector or 
+#' @param prefixes (character) Publisher prefixes, one or more in a vector or
 #' list. Required.
 #' @template args
 #' @template moreargs
 #' @template cursor_args
 #' @template field_queries
-#' @param facet (logical) Include facet results. Boolean or string with 
-#' field to facet on. Valid fields are *, affiliation, funder-name, 
-#' funder-doi, orcid, container-title, assertion, archive, update-type, 
-#' issn, published, source, type-name, publisher-name, license, 
-#' category-name, assertion-group. Default: \code{FALSE}
-#' @param works (logical) If TRUE, works returned as well, if not then not.
-#' @param parse (logical) Whether to output json \code{FALSE} or parse to
-#' list \code{TRUE}. Default: \code{FALSE}
+#' @param facet (logical) Include facet results. Boolean or string with
+#' field to facet on. Valid fields are *, affiliation, funder-name,
+#' funder-doi, orcid, container-title, assertion, archive, update-type,
+#' issn, published, source, type-name, publisher-name, license,
+#' category-name, assertion-group. Default: `FALSE`
+#' @param works (logical) If `TRUE`, works returned as well, if not then not.
+#' @param parse (logical) Whether to output json `FALSE` or parse to
+#' list `TRUE`. Default: `FALSE`
 #'
 #' @details BEWARE: The API will only work for CrossRef DOIs.
 #'
-#' Note that any one publisher can have more than one DOI. If you want to 
-#' search on all DOIs for a publisher, pass in all DOIs, or see 
-#' \code{\link{cr_members}}, and pass in the \code{member_ids} parameter.
+#' Note that any one publisher can have more than one DOI. If you want to
+#' search on all DOIs for a publisher, pass in all DOIs, or see
+#' [cr_members()], and pass in the `member_ids` parameter.
 #'
 #' Notes from CrossRef (quoting them):
 #'
-#' The prefix of a CrossRef DOI does NOT indicate who currently owns the DOI. 
-#' It only reflects who originally registered the DOI. CrossRef metadata has 
-#' an \code{owner_prefix} element that records the current owner of the 
+#' The prefix of a CrossRef DOI does NOT indicate who currently owns the DOI.
+#' It only reflects who originally registered the DOI. CrossRef metadata has
+#' an `owner_prefix` element that records the current owner of the
 #' CrossRef DOI in question.
 #'
-#' CrossRef also has member IDs for depositing organisations. A single member 
-#' may control multiple owner prefixes, which in turn may control a number of 
-#' DOIs. When looking at works published by a certain organisaton, member 
+#' CrossRef also has member IDs for depositing organisations. A single member
+#' may control multiple owner prefixes, which in turn may control a number of
+#' DOIs. When looking at works published by a certain organisaton, member
 #' IDs and the member routes should be used.
 #'
-#' @references 
-#' \url{https://github.com/CrossRef/rest-api-doc/blob/master/rest_api.md}
-#' 
+#' @references
+#' <https://github.com/CrossRef/rest-api-doc/blob/master/rest_api.md>
+#'
 #' @examples \dontrun{
 #' cr_prefixes(prefixes="10.1016")
 #' cr_prefixes(prefixes="10.1016", works=TRUE)
@@ -50,11 +50,11 @@
 #' # facets - only avail. when works=TRUE
 #' cr_prefixes(prefixes="10.1016", works=TRUE, facet=TRUE)
 #' cr_prefixes(prefixes="10.1016", works=TRUE, facet="license:*", limit=0)
-#' cr_prefixes(prefixes=c('10.1016','10.1371'), works=TRUE, facet=TRUE, 
+#' cr_prefixes(prefixes=c('10.1016','10.1371'), works=TRUE, facet=TRUE,
 #'   limit=0)
 #'
 #' # Use the cursor for deep paging
-#' cr_prefixes("10.1016", works = TRUE, cursor = "*", cursor_max = 500, 
+#' cr_prefixes("10.1016", works = TRUE, cursor = "*", cursor_max = 500,
 #'    limit = 100)
 #' cr_prefixes(c('10.1016', '10.1371'), works = TRUE, cursor = "*",
 #'    cursor_max = 300, limit = 100)
@@ -63,13 +63,13 @@
 #' cr_prefixes_("10.1016")
 #' cr_prefixes_(c('10.1016', '10.1371'))
 #' cr_prefixes_("10.1016", works = TRUE, query = 'ecology', limit = 10)
-#' cr_prefixes_("10.1016", works = TRUE, query = 'ecology', parse=TRUE, 
+#' cr_prefixes_("10.1016", works = TRUE, query = 'ecology', parse=TRUE,
 #'    limit = 10)
 #' cr_prefixes_("10.1016", works = TRUE, cursor = "*",
 #'    cursor_max = 300, limit = 100)
 #' cr_prefixes_("10.1016", works = TRUE, cursor = "*",
 #'    cursor_max = 300, limit = 100, parse = TRUE)
-#'    
+#'
 #' # field queries
 #' ## query.container-title
 #' cr_prefixes("10.1016", works = TRUE,
@@ -77,15 +77,15 @@
 #' }
 
 `cr_prefixes` <- function(prefixes, query = NULL, filter = NULL, offset = NULL,
-  limit = NULL, sample = NULL, sort = NULL, order = NULL, facet=FALSE, 
-  works = FALSE, cursor = NULL, cursor_max = 5000, .progress="none", 
+  limit = NULL, sample = NULL, sort = NULL, order = NULL, facet=FALSE,
+  works = FALSE, cursor = NULL, cursor_max = 5000, .progress="none",
   flq = NULL, ...) {
 
-  args <- prep_args(query, filter, offset, limit, sample, sort, order, 
+  args <- prep_args(query, filter, offset, limit, sample, sort, order,
                     facet, cursor, flq)
   if (length(prefixes) > 1) {
     res <- llply(prefixes, prefixes_GET, args = args, works = works,
-                 cursor = cursor, cursor_max = cursor_max, ..., 
+                 cursor = cursor, cursor_max = cursor_max, ...,
                  .progress = .progress)
     if (!is.null(cursor)) {
       out <- lapply(res, "[[", "data")
@@ -93,14 +93,14 @@
     } else {
       out <- lapply(res, "[[", "message")
       out <- if (works) {
-        do.call(c, lapply(out, function(x) lapply(x$items, parse_works))) 
+        do.call(c, lapply(out, function(x) lapply(x$items, parse_works)))
       } else {
         lapply(out, DataFrame)
       }
       df <- bind_rows(out)
       meta <- if (works) {
-        data.frame(prefix = prefixes, do.call(rbind, lapply(res, parse_meta)), 
-                   stringsAsFactors = FALSE) 
+        data.frame(prefix = prefixes, do.call(rbind, lapply(res, parse_meta)),
+                   stringsAsFactors = FALSE)
       } else {
         NULL
       }
@@ -114,18 +114,18 @@
       list(meta = meta, data = df, facets = ft)
     }
   } else {
-    tmp <- prefixes_GET(prefixes, args, works = works, cursor = cursor, 
+    tmp <- prefixes_GET(prefixes, args, works = works, cursor = cursor,
                         cursor_max = cursor_max, ...)
     if (!is.null(cursor)) {
       tmp
     } else {
       out <- if (works) {
-        bind_rows(lapply(tmp$message$items, parse_works)) 
+        bind_rows(lapply(tmp$message$items, parse_works))
       } else {
         DataFrame(tmp$message)
       }
       meta <- if (works) {
-        data.frame(prefix = prefixes, parse_meta(tmp), stringsAsFactors = FALSE) 
+        data.frame(prefix = prefixes, parse_meta(tmp), stringsAsFactors = FALSE)
       } else {
         NULL
       }
@@ -140,7 +140,7 @@
   limit = NULL, sample = NULL, sort = NULL, order = NULL, facet=FALSE, works = FALSE,
   cursor = NULL, cursor_max = 5000, .progress="none", parse=FALSE, flq = NULL, ...) {
 
-  args <- prep_args(query, filter, offset, limit, sample, sort, order, 
+  args <- prep_args(query, filter, offset, limit, sample, sort, order,
                     facet, cursor, flq)
   if (length(prefixes) > 1) {
     llply(prefixes, prefixes_GET_, args = args, works = works,

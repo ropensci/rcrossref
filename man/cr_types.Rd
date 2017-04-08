@@ -38,13 +38,13 @@ deposited, indexed, or published.}
 
 \item{order}{(character) Sort order, one of 'asc' or 'desc'}
 
-\item{facet}{(logical) Include facet results. Boolean or string with 
-field to facet on. Valid fields are *, affiliation, funder-name, 
-funder-doi, orcid, container-title, assertion, archive, update-type, 
-issn, published, source, type-name, publisher-name, license, 
+\item{facet}{(logical) Include facet results. Boolean or string with
+field to facet on. Valid fields are *, affiliation, funder-name,
+funder-doi, orcid, container-title, assertion, archive, update-type,
+issn, published, source, type-name, publisher-name, license,
 category-name, assertion-group. Default: \code{FALSE}}
 
-\item{works}{(logical) If TRUE, works returned as well, if not then not.}
+\item{works}{(logical) If \code{TRUE}, works returned as well, if not then not.}
 
 \item{cursor}{(character) Cursor character string to do deep paging. Default is None.
 Pass in '*' to start deep paging. Any combination of query, filters and facets may be
@@ -100,7 +100,7 @@ cr_types("monograph", works=TRUE, facet="license:*", limit = 0)
 cr_types(c('monograph', 'book-set'), works=TRUE, facet=TRUE)
 
 # Use the cursor for deep paging
-cr_types("journal-article", works = TRUE, cursor = "*", 
+cr_types("journal-article", works = TRUE, cursor = "*",
    cursor_max = 500, limit = 100)
 cr_types(c('monograph', 'book-set'), works = TRUE, cursor = "*",
    cursor_max = 300, limit = 100)
@@ -119,7 +119,7 @@ cr_types_("journal-article", works = TRUE, cursor = "*",
    cursor_max = 300, limit = 100)
 cr_types_("journal-article", works = TRUE, cursor = "*",
    cursor_max = 300, limit = 100, parse = TRUE)
-   
+
 # field queries
 ## query.container-title
 cr_types("journal-article", works = TRUE,

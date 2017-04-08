@@ -38,13 +38,13 @@ deposited, indexed, or published.}
 
 \item{order}{(character) Sort order, one of 'asc' or 'desc'}
 
-\item{facet}{(logical) Include facet results. Boolean or string with 
-field to facet on. Valid fields are *, affiliation, funder-name, 
-funder-doi, orcid, container-title, assertion, archive, update-type, 
-issn, published, source, type-name, publisher-name, license, 
+\item{facet}{(logical) Include facet results. Boolean or string with
+field to facet on. Valid fields are *, affiliation, funder-name,
+funder-doi, orcid, container-title, assertion, archive, update-type,
+issn, published, source, type-name, publisher-name, license,
 category-name, assertion-group. Default: \code{FALSE}}
 
-\item{works}{(logical) If TRUE, works returned as well, if not then not.}
+\item{works}{(logical) If \code{TRUE}, works returned as well, if not then not.}
 
 \item{cursor}{(character) Cursor character string to do deep paging. Default is None.
 Pass in '*' to start deep paging. Any combination of query, filters and facets may be
@@ -96,11 +96,11 @@ cr_journals()
 cr_journals(issn="2167-8359", works=TRUE)
 cr_journals(issn=c('1803-2427','2326-4225'))
 cr_journals(query="ecology")
-cr_journals(issn="2167-8359", query='ecology', works=TRUE, 
+cr_journals(issn="2167-8359", query='ecology', works=TRUE,
    sort='score', order="asc")
-cr_journals(issn="2167-8359", query='ecology', works=TRUE, sort='score', 
+cr_journals(issn="2167-8359", query='ecology', works=TRUE, sort='score',
    order="desc")
-cr_journals(issn="2167-8359", works=TRUE, 
+cr_journals(issn="2167-8359", works=TRUE,
    filter=c(from_pub_date='2014-03-03'))
 cr_journals(query="peerj")
 cr_journals(issn='1803-2427', works=TRUE)
@@ -110,17 +110,17 @@ cr_journals(limit=2)
 ## get facets back
 cr_journals('1803-2427', works=TRUE, facet=TRUE)
 cr_journals('1803-2427', works=TRUE, facet="published:*", limit = 0)
-cr_journals(issn=c('1803-2427','2326-4225'), works=TRUE, 
+cr_journals(issn=c('1803-2427','2326-4225'), works=TRUE,
   facet="published:*", limit = 10)
 
 # Use the cursor for deep paging
-cr_journals(issn='1932-6203', works = TRUE, cursor = "*", cursor_max = 500, 
+cr_journals(issn='1932-6203', works = TRUE, cursor = "*", cursor_max = 500,
    limit = 100)
 cr_journals(c('1932-6203', '0028-0836'), works = TRUE, cursor = "*",
    cursor_max = 300, limit = 100)
 
 # fails, if you want works, you must give an ISSN
-# cr_journals(query = "ecology", filter=c(has_full_text = TRUE), 
+# cr_journals(query = "ecology", filter=c(has_full_text = TRUE),
 #    works = TRUE)
 
 # Low level function - does no parsing to data.frame, get json or a list
@@ -131,7 +131,7 @@ cr_journals_("2167-8359", works = TRUE, cursor = "*",
    cursor_max = 300, limit = 100)
 cr_journals_("2167-8359", works = TRUE, cursor = "*",
    cursor_max = 300, limit = 100, parse = TRUE)
-   
+
 # field queries
 ## query.author
 cr_journals("2167-8359", works = TRUE, flq = c(`query.author` = 'Jane'))

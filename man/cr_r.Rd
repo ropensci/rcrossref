@@ -9,7 +9,7 @@ cr_r(sample = 10, ...)
 \arguments{
 \item{sample}{The number of returned random DOIs. Maximum: 100. Default: 20.}
 
-\item{...}{Further args passed on to \code{\link{cr_works}}}
+\item{...}{Further args passed on to \code{\link[=cr_works]{cr_works()}}}
 }
 \value{
 A character vector of DOIs

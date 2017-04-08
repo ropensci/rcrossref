@@ -7,19 +7,19 @@
 #' @template moreargs
 #' @template cursor_args
 #' @template field_queries
-#' @param facet (logical) Include facet results. Boolean or string with 
-#' field to facet on. Valid fields are *, affiliation, funder-name, 
-#' funder-doi, orcid, container-title, assertion, archive, update-type, 
-#' issn, published, source, type-name, publisher-name, license, 
-#' category-name, assertion-group. Default: \code{FALSE}
-#' @param works (logical) If TRUE, works returned as well, if not then not.
-#' @param parse (logical) Whether to output json \code{FALSE} or parse to
-#' list \code{TRUE}. Default: \code{FALSE}
+#' @param facet (logical) Include facet results. Boolean or string with
+#' field to facet on. Valid fields are *, affiliation, funder-name,
+#' funder-doi, orcid, container-title, assertion, archive, update-type,
+#' issn, published, source, type-name, publisher-name, license,
+#' category-name, assertion-group. Default: `FALSE`
+#' @param works (logical) If `TRUE`, works returned as well, if not then not.
+#' @param parse (logical) Whether to output json `FALSE` or parse to
+#' list `TRUE`. Default: `FALSE`
 #'
 #' @details BEWARE: The API will only work for CrossRef DOIs.
 #'
-#' @references 
-#' \url{https://github.com/CrossRef/rest-api-doc/blob/master/rest_api.md}
+#' @references
+#' <https://github.com/CrossRef/rest-api-doc/blob/master/rest_api.md>
 #' @examples \dontrun{
 #' cr_types()
 #' cr_types("monograph")
@@ -33,7 +33,7 @@
 #' cr_types(c('monograph', 'book-set'), works=TRUE, facet=TRUE)
 #'
 #' # Use the cursor for deep paging
-#' cr_types("journal-article", works = TRUE, cursor = "*", 
+#' cr_types("journal-article", works = TRUE, cursor = "*",
 #'    cursor_max = 500, limit = 100)
 #' cr_types(c('monograph', 'book-set'), works = TRUE, cursor = "*",
 #'    cursor_max = 300, limit = 100)
@@ -52,23 +52,23 @@
 #'    cursor_max = 300, limit = 100)
 #' cr_types_("journal-article", works = TRUE, cursor = "*",
 #'    cursor_max = 300, limit = 100, parse = TRUE)
-#'    
+#'
 #' # field queries
 #' ## query.container-title
 #' cr_types("journal-article", works = TRUE,
 #'   flq = c(`query.container-title` = 'Ecology'))
 #' }
 
-`cr_types` <- function(types = NULL, query = NULL, filter = NULL, 
-  offset = NULL, limit = NULL, sample = NULL, sort = NULL, order = NULL, 
-  facet = FALSE, works = FALSE, cursor = NULL, cursor_max = 5000, 
+`cr_types` <- function(types = NULL, query = NULL, filter = NULL,
+  offset = NULL, limit = NULL, sample = NULL, sort = NULL, order = NULL,
+  facet = FALSE, works = FALSE, cursor = NULL, cursor_max = 5000,
   .progress="none", flq = NULL, ...) {
 
-  args <- prep_args(query, filter, offset, limit, sample, sort, order, 
+  args <- prep_args(query, filter, offset, limit, sample, sort, order,
                     facet, cursor, flq)
   if (length(types) > 1) {
     res <- llply(types, types_GET, args = args, works = works,
-                 cursor = cursor, cursor_max = cursor_max, ..., 
+                 cursor = cursor, cursor_max = cursor_max, ...,
                  .progress = .progress)
     if (!is.null(cursor)) {
       out <- lapply(res, "[[", "data")
@@ -76,16 +76,16 @@
     } else {
       out <- lapply(res, "[[", "message")
       out <- if (works) {
-        do.call(c, lapply(out, function(x) lapply(x$items, parse_works))) 
+        do.call(c, lapply(out, function(x) lapply(x$items, parse_works)))
       } else {
         lapply(out, DataFrame)
       }
       df <- bind_rows(out)
       meta <- if (works) {
         data.frame(
-          types = types, 
-          do.call(rbind, lapply(res, parse_meta)), 
-          stringsAsFactors = FALSE) 
+          types = types,
+          do.call(rbind, lapply(res, parse_meta)),
+          stringsAsFactors = FALSE)
       } else {
         NULL
       }
@@ -119,8 +119,8 @@
             meta <- NULL
           }
           list(
-            meta = meta, 
-            data = wout, 
+            meta = meta,
+            data = wout,
             facets = parse_facets(res$message$facets)
           )
         }
@@ -131,16 +131,16 @@
 
 #' @export
 #' @rdname cr_types
-`cr_types_` <- function(types = NULL, query = NULL, filter = NULL, 
-  offset = NULL, limit = NULL, sample = NULL, sort = NULL, order = NULL, 
-  facet=FALSE, works = FALSE, cursor = NULL, cursor_max = 5000, 
+`cr_types_` <- function(types = NULL, query = NULL, filter = NULL,
+  offset = NULL, limit = NULL, sample = NULL, sort = NULL, order = NULL,
+  facet=FALSE, works = FALSE, cursor = NULL, cursor_max = 5000,
   .progress="none", parse=FALSE, flq = NULL, ...) {
 
-  args <- prep_args(query, filter, offset, limit, sample, sort, order, 
+  args <- prep_args(query, filter, offset, limit, sample, sort, order,
                     facet, cursor, flq)
   if (length(types) > 1) {
     llply(types, types_GET_, args = args, works = works,
-          cursor = cursor, cursor_max = cursor_max, parse = parse, ..., 
+          cursor = cursor, cursor_max = cursor_max, parse = parse, ...,
           .progress = .progress)
   } else {
     types_GET_(types, args, works = works, cursor = cursor,
@@ -165,7 +165,7 @@ types_GET <- function(x, args, works, cursor = NULL, cursor_max = NULL, ...){
   }
 }
 
-types_GET_ <- function(x, args, works, cursor = NULL, cursor_max = NULL, 
+types_GET_ <- function(x, args, works, cursor = NULL, cursor_max = NULL,
                        parse, ...){
   path <- if (!is.null(x)) {
     if (works) sprintf("types/%s/works", x) else sprintf("types/%s", x)

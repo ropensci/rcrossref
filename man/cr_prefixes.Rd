@@ -16,7 +16,7 @@ cr_prefixes_(prefixes, query = NULL, filter = NULL, offset = NULL,
   .progress = "none", parse = FALSE, flq = NULL, ...)
 }
 \arguments{
-\item{prefixes}{(character) Publisher prefixes, one or more in a vector or 
+\item{prefixes}{(character) Publisher prefixes, one or more in a vector or
 list. Required.}
 
 \item{query}{Query terms}
@@ -39,13 +39,13 @@ deposited, indexed, or published.}
 
 \item{order}{(character) Sort order, one of 'asc' or 'desc'}
 
-\item{facet}{(logical) Include facet results. Boolean or string with 
-field to facet on. Valid fields are *, affiliation, funder-name, 
-funder-doi, orcid, container-title, assertion, archive, update-type, 
-issn, published, source, type-name, publisher-name, license, 
+\item{facet}{(logical) Include facet results. Boolean or string with
+field to facet on. Valid fields are *, affiliation, funder-name,
+funder-doi, orcid, container-title, assertion, archive, update-type,
+issn, published, source, type-name, publisher-name, license,
 category-name, assertion-group. Default: \code{FALSE}}
 
-\item{works}{(logical) If TRUE, works returned as well, if not then not.}
+\item{works}{(logical) If \code{TRUE}, works returned as well, if not then not.}
 
 \item{cursor}{(character) Cursor character string to do deep paging. Default is None.
 Pass in '*' to start deep paging. Any combination of query, filters and facets may be
@@ -87,20 +87,20 @@ Search CrossRef prefixes
 \details{
 BEWARE: The API will only work for CrossRef DOIs.
 
-Note that any one publisher can have more than one DOI. If you want to 
-search on all DOIs for a publisher, pass in all DOIs, or see 
-\code{\link{cr_members}}, and pass in the \code{member_ids} parameter.
+Note that any one publisher can have more than one DOI. If you want to
+search on all DOIs for a publisher, pass in all DOIs, or see
+\code{\link[=cr_members]{cr_members()}}, and pass in the \code{member_ids} parameter.
 
 Notes from CrossRef (quoting them):
 
-The prefix of a CrossRef DOI does NOT indicate who currently owns the DOI. 
-It only reflects who originally registered the DOI. CrossRef metadata has 
-an \code{owner_prefix} element that records the current owner of the 
+The prefix of a CrossRef DOI does NOT indicate who currently owns the DOI.
+It only reflects who originally registered the DOI. CrossRef metadata has
+an \code{owner_prefix} element that records the current owner of the
 CrossRef DOI in question.
 
-CrossRef also has member IDs for depositing organisations. A single member 
-may control multiple owner prefixes, which in turn may control a number of 
-DOIs. When looking at works published by a certain organisaton, member 
+CrossRef also has member IDs for depositing organisations. A single member
+may control multiple owner prefixes, which in turn may control a number of
+DOIs. When looking at works published by a certain organisaton, member
 IDs and the member routes should be used.
 }
 \examples{
@@ -116,11 +116,11 @@ cr_works(prefixes="10.1016", query='ecology', limit=4)
 # facets - only avail. when works=TRUE
 cr_prefixes(prefixes="10.1016", works=TRUE, facet=TRUE)
 cr_prefixes(prefixes="10.1016", works=TRUE, facet="license:*", limit=0)
-cr_prefixes(prefixes=c('10.1016','10.1371'), works=TRUE, facet=TRUE, 
+cr_prefixes(prefixes=c('10.1016','10.1371'), works=TRUE, facet=TRUE,
   limit=0)
 
 # Use the cursor for deep paging
-cr_prefixes("10.1016", works = TRUE, cursor = "*", cursor_max = 500, 
+cr_prefixes("10.1016", works = TRUE, cursor = "*", cursor_max = 500,
    limit = 100)
 cr_prefixes(c('10.1016', '10.1371'), works = TRUE, cursor = "*",
    cursor_max = 300, limit = 100)
@@ -129,13 +129,13 @@ cr_prefixes(c('10.1016', '10.1371'), works = TRUE, cursor = "*",
 cr_prefixes_("10.1016")
 cr_prefixes_(c('10.1016', '10.1371'))
 cr_prefixes_("10.1016", works = TRUE, query = 'ecology', limit = 10)
-cr_prefixes_("10.1016", works = TRUE, query = 'ecology', parse=TRUE, 
+cr_prefixes_("10.1016", works = TRUE, query = 'ecology', parse=TRUE,
    limit = 10)
 cr_prefixes_("10.1016", works = TRUE, cursor = "*",
    cursor_max = 300, limit = 100)
 cr_prefixes_("10.1016", works = TRUE, cursor = "*",
    cursor_max = 300, limit = 100, parse = TRUE)
-   
+
 # field queries
 ## query.container-title
 cr_prefixes("10.1016", works = TRUE,

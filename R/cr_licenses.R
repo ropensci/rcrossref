@@ -4,23 +4,23 @@
 #'
 #' @param query Query terms
 #' @param offset Number of record to start at, from 1 to infinity.
-#' @param limit Number of results to return in the query. Not relavant when 
+#' @param limit Number of results to return in the query. Not relavant when
 #' searching with specific dois. Default: 20. Max: 1000
-#' @param sort (character) Field to sort on, one of score, relevance, updated, 
+#' @param sort (character) Field to sort on, one of score, relevance, updated,
 #' deposited, indexed, or published.
 #' @param order (character) Sort order, one of 'asc' or 'desc'
-#' @param .progress Show a \code{plyr}-style progress bar? Options are "none", 
-#' "text", "tk", "win, and "time".  See \code{\link[plyr]{create_progress_bar}} 
+#' @param .progress Show a `plyr`-style progress bar? Options are "none",
+#' "text", "tk", "win, and "time".  See [plyr::create_progress_bar()]
 #' for details of each.
-#' @param ... Named parameters passed on to \code{\link[crul]{HttpClient}}
-#' @param parse (logical) Whether to output json \code{FALSE} or parse to
-#' list \code{TRUE}. Default: \code{FALSE}
+#' @param ... Named parameters passed on to [crul::HttpClient()]
+#' @param parse (logical) Whether to output json `FALSE` or parse to
+#' list `TRUE`. Default: `FALSE`
 #'
 #' @details BEWARE: The API will only work for CrossRef DOIs.
-#' @references 
-#' \url{https://github.com/CrossRef/rest-api-doc/blob/master/rest_api.md}
-#' @details NOTE: The API route behind this function does not support filters 
-#' any more, so the \code{filter} parameter has been removed.
+#' @references
+#' <https://github.com/CrossRef/rest-api-doc/blob/master/rest_api.md>
+#' @details NOTE: The API route behind this function does not support filters
+#' any more, so the `filter` parameter has been removed.
 #'
 #' @examples \dontrun{
 #' cr_licenses()
@@ -45,7 +45,7 @@
                           sort = sort, order = order))
 
   tmp <- licenses_GET(args = args, parse = TRUE, ...)
-  df <- tbl_df(bind_rows(lapply(tmp$message$items, data.frame, 
+  df <- tbl_df(bind_rows(lapply(tmp$message$items, data.frame,
                                 stringsAsFactors = FALSE)))
   meta <- parse_meta(tmp)
   list(meta = meta, data = df)

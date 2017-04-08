@@ -3,26 +3,26 @@
 #' @export
 #' @param x (character) One doi, pmid, or pmcid
 #' @param type (character) one of doi, pmid, or pmcid
-#' @param ... Curl args passed on to \code{\link[crul]{HttpClient}}
+#' @param ... Curl args passed on to [crul::HttpClient]
 #' @references Uses the http://www.ncbi.nlm.nih.gov/pmc/tools/id-converter-api/
 #' @examples \dontrun{
 #' # get a pmid/pmcid from a doi
 #' id_converter("10.1038/ng.590")
-#' 
+#'
 #' # pmid to doi/pmcid
 #' id_converter("20495566", "pmid")
-#' 
+#'
 #' # pmcid to doi/pmid
 #' id_converter("PMC2883744", "pmcid")
-#' 
+#'
 #' # error, wrong type passed for id given
 #' # id_converter("PMC2883744", "doi")
 #' }
 `id_converter` <- function(x, type = "doi", ...){
-  args <- list(tool = "my_tool", email = "my_email@example.com", 
+  args <- list(tool = "my_tool", email = "my_email@example.com",
                ids = x, idtype = type, format = "json")
   cli <- crul::HttpClient$new(
-    url = idcon_base(), 
+    url = idcon_base(),
     headers = list(
       `User-Agent` = rcrossref_ua(), `X-USER-AGENT` = rcrossref_ua()
     )

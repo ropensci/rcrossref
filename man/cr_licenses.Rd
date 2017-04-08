@@ -16,19 +16,19 @@ cr_licenses_(query = NULL, offset = NULL, limit = NULL, sort = NULL,
 
 \item{offset}{Number of record to start at, from 1 to infinity.}
 
-\item{limit}{Number of results to return in the query. Not relavant when 
+\item{limit}{Number of results to return in the query. Not relavant when
 searching with specific dois. Default: 20. Max: 1000}
 
-\item{sort}{(character) Field to sort on, one of score, relevance, updated, 
+\item{sort}{(character) Field to sort on, one of score, relevance, updated,
 deposited, indexed, or published.}
 
 \item{order}{(character) Sort order, one of 'asc' or 'desc'}
 
-\item{.progress}{Show a \code{plyr}-style progress bar? Options are "none", 
-"text", "tk", "win, and "time".  See \code{\link[plyr]{create_progress_bar}} 
+\item{.progress}{Show a \code{plyr}-style progress bar? Options are "none",
+"text", "tk", "win, and "time".  See \code{\link[plyr:create_progress_bar]{plyr::create_progress_bar()}}
 for details of each.}
 
-\item{...}{Named parameters passed on to \code{\link[crul]{HttpClient}}}
+\item{...}{Named parameters passed on to \code{\link[crul:HttpClient]{crul::HttpClient()}}}
 
 \item{parse}{(logical) Whether to output json \code{FALSE} or parse to
 list \code{TRUE}. Default: \code{FALSE}}
@@ -39,7 +39,7 @@ Search CrossRef licenses
 \details{
 BEWARE: The API will only work for CrossRef DOIs.
 
-NOTE: The API route behind this function does not support filters 
+NOTE: The API route behind this function does not support filters
 any more, so the \code{filter} parameter has been removed.
 }
 \examples{

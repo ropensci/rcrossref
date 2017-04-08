@@ -38,13 +38,13 @@ deposited, indexed, or published.}
 
 \item{order}{(character) Sort order, one of 'asc' or 'desc'}
 
-\item{facet}{(logical) Include facet results. Boolean or string with 
-field to facet on. Valid fields are *, affiliation, funder-name, 
-funder-doi, orcid, container-title, assertion, archive, update-type, 
-issn, published, source, type-name, publisher-name, license, 
+\item{facet}{(logical) Include facet results. Boolean or string with
+field to facet on. Valid fields are *, affiliation, funder-name,
+funder-doi, orcid, container-title, assertion, archive, update-type,
+issn, published, source, type-name, publisher-name, license,
 category-name, assertion-group. Default: \code{FALSE}}
 
-\item{works}{(logical) If TRUE, works returned as well, if not then not.}
+\item{works}{(logical) If \code{TRUE}, works returned as well, if not then not.}
 
 \item{cursor}{(character) Cursor character string to do deep paging. Default is None.
 Pass in '*' to start deep paging. Any combination of query, filters and facets may be
@@ -86,7 +86,7 @@ Search the CrossRef Fundref API
 \details{
 BEWARE: The API will only work for CrossRef DOIs.
 
-This function name changing to \code{cr_funders} in the next version - 
+This function name changing to \code{cr_funders} in the next version -
 both work for now
 }
 \section{NOTE}{
@@ -114,7 +114,7 @@ cr_funders(dois=c('10.13039/100000001','10.13039/100000015'), works=TRUE)
 ## get facets back
 cr_funders("10.13039/100000001", works=TRUE, facet=TRUE, limit = 0)
 cr_funders("10.13039/100000001", works=TRUE, facet="license:*", limit = 0)
-cr_funders('100000001', works = TRUE, cursor = "*", cursor_max = 500, 
+cr_funders('100000001', works = TRUE, cursor = "*", cursor_max = 500,
    limit = 100, facet=TRUE)
 
 # Curl options
@@ -127,7 +127,7 @@ cr_funders(dois=c("10.13039/100000001","asfasf"))
 cr_funders(dois=c("10.13039/100000001","asfasf"), works=TRUE)
 
 # Use the cursor for deep paging
-cr_funders('100000001', works = TRUE, cursor = "*", cursor_max = 500, 
+cr_funders('100000001', works = TRUE, cursor = "*", cursor_max = 500,
    limit = 100)
 cr_funders(c('100000001', '100000002'), works = TRUE, cursor = "*",
    cursor_max = 300, limit = 100)
@@ -140,7 +140,7 @@ cr_funders_('10.13039/100000001', works = TRUE, cursor = "*",
    cursor_max = 300, limit = 100)
 cr_funders_('10.13039/100000001', works = TRUE, cursor = "*",
    cursor_max = 300, limit = 100, parse = TRUE)
-   
+
 # field queries
 ## query.container-title
 cr_funders('10.13039/100000001', works = TRUE,

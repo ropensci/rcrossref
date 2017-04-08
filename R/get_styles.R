@@ -1,13 +1,13 @@
 #' Get list of styles from github.com/citation-style-language/styles
 #' @export
-#' @param ... Named parameters passed on to \code{\link[crul]{HttpClient}}
+#' @param ... Named parameters passed on to [crul::HttpClient]
 #' @examples \dontrun{
 #' x <- get_styles()
 #' x[1:10]
 #' }
 get_styles <- function(...) {
   cli <- crul::HttpClient$new(
-    url = "https://api.github.com/repos/citation-style-language/styles/commits?per_page=1", 
+    url = "https://api.github.com/repos/citation-style-language/styles/commits?per_page=1",
     headers = list(
       `User-Agent` = rcrossref_ua(), `X-USER-AGENT` = rcrossref_ua()
     )
@@ -16,7 +16,7 @@ get_styles <- function(...) {
   commres <- jsonlite::fromJSON(comm$parse("UTF-8"), FALSE)
   sha <- commres[[1]]$sha
   cli2 <- crul::HttpClient$new(
-    url = paste0("https://api.github.com/repos/citation-style-language/styles/git/trees/", sha), 
+    url = paste0("https://api.github.com/repos/citation-style-language/styles/git/trees/", sha),
     headers = list(
       `User-Agent` = rcrossref_ua(), `X-USER-AGENT` = rcrossref_ua()
     )

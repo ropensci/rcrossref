@@ -7,27 +7,27 @@
 #' @template moreargs
 #' @template cursor_args
 #' @template field_queries
-#' @param facet (logical) Include facet results. Boolean or string with 
-#' field to facet on. Valid fields are *, affiliation, funder-name, 
-#' funder-doi, orcid, container-title, assertion, archive, update-type, 
-#' issn, published, source, type-name, publisher-name, license, 
-#' category-name, assertion-group. Default: \code{FALSE}
-#' @param parse (logical) Whether to output json \code{FALSE} or parse to
-#' list \code{TRUE}. Default: \code{FALSE}
+#' @param facet (logical) Include facet results. Boolean or string with
+#' field to facet on. Valid fields are *, affiliation, funder-name,
+#' funder-doi, orcid, container-title, assertion, archive, update-type,
+#' issn, published, source, type-name, publisher-name, license,
+#' category-name, assertion-group. Default: `FALSE`
+#' @param parse (logical) Whether to output json `FALSE` or parse to
+#' list `TRUE`. Default: `FALSE`
 #'
 #' @section Beware:
 #' The API will only work for CrossRef DOIs.
 #'
 #' @section Functions:
 #' \itemize{
-#'  \item \code{cr_works()} - Does data request and parses to data.frame for
+#'  \item `cr_works()` - Does data request and parses to data.frame for
 #'  easy downstream consumption
-#'  \item \code{cr_works_()} - Does data request, and gives back json (default) 
+#'  \item `cr_works_()` - Does data request, and gives back json (default)
 #'  or lists, with no attempt to parse to data.frame's
 #' }
 #'
-#' @references 
-#' \url{https://github.com/CrossRef/rest-api-doc/blob/master/rest_api.md}
+#' @references
+#' <https://github.com/CrossRef/rest-api-doc/blob/master/rest_api.md>
 #'
 #' @examples \dontrun{
 #' # Works funded by the NSF
@@ -53,11 +53,11 @@
 #' cr_works(dois='10.1063/1.3593378')
 #' cr_works('10.1371/journal.pone.0033693')
 #' cr_works(dois='10.1007/12080.1874-1746')
-#' cr_works(dois=c('10.1007/12080.1874-1746','10.1007/10452.1573-5125', 
+#' cr_works(dois=c('10.1007/12080.1874-1746','10.1007/10452.1573-5125',
 #'    '10.1111/(issn)1442-9993'))
 #'
 #' # progress bar
-#' cr_works(dois=c('10.1007/12080.1874-1746','10.1007/10452.1573-5125'), 
+#' cr_works(dois=c('10.1007/12080.1874-1746','10.1007/10452.1573-5125'),
 #'    .progress="text")
 #'
 #' # Include facetting in results
@@ -77,31 +77,31 @@
 #' cr_works(sample=10)
 #'
 #' # You can pass in dot separated fields to filter on specific fields
-#' cr_works(filter=c(award.number='CBET-0756451', 
+#' cr_works(filter=c(award.number='CBET-0756451',
 #'    award.funder='10.13039/100000001'))
 #'
 #' # Use the cursor for deep paging
 #' cr_works(query="NSF", cursor = "*", cursor_max = 300, limit = 100)
-#' cr_works(query="NSF", cursor = "*", cursor_max = 300, limit = 100, 
+#' cr_works(query="NSF", cursor = "*", cursor_max = 300, limit = 100,
 #'    facet = TRUE)
 #'
 #' # Low level function - does no parsing to data.frame, get json or a list
 #' cr_works_(query = "NSF")
 #' cr_works_(query = "NSF", parse=TRUE)
 #' cr_works_(query="NSF", cursor = "*", cursor_max = 300, limit = 100)
-#' cr_works_(query="NSF", cursor = "*", cursor_max = 300, limit = 100, 
+#' cr_works_(query="NSF", cursor = "*", cursor_max = 300, limit = 100,
 #'    parse=TRUE)
-#'    
+#'
 #' # field queries
 #' ## query.author
 #' res <- cr_works(query = "ecology", flq = c(query.author = 'Boettiger'))
 #'
 #' ## query.container-title
-#' res <- cr_works(query = "ecology", 
+#' res <- cr_works(query = "ecology",
 #'   flq = c(`query.container-title` = 'Ecology'))
-#' 
+#'
 #' ## query.author and query.title
-#' res <- cr_works(query = "ecology", 
+#' res <- cr_works(query = "ecology",
 #'   flq = c(query.author = 'Smith', query.title = 'cell'))
 #' }
 
@@ -112,7 +112,7 @@
   if (cursor_max != as.integer(cursor_max)) {
     stop("cursor_max must be an integer", call. = FALSE)
   }
-  args <- prep_args(query, filter, offset, limit, sample, sort, order, 
+  args <- prep_args(query, filter, offset, limit, sample, sort, order,
                     facet, cursor, flq)
 
   if (length(dois) > 1) {
@@ -121,7 +121,7 @@
     res <- lapply(res, "[[", "message")
     res <- lapply(res, parse_works)
     df <- tbl_df(bind_rows(res))
-    #exclude rows with empty DOI value until CrossRef API supports 
+    #exclude rows with empty DOI value until CrossRef API supports
     #input validation
     if (nrow(df[df$DOI == "", ]) > 0) {
       warning("only data with valid CrossRef DOIs returned",  call. = FALSE)
@@ -155,7 +155,7 @@
   if (cursor_max != as.integer(cursor_max)) {
     stop("cursor_max must be an integer", call. = FALSE)
   }
-  args <- prep_args(query, filter, offset, limit, sample, sort, order, 
+  args <- prep_args(query, filter, offset, limit, sample, sort, order,
                     facet, cursor, flq)
 
   if (length(dois) > 1) {
@@ -225,10 +225,10 @@ parse_works <- function(zzz){
   manip <- function(which="issued", y) {
     res <- switch(
       which,
-      `alternative-id` = list(paste0(unlist(y[[which]]), 
+      `alternative-id` = list(paste0(unlist(y[[which]]),
                                      collapse = ",")),
       `archive` = list(y[[which]]),
-      `container-title` = list(paste0(unlist(y[[which]]), 
+      `container-title` = list(paste0(unlist(y[[which]]),
                                       collapse = ",")),
       created = list(make_date(y[[which]]$`date-parts`)),
       deposited = list(make_date(y[[which]]$`date-parts`)),
@@ -239,7 +239,7 @@ parse_works <- function(zzz){
       issue = list(y[[which]]),
       issued = list(
         paste0(
-          sprintf("%02d", 
+          sprintf("%02d",
                   unlist(y[[which]]$`date-parts`)), collapse = "-")
       ),
       license = list(parse_license(y[[which]])),
@@ -259,7 +259,7 @@ parse_works <- function(zzz){
       volume = list(y[[which]]),
       abstract = list(y[[which]])
     )
-    
+
     res <- if (is.null(res) || length(res) == 0) NA else res
     if (length(res[[1]]) > 1) {
       names(res[[1]]) <- paste(which, names(res[[1]]), sep = "_")
@@ -275,7 +275,7 @@ parse_works <- function(zzz){
   } else if (all(is.na(zzz))) {
     NULL
   } else {
-    out_tmp <- data.frame(as.list(unlist(lapply(keys, manip, y = zzz))), 
+    out_tmp <- data.frame(as.list(unlist(lapply(keys, manip, y = zzz))),
                           stringsAsFactors = FALSE)
     out_tmp$assertion <- list(parse_todf(zzz$assertion)) %||% NULL
     out_tmp$author <- list(parse_todf(zzz$author)) %||% NULL
@@ -298,7 +298,7 @@ parse_license <- function(x){
     NULL
   } else {
     date <- make_date(x[[1]]$start$`date-parts`)
-    data.frame(date = date, x[[1]][!names(x[[1]]) == "start"], 
+    data.frame(date = date, x[[1]][!names(x[[1]]) == "start"],
                stringsAsFactors = FALSE)
   }
 }

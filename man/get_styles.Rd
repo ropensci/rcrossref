@@ -7,7 +7,7 @@
 get_styles(...)
 }
 \arguments{
-\item{...}{Named parameters passed on to \code{\link[crul]{HttpClient}}}
+\item{...}{Named parameters passed on to \link[crul:HttpClient]{crul::HttpClient}}
 }
 \description{
 Get list of styles from github.com/citation-style-language/styles
