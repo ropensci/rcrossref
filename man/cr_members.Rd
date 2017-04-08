@@ -72,7 +72,7 @@ field query parameters are:
  first and given names
 }}
 
-\item{...}{Named parameters passed on to \code{\link[httr]{GET}}}
+\item{...}{Named parameters passed on to \code{\link[crul]{HttpClient}}}
 
 \item{parse}{(logical) Whether to output json \code{FALSE} or parse to
 list \code{TRUE}. Default: \code{FALSE}}
@@ -99,8 +99,7 @@ cr_members(query='ecology')
 cr_members(member_ids=98, works=TRUE, facet=TRUE)
 
 # curl options
-library('httr')
-cr_members(member_ids=98, config=verbose())
+cr_members(member_ids=98, verbose = TRUE)
 
 # Use the cursor for deep paging
 cr_members(member_ids=98, works = TRUE, cursor = "*", 

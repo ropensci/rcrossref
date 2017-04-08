@@ -24,7 +24,6 @@ test_that("cr_funders returns", {
 test_that("cr_funders fails correctly", {
   skip_on_cran()
 
-  library('httr')
   expect_warning(cr_funders(dois='10.13039/100000001afasfasdf'),
                "Resource not found")
 })

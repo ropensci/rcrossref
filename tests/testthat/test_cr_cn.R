@@ -28,8 +28,7 @@ test_that("cr_cn returns", {
 test_that("cr_cn fails correctly", {
   skip_on_cran()
 
-  library('httr')
-  expect_error(cr_cn(dois="10.1126/science.169.3946.635", config=timeout(0.01)))
+  expect_error(cr_cn(dois="10.1126/science.169.3946.635", timeout_ms = 1))
 })
 
 test_that("DOIs with no agency found still work, at least some do", {

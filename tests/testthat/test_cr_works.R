@@ -56,8 +56,7 @@ test_that("cr_works returns", {
 test_that("cr_works fails correctly", {
   skip_on_cran()
 
-  library('httr')
-  expect_error(cr_works(config = timeout(0.01)))
+  expect_error(cr_works(timeout_ms = 1))
   expect_equal(NROW(cr_works(query = "adfaaf")$data), 0)
 })
 
@@ -113,19 +112,19 @@ test_that("cr_works - parses funders correctly", {
   doi <- "10.1145/2834800.2834802"
   dd <- cr_works(doi)
   expect_true(any(grepl("funder", names(dd$data))))
-  expect_named(dd$data$funder[[1]], 
+  expect_named(dd$data$funder[[1]],
                c("DOI", "name", "doi.asserted.by", "award"))
 
   doi <- "10.1145/2834800.2834802"
   dd <- cr_works(doi)
   expect_true(any(grepl("funder", names(dd$data))))
-  expect_named(dd$data$funder[[1]], 
+  expect_named(dd$data$funder[[1]],
                c("DOI", "name", "doi.asserted.by", "award"))
 
   doi <- "10.1145/2832099.2832103"
   ee <- cr_works(doi)
   expect_true(any(grepl("funder", names(ee$data))))
-  expect_named(ee$data$funder[[1]], 
+  expect_named(ee$data$funder[[1]],
                c("DOI", "name", "doi.asserted.by", "award"))
 
   doi <- "10.1016/j.pediatrneurol.2015.06.002"
@@ -136,14 +135,14 @@ test_that("cr_works - parses funders correctly", {
   doi <- "10.1016/j.tcs.2015.06.001"
   gg <- cr_works(doi)
   expect_true(any(grepl("funder", names(gg$data))))
-  expect_named(gg$data$funder[[1]], 
+  expect_named(gg$data$funder[[1]],
                c("DOI", "name", "doi.asserted.by", "award"))
 
   doi <- "10.1016/j.ffa.2015.10.008"
   hh <- cr_works(doi)
   expect_true(any(grepl("funder", names(hh$data))))
   expect_named(
-    hh$data$funder[[1]], 
+    hh$data$funder[[1]],
     c("DOI", "name", "doi.asserted.by", "award1", "award2", "award3"))
 })
 

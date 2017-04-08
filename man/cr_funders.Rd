@@ -71,7 +71,7 @@ field query parameters are:
  first and given names
 }}
 
-\item{...}{Named parameters passed on to \code{\link[httr]{GET}}}
+\item{...}{Named parameters passed on to \code{\link[crul]{HttpClient}}}
 
 \item{parse}{(logical) Whether to output json \code{FALSE} or parse to
 list \code{TRUE}. Default: \code{FALSE}}
@@ -108,8 +108,7 @@ cr_funders(dois=c('10.13039/100000001','10.13039/100000015'))
 cr_funders(dois=c('10.13039/100000001','10.13039/100000015'), works=TRUE)
 
 # Curl options
-library('httr')
-cr_funders(dois='10.13039/100000001', config=verbose())
+cr_funders(dois='10.13039/100000001', verbose = TRUE)
 
 # If not found, and > 1 DOI given, those not found dropped
 cr_funders(dois=c("adfadfaf","asfasf"))

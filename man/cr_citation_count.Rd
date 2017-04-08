@@ -15,7 +15,7 @@ cr_citation_count(doi, url = "http://www.crossref.org/openurl/",
 \item{key}{your Crossref OpenURL email address, either enter, or loads 
 from \code{.Rprofile}. We use a default, so you don't need to pass this.}
 
-\item{...}{Curl options passed on to \code{\link[httr]{GET}}}
+\item{...}{Curl options passed on to \code{\link[crul]{HttpClient}}}
 }
 \value{
 single numeric value - the citation count, or NA if not found or

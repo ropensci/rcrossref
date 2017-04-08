@@ -6,7 +6,7 @@
 #' @param url (character) the url for the function (should be left to default)
 #' @param key your Crossref OpenURL email address, either enter, or loads 
 #' from \code{.Rprofile}. We use a default, so you don't need to pass this.
-#' @param ... Curl options passed on to \code{\link[httr]{GET}}
+#' @param ... Curl options passed on to \code{\link[crul]{HttpClient}}
 #'
 #' @return single numeric value - the citation count, or NA if not found or
 #' no count available
@@ -38,9 +38,15 @@ cr_citation_count <- function(doi, url = "http://www.crossref.org/openurl/",
   
   args <- list(id = paste("doi:", doi, sep = ""), pid = as.character(key),
                noredirect = as.logical(TRUE))
-  cite_count <- GET(url, query = args, make_rcrossref_ua(), ...)
-  stop_for_status(cite_count)
-  ans <- xml2::read_xml(ct_utf8(cite_count))
+  cli <- crul::HttpClient$new(
+    url = url, 
+    headers = list(
+      `User-Agent` = rcrossref_ua(), `X-USER-AGENT` = rcrossref_ua()
+    )
+  )
+  cite_count <- cli$get(query = args, ...)
+  cite_count$raise_for_status()
+  ans <- xml2::read_xml(cite_count$parse("UTF-8"))
   if (get_attr(ans, "status") == "unresolved") {
     NA 
   } else {

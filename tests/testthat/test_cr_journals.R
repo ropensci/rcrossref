@@ -24,8 +24,7 @@ test_that("cr_journals metadata works correctly", {
 test_that("cr_journals fails correctly", {
   skip_on_cran()
 
-  library('httr')
-  expect_error(cr_journals(query="peerj", limit=4, config=timeout(0.001)))
+  expect_error(cr_journals(query="peerj", limit=4, timeout_ms = 1))
 })
 
 

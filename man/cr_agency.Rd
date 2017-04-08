@@ -14,7 +14,7 @@ cr_agency(dois = NULL, .progress = "none", ...)
 of each. Only used when passing in multiple ids (e.g., multiple DOIs, DOI prefixes,
 etc.)}
 
-\item{...}{Named parameters passed on to \code{\link[httr]{GET}}}
+\item{...}{Named parameters passed on to \code{\link[crul]{HttpClient}}}
 }
 \description{
 Check the DOI minting agency on one or more dois

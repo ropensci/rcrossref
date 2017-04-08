@@ -9,7 +9,7 @@ cr_abstract(doi, ...)
 \arguments{
 \item{doi}{(character) a DOI, required.}
 
-\item{...}{Named parameters passed on to \code{\link[httr]{GET}}}
+\item{...}{Named parameters passed on to \code{\link[crul]{HttpClient}}}
 }
 \description{
 Get abstract

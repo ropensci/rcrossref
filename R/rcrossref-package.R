@@ -8,7 +8,7 @@
 #' \url{http://citation.crosscite.org/docs.html}, and 
 #' the \emph{Text and Data Mining} project \url{http://tdmsupport.crossref.org/}
 #'
-#' @section Deprecated and Defunct:
+#' @section Defunct:
 #' See \code{\link{rcrossref-deprecated}} and \code{\link{rcrossref-defunct}} 
 #' for details.
 #'
@@ -74,9 +74,6 @@
 #' @importFrom R6 R6Class
 #' @importFrom xml2 read_xml xml_attr xml_find_all xml_find_first xml_text
 #' @importFrom bibtex read.bib
-#' @importFrom httr GET POST stop_for_status content_type_json accept_json 
-#' content write_disk accept http_status parse_url add_headers config 
-#' user_agent
 #' @importFrom jsonlite toJSON fromJSON
 #' @importFrom plyr llply ldply
 #' @importFrom shiny h4 fillRow htmlOutput renderUI textInput actionButton req

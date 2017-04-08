@@ -32,8 +32,7 @@
 #' cr_members(member_ids=98, works=TRUE, facet=TRUE)
 #'
 #' # curl options
-#' library('httr')
-#' cr_members(member_ids=98, config=verbose())
+#' cr_members(member_ids=98, verbose = TRUE)
 #'
 #' # Use the cursor for deep paging
 #' cr_members(member_ids=98, works = TRUE, cursor = "*", 

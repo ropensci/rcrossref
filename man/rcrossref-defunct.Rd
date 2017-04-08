@@ -25,5 +25,21 @@ These functions are gone, no longer available.
  achieved with \code{\link{cr_cn}}
  \item \code{\link{cr_fundref}}: Crossref changed their name "fundref" 
  to "funders", so we've changed our function, see \code{\link{cr_funders}}
+ \item \code{\link{cr_ft_text}}: This function and other text mining
+ functions are incorporated in a new package \code{crminer}.
+ \item \code{\link{cr_ft_links}}: This function and other text mining
+ functions are incorporated in a new package \code{crminer}.
+ \item \code{\link{cr_ft_pdf}}: This function and other text mining
+ functions are  incorporated in a new package \code{crminer}.
+ \item \code{\link{cr_ft_plain}}: This function and other text mining
+ functions are incorporated in a new package \code{crminer}.
+ \item \code{\link{cr_ft_text}}: This function and other text mining
+ functions are incorporated in a new package \code{crminer}.
+ \item \code{\link{cr_ft_xml}}: This function and other text mining
+ functions are incorporated in a new package \code{crminer}.
+ \item \code{\link{as.tdmurl}}: This function and other text mining
+ functions are incorporated in a new package \code{crminer}.
+ \item \code{\link{extract_xpdf}}: This function and other text mining
+ functions are incorporated in a new package \code{crminer}.
 }
 }

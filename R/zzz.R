@@ -1,9 +1,6 @@
 cr_compact <- function(x) Filter(Negate(is.null), x)
 
-ct_utf8 <- function(x) httr::content(x, as = "text", encoding = "UTF-8")
-
 asl <- function(z) {
-  # z <- tolower(z)
   if (is.logical(z) || tolower(z) == "true" || tolower(z) == "false") {
     if (z) {
       return('true')
@@ -13,13 +10,6 @@ asl <- function(z) {
   } else {
     return(z)
   }
-}
-
-make_rcrossref_ua <- function() {
-  c(
-    httr::user_agent(rcrossref_ua()),
-    httr::add_headers(`X-USER-AGENT` = rcrossref_ua())
-  )
 }
 
 rcrossref_ua <- function() {
@@ -32,37 +22,44 @@ rcrossref_ua <- function() {
 
 cr_GET <- function(endpoint, args, todf = TRUE, on_error = warning, parse = TRUE, ...) {
   url <- sprintf("https://api.crossref.org/%s", endpoint)
+  cli <- crul::HttpClient$new(
+    url = url,
+    headers = list(
+      `User-Agent` = rcrossref_ua(),
+      `X-USER-AGENT` = rcrossref_ua()
+    )
+  )
   if (length(args) == 0) {
-    res <- GET(url, make_rcrossref_ua(), ...)
+    res <- cli$get(...)
   } else {
-    res <- GET(url, query = args, make_rcrossref_ua(), ...)
+    res <- cli$get(query = args, ...)
   }
   doi <- gsub("works/|/agency|funders/", "", endpoint)
   if (!res$status_code < 300) {
     on_error(sprintf("%s: %s - (%s)", res$status_code, get_err(res), doi), call. = FALSE)
     list(message = NULL)
   } else {
-    stopifnot(res$headers$`content-type` == "application/json;charset=UTF-8")
-    res <- ct_utf8(res)
+    stopifnot(res$response_headers$`content-type` == "application/json;charset=UTF-8")
+    res <- res$parse("UTF-8")
     if (parse) jsonlite::fromJSON(res, todf) else res
   }
 }
 
 get_err <- function(x) {
-  xx <- ct_utf8(x)
-  if (is.null(x$headers$`content-type`)) {
+  xx <- x$parse("UTF-8")
+  if (is.null(x$response_headers$`content-type`)) {
     rr <- tryCatch(jsonlite::fromJSON(xx), error = function(e) e)
     if (inherits(rr, "error")) {
       tmp <- xx
     } else {
       tmp <- rr$message$description
     }
-  } else if (x$headers$`content-type` == "text/plain") {
+  } else if (x$response_headers$`content-type` == "text/plain") {
     tmp <- xx
-  } else if (x$headers$`content-type` == "text/html") {
+  } else if (x$response_headers$`content-type` == "text/html") {
     html <- xml2::read_html(xx)
     tmp <- xml2::xml_text(xml2::xml_find_first(html, '//h3[@class="info"]'))
-  } else if (x$headers$`content-type` == "application/json;charset=UTF-8") {
+  } else if (x$response_headers$`content-type` == "application/json;charset=UTF-8") {
     tmp <- jsonlite::fromJSON(xx, FALSE)
   } else {
     tmp <- xx

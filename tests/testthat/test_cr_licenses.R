@@ -28,8 +28,7 @@ test_that("cr_licenses returns", {
 test_that("cr_licenses fails correctly", {
   skip_on_cran()
 
-  library('httr')
-  expect_error(cr_licenses(config=timeout(0.01)))
+  expect_error(cr_licenses(timeout_ms = 1))
   expect_equal(NROW(cr_licenses(query = "adfaaf")$data), 0)
   expect_error(cr_licenses(filter=''))
 })

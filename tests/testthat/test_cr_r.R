@@ -27,8 +27,7 @@ test_that("cr_r returns", {
 test_that("cr_r fails correctly", {
   skip_on_cran()
 
-  library('httr')
-  expect_error(cr_r(config=timeout(0.01)))
+  expect_error(cr_r(timeout_ms = 1))
   expect_equal(cr_r(query = "adfaaf"), NULL)
 })
 

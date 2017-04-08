@@ -2,7 +2,7 @@
 #' 
 #' @export
 #' @param doi (character) a DOI, required.
-#' @param ... Named parameters passed on to \code{\link[httr]{GET}}
+#' @param ... Named parameters passed on to \code{\link[crul]{HttpClient}}
 #' @examples \dontrun{
 #' # abstract found
 #' cr_abstract(doi = '10.1109/TASC.2010.2088091')
@@ -19,9 +19,17 @@
 #' }
 cr_abstract <- function(doi, ...) {
   url <- paste0('http://api.crossref.org/works/', doi, '.xml')
-  res <- GET(url, make_rcrossref_ua(), config(followlocation = 1), ...)
-  stop_for_status(res)
-  txt <- content(res, "text", encoding = "UTF-8")
+  cli <- crul::HttpClient$new(
+    url = url,
+    opts = list(followlocation = 1),
+    headers = list(
+      `User-Agent` = rcrossref_ua(),
+      `X-USER-AGENT` = rcrossref_ua()
+    )
+  )
+  res <- cli$get(...)
+  res$raise_for_status()
+  txt <- res$parse("UTF-8")
   xml <- tryCatch(read_xml(txt), error = function(e) e)
   if (inherits(xml, "error")) {
     stop(doi, " not found ", call. = FALSE)
@@ -33,9 +41,3 @@ cr_abstract <- function(doi, ...) {
   }
   xml_text(tt)
 }
-
-# out <- list()
-# for (i in seq_along(dois)) {
-#   cat(i, "\n")
-#   out[[i]] <- tryCatch(cr_abstract(dois[i]), error = function(e) e)
-# }

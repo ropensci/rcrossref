@@ -100,7 +100,7 @@
 #' }
 
 `cr_cn` <- function(dois, format = "bibtex", style = 'apa', 
-                    locale = "en-US", raw = FALSE, .progress="none", ...) {
+                    locale = "en-US", raw = FALSE, .progress = "none", ...) {
   
   format <- match.arg(format, c("rdf-xml", "turtle", "citeproc-json",
                                 "citeproc-json-ish", "text", "ris", "bibtex", 
@@ -140,16 +140,27 @@
            "onix-xml" = "application/vnd.medra.onixdoi+xml")
     type <- pick[[format]]
     if (format == "citeproc-json") {
-      response <- GET(file.path("http://api.crossref.org/works", doi, type), 
-                      make_rcrossref_ua(), ...)
+      cli <- crul::HttpClient$new(
+        url = file.path("http://api.crossref.org/works", doi, type),
+        headers = list(
+          `User-Agent` = rcrossref_ua(), `X-USER-AGENT` = rcrossref_ua()
+        )
+      )
+      response <- cli$get(...)
     } else {
       if (format == "text") {
         type <- paste(type, "; style = ", style, "; locale = ", locale, 
                       sep = "")
       }
-      response <- GET(url, ..., 
-                      make_rcrossref_ua(),
-                      add_headers(Accept = type, followlocation = TRUE))
+      cli <- crul::HttpClient$new(
+        url = url,
+        opts = list(followlocation = 1),
+        headers = list(
+          `User-Agent` = rcrossref_ua(), `X-USER-AGENT` = rcrossref_ua(),
+          Accept = type
+        )
+      )
+      response <- cli$get(...)
     }
     warn_status(response)
     if (response$status_code < 202) {
@@ -168,9 +179,9 @@
         "onix-xml" = "text/xml")
       parser <- select[[format]]
       if (raw) {
-        ct_utf8(response)
+        response$parse("UTF-8")
       } else {
-        out <- ct_utf8(response)
+        out <- response$parse("UTF-8")
         if (format == "text") {
           out <- gsub("\n", "", out)
         }
@@ -216,12 +227,12 @@ parse_bibtex <- function(x){
 
 warn_status <- function(x) {
   if (x$status_code > 202) {
-    mssg <- ct_utf8(x)
+    mssg <- x$parse("UTF-8")
     if (!is.character(mssg)) {
       mssg <- if (x$status_code == 406) {
         "(406) - probably bad format type"
       } else {
-        http_status(x)$message
+        x$status_http()$message
       }
     } else {
       mssg <- paste(sprintf("(%s)", x$status_code), "-", mssg)
@@ -229,7 +240,7 @@ warn_status <- function(x) {
     warning(
       sprintf(
         "%s w/ %s", 
-        gsub("%2F", "/", httr::parse_url(x$url)$path), 
+        gsub("%2F", "/", crul::url_parse(x$url)$path), 
         mssg
       ),
       call. = FALSE

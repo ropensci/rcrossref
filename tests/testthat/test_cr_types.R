@@ -51,8 +51,7 @@ test_that("cr_types facet works correctly", {
 test_that("cr_types fails correctly", {
   skip_on_cran()
 
-  library('httr')
-  expect_error(cr_types(types="monograph", config=timeout(0.001)))
+  expect_error(cr_types(types="monograph", timeout_ms = 1))
 })
 
 Sys.sleep(2)

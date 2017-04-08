@@ -18,7 +18,7 @@ DOI Content Negotiation service at
 the \emph{Text and Data Mining} project \url{http://tdmsupport.crossref.org/}
 }
 
-\section{Deprecated and Defunct}{
+\section{Defunct}{
 
 See \code{\link{rcrossref-deprecated}} and \code{\link{rcrossref-defunct}} 
 for details.

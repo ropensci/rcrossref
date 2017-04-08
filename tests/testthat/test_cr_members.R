@@ -37,8 +37,7 @@ test_that("cr_members returns", {
 test_that("cr_members fails correctly", {
   skip_on_cran()
 
-  library('httr')
-  expect_error(cr_members(config=timeout(0.01)))
+  expect_error(cr_members(timeout_ms = 1))
   expect_equal(NROW(cr_members(query = "adfaaf")$data), 0)
 
   expect_warning(
@@ -49,7 +48,7 @@ test_that("cr_members fails correctly", {
     cr_members(
       member_ids=c(323234343434,3434343434,98), works=TRUE, facet=TRUE),
     "500: java.lang.NumberFormatException: For input string: \"323234343434\"")
-  
+
   # fails due to facet not supported
   expect_warning(cr_members(facet = TRUE),
                "This route does not support facet - \\(members\\)")

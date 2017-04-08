@@ -16,8 +16,7 @@ test_that("cr_ageny returns correct length", {
 test_that("cr_ageny fails correctly", {
   skip_on_cran()
 
-  library('httr')
-  expect_error(cr_agency(dois = cr_r(3), config=timeout(0.01)))
+  expect_error(cr_agency(dois = cr_r(3), timeout_ms = 1))
 })
 
 Sys.sleep(2)

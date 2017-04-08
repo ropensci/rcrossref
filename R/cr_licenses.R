@@ -12,7 +12,7 @@
 #' @param .progress Show a \code{plyr}-style progress bar? Options are "none", 
 #' "text", "tk", "win, and "time".  See \code{\link[plyr]{create_progress_bar}} 
 #' for details of each.
-#' @param ... Named parameters passed on to \code{\link[httr]{GET}}
+#' @param ... Named parameters passed on to \code{\link[crul]{HttpClient}}
 #' @param parse (logical) Whether to output json \code{FALSE} or parse to
 #' list \code{TRUE}. Default: \code{FALSE}
 #'

@@ -18,8 +18,7 @@ test_that("cr_citation_count returns", {
 test_that("cr_citation_count fails correctly", {
   skip_on_cran()
 
-  library('httr')
-  expect_error(cr_citation_count(doi="10.1371/journal.pone.0042793", config=timeout(0.001)))
+  expect_error(cr_citation_count(doi="10.1371/journal.pone.0042793", timeout_ms = 1))
   expect_equal(cr_citation_count("10.1371/journal.pone.004"), NA)
 })
 
