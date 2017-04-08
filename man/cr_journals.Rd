@@ -16,7 +16,7 @@ cr_journals_(issn = NULL, query = NULL, filter = NULL, offset = NULL,
   .progress = "none", parse = FALSE, flq = NULL, ...)
 }
 \arguments{
-\item{issn}{One or more ISSN's. Format is XXXX-XXXX.}
+\item{issn}{(character) One or more ISSN's. Format: XXXX-XXXX.}
 
 \item{query}{Query terms}
 
@@ -38,7 +38,11 @@ deposited, indexed, or published.}
 
 \item{order}{(character) Sort order, one of 'asc' or 'desc'}
 
-\item{facet}{(logical) Include facet results. Default: \code{FALSE}}
+\item{facet}{(logical) Include facet results. Boolean or string with 
+field to facet on. Valid fields are *, affiliation, funder-name, 
+funder-doi, orcid, container-title, assertion, archive, update-type, 
+issn, published, source, type-name, publisher-name, license, 
+category-name, assertion-group. Default: \code{FALSE}}
 
 \item{works}{(logical) If TRUE, works returned as well, if not then not.}
 
@@ -102,6 +106,12 @@ cr_journals(query="peerj")
 cr_journals(issn='1803-2427', works=TRUE)
 cr_journals(issn='1803-2427', works=TRUE, sample=1)
 cr_journals(limit=2)
+
+## get facets back
+cr_journals('1803-2427', works=TRUE, facet=TRUE)
+cr_journals('1803-2427', works=TRUE, facet="published:*", limit = 0)
+cr_journals(issn=c('1803-2427','2326-4225'), works=TRUE, 
+  facet="published:*", limit = 10)
 
 # Use the cursor for deep paging
 cr_journals(issn='1932-6203', works = TRUE, cursor = "*", cursor_max = 500, 

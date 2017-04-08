@@ -7,7 +7,11 @@
 #' @template moreargs
 #' @template cursor_args
 #' @template field_queries
-#' @param facet (logical) Include facet results. Default: \code{FALSE}
+#' @param facet (logical) Include facet results. Boolean or string with 
+#' field to facet on. Valid fields are *, affiliation, funder-name, 
+#' funder-doi, orcid, container-title, assertion, archive, update-type, 
+#' issn, published, source, type-name, publisher-name, license, 
+#' category-name, assertion-group. Default: \code{FALSE}
 #' @param works (logical) If TRUE, works returned as well, if not then not.
 #' @param parse (logical) Whether to output json \code{FALSE} or parse to
 #' list \code{TRUE}. Default: \code{FALSE}
@@ -25,6 +29,7 @@
 #'
 #' ## get facets back
 #' cr_types("journal-article", works=TRUE, facet=TRUE)$facets
+#' cr_types("monograph", works=TRUE, facet="license:*", limit = 0)
 #' cr_types(c('monograph', 'book-set'), works=TRUE, facet=TRUE)
 #'
 #' # Use the cursor for deep paging

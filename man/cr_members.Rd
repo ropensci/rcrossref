@@ -39,7 +39,11 @@ deposited, indexed, or published.}
 
 \item{order}{(character) Sort order, one of 'asc' or 'desc'}
 
-\item{facet}{(logical) Include facet results. Default: \code{FALSE}}
+\item{facet}{(logical) Include facet results. Boolean or string with 
+field to facet on. Valid fields are *, affiliation, funder-name, 
+funder-doi, orcid, container-title, assertion, archive, update-type, 
+issn, published, source, type-name, publisher-name, license, 
+category-name, assertion-group. Default: \code{FALSE}}
 
 \item{works}{(logical) If TRUE, works returned as well, if not then not.}
 
@@ -96,7 +100,8 @@ cr_members(query='hindawi')
 cr_members(query='ecology')
 
 # facets
-cr_members(member_ids=98, works=TRUE, facet=TRUE)
+cr_members(member_ids=98, works=TRUE, facet=TRUE, limit = 0)
+cr_members(member_ids=98, works=TRUE, facet="license:*", limit = 0)
 
 # curl options
 cr_members(member_ids=98, verbose = TRUE)

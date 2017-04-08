@@ -8,7 +8,11 @@
 #' @template moreargs
 #' @template cursor_args
 #' @template field_queries
-#' @param facet (logical) Include facet results. Default: \code{FALSE}
+#' @param facet (logical) Include facet results. Boolean or string with 
+#' field to facet on. Valid fields are *, affiliation, funder-name, 
+#' funder-doi, orcid, container-title, assertion, archive, update-type, 
+#' issn, published, source, type-name, publisher-name, license, 
+#' category-name, assertion-group. Default: \code{FALSE}
 #' @param works (logical) If TRUE, works returned as well, if not then not.
 #' @param parse (logical) Whether to output json \code{FALSE} or parse to
 #' list \code{TRUE}. Default: \code{FALSE}
@@ -45,10 +49,9 @@
 #'
 #' # facets - only avail. when works=TRUE
 #' cr_prefixes(prefixes="10.1016", works=TRUE, facet=TRUE)
-#'
-#' ## get facets back
-#' cr_prefixes(prefixes="10.1016", works=TRUE, facet=TRUE)
-#' cr_prefixes(prefixes=c('10.1016','10.1371'), works=TRUE, facet=TRUE)
+#' cr_prefixes(prefixes="10.1016", works=TRUE, facet="license:*", limit=0)
+#' cr_prefixes(prefixes=c('10.1016','10.1371'), works=TRUE, facet=TRUE, 
+#'   limit=0)
 #'
 #' # Use the cursor for deep paging
 #' cr_prefixes("10.1016", works = TRUE, cursor = "*", cursor_max = 500, 

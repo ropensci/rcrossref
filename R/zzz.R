@@ -139,7 +139,10 @@ prep_args <- function(query, filter, offset, limit, sample, sort,
   check_number(sample)
   filter <- filter_handler(filter)
   flq <- field_query_handler(flq)
-  facet <- if (facet) "t" else NULL
+  stopifnot(class(facet) %in% c('logical', 'character'))
+  if (inherits(facet, "logical")) {
+    facet <- if (facet) "t" else NULL
+  }
   cr_compact(
     c(
       list(query = query, filter = filter, offset = offset, rows = limit,

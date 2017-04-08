@@ -38,7 +38,11 @@ deposited, indexed, or published.}
 
 \item{order}{(character) Sort order, one of 'asc' or 'desc'}
 
-\item{facet}{(logical) Include facet results. Default: \code{FALSE}}
+\item{facet}{(logical) Include facet results. Boolean or string with 
+field to facet on. Valid fields are *, affiliation, funder-name, 
+funder-doi, orcid, container-title, assertion, archive, update-type, 
+issn, published, source, type-name, publisher-name, license, 
+category-name, assertion-group. Default: \code{FALSE}}
 
 \item{cursor}{(character) Cursor character string to do deep paging. Default is None.
 Pass in '*' to start deep paging. Any combination of query, filters and facets may be
@@ -128,6 +132,8 @@ cr_works(dois=c('10.1007/12080.1874-1746','10.1007/10452.1573-5125'),
 cr_works(query="NSF", facet=TRUE)
 ## Get facets only, by setting limit=0
 cr_works(query="NSF", facet=TRUE, limit=0)
+## you can also set facet to a query
+cr_works(facet = "license:*", limit=0)
 
 # Sort results
 cr_works(query="ecology", sort='relevance', order="asc")

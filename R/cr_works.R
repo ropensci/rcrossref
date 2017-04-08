@@ -7,7 +7,11 @@
 #' @template moreargs
 #' @template cursor_args
 #' @template field_queries
-#' @param facet (logical) Include facet results. Default: \code{FALSE}
+#' @param facet (logical) Include facet results. Boolean or string with 
+#' field to facet on. Valid fields are *, affiliation, funder-name, 
+#' funder-doi, orcid, container-title, assertion, archive, update-type, 
+#' issn, published, source, type-name, publisher-name, license, 
+#' category-name, assertion-group. Default: \code{FALSE}
 #' @param parse (logical) Whether to output json \code{FALSE} or parse to
 #' list \code{TRUE}. Default: \code{FALSE}
 #'
@@ -60,6 +64,8 @@
 #' cr_works(query="NSF", facet=TRUE)
 #' ## Get facets only, by setting limit=0
 #' cr_works(query="NSF", facet=TRUE, limit=0)
+#' ## you can also set facet to a query
+#' cr_works(facet = "license:*", limit=0)
 #'
 #' # Sort results
 #' cr_works(query="ecology", sort='relevance', order="asc")

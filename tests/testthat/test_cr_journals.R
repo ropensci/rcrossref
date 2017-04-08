@@ -27,6 +27,19 @@ test_that("cr_journals fails correctly", {
   expect_error(cr_journals(query="peerj", limit=4, timeout_ms = 1))
 })
 
+test_that("cr_journals facet works", {
+  skip_on_cran()
+  
+  a <- cr_journals('1803-2427', works=TRUE, facet=TRUE, limit = 0)
+  
+  expect_is(a, "list")
+  expect_is(a$data, "data.frame")
+  expect_null(a$meta)
+  expect_is(a$facets, "list")
+  expect_is(a$facets$affiliation, "data.frame")
+  expect_is(a$facets$published, "data.frame")
+})
+
 
 test_that("cr_journals warns correctly", {
   skip_on_cran()

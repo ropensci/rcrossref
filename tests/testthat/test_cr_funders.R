@@ -21,10 +21,24 @@ test_that("cr_funders returns", {
   expect_equal(length(b), 2)
 })
 
+test_that("cr_funders facet works", {
+  skip_on_cran()
+  
+  a <- cr_funders("10.13039/100000001", works=TRUE, facet=TRUE, limit = 0)
+  
+  expect_is(a, "list")
+  expect_is(a$data, "data.frame")
+  expect_is(a$meta, "data.frame")
+  expect_is(a$facets, "list")
+  expect_is(a$facets$affiliation, "data.frame")
+  expect_is(a$facets$published, "data.frame")
+})
+
+
 test_that("cr_funders fails correctly", {
   skip_on_cran()
 
-  expect_warning(cr_funders(dois='10.13039/100000001afasfasdf'),
+  expect_warning(cr_funders(dois = '10.13039/100000001afasfasdf'),
                "Resource not found")
 })
 

@@ -9,7 +9,11 @@
 #' @template cursor_args
 #' @template field_queries
 #' @param works (logical) If TRUE, works returned as well, if not then not.
-#' @param facet (logical) Include facet results. Default: \code{FALSE}
+#' @param facet (logical) Include facet results. Boolean or string with 
+#' field to facet on. Valid fields are *, affiliation, funder-name, 
+#' funder-doi, orcid, container-title, assertion, archive, update-type, 
+#' issn, published, source, type-name, publisher-name, license, 
+#' category-name, assertion-group. Default: \code{FALSE}
 #' @param parse (logical) Whether to output json \code{FALSE} or parse to
 #' list \code{TRUE}. Default: \code{FALSE}
 #'
@@ -29,7 +33,8 @@
 #' cr_members(query='ecology')
 #'
 #' # facets
-#' cr_members(member_ids=98, works=TRUE, facet=TRUE)
+#' cr_members(member_ids=98, works=TRUE, facet=TRUE, limit = 0)
+#' cr_members(member_ids=98, works=TRUE, facet="license:*", limit = 0)
 #'
 #' # curl options
 #' cr_members(member_ids=98, verbose = TRUE)
