@@ -43,9 +43,10 @@
 #' cr_prefixes(prefixes="10.1016", works=TRUE)
 #' cr_prefixes(prefixes=c('10.1016','10.1371','10.1023','10.4176','10.1093'))
 #' cr_prefixes(prefixes=c('10.1016','10.1371'), works=TRUE)
-#' cr_works(prefixes="10.1016", filter=c(has_full_text=TRUE), limit=5)
-#' cr_works(prefixes="10.1016", query='ecology', limit=4)
-#' cr_works(prefixes="10.1016", query='ecology', limit=4)
+#' cr_prefixes(prefixes="10.1016", works=TRUE, filter=c(has_full_text=TRUE), 
+#'   limit=5)
+#' cr_prefixes(prefixes="10.1016", works=TRUE, query='ecology', limit=4)
+#' cr_prefixes(prefixes="10.1016", works=TRUE, query='ecology', limit=4)
 #'
 #' # facets - only avail. when works=TRUE
 #' cr_prefixes(prefixes="10.1016", works=TRUE, facet=TRUE)
