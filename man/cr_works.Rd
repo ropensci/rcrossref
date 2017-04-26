@@ -96,6 +96,16 @@ or lists, with no attempt to parse to data.frame's
 }
 }
 
+\section{Explanation of some data fields}{
+
+\itemize{
+\item score: a term frequency, inverse document frequency score that
+comes from the Crossref Solr backend, based on bibliographic metadata
+fields title, publication title, authors, ISSN, publisher, and
+date of publication.
+}
+}
+
 \examples{
 \dontrun{
 # Works funded by the NSF

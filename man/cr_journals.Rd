@@ -89,6 +89,16 @@ BEWARE: The API will only work for CrossRef DOIs.
 Note that some parameters are ignored unless \code{works=TRUE}: sample, sort,
 order, filter
 }
+\section{Explanation of some data fields}{
+
+\itemize{
+\item backfile_dois: Back file records have a publication date older than
+two years ago.
+\item current_dois: Current records are anything published in the last
+two years.
+}
+}
+
 \examples{
 \dontrun{
 cr_journals(issn="2167-8359")
