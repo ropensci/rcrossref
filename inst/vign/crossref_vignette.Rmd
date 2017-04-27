@@ -6,8 +6,8 @@
 
 ```{r echo=FALSE}
 knitr::opts_chunk$set(
-  comment = "#>", 
-  warning = FALSE, 
+  comment = "#>",
+  warning = FALSE,
   message = FALSE,
   cache = TRUE
 )
@@ -39,7 +39,7 @@ CrossRef's [DOI Content Negotiation](http://citation.crosscite.org/docs.html) se
 cr_cn(dois = "10.1371/journal.pone.0112608", format = "text", style = "apa")
 ```
 
-There are a lot more styles. We include a dataset as a character vector within the package, accessible via the `get_styles()` function, e.g., 
+There are a lot more styles. We include a dataset as a character vector within the package, accessible via the `get_styles()` function, e.g.,
 
 ```{r}
 get_styles()[1:5]
@@ -67,7 +67,7 @@ cr_citation_count(doi="10.1371/journal.pone.0042793")
 
 ## Search Crossref metadata API
 
-There are two functions that use an older Crossre API: `cr_search()` and `cr_search_free()`. You can of course use them, but the newer Crossref API available through various functions (`cr_agency()`, `cr_fundref()`, `cr_journals()`, `cr_licenses()`, `cr_members()`, `cr_prefixes()`, and `cr_works()`) is more powerful and will recieve more support going forward. The following functions (of the newer set just mentioend) all use the [CrossRef API](https://github.com/CrossRef/rest-api-doc/blob/master/rest_api.md).
+The following functions all use the [CrossRef API](https://github.com/CrossRef/rest-api-doc/blob/master/rest_api.md).
 
 ### Look up funder information
 
@@ -87,7 +87,7 @@ cr_agency(dois = '10.13039/100000001')
 cr_works(filter=c(has_orcid=TRUE, from_pub_date='2004-04-04'), limit=1)
 ```
 
-### Search journals 
+### Search journals
 
 ```{r}
 cr_journals(issn=c('1803-2427','2326-4225'))
@@ -113,7 +113,7 @@ cr_members(query='ecology', limit = 5)
 
 ### Get N random DOIs
 
-`cr_r()` uses the function `cr_works()` internally. 
+`cr_r()` uses the function `cr_works()` internally.
 
 ```{r}
 cr_r()
@@ -125,25 +125,3 @@ You can pass in the number of DOIs you want back (default is 10)
 cr_r(2)
 ```
 
-### The older functions and API
-
-Search by author
-
-```{r}
-cr_search(query = c("renear", "palmer"), rows = 3, sort = "year")[1:2,-6]
-```
-
-Search by DOI
-
-```{r}
-cr_search(doi = "10.1890/10-0340.1")[,-6]
-```
-
-Free search
-
-```{r}
-queries <- c("Piwowar sharing data PLOS one", "Priem Scientometrics 2.0 social web",
-  "William Gunn A Crosstalk Between Myeloma Cells",
- "karthik ram Metapopulation dynamics override local limits")
-cr_search_free(queries)[,-4]
-```
