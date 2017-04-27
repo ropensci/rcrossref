@@ -1,7 +1,7 @@
 ## Test environments
 
-* local OS X install, R 3.3.2
-* ubuntu 12.04 (on travis-ci), R 3.3.2
+* local OS X install, R 3.4.0
+* ubuntu 12.04 (on travis-ci), R 3.4.0
 * win-builder (devel and release)
 
 ## R CMD check results
@@ -11,19 +11,17 @@
    License components with restrictions and base license permitting such:
      MIT + file LICENSE
    File 'LICENSE':
-     YEAR: 2016
+     YEAR: 2017
      COPYRIGHT HOLDER: Scott Chamberlain
 
 ## Reverse dependencies
 
-* I have run R CMD check on the 1 downstream dependency, and 
+* I have run R CMD check on the 3 downstream dependencies, and 
 found no problems related to this new version.
 
 -------
 
-This submission includes new parameters in some functions, caching
-using rappdirs, and many small improvements/documentation updates, some
-functions marked defunct, and some deprecated.
+This submission includes xxxx.
 
 Thanks!
 Scott Chamberlain

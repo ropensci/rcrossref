@@ -1,3 +1,38 @@
+rcrossref 0.7.0
+===============
+
+### NEW FEATURES
+
+* All text mining functionality moved into a new package: `crminer` 
+<https://github.com/ropensci/crminer> . Functions that did 
+text mining stuff now defunct, see `?rcrossref-defunct` (#122)
+* All Crossref API requests now using `https` instead of `http` (#133)
+
+### MINOR IMPROVEMENTS
+
+* replace `xml2::xml_find_one` with `xml2::xml_find_first` (#128) 
+thanks @njahn82
+* replaced `httr` with `crul` for HTTP requests (#132)
+* Now using markdown for documentation (#135)
+* Added more documentation to `cr_journals` and `cr_works` 
+about what the returned data fields `backfile_dois` and `current_dois`
+really mean (#105) thanks @SteveViss
+
+### BUG FIXES
+
+* Fix to `cr_prefixes` to not fail when no results found (#130)
+thanks @globbestael 
+* Fixed `cr_works` to allow queries like `facet = license:*` to be
+passed to `facet` parameter (was always allowed by Crossref, but we
+neglected to allow it - previously only allowed a boolean) (#129)
+* Fixed `cr_funders` and `cr_journals` to give back facet data along 
+with other data (#134)
+* Fix to `cr_*` functions to check for a missing content-type 
+headers and instead of failing, we continue anyway and try to parse
+data as sometimes Crossref doesn't give back a content type header
+at all (#127)
+
+
 rcrossref 0.6.0
 ===============
 
