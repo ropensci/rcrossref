@@ -10,6 +10,7 @@ knitr::opts_chunk$set(
 )
 ```
 
+[![Project Status: Active - The project has reached a stable, usable state and is being actively developed.](http://www.repostatus.org/badges/latest/active.svg)](http://www.repostatus.org/#active)
 [![Build Status](https://api.travis-ci.org/ropensci/rcrossref.png)](https://travis-ci.org/ropensci/rcrossref)
 [![Build status](https://ci.appveyor.com/api/projects/status/jbo6y7dg4qiq7mol/branch/master)](https://ci.appveyor.com/project/sckott/rcrossref/branch/master)
 [![codecov.io](https://codecov.io/github/ropensci/rcrossref/coverage.svg?branch=master)](https://codecov.io/github/ropensci/rcrossref?branch=master)
@@ -137,13 +138,7 @@ You can pass in the number of DOIs you want back (default is 10)
 cr_r(2)
 ```
 
-## pmid2doi & doi2pmid
-
-DOIs to PMIDs
-
-__UPDATE: as of 2014-12-23 the web API behind these functions is down - we'll update the package once the API is up again__
-
-## Get full text links to works
+## Get full text
 
 Publishers can optionally provide links in the metadata they provide to Crossref for full text of the work, but that data is often missing. Find out more about it at [http://tdmsupport.crossref.org/](http://tdmsupport.crossref.org/).
 
@@ -156,32 +151,44 @@ out <-
 (dois <- out$data$DOI)
 ```
 
-Then get URLs to full text content
+From the output of `cr_works` we can get full text links if we know where to look:
 
 ```{r}
-(links <- cr_ft_links(dois[1]))
+do.call("rbind", out$data$link)
+```
+
+From there, you can grab your full text, but because most links require
+authentication, enter another package: `crminer`.
+
+### Get full text
+
+You'll need package `crminer` for the rest
+
+Onc we have DOIs, get URLs to full text content
+
+```{r eval=FALSE}
+if (!requireNamespace("crminer")) {
+  install.packages("crminer")
+}
+```
+
+```{r}
+library(crminer)
+(links <- crm_links(dois[1]))
 ```
 
 Then use those URLs to get full text
 
 ```{r eval=FALSE}
-cr_ft_text(links, "xml")
-#> <?xml version="1.0"?>
-#> <article xmlns:mml="http://www.w3.org/1998/Math/MathML" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://jats.nlm.nih.gov/publishing/1.1d1/xsd/JATS-journalpublishing1-mathml3.xsd" dtd-version="1.1d1">
-#>   <front>
-#>     <journal-meta>
-#>       <journal-id journal-id-type="publisher-id">SV</journal-id>
-#>       <journal-title-group>
-#>         <journal-title>Shock and Vibration</journal-title>
-#>       </journal-title-group>
-#>       <issn pub-type="epub">1875-9203</issn>
-#>       <issn pub-type="ppub">1070-9622</issn>
-#>       <publisher>
-#>         <publisher-name>Hindawi Publishing Corporation</publisher-name>
-#>       </publisher>
-#>     </journal-meta>
-#> .................... cutoff
+crm_pdf(links)
+#> <document>/Users/sacmac/Library/Caches/crminer/174726.pdf
+#>   Pages: 7
+#>   No. characters: 36232
+#>   Created: 2014-03-26
 ```
+
+See also [fulltext](https://github.com/ropensci/fulltext) for getting scholarly text 
+for text mining.
 
 
 ## Meta

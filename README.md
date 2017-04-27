@@ -3,6 +3,7 @@ rcrossref
 
 
 
+[![Project Status: Active - The project has reached a stable, usable state and is being actively developed.](http://www.repostatus.org/badges/latest/active.svg)](http://www.repostatus.org/#active)
 [![Build Status](https://api.travis-ci.org/ropensci/rcrossref.png)](https://travis-ci.org/ropensci/rcrossref)
 [![Build status](https://ci.appveyor.com/api/projects/status/jbo6y7dg4qiq7mol/branch/master)](https://ci.appveyor.com/project/sckott/rcrossref/branch/master)
 [![codecov.io](https://codecov.io/github/ropensci/rcrossref/coverage.svg?branch=master)](https://codecov.io/github/ropensci/rcrossref?branch=master)
@@ -108,7 +109,7 @@ cr_funders(query = "NSF")
 #> $meta
 #>   total_results search_terms start_index items_per_page
 #> 1             8          NSF           0             20
-#> 
+#>
 #> $data
 #> # A tibble: 8 × 6
 #>             id      location
@@ -123,7 +124,7 @@ cr_funders(query = "NSF")
 #> 8 501100001809         China
 #> # ... with 4 more variables: name <chr>, alt.names <chr>, uri <chr>,
 #> #   tokens <chr>
-#> 
+#>
 #> $facets
 #> NULL
 ```
@@ -135,11 +136,11 @@ cr_funders(query = "NSF")
 cr_agency(dois = '10.13039/100000001')
 #> $DOI
 #> [1] "10.13039/100000001"
-#> 
+#>
 #> $agency
 #> $agency$id
 #> [1] "crossref"
-#> 
+#>
 #> $agency$label
 #> [1] "CrossRef"
 ```
@@ -151,8 +152,8 @@ cr_agency(dois = '10.13039/100000001')
 cr_works(filter = c(has_orcid = TRUE, from_pub_date = '2004-04-04'), limit = 1)
 #> $meta
 #>   total_results search_terms start_index items_per_page
-#> 1        685202           NA           0              1
-#> 
+#> 1        688862           NA           0              1
+#>
 #> $data
 #> # A tibble: 1 × 29
 #>   alternative.id               container.title    created  deposited
@@ -166,7 +167,7 @@ cr_works(filter = c(has_orcid = TRUE, from_pub_date = '2004-04-04'), limit = 1)
 #> #   source <chr>, subject <chr>, title <chr>, type <chr>,
 #> #   update.policy <chr>, URL <chr>, assertion <list>, author <list>,
 #> #   `clinical-trial-number` <list>
-#> 
+#>
 #> $facets
 #> NULL
 ```
@@ -180,12 +181,12 @@ cr_journals(issn = c('1803-2427','2326-4225'))
 #> # A tibble: 2 × 16
 #>   alternative.id container.title created deposited funder indexed  ISBN
 #>            <chr>           <chr>   <chr>     <chr> <list>   <chr> <chr>
-#> 1                                                  <NULL>              
-#> 2                                                  <NULL>              
+#> 1                                                  <NULL>
+#> 2                                                  <NULL>
 #> # ... with 9 more variables: ISSN <chr>, issued <chr>, link <list>,
 #> #   publisher <chr>, subject <chr>, title <chr>, assertion <list>,
 #> #   author <list>, `clinical-trial-number` <list>
-#> 
+#>
 #> $facets
 #> NULL
 ```
@@ -198,7 +199,7 @@ cr_licenses(query = 'elsevier')
 #> $meta
 #>   total_results search_terms start_index items_per_page
 #> 1            17     elsevier           0             20
-#> 
+#>
 #> $data
 #> # A tibble: 17 × 2
 #>                                                                            URL
@@ -230,7 +231,7 @@ cr_licenses(query = 'elsevier')
 cr_prefixes(prefixes = c('10.1016','10.1371','10.1023','10.4176','10.1093'))
 #> $meta
 #> NULL
-#> 
+#>
 #> $data
 #>                               member                             name
 #> 1   http://id.crossref.org/member/78                      Elsevier BV
@@ -244,7 +245,7 @@ cr_prefixes(prefixes = c('10.1016','10.1371','10.1023','10.4176','10.1093'))
 #> 3 http://id.crossref.org/prefix/10.1023
 #> 4 http://id.crossref.org/prefix/10.4176
 #> 5 http://id.crossref.org/prefix/10.1093
-#> 
+#>
 #> $facets
 #> list()
 ```
@@ -257,7 +258,7 @@ cr_members(query = 'ecology', limit = 5)
 #> $meta
 #>   total_results search_terms start_index items_per_page
 #> 1            18      ecology           0              5
-#> 
+#>
 #> $data
 #> # A tibble: 5 × 48
 #>      id
@@ -301,7 +302,7 @@ cr_members(query = 'ecology', limit = 5)
 #> #   flags.deposits.funders.backfile <chr>,
 #> #   flags.deposits.update.policies.current <chr>,
 #> #   flags.deposits.licenses.current <chr>, names <chr>, tokens <chr>
-#> 
+#>
 #> $facets
 #> NULL
 ```
@@ -313,16 +314,16 @@ cr_members(query = 'ecology', limit = 5)
 
 ```r
 cr_r()
-#>  [1] "10.1080/714004123"                 
-#>  [2] "10.1163/2210-7886_asc-20632a"      
-#>  [3] "10.1046/j.1471-0528.2003.02165.x"  
-#>  [4] "10.1097/00003246-199912001-00436"  
-#>  [5] "10.3109/14767058.2015.1045864"     
-#>  [6] "10.1017/s0074180900105509"         
-#>  [7] "10.1007/bf00490880"                
-#>  [8] "10.1371/journal.pone.0076949.g006" 
-#>  [9] "10.1002/chin.198450058"            
-#> [10] "10.1016/b978-0-444-89007-8.50456-1"
+#>  [1] "10.1007/s10841-016-9867-9"
+#>  [2] "10.1016/b978-1-4557-3383-5.00008-7"
+#>  [3] "10.1515/9783110953527-fm"
+#>  [4] "10.1007/bf01571686"
+#>  [5] "10.1002/chin.201027234"
+#>  [6] "10.1002/9780470872864.ch23"
+#>  [7] "10.1090/s0273-0979-1992-00325-7"
+#>  [8] "10.1016/j.ejphar.2007.05.027"
+#>  [9] "10.1111/j.1538-7836.2005.01695.x"
+#> [10] "10.1109/wisnet.2012.6172160"
 ```
 
 You can pass in the number of DOIs you want back (default is 10)
@@ -330,17 +331,10 @@ You can pass in the number of DOIs you want back (default is 10)
 
 ```r
 cr_r(2)
-#> [1] "10.1016/b978-2-294-73838-8.50017-9"
-#> [2] "10.1109/memsys.2011.5734638"
+#> [1] "10.1007/bf02256554" "10.2307/3467745"
 ```
 
-## pmid2doi & doi2pmid
-
-DOIs to PMIDs
-
-__UPDATE: as of 2014-12-23 the web API behind these functions is down - we'll update the package once the API is up again__
-
-## Get full text links to works
+## Get full text
 
 Publishers can optionally provide links in the metadata they provide to Crossref for full text of the work, but that data is often missing. Find out more about it at [http://tdmsupport.crossref.org/](http://tdmsupport.crossref.org/).
 
@@ -352,47 +346,77 @@ out <-
   cr_works(filter = list(has_full_text = TRUE,
     license_url = "http://creativecommons.org/licenses/by/3.0/"))
 (dois <- out$data$DOI)
-#>  [1] "10.1093/ecam/nem168"            "10.1016/j.mri.2010.09.002"     
-#>  [3] "10.1016/j.stem.2009.11.001"     "10.1016/j.cellsig.2011.08.019" 
-#>  [5] "10.1016/j.physletb.2011.09.006" "10.1155/2008/424320"           
-#>  [7] "10.1155/2008/496467"            "10.1155/2008/345478"           
-#>  [9] "10.1155/2009/730902"            "10.1155/2009/625469"           
+#>  [1] "10.1093/ecam/nem168"            "10.1016/j.mri.2010.09.002"
+#>  [3] "10.1016/j.stem.2009.11.001"     "10.1016/j.cellsig.2011.08.019"
+#>  [5] "10.1016/j.physletb.2011.09.006" "10.1155/2008/424320"
+#>  [7] "10.1155/2008/496467"            "10.1155/2008/345478"
+#>  [9] "10.1155/2009/730902"            "10.1155/2009/625469"
 #> [11] "10.1155/2008/195873"            "10.1016/j.physletb.2011.09.011"
-#> [13] "10.1016/j.dnarep.2012.04.002"   "10.1016/j.meegid.2008.11.006"  
-#> [15] "10.1016/j.physletb.2011.09.010" "10.4061/2010/478746"           
-#> [17] "10.4061/2010/348919"            "10.1016/j.adhoc.2012.03.013"   
+#> [13] "10.1016/j.dnarep.2012.04.002"   "10.1016/j.meegid.2008.11.006"
+#> [15] "10.1016/j.physletb.2011.09.010" "10.4061/2010/478746"
+#> [17] "10.4061/2010/348919"            "10.1016/j.adhoc.2012.03.013"
 #> [19] "10.1155/2011/124595"            "10.1016/j.molcel.2007.09.005"
 ```
 
-Then get URLs to full text content
+From the output of `cr_works` we can get full text links if we know where to look:
 
 
 ```r
-(links <- cr_ft_links(dois[1]))
-#> Error: Removed - see crminer::crm_links()
+do.call("rbind", out$data$link)
+#> # A tibble: 39 × 4
+#>                                                                            URL
+#>                                                                          <chr>
+#> 1                   http://downloads.hindawi.com/journals/ecam/2010/174726.pdf
+#> 2  http://api.elsevier.com/content/article/PII:S0730725X10002742?httpAccept=te
+#> 3  http://api.elsevier.com/content/article/PII:S0730725X10002742?httpAccept=te
+#> 4  http://api.elsevier.com/content/article/PII:S1934590909005748?httpAccept=te
+#> 5  http://api.elsevier.com/content/article/PII:S1934590909005748?httpAccept=te
+#> 6  http://api.elsevier.com/content/article/PII:S0898656811002658?httpAccept=te
+#> 7  http://api.elsevier.com/content/article/PII:S0898656811002658?httpAccept=te
+#> 8  http://api.elsevier.com/content/article/PII:S0370269311010689?httpAccept=te
+#> 9  http://api.elsevier.com/content/article/PII:S0370269311010689?httpAccept=te
+#> 10                 http://downloads.hindawi.com/journals/ijmms/2008/424320.pdf
+#> # ... with 29 more rows, and 3 more variables: content.type <chr>,
+#> #   content.version <chr>, intended.application <chr>
+```
+
+From there, you can grab your full text, but because most links require
+authentication, enter another package: `crminer`.
+
+### Get full text
+
+You'll need package `crminer` for the rest
+
+Onc we have DOIs, get URLs to full text content
+
+
+```r
+if (!requireNamespace("crminer")) {
+  install.packages("crminer")
+}
+```
+
+
+```r
+library(crminer)
+(links <- crm_links(dois[1]))
+#> $pdf
+#> <url> http://downloads.hindawi.com/journals/ecam/2010/174726.pdf
 ```
 
 Then use those URLs to get full text
 
 
 ```r
-cr_ft_text(links, "xml")
-#> <?xml version="1.0"?>
-#> <article xmlns:mml="http://www.w3.org/1998/Math/MathML" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://jats.nlm.nih.gov/publishing/1.1d1/xsd/JATS-journalpublishing1-mathml3.xsd" dtd-version="1.1d1">
-#>   <front>
-#>     <journal-meta>
-#>       <journal-id journal-id-type="publisher-id">SV</journal-id>
-#>       <journal-title-group>
-#>         <journal-title>Shock and Vibration</journal-title>
-#>       </journal-title-group>
-#>       <issn pub-type="epub">1875-9203</issn>
-#>       <issn pub-type="ppub">1070-9622</issn>
-#>       <publisher>
-#>         <publisher-name>Hindawi Publishing Corporation</publisher-name>
-#>       </publisher>
-#>     </journal-meta>
-#> .................... cutoff
+crm_pdf(links)
+#> <document>/Users/sacmac/Library/Caches/crminer/174726.pdf
+#>   Pages: 7
+#>   No. characters: 36232
+#>   Created: 2014-03-26
 ```
+
+See also [fulltext](https://github.com/ropensci/fulltext) for getting scholarly text
+for text mining.
 
 
 ## Meta
