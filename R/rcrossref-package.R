@@ -30,17 +30,17 @@
 #'
 #' This boils down to: they allow X number of requests per some time period.
 #' The numbers can change so we can't give a rate limit that will always
-#' be in effect. If you're curious pass in `config = verbose()` to
+#' be in effect. If you're curious pass in `verbose = TRUE` to
 #' your function call, and you'll get headers that will display these rate
 #' limits.
 #'
 #' @section Text mining:
-#' We provide the ability to do text mining in this package. See functions
-#' [cr_ft_links()] and [cr_ft_text()]. All text mining
-#' functions are now deprecated, and moved to a new package `crminer`.
+#' All Crossref specific text mining functions are now deprecated, and 
+#' moved to a new package `crminer`.
 #'
-#' Another package \pkg{fulltext} is designed solely text mining involving
-#' Crossref and other sources of scholarly metadata and full text.
+#' Another package \pkg{fulltext} is designed solely to do general purpose 
+#' text mining involving Crossref and other sources of scholarly metadata 
+#' and full text.
 #'
 #' @section High and Low Level APIs:
 #' For the Crossref search API (the functions [cr_funders()],
