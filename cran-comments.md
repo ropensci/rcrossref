@@ -21,7 +21,8 @@ found no problems related to this new version.
 
 -------
 
-This submission includes xxxx.
+This submission breaks out some functionality to a new package (crminer),
+and includes a number of bug fixes.
 
 Thanks!
 Scott Chamberlain

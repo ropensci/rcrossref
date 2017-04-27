@@ -3,31 +3,31 @@ rcrossref 0.7.0
 
 ### NEW FEATURES
 
-* All text mining functionality moved into a new package: `crminer` 
-<https://github.com/ropensci/crminer> . Functions that did 
+* All text mining functionality moved into a new package: `crminer`
+<https://github.com/ropensci/crminer> . Functions that did
 text mining stuff now defunct, see `?rcrossref-defunct` (#122)
 * All Crossref API requests now using `https` instead of `http` (#133)
 
 ### MINOR IMPROVEMENTS
 
-* replace `xml2::xml_find_one` with `xml2::xml_find_first` (#128) 
+* replace `xml2::xml_find_one` with `xml2::xml_find_first` (#128)
 thanks @njahn82
 * replaced `httr` with `crul` for HTTP requests (#132)
 * Now using markdown for documentation (#135)
-* Added more documentation to `cr_journals` and `cr_works` 
+* Added more documentation to `cr_journals` and `cr_works`
 about what the returned data fields `backfile_dois` and `current_dois`
 really mean (#105) thanks @SteveViss
 
 ### BUG FIXES
 
 * Fix to `cr_prefixes` to not fail when no results found (#130)
-thanks @globbestael 
+thanks @globbestael
 * Fixed `cr_works` to allow queries like `facet = license:*` to be
 passed to `facet` parameter (was always allowed by Crossref, but we
 neglected to allow it - previously only allowed a boolean) (#129)
-* Fixed `cr_funders` and `cr_journals` to give back facet data along 
+* Fixed `cr_funders` and `cr_journals` to give back facet data along
 with other data (#134)
-* Fix to `cr_*` functions to check for a missing content-type 
+* Fix to `cr_*` functions to check for a missing content-type
 headers and instead of failing, we continue anyway and try to parse
 data as sometimes Crossref doesn't give back a content type header
 at all (#127)
@@ -38,7 +38,7 @@ rcrossref 0.6.0
 
 ### NEW FEATURES
 
-* Added support for field queries (see 
+* Added support for field queries (see
 <https://github.com/CrossRef/rest-api-doc/blob/master/rest_api.md#field-queries>
 for information on them). Means that you can query on specific fields rather
 than using `query` parameter which queries across all fields (#111)
@@ -46,25 +46,25 @@ than using `query` parameter which queries across all fields (#111)
 
 ### MINOR IMPROVEMENTS
 
-* Added to man files where appropriate new 10K max value for the 
+* Added to man files where appropriate new 10K max value for the
 `offset` parameter (#126)
-* Added to pkg level man file new rate limit headers included, 
+* Added to pkg level man file new rate limit headers included,
 and how users can get to those, via `config=verbose()` call (#124)
-* Better failure modes on input parameters, still more work to do 
+* Better failure modes on input parameters, still more work to do
 surely (#101)
-* sleeping now between tests to avoid making crossref rate  
+* sleeping now between tests to avoid making crossref rate
 limit gate keepers mad (#125)
 * `cr_search` and `cr_search_free` are now defunct. They were marked
-deprecated in previous version, and warned of defunctifying, and now 
+deprecated in previous version, and warned of defunctifying, and now
 they are defunct. Similar functionality can be done with e.g., `cr_works()`
 (#102)
-* `crosscite` is now defunct. The functionality of this function can be 
+* `crosscite` is now defunct. The functionality of this function can be
 achieved with `cr_cn()` (#82)
-* `cr_fundref` is now defunct. Crossref changed their name `fundref` 
+* `cr_fundref` is now defunct. Crossref changed their name `fundref`
 to `funders`, so we've changed our function, see `cr_funders()` (#83)
-* parameter `sample` maximum value is now 100, was previously 1000. 
+* parameter `sample` maximum value is now 100, was previously 1000.
 documentation updated. (#118)
-* New filters `has-clinical-trial-number` and `has-abstract` added to 
+* New filters `has-clinical-trial-number` and `has-abstract` added to
 the package, see `?filters` for help (#120)
 
 
@@ -74,20 +74,20 @@ rcrossref 0.5.8
 
 ### NEW FEATURES
 
-* Addded an RStudio Addin for searching for citations. See `?rcrossref` for 
+* Addded an RStudio Addin for searching for citations. See `?rcrossref` for
 more. Addin authored by Hao Zhu @haozhu233 (#114)
-* New function `cr_abstract()` that tries to get an abstract via XML provided by 
+* New function `cr_abstract()` that tries to get an abstract via XML provided by
 Crossref - NOTE: an abstract is rarely available though (#116)
 
 ### BUG FIXES
 
 * Fixed bug in `cr_cn()` where DOIs with no minting agency found were
-failing because we were previously stopping when no agency found. 
-Now, we just assume Crossref and move on from there. (#117) 
+failing because we were previously stopping when no agency found.
+Now, we just assume Crossref and move on from there. (#117)
 thanks @dfalster !
 * Fix to `cr_r()` when number requested > 100. Actual fix is in
-`cr_works()`. Max for sample used to be 1000, asked this on the 
-Crossref API forum, 
+`cr_works()`. Max for sample used to be 1000, asked this on the
+Crossref API forum,
 see <https://github.com/CrossRef/rest-api-doc/issues/146> (#115)
 * Fix to `cr_journals()` in internal parsing, was failing in cases
 where `ISSN` array was of length zero
@@ -106,29 +106,29 @@ rcrossref 0.5.2
 
 ### NEW FEATURES
 
-* User-agent string is passed with every request to Crossref with 
+* User-agent string is passed with every request to Crossref with
 names and versions of this package, and its HTTP dependency packages: `httr`
-and `curl` (which `httr` depends on). Will potentially be useful to 
+and `curl` (which `httr` depends on). Will potentially be useful to
 Crossref to know how many requests come from this R client (#100)
 
 ### DEPRECATED
 
-* `cr_search()` and `cr_search_free()` use old Crossref web services, so 
-are now marked deprecated, and will throw a deprecation message, but can 
-still be used. They will both be defunct in `v0.6` of this package (#99) 
+* `cr_search()` and `cr_search_free()` use old Crossref web services, so
+are now marked deprecated, and will throw a deprecation message, but can
+still be used. They will both be defunct in `v0.6` of this package (#99)
 
 ### MINOR IMPROVEMENTS
 
 * `XML` replaced with `xml2` (#98)
-* `httr::content()` calls: all parse to text then parse content 
-manually. in addition, encoding explicitly set to `UTF-8` on 
+* `httr::content()` calls: all parse to text then parse content
+manually. in addition, encoding explicitly set to `UTF-8` on
 `httr::content()` calls (#98)
 
 ### BUG FIXES
 
-* Bug fix to `cr_journals()` - fix to parse correctly on some failed requests 
+* Bug fix to `cr_journals()` - fix to parse correctly on some failed requests
 (#97) thanks @nkorf
-* Bug fix to `cr_fundref()/cr_funders()` - parsing wasn't working correctly in 
+* Bug fix to `cr_fundref()/cr_funders()` - parsing wasn't working correctly in
 all cases
 
 rcrossref 0.5.0
