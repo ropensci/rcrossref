@@ -46,8 +46,8 @@ test_that("cr_journals warns correctly", {
 
   expect_warning(cr_journals(issn = c('blblbl', '1932-6203')),
                  regexp = "Resource not found", all = TRUE)
-  expect_equal(NROW(suppressWarnings(cr_journals(issn = c('blblbl', '1932-6203')))), 1)
-  expect_is(suppressWarnings(cr_journals(issn = c('blblbl', '1932-6203'))), "tbl_df")
+  expect_equal(NROW(suppressWarnings(cr_journals(issn = c('blblbl', '1932-6203')))$data), 1)
+  expect_is(suppressWarnings(cr_journals(issn = c('blblbl', '1932-6203'))), "list")
 })
 
 test_that("ISSNs that used to fail badly - should fail better now", {
@@ -55,7 +55,7 @@ test_that("ISSNs that used to fail badly - should fail better now", {
 
   expect_warning(cr_journals("0413-6597"), "Resource not found")
   expect_warning(cr_journals(c('1932-6203', '1803-2427', "0413-6597")), "Resource not found")
-  expect_equal(NROW(suppressMessages(suppressWarnings(cr_journals(c('1932-6203', '1803-2427', "0413-6597"))))), 2)
+  expect_equal(NROW(suppressMessages(suppressWarnings(cr_journals(c('1932-6203', '1803-2427', "0413-6597"))))$data), 2)
 })
 
 Sys.sleep(2)

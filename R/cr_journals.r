@@ -113,8 +113,10 @@
         warning("only data with valid ISSN returned",  call. = FALSE)
       }
       df <- df[!df$ISSN == "", ]
-      facets <- stats::setNames(lapply(res, function(x) parse_facets(x$facets)),
-                                issn)
+      facets <- stats::setNames(
+        lapply(res, function(x) parse_facets(x$facets)),
+        vapply(res, function(z) z[['ISSN']][[1]], "")
+      )
       facets <- if (all(vapply(facets, is.null, logical(1)))) NULL else facets
       list(data = df, facets = facets)
     }
