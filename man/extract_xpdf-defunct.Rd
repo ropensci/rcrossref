@@ -10,6 +10,6 @@ extract_xpdf(...)
 Extract text from a single pdf document.
 }
 \note{
-see crminer::crm_extract
+see \code{crminer::crm_extract}
 }
 \keyword{internal}

@@ -62,7 +62,7 @@ cr_cn(dois = "10.1126/science.169.3946.635", format = "text", style = "apa")
 cat(cr_cn(dois = "10.1126/science.169.3946.635", format = "bibtex"))
 #> @article{Frank_1970,
 #> 	doi = {10.1126/science.169.3946.635},
-#> 	url = {http://dx.doi.org/10.1126/science.169.3946.635},
+#> 	url = {https://doi.org/10.1126%2Fscience.169.3946.635},
 #> 	year = 1970,
 #> 	month = {aug},
 #> 	publisher = {American Association for the Advancement of Science ({AAAS})},
@@ -93,7 +93,7 @@ Citation count, using OpenURL
 
 ```r
 cr_citation_count(doi = "10.1371/journal.pone.0042793")
-#> [1] 10
+#> [1] 13
 ```
 
 ## Search Crossref metadata API
@@ -113,16 +113,19 @@ cr_funders(query = "NSF")
 #> # A tibble: 8 × 6
 #>             id      location
 #>          <chr>         <chr>
-#> 1    100003187 United States
-#> 2    100008367       Denmark
-#> 3 501100004190        Norway
-#> 4    100000179 United States
-#> 5    100006445 United States
-#> 6 501100000930     Australia
-#> 7    100000001 United States
+#> 1    100000179 United States
+#> 2 501100000930     Australia
+#> 3    100000001 United States
+#> 4    100003187 United States
+#> 5    100008367       Denmark
+#> 6 501100004190        Norway
+#> 7    100006445 United States
 #> 8 501100001809         China
 #> # ... with 4 more variables: name <chr>, alt.names <chr>, uri <chr>,
 #> #   tokens <chr>
+#> 
+#> $facets
+#> NULL
 ```
 
 ### Check the DOI minting agency
@@ -148,18 +151,21 @@ cr_agency(dois = '10.13039/100000001')
 cr_works(filter = c(has_orcid = TRUE, from_pub_date = '2004-04-04'), limit = 1)
 #> $meta
 #>   total_results search_terms start_index items_per_page
-#> 1        419228           NA           0              1
+#> 1        685202           NA           0              1
 #> 
 #> $data
-#> # A tibble: 1 × 24
-#>   alternative.id container.title    created  deposited
-#>            <chr>           <chr>      <chr>      <chr>
-#> 1                                2015-11-11 2015-11-11
-#> # ... with 20 more variables: DOI <chr>, funder <list>, indexed <chr>,
-#> #   ISBN <chr>, ISSN <chr>, issued <chr>, link <list>, member <chr>,
+#> # A tibble: 1 × 29
+#>   alternative.id               container.title    created  deposited
+#>            <chr>                         <chr>      <chr>      <chr>
+#> 1           1142 Regional Environmental Change 2017-03-29 2017-03-29
+#> # ... with 25 more variables: DOI <chr>, funder <list>, indexed <chr>,
+#> #   ISBN <chr>, ISSN <chr>, issued <chr>, license_date <chr>,
+#> #   license_URL <chr>, license_delay.in.days <chr>,
+#> #   license_content.version <chr>, link <list>, member <chr>,
 #> #   prefix <chr>, publisher <chr>, reference.count <chr>, score <chr>,
-#> #   source <chr>, subject <chr>, title <chr>, type <chr>, URL <chr>,
-#> #   assertion <list>, author <list>, `clinical-trial-number` <list>
+#> #   source <chr>, subject <chr>, title <chr>, type <chr>,
+#> #   update.policy <chr>, URL <chr>, assertion <list>, author <list>,
+#> #   `clinical-trial-number` <list>
 #> 
 #> $facets
 #> NULL
@@ -170,6 +176,7 @@ cr_works(filter = c(has_orcid = TRUE, from_pub_date = '2004-04-04'), limit = 1)
 
 ```r
 cr_journals(issn = c('1803-2427','2326-4225'))
+#> $data
 #> # A tibble: 2 × 16
 #>   alternative.id container.title created deposited funder indexed  ISBN
 #>            <chr>           <chr>   <chr>     <chr> <list>   <chr> <chr>
@@ -178,6 +185,9 @@ cr_journals(issn = c('1803-2427','2326-4225'))
 #> # ... with 9 more variables: ISSN <chr>, issued <chr>, link <list>,
 #> #   publisher <chr>, subject <chr>, title <chr>, assertion <list>,
 #> #   author <list>, `clinical-trial-number` <list>
+#> 
+#> $facets
+#> NULL
 ```
 
 ### Search license information
@@ -187,25 +197,29 @@ cr_journals(issn = c('1803-2427','2326-4225'))
 cr_licenses(query = 'elsevier')
 #> $meta
 #>   total_results search_terms start_index items_per_page
-#> 1            13     elsevier           0             20
+#> 1            17     elsevier           0             20
 #> 
 #> $data
-#> # A tibble: 13 × 2
+#> # A tibble: 17 × 2
 #>                                                                            URL
 #>                                                                          <chr>
 #> 1                            http://creativecommons.org/licenses/by-nc-nd/3.0/
 #> 2                            http://creativecommons.org/licenses/by-nc-nd/4.0/
-#> 3                               http://creativecommons.org/licenses/by-nc/4.0/
-#> 4                                  http://creativecommons.org/licenses/by/3.0/
+#> 3                                  http://creativecommons.org/licenses/by/3.0/
+#> 4                                   http://creativecommons.org/licenses/by/4.0
 #> 5                                  http://creativecommons.org/licenses/by/4.0/
 #> 6                                   http://doi.wiley.com/10.1002/tdm_license_1
-#> 7                            http://onlinelibrary.wiley.com/termsAndConditions
-#> 8         http://www.acm.org/publications/policies/copyright_policy#Background
-#> 9                         http://www.elsevier.com/open-access/userlicense/1.0/
-#> 10                                http://www.elsevier.com/tdm/userlicense/1.0/
-#> 11                                                 http://www.springer.com/tdm
-#> 12 © 2007 Elsevier Masson SAS. All rights reserved. The patient figure in Figu
-#> 13 © 2012, Elsevier Inc., All Rights Reserved. Figure 8, part (B) (images of H
+#> 7                                 http://doi.wiley.com/10.1002/tdm_license_1.1
+#> 8                       http://journals.iucr.org/services/copyrightpolicy.html
+#> 9                   http://journals.iucr.org/services/copyrightpolicy.html#TDM
+#> 10                           http://onlinelibrary.wiley.com/termsAndConditions
+#> 11        http://www.acm.org/publications/policies/copyright_policy#Background
+#> 12     http://www.bioone.org/page/resources/researchers/rights_and_permissions
+#> 13                        http://www.elsevier.com/open-access/userlicense/1.0/
+#> 14                                http://www.elsevier.com/tdm/userlicense/1.0/
+#> 15                                      http://www.emeraldinsight.com/page/tdm
+#> 16                                                 http://www.springer.com/tdm
+#> 17 © 2012, Elsevier Inc., All Rights Reserved. Figure 8, part (B) (images of H
 #> # ... with 1 more variables: work.count <int>
 ```
 
@@ -254,8 +268,8 @@ cr_members(query = 'ecology', limit = 5)
 #> 4  7745
 #> 5  9167
 #> # ... with 47 more variables: primary_name <chr>, location <chr>,
-#> #   last_status_check_time <date>, backfile.dois <chr>,
-#> #   current.dois <chr>, total.dois <chr>, prefixes <chr>,
+#> #   last_status_check_time <date>, total.dois <chr>, current.dois <chr>,
+#> #   backfile.dois <chr>, prefixes <chr>,
 #> #   coverge.affiliations.current <chr>, coverge.funders.backfile <chr>,
 #> #   coverge.licenses.backfile <chr>, coverge.funders.current <chr>,
 #> #   coverge.affiliations.backfile <chr>,
@@ -299,16 +313,16 @@ cr_members(query = 'ecology', limit = 5)
 
 ```r
 cr_r()
-#>  [1] "10.1039/ct8885300641"                
-#>  [2] "10.1063/1.1709474"                   
-#>  [3] "10.1111/j.1708-8305.1996.tb00750.x"  
-#>  [4] "10.1037//1076-898x.2.3.270"          
-#>  [5] "10.4337/9781783471171.00028"         
-#>  [6] "10.1007/978-1-349-07777-9_4"         
-#>  [7] "10.1111/b.9781405116749.2003.00054.x"
-#>  [8] "10.1016/j.crvi.2004.09.010"          
-#>  [9] "10.1002/uog.15794"                   
-#> [10] "10.14731/kjis.2013.12.11.2.295"
+#>  [1] "10.1080/714004123"                 
+#>  [2] "10.1163/2210-7886_asc-20632a"      
+#>  [3] "10.1046/j.1471-0528.2003.02165.x"  
+#>  [4] "10.1097/00003246-199912001-00436"  
+#>  [5] "10.3109/14767058.2015.1045864"     
+#>  [6] "10.1017/s0074180900105509"         
+#>  [7] "10.1007/bf00490880"                
+#>  [8] "10.1371/journal.pone.0076949.g006" 
+#>  [9] "10.1002/chin.198450058"            
+#> [10] "10.1016/b978-0-444-89007-8.50456-1"
 ```
 
 You can pass in the number of DOIs you want back (default is 10)
@@ -316,7 +330,8 @@ You can pass in the number of DOIs you want back (default is 10)
 
 ```r
 cr_r(2)
-#> [1] "10.1038/scibx.2008.713"          "10.1007/978-3-642-41714-6_91906"
+#> [1] "10.1016/b978-2-294-73838-8.50017-9"
+#> [2] "10.1109/memsys.2011.5734638"
 ```
 
 ## pmid2doi & doi2pmid
@@ -337,13 +352,16 @@ out <-
   cr_works(filter = list(has_full_text = TRUE,
     license_url = "http://creativecommons.org/licenses/by/3.0/"))
 (dois <- out$data$DOI)
-#>  [1] "10.1063/1.4905711" "10.1063/1.4908245" "10.1063/1.4908158"
-#>  [4] "10.1063/1.4908244" "10.1063/1.4913247" "10.1063/1.4914847"
-#>  [7] "10.1063/1.4916217" "10.1063/1.4916677" "10.1063/1.4916696"
-#> [10] "10.1063/1.4917283" "10.1063/1.4918284" "10.1063/1.4919707"
-#> [13] "10.1063/1.4921711" "10.1063/1.4921771" "10.1063/1.4922319"
-#> [16] "10.1063/1.4922934" "10.1063/1.4922006" "10.1063/1.4926610"
-#> [19] "10.1063/1.4926838" "10.1063/1.4926914"
+#>  [1] "10.1093/ecam/nem168"            "10.1016/j.mri.2010.09.002"     
+#>  [3] "10.1016/j.stem.2009.11.001"     "10.1016/j.cellsig.2011.08.019" 
+#>  [5] "10.1016/j.physletb.2011.09.006" "10.1155/2008/424320"           
+#>  [7] "10.1155/2008/496467"            "10.1155/2008/345478"           
+#>  [9] "10.1155/2009/730902"            "10.1155/2009/625469"           
+#> [11] "10.1155/2008/195873"            "10.1016/j.physletb.2011.09.011"
+#> [13] "10.1016/j.dnarep.2012.04.002"   "10.1016/j.meegid.2008.11.006"  
+#> [15] "10.1016/j.physletb.2011.09.010" "10.4061/2010/478746"           
+#> [17] "10.4061/2010/348919"            "10.1016/j.adhoc.2012.03.013"   
+#> [19] "10.1155/2011/124595"            "10.1016/j.molcel.2007.09.005"
 ```
 
 Then get URLs to full text content
@@ -351,7 +369,7 @@ Then get URLs to full text content
 
 ```r
 (links <- cr_ft_links(dois[1]))
-#> NULL
+#> Error: Removed - see crminer::crm_links()
 ```
 
 Then use those URLs to get full text

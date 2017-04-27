@@ -10,6 +10,6 @@ cr_ft_links(...)
 Get full text links from a DOI
 }
 \note{
-see crminer::crm_links
+see \code{crminer::crm_links}
 }
 \keyword{internal}

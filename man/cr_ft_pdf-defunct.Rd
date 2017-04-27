@@ -10,6 +10,6 @@ cr_ft_pdf(...)
 Get full text pdf from a DOI
 }
 \note{
-see crminer::crm_pdf
+see \code{crminer::crm_pdf}
 }
 \keyword{internal}

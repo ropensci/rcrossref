@@ -10,6 +10,6 @@ as.tdmurl(...)
 Coerce a url to a tdmurl with a specific type
 }
 \note{
-see crminer::as_tdmurl
+see \code{crminer::as_tdmurl}
 }
 \keyword{internal}

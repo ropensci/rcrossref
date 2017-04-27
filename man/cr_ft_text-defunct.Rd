@@ -10,6 +10,6 @@ cr_ft_text(...)
 Get full text from a DOI
 }
 \note{
-see crminer::crm_text
+see \code{crminer::crm_text}
 }
 \keyword{internal}

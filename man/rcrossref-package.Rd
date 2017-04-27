@@ -54,8 +54,7 @@ limits.
 
 We provide the ability to do text mining in this package. See functions
 \code{\link[=cr_ft_links]{cr_ft_links()}} and \code{\link[=cr_ft_text]{cr_ft_text()}}. All text mining
-functions are now deprecated, and are being moved to a new package
-\code{crminer}, to be on CRAN soon.
+functions are now deprecated, and moved to a new package \code{crminer}.
 
 Another package \pkg{fulltext} is designed solely text mining involving
 Crossref and other sources of scholarly metadata and full text.

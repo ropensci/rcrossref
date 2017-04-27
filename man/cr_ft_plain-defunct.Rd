@@ -10,6 +10,6 @@ cr_ft_plain(...)
 Get full text plain from a DOI
 }
 \note{
-see crminer::crm_plain
+see \code{crminer::crm_plain}
 }
 \keyword{internal}

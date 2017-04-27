@@ -10,6 +10,6 @@ cr_ft_xml(...)
 Get full text xml from a DOI
 }
 \note{
-see crminer::crm_xml
+see \code{crminer::crm_xml}
 }
 \keyword{internal}
