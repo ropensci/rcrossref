@@ -12,8 +12,9 @@ cr_cn(dois, format = "bibtex", style = "apa", locale = "en-US",
 
 \item{format}{Name of the format. One of "rdf-xml", "turtle",
 "citeproc-json", "citeproc-json-ish", "text", "ris", "bibtex" (default),
-"crossref-xml", "datacite-xml","bibentry", or "crossref-tdm". The format
-"citeproc-json-ish" is a format that is not quite proper citeproc-json}
+"crossref-xml", "datacite-xml","bibentry", "crossref-tdm" - or a custom
+format type. The format "citeproc-json-ish" is a format that is not
+quite proper citeproc-json}
 
 \item{style}{a CSL style (for text format only). See \code{\link[=get_styles]{get_styles()}}
 for options. Default: apa. If there's a style that CrossRef doesn't support
@@ -63,6 +64,10 @@ cr_cn(dois="10.1126/science.169.3946.635", "citeproc-json-ish")
 cr_cn("10.1126/science.169.3946.635", "rdf-xml")
 cr_cn("10.1126/science.169.3946.635", "crossref-xml")
 cr_cn("10.1126/science.169.3946.635", "text")
+
+# custom format type
+cr_cn(dois = "10.5284/1011335", 
+  format = "application/vnd.schemaorg.ld+json")
 
 # return an R bibentry type
 cr_cn("10.1126/science.169.3946.635", "bibentry")

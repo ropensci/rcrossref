@@ -5,8 +5,9 @@
 #' @param dois Search by a single DOI or many DOIs.
 #' @param format Name of the format. One of "rdf-xml", "turtle",
 #'   "citeproc-json", "citeproc-json-ish", "text", "ris", "bibtex" (default),
-#'   "crossref-xml", "datacite-xml","bibentry", or "crossref-tdm". The format
-#'   "citeproc-json-ish" is a format that is not quite proper citeproc-json
+#'   "crossref-xml", "datacite-xml","bibentry", "crossref-tdm" - or a custom
+#'   format type. The format "citeproc-json-ish" is a format that is not 
+#'   quite proper citeproc-json
 #' @param style a CSL style (for text format only). See [get_styles()]
 #'   for options. Default: apa. If there's a style that CrossRef doesn't support
 #'   you'll get a  `(500) Internal Server Error`
@@ -41,6 +42,10 @@
 #' cr_cn("10.1126/science.169.3946.635", "rdf-xml")
 #' cr_cn("10.1126/science.169.3946.635", "crossref-xml")
 #' cr_cn("10.1126/science.169.3946.635", "text")
+#' 
+#' # custom format type
+#' cr_cn(dois = "10.5284/1011335", 
+#'   format = "application/vnd.schemaorg.ld+json")
 #'
 #' # return an R bibentry type
 #' cr_cn("10.1126/science.169.3946.635", "bibentry")
@@ -102,10 +107,10 @@
 `cr_cn` <- function(dois, format = "bibtex", style = 'apa',
                     locale = "en-US", raw = FALSE, .progress = "none", ...) {
 
-  format <- match.arg(format, c("rdf-xml", "turtle", "citeproc-json",
-                                "citeproc-json-ish", "text", "ris", "bibtex",
-                                "crossref-xml", "datacite-xml", "bibentry",
-                                "crossref-tdm", "onix-xml"))
+  # format <- match.arg(format, c("rdf-xml", "turtle", "citeproc-json",
+  #                               "citeproc-json-ish", "text", "ris", "bibtex",
+  #                               "crossref-xml", "datacite-xml", "bibentry",
+  #                               "crossref-tdm", "onix-xml"))
 
   cn <- function(doi, ...){
     agency_id <- suppressWarnings(GET_agency_id(doi))
@@ -118,27 +123,31 @@
     url <- paste0("http://data.", agency_id, ".org/", doi)
 
     # check cn data provider
-    if (!format %in% supported_cn_types[[agency_id]]) {
-      stop(paste0("Format '", format, "' for '", doi,
-                  "' is not supported by the DOI registration agency: '",
-                  agency_id, "'.\nTry one of the following formats: ",
-                  paste0(supported_cn_types[[agency_id]], collapse = ", ")))
+    # if (!format %in% supported_cn_types[[agency_id]]) {
+    #   stop(paste0("Format '", format, "' for '", doi,
+    #               "' is not supported by the DOI registration agency: '",
+    #               agency_id, "'.\nTry one of the following formats: ",
+    #               paste0(supported_cn_types[[agency_id]], collapse = ", ")))
+    # }
+    if (format %in% supported_cn_types[[agency_id]]) {
+      pick <- c(
+        "rdf-xml" = "application/rdf+xml",
+        "turtle" = "text/turtle",
+        "citeproc-json" =
+          "transform/application/vnd.citationstyles.csl+json",
+        "citeproc-json-ish" = "application/vnd.citationstyles.csl+json",
+        "text" = "text/x-bibliography",
+        "ris" = "application/x-research-info-systems",
+        "bibtex" = "application/x-bibtex",
+        "crossref-xml" = "application/vnd.crossref.unixref+xml",
+        "datacite-xml" = "application/vnd.datacite.datacite+xml",
+        "bibentry" = "application/x-bibtex",
+        "crossref-tdm" = "application/vnd.crossref.unixsd+xml",
+        "onix-xml" = "application/vnd.medra.onixdoi+xml")
+      type <- pick[[format]]
+    } else {
+      type <- format
     }
-    pick <- c(
-           "rdf-xml" = "application/rdf+xml",
-           "turtle" = "text/turtle",
-           "citeproc-json" =
-             "transform/application/vnd.citationstyles.csl+json",
-           "citeproc-json-ish" = "application/vnd.citationstyles.csl+json",
-           "text" = "text/x-bibliography",
-           "ris" = "application/x-research-info-systems",
-           "bibtex" = "application/x-bibtex",
-           "crossref-xml" = "application/vnd.crossref.unixref+xml",
-           "datacite-xml" = "application/vnd.datacite.datacite+xml",
-           "bibentry" = "application/x-bibtex",
-           "crossref-tdm" = "application/vnd.crossref.unixsd+xml",
-           "onix-xml" = "application/vnd.medra.onixdoi+xml")
-    type <- pick[[format]]
     if (format == "citeproc-json") {
       cli <- crul::HttpClient$new(
         url = file.path("http://api.crossref.org/works", doi, type),
@@ -164,20 +173,25 @@
     }
     warn_status(response)
     if (response$status_code < 202) {
-      select <- c(
-        "rdf-xml" = "text/xml",
-        "turtle" = "text/plain",
-        "citeproc-json" = "application/json",
-        "citeproc-json-ish" = "application/json",
-        "text" = "text/plain",
-        "ris" = "text/plain",
-        "bibtex" = "text/plain",
-        "crossref-xml" = "text/xml",
-        "datacite-xml" = "text/xml",
-        "bibentry" = "text/plain",
-        "crossref-tdm" = "text/xml",
-        "onix-xml" = "text/xml")
-      parser <- select[[format]]
+      if (format %in% supported_cn_types[[agency_id]]) {
+        select <- c(
+          "rdf-xml" = "text/xml",
+          "turtle" = "text/plain",
+          "citeproc-json" = "application/json",
+          "citeproc-json-ish" = "application/json",
+          "text" = "text/plain",
+          "ris" = "text/plain",
+          "bibtex" = "text/plain",
+          "crossref-xml" = "text/xml",
+          "datacite-xml" = "text/xml",
+          "bibentry" = "text/plain",
+          "crossref-tdm" = "text/xml",
+          "onix-xml" = "text/xml")
+        parser <- select[[format]]
+      } else {
+        return(response$parse("UTF-8"))
+      }
+      
       if (raw) {
         response$parse("UTF-8")
       } else {
