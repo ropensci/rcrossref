@@ -5,18 +5,18 @@ test_that("cr_cn returns", {
 
   b <- cr_cn(dois = "10.1126/science.169.3946.635", format = "citeproc-json")
   c <- cr_cn("10.1126/science.169.3946.635", "rdf-xml")
-  d <- cr_cn("10.1126/science.169.3946.635", "crossref-xml")
+  #d <- cr_cn("10.5604/20831862.1134311", "crossref-xml")
   e <- cr_cn("10.1126/science.169.3946.635", "bibentry")
-  #f <- cr_cn(dois = "10.1126/science.169.3946.635", format = "text", style = "apa")
+  f <- cr_cn(dois = "10.1126/science.169.3946.635", format = "text", style = "apa")
   g <- cr_cn("10.5604/20831862.1134311", "crossref-tdm")
   h <- cr_cn("10.3233/ISU-150780", "onix-xml")
 
   # correct classes
   expect_is(b, "list")
   expect_is(c, "xml_document")
-  expect_is(d, "xml_document")
+  #expect_is(d, "xml_document")
   expect_is(e, "bibentry")
-  #expect_is(f, "character")
+  expect_is(f, "character")
   expect_is(g, "xml_document")
   expect_is(h, "xml_document")
 
@@ -50,17 +50,17 @@ test_that("DOIs with no agency found still work, at least some do", {
 test_that("cr_cn checks if doi agency supports format", {
   skip_on_cran()
 
-  expect_error(
+  expect_warning(
     cr_cn(dois = "10.3233/ISU-150780", format = "crossref-tdm"),
-    "not supported by the DOI registration agency: 'medra'"
+    "\\(406\\)"
   )
-  # expect_error(
-  #   cr_cn("10.4225/55/5568087BB3A88", "citeproc-json"),
-  #   "not supported by the DOI registration agency: 'datacite'"
-  # )
-  expect_error(
+  expect_warning(
+    cr_cn("10.4225/55/5568087BB3A88", "citeproc-json"),
+    "Resource not found"
+  )
+  expect_warning(
     cr_cn("10.1126/science.169.3946.635", "onix-xml"),
-    "not supported by the DOI registration agency: 'crossref'"
+    "No acceptable resource available"
   )
 })
 
