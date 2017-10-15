@@ -8,12 +8,12 @@
 cr_funders(dois = NULL, query = NULL, filter = NULL, offset = NULL,
   limit = NULL, sample = NULL, sort = NULL, order = NULL,
   facet = FALSE, works = FALSE, cursor = NULL, cursor_max = 5000,
-  .progress = "none", flq = NULL, ...)
+  .progress = "none", flq = NULL, email = NULL, ...)
 
 cr_funders_(dois = NULL, query = NULL, filter = NULL, offset = NULL,
   limit = NULL, sample = NULL, sort = NULL, order = NULL,
   facet = FALSE, works = FALSE, cursor = NULL, cursor_max = 5000,
-  .progress = "none", parse = FALSE, flq = NULL, ...)
+  .progress = "none", parse = FALSE, flq = NULL, email = NULL, ...)
 }
 \arguments{
 \item{dois}{Search by a single DOI or many DOIs.}
@@ -74,6 +74,10 @@ field query parameters are:
  \item query.contributor    - Query author, editor, chair and translator 
  first and given names
 }}
+
+\item{email}{(character) Provide contact information to Crossref, so that
+they can contact you if something goes wrong. Crossref awards contact info
+with a a special pool of API machines.}
 
 \item{...}{Named parameters passed on to \code{\link[crul]{HttpClient}}}
 

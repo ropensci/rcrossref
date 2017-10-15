@@ -80,7 +80,7 @@
 `cr_journals` <- function(issn = NULL, query = NULL, filter = NULL,
   offset = NULL, limit = NULL, sample = NULL, sort = NULL, order = NULL,
   facet = FALSE, works=FALSE, cursor = NULL, cursor_max = 5000,
-  .progress="none", flq = NULL, ...) {
+  .progress="none", flq = NULL, email = NULL, ...) {
 
   if (works) {
     if (is.null(issn)) {
@@ -88,7 +88,7 @@
     }
   }
   args <- prep_args(query, filter, offset, limit, sample,
-                    sort, order, facet, cursor, flq)
+                    sort, order, facet, cursor, flq, email)
 
   if (length(issn) > 1) {
     res <- llply(issn, journal_GET, args = args, works = works,
@@ -151,7 +151,7 @@
 `cr_journals_` <- function(issn = NULL, query = NULL, filter = NULL,
   offset = NULL, limit = NULL, sample = NULL, sort = NULL, order = NULL,
   facet = FALSE, works=FALSE, cursor = NULL, cursor_max = 5000,
-  .progress="none", parse=FALSE, flq = NULL, ...) {
+  .progress="none", parse=FALSE, flq = NULL, email = NULL, ...) {
 
   if (works) {
     if (is.null(issn)) {
@@ -159,7 +159,7 @@
     }
   }
   args <- prep_args(query, filter, offset, limit, sample, sort, order,
-                    facet, cursor, flq)
+                    facet, cursor, flq, email)
   if (length(issn) > 1) {
     llply(issn, journal_GET_, args = args, works = works,
           cursor = cursor, cursor_max = cursor_max,

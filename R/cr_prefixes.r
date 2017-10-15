@@ -80,10 +80,10 @@
 `cr_prefixes` <- function(prefixes, query = NULL, filter = NULL, offset = NULL,
   limit = NULL, sample = NULL, sort = NULL, order = NULL, facet=FALSE,
   works = FALSE, cursor = NULL, cursor_max = 5000, .progress="none",
-  flq = NULL, ...) {
+  flq = NULL, email = NULL, ...) {
 
   args <- prep_args(query, filter, offset, limit, sample, sort, order,
-                    facet, cursor, flq)
+                    facet, cursor, flq, email)
   if (length(prefixes) > 1) {
     res <- llply(prefixes, prefixes_GET, args = args, works = works,
                  cursor = cursor, cursor_max = cursor_max, ...,
@@ -139,10 +139,11 @@
 #' @rdname cr_prefixes
 `cr_prefixes_` <- function(prefixes, query = NULL, filter = NULL, offset = NULL,
   limit = NULL, sample = NULL, sort = NULL, order = NULL, facet=FALSE, works = FALSE,
-  cursor = NULL, cursor_max = 5000, .progress="none", parse=FALSE, flq = NULL, ...) {
+  cursor = NULL, cursor_max = 5000, .progress="none", parse=FALSE, flq = NULL, 
+  email = NULL, ...) {
 
   args <- prep_args(query, filter, offset, limit, sample, sort, order,
-                    facet, cursor, flq)
+                    facet, cursor, flq, email)
   if (length(prefixes) > 1) {
     llply(prefixes, prefixes_GET_, args = args, works = works,
           cursor = cursor, cursor_max = cursor_max, parse = parse,

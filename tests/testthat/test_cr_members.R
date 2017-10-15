@@ -9,6 +9,7 @@ test_that("cr_members returns", {
   c <- cr_members(member_ids=c(10,98,45,1,9))
   d <- cr_members(member_ids=c(10,98,45,1,9), works=TRUE)
   e <- cr_members(query='ecology')
+  f <- cr_members(member_ids=98, email = "name@example.com")
 
   # correct class
   expect_is(a, "list")
@@ -26,12 +27,18 @@ test_that("cr_members returns", {
   expect_is(d, "list")
   expect_is(e, "list")
   expect_equal(e$facets, NULL)
+  
+  expect_is(a, "list")
+  expect_null(f$meta)
+  expect_is(f$data, "data.frame")
+  expect_is(f$datf$primary_name, "character")
 
   # dimensions are correct
   expect_equal(length(a), 3)
   expect_equal(length(b), 3)
   expect_equal(length(e), 3)
   expect_equal(length(d$facets), 0)
+  expect_equal(length(f), 3)
 })
 
 test_that("cr_members fails correctly", {

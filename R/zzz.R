@@ -133,10 +133,11 @@ field_query_handler <- function(x) {
 }
 
 prep_args <- function(query, filter, offset, limit, sample, sort, 
-                      order, facet, cursor, flq) {
+                      order, facet, cursor, flq, email) {
   check_limit(limit)
   check_number(offset)
   check_number(sample)
+  val_email(email)
   filter <- filter_handler(filter)
   flq <- field_query_handler(flq)
   stopifnot(class(facet) %in% c('logical', 'character'))
@@ -147,10 +148,35 @@ prep_args <- function(query, filter, offset, limit, sample, sort,
     c(
       list(query = query, filter = filter, offset = offset, rows = limit,
            sample = sample, sort = sort, order = order, facet = facet,
-           cursor = cursor),
+           cursor = cursor, mailto = email),
       flq
     )
   )
 }
 
 `%||%` <- function(x, y) if (is.null(x) || length(x) == 0) y else x
+
+#' Email checker for Crossref API
+#'
+#' It implementents the following regex stackoverflow solution
+#' http://stackoverflow.com/a/25077140
+#'
+#' @param email email address (character string)
+#'
+#' @noRd
+val_email <- function(email) {
+  if(!is.null(email))
+    if (!grepl(email_regex(), email))
+    stop("Email address seems not properly formatted - Please check!",
+         call. = FALSE)
+  return(email)
+}
+
+#' Email regex
+#'
+#' From \url{http://stackoverflow.com/a/25077140}
+#'
+#' @noRd
+email_regex <-
+  function()
+    "^[_a-z0-9-]+(\\.[_a-z0-9-]+)*@[a-z0-9-]+(\\.[a-z0-9-]+)*(\\.[a-z]{2,4})$"

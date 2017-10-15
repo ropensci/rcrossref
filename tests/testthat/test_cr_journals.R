@@ -21,6 +21,11 @@ test_that("cr_journals metadata works correctly", {
   expect_equal(cr_journals(query="peerj", limit=4)$meta$items_per_page, 4)
 })
 
+test_that("cr_journals email param works correctly", {
+  skip_on_cran()
+  
+  expect_is(cr_journals(email = "name@example.com"), "list")
+})
 test_that("cr_journals fails correctly", {
   skip_on_cran()
 

@@ -13,6 +13,7 @@ test_that("cr_works returns", {
   g <- cr_works(sample=1)
   h <- cr_works(query="NSF", facet=TRUE)
   i <- suppressWarnings(cr_works(dois=c('blblbl', '10.1038/nnano.2014.279')))
+  j <- cr_works(query="NSF", email = "name@example.com")
 
   # correct class
   expect_is(a, "list")
@@ -24,12 +25,19 @@ test_that("cr_works returns", {
   expect_is(g, "list")
   expect_is(h, "list")
   expect_is(i, "list")
+  expect_is(j, "list")
 
   expect_is(a$meta, "data.frame")
   expect_is(a$data, "data.frame")
   expect_is(a$data, "tbl_df")
   expect_is(a$data$URL, "character")
   expect_equal(a$facets, NULL)
+  
+  expect_is(j$meta, "data.frame")
+  expect_is(j$data, "data.frame")
+  expect_is(j$data, "tbl_df")
+  expect_is(j$datj$URL, "character")
+  expect_equal(j$facets, NULL)
 
   expect_is(h, "list")
   expect_is(h$meta, "data.frame")
@@ -51,6 +59,7 @@ test_that("cr_works returns", {
   expect_equal(length(g), 3)
   expect_equal(length(h), 3)
   expect_equal(length(i), 3)
+  expect_equal(length(j), 3)
 })
 
 test_that("cr_works fails correctly", {
@@ -153,6 +162,12 @@ test_that("cr_works - parses affiliation inside authors correctly", {
   aa <- cr_works(doi)
   expect_true(any(grepl("author", names(aa$data))))
   expect_named(aa$data$author[[1]], c("given", "family", "affiliation.name"))
+})
+
+test_that("cr_works - email is correctly validated", {
+  skip_on_cran()
+  
+  expect_error(cr_works("10.1016/j.ffa.2015.10.008", email = "nj@g-t.c"))
 })
 
 Sys.sleep(2)

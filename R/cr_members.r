@@ -65,10 +65,11 @@
 #' }
 `cr_members` <- function(member_ids = NULL, query = NULL, filter = NULL, offset = NULL,
   limit = NULL, sample = NULL, sort = NULL, order = NULL, facet=FALSE, works = FALSE,
-  cursor = NULL, cursor_max = 5000, .progress="none", flq = NULL, ...) {
+  cursor = NULL, cursor_max = 5000, .progress="none", flq = NULL, email = NULL, 
+  ...) {
 
   args <- prep_args(query, filter, offset, limit, sample, sort, order,
-                    facet, cursor, flq)
+                    facet, cursor, flq, email)
   if (length(member_ids) > 1) {
     res <- llply(member_ids, member_GET, args = args, works = works,
                  cursor = cursor, cursor_max = cursor_max, ...,
@@ -127,10 +128,10 @@
 `cr_members_` <- function(member_ids = NULL, query = NULL, filter = NULL,
   offset = NULL, limit = NULL, sample = NULL, sort = NULL, order = NULL,
   facet=FALSE, works = FALSE, cursor = NULL, cursor_max = 5000,
-  .progress="none", parse=FALSE, flq = NULL, ...) {
+  .progress="none", parse=FALSE, flq = NULL, email = NULL, ...) {
 
   args <- prep_args(query, filter, offset, limit, sample, sort,
-                    order, facet, cursor, flq)
+                    order, facet, cursor, flq, email)
   if (length(member_ids) > 1) {
     llply(member_ids, member_GET_, args = args, works = works,
           cursor = cursor, cursor_max = cursor_max, parse = parse,

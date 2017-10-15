@@ -114,15 +114,15 @@
 #' }
 
 `cr_works` <- function(dois = NULL, query = NULL, filter = NULL, offset = NULL,
-  limit = NULL, sample = NULL, sort = NULL, order = NULL, facet=FALSE,
-  cursor = NULL, cursor_max = 5000, .progress="none", flq = NULL, ...) {
-
+                       limit = NULL, sample = NULL, sort = NULL, order = NULL, facet=FALSE,
+                       cursor = NULL, cursor_max = 5000, .progress="none", flq = NULL, email = NULL, ...) {
+  
   if (cursor_max != as.integer(cursor_max)) {
     stop("cursor_max must be an integer", call. = FALSE)
   }
   args <- prep_args(query, filter, offset, limit, sample, sort, order,
-                    facet, cursor, flq)
-
+                    facet, cursor, flq, email)
+  
   if (length(dois) > 1) {
     res <- llply(dois, cr_get_cursor, args = args, cursor = cursor,
                  cursor_max = cursor_max, .progress = .progress, ...)
@@ -157,15 +157,15 @@
 #' @export
 #' @rdname cr_works
 `cr_works_` <- function(dois = NULL, query = NULL, filter = NULL, offset = NULL,
-  limit = NULL, sample = NULL, sort = NULL, order = NULL, facet=FALSE,
-  cursor = NULL, cursor_max = 5000, .progress="none", parse=FALSE, flq = NULL, ...) {
-
+                        limit = NULL, sample = NULL, sort = NULL, order = NULL, facet=FALSE,
+                        cursor = NULL, cursor_max = 5000, .progress="none", parse=FALSE, flq = NULL, email = NULL, ...) {
+  
   if (cursor_max != as.integer(cursor_max)) {
     stop("cursor_max must be an integer", call. = FALSE)
   }
   args <- prep_args(query, filter, offset, limit, sample, sort, order,
-                    facet, cursor, flq)
-
+                    facet, cursor, flq, email)
+  
   if (length(dois) > 1) {
     llply(dois, cr_get_cursor_, args = args, cursor = cursor,
           cursor_max = cursor_max, parse = parse, .progress = .progress, ...)
@@ -267,7 +267,7 @@ parse_works <- function(zzz){
       volume = list(y[[which]]),
       abstract = list(y[[which]])
     )
-
+    
     res <- if (is.null(res) || length(res) == 0) NA else res
     if (length(res[[1]]) > 1) {
       names(res[[1]]) <- paste(which, names(res[[1]]), sep = "_")
@@ -277,7 +277,7 @@ parse_works <- function(zzz){
       res
     }
   }
-
+  
   if (is.null(zzz)) {
     NULL
   } else if (all(is.na(zzz))) {

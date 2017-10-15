@@ -62,10 +62,10 @@
 `cr_types` <- function(types = NULL, query = NULL, filter = NULL,
   offset = NULL, limit = NULL, sample = NULL, sort = NULL, order = NULL,
   facet = FALSE, works = FALSE, cursor = NULL, cursor_max = 5000,
-  .progress="none", flq = NULL, ...) {
+  .progress="none", flq = NULL, email = NULL, ...) {
 
   args <- prep_args(query, filter, offset, limit, sample, sort, order,
-                    facet, cursor, flq)
+                    facet, cursor, flq, email)
   if (length(types) > 1) {
     res <- llply(types, types_GET, args = args, works = works,
                  cursor = cursor, cursor_max = cursor_max, ...,
@@ -134,10 +134,10 @@
 `cr_types_` <- function(types = NULL, query = NULL, filter = NULL,
   offset = NULL, limit = NULL, sample = NULL, sort = NULL, order = NULL,
   facet=FALSE, works = FALSE, cursor = NULL, cursor_max = 5000,
-  .progress="none", parse=FALSE, flq = NULL, ...) {
+  .progress="none", parse=FALSE, flq = NULL, email = NULL, ...) {
 
   args <- prep_args(query, filter, offset, limit, sample, sort, order,
-                    facet, cursor, flq)
+                    facet, cursor, flq, email)
   if (length(types) > 1) {
     llply(types, types_GET_, args = args, works = works,
           cursor = cursor, cursor_max = cursor_max, parse = parse, ...,
