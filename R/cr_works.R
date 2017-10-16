@@ -114,8 +114,9 @@
 #' }
 
 `cr_works` <- function(dois = NULL, query = NULL, filter = NULL, offset = NULL,
-                       limit = NULL, sample = NULL, sort = NULL, order = NULL, facet=FALSE,
-                       cursor = NULL, cursor_max = 5000, .progress="none", flq = NULL, email = NULL, ...) {
+  limit = NULL, sample = NULL, sort = NULL, order = NULL, facet=FALSE,
+  cursor = NULL, cursor_max = 5000, .progress="none", flq = NULL, email = NULL, 
+  ...) {
   
   if (cursor_max != as.integer(cursor_max)) {
     stop("cursor_max must be an integer", call. = FALSE)
@@ -157,8 +158,9 @@
 #' @export
 #' @rdname cr_works
 `cr_works_` <- function(dois = NULL, query = NULL, filter = NULL, offset = NULL,
-                        limit = NULL, sample = NULL, sort = NULL, order = NULL, facet=FALSE,
-                        cursor = NULL, cursor_max = 5000, .progress="none", parse=FALSE, flq = NULL, email = NULL, ...) {
+  limit = NULL, sample = NULL, sort = NULL, order = NULL, facet=FALSE,
+  cursor = NULL, cursor_max = 5000, .progress="none", parse=FALSE, flq = NULL, 
+  email = NULL, ...) {
   
   if (cursor_max != as.integer(cursor_max)) {
     stop("cursor_max must be an integer", call. = FALSE)
