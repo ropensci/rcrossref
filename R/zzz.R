@@ -12,23 +12,23 @@ asl <- function(z) {
   }
 }
 
-rcrossref_ua <- function(email) {
+rcrossref_ua <- function() {
   versions <- c(paste0("r-curl/", utils::packageVersion("curl")),
                 paste0("crul/", utils::packageVersion("crul")),
                 sprintf("rOpenSci(rcrossref/%s)", 
                         utils::packageVersion("rcrossref")),
-                mailto(email))
+                get_email())
   paste0(versions, collapse = " ")
 }
 
-cr_GET <- function(endpoint, args, todf = TRUE, on_error = warning, parse = TRUE, email, ...) {
+cr_GET <- function(endpoint, args, todf = TRUE, on_error = warning, parse = TRUE, 
+                   ...) {
   url <- sprintf("https://api.crossref.org/%s", endpoint)
   cli <- crul::HttpClient$new(
     url = url,
-#    opts = list( verbose = TRUE ),
     headers = list(
-      `User-Agent` = rcrossref_ua(email),
-      `X-USER-AGENT` = rcrossref_ua(email)
+      `User-Agent` = rcrossref_ua(),
+      `X-USER-AGENT` = rcrossref_ua()
     )
   )
   if (length(args) == 0) {
@@ -157,7 +157,19 @@ prep_args <- function(query, filter, offset, limit, sample, sort,
 
 `%||%` <- function(x, y) if (is.null(x) || length(x) == 0) y else x
 
-#' Email checker for Crossref API
+
+#' Share email with Crossref in `.Renviron`
+#' 
+#' @noRd
+get_email <- function() {
+  email <- Sys.getenv("crossref_email")
+  if (identical(email, "")) {
+    NULL
+  }
+  paste0("(mailto:", val_email(email), ")")
+}
+
+#' Email checker
 #'
 #' It implementents the following regex stackoverflow solution
 #' http://stackoverflow.com/a/25077140
@@ -166,9 +178,8 @@ prep_args <- function(query, filter, offset, limit, sample, sort,
 #'
 #' @noRd
 val_email <- function(email) {
-  if(!is.null(email))
-    if (!grepl(email_regex(), email))
-    stop("Email address seems not properly formatted - Please check!",
+  if (!grepl(email_regex(), email))
+    stop("Email address seems not properly formatted - Please check your .Renviron!",
          call. = FALSE)
   return(email)
 }
@@ -182,13 +193,3 @@ email_regex <-
   function()
     "^[_a-z0-9-]+(\\.[_a-z0-9-]+)*@[a-z0-9-]+(\\.[a-z0-9-]+)*(\\.[a-z]{2,4})$"
 
-#' Make email string for user header
-#' @param email email address
-#' 
-#' @noRd
-mailto <- function(email) {
-  if(!is.null(email))
-    paste0("(mailto:", val_email(email), ")")
-  else
-    NULL
-}
