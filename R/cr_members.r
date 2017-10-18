@@ -65,12 +65,13 @@
 #' }
 `cr_members` <- function(member_ids = NULL, query = NULL, filter = NULL, offset = NULL,
   limit = NULL, sample = NULL, sort = NULL, order = NULL, facet=FALSE, works = FALSE,
-  cursor = NULL, cursor_max = 5000, .progress="none", flq = NULL, ...) {
+  cursor = NULL, cursor_max = 5000, .progress="none", flq = NULL, email = NULL, 
+  ...) {
 
   args <- prep_args(query, filter, offset, limit, sample, sort, order,
                     facet, cursor, flq)
   if (length(member_ids) > 1) {
-    res <- llply(member_ids, member_GET, args = args, works = works,
+    res <- llply(member_ids, member_GET, args = args, email= email, works = works,
                  cursor = cursor, cursor_max = cursor_max, ...,
                  .progress = .progress)
     if (!is.null(cursor)) {
@@ -98,7 +99,7 @@
     }
   } else if (length(member_ids) == 1) {
     tmp <- member_GET(member_ids, args = args, works = works,
-                      cursor = cursor, cursor_max = cursor_max, ...)
+                      cursor = cursor, cursor_max = cursor_max, email = email, ...)
     if (!is.null(cursor)) {
       tmp
     } else {
@@ -111,7 +112,7 @@
       }
     }
   } else {
-    tmp <- member_GET(NULL, args = args, works = works, ...)
+    tmp <- member_GET(NULL, args = args, email = email, works = works, ...)
     if (is.null(tmp$message)) {
       list(meta = NULL, data = NULL, facets = NULL)
     } else {
@@ -127,17 +128,18 @@
 `cr_members_` <- function(member_ids = NULL, query = NULL, filter = NULL,
   offset = NULL, limit = NULL, sample = NULL, sort = NULL, order = NULL,
   facet=FALSE, works = FALSE, cursor = NULL, cursor_max = 5000,
-  .progress="none", parse=FALSE, flq = NULL, ...) {
+  .progress="none", parse=FALSE, flq = NULL, email = NULL, ...) {
 
   args <- prep_args(query, filter, offset, limit, sample, sort,
                     order, facet, cursor, flq)
   if (length(member_ids) > 1) {
     llply(member_ids, member_GET_, args = args, works = works,
           cursor = cursor, cursor_max = cursor_max, parse = parse,
-          .progress = .progress, ...)
+          .progress = .progress, email = email, ...)
   } else {
     member_GET_(member_ids, args = args, works = works,
-               cursor = cursor, cursor_max = cursor_max, parse = parse, ...)
+               cursor = cursor, cursor_max = cursor_max, parse = parse, 
+               email = email, ...)
   }
 }
 
@@ -150,7 +152,7 @@ member_GET <- function(x, args, works, cursor = NULL, cursor_max = NULL, ...){
 
   if (!is.null(cursor) && works) {
     rr <- Requestor$new(path = path, args = args, cursor_max = cursor_max,
-                        should_parse = TRUE, ...)
+                        should_parse = TRUE, email = email, ...)
     rr$GETcursor()
     rr$parse()
   } else {
@@ -159,7 +161,7 @@ member_GET <- function(x, args, works, cursor = NULL, cursor_max = NULL, ...){
 }
 
 member_GET_ <- function(x, args, works, cursor = NULL, cursor_max = NULL,
-                        parse, ...) {
+                        parse, email, ...) {
   path <- if (!is.null(x)) {
     if (works) sprintf("members/%s/works", x) else sprintf("members/%s", x)
   } else {
@@ -167,7 +169,7 @@ member_GET_ <- function(x, args, works, cursor = NULL, cursor_max = NULL,
   }
 
   if (!is.null(cursor) && works) {
-    rr <- Requestor$new(path = path, args = args, cursor_max = cursor_max,
+    rr <- Requestor$new(path = path, args = args, email = email, cursor_max = cursor_max,
                         should_parse = parse, ...)
     rr$GETcursor()
     rr$cursor_out

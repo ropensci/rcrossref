@@ -48,6 +48,17 @@ test_that("cr_types facet works correctly", {
   expect_is(aa$facets$orcid, 'data.frame')
 })
 
+test_that("cr_types email param works correctly", {
+  skip_on_cran()
+  
+  aa <- cr_types("monograph", works=TRUE, facet=TRUE, limit = 0, 
+                 email = "name@example.com")
+  expect_is(aa, "list")
+  expect_named(aa, c('meta', 'data', 'facets'))
+  expect_is(aa$facets, 'list')
+  expect_is(aa$facets$affiliation, 'data.frame')
+  expect_is(aa$facets$orcid, 'data.frame')
+})
 test_that("cr_types fails correctly", {
   skip_on_cran()
 

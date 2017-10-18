@@ -8,6 +8,9 @@ test_that("cr_funders returns", {
                                           '10.13039/100000015')))
   b <- suppressWarnings(cr_funders(dois='10.13039/100000001', 
                                    works=TRUE, limit=5))
+  c <- suppressWarnings(cr_funders(dois=c('10.13039/100000001',
+                                          '10.13039/100000015'),
+                                   email = "name@example.com"))
 
   # correct clases
   expect_is(suppressWarnings(cr_funders(query="NSF", limit=1)), "list")
@@ -17,10 +20,16 @@ test_that("cr_funders returns", {
 
   expect_is(b, "list")
   expect_is(b$data, "tbl_df")
+  
+  
+  expect_is(c, "list")
+  expect_is(c[[1]]$data, "data.frame")
+  expect_is(c[[1]]$descendants, "character")
 
   # dimensions are correct
   expect_equal(length(a), 2)
   expect_equal(length(b), 3)
+  expect_equal(length(c), 2)
 })
 
 test_that("cr_funders facet works", {

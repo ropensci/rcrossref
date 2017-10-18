@@ -81,12 +81,12 @@
 `cr_funders` <- function(dois = NULL, query = NULL, filter = NULL,
   offset = NULL, limit = NULL,  sample = NULL, sort = NULL, order = NULL,
   facet=FALSE, works = FALSE, cursor = NULL, cursor_max = 5000,
-  .progress="none", flq = NULL, ...) {
+  .progress="none", flq = NULL, email = NULL, ...) {
 
   args <- prep_args(query, filter, offset, limit, sample, sort,
                     order, facet, cursor, flq)
   if (length(dois) > 1) {
-    res <- llply(dois, fundref_GET, args = args, works = works,
+    res <- llply(dois, fundref_GET, args = args, email = email, works = works,
                  cursor = cursor, cursor_max = cursor_max, ...,
                  .progress = .progress)
     if (!is.null(cursor)) {
@@ -129,8 +129,8 @@
       }
     }
   } else {
-    res <- fundref_GET(dois, args = args, works = works, cursor = cursor,
-                       cursor_max = cursor_max, ...)
+    res <- fundref_GET(dois, args = args, email = email, works = works, cursor = cursor,
+                       cursor_max = cursor_max, email = email, ...)
     if (!is.null(cursor)) {
       res
     } else {
@@ -167,16 +167,16 @@
 `cr_funders_` <- function(dois = NULL, query = NULL, filter = NULL,
   offset = NULL, limit = NULL,  sample = NULL, sort = NULL, order = NULL,
   facet=FALSE, works = FALSE, cursor = NULL, cursor_max = 5000,
-  .progress="none", parse=FALSE, flq = NULL, ...) {
+  .progress="none", parse=FALSE, flq = NULL, email = NULL, ...) {
 
   args <- prep_args(query, filter, offset, limit, sample, sort, order,
                     facet, cursor, flq)
   if (length(dois) > 1) {
-    llply(dois, fundref_GET_, args = args, works = works,
+    llply(dois, fundref_GET_, args = args, email = email, works = works,
           cursor = cursor, cursor_max = cursor_max, parse = parse, ...,
           .progress = .progress)
   } else {
-    fundref_GET_(dois, args = args, works = works, cursor = cursor,
+    fundref_GET_(dois, args = args, email = email, works = works, cursor = cursor,
                 cursor_max = cursor_max, parse = parse, ...)
   }
 }
@@ -189,12 +189,12 @@ fundref_GET <- function(x, args, works, cursor = NULL, cursor_max = NULL, ...){
   }
 
   if (!is.null(cursor) && works) {
-    rr <- Requestor$new(path = path, args = args, cursor_max = cursor_max,
+    rr <- Requestor$new(path = path, args = args, email = email, cursor_max = cursor_max,
                         should_parse = TRUE, ...)
     rr$GETcursor()
     rr$parse()
   } else {
-    cr_GET(path, args, todf = FALSE, ...)
+    cr_GET(path, args, email, todf = FALSE, ...)
   }
 }
 
@@ -207,7 +207,7 @@ fundref_GET_ <- function(x, args, works, cursor = NULL, cursor_max = NULL,
   }
 
   if (!is.null(cursor) && works) {
-    rr <- Requestor$new(path = path, args = args, cursor_max = cursor_max,
+    rr <- Requestor$new(path = path, args = args, email = email, cursor_max = cursor_max,
                         should_parse = parse, ...)
     rr$GETcursor()
     rr$cursor_out

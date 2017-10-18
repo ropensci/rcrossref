@@ -80,12 +80,12 @@
 `cr_prefixes` <- function(prefixes, query = NULL, filter = NULL, offset = NULL,
   limit = NULL, sample = NULL, sort = NULL, order = NULL, facet=FALSE,
   works = FALSE, cursor = NULL, cursor_max = 5000, .progress="none",
-  flq = NULL, ...) {
+  flq = NULL, email = NULL, ...) {
 
   args <- prep_args(query, filter, offset, limit, sample, sort, order,
                     facet, cursor, flq)
   if (length(prefixes) > 1) {
-    res <- llply(prefixes, prefixes_GET, args = args, works = works,
+    res <- llply(prefixes, prefixes_GET, args = args, email = email, works = works,
                  cursor = cursor, cursor_max = cursor_max, ...,
                  .progress = .progress)
     if (!is.null(cursor)) {
@@ -116,7 +116,7 @@
     }
   } else {
     tmp <- prefixes_GET(prefixes, args, works = works, cursor = cursor,
-                        cursor_max = cursor_max, ...)
+                        cursor_max = cursor_max, email, ...)
     if (!is.null(cursor)) {
       tmp
     } else {
@@ -139,12 +139,13 @@
 #' @rdname cr_prefixes
 `cr_prefixes_` <- function(prefixes, query = NULL, filter = NULL, offset = NULL,
   limit = NULL, sample = NULL, sort = NULL, order = NULL, facet=FALSE, works = FALSE,
-  cursor = NULL, cursor_max = 5000, .progress="none", parse=FALSE, flq = NULL, ...) {
+  cursor = NULL, cursor_max = 5000, .progress="none", parse=FALSE, flq = NULL, 
+  email = NULL, ...) {
 
   args <- prep_args(query, filter, offset, limit, sample, sort, order,
                     facet, cursor, flq)
   if (length(prefixes) > 1) {
-    llply(prefixes, prefixes_GET_, args = args, works = works,
+    llply(prefixes, prefixes_GET_, args = args, email = email, works = works,
           cursor = cursor, cursor_max = cursor_max, parse = parse,
           ..., .progress = .progress)
   } else {
@@ -153,10 +154,10 @@
   }
 }
 
-prefixes_GET <- function(x, args, works, cursor = NULL, cursor_max = NULL, ...){
+prefixes_GET <- function(x, args, email, works, cursor = NULL, cursor_max = NULL, ...){
   path <- if (works) sprintf("prefixes/%s/works", x) else sprintf("prefixes/%s", x)
   if (!is.null(cursor) && works) {
-    rr <- Requestor$new(path = path, args = args, cursor_max = cursor_max,
+    rr <- Requestor$new(path = path, args = args, email = email, cursor_max = cursor_max,
                         should_parse = TRUE, ...)
     rr$GETcursor()
     rr$parse()
@@ -165,15 +166,15 @@ prefixes_GET <- function(x, args, works, cursor = NULL, cursor_max = NULL, ...){
   }
 }
 
-prefixes_GET_ <- function(x, args, works, cursor = NULL, cursor_max = NULL, parse, ...){
+prefixes_GET_ <- function(x, args, email, works, cursor = NULL, cursor_max = NULL, parse, ...){
   path <- if (works) sprintf("prefixes/%s/works", x) else sprintf("prefixes/%s", x)
   if (!is.null(cursor) && works) {
-    rr <- Requestor$new(path = path, args = args, cursor_max = cursor_max,
+    rr <- Requestor$new(path = path, args = args, email = email, cursor_max = cursor_max,
                         should_parse = parse, ...)
     rr$GETcursor()
     rr$cursor_out
   } else {
-    cr_GET(path, args, todf = FALSE, parse = parse, ...)
+    cr_GET(path, args, email, todf = FALSE, parse = parse, ...)
   }
 }
 

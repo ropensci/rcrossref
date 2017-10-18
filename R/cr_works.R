@@ -115,16 +115,17 @@
 
 `cr_works` <- function(dois = NULL, query = NULL, filter = NULL, offset = NULL,
   limit = NULL, sample = NULL, sort = NULL, order = NULL, facet=FALSE,
-  cursor = NULL, cursor_max = 5000, .progress="none", flq = NULL, ...) {
-
+  cursor = NULL, cursor_max = 5000, .progress="none", flq = NULL, email = NULL, 
+  ...) {
+  
   if (cursor_max != as.integer(cursor_max)) {
     stop("cursor_max must be an integer", call. = FALSE)
   }
   args <- prep_args(query, filter, offset, limit, sample, sort, order,
                     facet, cursor, flq)
-
+  
   if (length(dois) > 1) {
-    res <- llply(dois, cr_get_cursor, args = args, cursor = cursor,
+    res <- llply(dois, cr_get_cursor, args = args, email = email, cursor = cursor,
                  cursor_max = cursor_max, .progress = .progress, ...)
     res <- lapply(res, "[[", "message")
     res <- lapply(res, parse_works)
@@ -137,7 +138,7 @@
     df <- df[!df$DOI == "", ]
     list(meta = NULL, data = df, facets = NULL)
   } else {
-    tmp <- cr_get_cursor(dois, args = args, cursor = cursor,
+    tmp <- cr_get_cursor(dois, args = args, email = email, cursor = cursor,
                          cursor_max = cursor_max, ...)
     if (is.null(dois)) {
       if (!is.null(cursor) || is.null(tmp$message)) {
@@ -158,19 +159,20 @@
 #' @rdname cr_works
 `cr_works_` <- function(dois = NULL, query = NULL, filter = NULL, offset = NULL,
   limit = NULL, sample = NULL, sort = NULL, order = NULL, facet=FALSE,
-  cursor = NULL, cursor_max = 5000, .progress="none", parse=FALSE, flq = NULL, ...) {
-
+  cursor = NULL, cursor_max = 5000, .progress="none", parse=FALSE, flq = NULL, 
+  email = NULL, ...) {
+  
   if (cursor_max != as.integer(cursor_max)) {
     stop("cursor_max must be an integer", call. = FALSE)
   }
   args <- prep_args(query, filter, offset, limit, sample, sort, order,
                     facet, cursor, flq)
-
+  
   if (length(dois) > 1) {
-    llply(dois, cr_get_cursor_, args = args, cursor = cursor,
+    llply(dois, cr_get_cursor_, args = args, email = email, cursor = cursor,
           cursor_max = cursor_max, parse = parse, .progress = .progress, ...)
   } else {
-    cr_get_cursor_(dois, args = args, cursor = cursor,
+    cr_get_cursor_(dois, args = args, email = email, cursor = cursor,
                    cursor_max = cursor_max, parse = parse, ...)
   }
 }
@@ -178,7 +180,7 @@
 cr_get_cursor <- function(x, args, cursor, cursor_max, ...) {
   path <- if (!is.null(x)) sprintf("works/%s", x) else "works"
   if (!is.null(cursor)) {
-    rr <- Requestor$new(path = path, args = args, cursor_max = cursor_max,
+    rr <- Requestor$new(path = path, args = args, email = email, cursor_max = cursor_max,
                         should_parse = TRUE, ...)
     rr$GETcursor()
     rr$parse()
@@ -190,7 +192,7 @@ cr_get_cursor <- function(x, args, cursor, cursor_max, ...) {
 cr_get_cursor_ <- function(x, args, cursor, cursor_max, parse, ...) {
   path <- if (!is.null(x)) sprintf("works/%s", x) else "works"
   if (!is.null(cursor)) {
-    rr <- Requestor$new(path = path, args = args, cursor_max = cursor_max,
+    rr <- Requestor$new(path = path, args = args, email = email, cursor_max = cursor_max,
                         should_parse = parse, ...)
     rr$GETcursor()
     rr$cursor_out
@@ -267,7 +269,7 @@ parse_works <- function(zzz){
       volume = list(y[[which]]),
       abstract = list(y[[which]])
     )
-
+    
     res <- if (is.null(res) || length(res) == 0) NA else res
     if (length(res[[1]]) > 1) {
       names(res[[1]]) <- paste(which, names(res[[1]]), sep = "_")
@@ -277,7 +279,7 @@ parse_works <- function(zzz){
       res
     }
   }
-
+  
   if (is.null(zzz)) {
     NULL
   } else if (all(is.na(zzz))) {

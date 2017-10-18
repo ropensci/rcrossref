@@ -11,3 +11,6 @@
 #' @param sort (character) Field to sort on, one of score, relevance, updated,
 #' deposited, indexed, or published.
 #' @param order (character) Sort order, one of 'asc' or 'desc'
+#' @param email (character) Provide contact information to Crossref, so that
+#' they can contact you if something goes wrong. Crossref awards contact info
+#' with a a special pool of API machines.
