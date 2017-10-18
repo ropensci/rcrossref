@@ -12,21 +12,23 @@ asl <- function(z) {
   }
 }
 
-rcrossref_ua <- function() {
+rcrossref_ua <- function(email) {
   versions <- c(paste0("r-curl/", utils::packageVersion("curl")),
                 paste0("crul/", utils::packageVersion("crul")),
                 sprintf("rOpenSci(rcrossref/%s)", 
-                        utils::packageVersion("rcrossref")))
+                        utils::packageVersion("rcrossref")),
+                mailto(email))
   paste0(versions, collapse = " ")
 }
 
-cr_GET <- function(endpoint, args, todf = TRUE, on_error = warning, parse = TRUE, ...) {
+cr_GET <- function(endpoint, args, todf = TRUE, on_error = warning, parse = TRUE, email, ...) {
   url <- sprintf("https://api.crossref.org/%s", endpoint)
   cli <- crul::HttpClient$new(
     url = url,
+#    opts = list( verbose = TRUE ),
     headers = list(
-      `User-Agent` = rcrossref_ua(),
-      `X-USER-AGENT` = rcrossref_ua()
+      `User-Agent` = rcrossref_ua(email),
+      `X-USER-AGENT` = rcrossref_ua(email)
     )
   )
   if (length(args) == 0) {
@@ -133,11 +135,10 @@ field_query_handler <- function(x) {
 }
 
 prep_args <- function(query, filter, offset, limit, sample, sort, 
-                      order, facet, cursor, flq, email) {
+                      order, facet, cursor, flq) {
   check_limit(limit)
   check_number(offset)
   check_number(sample)
-  val_email(email)
   filter <- filter_handler(filter)
   flq <- field_query_handler(flq)
   stopifnot(class(facet) %in% c('logical', 'character'))
@@ -148,7 +149,7 @@ prep_args <- function(query, filter, offset, limit, sample, sort,
     c(
       list(query = query, filter = filter, offset = offset, rows = limit,
            sample = sample, sort = sort, order = order, facet = facet,
-           cursor = cursor, mailto = email),
+           cursor = cursor),
       flq
     )
   )
@@ -180,3 +181,14 @@ val_email <- function(email) {
 email_regex <-
   function()
     "^[_a-z0-9-]+(\\.[_a-z0-9-]+)*@[a-z0-9-]+(\\.[a-z0-9-]+)*(\\.[a-z]{2,4})$"
+
+#' Make email string for user header
+#' @param email email address
+#' 
+#' @noRd
+mailto <- function(email) {
+  if(!is.null(email))
+    paste0("(mailto:", val_email(email), ")")
+  else
+    NULL
+}

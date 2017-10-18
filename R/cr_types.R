@@ -65,9 +65,9 @@
   .progress="none", flq = NULL, email = NULL, ...) {
 
   args <- prep_args(query, filter, offset, limit, sample, sort, order,
-                    facet, cursor, flq, email)
+                    facet, cursor, flq)
   if (length(types) > 1) {
-    res <- llply(types, types_GET, args = args, works = works,
+    res <- llply(types, types_GET, args = args, email = email, works = works,
                  cursor = cursor, cursor_max = cursor_max, ...,
                  .progress = .progress)
     if (!is.null(cursor)) {
@@ -137,9 +137,9 @@
   .progress="none", parse=FALSE, flq = NULL, email = NULL, ...) {
 
   args <- prep_args(query, filter, offset, limit, sample, sort, order,
-                    facet, cursor, flq, email)
+                    facet, cursor, flq)
   if (length(types) > 1) {
-    llply(types, types_GET_, args = args, works = works,
+    llply(types, types_GET_, args = args, email = email, works = works,
           cursor = cursor, cursor_max = cursor_max, parse = parse, ...,
           .progress = .progress)
   } else {
@@ -156,7 +156,7 @@ types_GET <- function(x, args, works, cursor = NULL, cursor_max = NULL, ...){
   }
 
   if (!is.null(cursor) && works) {
-    rr <- Requestor$new(path = path, args = args, cursor_max = cursor_max,
+    rr <- Requestor$new(path = path, args = args, email = email, cursor_max = cursor_max,
                         should_parse = TRUE, ...)
     rr$GETcursor()
     rr$parse()
@@ -174,7 +174,7 @@ types_GET_ <- function(x, args, works, cursor = NULL, cursor_max = NULL,
   }
 
   if (!is.null(cursor) && works) {
-    rr <- Requestor$new(path = path, args = args, cursor_max = cursor_max,
+    rr <- Requestor$new(path = path, args = args, email = email, cursor_max = cursor_max,
                         should_parse = parse, ...)
     rr$GETcursor()
     rr$cursor_out
