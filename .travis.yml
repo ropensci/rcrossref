@@ -7,6 +7,11 @@ addons:
     packages:
       - poppler-utils
 
+install:
+  - mkdir -p ~/Rlib
+  - echo 'crossref_email = name@example.com' > .Renviron
+  - echo 'options(repos = "http://cran.rstudio.com")' > .Rprofile
+  
 r_github_packages:
   - jimhester/covr
 
