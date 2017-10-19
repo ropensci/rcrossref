@@ -26,6 +26,7 @@ cr_GET <- function(endpoint, args, todf = TRUE, on_error = warning, parse = TRUE
   url <- sprintf("https://api.crossref.org/%s", endpoint)
   cli <- crul::HttpClient$new(
     url = url,
+    opts = list(verbose = TRUE),
     headers = list(
       `User-Agent` = rcrossref_ua(),
       `X-USER-AGENT` = rcrossref_ua()
@@ -165,8 +166,9 @@ get_email <- function() {
   email <- Sys.getenv("crossref_email")
   if (identical(email, "")) {
     NULL
-  }
+  } else {
   paste0("(mailto:", val_email(email), ")")
+  }
 }
 
 #' Email checker
