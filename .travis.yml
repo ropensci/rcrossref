@@ -7,7 +7,7 @@ addons:
     packages:
       - poppler-utils
 
-install:
+before_install:
   - mkdir -p ~/Rlib
   - echo 'crossref_email = name@example.com' > .Renviron
 
