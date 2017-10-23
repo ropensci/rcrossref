@@ -35,10 +35,11 @@ test_that("DOIs with no agency found still work, at least some do", {
   skip_on_cran()
 
   # throws warning
-  expect_warning(
-    cr_cn("10.1890/0012-9615(1999)069[0569:EDILSA]2.0.CO;2"),
-    "agency not found - proceeding with 'crossref'"
-  )
+  # no warning thrown any longer
+  # expect_warning(
+  #   cr_cn("10.1890/0012-9615(1999)069[0569:EDILSA]2.0.CO;2"),
+  #   "agency not found - proceeding with 'crossref'"
+  # )
 
   # but it is successful
   expect_is(
