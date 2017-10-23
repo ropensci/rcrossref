@@ -19,4 +19,26 @@ test_that("cr_ageny fails correctly", {
   expect_error(cr_agency(dois = cr_r(3), timeout_ms = 1))
 })
 
+test_that("cr_agency - email works", {
+  skip_on_cran()
+  
+  Sys.setenv("crossref_email" = "name@example.com")
+  expect_is(cr_agency(dois = '10.1038/jid.2009.428'), "list")
+})
+
+
+test_that("cr_agency - email is validated", {
+  skip_on_cran()
+  
+  Sys.setenv("crossref_email" = "name@example")
+  expect_error(cr_agency(dois = '10.1038/jid.2009.428'))
+})
+
+test_that("cr_agency - email NULL works", {
+  skip_on_cran()
+  
+  Sys.setenv("crossref_email" = "")
+  expect_is(cr_agency(dois = '10.1038/jid.2009.428'), "list")
+})
+
 Sys.sleep(2)
