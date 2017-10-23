@@ -44,5 +44,27 @@ test_that("cr_funders fails correctly", {
                "Resource not found")
 })
 
+test_that("cr_works - email works", {
+  skip_on_cran()
+  
+  Sys.setenv("crossref_email" = "name@example.com")
+  expect_is(cr_funders(dois=c('10.13039/100000001')), "list")
+})
+
+
+test_that("cr_funders - email is validated", {
+  skip_on_cran()
+  
+  Sys.setenv("crossref_email" = "name@example")
+  expect_error(cr_funders(dois=c('10.13039/100000001')))
+})
+
+test_that("cr_funders - email NULL works", {
+  skip_on_cran()
+  
+  Sys.setenv("crossref_email" = "")
+  expect_is(cr_funders(dois=c('10.13039/100000001')), "list")
+})
+
 Sys.sleep(2)
 

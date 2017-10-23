@@ -155,5 +155,28 @@ test_that("cr_works - parses affiliation inside authors correctly", {
   expect_named(aa$data$author[[1]], c("given", "family", "affiliation.name"))
 })
 
+test_that("cr_works - email works", {
+          skip_on_cran()
+  
+          Sys.setenv("crossref_email" = "name@example.com")
+          a <- cr_works(query="NSF")
+          expect_is(a, "list")
+})
+
+test_that("cr_works - email is validated", {
+  skip_on_cran()
+  
+  Sys.setenv("crossref_email" = "name@example")
+  expect_error(cr_works(query="NSF"))
+})
+
+test_that("cr_works - email NULL works", {
+  skip_on_cran()
+  
+  Sys.setenv("crossref_email" = "")
+  a <- cr_works(query="NSF")
+  expect_is(a, "list")
+})
+
 Sys.sleep(2)
 
