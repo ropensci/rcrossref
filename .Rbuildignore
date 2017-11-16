@@ -15,3 +15,5 @@ cran-comments.md
 ^CONDUCT\.md$
 ^cran-comments\.md$
 revdep
+.github
+
