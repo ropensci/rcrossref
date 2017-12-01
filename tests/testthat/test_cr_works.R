@@ -155,6 +155,13 @@ test_that("cr_works - parses affiliation inside authors correctly", {
   expect_named(aa$data$author[[1]], c("given", "family", "affiliation.name"))
 })
 
+test_that("cr_works - select works", {
+  skip_on_cran()
+
+  aa <- cr_works(query = "science", select = c('DOI', 'title'))
+  expect_named(aa$data, c("DOI", "title"))
+})
+
 test_that("cr_works - email works", {
           skip_on_cran()
   

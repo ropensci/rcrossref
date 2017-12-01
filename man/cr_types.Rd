@@ -79,6 +79,9 @@ field query parameters are:
 
 \item{parse}{(logical) Whether to output json \code{FALSE} or parse to
 list \code{TRUE}. Default: \code{FALSE}}
+
+\item{select}{(character) One or more field to return (only those fields 
+are returned)}
 }
 \description{
 Search CrossRef types

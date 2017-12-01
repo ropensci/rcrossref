@@ -8,12 +8,12 @@
 cr_journals(issn = NULL, query = NULL, filter = NULL, offset = NULL,
   limit = NULL, sample = NULL, sort = NULL, order = NULL,
   facet = FALSE, works = FALSE, cursor = NULL, cursor_max = 5000,
-  .progress = "none", flq = NULL, ...)
+  .progress = "none", flq = NULL, select = NULL, ...)
 
 cr_journals_(issn = NULL, query = NULL, filter = NULL, offset = NULL,
   limit = NULL, sample = NULL, sort = NULL, order = NULL,
   facet = FALSE, works = FALSE, cursor = NULL, cursor_max = 5000,
-  .progress = "none", parse = FALSE, flq = NULL, ...)
+  .progress = "none", parse = FALSE, flq = NULL, select = NULL, ...)
 }
 \arguments{
 \item{issn}{(character) One or more ISSN's. Format: XXXX-XXXX.}
@@ -74,6 +74,9 @@ field query parameters are:
  \item query.contributor    - Query author, editor, chair and translator 
  first and given names
 }}
+
+\item{select}{(character) One or more field to return (only those fields 
+are returned)}
 
 \item{...}{Named parameters passed on to \code{\link[crul]{HttpClient}}}
 
@@ -145,6 +148,11 @@ cr_journals_("2167-8359", works = TRUE, cursor = "*",
 # field queries
 ## query.author
 cr_journals("2167-8359", works = TRUE, flq = c(`query.author` = 'Jane'))
+
+# select only certain fields to return
+res <- cr_journals('2167-8359', works = TRUE, 
+  select = c('DOI', 'title'))
+names(res$data)
 }
 }
 \references{

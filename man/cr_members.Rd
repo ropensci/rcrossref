@@ -8,12 +8,13 @@
 cr_members(member_ids = NULL, query = NULL, filter = NULL,
   offset = NULL, limit = NULL, sample = NULL, sort = NULL,
   order = NULL, facet = FALSE, works = FALSE, cursor = NULL,
-  cursor_max = 5000, .progress = "none", flq = NULL, ...)
+  cursor_max = 5000, .progress = "none", flq = NULL, select = NULL, ...)
 
 cr_members_(member_ids = NULL, query = NULL, filter = NULL,
   offset = NULL, limit = NULL, sample = NULL, sort = NULL,
   order = NULL, facet = FALSE, works = FALSE, cursor = NULL,
-  cursor_max = 5000, .progress = "none", parse = FALSE, flq = NULL, ...)
+  cursor_max = 5000, .progress = "none", parse = FALSE, flq = NULL,
+  select = NULL, ...)
 }
 \arguments{
 \item{member_ids}{One or more member ids. See examples. ALternatively,
@@ -76,6 +77,9 @@ field query parameters are:
  first and given names
 }}
 
+\item{select}{(character) One or more field to return (only those fields 
+are returned)}
+
 \item{...}{Named parameters passed on to \code{\link[crul]{HttpClient}}}
 
 \item{parse}{(logical) Whether to output json \code{FALSE} or parse to
@@ -129,6 +133,11 @@ cr_members_(member_ids = 98, works = TRUE, cursor = "*",
 # field queries
 ## query.container-title
 cr_members(98, works = TRUE, flq = c(`query.container-title` = 'Ecology'))
+
+
+# select only certain fields to return
+res <- cr_members(98, works = TRUE, select = c('DOI', 'title'))
+names(res$data)
 }
 }
 \references{

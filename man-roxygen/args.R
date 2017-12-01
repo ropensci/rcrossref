@@ -11,3 +11,5 @@
 #' @param sort (character) Field to sort on, one of score, relevance, updated,
 #' deposited, indexed, or published.
 #' @param order (character) Sort order, one of 'asc' or 'desc'
+#' @param select (character) One or more field to return (only those fields 
+#' are returned)

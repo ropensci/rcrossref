@@ -111,17 +111,22 @@
 #' ## query.author and query.title
 #' res <- cr_works(query = "ecology",
 #'   flq = c(query.author = 'Smith', query.title = 'cell'))
+#' 
+#' # select only certain fields to return
+#' res <- cr_works(query = "NSF", select = c('DOI', 'title'))
+#' names(res$data)
 #' }
 
 `cr_works` <- function(dois = NULL, query = NULL, filter = NULL, offset = NULL,
   limit = NULL, sample = NULL, sort = NULL, order = NULL, facet=FALSE,
-  cursor = NULL, cursor_max = 5000, .progress="none", flq = NULL, ...) {
+  cursor = NULL, cursor_max = 5000, .progress="none", flq = NULL, 
+  select = NULL, ...) {
 
   if (cursor_max != as.integer(cursor_max)) {
     stop("cursor_max must be an integer", call. = FALSE)
   }
   args <- prep_args(query, filter, offset, limit, sample, sort, order,
-                    facet, cursor, flq)
+                    facet, cursor, flq, select)
 
   if (length(dois) > 1) {
     res <- llply(dois, cr_get_cursor, args = args, cursor = cursor,
@@ -158,13 +163,14 @@
 #' @rdname cr_works
 `cr_works_` <- function(dois = NULL, query = NULL, filter = NULL, offset = NULL,
   limit = NULL, sample = NULL, sort = NULL, order = NULL, facet=FALSE,
-  cursor = NULL, cursor_max = 5000, .progress="none", parse=FALSE, flq = NULL, ...) {
+  cursor = NULL, cursor_max = 5000, .progress="none", parse=FALSE, 
+  flq = NULL, select = NULL, ...) {
 
   if (cursor_max != as.integer(cursor_max)) {
     stop("cursor_max must be an integer", call. = FALSE)
   }
   args <- prep_args(query, filter, offset, limit, sample, sort, order,
-                    facet, cursor, flq)
+                    facet, cursor, flq, select)
 
   if (length(dois) > 1) {
     llply(dois, cr_get_cursor_, args = args, cursor = cursor,
@@ -283,13 +289,19 @@ parse_works <- function(zzz){
   } else if (all(is.na(zzz))) {
     NULL
   } else {
-    out_tmp <- data.frame(as.list(unlist(lapply(keys, manip, y = zzz))),
-                          stringsAsFactors = FALSE)
+    tmp <- unlist(lapply(keys, manip, y = zzz))
+    #tmp[vapply(tmp, function(z) nchar(z) == 0 || is.na(z), TRUE)] <- NULL
+    out_tmp <- data.frame(
+      as.list(Filter(function(x) nchar(x) > 0, tmp)), 
+      stringsAsFactors = FALSE)
+    # out_tmp <- data.frame(as.list(unlist(lapply(keys, manip, y = zzz))),
+    #                       stringsAsFactors = FALSE)
     out_tmp$assertion <- list(parse_todf(zzz$assertion)) %||% NULL
     out_tmp$author <- list(parse_todf(zzz$author)) %||% NULL
     out_tmp$funder <- list(parse_todf(zzz$funder)) %||% NULL
     out_tmp$link <- list(parse_todf(zzz$link)) %||% NULL
     out_tmp$`clinical-trial-number` <- list(parse_todf(zzz$`clinical-trial-number`)) %||% NULL
+    out_tmp <- Filter(function(x) length(unlist(x)) > 0, out_tmp)
     return(out_tmp)
   }
 }

@@ -8,12 +8,12 @@
 cr_works(dois = NULL, query = NULL, filter = NULL, offset = NULL,
   limit = NULL, sample = NULL, sort = NULL, order = NULL,
   facet = FALSE, cursor = NULL, cursor_max = 5000, .progress = "none",
-  flq = NULL, ...)
+  flq = NULL, select = NULL, ...)
 
 cr_works_(dois = NULL, query = NULL, filter = NULL, offset = NULL,
   limit = NULL, sample = NULL, sort = NULL, order = NULL,
   facet = FALSE, cursor = NULL, cursor_max = 5000, .progress = "none",
-  parse = FALSE, flq = NULL, ...)
+  parse = FALSE, flq = NULL, select = NULL, ...)
 }
 \arguments{
 \item{dois}{Search by a single DOI or many DOIs.}
@@ -72,6 +72,9 @@ field query parameters are:
  \item query.contributor    - Query author, editor, chair and translator 
  first and given names
 }}
+
+\item{select}{(character) One or more field to return (only those fields 
+are returned)}
 
 \item{...}{Named parameters passed on to \code{\link[crul]{HttpClient}}}
 
@@ -181,6 +184,10 @@ res <- cr_works(query = "ecology",
 ## query.author and query.title
 res <- cr_works(query = "ecology",
   flq = c(query.author = 'Smith', query.title = 'cell'))
+
+# select only certain fields to return
+res <- cr_works(query = "NSF", select = c('DOI', 'title'))
+names(res$data)
 }
 }
 \references{

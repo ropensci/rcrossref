@@ -135,7 +135,7 @@ field_query_handler <- function(x) {
 }
 
 prep_args <- function(query, filter, offset, limit, sample, sort, 
-                      order, facet, cursor, flq) {
+                      order, facet, cursor, flq, select) {
   check_limit(limit)
   check_number(offset)
   check_number(sample)
@@ -145,11 +145,15 @@ prep_args <- function(query, filter, offset, limit, sample, sort,
   if (inherits(facet, "logical")) {
     facet <- if (facet) "t" else NULL
   }
+  if (!is.null(select)) {
+    stopifnot(inherits(select, "character"))
+    select <- paste0(select, collapse = ",")
+  }
   cr_compact(
     c(
       list(query = query, filter = filter, offset = offset, rows = limit,
            sample = sample, sort = sort, order = order, facet = facet,
-           cursor = cursor),
+           cursor = cursor, select = select),
       flq
     )
   )

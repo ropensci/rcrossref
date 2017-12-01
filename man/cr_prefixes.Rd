@@ -8,12 +8,12 @@
 cr_prefixes(prefixes, query = NULL, filter = NULL, offset = NULL,
   limit = NULL, sample = NULL, sort = NULL, order = NULL,
   facet = FALSE, works = FALSE, cursor = NULL, cursor_max = 5000,
-  .progress = "none", flq = NULL, ...)
+  .progress = "none", flq = NULL, select = NULL, ...)
 
 cr_prefixes_(prefixes, query = NULL, filter = NULL, offset = NULL,
   limit = NULL, sample = NULL, sort = NULL, order = NULL,
   facet = FALSE, works = FALSE, cursor = NULL, cursor_max = 5000,
-  .progress = "none", parse = FALSE, flq = NULL, ...)
+  .progress = "none", parse = FALSE, flq = NULL, select = NULL, ...)
 }
 \arguments{
 \item{prefixes}{(character) Publisher prefixes, one or more in a vector or
@@ -75,6 +75,9 @@ field query parameters are:
  \item query.contributor    - Query author, editor, chair and translator 
  first and given names
 }}
+
+\item{select}{(character) One or more field to return (only those fields 
+are returned)}
 
 \item{...}{Named parameters passed on to \code{\link[crul]{HttpClient}}}
 
@@ -141,6 +144,10 @@ cr_prefixes_("10.1016", works = TRUE, cursor = "*",
 ## query.container-title
 cr_prefixes("10.1016", works = TRUE,
   flq = c(`query.container-title` = 'Ecology'))
+
+# select only certain fields to return
+res <- cr_prefixes("10.1016", works = TRUE, select = c('DOI', 'title'))
+names(res$data)
 }
 }
 \references{
