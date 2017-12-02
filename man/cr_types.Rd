@@ -8,12 +8,12 @@
 cr_types(types = NULL, query = NULL, filter = NULL, offset = NULL,
   limit = NULL, sample = NULL, sort = NULL, order = NULL,
   facet = FALSE, works = FALSE, cursor = NULL, cursor_max = 5000,
-  .progress = "none", flq = NULL, ...)
+  .progress = "none", flq = NULL, select = NULL, ...)
 
 cr_types_(types = NULL, query = NULL, filter = NULL, offset = NULL,
   limit = NULL, sample = NULL, sort = NULL, order = NULL,
   facet = FALSE, works = FALSE, cursor = NULL, cursor_max = 5000,
-  .progress = "none", parse = FALSE, flq = NULL, ...)
+  .progress = "none", parse = FALSE, flq = NULL, select = NULL, ...)
 }
 \arguments{
 \item{types}{(character) Type identifier, e.g., journal}
@@ -75,13 +75,13 @@ field query parameters are:
  first and given names
 }}
 
+\item{select}{(character) One or more field to return (only those fields 
+are returned)}
+
 \item{...}{Named parameters passed on to \code{\link[crul]{HttpClient}}}
 
 \item{parse}{(logical) Whether to output json \code{FALSE} or parse to
 list \code{TRUE}. Default: \code{FALSE}}
-
-\item{select}{(character) One or more field to return (only those fields 
-are returned)}
 }
 \description{
 Search CrossRef types
@@ -127,6 +127,10 @@ cr_types_("journal-article", works = TRUE, cursor = "*",
 ## query.container-title
 cr_types("journal-article", works = TRUE,
   flq = c(`query.container-title` = 'Ecology'))
+
+# select only certain fields to return
+res <- cr_types("journal-article", works = TRUE, select = c('DOI', 'title'))
+names(res$data)
 }
 }
 \references{
