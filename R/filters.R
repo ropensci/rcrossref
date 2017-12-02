@@ -84,7 +84,7 @@ filter_list <- c(
   'has_license','license_url','license_version','license_delay','has_full_text',
   'full_text_version','full_text_type','public_references','has_references','has_archive',
   'archive','has_orcid','orcid','issn','type','directory','doi','updates','is_update',
-  'has_update_policy','container_title','publisher_name','category_name','type_name',
+  'has_update_policy','container_title','category_name','type_name',
   'from_created_date', 'until_created_date', 'affiliation', 'has_affiliation',
   'assertion_group', 'assertion', 'article_number', 'alternative_id',
   'has-clinical-trial-number', 'has-abstract'
@@ -126,7 +126,6 @@ filter_deets <- list(
   "is_update" = list("possible_values" = NA, "description" = "metadata for records that represent editorial updates" ),
   "has_update_policy" = list("possible_values" = NA, "description" = "metadata for records that include a link to an editorial update policy" ),
   "container_title" = list("possible_values" = NA, "description" = "metadata for records with a publication title exactly with an exact match" ),
-  "publisher_name" = list("possible_values" = NA, "description" = "metadata for records with an exact matching publisher name" ),
   "category_name" = list("possible_values" = NA, "description" = "metadata for records with an exact matching category label" ),
   "type_name" = list("possible_values" = NA, "description" = "metadata for records with an exacty matching type label" ),
   "award_number" = list("possible_values" = "{award_number}", "description" = "metadata for records with a matching award nunber_ Optionally combine with 'award_funder'" ),
