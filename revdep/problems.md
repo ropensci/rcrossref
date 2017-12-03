@@ -2,23 +2,26 @@
 
 ## Platform
 
-|setting  |value                                       |
-|:--------|:-------------------------------------------|
-|version  |R version 3.4.0 Patched (2017-04-24 r72617) |
-|system   |x86_64, darwin15.6.0                        |
-|ui       |RStudio (1.1.204)                           |
-|language |(EN)                                        |
-|collate  |en_US.UTF-8                                 |
-|tz       |America/Vancouver                           |
-|date     |2017-04-27                                  |
+|setting  |value                                  |
+|:--------|:--------------------------------------|
+|version  |R version 3.4.3 RC (2017-11-23 r73782) |
+|system   |x86_64, darwin15.6.0                   |
+|ui       |X11                                    |
+|language |(EN)                                   |
+|collate  |en_US.UTF-8                            |
+|tz       |America/Los_Angeles                    |
+|date     |2017-12-03                             |
 
 ## Packages
 
-|package   |*  |version |date       |source                        |
-|:---------|:--|:-------|:----------|:-----------------------------|
-|rcrossref |   |0.7.0   |2017-04-27 |local (ropensci/rcrossref@NA) |
+|package   |*  |version    |date       |source                              |
+|:---------|:--|:----------|:----------|:-----------------------------------|
+|rcrossref |   |0.7.0.9419 |2017-12-03 |Github (ropensci/rcrossref@658c826) |
 
 # Check results
+
 0 packages with problems
+
+
 
 

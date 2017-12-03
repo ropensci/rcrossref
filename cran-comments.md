@@ -16,7 +16,7 @@
 
 ## Reverse dependencies
 
-* I have run R CMD check on the 3 downstream dependencies, and 
+* I have run R CMD check on the 4 downstream dependencies, and 
 found no problems related to this new version.
 
 -------
