@@ -18,15 +18,16 @@ returned.}
 Get filter details and names.
 }
 \details{
-Note that all filter names in this package have dashes replaced
-with underscores as dashes cause problems in an R console.
+Note that all filter names in this package have periods
+and dashes replaced with underscores as they both cause problems
+in an R console.
 }
 \examples{
 filter_names()
 filter_details()
-filter_details()$assertion
-filter_details()$assertion$possible_values
-filter_details()$assertion$description
+filter_details()$has_authenticated_orcid
+filter_details()$has_authenticated_orcid$possible_values
+filter_details()$has_authenticated_orcid$description
 filter_details("issn")
 filter_details("iss")
 filter_details(c("issn", "alternative_id"))
