@@ -8,6 +8,7 @@
 #' @template moreargs
 #' @template cursor_args
 #' @template field_queries
+#' @template sorting
 #' @param facet (logical) Include facet results. Boolean or string with
 #' field to facet on. Valid fields are *, affiliation, funder-name,
 #' funder-doi, orcid, container-title, assertion, archive, update-type,

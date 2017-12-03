@@ -8,8 +8,6 @@
 #' @param sample (integer) Number of random results to return. when you use
 #' the sample parameter, the rows and offset parameters are ignored.
 #' Ignored unless \code{works=TRUE}. Max: 100
-#' @param sort (character) Field to sort on, one of score, relevance, updated,
-#' deposited, indexed, or published.
 #' @param order (character) Sort order, one of 'asc' or 'desc'
 #' @param select (character) One or more field to return (only those fields 
 #' are returned)

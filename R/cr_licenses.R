@@ -6,8 +6,6 @@
 #' @param offset Number of record to start at, from 1 to infinity.
 #' @param limit Number of results to return in the query. Not relavant when
 #' searching with specific dois. Default: 20. Max: 1000
-#' @param sort (character) Field to sort on, one of score, relevance, updated,
-#' deposited, indexed, or published.
 #' @param order (character) Sort order, one of 'asc' or 'desc'
 #' @param .progress Show a `plyr`-style progress bar? Options are "none",
 #' "text", "tk", "win, and "time".  See [plyr::create_progress_bar()]
@@ -15,6 +13,7 @@
 #' @param ... Named parameters passed on to [crul::HttpClient()]
 #' @param parse (logical) Whether to output json `FALSE` or parse to
 #' list `TRUE`. Default: `FALSE`
+#' @template sorting
 #'
 #' @details BEWARE: The API will only work for CrossRef DOIs.
 #' @references
