@@ -3,7 +3,7 @@
 #' @section Crossref APIs:
 #' rcrossref interacts with the main Crossref metadata search API at
 #' <https://github.com/CrossRef/rest-api-doc/blob/master/rest_api.md>,
-#' the old metadata search API at <http://search.labs.crossref.org/>, their
+#' the old metadata search API at http://search.labs.crossref.org/, their
 #' DOI Content Negotiation service at
 #' <http://citation.crosscite.org/docs.html>, and
 #' the \emph{Text and Data Mining} project <http://tdmsupport.crossref.org/>

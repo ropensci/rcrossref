@@ -200,7 +200,7 @@ rcrossref 0.3.4
 ### NEW FEATURES
 
 * Added new function `crosscite()` to work with the
-[Citeproc service](http://crosscite.org/citeproc/) (#60)
+Citeproc service (http://crosscite.org/citeproc/) (#60)
 
 ### BUG FIXES
 

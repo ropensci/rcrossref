@@ -49,10 +49,10 @@ get_styles()[1:5]
 
 ```
 #> [1] "academy-of-management-review"                   
-#> [2] "acm-sig-proceedings-long-author-list"           
-#> [3] "acm-sig-proceedings"                            
-#> [4] "acm-sigchi-proceedings-extended-abstract-format"
-#> [5] "acm-sigchi-proceedings"
+#> [2] "accident-analysis-and-prevention"               
+#> [3] "acm-sig-proceedings-long-author-list"           
+#> [4] "acm-sig-proceedings"                            
+#> [5] "acm-sigchi-proceedings-extended-abstract-format"
 ```
 
 `bibtex`
@@ -85,13 +85,6 @@ cat(cr_cn(dois = "10.1126/science.169.3946.635", format = "bibtex"))
 cr_cn(dois = "10.6084/m9.figshare.97218", format = "bibentry")
 ```
 
-```
-#> Boettiger C (2012). "Regime shifts in ecology and evolution (PhD
-#> Dissertation)." doi: 10.6084/m9.figshare.97218 (URL:
-#> http://doi.org/10.6084/m9.figshare.97218), <URL:
-#> https://doi.org/10.6084/m9.figshare.97218>.
-```
-
 ## Citation count
 
 Citation count, using OpenURL
@@ -102,7 +95,7 @@ cr_citation_count(doi="10.1371/journal.pone.0042793")
 ```
 
 ```
-#> [1] 13
+#> [1] 17
 ```
 
 ## Search Crossref metadata API
@@ -119,20 +112,21 @@ cr_funders(query="NSF")
 ```
 #> $meta
 #>   total_results search_terms start_index items_per_page
-#> 1             8          NSF           0             20
+#> 1             9          NSF           0             20
 #> 
 #> $data
-#> # A tibble: 8 × 6
+#> # A tibble: 9 x 6
 #>             id      location
 #>          <chr>         <chr>
-#> 1    100000179 United States
-#> 2 501100000930     Australia
-#> 3    100000001 United States
-#> 4    100003187 United States
-#> 5    100008367       Denmark
-#> 6 501100004190        Norway
-#> 7    100006445 United States
-#> 8 501100001809         China
+#> 1    100006445 United States
+#> 2    100003187 United States
+#> 3 501100008982     Sri Lanka
+#> 4    100008367       Denmark
+#> 5 501100004190        Norway
+#> 6    100000179 United States
+#> 7 501100000930     Australia
+#> 8    100000001 United States
+#> 9 501100001809         China
 #> # ... with 4 more variables: name <chr>, alt.names <chr>, uri <chr>,
 #> #   tokens <chr>
 #> 
@@ -156,7 +150,7 @@ cr_agency(dois = '10.13039/100000001')
 #> [1] "crossref"
 #> 
 #> $agency$label
-#> [1] "CrossRef"
+#> [1] "Crossref"
 ```
 
 ### Search works (i.e., articles, books, etc.)
@@ -169,21 +163,19 @@ cr_works(filter=c(has_orcid=TRUE, from_pub_date='2004-04-04'), limit=1)
 ```
 #> $meta
 #>   total_results search_terms start_index items_per_page
-#> 1        689036           NA           0              1
+#> 1       1078354           NA           0              1
 #> 
 #> $data
-#> # A tibble: 1 × 29
-#>   alternative.id               container.title    created  deposited
-#>            <chr>                         <chr>      <chr>      <chr>
-#> 1           1142 Regional Environmental Change 2017-03-29 2017-03-29
-#> # ... with 25 more variables: DOI <chr>, funder <list>, indexed <chr>,
-#> #   ISBN <chr>, ISSN <chr>, issued <chr>, license_date <chr>,
-#> #   license_URL <chr>, license_delay.in.days <chr>,
-#> #   license_content.version <chr>, link <list>, member <chr>,
-#> #   prefix <chr>, publisher <chr>, reference.count <chr>, score <chr>,
-#> #   source <chr>, subject <chr>, title <chr>, type <chr>,
-#> #   update.policy <chr>, URL <chr>, assertion <list>, author <list>,
-#> #   `clinical-trial-number` <list>
+#> # A tibble: 1 x 26
+#>                    container.title    created  deposited
+#>                              <chr>      <chr>      <chr>
+#> 1 Journal of Materials Chemistry B 2015-01-13 2017-11-12
+#> # ... with 23 more variables: DOI <chr>, indexed <chr>, ISSN <chr>,
+#> #   issue <chr>, issued <chr>, member <chr>, page <chr>, prefix <chr>,
+#> #   publisher <chr>, reference.count <chr>, score <chr>, source <chr>,
+#> #   subject <chr>, title <chr>, type <chr>, update.policy <chr>,
+#> #   URL <chr>, volume <chr>, abstract <chr>, assertion <list>,
+#> #   author <list>, funder <list>, link <list>
 #> 
 #> $facets
 #> NULL
@@ -198,14 +190,12 @@ cr_journals(issn=c('1803-2427','2326-4225'))
 
 ```
 #> $data
-#> # A tibble: 2 × 16
-#>   alternative.id container.title created deposited funder indexed  ISBN
-#>            <chr>           <chr>   <chr>     <chr> <list>   <chr> <chr>
-#> 1                                                  <NULL>              
-#> 2                                                  <NULL>              
-#> # ... with 9 more variables: ISSN <chr>, issued <chr>, link <list>,
-#> #   publisher <chr>, subject <chr>, title <chr>, assertion <list>,
-#> #   author <list>, `clinical-trial-number` <list>
+#> # A tibble: 2 x 3
+#>                  ISSN                      publisher
+#>                 <chr>                          <chr>
+#> 1 1805-4196,1803-2427    De Gruyter Open Sp. z o.o. 
+#> 2           2326-4225 American Scientific Publishers
+#> # ... with 1 more variables: title <chr>
 #> 
 #> $facets
 #> NULL
@@ -221,30 +211,23 @@ cr_licenses(query = 'elsevier')
 ```
 #> $meta
 #>   total_results search_terms start_index items_per_page
-#> 1            17     elsevier           0             20
+#> 1            22     elsevier           0             20
 #> 
 #> $data
-#> # A tibble: 17 × 2
-#>                                                                            URL
-#>                                                                          <chr>
-#> 1                            http://creativecommons.org/licenses/by-nc-nd/3.0/
-#> 2                            http://creativecommons.org/licenses/by-nc-nd/4.0/
-#> 3                                  http://creativecommons.org/licenses/by/3.0/
-#> 4                                   http://creativecommons.org/licenses/by/4.0
-#> 5                                  http://creativecommons.org/licenses/by/4.0/
-#> 6                                   http://doi.wiley.com/10.1002/tdm_license_1
-#> 7                                 http://doi.wiley.com/10.1002/tdm_license_1.1
-#> 8                       http://journals.iucr.org/services/copyrightpolicy.html
-#> 9                   http://journals.iucr.org/services/copyrightpolicy.html#TDM
-#> 10                           http://onlinelibrary.wiley.com/termsAndConditions
-#> 11        http://www.acm.org/publications/policies/copyright_policy#Background
-#> 12     http://www.bioone.org/page/resources/researchers/rights_and_permissions
-#> 13                        http://www.elsevier.com/open-access/userlicense/1.0/
-#> 14                                http://www.elsevier.com/tdm/userlicense/1.0/
-#> 15                                      http://www.emeraldinsight.com/page/tdm
-#> 16                                                 http://www.springer.com/tdm
-#> 17 © 2012, Elsevier Inc., All Rights Reserved. Figure 8, part (B) (images of H
-#> # ... with 1 more variables: work.count <int>
+#> # A tibble: 22 x 2
+#>                                                         URL work.count
+#>                                                       <chr>      <int>
+#>  1 http://aspb.org/publications/aspb-journals/open-articles          1
+#>  2        http://creativecommons.org/licenses/by-nc-nd/3.0/         12
+#>  3        http://creativecommons.org/licenses/by-nc-nd/4.0/          7
+#>  4           http://creativecommons.org/licenses/by-nc/4.0/          1
+#>  5              http://creativecommons.org/licenses/by/3.0/          1
+#>  6               http://creativecommons.org/licenses/by/4.0          1
+#>  7              http://creativecommons.org/licenses/by/4.0/          1
+#>  8               http://doi.wiley.com/10.1002/tdm_license_1        157
+#>  9             http://doi.wiley.com/10.1002/tdm_license_1.1       2166
+#> 10   http://journals.iucr.org/services/copyrightpolicy.html         10
+#> # ... with 12 more rows
 ```
 
 ### Search based on DOI prefixes
@@ -289,15 +272,15 @@ cr_members(query='ecology', limit = 5)
 #> 1            18      ecology           0              5
 #> 
 #> $data
-#> # A tibble: 5 × 48
-#>      id
-#>   <int>
-#> 1  7052
-#> 2  6933
-#> 3  7278
-#> 4  7745
-#> 5  9167
-#> # ... with 47 more variables: primary_name <chr>, location <chr>,
+#> # A tibble: 5 x 48
+#>      id                            primary_name
+#>   <int>                                   <chr>
+#> 1   336   Japanese Society of Microbial Ecology
+#> 2  1950               Journal of Vector Ecology
+#> 3  2080   The Japan Society of Tropical Ecology
+#> 4  2467          Ideas in Ecology and Evolution
+#> 5  3732 Japan Association for Landscape Ecology
+#> # ... with 46 more variables: location <chr>,
 #> #   last_status_check_time <date>, total.dois <chr>, current.dois <chr>,
 #> #   backfile.dois <chr>, prefixes <chr>,
 #> #   coverge.affiliations.current <chr>, coverge.funders.backfile <chr>,
@@ -346,16 +329,11 @@ cr_r()
 ```
 
 ```
-#>  [1] "10.1016/j.chemosphere.2012.06.036"
-#>  [2] "10.1117/12.2249178"               
-#>  [3] "10.1111/j.1469-8137.2004.01086.x" 
-#>  [4] "10.1016/j.orthtr.2014.07.013"     
-#>  [5] "10.1086/633704"                   
-#>  [6] "10.1017/s0020860400090355"        
-#>  [7] "10.1111/coep.12229"               
-#>  [8] "10.1524/ract.1967.8.4.214"        
-#>  [9] "10.1016/s0040-4020(01)98752-6"    
-#> [10] "10.1021/nl200189w"
+#>  [1] "10.1097/nt.0000000000000083"   "10.3796/ksft.2016.52.1.072"   
+#>  [3] "10.1016/j.jtho.2016.11.645"    "10.1038/sj.bjp.0705959"       
+#>  [5] "10.1016/s0735-1097(04)90810-8" "10.1007/bf01048109"           
+#>  [7] "10.2172/6478328"               "10.1601/ex.6391"              
+#>  [9] "10.1103/physreve.64.011702"    "10.1039/c6ra11800c"
 ```
 
 You can pass in the number of DOIs you want back (default is 10)
@@ -366,7 +344,6 @@ cr_r(2)
 ```
 
 ```
-#> [1] "10.1163/ej.9789024727186.123-268.6"
-#> [2] "10.1016/0044-8486(76)90026-0"
+#> [1] "10.7554/elife.08177.003" "10.1039/b003410j"
 ```
 
