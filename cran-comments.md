@@ -1,7 +1,7 @@
 ## Test environments
 
-* local OS X install, R 3.4.0
-* ubuntu 12.04 (on travis-ci), R 3.4.0
+* local OS X install, R 3.4.3 RC
+* ubuntu 14.04.5 LTS (on Travis-CI), R 3.4.2
 * win-builder (devel and release)
 
 ## R CMD check results
@@ -21,8 +21,8 @@ found no problems related to this new version.
 
 -------
 
-This submission breaks out some functionality to a new package (crminer),
-and includes a number of bug fixes.
+This submission improves documentation, and puts this client better 
+in line with the API that it interacts with. 
 
 Thanks!
 Scott Chamberlain

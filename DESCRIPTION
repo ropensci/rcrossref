@@ -5,7 +5,7 @@ Description: Client for various 'CrossRef' 'APIs', including 'metadata' search
     (including 'bibtex', 'citeproc-json', 'rdf-xml', etc.), convert 'DOIs'
     to 'PMIDs', and 'vice versa', get citations for 'DOIs', and get links to
     full text of articles when available.
-Version: 0.7.0.9419
+Version: 0.8.0
 License: MIT + file LICENSE
 Authors@R: c(
     person("Scott", "Chamberlain", role = c("aut", "cre"), email = "myrmecocystus@gmail.com"),
@@ -20,12 +20,12 @@ Roxygen: list(markdown = TRUE)
 Imports:
     methods,
     utils,
-    jsonlite (>= 1.0),
-    crul (>= 0.3.4),
-    xml2 (>= 1.0.0),
+    jsonlite (>= 1.5),
+    crul (>= 0.4.0),
+    xml2 (>= 1.1.1),
     plyr,
     bibtex,
-    dplyr (>= 0.5.0),
+    dplyr (>= 0.7.4),
     R6,
     shiny,
     miniUI,
