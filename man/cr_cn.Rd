@@ -90,24 +90,17 @@ foo(sample(stys, 1))
 
 # Using DataCite DOIs
 ## some formats don't work
-# cr_cn("10.5284/1011335", "text")
 # cr_cn("10.5284/1011335", "crossref-xml")
 # cr_cn("10.5284/1011335", "crossref-tdm")
 ## But most do work
+cr_cn("10.5284/1011335", "text")
 cr_cn("10.5284/1011335", "datacite-xml")
 cr_cn("10.5284/1011335", "rdf-xml")
-# cr_cn("10.5284/1011335", "turtle")
+cr_cn("10.5284/1011335", "turtle")
 cr_cn("10.5284/1011335", "citeproc-json-ish")
 cr_cn("10.5284/1011335", "ris")
 cr_cn("10.5284/1011335", "bibtex")
 cr_cn("10.5284/1011335", "bibentry")
-
-dois <- c('10.5167/UZH-30455','10.5167/UZH-49216','10.5167/UZH-503',
-          '10.5167/UZH-38402','10.5167/UZH-41217')
-cat(cr_cn(dois[1]))
-cat(cr_cn(dois[2]))
-cat(cr_cn(dois[3]))
-cat(cr_cn(dois[4]))
 
 # Using Medra DOIs
 cr_cn("10.3233/ISU-150780", "onix-xml")
