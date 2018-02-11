@@ -120,7 +120,9 @@ flq_set <- c(
   'query.editor',
   'query.chair',
   'query.translator',
-  'query.contributor'
+  'query.contributor',
+  'query.bibliographic',
+  'query.affiliation'
 )
 
 field_query_handler <- function(x) {
