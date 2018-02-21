@@ -207,6 +207,7 @@ cr_get_cursor_ <- function(x, args, cursor, cursor_max, parse, ...) {
 }
 
 parse_meta <- function(x) {
+  if (is.null(x$message)) return(data.frame(NULL))
   tmp <- x$message[ !names(x$message) %in% c('facets','items') ]
   st <- tmp$query$`search-terms`
   data.frame(total_results = tmp$`total-results`,

@@ -111,7 +111,7 @@
       res <- lapply(res, "[[", "message")
       # remove NULLs
       res <- cr_compact(res)
-      tmp <- lapply(res, parse_works)
+      tmp <- lapply(res, function(z) bind_rows(lapply(z$items, parse_works)))
       df <- tbl_df(bind_rows(tmp))
       #exclude rows with empty ISSN value until CrossRef API
       #supports input validation
@@ -119,11 +119,16 @@
         warning("only data with valid ISSN returned",  call. = FALSE)
       }
       df <- df[!df$ISSN == "", ]
-      facets <- stats::setNames(
-        lapply(res, function(x) parse_facets(x$facets)),
-        vapply(res, function(z) z[['ISSN']][[1]], "")
-      )
-      facets <- if (all(vapply(facets, is.null, logical(1)))) NULL else facets
+      facets <- lapply(res, function(x) parse_facets(x$facets))
+      facets <- if (all(vapply(facets, is.null, logical(1)))) {
+        NULL
+      } else {
+        stats::setNames(facets,
+          vapply(res, function(z) {
+            if ("ISSN" %in% names(z)) z[['ISSN']][[1]] else z$items[[1]]$ISSN[[1]]
+          }, "")
+        )
+      }
       list(data = df, facets = facets)
     }
   } else {
