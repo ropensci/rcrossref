@@ -53,7 +53,7 @@ crAddins <- function() {
     
     output$search_table <- DT::renderDataTable({
       req(input$search_query, search_results())
-      search_dt <- search_results()[, c(4, 2)]
+      search_dt <- search_results()[, c("title", "issued")]
       # search_dt <- out$data[, c(4, 2)]
       DT::datatable(search_dt, selection = 'single', rownames = FALSE,
                     options = list(pageLength = 5, dom = 'tip'))
