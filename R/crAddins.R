@@ -3,7 +3,7 @@ crAddins <- function() {
     gadgetTitleBar("Add Crossref Citations"),
     miniTabstripPanel(
       miniTabPanel(
-        "Search for Article", icon = icon("search"),
+        "Search Metadata", icon = icon("search"),
         miniContentPanel(
           uiOutput("search_input"),
           uiOutput("selected_item"),
@@ -11,7 +11,7 @@ crAddins <- function() {
         )
       ),
       miniTabPanel(
-        "Search for DOI",
+        "Search by DOI",
         icon = icon("barcode"),
         miniContentPanel(
           h4(
