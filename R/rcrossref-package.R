@@ -95,10 +95,13 @@
 #' @importFrom bibtex read.bib
 #' @importFrom jsonlite toJSON fromJSON
 #' @importFrom plyr llply ldply
-#' @importFrom shiny h4 fillRow htmlOutput renderUI textInput actionButton req
-#' HTML observeEvent updateTextInput stopApp dialogViewer runGadget uiOutput
-#' reactiveValues
-#' @importFrom miniUI miniPage gadgetTitleBar miniContentPanel
+#' @importFrom shiny h4 h5 fillRow htmlOutput renderUI textInput actionButton req
+#' HTML observeEvent stopApp dialogViewer runGadget uiOutput actionLink icon
+#' reactiveValues reactive includeCSS includeScript tags img addResourcePath
+#' radioButtons textOutput renderText shinyApp strong updateActionButton
+#' updateTextInput
+#' @import miniUI
+#' @importFrom DT datatable dataTableOutput renderDataTable
 #' @importFrom stringr str_detect str_match
 #' @name rcrossref-package
 #' @aliases rcrossref
