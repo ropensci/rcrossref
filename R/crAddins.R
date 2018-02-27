@@ -53,8 +53,11 @@ crAddins <- function() {
     
     output$search_table <- DT::renderDataTable({
       req(input$search_query, search_results())
-      search_dt <- search_results()[, c("title", "issued")]
-      # search_dt <- out$data[, c(4, 2)]
+      if ("title" %in% names(search_results())) {
+        search_dt <- search_results()[, c("title", "issued")]
+      } else {
+        search_dt <- data.frame(title = character(), issued = character())
+      }
       DT::datatable(search_dt, selection = 'single', rownames = FALSE,
                     options = list(pageLength = 5, dom = 'tip'))
     })
@@ -252,6 +255,8 @@ crAddins <- function() {
         bib_to_write <- correct_bib(bib_to_write)
         write(paste0(bib_to_write, "\n"), "crossref.bib", append = T)
         updateTextInput(session, "entered_dois", value = "")
+        updateActionButton(session, "add_citations", 
+                           label = "Added", icon = icon("check"))
         preview_message$added <- 1
         preview_message$error <- 0
       } else{
