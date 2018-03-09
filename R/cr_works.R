@@ -116,18 +116,38 @@
 #' # select only certain fields to return
 #' res <- cr_works(query = "NSF", select = c('DOI', 'title'))
 #' names(res$data)
+#' 
+#' # asyc
+#' queries <- c("ecology", "science", "cellular", "birds", "European",
+#'   "bears", "beets", "laughter", "hapiness", "funding")
+#' res <- cr_works(query = queries, async = TRUE)
+#' 
+#' queries <- c("ecology", "science", "cellular")
+#' res <- cr_works(query = queries, async = TRUE, verbose = TRUE)
+#' res
+#' 
+#' # time
+#' queries <- c("ecology", "science", "cellular", "birds", "European",
+#'   "bears", "beets", "laughter", "hapiness", "funding")
+#' system.time(cr_works(query = queries, async = TRUE))
+#' system.time(lapply(queries, function(z) cr_works(query = z)))
 #' }
 
 `cr_works` <- function(dois = NULL, query = NULL, filter = NULL, offset = NULL,
   limit = NULL, sample = NULL, sort = NULL, order = NULL, facet=FALSE,
   cursor = NULL, cursor_max = 5000, .progress="none", flq = NULL, 
-  select = NULL, ...) {
+  select = NULL, async = FALSE, ...) {
 
   if (cursor_max != as.integer(cursor_max)) {
     stop("cursor_max must be an integer", call. = FALSE)
   }
   args <- prep_args(query, filter, offset, limit, sample, sort, order,
                     facet, cursor, flq, select)
+
+  stopifnot(is.logical(async))
+  if (async) {
+    return(cr_async("works", c(dois, args), ...))
+  }
 
   if (length(dois) > 1) {
     res <- llply(dois, cr_get_cursor, args = args, cursor = cursor,
