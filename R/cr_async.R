@@ -7,7 +7,8 @@ cr_async <- function(endpoint, args, ...) {
   iter <- args[lengths > 1]
   args[names(iter)] <- NULL
 
-  cli <- crul::AsyncVaried$new(.list = make_queries(args, iter, ...))
+  cli <- crul::AsyncVaried$new(
+    .list = make_queries(endpoint, args, iter, ...))
   cli$request()
   cli$status()
   cli$responses()
@@ -19,7 +20,7 @@ cr_async <- function(endpoint, args, ...) {
   })
 }
 
-make_queries <- function(qr, x, ...) {
+make_queries <- function(endpoint, qr, x, ...) {
   nm <- names(x)
   lapply(x[[1]], function(z) {
     qr <- modifyList(qr, stats::setNames(list(z), nm))
