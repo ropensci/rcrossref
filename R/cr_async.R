@@ -23,7 +23,7 @@ make_queries <- function(qr, x, ...) {
   nm <- names(x)
   lapply(x[[1]], function(z) {
     qr <- modifyList(qr, stats::setNames(list(z), nm))
-    HttpRequest$new(url = "https://api.crossref.org",
+    crul::HttpRequest$new(url = "https://api.crossref.org",
       headers = list(
         `User-Agent` = rcrossref_ua(),
         `X-USER-AGENT` = rcrossref_ua()
