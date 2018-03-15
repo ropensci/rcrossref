@@ -15,6 +15,7 @@
 #' category-name, assertion-group. Default: `FALSE`
 #' @param parse (logical) Whether to output json `FALSE` or parse to
 #' list `TRUE`. Default: `FALSE`
+#' @param async (logical) use async HTTP requests. Default: `FALSE`
 #'
 #' @section Beware:
 #' The API will only work for CrossRef DOIs.

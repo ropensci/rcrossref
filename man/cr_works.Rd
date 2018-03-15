@@ -93,6 +93,8 @@ field query parameters are:
 \item{select}{(character) One or more field to return (only those fields 
 are returned)}
 
+\item{async}{(logical) use async HTTP requests. Default: \code{FALSE}}
+
 \item{...}{Named parameters passed on to \code{\link[crul]{HttpClient}}}
 
 \item{parse}{(logical) Whether to output json \code{FALSE} or parse to
