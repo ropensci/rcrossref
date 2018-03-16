@@ -111,14 +111,24 @@
       res <- lapply(res, "[[", "message")
       # remove NULLs
       res <- cr_compact(res)
-      tmp <- lapply(res, function(z) bind_rows(lapply(z$items, parse_works)))
-      df <- tbl_df(bind_rows(tmp))
+
+      if (works) {
+        meta <- parse_meta(tmp)
+        tmp <- lapply(res, function(z) bind_rows(lapply(z$items, parse_works)))
+        df <- tbl_df(bind_rows(tmp))
+      } else {
+        dat <- lapply(res, function(z) if (is.null(z)) NULL else parse_journal(z))
+        df <- tbl_df(bind_rows(dat))
+      }
+      
       #exclude rows with empty ISSN value until CrossRef API
       #supports input validation
-      if (nrow(df[df$ISSN == "", ]) > 0) {
+      if (NROW(df[df$issn == "", ]) > 0) {
         warning("only data with valid ISSN returned",  call. = FALSE)
       }
-      df <- df[!df$ISSN == "", ]
+      df <- df[!df$issn == "", ]
+
+      # facets
       facets <- lapply(res, function(x) parse_facets(x$facets))
       facets <- if (all(vapply(facets, is.null, logical(1)))) {
         NULL
