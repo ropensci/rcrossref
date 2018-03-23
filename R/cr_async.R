@@ -1,8 +1,11 @@
 cr_async <- function(endpoint, args, ...) {
   if (length(args) == 0) stop('no arguments passed to async call')
   lengths <- vapply(args, length, 1)
-  if (length(lengths > 1) > 1) {
-    stop("only one parameter can have > 1 value")
+  if (length(lengths[unname(lengths) > 1]) > 1) {
+    stop("async: only one parameter can have > 1 value")
+  }
+  if (!any(unname(lengths) > 1)) {
+    stop("async: at least one parameter must be length > 1")
   }
   iter <- args[lengths > 1]
   args[names(iter)] <- NULL
