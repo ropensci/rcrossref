@@ -30,7 +30,7 @@ test_that("cr_works returns", {
   expect_is(a$meta, "data.frame")
   expect_is(a$data, "data.frame")
   expect_is(a$data, "tbl_df")
-  expect_is(a$data$URL, "character")
+  expect_is(a$data$url, "character")
   expect_equal(a$facets, NULL)
 
   expect_is(h, "list")
@@ -165,7 +165,7 @@ test_that("cr_works - select works", {
   skip_on_cran()
 
   aa <- cr_works(query = "science", select = c('DOI', 'title'))
-  expect_named(aa$data, c("DOI", "title"))
+  expect_named(aa$data, c("doi", "title"))
 })
 
 Sys.sleep(1)

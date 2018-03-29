@@ -70,7 +70,7 @@ crAddins <- function() {
         tags$div(
           style = "border: 1px solid #ddd; border-radius: 5px; padding: 5px; overflow-y: scroll; height: 85px; ",
           h5(selected_entry$title),
-          tags$div(strong("DOI: "), selected_entry$DOI),
+          tags$div(strong("DOI: "), selected_entry$doi),
           tags$div(
             strong("Author(s): "), 
             ifelse(
@@ -96,7 +96,7 @@ crAddins <- function() {
     observeEvent(input$add_citations_article, {
       bib_to_write <- suppressWarnings(
         try(cr_cn(
-          dois = search_results()$DOI[input$search_table_rows_selected]),
+          dois = search_results()$doi[input$search_table_rows_selected]),
           silent = TRUE)
       )
       if (class(bib_to_write) != "try-error") {

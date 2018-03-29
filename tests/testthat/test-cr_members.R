@@ -20,7 +20,7 @@ test_that("cr_members returns", {
   expect_is(b$meta, "data.frame")
   expect_is(b$data, "data.frame")
   expect_is(b$data, "tbl_df")
-  expect_is(b$data$URL, "character")
+  expect_is(b$data$url, "character")
 
   expect_is(c, "list")
   expect_is(d, "list")
