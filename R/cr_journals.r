@@ -108,34 +108,33 @@
       facets <- if (all(vapply(facets, is.null, logical(1)))) NULL else facets
       list(data = df, facets = facets)
     } else {
-      res <- lapply(res, "[[", "message")
+      res2 <- lapply(res, "[[", "message")
       # remove NULLs
-      res <- cr_compact(res)
+      res2 <- cr_compact(res2)
 
       if (works) {
-        meta <- parse_meta(tmp)
-        tmp <- lapply(res, function(z) bind_rows(lapply(z$items, parse_works)))
+        tmp <- lapply(res2, function(z) bind_rows(lapply(z$items, parse_works)))
         df <- tbl_df(bind_rows(tmp))
       } else {
-        dat <- lapply(res, function(z) if (is.null(z)) NULL else parse_journal(z))
+        dat <- lapply(res2, function(z) if (is.null(z)) NULL else parse_journal(z))
         df <- tbl_df(bind_rows(dat))
       }
       
       #exclude rows with empty ISSN value until CrossRef API
       #supports input validation
       if (NROW(df[df$issn == "", ]) > 0) {
-        warning("only data with valid ISSN returned",  call. = FALSE)
+        warning("only data with valid issn returned",  call. = FALSE)
       }
       df <- df[!df$issn == "", ]
 
       # facets
-      facets <- lapply(res, function(x) parse_facets(x$facets))
+      facets <- lapply(res2, function(x) parse_facets(x$facets))
       facets <- if (all(vapply(facets, is.null, logical(1)))) {
         NULL
       } else {
         stats::setNames(facets,
-          vapply(res, function(z) {
-            if ("ISSN" %in% names(z)) z[['ISSN']][[1]] else z$items[[1]]$ISSN[[1]]
+          vapply(res2, function(z) {
+            if ("issn" %in% names(z)) z[['issn']][[1]] else z$items[[1]]$issn[[1]]
           }, "")
         )
       }

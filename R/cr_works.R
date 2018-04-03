@@ -158,10 +158,10 @@
     df <- tbl_df(bind_rows(res))
     #exclude rows with empty DOI value until CrossRef API supports
     #input validation
-    if (nrow(df[df$DOI == "", ]) > 0) {
+    if (nrow(df[df$doi == "", ]) > 0) {
       warning("only data with valid CrossRef DOIs returned",  call. = FALSE)
     }
-    df <- df[!df$DOI == "", ]
+    df <- df[!df$doi == "", ]
     list(meta = NULL, data = df, facets = NULL)
   } else {
     tmp <- cr_get_cursor(dois, args = args, cursor = cursor,
@@ -325,6 +325,7 @@ parse_works <- function(zzz){
     out_tmp$link <- list(parse_todf(zzz$link)) %||% NULL
     out_tmp$`clinical-trial-number` <- list(parse_todf(zzz$`clinical-trial-number`)) %||% NULL
     out_tmp <- Filter(function(x) length(unlist(x)) > 0, out_tmp)
+    names(out_tmp) <- tolower(names(out_tmp))
     return(out_tmp)
   }
 }
