@@ -2,7 +2,9 @@
 #'
 #' @export
 #'
-#' @param doi (character) digital object identifier for an article
+#' @param doi (character) One or more digital object identifiers. If 
+#' `async=FALSE` we do synchronous HTTP requests in an `lapply` call, but 
+#' if `async=TRUE`, we do asynchronous HTTP requests.
 #' @param url (character) the url for the function (should be left to default)
 #' @param key your Crossref OpenURL email address, either enter, or loads
 #' from `.Rprofile`. We use a default, so you don't need to pass this.

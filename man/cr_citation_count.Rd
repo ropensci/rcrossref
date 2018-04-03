@@ -8,7 +8,9 @@ cr_citation_count(doi, url = "http://www.crossref.org/openurl/",
   key = "cboettig@ropensci.org", async = FALSE, ...)
 }
 \arguments{
-\item{doi}{(character) digital object identifier for an article}
+\item{doi}{(character) One or more digital object identifiers. If
+\code{async=FALSE} we do synchronous HTTP requests in an \code{lapply} call, but
+if \code{async=TRUE}, we do asynchronous HTTP requests.}
 
 \item{url}{(character) the url for the function (should be left to default)}
 
