@@ -22,8 +22,9 @@ from \code{.Rprofile}. We use a default, so you don't need to pass this.}
 \item{...}{Curl options passed on to \code{\link[crul:HttpClient]{crul::HttpClient()}}}
 }
 \value{
-single numeric value - the citation count, or NA if not found or
-no count available
+a data.frame, with columns \code{doi} and \code{count}. The count column
+has numeric values that are the citation count for that DOI, or \code{NA} if
+not found or no count available
 }
 \description{
 Get a citation count via CrossRef OpenURL

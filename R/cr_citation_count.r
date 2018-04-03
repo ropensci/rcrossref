@@ -11,8 +11,10 @@
 #' @param async (logical) use async HTTP requests. Default: `FALSE`
 #' @param ... Curl options passed on to [crul::HttpClient()]
 #'
-#' @return single numeric value - the citation count, or NA if not found or
-#' no count available
+#' @return a data.frame, with columns `doi` and `count`. The count column 
+#' has numeric values that are the citation count for that DOI, or `NA` if 
+#' not found or no count available
+#' 
 #' @details See <http://labs.crossref.org/openurl/> for more info on this
 #' Crossref API service.
 #'
