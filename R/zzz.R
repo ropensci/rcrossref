@@ -172,7 +172,7 @@ get_email <- function() {
   if (identical(email, "")) {
     NULL
   } else {
-  paste0("(mailto:", val_email(email), ")")
+    paste0("(mailto:", val_email(email), ")")
   }
 }
 
