@@ -1,7 +1,7 @@
 #' Search CrossRef works (articles)
 #'
 #' @export
-#'
+#' @family crossref
 #' @param dois Search by a single DOI or many DOIs.
 #' @template args
 #' @template moreargs

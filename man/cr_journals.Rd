@@ -20,7 +20,10 @@ cr_journals_(issn = NULL, query = NULL, filter = NULL, offset = NULL,
 
 \item{query}{Query terms}
 
-\item{filter}{Filter options. See details.}
+\item{filter}{Filter options. See examples for usage examples
+and \code{\link{filters}} for what filters are available.
+\code{filter} is available for use with \code{cr_works} and 
+other \code{crossref} family functions with \code{works=TRUE}}
 
 \item{offset}{Number of record to start at. Minimum: 1. For
 \code{\link{cr_works}}, and any function setting \code{works = TRUE},
@@ -174,4 +177,10 @@ names(res$data)
 }
 \references{
 \url{https://github.com/CrossRef/rest-api-doc/blob/master/rest_api.md}
+}
+\seealso{
+Other crossref: \code{\link{cr_funders}},
+  \code{\link{cr_licenses}}, \code{\link{cr_members}},
+  \code{\link{cr_prefixes}}, \code{\link{cr_types}},
+  \code{\link{cr_works}}
 }

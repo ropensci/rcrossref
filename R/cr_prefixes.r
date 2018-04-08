@@ -1,7 +1,7 @@
 #' Search CrossRef prefixes
 #'
 #' @export
-#'
+#' @family crossref
 #' @param prefixes (character) Publisher prefixes, one or more in a vector or
 #' list. Required.
 #' @template args

@@ -1,7 +1,7 @@
 #' Search CrossRef licenses
 #'
 #' @export
-#'
+#' @family crossref
 #' @param query Query terms
 #' @param offset Number of record to start at, from 1 to infinity.
 #' @param limit Number of results to return in the query. Not relavant when

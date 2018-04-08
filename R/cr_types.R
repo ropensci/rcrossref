@@ -1,7 +1,7 @@
 #' Search CrossRef types
 #'
 #' @export
-#'
+#' @family crossref
 #' @param types (character) Type identifier, e.g., journal
 #' @template args
 #' @template moreargs
