@@ -2,7 +2,7 @@
 #'
 #' @export
 #' @family crossref
-#' @param dois Search by a single DOI or many DOIs.
+#' @param dois Search by a single DOI or many DOIs.  Note that using this parameter at the same time as the `query`, `limit`, `select` or `flq` parameter will result in an error.
 #' @template args
 #' @template moreargs
 #' @template cursor_args
