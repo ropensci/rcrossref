@@ -158,7 +158,7 @@ test_that("cr_works - parses affiliation inside authors correctly", {
   doi <- "10.4018/978-1-4666-9588-7.les2"
   aa <- cr_works(doi)
   expect_true(any(grepl("author", names(aa$data))))
-  expect_named(aa$data$author[[1]], c("given", "family", "affiliation.name"))
+  expect_named(aa$data$author[[1]], c("given", "family", "sequence", "affiliation.name"))
 })
 
 test_that("cr_works - select works", {
