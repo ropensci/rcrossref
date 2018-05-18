@@ -5,6 +5,10 @@ cr_cc_async <- function(doi, url, key, ...) {
   cli$status()
   cli$responses()
   out <- lapply(cli$parse(), function(z) {
+    if (grepl("malformed doi", z, ignore.case = TRUE)) {
+      warning("Malformed DOI: ", doi, call. = FALSE)
+      return(NA_integer_)
+    }
     ans <- xml2::read_xml(z)
     if (get_attr(ans, "status") == "unresolved") {
       NA_integer_

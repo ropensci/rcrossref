@@ -28,6 +28,12 @@
 #'
 #' I would imagine it's best to use this data instead of from the publishers,
 #' and this data you can get programatically :)
+#' 
+#' @section failure behavior:
+#' When a DOI does not exist, we may not get a proper HTTP status code 
+#' to throw a proper stop status, so we grep on the text itself, and throw
+#' a stop if only one DOI passed and not using async, or warning if more
+#' than one DOI passed or if using async.
 #'
 #' @seealso [cr_search()], [cr_r()]
 #' @author Carl Boettiger \email{cboettig@@gmail.com}, 
@@ -82,6 +88,11 @@ cr_cc <- function(doi, url, key, ...) {
   )
   cite_count <- cli$get(query = args, ...)
   cite_count$raise_for_status()
+  txt <- cite_count$parse("UTF-8")
+  if (grepl("malformed doi", txt, ignore.case = TRUE)) {
+    warning("Malformed DOI: ", doi, call. = FALSE)
+    return(NA_integer_)
+  }
   ans <- xml2::read_xml(cite_count$parse("UTF-8"))
   if (get_attr(ans, "status") == "unresolved") {
     NA_integer_
