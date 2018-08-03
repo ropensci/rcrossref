@@ -5,7 +5,7 @@
 \title{Get citations in various formats from CrossRef.}
 \usage{
 cr_cn(dois, format = "bibtex", style = "apa", locale = "en-US",
-  raw = FALSE, .progress = "none", ...)
+  raw = FALSE, .progress = "none", url = NULL, ...)
 }
 \arguments{
 \item{dois}{Search by a single DOI or many DOIs.}
@@ -24,10 +24,13 @@ you'll get a  \code{(500) Internal Server Error}}
 \item{raw}{(logical) Return raw text in the format given by \code{format}
 parameter. Default: \code{FALSE}}
 
-\item{.progress}{Show a \code{plyr}-style progress bar? Options are "none", "text", 
-"tk", "win", and "time".  See \code{\link[plyr]{create_progress_bar}} for details 
+\item{.progress}{Show a \code{plyr}-style progress bar? Options are "none", "text",
+"tk", "win", and "time".  See \code{\link[plyr]{create_progress_bar}} for details
 of each. Only used when passing in multiple ids (e.g., multiple DOIs, DOI prefixes,
 etc.)}
+
+\item{url}{(character) Base URL for the content negotiation request.
+Default: "https://doi.org"}
 
 \item{...}{Named parameters passed on to \code{\link[crul]{HttpClient}}}
 }
@@ -112,5 +115,16 @@ cr_cn(dois = "10.1002/app.27716", format = "citeproc-json", raw = TRUE)
 ## in this case, a DOI minting agency can't be found
 ## but we proceed anyway, just assuming it's "crossref"
 cr_cn("10.1890/0012-9615(1999)069[0569:EDILSA]2.0.CO;2")
+
+# Use a different base url
+cr_cn("10.1126/science.169.3946.635", "text", url = "https://data.datacite.org")
+cr_cn("10.1126/science.169.3946.635", "text", url = "http://dx.doi.org")
+cr_cn("10.1126/science.169.3946.635", "text", "heredity", url = "http://dx.doi.org")
+cr_cn("10.5284/1011335", url = "https://citation.crosscite.org/format", 
+   style = "oikos")
+cr_cn("10.5284/1011335", url = "https://citation.crosscite.org/format", 
+   style = "plant-cell-and-environment")
+cr_cn("10.5284/1011335", url = "https://data.datacite.org", 
+   style = "plant-cell-and-environment")
 }
 }

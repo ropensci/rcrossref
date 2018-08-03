@@ -4,15 +4,18 @@
 #'
 #' @param dois Search by a single DOI or many DOIs.
 #' @param format Name of the format. One of "rdf-xml", "turtle",
-#'   "citeproc-json", "citeproc-json-ish", "text", "ris", "bibtex" (default),
-#'   "crossref-xml", "datacite-xml","bibentry", or "crossref-tdm". The format
-#'   "citeproc-json-ish" is a format that is not quite proper citeproc-json
+#' "citeproc-json", "citeproc-json-ish", "text", "ris", "bibtex" (default),
+#' "crossref-xml", "datacite-xml","bibentry", or "crossref-tdm". The format
+#' "citeproc-json-ish" is a format that is not quite proper citeproc-json
 #' @param style a CSL style (for text format only). See [get_styles()]
-#'   for options. Default: apa. If there's a style that CrossRef doesn't support
-#'   you'll get a  `(500) Internal Server Error`
+#' for options. Default: apa. If there's a style that CrossRef doesn't support
+#' you'll get a  `(500) Internal Server Error`
 #' @param locale Lansguage locale. See `?Sys.getlocale`
 #' @param raw (logical) Return raw text in the format given by `format`
-#'   parameter. Default: `FALSE`
+#' parameter. Default: `FALSE`
+#' @param url (character) Base URL for the content negotiation request. 
+#' Default: "https://doi.org"
+#' 
 #' @template moreargs
 #' @details See <http://citation.crosscite.org/docs.html> for more info
 #' on the Crossref Content Negotiation API service.
@@ -90,10 +93,21 @@
 #' ## in this case, a DOI minting agency can't be found
 #' ## but we proceed anyway, just assuming it's "crossref"
 #' cr_cn("10.1890/0012-9615(1999)069[0569:EDILSA]2.0.CO;2")
+#' 
+#' # Use a different base url
+#' cr_cn("10.1126/science.169.3946.635", "text", url = "https://data.datacite.org")
+#' cr_cn("10.1126/science.169.3946.635", "text", url = "http://dx.doi.org")
+#' cr_cn("10.1126/science.169.3946.635", "text", "heredity", url = "http://dx.doi.org")
+#' cr_cn("10.5284/1011335", url = "https://citation.crosscite.org/format", 
+#'    style = "oikos")
+#' cr_cn("10.5284/1011335", url = "https://citation.crosscite.org/format", 
+#'    style = "plant-cell-and-environment")
+#' cr_cn("10.5284/1011335", url = "https://data.datacite.org", 
+#'    style = "plant-cell-and-environment")
 #' }
 
 `cr_cn` <- function(dois, format = "bibtex", style = 'apa',
-                    locale = "en-US", raw = FALSE, .progress = "none", ...) {
+  locale = "en-US", raw = FALSE, .progress = "none", url = NULL, ...) {
 
   format <- match.arg(format, c("rdf-xml", "turtle", "citeproc-json",
                                 "citeproc-json-ish", "text", "ris", "bibtex",
@@ -108,8 +122,15 @@
       agency_id <- "crossref"
     }
 
-    # url <- paste0("https://data.", agency_id, ".org/", doi)
-    url <- file.path("https://doi.org", doi)
+    assert(url, "character")
+    if (is.null(url)) url <- "https://doi.org"
+    # need separate setup for citation.crosscite.org vs. others
+    args <- list()
+    if (grepl("citation.crosscite.org", url)) {
+      args <- cr_compact(list(doi = doi, lang = locale, style = style))
+    } else {
+      url <- file.path(url, doi)
+    }
 
     # check cn data provider
     if (!format %in% supported_cn_types[[agency_id]]) {
@@ -154,7 +175,7 @@
           Accept = type
         )
       )
-      response <- cli$get(...)
+      response <- cli$get(query = args, ...)
     }
     warn_status(response)
     if (response$status_code < 202) {
