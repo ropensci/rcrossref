@@ -1,12 +1,13 @@
 #' Search CrossRef journals
 #'
 #' @export
-#'
+#' @family crossref
 #' @param issn (character) One or more ISSN's. Format: XXXX-XXXX.
 #' @template args
 #' @template moreargs
 #' @template cursor_args
 #' @template field_queries
+#' @template sorting
 #' @param facet (logical) Include facet results. Boolean or string with
 #' field to facet on. Valid fields are *, affiliation, funder-name,
 #' funder-doi, orcid, container-title, assertion, archive, update-type,
@@ -75,12 +76,17 @@
 #' # field queries
 #' ## query.author
 #' cr_journals("2167-8359", works = TRUE, flq = c(`query.author` = 'Jane'))
+#' 
+#' # select only certain fields to return
+#' res <- cr_journals('2167-8359', works = TRUE, 
+#'   select = c('DOI', 'title'))
+#' names(res$data)
 #' }
 
 `cr_journals` <- function(issn = NULL, query = NULL, filter = NULL,
   offset = NULL, limit = NULL, sample = NULL, sort = NULL, order = NULL,
   facet = FALSE, works=FALSE, cursor = NULL, cursor_max = 5000,
-  .progress="none", flq = NULL, ...) {
+  .progress="none", flq = NULL, select = NULL, ...) {
 
   if (works) {
     if (is.null(issn)) {
@@ -88,7 +94,7 @@
     }
   }
   args <- prep_args(query, filter, offset, limit, sample,
-                    sort, order, facet, cursor, flq)
+                    sort, order, facet, cursor, flq, select)
 
   if (length(issn) > 1) {
     res <- llply(issn, journal_GET, args = args, works = works,
@@ -102,22 +108,36 @@
       facets <- if (all(vapply(facets, is.null, logical(1)))) NULL else facets
       list(data = df, facets = facets)
     } else {
-      res <- lapply(res, "[[", "message")
+      res2 <- lapply(res, "[[", "message")
       # remove NULLs
-      res <- cr_compact(res)
-      tmp <- lapply(res, parse_works)
-      df <- tbl_df(bind_rows(tmp))
+      res2 <- cr_compact(res2)
+
+      if (works) {
+        tmp <- lapply(res2, function(z) bind_rows(lapply(z$items, parse_works)))
+        df <- tbl_df(bind_rows(tmp))
+      } else {
+        dat <- lapply(res2, function(z) if (is.null(z)) NULL else parse_journal(z))
+        df <- tbl_df(bind_rows(dat))
+      }
+      
       #exclude rows with empty ISSN value until CrossRef API
       #supports input validation
-      if (nrow(df[df$ISSN == "", ]) > 0) {
-        warning("only data with valid ISSN returned",  call. = FALSE)
+      if (NROW(df[df$issn == "", ]) > 0) {
+        warning("only data with valid issn returned",  call. = FALSE)
       }
-      df <- df[!df$ISSN == "", ]
-      facets <- stats::setNames(
-        lapply(res, function(x) parse_facets(x$facets)),
-        vapply(res, function(z) z[['ISSN']][[1]], "")
-      )
-      facets <- if (all(vapply(facets, is.null, logical(1)))) NULL else facets
+      df <- df[!df$issn == "", ]
+
+      # facets
+      facets <- lapply(res2, function(x) parse_facets(x$facets))
+      facets <- if (all(vapply(facets, is.null, logical(1)))) {
+        NULL
+      } else {
+        stats::setNames(facets,
+          vapply(res2, function(z) {
+            if ("issn" %in% names(z)) z[['issn']][[1]] else z$items[[1]]$issn[[1]]
+          }, "")
+        )
+      }
       list(data = df, facets = facets)
     }
   } else {
@@ -151,7 +171,7 @@
 `cr_journals_` <- function(issn = NULL, query = NULL, filter = NULL,
   offset = NULL, limit = NULL, sample = NULL, sort = NULL, order = NULL,
   facet = FALSE, works=FALSE, cursor = NULL, cursor_max = 5000,
-  .progress="none", parse=FALSE, flq = NULL, ...) {
+  .progress="none", parse=FALSE, flq = NULL, select = NULL, ...) {
 
   if (works) {
     if (is.null(issn)) {
@@ -159,7 +179,7 @@
     }
   }
   args <- prep_args(query, filter, offset, limit, sample, sort, order,
-                    facet, cursor, flq)
+                    facet, cursor, flq, select)
   if (length(issn) > 1) {
     llply(issn, journal_GET_, args = args, works = works,
           cursor = cursor, cursor_max = cursor_max,

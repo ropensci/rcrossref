@@ -1,12 +1,13 @@
 #' Search CrossRef types
 #'
 #' @export
-#'
+#' @family crossref
 #' @param types (character) Type identifier, e.g., journal
 #' @template args
 #' @template moreargs
 #' @template cursor_args
 #' @template field_queries
+#' @template sorting
 #' @param facet (logical) Include facet results. Boolean or string with
 #' field to facet on. Valid fields are *, affiliation, funder-name,
 #' funder-doi, orcid, container-title, assertion, archive, update-type,
@@ -57,15 +58,19 @@
 #' ## query.container-title
 #' cr_types("journal-article", works = TRUE,
 #'   flq = c(`query.container-title` = 'Ecology'))
+#' 
+#' # select only certain fields to return
+#' res <- cr_types("journal-article", works = TRUE, select = c('DOI', 'title'))
+#' names(res$data)
 #' }
 
 `cr_types` <- function(types = NULL, query = NULL, filter = NULL,
   offset = NULL, limit = NULL, sample = NULL, sort = NULL, order = NULL,
   facet = FALSE, works = FALSE, cursor = NULL, cursor_max = 5000,
-  .progress="none", flq = NULL, ...) {
+  .progress="none", flq = NULL, select = NULL, ...) {
 
   args <- prep_args(query, filter, offset, limit, sample, sort, order,
-                    facet, cursor, flq)
+                    facet, cursor, flq, select)
   if (length(types) > 1) {
     res <- llply(types, types_GET, args = args, works = works,
                  cursor = cursor, cursor_max = cursor_max, ...,
@@ -134,10 +139,10 @@
 `cr_types_` <- function(types = NULL, query = NULL, filter = NULL,
   offset = NULL, limit = NULL, sample = NULL, sort = NULL, order = NULL,
   facet=FALSE, works = FALSE, cursor = NULL, cursor_max = 5000,
-  .progress="none", parse=FALSE, flq = NULL, ...) {
+  .progress="none", parse=FALSE, flq = NULL, select = NULL, ...) {
 
   args <- prep_args(query, filter, offset, limit, sample, sort, order,
-                    facet, cursor, flq)
+                    facet, cursor, flq, select)
   if (length(types) > 1) {
     llply(types, types_GET_, args = args, works = works,
           cursor = cursor, cursor_max = cursor_max, parse = parse, ...,

@@ -4,14 +4,15 @@
 #' @name filters
 #' @param x (character) Optional filter name. If not given, all filters
 #' returned.
-#' @details Note that all filter names in this package have dashes replaced
-#' with underscores as dashes cause problems in an R console.
+#' @details Note that all filter names in this package have periods 
+#' and dashes replaced with underscores as they both cause problems 
+#' in an R console.
 #' @examples
 #' filter_names()
 #' filter_details()
-#' filter_details()$assertion
-#' filter_details()$assertion$possible_values
-#' filter_details()$assertion$description
+#' filter_details()$has_authenticated_orcid
+#' filter_details()$has_authenticated_orcid$possible_values
+#' filter_details()$has_authenticated_orcid$description
 #' filter_details("issn")
 #' filter_details("iss")
 #' filter_details(c("issn", "alternative_id"))
@@ -22,7 +23,7 @@ filter_names <- function() filter_list
 filter_details <- function(x = NULL) {
   if (is.null(x)) {
     filter_deets
-  } else {
+  } else {    
     filter_deets[match.arg(x, names(filter_deets), several.ok = TRUE)]
   }
 }
@@ -37,14 +38,20 @@ filter_handler <- function(x){
     if (any(nn %in% other_filters)) {
       nn <- sapply(nn, function(x) {
         if (x %in% other_filters) {
-          switch(x,
-                 license_url = 'license.url',
-                 license_version = 'license.version',
-                 license_delay = 'license.delay',
-                 full_text_version = 'full-text.version',
-                 full_text_type = 'full-text.type',
-                 award_number = 'award.number',
-                 award_funder = 'award.funder')
+          switch(
+           x,
+           license_url = 'license.url',
+           license_version = 'license.version',
+           license_delay = 'license.delay',
+           full_text_version = 'full-text.version',
+           full_text_type = 'full-text.type',
+           full_text_application = 'full-text.application',
+           award_number = 'award.number',
+           award_funder = 'award.funder',
+           relation_type = 'relation.type',
+           relation_object = 'relation.object',
+           relation_object_type = 'relation.object-type'
+          )
         } else {
           x
         }
@@ -74,18 +81,27 @@ asl <- function(z) {
   }
 }
 
-other_filters <- c('license_url','license_version','license_delay','full_text_version','full_text_type',
-                   'award_number','award_funder')
+other_filters <- c(
+  'license_url','license_version','license_delay','full_text_version',
+  'full_text_type','award_number','award_funder','relation_type',
+  'relation_object','relation_object_type'
+)
 
 filter_list <- c(
+  'award_funder','award_number','content_domain','from_accepted_date','from_online_pub_date',
+  'from_posted_date','from_print_pub_date','has_assertion','has_authenticated_orcid',
+  'has_crossmark_restriction','has_relation','location','relation_object',
+  'relation_object_type','relation_type','until_accepted_date',
+  'until_online_pub_date','until_posted_date','until_print_pub_date',
   'has_funder','funder','prefix','member','from_index_date','until_index_date',
   'from_deposit_date','until_deposit_date','from_update_date','until_update_date',
-  'from_first_deposit_date','until_first_deposit_date','from_pub_date','until_pub_date',
+  'from_pub_date','until_pub_date',
   'has_license','license_url','license_version','license_delay','has_full_text',
-  'full_text_version','full_text_type','public_references','has_references','has_archive',
+  'full_text_version','full_text_type','full_text_application',
+  'has_references','has_archive',
   'archive','has_orcid','orcid','issn','type','directory','doi','updates','is_update',
-  'has_update_policy','container_title','publisher_name','category_name','type_name',
-  'from_created_date', 'until_created_date', 'affiliation', 'has_affiliation',
+  'has_update_policy','container_title','category_name','type_name',
+  'from_created_date', 'until_created_date', 'has_affiliation',
   'assertion_group', 'assertion', 'article_number', 'alternative_id',
   'has-clinical-trial-number', 'has-abstract'
 )
@@ -112,7 +128,7 @@ filter_deets <- list(
   "has_full_text" = list("possible_values" = NA, "description" = "metadata that includes any full text '<resource>' elements_" ),
   "full_text_version" = list("possible_values" = '{string}' , "description" = "metadata where '<resource>' element's 'content_version' attribute is '{string}'" ),
   "full_text_type" = list("possible_values" = '{mime_type}' , "description" = "metadata where '<resource>' element's 'content_type' attribute is '{mime_type}' (e.g. 'application/pdf')" ),
-  "public_references" = list("possible_values" = NA, "description" = "metadata where publishers allow references to be distributed publically" ),
+  "full_text_application" = list("possible_values" = '{string}' , "description" = "metadata where <resource> link has one of the following intended applications: text-mining, similarity-checking or unspecified" ),
   "has_references" = list("possible_values" = NA , "description" = "metadata for works that have a list of references" ),
   "has_archive" = list("possible_values" = NA , "description" = "metadata which include name of archive partner" ),
   "archive" = list("possible_values" = '{string}', "description" = "metadata which where value of archive partner is '{string}'" ),
@@ -126,17 +142,32 @@ filter_deets <- list(
   "is_update" = list("possible_values" = NA, "description" = "metadata for records that represent editorial updates" ),
   "has_update_policy" = list("possible_values" = NA, "description" = "metadata for records that include a link to an editorial update policy" ),
   "container_title" = list("possible_values" = NA, "description" = "metadata for records with a publication title exactly with an exact match" ),
-  "publisher_name" = list("possible_values" = NA, "description" = "metadata for records with an exact matching publisher name" ),
   "category_name" = list("possible_values" = NA, "description" = "metadata for records with an exact matching category label" ),
   "type_name" = list("possible_values" = NA, "description" = "metadata for records with an exacty matching type label" ),
   "award_number" = list("possible_values" = "{award_number}", "description" = "metadata for records with a matching award nunber_ Optionally combine with 'award_funder'" ),
-  "award_funder" = list("possible_values" = '{funder doi or id}', "description" = "metadata for records with an award with matching funder. Optionally combine with 'award_number'"),
+  "award_funder" = list("possible_values" = '{funder DOI or id}', "description" = "metadata for records with an ffun with matching funder. Optionally combine with 'award_number'"),
   "assertion_group" = list("possible_values" = NA, "description" = "metadata for records with an assertion in a particular group" ),
   "assertion" = list("possible_values" = NA, "description" = "metadata for records with a particular named assertion" ),
-  "affiliation" = list("possible_values" = NA, "description" = "metadata for records with at least one contributor with the given affiliation" ),
   "has_affiliation" = list("possible_values" = NA, "description" = "metadata for records that have any affiliation information" ),
   "article_number" = list("possible_values" = NA, "description" = "metadata for records with a given article number"),
   "alternative_id" = list("possible_values" = NA, "description" = "metadata for records with the given alternative ID, which may be a publisher_specific ID, or any other identifier a publisher may have provided"),
   'has_clinical_trial_number' = list("possible_values" = NA, "description" = "metadata for records which include a clinical trial number"), 
-  'has_abstract' = list("possible_values" = NA, "description" = "metadata for records which include an abstract")
+  'has_abstract' = list("possible_values" = NA, "description" = "metadata for records which include an abstract"),
+  "content_domain" = list("possible_values" = NA, "description" = "metadata where the publisher records a particular domain name as the location Crossmark content will appear"),
+  "from_accepted_date" = list("possible_values" = "{date}", "description" = "metadata where accepted date is since (inclusive) {date}"),
+  "from_online_pub_date" = list("possible_values" = "{date}", "description" = "metadata where online published date is since (inclusive) {date}"),
+  "from_posted_date" = list("possible_values" = "{date}", "description" = "metadata where posted date is since (inclusive) {date}"),
+  "from_print_pub_date" = list("possible_values" = "{date}", "description" = "metadata where print published date is since (inclusive) {date}"),
+  "has_assertion" = list("possible_values" = NA, "description" = "metadata for records with any assertions"),
+  "has_authenticated_orcid" = list("possible_values" = NA, "description" = "metadata which includes one or more ORCIDs where the depositing publisher claims to have witness the ORCID owner authenticate with ORCID"),
+  "has_crossmark_restriction" = list("possible_values" = NA, "description" = "metadata where the publisher restricts Crossmark usage to content domains"),
+  "has_relation" = list("possible_values" = NA, "description" = "metadata for records that either assert or are the object of a relation"),
+  "location" = list("possible_values" = "{country_name}", "description" = "funder records where location = {country name}. Only works on /funders route"),
+  "relation_object" = list("possible_values" = NA, "description" = "Relations where the object identifier matches the identifier provided"),
+  "relation_object_type" = list("possible_values" = NA, "description" = "One of the identifier types from the Crossref relations schema (e.g. doi, issn)"),
+  "relation_type" = list("possible_values" = NA, "description" = "One of the relation types from the Crossref relations schema (e.g. is-referenced-by, is-parent-of, is-preprint-of)"),
+  "until_accepted_date" = list("possible_values" = "{date}", "description" = "metadata where accepted date is before (inclusive) {date}"),
+  "until_online_pub_date" = list("possible_values" = "{date}", "description" = "metadata where online published date is before (inclusive) {date}"),
+  "until_posted_date" = list("possible_values" = "{date}", "description" = "metadata where posted date is before (inclusive) {date}"),
+  "until_print_pub_date" = list("possible_values" = "{date}", "description" = "metadata where print published date is before (inclusive) {date}")
 )

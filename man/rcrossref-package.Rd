@@ -12,7 +12,7 @@ R Client for Various CrossRef APIs.
 
 rcrossref interacts with the main Crossref metadata search API at
 \url{https://github.com/CrossRef/rest-api-doc/blob/master/rest_api.md},
-the old metadata search API at \url{http://search.labs.crossref.org/}, their
+the old metadata search API at http://search.labs.crossref.org/, their
 DOI Content Negotiation service at
 \url{http://citation.crosscite.org/docs.html}, and
 the \emph{Text and Data Mining} project \url{http://tdmsupport.crossref.org/}
@@ -87,6 +87,27 @@ window pop up that you can put in DOIs for. If the DOI is found, the bibtex
 citations will be added to a file called \code{crossref.bib}. New citations
 will be appended to that file. Addin authored by Hao Zhu
 \url{https://github.com/haozhu233}
+}
+
+\section{Be nice and share your email with Crossref}{
+
+The Crossref team encourage requests with appropriate contact information
+and will forward you to a dedicated API cluster for improved performance when
+you share your email address with them.
+\url{https://github.com/CrossRef/rest-api-doc#good-manners--more-reliable-service}
+
+To pass your email address to Crossref via this client, simply store it
+as environment variable in \code{.Renviron} like this:
+\enumerate{
+\item Open file:
+\code{file.edit("~/.Renviron")}
+\item Add email address to be shared with Crossref
+\code{crossref_email = name@example.com}
+\item Save the file and restart your R session
+}
+
+Don't wanna share your email any longer? Simply delete it from
+\code{~/.Renviron}
 }
 
 \keyword{package}

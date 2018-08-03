@@ -16,11 +16,13 @@ rcrossref_ua <- function() {
   versions <- c(paste0("r-curl/", utils::packageVersion("curl")),
                 paste0("crul/", utils::packageVersion("crul")),
                 sprintf("rOpenSci(rcrossref/%s)", 
-                        utils::packageVersion("rcrossref")))
+                        utils::packageVersion("rcrossref")),
+                get_email())
   paste0(versions, collapse = " ")
 }
 
-cr_GET <- function(endpoint, args, todf = TRUE, on_error = warning, parse = TRUE, ...) {
+cr_GET <- function(endpoint, args, todf = TRUE, on_error = warning, parse = TRUE, 
+                   ...) {
   url <- sprintf("https://api.crossref.org/%s", endpoint)
   cli <- crul::HttpClient$new(
     url = url,
@@ -118,7 +120,9 @@ flq_set <- c(
   'query.editor',
   'query.chair',
   'query.translator',
-  'query.contributor'
+  'query.contributor',
+  'query.bibliographic',
+  'query.affiliation'
 )
 
 field_query_handler <- function(x) {
@@ -133,7 +137,7 @@ field_query_handler <- function(x) {
 }
 
 prep_args <- function(query, filter, offset, limit, sample, sort, 
-                      order, facet, cursor, flq) {
+                      order, facet, cursor, flq, select) {
   check_limit(limit)
   check_number(offset)
   check_number(sample)
@@ -143,14 +147,56 @@ prep_args <- function(query, filter, offset, limit, sample, sort,
   if (inherits(facet, "logical")) {
     facet <- if (facet) "t" else NULL
   }
+  if (!is.null(select)) {
+    stopifnot(inherits(select, "character"))
+    select <- paste0(select, collapse = ",")
+  }
   cr_compact(
     c(
       list(query = query, filter = filter, offset = offset, rows = limit,
            sample = sample, sort = sort, order = order, facet = facet,
-           cursor = cursor),
+           cursor = cursor, select = select),
       flq
     )
   )
 }
 
 `%||%` <- function(x, y) if (is.null(x) || length(x) == 0) y else x
+
+
+#' Share email with Crossref in `.Renviron`
+#' 
+#' @noRd
+get_email <- function() {
+  email <- Sys.getenv("crossref_email")
+  if (identical(email, "")) {
+    NULL
+  } else {
+    paste0("(mailto:", val_email(email), ")")
+  }
+}
+
+#' Email checker
+#'
+#' It implementents the following regex stackoverflow solution
+#' http://stackoverflow.com/a/25077140
+#'
+#' @param email email address (character string)
+#'
+#' @noRd
+val_email <- function(email) {
+  if (!grepl(email_regex(), email))
+    stop("Email address seems not properly formatted - Please check your .Renviron!",
+         call. = FALSE)
+  return(email)
+}
+
+#' Email regex
+#'
+#' From \url{http://stackoverflow.com/a/25077140}
+#'
+#' @noRd
+email_regex <-
+  function()
+    "^[_a-z0-9-]+(\\.[_a-z0-9-]+)*@[a-z0-9-]+(\\.[a-z0-9-]+)*(\\.[a-z]{2,4})$"
+

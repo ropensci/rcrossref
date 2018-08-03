@@ -24,7 +24,7 @@ R interface to various CrossRef APIs
 ## CrossRef documentation
 
 * Crossref API: [https://github.com/CrossRef/rest-api-doc/blob/master/rest_api.md](https://github.com/CrossRef/rest-api-doc/blob/master/rest_api.md)
-* Crossref [metadata search API](http://search.labs.crossref.org/)
+* Crossref metadata search API (http://search.labs.crossref.org/)
 * CrossRef [DOI Content Negotiation](http://citation.crosscite.org/docs.html)
 * Text and Data Mining [TDM](http://tdmsupport.crossref.org/)
 
@@ -196,7 +196,7 @@ for text mining.
 * Please [report any issues or bugs](https://github.com/ropensci/rcrossref/issues).
 * License: MIT
 * Get citation information for `rcrossref` in R doing `citation(package = 'rcrossref')`
-* Please note that this project is released with a [Contributor Code of Conduct](CONDUCT.md). By participating in this project you agree to abide by its terms.
+* Please note that this project is released with a [Contributor Code of Conduct](CODE_OF_CONDUCT.md). By participating in this project you agree to abide by its terms.
 
 ---
 

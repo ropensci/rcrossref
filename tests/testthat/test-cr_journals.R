@@ -45,7 +45,7 @@ test_that("cr_journals warns correctly", {
   skip_on_cran()
 
   expect_warning(cr_journals(issn = c('blblbl', '1932-6203')),
-                 regexp = "Resource not found", all = TRUE)
+                 regexp = "Resource not found")
   expect_equal(NROW(suppressWarnings(cr_journals(issn = c('blblbl', '1932-6203')))$data), 1)
   expect_is(suppressWarnings(cr_journals(issn = c('blblbl', '1932-6203'))), "list")
 })
@@ -54,8 +54,22 @@ test_that("ISSNs that used to fail badly - should fail better now", {
   skip_on_cran()
 
   expect_warning(cr_journals("0413-6597"), "Resource not found")
-  expect_warning(cr_journals(c('1932-6203', '1803-2427', "0413-6597")), "Resource not found")
-  expect_equal(NROW(suppressMessages(suppressWarnings(cr_journals(c('1932-6203', '1803-2427', "0413-6597"))))$data), 2)
+  expect_warning(cr_journals(c('1932-6203', '1803-2427', "0413-6597")), 
+    "Resource not found")
+  expect_equal(
+    NROW(
+      suppressMessages(
+        suppressWarnings(
+          cr_journals(c('1932-6203', '1803-2427', "0413-6597"))))$data), 2)
+})
+
+test_that("ISSNs that fail, and works=TRUE", {
+  skip_on_cran()
+
+  expect_warning(cr_journals("0074-7742", works = TRUE), 
+    "Resource not found")
+  expect_warning(cr_journals(c("0074-7742", "1574-6941"), works = TRUE), 
+    "Resource not found")
 })
 
 Sys.sleep(2)

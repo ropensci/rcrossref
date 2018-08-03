@@ -20,7 +20,7 @@ test_that("cr_members returns", {
   expect_is(b$meta, "data.frame")
   expect_is(b$data, "data.frame")
   expect_is(b$data, "tbl_df")
-  expect_is(b$data$URL, "character")
+  expect_is(b$data$url, "character")
 
   expect_is(c, "list")
   expect_is(d, "list")
@@ -43,11 +43,11 @@ test_that("cr_members fails correctly", {
   expect_warning(
     cr_members(
       member_ids=c(323234343434, 3434343434), works=TRUE, facet=TRUE),
-    "java.lang.NumberFormatException")
+    "java.lang.NumberFormatException: For input string:")
   expect_warning(
     cr_members(
       member_ids=c(323234343434,3434343434,98), works=TRUE, facet=TRUE),
-    "java.lang.NumberFormatException")
+    "java.lang.NumberFormatException: For input string:")
 
   # fails due to facet not supported
   expect_warning(cr_members(facet = TRUE),

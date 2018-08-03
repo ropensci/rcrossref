@@ -9,7 +9,7 @@ knitr::opts_chunk$set(
   comment = "#>",
   warning = FALSE,
   message = FALSE,
-  cache = TRUE
+  cache = FALSE
 )
 ```
 

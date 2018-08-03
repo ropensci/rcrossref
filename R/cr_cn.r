@@ -73,24 +73,17 @@
 #'
 #' # Using DataCite DOIs
 #' ## some formats don't work
-#' # cr_cn("10.5284/1011335", "text")
 #' # cr_cn("10.5284/1011335", "crossref-xml")
 #' # cr_cn("10.5284/1011335", "crossref-tdm")
 #' ## But most do work
+#' cr_cn("10.5284/1011335", "text")
 #' cr_cn("10.5284/1011335", "datacite-xml")
 #' cr_cn("10.5284/1011335", "rdf-xml")
-#' # cr_cn("10.5284/1011335", "turtle")
+#' cr_cn("10.5284/1011335", "turtle")
 #' cr_cn("10.5284/1011335", "citeproc-json-ish")
 #' cr_cn("10.5284/1011335", "ris")
 #' cr_cn("10.5284/1011335", "bibtex")
 #' cr_cn("10.5284/1011335", "bibentry")
-#'
-#' dois <- c('10.5167/UZH-30455','10.5167/UZH-49216','10.5167/UZH-503',
-#'           '10.5167/UZH-38402','10.5167/UZH-41217')
-#' cat(cr_cn(dois[1]))
-#' cat(cr_cn(dois[2]))
-#' cat(cr_cn(dois[3]))
-#' cat(cr_cn(dois[4]))
 #'
 #' # Using Medra DOIs
 #' cr_cn("10.3233/ISU-150780", "onix-xml")
@@ -120,7 +113,8 @@
       agency_id <- "crossref"
     }
 
-    url <- paste0("http://data.", agency_id, ".org/", doi)
+    # url <- paste0("https://data.", agency_id, ".org/", doi)
+    url <- file.path("https://doi.org", doi)
 
     # check cn data provider
     # if (!format %in% supported_cn_types[[agency_id]]) {
@@ -150,7 +144,7 @@
     }
     if (format == "citeproc-json") {
       cli <- crul::HttpClient$new(
-        url = file.path("http://api.crossref.org/works", doi, type),
+        url = file.path("https://api.crossref.org/works", doi, type),
         headers = list(
           `User-Agent` = rcrossref_ua(), `X-USER-AGENT` = rcrossref_ua()
         )
@@ -234,9 +228,19 @@
 parse_bibtex <- function(x){
   x <- gsub("@[Dd]ata", "@Misc", x)
   writeLines(x, "tmpscratch.bib")
-  output <- read.bib("tmpscratch.bib")
+  # output <- read.bib("tmpscratch.bib")
+  out <- bibtex::do_read_bib("tmpscratch.bib", 
+    srcfile = srcfile("tmpscratch.bib"))
   unlink("tmpscratch.bib")
-  output
+  if (length(out) > 0) {
+    out <- out[[1]]
+    atts <- attributes(out)
+    attsuse <- atts[c('key', 'entry')]
+    out <- c(as.list(out), attsuse)
+  } else {
+    out <- list()
+  }
+  return(out)
 }
 
 warn_status <- function(x) {

@@ -1,13 +1,14 @@
 #' Search CrossRef members
 #'
 #' @export
-#'
+#' @family crossref
 #' @param member_ids One or more member ids. See examples. ALternatively,
 #' you can query for them using the query parameter.
 #' @template args
 #' @template moreargs
 #' @template cursor_args
 #' @template field_queries
+#' @template sorting
 #' @param facet (logical) Include facet results. Boolean or string with
 #' field to facet on. Valid fields are *, affiliation, funder-name,
 #' funder-doi, orcid, container-title, assertion, archive, update-type,
@@ -62,13 +63,18 @@
 #' # field queries
 #' ## query.container-title
 #' cr_members(98, works = TRUE, flq = c(`query.container-title` = 'Ecology'))
+#' 
+#' 
+#' # select only certain fields to return
+#' res <- cr_members(98, works = TRUE, select = c('DOI', 'title'))
+#' names(res$data)
 #' }
 `cr_members` <- function(member_ids = NULL, query = NULL, filter = NULL, offset = NULL,
   limit = NULL, sample = NULL, sort = NULL, order = NULL, facet=FALSE, works = FALSE,
-  cursor = NULL, cursor_max = 5000, .progress="none", flq = NULL, ...) {
+  cursor = NULL, cursor_max = 5000, .progress="none", flq = NULL, select = NULL, ...) {
 
   args <- prep_args(query, filter, offset, limit, sample, sort, order,
-                    facet, cursor, flq)
+                    facet, cursor, flq, select)
   if (length(member_ids) > 1) {
     res <- llply(member_ids, member_GET, args = args, works = works,
                  cursor = cursor, cursor_max = cursor_max, ...,
@@ -127,10 +133,10 @@
 `cr_members_` <- function(member_ids = NULL, query = NULL, filter = NULL,
   offset = NULL, limit = NULL, sample = NULL, sort = NULL, order = NULL,
   facet=FALSE, works = FALSE, cursor = NULL, cursor_max = 5000,
-  .progress="none", parse=FALSE, flq = NULL, ...) {
+  .progress="none", parse=FALSE, flq = NULL, select = NULL, ...) {
 
   args <- prep_args(query, filter, offset, limit, sample, sort,
-                    order, facet, cursor, flq)
+                    order, facet, cursor, flq, select)
   if (length(member_ids) > 1) {
     llply(member_ids, member_GET_, args = args, works = works,
           cursor = cursor, cursor_max = cursor_max, parse = parse,

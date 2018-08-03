@@ -3,7 +3,7 @@
 #' @section Crossref APIs:
 #' rcrossref interacts with the main Crossref metadata search API at
 #' <https://github.com/CrossRef/rest-api-doc/blob/master/rest_api.md>,
-#' the old metadata search API at <http://search.labs.crossref.org/>, their
+#' the old metadata search API at http://search.labs.crossref.org/, their
 #' DOI Content Negotiation service at
 #' <http://citation.crosscite.org/docs.html>, and
 #' the \emph{Text and Data Mining} project <http://tdmsupport.crossref.org/>
@@ -66,6 +66,26 @@
 #' citations will be added to a file called `crossref.bib`. New citations
 #' will be appended to that file. Addin authored by Hao Zhu
 #' <https://github.com/haozhu233>
+#' 
+#' @section Be nice and share your email with Crossref:
+#' The Crossref team encourage requests with appropriate contact information 
+#' and will forward you to a dedicated API cluster for improved performance when 
+#' you share your email address with them.
+#' <https://github.com/CrossRef/rest-api-doc#good-manners--more-reliable-service>
+#' 
+#' To pass your email address to Crossref via this client, simply store it 
+#' as environment variable in `.Renviron` like this:
+#' 
+#' 1. Open file:
+#' `file.edit("~/.Renviron")`
+#' 
+#' 2. Add email address to be shared with Crossref
+#' `crossref_email = name@example.com`
+#' 
+#' 3. Save the file and restart your R session
+#' 
+#' Don't wanna share your email any longer? Simply delete it from 
+#' `~/.Renviron`
 #'
 #' @importFrom methods as
 #' @importFrom utils modifyList packageVersion
@@ -75,10 +95,13 @@
 #' @importFrom bibtex read.bib
 #' @importFrom jsonlite toJSON fromJSON
 #' @importFrom plyr llply ldply
-#' @importFrom shiny h4 fillRow htmlOutput renderUI textInput actionButton req
-#' HTML observeEvent updateTextInput stopApp dialogViewer runGadget uiOutput
-#' reactiveValues
-#' @importFrom miniUI miniPage gadgetTitleBar miniContentPanel
+#' @importFrom shiny h4 h5 fillRow htmlOutput renderUI textInput actionButton req
+#' HTML observeEvent stopApp dialogViewer runGadget uiOutput actionLink icon
+#' reactiveValues reactive includeCSS includeScript tags img addResourcePath
+#' radioButtons textOutput renderText shinyApp strong updateActionButton
+#' updateTextInput
+#' @import miniUI
+#' @importFrom DT datatable dataTableOutput renderDataTable
 #' @importFrom stringr str_detect str_match
 #' @name rcrossref-package
 #' @aliases rcrossref

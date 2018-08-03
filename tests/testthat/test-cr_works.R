@@ -8,9 +8,11 @@ test_that("cr_works returns", {
   b <- cr_works(query="renear+-ontologies")
   c <- cr_works(query="global state", filter=c(has_orcid=TRUE), limit=3)
   d <- cr_works(filter=c(has_full_text = TRUE))
+  Sys.sleep(1)
   e <- cr_works(dois=c('10.1007/12080.1874-1746','10.1007/10452.1573-5125', '10.1111/(issn)1442-9993'))
   f <- cr_works(query="NSF", facet=TRUE, limit=0)
   g <- cr_works(sample=1)
+  Sys.sleep(1)
   h <- cr_works(query="NSF", facet=TRUE)
   i <- suppressWarnings(cr_works(dois=c('blblbl', '10.1038/nnano.2014.279')))
 
@@ -28,7 +30,7 @@ test_that("cr_works returns", {
   expect_is(a$meta, "data.frame")
   expect_is(a$data, "data.frame")
   expect_is(a$data, "tbl_df")
-  expect_is(a$data$URL, "character")
+  expect_is(a$data$url, "character")
   expect_equal(a$facets, NULL)
 
   expect_is(h, "list")
@@ -78,7 +80,7 @@ test_that("cr_works - parses links data correctly", {
   expect_is(aa, "list")
   expect_is(bb, "list")
 
-  expect_equal(length(Filter(Negate(is.null), aa$data$link)), 0)
+  expect_equal(length(Filter(Negate(is.null), suppressWarnings(aa$data$link))), 0)
   expect_gt(length(Filter(Negate(is.null), bb$data$link)), 0)
 
   expect_is(bb$data$link[[1]], "data.frame")
@@ -109,6 +111,8 @@ test_that("cr_works - parses funders correctly", {
   expect_true(any(grepl("funder", names(cc$data))))
   expect_named(cc$data$funder[[1]], c("name", "award"))
 
+  Sys.sleep(1)
+
   doi <- "10.1145/2834800.2834802"
   dd <- cr_works(doi)
   expect_true(any(grepl("funder", names(dd$data))))
@@ -126,6 +130,8 @@ test_that("cr_works - parses funders correctly", {
   expect_true(any(grepl("funder", names(ee$data))))
   expect_named(ee$data$funder[[1]],
                c("DOI", "name", "doi.asserted.by", "award"))
+
+  Sys.sleep(1)
 
   doi <- "10.1016/j.pediatrneurol.2015.06.002"
   ff <- cr_works(doi)
@@ -152,7 +158,41 @@ test_that("cr_works - parses affiliation inside authors correctly", {
   doi <- "10.4018/978-1-4666-9588-7.les2"
   aa <- cr_works(doi)
   expect_true(any(grepl("author", names(aa$data))))
-  expect_named(aa$data$author[[1]], c("given", "family", "affiliation.name"))
+  expect_named(aa$data$author[[1]], c("given", "family", "sequence", "affiliation.name"))
+})
+
+test_that("cr_works - select works", {
+  skip_on_cran()
+
+  aa <- cr_works(query = "science", select = c('DOI', 'title'))
+  expect_named(aa$data, c("doi", "title"))
+})
+
+Sys.sleep(1)
+
+test_that("cr_works - email works", {
+          skip_on_cran()
+  
+          Sys.setenv("crossref_email" = "name@example.com")
+          a <- cr_works(query="NSF")
+          expect_is(a, "list")
+})
+
+Sys.sleep(1)
+
+test_that("cr_works - email is validated", {
+  skip_on_cran()
+  
+  Sys.setenv("crossref_email" = "name@example")
+  expect_error(cr_works(query="NSF"))
+})
+
+test_that("cr_works - email NULL works", {
+  skip_on_cran()
+  
+  Sys.setenv("crossref_email" = "")
+  a <- cr_works(query="NSF")
+  expect_is(a, "list")
 })
 
 Sys.sleep(2)

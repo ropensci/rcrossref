@@ -1,3 +1,25 @@
+rcrossref 0.8.0
+===============
+
+### NEW FEATURES
+
+* Include documentation and internals to support passing a user 
+supplied email to Crossref to get put into higher rate limit
+pool (#145) thanks @njahn82
+* Functions that operate on the `/works` route gain a `select`
+parameter to select certain fields to return (#146)
+
+### MINOR IMPROVEMENTS
+
+* Updated docs for additional options for the `sort` parameter (#142)
+* Updated docs for additional options for doing field queries (the 
+`flq` parameter) (#143)
+* Filters: New filters added to the package, and some removed 
+(e.g, `publisher-name`). You can see the filters with the 
+functions `filter_details`/`filter_names`. Beware, some filters
+error sometimes with the Crossref API - they may not work, but they may, let me know at <https://github.com/ropensci/rcrossref/issues> or let Crossref know at <https://github.com/CrossRef/rest-api-doc/issues> (#136) (#139) (#141)
+
+
 rcrossref 0.7.0
 ===============
 
@@ -178,7 +200,7 @@ rcrossref 0.3.4
 ### NEW FEATURES
 
 * Added new function `crosscite()` to work with the
-[Citeproc service](http://crosscite.org/citeproc/) (#60)
+Citeproc service (http://crosscite.org/citeproc/) (#60)
 
 ### BUG FIXES
 

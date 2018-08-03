@@ -12,6 +12,9 @@ inst/vign/cache/
 README.Rmd
 cran-comments.md
 ^\.httr-oauth$
-^CONDUCT\.md$
+^CODE_OF_CONDUCT\.md$
 ^cran-comments\.md$
 revdep
+.github
+tmpscratch*
+^codemeta\.json$
