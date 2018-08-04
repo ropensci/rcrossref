@@ -65,5 +65,22 @@ test_that("cr_cn checks if doi agency supports format", {
   )
 })
 
+test_that("cr_cn works with different URLs", {
+  skip_on_cran()
+
+  expect_match(
+    cr_cn("10.1126/science.169.3946.635", "text", url = "https://data.datacite.org"),
+    "Frank"
+  )
+  expect_match(
+    cr_cn("10.1126/science.169.3946.635", "text", url = "http://dx.doi.org"),
+    "Frank"
+  )
+  expect_match(
+    cr_cn("10.5284/1011335", url = "https://citation.crosscite.org/format"),
+    "Archaeology"
+  )
+})
+
 Sys.sleep(2)
 
