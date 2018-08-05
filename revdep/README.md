@@ -1,55 +1,36 @@
-# Setup
+# Platform
 
-## Platform
+|field    |value                                       |
+|:--------|:-------------------------------------------|
+|version  |R version 3.5.1 Patched (2018-07-18 r74978) |
+|os       |macOS High Sierra 10.13.6                   |
+|system   |x86_64, darwin15.6.0                        |
+|ui       |X11                                         |
+|language |(EN)                                        |
+|collate  |en_US.UTF-8                                 |
+|tz       |US/Pacific                                  |
+|date     |2018-08-05                                  |
 
-|setting  |value                                  |
-|:--------|:--------------------------------------|
-|version  |R version 3.4.3 RC (2017-11-23 r73782) |
-|system   |x86_64, darwin15.6.0                   |
-|ui       |X11                                    |
-|language |(EN)                                   |
-|collate  |en_US.UTF-8                            |
-|tz       |America/Los_Angeles                    |
-|date     |2017-12-03                             |
+# Dependencies
 
-## Packages
+|package   |old   |new        |Δ  |
+|:---------|:-----|:----------|:--|
+|rcrossref |0.8.0 |0.8.3.9991 |*  |
 
-|package   |*  |version    |date       |source                              |
-|:---------|:--|:----------|:----------|:-----------------------------------|
-|rcrossref |   |0.7.0.9419 |2017-12-03 |Github (ropensci/rcrossref@658c826) |
+# Revdeps
 
-# Check results
+## Broken (1)
 
-4 packages
+|package                      |version |error |warning |note |
+|:----------------------------|:-------|:-----|:-------|:----|
+|[roadoi](problems.md#roadoi) |0.5.1   |      |__+1__  |     |
 
-|package  |version | errors| warnings| notes|
-|:--------|:-------|------:|--------:|-----:|
-|crminer  |0.1.4   |      0|        0|     0|
-|fulltext |0.1.8   |      0|        0|     0|
-|rcoreoa  |0.1.0   |      0|        0|     0|
-|roadoi   |0.4.1   |      0|        0|     0|
+## All (4)
 
-## crminer (0.1.4)
-Maintainer: Scott Chamberlain <myrmecocystus+r@gmail.com>  
-Bug reports: https://github.com/ropensci/crminer/issues
-
-0 errors | 0 warnings | 0 notes
-
-## fulltext (0.1.8)
-Maintainer: Scott Chamberlain <myrmecocystus@gmail.com>  
-Bug reports: https://github.com/ropensci/fulltext/issues
-
-0 errors | 0 warnings | 0 notes
-
-## rcoreoa (0.1.0)
-Maintainer: Scott Chamberlain <myrmecocystus+r@gmail.com>  
-Bug reports: https://github.com/ropensci/rcoreoa/issues
-
-0 errors | 0 warnings | 0 notes
-
-## roadoi (0.4.1)
-Maintainer: Najko Jahn <najko.jahn@gmail.com>  
-Bug reports: https://github.com/ropensci/roadoi/issues
-
-0 errors | 0 warnings | 0 notes
+|package                      |version |error |warning |note |
+|:----------------------------|:-------|:-----|:-------|:----|
+|crminer                      |0.1.4   |      |        |     |
+|fulltext                     |1.0.1   |      |        |     |
+|rcoreoa                      |0.1.0   |      |        |     |
+|[roadoi](problems.md#roadoi) |0.5.1   |      |__+1__  |     |
 
