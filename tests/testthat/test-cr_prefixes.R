@@ -52,7 +52,7 @@ test_that("cr_prefixes fails correctly", {
   # prefix not found
   expect_warning(
     cr_prefixes_(prefixes = c("10.1038", "10.1684", "10.1109")),
-    "404: Resource not found. - \\(prefixes/10.1684\\)"
+    "/prefixes/10.1684 - Resource not found."
   )
 })
 
