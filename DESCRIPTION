@@ -19,6 +19,7 @@ BugReports: https://github.com/ropensci/rcrossref/issues
 VignetteBuilder: knitr
 Roxygen: list(markdown = TRUE)
 Encoding: UTF-8
+Language: en-US
 Imports:
     methods,
     utils,
@@ -39,5 +40,5 @@ Suggests:
     knitr
 RoxygenNote: 6.1.0
 X-schema.org-applicationCategory: Literature
-X-schema.org-keywords: text-ming, literature, pdf, xml, publications, citations, full-text, TDM
+X-schema.org-keywords: text-ming, literature, pdf, xml, publications, citations, full-text, TDM, Crossref
 X-schema.org-isPartOf: https://ropensci.org
