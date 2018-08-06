@@ -149,7 +149,7 @@ Get some DOIs for articles that provide full text, and that have `CC-BY 3.0` lic
 out <-
   cr_works(filter = list(has_full_text = TRUE,
     license_url = "http://creativecommons.org/licenses/by/3.0/"))
-(dois <- out$data$DOI)
+(dois <- out$data$doi)
 ```
 
 From the output of `cr_works` we can get full text links if we know where to look:
@@ -161,9 +161,7 @@ do.call("rbind", out$data$link)
 From there, you can grab your full text, but because most links require
 authentication, enter another package: `crminer`.
 
-### Get full text
-
-You'll need package `crminer` for the rest
+You'll need package `crminer` for the rest of the work.
 
 Onc we have DOIs, get URLs to full text content
 
@@ -175,17 +173,17 @@ if (!requireNamespace("crminer")) {
 
 ```{r}
 library(crminer)
-(links <- crm_links(dois[1]))
+(links <- crm_links("10.1155/2014/128505"))
 ```
 
 Then use those URLs to get full text
 
 ```{r eval=FALSE}
 crm_pdf(links)
-#> <document>/Users/sacmac/Library/Caches/crminer/174726.pdf
-#>   Pages: 7
-#>   No. characters: 36232
-#>   Created: 2014-03-26
+#> <document>/Users/sckott/Library/Caches/R/crminer/128505.pdf
+#>   Pages: 1
+#>   No. characters: 1565
+#>   Created: 2014-09-15
 ```
 
 See also [fulltext](https://github.com/ropensci/fulltext) for getting scholarly text 
@@ -205,4 +203,4 @@ This package is part of a richer suite called [fulltext](https://github.com/rope
 
 ---
 
-[![rofooter](http://ropensci.org/public_images/github_footer.png)](http://ropensci.org)
+[![rofooter](https://ropensci.org/public_images/github_footer.png)](https://ropensci.org)
