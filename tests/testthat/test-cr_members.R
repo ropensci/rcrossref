@@ -51,7 +51,7 @@ test_that("cr_members fails correctly", {
 
   # fails due to facet not supported
   expect_warning(cr_members(facet = TRUE),
-               "This route does not support facet - \\(members\\)")
+               "/members - This route does not support facet")
 })
 
 Sys.sleep(2)
