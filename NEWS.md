@@ -1,3 +1,27 @@
+rcrossref 0.8.4
+===============
+
+### NEW FEATURES
+
+* The RStudio Addin now includes ability to search by article metadata, e.g., title (#148) (#152) 
+* you can now set a different base url for `cr_cn()`  (#168)
+
+### MINOR IMPROVEMENTS
+
+* better behavior for `cr_cn()` when bibentry not valid, that is not parseable. before the package we use to parse `bibtex` would stop on invalid bibentry data, but now we get around the invalid bits and give back the bibentry (#147)
+* updated and improved documentation for filters (#161)
+* improved description of the `dois` parameter (#162) thanks @ms609
+* Much improved error behavior for `cr_*` functions. We now give errors like `404 (client error): /works/blblbl - Resource not found.`, which includes HTTP status code, major class of error (success, redirect, client, server), the route requested, and the error message (#163) 
+
+### BUG FIXES
+
+* fixed bug in `cr_works()` in which field queries should have been possible for title and affilitation, but were not. Fixed now.  (#149)
+* `cr_journals()` was not correctly parsing data when more than 1 ISSN given and `works` set to `TRUE`, fixed now (#156)
+* `cr_journals()` was not correctly parsing data when no ISSN found and `works` set to `TRUE`, fixed now (#150)
+* `cr_journals()` was not correctly handling queries with multiple ISSN's and `works` set to `FALSE`, fixed now (#151)
+* fixed bug in `cr_works()`, and any other `cr_*` function that set `works=TRUE`. the `license` slot can have more than 1 result, and we were only giving the first back. fixed the parsing on this to give back all license results (#170)
+
+
 rcrossref 0.8.0
 ===============
 
