@@ -235,7 +235,6 @@
 parse_bibtex <- function(x){
   x <- gsub("@[Dd]ata", "@Misc", x)
   writeLines(x, "tmpscratch.bib")
-  # output <- read.bib("tmpscratch.bib")
   out <- bibtex::do_read_bib("tmpscratch.bib", 
     srcfile = srcfile("tmpscratch.bib"))
   unlink("tmpscratch.bib")
