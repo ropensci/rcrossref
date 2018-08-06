@@ -17,7 +17,9 @@ cr_works_(dois = NULL, query = NULL, filter = NULL, offset = NULL,
   ...)
 }
 \arguments{
-\item{dois}{Search by a single DOI or many DOIs.  Note that using this parameter at the same time as the \code{query}, \code{limit}, \code{select} or \code{flq} parameter will result in an error.}
+\item{dois}{Search by a single DOI or many DOIs.  Note that using this
+parameter at the same time as the \code{query}, \code{limit}, \code{select} or \code{flq}
+parameter will result in an error.}
 
 \item{query}{Query terms}
 
