@@ -1,11 +1,107 @@
+parsename <- function(name, isRegx = TRUE) {
+  if (isRegx) {
+    paste0("\\n\\t", name)
+  } else{
+    paste0("\n\t", name)
+  }
+}
+
+extract_bib <- function(bib, name, regex) {
+  regex_full <- paste0(parsename(name), "\\s=\\s", regex)
+  out <- str_match(bib, regex_full)
+  return(out[2])
+}
+
+correct_bib <- function(bib) {
+  out <- bib
+  if (!str_detect(bib, parsename("author"))) {
+    title <- "Untitle"
+    if (str_detect(bib, parsename("title"))) {
+      title <- extract_bib(bib, "title", "[^\\w]*(\\w*)")
+    }
+    original <- paste0("\\{.*,", parsename("doi"))
+    if (str_detect(bib, parsename("year"))) {
+      year <- extract_bib(bib, "year", "(\\d*)")
+      new <-
+        paste0("\\{", title, "_", year, ",", parsename("doi", F))
+    } else{
+      new <- paste0("\\{", title, ",", parsename("doi", F))
+    }
+    out <- sub(original, new, bib)
+  }
+  return(out)
+}
+
 crAddins <- function() {
+  current_yr <- as.numeric(format(Sys.Date(), "%Y"))
+  types <- cr_types()$data
+  types <- sort(setNames(types$id, types$label))
+  types <- c("Any Type" = "*", types)
   ui <- miniPage(
     gadgetTitleBar("Add Crossref Citations"),
     miniTabstripPanel(
       miniTabPanel(
         "Search Metadata", icon = icon("search"),
         miniContentPanel(
-          uiOutput("search_input"),
+          fillRow(
+            flex = c(8, 1, 2, 1), height = "50px",
+            textInput(
+              "search_query", label = NULL, width = "100%",
+              placeholder = "Search, Select & Add"
+            ),
+            h5("Sort:", class = "text-center"),
+            selectInput(
+              "search_sort",
+              label = NULL, width = "95%",
+              choices = c(
+                "Relevance" = "relevance",
+                "Published" = "published",
+                "Recent Changed" = "updated",
+                "Referenced" = "is-referenced-by-count"
+              )
+            ),
+            selectInput(
+              "search_order",
+              label = NULL, width = "95%",
+              choices = c("▲" = "asc", "▼" = "desc"),
+              selected = "desc"
+            )
+          ),
+          tags$div(
+            style = "margin-top: -10px;",
+            fillRow(
+              flex = c(1, 1, 1, 1, 2), height = "60px", 
+              textInput("search_author", label = "Author", width = "95%"),
+              textInput("search_container", label = "Journal/Container", 
+                        width = "95%"),
+              selectInput("search_type", label = "Type", width = "95%",
+                          choices = types, selected = "journal-article"),
+              selectInput("search_date1", label = "Since", width = "95%",
+                          choices = c(
+                            "Any time" = "any", 
+                            seq(current_yr, current_yr - 4), 
+                            "Custom" = "custom"
+                          )),
+              conditionalPanel(
+                condition = "input.search_date1 == 'custom'",
+                dateRangeInput("search_date2", label = "Select Range",
+                               width = "95%", startview = "decade")
+              )
+            )
+          ),
+          conditionalPanel(
+            condition = "input.search_query == ''",
+            hr(),
+            h4("Tips:"),
+            p("1. The crossref API doesn't support exact match right now. ", 
+              "In fact, it returns all results based on each word being ",
+              'searched against. For example, "John Smith" in the author ',
+              'field will list out all results matches "John" OR "Smith", ',
+              'instead of searching for "John Smith" as a whole name.'),
+            p("2. If you want to find all publications by a person, try to ",
+              "put in his/her name in Author and put a space in the search box.")
+          ),
+          
           uiOutput("selected_item"),
           DT::dataTableOutput("search_table")
         )
@@ -32,22 +128,40 @@ crAddins <- function() {
   )
   
   server <- function(input, output, session) {
-    # Search panel
-    output$search_input <- renderUI({
-      textInput(
-        "search_query",
-        label = NULL,
-        placeholder = "1. Search 2. Select 3. Insert citation",
-        width = "100%"
-      )
-    })
-    
     search_results <- reactive({
       req(input$search_query)
-      if (nchar(input$search_query) < 2) return(NULL)
+      search_flq <- NULL
+      if (input$search_container != "") {
+        search_flq <- c(search_flq, 
+                        `query.container-title` = input$search_container)
+      }
+      if (input$search_author != "") {
+        search_flq <- c(search_flq, `query.author` = input$search_author)
+      }
+      
+      search_filter <- NULL
+      if (input$search_date1 != "any") {
+        if (input$search_date1 == "custom") {
+          s_dates <- as.character(input$search_date2)
+          if (s_dates[1] != s_dates[2] & input$search_date2[1] != Sys.Date()) {
+            search_filter <- c(
+              from_pub_date = s_dates[1],
+              until_pub_date = s_dates[2]
+            )
+          }
+        } else {
+          search_filter <- c(from_pub_date = input$search_date1)
+        }
+      }
+      
       out <- cr_works(query = input$search_query, limit = 100,
-                      select = c("DOI","type", "title", 
-                                 "author","issued", "publisher"))
+                      select = c("DOI","type", "title", "URL",
+                                 "author","issued", "publisher", 
+                                 "container-title"),
+                      sort = input$search_sort,
+                      order = input$search_order,
+                      flq = search_flq,
+                      filter = search_filter)
       return(out$data)
     })
     
@@ -66,11 +180,14 @@ crAddins <- function() {
       req(input$search_table_rows_selected)
       selected_entry <- search_results()[input$search_table_rows_selected, ]
       fillRow(
-        flex = c(8, 2), height = "85px",
+        flex = c(8, 2), height = "120px",
         tags$div(
-          style = "border: 1px solid #ddd; border-radius: 5px; padding: 5px; overflow-y: scroll; height: 85px; ",
+          style = "border: 1px solid #ddd; border-radius: 5px; padding: 5px; overflow-y: scroll; height: 120px; ",
           h5(selected_entry$title),
-          tags$div(strong("DOI: "), selected_entry$doi),
+          tags$div(strong("Link: "), 
+                   tags$a(selected_entry$doi, 
+                          href = selected_entry$url,
+                          target = "_blank")),
           tags$div(
             strong("Author(s): "), 
             ifelse(
@@ -79,16 +196,24 @@ crAddins <- function() {
                             selected_entry$author[[1]]$family), collapse = ", ")
             )
           ),
-          tags$div(strong("Publisher: "), selected_entry$publisher),
+          tags$div(strong("Journal/Container: "), selected_entry$container.title),
           tags$div(strong("Issued: "), selected_entry$issued),
           tags$div(strong("Type: "), selected_entry$type)
         ),
-        actionButton(
-          "add_citations_article",
-          label = "Add to My Citations",
-          width = "100%",
-          class = "btn-primary",
-          style = "margin-top: 25px; margin-left: 5px; "
+        tags$div(
+          style = "margin-left: 5px;",
+          textInput(
+            "save_to",
+            label = "Save to",
+            width = "95%",
+            value = "references.bib"
+          ),
+          actionButton(
+            "add_citations_article",
+            label = "Add to My Citations",
+            width = "95%",
+            class = "btn-primary"
+          )
         )
       )
     })
@@ -100,12 +225,11 @@ crAddins <- function() {
           silent = TRUE)
       )
       if (class(bib_to_write) != "try-error") {
-        if (!"crossref.bib" %in% list.files()) {
-          file.create(
-            "crossref.bib")
+        if (!input$save_to %in% list.files()) {
+          file.create(input$save_to)
         }
         bib_to_write <- correct_bib(bib_to_write)
-        write(paste0(bib_to_write, "\n"), "crossref.bib", append = T)
+        write(paste0(bib_to_write, "\n"), input$save_to, append = T)
         updateActionButton(session, "add_citations_article", 
                            label = "Added", icon = icon("check"))
       } 
@@ -208,52 +332,18 @@ crAddins <- function() {
       }
     }
     
-    parsename <- function(name, isRegx = TRUE) {
-      if (isRegx) {
-        paste0("\\n\\t", name)
-      } else{
-        paste0("\n\t", name)
-      }
-    }
-    
-    extract_bib <- function(bib, name, regex) {
-      regex_full <- paste0(parsename(name), "\\s=\\s", regex)
-      out <- str_match(bib, regex_full)
-      return(out[2])
-    }
-    
-    correct_bib <- function(bib) {
-      out <- bib
-      if (!str_detect(bib, parsename("author"))) {
-        title <- "Untitle"
-        if (str_detect(bib, parsename("title"))) {
-          title <- extract_bib(bib, "title", "[^\\w]*(\\w*)")
-        }
-        original <- paste0("\\{.*,", parsename("doi"))
-        if (str_detect(bib, parsename("year"))) {
-          year <- extract_bib(bib, "year", "(\\d*)")
-          new <-
-            paste0("\\{", title, "_", year, ",", parsename("doi", F))
-        } else{
-          new <- paste0("\\{", title, ",", parsename("doi", F))
-        }
-        out <- sub(original, new, bib)
-      }
-      return(out)
-    }
-    
     observeEvent(input$add_citations, {
       bib_to_write <-
         suppressWarnings(try(cr_cn(dois = input$entered_dois),
                              silent = TRUE)
         )
       if (class(bib_to_write) != "try-error") {
-        if (!"crossref.bib" %in% list.files()) {
+        if (!input$save_to %in% list.files()) {
           file.create(
-            "crossref.bib")
+            input$save_to)
         }
         bib_to_write <- correct_bib(bib_to_write)
-        write(paste0(bib_to_write, "\n"), "crossref.bib", append = T)
+        write(paste0(bib_to_write, "\n"), input$save_to, append = T)
         updateTextInput(session, "entered_dois", value = "")
         updateActionButton(session, "add_citations", 
                            label = "Added", icon = icon("check"))

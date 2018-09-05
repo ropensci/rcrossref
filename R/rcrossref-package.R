@@ -99,7 +99,7 @@
 #' HTML observeEvent stopApp dialogViewer runGadget uiOutput actionLink icon
 #' reactiveValues reactive includeCSS includeScript tags img addResourcePath
 #' radioButtons textOutput renderText shinyApp strong updateActionButton
-#' updateTextInput
+#' updateTextInput dateRangeInput selectInput conditionalPanel p hr h6
 #' @import miniUI
 #' @importFrom DT datatable dataTableOutput renderDataTable
 #' @importFrom stringr str_detect str_match
