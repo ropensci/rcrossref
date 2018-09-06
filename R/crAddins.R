@@ -1,42 +1,18 @@
-parsename <- function(name, isRegx = TRUE) {
-  if (isRegx) {
-    paste0("\\n\\t", name)
-  } else{
-    paste0("\n\t", name)
-  }
+check_bib <- function(bib_doi, bibfile) {
+  str_detect(bibfile, paste0("\\{", bib_doi, "\\}"))
 }
 
-extract_bib <- function(bib, name, regex) {
-  regex_full <- paste0(parsename(name), "\\s=\\s", regex)
-  out <- str_match(bib, regex_full)
-  return(out[2])
-}
-
-correct_bib <- function(bib) {
-  out <- bib
-  if (!str_detect(bib, parsename("author"))) {
-    title <- "Untitle"
-    if (str_detect(bib, parsename("title"))) {
-      title <- extract_bib(bib, "title", "[^\\w]*(\\w*)")
-    }
-    original <- paste0("\\{.*,", parsename("doi"))
-    if (str_detect(bib, parsename("year"))) {
-      year <- extract_bib(bib, "year", "(\\d*)")
-      new <-
-        paste0("\\{", title, "_", year, ",", parsename("doi", F))
-    } else{
-      new <- paste0("\\{", title, ",", parsename("doi", F))
-    }
-    out <- sub(original, new, bib)
-  }
-  return(out)
+correct_bib <- function(bib, bib_key, bibfile) {
+  if (!str_detect(bibfile, bib_key)) return(bib)
+  new_key <- paste(bib_key, sample(9999, 1), sep = "_")
+  return(str_replace(bib, bib_key, new_key))
 }
 
 crAddins <- function() {
   current_yr <- as.numeric(format(Sys.Date(), "%Y"))
   types <- cr_types()$data
   types <- sort(setNames(types$id, types$label))
-  types <- c("Any Type" = "*", types)
+  types <- c("Any Type" = "any", types)
   ui <- miniPage(
     gadgetTitleBar("Add Crossref Citations"),
     miniTabstripPanel(
@@ -118,8 +94,18 @@ crAddins <- function() {
           fillRow(
             flex = c(7, 3),
             height = "45px",
-            uiOutput("cr_input"),
-            uiOutput("add_to_my_citations")
+            textInput(
+              "entered_dois",
+              label = NULL,
+              placeholder = "Enter a DOI to get started",
+              width = "95%"
+            ),
+            actionButton(
+              "add_citations",
+              label = "Add to My Citations",
+              width = "95%",
+              class = "btn-primary"
+            )
           ),
           htmlOutput("preview")
         )
@@ -140,17 +126,22 @@ crAddins <- function() {
       }
       
       search_filter <- NULL
+      if (input$search_type != "any") {
+        search_filter <- c(search_filter, type = input$search_type)
+      }
       if (input$search_date1 != "any") {
         if (input$search_date1 == "custom") {
           s_dates <- as.character(input$search_date2)
           if (s_dates[1] != s_dates[2] & input$search_date2[1] != Sys.Date()) {
             search_filter <- c(
+              search_filter, 
               from_pub_date = s_dates[1],
               until_pub_date = s_dates[2]
             )
           }
         } else {
-          search_filter <- c(from_pub_date = input$search_date1)
+          search_filter <- c(search_filter,
+                             from_pub_date = input$search_date1)
         }
       }
       
@@ -219,45 +210,35 @@ crAddins <- function() {
     })
     
     observeEvent(input$add_citations_article, {
-      bib_to_write <- suppressWarnings(
-        try(cr_cn(
-          dois = search_results()$doi[input$search_table_rows_selected]),
-          silent = TRUE)
+      bib_file <- paste(readLines(input$save_to), collapse = " ")
+      new_bib <- cr_cn(
+        dois = search_results()$doi[input$search_table_rows_selected]
       )
-      if (class(bib_to_write) != "try-error") {
-        if (!input$save_to %in% list.files()) {
-          file.create(input$save_to)
-        }
-        bib_to_write <- correct_bib(bib_to_write)
-        write(paste0(bib_to_write, "\n"), input$save_to, append = T)
+      if (is.null(new_bib)) {
         updateActionButton(session, "add_citations_article", 
-                           label = "Added", icon = icon("check"))
+                           label = "Something Wrong", icon = icon("times"))
+      } else {
+        new_bibentry <- cr_cn(
+          dois = search_results()$doi[input$search_table_rows_selected],
+          format = "bibentry"
+        )
+        if (check_bib(new_bibentry$doi, bib_file)) {
+          updateActionButton(session, "add_citations_article", 
+                             label = "Item Exist!", icon = icon("times"))
+        } else {
+          if (!input$save_to %in% list.files()) {
+            file.create(input$save_to)
+          }
+          new_bib <- correct_bib(new_bib, new_bibentry$key, bib_file)
+          write(paste0(new_bib, "\n"), input$save_to, append = T)
+          updateActionButton(session, "add_citations_article", 
+                             label = "Added", icon = icon("check"))
+        }
       } 
     })
     
-    
-    
-    
     # DOI panel
     preview_message <- reactiveValues(added = 0, error = 0)
-    output$cr_input <- renderUI({
-      textInput(
-        "entered_dois",
-        label = NULL,
-        placeholder = "Enter a DOI to get started",
-        width = "98%"
-      )
-    })
-    
-    output$add_to_my_citations <- renderUI({
-      actionButton(
-        "add_citations",
-        label = "Add to My Citations",
-        width = "100%",
-        class = "btn-primary"
-      )
-    })
-    
     
     output$preview <- function() {
       req(input$entered_dois)

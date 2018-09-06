@@ -102,7 +102,7 @@
 #' updateTextInput dateRangeInput selectInput conditionalPanel p hr h6
 #' @import miniUI
 #' @importFrom DT datatable dataTableOutput renderDataTable
-#' @importFrom stringr str_detect str_match
+#' @importFrom stringr str_detect str_match str_replace
 #' @name rcrossref-package
 #' @aliases rcrossref
 #' @docType package
