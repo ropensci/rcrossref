@@ -39,7 +39,7 @@ crAddins <- function() {
             selectInput(
               "search_order",
               label = NULL, width = "95%",
-              choices = c("▲" = "asc", "▼" = "desc"),
+              choices = c("\u25B2" = "asc", "\u25BC" = "desc"),
               selected = "desc"
             )
           ),
