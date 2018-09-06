@@ -34,7 +34,8 @@ Imports:
     shiny,
     miniUI,
     stringr,
-    DT
+    DT,
+    stats
 Suggests:
     roxygen2 (>= 6.1.0),
     testthat,
