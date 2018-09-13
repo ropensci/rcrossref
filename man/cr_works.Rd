@@ -107,6 +107,10 @@ list \code{TRUE}. Default: \code{FALSE}}
 \description{
 Search CrossRef works (articles)
 }
+\note{
+See the "Rate limiting" seciton in \link{rcrossref} to get
+into the "fast lane"
+}
 \section{Beware}{
 
 The API will only work for CrossRef DOIs.

@@ -113,6 +113,10 @@ BEWARE: The API will only work for CrossRef DOIs.
 This function name changing to \code{cr_funders} in the next version -
 both work for now
 }
+\note{
+See the "Rate limiting" seciton in \link{rcrossref} to get
+into the "fast lane"
+}
 \section{NOTE}{
 
 Funders without IDs don't show up on the /funders route, and in this

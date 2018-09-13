@@ -127,6 +127,10 @@ may control multiple owner prefixes, which in turn may control a number of
 DOIs. When looking at works published by a certain organisaton, member
 IDs and the member routes should be used.
 }
+\note{
+See the "Rate limiting" seciton in \link{rcrossref} to get
+into the "fast lane"
+}
 \examples{
 \dontrun{
 cr_prefixes(prefixes="10.1016")

@@ -14,3 +14,6 @@
 #' @param order (character) Sort order, one of 'asc' or 'desc'
 #' @param select (character) One or more field to return (only those fields 
 #' are returned)
+#' 
+#' @note See the "Rate limiting" seciton in [rcrossref] to get 
+#' into the "fast lane"

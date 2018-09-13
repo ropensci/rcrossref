@@ -114,6 +114,10 @@ BEWARE: The API will only work for CrossRef DOIs.
 Note that some parameters are ignored unless \code{works=TRUE}: sample, sort,
 order, filter
 }
+\note{
+See the "Rate limiting" seciton in \link{rcrossref} to get
+into the "fast lane"
+}
 \section{Explanation of some data fields}{
 
 \itemize{
