@@ -46,6 +46,19 @@ Load `rcrossref`
 library('rcrossref')
 ```
 
+### Register for the Polite Pool
+
+If you are intending to access Crossref regularly you will want to send your email address with your queries. This has the advantage that queries are placed in the polite pool of servers. Including your email address is good practice as described in the Crossref documentation under [Good manners](https://github.com/CrossRef/rest-api-doc). The second advantage is that Crossref can contact you if there is a problem with a query.
+
+Details on how to register your email in a call can be found at `?rcrossref-package`. To pass your email address to Crossref, simply store it as an environment variable in .Renviron like this:
+
+Open file: file.edit("~/.Renviron")
+
+Add email address to be shared with Crossref crossref_email= "name@example.com"
+
+Save the file and restart your R session
+
+To stop sharing your email when using rcrossref simply delete it from your .Renviron file. 
 
 ## Citation search
 
@@ -91,7 +104,7 @@ Citation count, using OpenURL
 
 ```r
 cr_citation_count(doi = "10.1371/journal.pone.0042793")
-#> [1] 21
+#> [1] 22
 ```
 
 ## Search Crossref metadata API
@@ -114,10 +127,10 @@ cr_funders(query = "NSF")
 #>  1 50110… Norway    Norsk Sykepl… NSF, Norwegian … http://d… norsk, sykep…
 #>  2 10000… United S… Center for H… CHM, NSF, Unive… http://d… center, for,…
 #>  3 10000… United S… National Sle… NSF              http://d… national, sl…
-#>  4 50110… Sri Lanka National Sci… National Scienc… http://d… national, sc…
-#>  5 10000… Denmark   Statens Natu… Danish National… http://d… statens, nat…
+#>  4 50110… <NA>      National Str… NSF              http://d… national, st…
+#>  5 10000… <NA>      Statens Natu… Danish National… http://d… statens, nat…
 #>  6 10000… United S… Office of th… NSF Office of t… http://d… office, of, …
-#>  7 50110… Australia National Str… NSF              http://d… national, st…
+#>  7 50110… <NA>      National Sci… National Scienc… http://d… national, sc…
 #>  8 10000… United S… National Sci… NSF              http://d… national, sc…
 #>  9 50110… China     National Nat… NSFC-Yunnan Joi… http://d… national, na…
 #> 10 50110… China     National Nat… Natural Science… http://d… national, na…
@@ -149,7 +162,7 @@ cr_agency(dois = '10.13039/100000001')
 cr_works(filter = c(has_orcid = TRUE, from_pub_date = '2004-04-04'), limit = 1)
 #> $meta
 #>   total_results search_terms start_index items_per_page
-#> 1       1614119           NA           0              1
+#> 1       1727969           NA           0              1
 #> 
 #> $data
 #> # A tibble: 1 x 26
@@ -175,8 +188,8 @@ cr_journals(issn = c('1803-2427','2326-4225'))
 #> # A tibble: 2 x 53
 #>   title publisher issn  last_status_che… deposits_abstra… deposits_orcids…
 #>   <chr> <chr>     <chr> <date>           <lgl>            <lgl>           
-#> 1 Jour… "De Gruy… 1805… 2018-08-06       TRUE             FALSE           
-#> 2 Jour… American… 2326… 2018-08-06       FALSE            FALSE           
+#> 1 Jour… "De Gruy… 1805… 2018-09-14       TRUE             FALSE           
+#> 2 Jour… American… 2326… 2018-09-14       FALSE            FALSE           
 #> # ... with 47 more variables: deposits <lgl>,
 #> #   deposits_affiliations_backfile <lgl>,
 #> #   deposits_update_policies_backfile <lgl>,
@@ -219,23 +232,23 @@ cr_journals(issn = c('1803-2427','2326-4225'))
 cr_licenses(query = 'elsevier')
 #> $meta
 #>   total_results search_terms start_index items_per_page
-#> 1            25     elsevier           0             20
+#> 1            29     elsevier           0             20
 #> 
 #> $data
-#> # A tibble: 25 x 2
+#> # A tibble: 29 x 2
 #>    URL                                                      work.count
 #>    <chr>                                                         <int>
 #>  1 http://aspb.org/publications/aspb-journals/open-articles          1
 #>  2 http://creativecommons.org/licenses/by-nc-nd/3.0/                13
-#>  3 http://creativecommons.org/licenses/by-nc-nd/4.0/                 8
+#>  3 http://creativecommons.org/licenses/by-nc-nd/4.0/                 6
 #>  4 http://creativecommons.org/licenses/by-nc/4.0/                    2
 #>  5 http://creativecommons.org/licenses/by/3.0/                       1
 #>  6 http://creativecommons.org/licenses/by/4.0                        2
 #>  7 http://creativecommons.org/licenses/by/4.0/                       2
-#>  8 http://doi.wiley.com/10.1002/tdm_license_1                      157
-#>  9 http://doi.wiley.com/10.1002/tdm_license_1.1                   2175
+#>  8 http://doi.wiley.com/10.1002/tdm_license_1                      155
+#>  9 http://doi.wiley.com/10.1002/tdm_license_1.1                   2179
 #> 10 http://journals.iucr.org/services/copyrightpolicy.html           10
-#> # ... with 15 more rows
+#> # ... with 19 more rows
 ```
 
 ### Search based on DOI prefixes
@@ -277,11 +290,11 @@ cr_members(query = 'ecology', limit = 5)
 #> # A tibble: 5 x 56
 #>      id primary_name location last_status_che… total.dois current.dois
 #>   <int> <chr>        <chr>    <date>           <chr>      <chr>       
-#> 1   336 Japanese So… 5-3 Yon… 2018-08-06       1167       157         
-#> 2  1950 Journal of … Suite 8… 2018-08-06       27         0           
-#> 3  2080 The Japan S… 5-3 Yon… 2018-08-06       685        35          
-#> 4  2151 Ecology and… 5-3 Yon… 2018-08-06       385        53          
-#> 5  2169 Italian Soc… Diparti… 2018-08-06       1217       367         
+#> 1   336 Japanese So… 5-3 Yon… 2018-09-14       1180       170         
+#> 2  1950 Journal of … Suite 8… 2018-09-14       27         0           
+#> 3  2080 The Japan S… 5-3 Yon… 2018-09-14       687        37          
+#> 4  2151 Ecology and… 5-3 Yon… 2018-09-14       394        62          
+#> 5  2169 Italian Soc… Diparti… 2018-09-14       1222       372         
 #> # ... with 50 more variables: backfile.dois <chr>, prefixes <chr>,
 #> #   coverge.affiliations.current <chr>,
 #> #   coverge.similarity.checking.current <chr>,
@@ -334,16 +347,16 @@ cr_members(query = 'ecology', limit = 5)
 
 ```r
 cr_r()
-#>  [1] "10.18472/cvt.18n1.2018.1488"                 
-#>  [2] "10.1016/0161-5890(76)90161-9"                
-#>  [3] "10.3109/09546634.2010.521811"                
-#>  [4] "10.1007/978-3-642-86520-6_3"                 
-#>  [5] "10.1093/benz/9780199773787.article.b00100239"
-#>  [6] "10.1007/s10100-006-0016-5"                   
-#>  [7] "10.1016/j.egypro.2011.10.348"                
-#>  [8] "10.1097/01241398-199709000-00001"            
-#>  [9] "10.1111/j.1445-5994.2009.02018.x"            
-#> [10] "10.7215/ds_ip_20101029"
+#>  [1] "10.1007/978-90-368-1340-2_18"               
+#>  [2] "10.1098/rsbl.2015.0390"                     
+#>  [3] "10.1177/009365027600300106"                 
+#>  [4] "10.1016/b978-159749165-5/50023-4"           
+#>  [5] "10.1176/ajp.148.8.1102-b"                   
+#>  [6] "10.4018/978-1-59140-393-7.ch010"            
+#>  [7] "10.1200/jco.1984.2.6.637"                   
+#>  [8] "10.4028/www.scientific.net/amr.152-153.1579"
+#>  [9] "10.5703/1288284313733"                      
+#> [10] "10.1002/9783527630332.ch4"
 ```
 
 You can pass in the number of DOIs you want back (default is 10)
@@ -351,7 +364,7 @@ You can pass in the number of DOIs you want back (default is 10)
 
 ```r
 cr_r(2)
-#> [1] "10.7868/s0869565217150221" "10.2307/442387"
+#> [1] "10.1002/chin.199634054"    "10.1080/00909888509388422"
 ```
 
 ## Get full text
