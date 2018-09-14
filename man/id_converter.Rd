@@ -11,7 +11,7 @@ id_converter(x, type = "doi", ...)
 
 \item{type}{(character) one of doi, pmid, or pmcid}
 
-\item{...}{Curl args passed on to \code{\link[httr]{GET}}.}
+\item{...}{Curl args passed on to \link[crul:HttpClient]{crul::HttpClient}}
 }
 \description{
 Get a PMID from a DOI, and vice versa.
@@ -34,4 +34,3 @@ id_converter("PMC2883744", "pmcid")
 \references{
 Uses the http://www.ncbi.nlm.nih.gov/pmc/tools/id-converter-api/
 }
-

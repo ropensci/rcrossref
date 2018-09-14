@@ -10,6 +10,8 @@ knitr::opts_chunk$set(
 )
 ```
 
+[![cran checks](https://cranchecks.info/badges/worst/rcrossref)](https://cranchecks.info/pkgs/rcrossref)
+[![Project Status: Active - The project has reached a stable, usable state and is being actively developed.](http://www.repostatus.org/badges/latest/active.svg)](http://www.repostatus.org/#active)
 [![Build Status](https://api.travis-ci.org/ropensci/rcrossref.png)](https://travis-ci.org/ropensci/rcrossref)
 [![Build status](https://ci.appveyor.com/api/projects/status/jbo6y7dg4qiq7mol/branch/master)](https://ci.appveyor.com/project/sckott/rcrossref/branch/master)
 [![codecov.io](https://codecov.io/github/ropensci/rcrossref/coverage.svg?branch=master)](https://codecov.io/github/ropensci/rcrossref?branch=master)
@@ -23,8 +25,8 @@ R interface to various CrossRef APIs
 ## CrossRef documentation
 
 * Crossref API: [https://github.com/CrossRef/rest-api-doc/blob/master/rest_api.md](https://github.com/CrossRef/rest-api-doc/blob/master/rest_api.md)
-* Crossref [metadata search API](http://search.labs.crossref.org/)
-* CrossRef [DOI Content Negotiation](http://www.crosscite.org/cn/)
+* Crossref metadata search API (http://search.labs.crossref.org/)
+* CrossRef [DOI Content Negotiation](http://citation.crosscite.org/docs.html)
 * Text and Data Mining [TDM](http://tdmsupport.crossref.org/)
 
 ## Installation
@@ -51,7 +53,7 @@ library('rcrossref')
 
 ## Citation search
 
-Use CrossRef's [DOI Content Negotiation](http://www.crosscite.org/cn/) service, where you can citations back in various formats, including `apa`
+Use CrossRef's [DOI Content Negotiation](http://citation.crosscite.org/docs.html) service, where you can citations back in various formats, including `apa`
 
 ```{r}
 cr_cn(dois = "10.1126/science.169.3946.635", format = "text", style = "apa")
@@ -84,7 +86,7 @@ The following functions all use the [CrossRef API](https://github.com/CrossRef/r
 ### Look up funder information
 
 ```{r}
-cr_fundref(query = "NSF")
+cr_funders(query = "NSF")
 ```
 
 ### Check the DOI minting agency
@@ -137,13 +139,7 @@ You can pass in the number of DOIs you want back (default is 10)
 cr_r(2)
 ```
 
-## pmid2doi & doi2pmid
-
-DOIs to PMIDs
-
-__UPDATE: as of 2014-12-23 the web API behind these functions is down - we'll update the package once the API is up again__
-
-## Get full text links to works
+## Get full text
 
 Publishers can optionally provide links in the metadata they provide to Crossref for full text of the work, but that data is often missing. Find out more about it at [http://tdmsupport.crossref.org/](http://tdmsupport.crossref.org/).
 
@@ -153,35 +149,45 @@ Get some DOIs for articles that provide full text, and that have `CC-BY 3.0` lic
 out <-
   cr_works(filter = list(has_full_text = TRUE,
     license_url = "http://creativecommons.org/licenses/by/3.0/"))
-(dois <- out$data$DOI)
+(dois <- out$data$doi)
 ```
 
-Then get URLs to full text content
+From the output of `cr_works` we can get full text links if we know where to look:
 
 ```{r}
-(links <- cr_ft_links(dois[1]))
+do.call("rbind", out$data$link)
+```
+
+From there, you can grab your full text, but because most links require
+authentication, enter another package: `crminer`.
+
+You'll need package `crminer` for the rest of the work.
+
+Onc we have DOIs, get URLs to full text content
+
+```{r eval=FALSE}
+if (!requireNamespace("crminer")) {
+  install.packages("crminer")
+}
+```
+
+```{r}
+library(crminer)
+(links <- crm_links("10.1155/2014/128505"))
 ```
 
 Then use those URLs to get full text
 
 ```{r eval=FALSE}
-cr_ft_text(links, "xml")
-#> <?xml version="1.0"?>
-#> <article xmlns:mml="http://www.w3.org/1998/Math/MathML" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://jats.nlm.nih.gov/publishing/1.1d1/xsd/JATS-journalpublishing1-mathml3.xsd" dtd-version="1.1d1">
-#>   <front>
-#>     <journal-meta>
-#>       <journal-id journal-id-type="publisher-id">SV</journal-id>
-#>       <journal-title-group>
-#>         <journal-title>Shock and Vibration</journal-title>
-#>       </journal-title-group>
-#>       <issn pub-type="epub">1875-9203</issn>
-#>       <issn pub-type="ppub">1070-9622</issn>
-#>       <publisher>
-#>         <publisher-name>Hindawi Publishing Corporation</publisher-name>
-#>       </publisher>
-#>     </journal-meta>
-#> .................... cutoff
+crm_pdf(links)
+#> <document>/Users/sckott/Library/Caches/R/crminer/128505.pdf
+#>   Pages: 1
+#>   No. characters: 1565
+#>   Created: 2014-09-15
 ```
+
+See also [fulltext](https://github.com/ropensci/fulltext) for getting scholarly text 
+for text mining.
 
 
 ## Meta
@@ -189,7 +195,7 @@ cr_ft_text(links, "xml")
 * Please [report any issues or bugs](https://github.com/ropensci/rcrossref/issues).
 * License: MIT
 * Get citation information for `rcrossref` in R doing `citation(package = 'rcrossref')`
-* Please note that this project is released with a [Contributor Code of Conduct](CONDUCT.md). By participating in this project you agree to abide by its terms.
+* Please note that this project is released with a [Contributor Code of Conduct](CODE_OF_CONDUCT.md). By participating in this project you agree to abide by its terms.
 
 ---
 
@@ -197,4 +203,4 @@ This package is part of a richer suite called [fulltext](https://github.com/rope
 
 ---
 
-[![rofooter](http://ropensci.org/public_images/github_footer.png)](http://ropensci.org)
+[![rofooter](https://ropensci.org/public_images/github_footer.png)](https://ropensci.org)

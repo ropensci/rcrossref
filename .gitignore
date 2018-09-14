@@ -3,3 +3,6 @@ testing.R
 .Rhistory
 .httr-oauth
 inst/vign/cache/
+revdep/checks.noindex
+revdep/library.noindex
+revdep/data.sqlite

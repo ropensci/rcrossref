@@ -13,4 +13,3 @@ GET_agency_id(x, ...)
 Get doi agency id to identify resource location
 }
 \keyword{internal}
-

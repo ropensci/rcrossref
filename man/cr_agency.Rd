@@ -9,12 +9,12 @@ cr_agency(dois = NULL, .progress = "none", ...)
 \arguments{
 \item{dois}{(character) One or more article or organization dois.}
 
-\item{.progress}{Show a \code{plyr}-style progress bar? Options are "none", "text", 
-"tk", "win", and "time".  See \code{\link[plyr]{create_progress_bar}} for details 
+\item{.progress}{Show a \code{plyr}-style progress bar? Options are "none", "text",
+"tk", "win", and "time".  See \code{\link[plyr]{create_progress_bar}} for details
 of each. Only used when passing in multiple ids (e.g., multiple DOIs, DOI prefixes,
 etc.)}
 
-\item{...}{Named parameters passed on to \code{\link[httr]{GET}}}
+\item{...}{Named parameters passed on to \code{\link[crul]{HttpClient}}}
 }
 \description{
 Check the DOI minting agency on one or more dois
@@ -22,13 +22,13 @@ Check the DOI minting agency on one or more dois
 \examples{
 \dontrun{
 cr_agency(dois = '10.13039/100000001')
-cr_agency(dois = c('10.13039/100000001','10.13039/100000015','10.5284/1011335'))
+cr_agency(
+  dois = c('10.13039/100000001','10.13039/100000015','10.5284/1011335'))
 }
-}
-\author{
-Scott Chamberlain \email{myrmecocystus@gmail.com}
 }
 \references{
 \url{https://github.com/CrossRef/rest-api-doc/blob/master/rest_api.md}
 }
-
+\author{
+Scott Chamberlain \email{myrmecocystus@gmail.com}
+}

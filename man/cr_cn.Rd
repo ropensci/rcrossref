@@ -5,54 +5,58 @@
 \title{Get citations in various formats from CrossRef.}
 \usage{
 cr_cn(dois, format = "bibtex", style = "apa", locale = "en-US",
-  raw = FALSE, .progress = "none", ...)
+  raw = FALSE, .progress = "none", url = NULL, ...)
 }
 \arguments{
 \item{dois}{Search by a single DOI or many DOIs.}
 
-\item{format}{Name of the format. One of "rdf-xml", "turtle", 
-"citeproc-json", "citeproc-json-ish", "text", "ris", "bibtex" (default), 
-"crossref-xml", "datacite-xml","bibentry", or "crossref-tdm". The format 
+\item{format}{Name of the format. One of "rdf-xml", "turtle",
+"citeproc-json", "citeproc-json-ish", "text", "ris", "bibtex" (default),
+"crossref-xml", "datacite-xml","bibentry", or "crossref-tdm". The format
 "citeproc-json-ish" is a format that is not quite proper citeproc-json}
 
-\item{style}{a CSL style (for text format only). See \code{\link{get_styles}}
+\item{style}{a CSL style (for text format only). See \code{\link[=get_styles]{get_styles()}}
 for options. Default: apa. If there's a style that CrossRef doesn't support
 you'll get a  \code{(500) Internal Server Error}}
 
-\item{locale}{Language locale. See \code{?Sys.getlocale}}
+\item{locale}{Lansguage locale. See \code{?Sys.getlocale}}
 
-\item{raw}{(logical) Return raw text in the format given by \code{format} 
-parameter. Default: FALSE}
+\item{raw}{(logical) Return raw text in the format given by \code{format}
+parameter. Default: \code{FALSE}}
 
-\item{.progress}{Show a \code{plyr}-style progress bar? Options are "none", "text", 
-"tk", "win", and "time".  See \code{\link[plyr]{create_progress_bar}} for details 
+\item{.progress}{Show a \code{plyr}-style progress bar? Options are "none", "text",
+"tk", "win", and "time".  See \code{\link[plyr]{create_progress_bar}} for details
 of each. Only used when passing in multiple ids (e.g., multiple DOIs, DOI prefixes,
 etc.)}
 
-\item{...}{Named parameters passed on to \code{\link[httr]{GET}}}
+\item{url}{(character) Base URL for the content negotiation request.
+Default: "https://doi.org"}
+
+\item{...}{Named parameters passed on to \code{\link[crul]{HttpClient}}}
 }
 \description{
 Get citations in various formats from CrossRef.
 }
 \details{
-See \url{http://www.crosscite.org/cn/} for more info on the Crossref
-  Content Negotiation API service.
-  
-  DataCite DOIs: Some values of the \code{format} parameter won't work with 
-  DataCite DOIs, i.e. "citeproc-json", "crossref-xml", "crossref-tdm", "onix-xml". 
-  
-  MEDRA DOIs only work with "rdf-xml", "turtle", "citeproc-json-ish", "ris", 
-  "bibtex", "bibentry", "onix-xml".
-  
-  See examples below.
-  
-  See \code{\link{cr_agency}}
-  
-  Note that the format type \code{citeproc-json} uses the CrossRef API at 
-  \code{api.crossref.org}, while all others are content negotiated via
-  \code{http://data.crossref.org}, \code{http://data.datacite.org} or 
-  \code{http://data.medra.org}. DOI agency is checked first (see 
-  \code{\link{cr_agency}}).
+See \url{http://citation.crosscite.org/docs.html} for more info
+on the Crossref Content Negotiation API service.
+
+DataCite DOIs: Some values of the \code{format} parameter won't work with
+DataCite DOIs, i.e. "citeproc-json", "crossref-xml", "crossref-tdm",
+"onix-xml".
+
+MEDRA DOIs only work with "rdf-xml", "turtle", "citeproc-json-ish", "ris",
+"bibtex", "bibentry", "onix-xml".
+
+See examples below.
+
+See \code{\link[=cr_agency]{cr_agency()}}
+
+Note that the format type \code{citeproc-json} uses the CrossRef API at
+\code{api.crossref.org}, while all others are content negotiated via
+\code{http://data.crossref.org}, \code{http://data.datacite.org} or
+\code{http://data.medra.org}. DOI agency is checked first (see
+\code{\link[=cr_agency]{cr_agency()}}).
 }
 \examples{
 \dontrun{
@@ -89,30 +93,38 @@ foo(sample(stys, 1))
 
 # Using DataCite DOIs
 ## some formats don't work
-# cr_cn("10.5284/1011335", "text")
 # cr_cn("10.5284/1011335", "crossref-xml")
 # cr_cn("10.5284/1011335", "crossref-tdm")
 ## But most do work
+cr_cn("10.5284/1011335", "text")
 cr_cn("10.5284/1011335", "datacite-xml")
 cr_cn("10.5284/1011335", "rdf-xml")
-# cr_cn("10.5284/1011335", "turtle")
+cr_cn("10.5284/1011335", "turtle")
 cr_cn("10.5284/1011335", "citeproc-json-ish")
 cr_cn("10.5284/1011335", "ris")
 cr_cn("10.5284/1011335", "bibtex")
 cr_cn("10.5284/1011335", "bibentry")
-
-dois <- c('10.5167/UZH-30455','10.5167/UZH-49216','10.5167/UZH-503',
-          '10.5167/UZH-38402','10.5167/UZH-41217')
-cat(cr_cn(dois[1]))
-cat(cr_cn(dois[2]))
-cat(cr_cn(dois[3]))
-cat(cr_cn(dois[4]))
 
 # Using Medra DOIs
 cr_cn("10.3233/ISU-150780", "onix-xml")
 
 # Get raw output
 cr_cn(dois = "10.1002/app.27716", format = "citeproc-json", raw = TRUE)
-}
-}
 
+# sometimes messy DOIs even work
+## in this case, a DOI minting agency can't be found
+## but we proceed anyway, just assuming it's "crossref"
+cr_cn("10.1890/0012-9615(1999)069[0569:EDILSA]2.0.CO;2")
+
+# Use a different base url
+cr_cn("10.1126/science.169.3946.635", "text", url = "https://data.datacite.org")
+cr_cn("10.1126/science.169.3946.635", "text", url = "http://dx.doi.org")
+cr_cn("10.1126/science.169.3946.635", "text", "heredity", url = "http://dx.doi.org")
+cr_cn("10.5284/1011335", url = "https://citation.crosscite.org/format", 
+   style = "oikos")
+cr_cn("10.5284/1011335", url = "https://citation.crosscite.org/format", 
+   style = "plant-cell-and-environment")
+cr_cn("10.5284/1011335", url = "https://data.datacite.org", 
+   style = "plant-cell-and-environment")
+}
+}

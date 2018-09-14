@@ -19,7 +19,7 @@ Data collection from the Web can be performed at several levels: From low-level 
 parsing at the one end up to calling simple functions implemented by numerous convenience packages
 (which, e.g., make use of API specifications internally) on the other end. A comprehensive description
 of Web technology strategies can be found in Nolan and Temple Lang (2014).
-Within the R community, projects like omegahat (http://www.omegahat.org/) or rOpenSci (http:
+Within the R community, projects like omegahat (http://www.omegahat.net/) or rOpenSci (http:
 //ropensci.org/ where people can contribute through https://github.com/ropensci/webservices)
 made an effort to provide infrastructures that allow R to interact with the Web. Recently, a vast amount
 of corresponding Web technology packages have been developed which are now collected, organized,

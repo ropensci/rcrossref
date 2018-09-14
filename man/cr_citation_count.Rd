@@ -12,10 +12,10 @@ cr_citation_count(doi, url = "http://www.crossref.org/openurl/",
 
 \item{url}{(character) the url for the function (should be left to default)}
 
-\item{key}{your Crossref OpenURL email address, either enter, or loads 
+\item{key}{your Crossref OpenURL email address, either enter, or loads
 from \code{.Rprofile}. We use a default, so you don't need to pass this.}
 
-\item{...}{Curl options passed on to \code{\link[httr]{GET}}}
+\item{...}{Curl options passed on to \code{\link[crul:HttpClient]{crul::HttpClient()}}}
 }
 \value{
 single numeric value - the citation count, or NA if not found or
@@ -26,7 +26,18 @@ Get a citation count via CrossRef OpenURL
 }
 \details{
 See \url{http://labs.crossref.org/openurl/} for more info on this
-		Crossref API service.
+Crossref API service.
+
+This number is also known as \strong{cited-by}
+
+Note that this number may be out of sync/may not match that that the
+publisher is showing (if they show it) for the same DOI/article.
+
+We've contacted Crossref about this, and they have confirmed this.
+Unfortunately, we can not do anything about this.
+
+I would imagine it's best to use this data instead of from the publishers,
+and this data you can get programatically :)
 }
 \examples{
 \dontrun{
@@ -36,10 +47,9 @@ cr_citation_count(doi="10.1016/j.fbr.2012.01.001")
 cr_citation_count(doi="10.1016/j.fbr.2012")
 }
 }
+\seealso{
+\code{\link[=cr_search]{cr_search()}}, \code{\link[=cr_r]{cr_r()}}
+}
 \author{
 Carl Boettiger \email{cboettig@gmail.com}
 }
-\seealso{
-\code{\link{cr_search}}, \code{\link{cr_r}}
-}
-

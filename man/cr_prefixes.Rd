@@ -8,36 +8,62 @@
 cr_prefixes(prefixes, query = NULL, filter = NULL, offset = NULL,
   limit = NULL, sample = NULL, sort = NULL, order = NULL,
   facet = FALSE, works = FALSE, cursor = NULL, cursor_max = 5000,
-  .progress = "none", ...)
+  .progress = "none", flq = NULL, select = NULL, ...)
 
 cr_prefixes_(prefixes, query = NULL, filter = NULL, offset = NULL,
   limit = NULL, sample = NULL, sort = NULL, order = NULL,
   facet = FALSE, works = FALSE, cursor = NULL, cursor_max = 5000,
-  .progress = "none", parse = FALSE, ...)
+  .progress = "none", parse = FALSE, flq = NULL, select = NULL,
+  ...)
 }
 \arguments{
-\item{prefixes}{(character) Publisher prefixes, one or more in a vector or list. Required.}
+\item{prefixes}{(character) Publisher prefixes, one or more in a vector or
+list. Required.}
 
 \item{query}{Query terms}
 
-\item{filter}{Filter options. See details.}
+\item{filter}{Filter options. See examples for usage examples
+and \code{\link{filters}} for what filters are available.
+\code{filter} is available for use with \code{cr_works} and
+other \code{crossref} family functions with \code{works=TRUE}}
 
-\item{offset}{Number of record to start at, from 1 to infinity.}
+\item{offset}{Number of record to start at. Minimum: 1. For
+\code{\link{cr_works}}, and any function setting \code{works = TRUE},
+the maximum offset value is 10000. For larger requests use \code{cursor}.}
 
-\item{limit}{Number of results to return in the query. Not relavant when searching with specific
-dois. Default: 20. Max: 1000}
+\item{limit}{Number of results to return in the query. Not relavant when
+searching with specific dois. Default: 20. Max: 1000}
 
-\item{sample}{(integer) Number of random results to return. when you use the sample parameter, 
-the rows and offset parameters are ignored. Ignored unless \code{works=TRUE}}
+\item{sample}{(integer) Number of random results to return. when you use
+the sample parameter, the rows and offset parameters are ignored.
+Ignored unless \code{works=TRUE}. Max: 100}
 
-\item{sort}{(character) Field to sort on, one of score, relevance, updated, deposited, indexed, 
-or published.}
+\item{sort}{Field to sort on. Acceptable set of fields to sort on:
+\itemize{
+\item \code{score} OR \code{relevance} - Sort by relevance score
+\item \code{updated} - Sort by date of most recent change to metadata.
+Currently the same as deposited.
+\item \code{deposited} - Sort by time of most recent deposit
+\item \code{indexed} - Sort by time of most recent index
+\item \code{published} - Sort by publication date
+\item \code{published-print} - Sort by print publication date
+\item \code{published-online} - Sort by online publication date
+\item \code{issued} - Sort by issued date (earliest known publication date)
+\item \code{is-referenced-by-count} - Sort by number of times this DOI is
+referenced by other Crossref DOIs
+\item \code{references-count} - Sort by number of references included in
+the references section of the document identified by this DOI
+}}
 
 \item{order}{(character) Sort order, one of 'asc' or 'desc'}
 
-\item{facet}{(logical) Include facet results. Default: \code{FALSE}}
+\item{facet}{(logical) Include facet results. Boolean or string with
+field to facet on. Valid fields are *, affiliation, funder-name,
+funder-doi, orcid, container-title, assertion, archive, update-type,
+issn, published, source, type-name, publisher-name, license,
+category-name, assertion-group. Default: \code{FALSE}}
 
-\item{works}{(logical) If TRUE, works returned as well, if not then not.}
+\item{works}{(logical) If \code{TRUE}, works returned as well, if not then not.}
 
 \item{cursor}{(character) Cursor character string to do deep paging. Default is None.
 Pass in '*' to start deep paging. Any combination of query, filters and facets may be
@@ -45,17 +71,36 @@ used with deep paging cursors. While rows may be specified along with cursor, of
 and sample cannot be used.
 See https://github.com/CrossRef/rest-api-doc/blob/master/rest_api.md#deep-paging-with-cursors}
 
-\item{cursor_max}{(integer) Max records to retrieve. Only used when cursor param used. 
+\item{cursor_max}{(integer) Max records to retrieve. Only used when cursor param used.
 Because deep paging can result in continuous requests until all are retrieved, use this
 parameter to set a maximum number of records. Of course, if there are less records
 found than this value, you will get only those found.}
 
-\item{.progress}{Show a \code{plyr}-style progress bar? Options are "none", "text", 
-"tk", "win", and "time".  See \code{\link[plyr]{create_progress_bar}} for details 
+\item{.progress}{Show a \code{plyr}-style progress bar? Options are "none", "text",
+"tk", "win", and "time".  See \code{\link[plyr]{create_progress_bar}} for details
 of each. Only used when passing in multiple ids (e.g., multiple DOIs, DOI prefixes,
 etc.)}
 
-\item{...}{Named parameters passed on to \code{\link[httr]{GET}}}
+\item{flq}{field queries. One or more field queries. Acceptable set of
+field query parameters are:
+\itemize{
+\item \code{query.title} - Query title and subtitle
+\item \code{query.container-title}    - Query container-title aka. publication name
+\item \code{query.author} - Query author first and given names
+\item \code{query.editor} - Query editor first and given names
+\item \code{query.chair}    - Query chair first and given names
+\item \code{query.translator} - Query translator first and given names
+\item \code{query.contributor} - Query author, editor, chair and translator
+first and given names
+\item \code{query.bibliographic} - Query bibliographic information, useful for
+citation lookup. Includes titles, authors, ISSNs and publication years
+\item \code{query.affiliation} - Query contributor affiliations
+}}
+
+\item{select}{(character) One or more field to return (only those fields
+are returned)}
+
+\item{...}{Named parameters passed on to \code{\link[crul]{HttpClient}}}
 
 \item{parse}{(logical) Whether to output json \code{FALSE} or parse to
 list \code{TRUE}. Default: \code{FALSE}}
@@ -66,19 +111,25 @@ Search CrossRef prefixes
 \details{
 BEWARE: The API will only work for CrossRef DOIs.
 
-Note that any one publisher can have more than one DOI. If you want to search on
-all DOIs for a publisher, pass in all DOIs, or see \code{\link{cr_members}}, and pass in the
-\code{member_ids} parameter.
+Note that any one publisher can have more than one DOI. If you want to
+search on all DOIs for a publisher, pass in all DOIs, or see
+\code{\link[=cr_members]{cr_members()}}, and pass in the \code{member_ids} parameter.
 
 Notes from CrossRef (quoting them):
 
-The prefix of a CrossRef DOI does NOT indicate who currently owns the DOI. It only
-reflects who originally registered the DOI. CrossRef metadata has an \code{owner_prefix}
-element that records the current owner of the CrossRef DOI in question.
+The prefix of a CrossRef DOI does NOT indicate who currently owns the DOI.
+It only reflects who originally registered the DOI. CrossRef metadata has
+an \code{owner_prefix} element that records the current owner of the
+CrossRef DOI in question.
 
-CrossRef also has member IDs for depositing organisations. A single member may control multiple
-owner prefixes, which in turn may control a number of DOIs. When looking at works published by
-a certain organisaton, member IDs and the member routes should be used.
+CrossRef also has member IDs for depositing organisations. A single member
+may control multiple owner prefixes, which in turn may control a number of
+DOIs. When looking at works published by a certain organisaton, member
+IDs and the member routes should be used.
+}
+\note{
+See the "Rate limiting" seciton in \link{rcrossref} to get
+into the "fast lane"
 }
 \examples{
 \dontrun{
@@ -86,19 +137,20 @@ cr_prefixes(prefixes="10.1016")
 cr_prefixes(prefixes="10.1016", works=TRUE)
 cr_prefixes(prefixes=c('10.1016','10.1371','10.1023','10.4176','10.1093'))
 cr_prefixes(prefixes=c('10.1016','10.1371'), works=TRUE)
-cr_works(prefixes="10.1016", filter=c(has_full_text=TRUE), limit=5)
-cr_works(prefixes="10.1016", query='ecology', limit=4)
-cr_works(prefixes="10.1016", query='ecology', limit=4)
+cr_prefixes(prefixes="10.1016", works=TRUE, filter=c(has_full_text=TRUE), 
+  limit=5)
+cr_prefixes(prefixes="10.1016", works=TRUE, query='ecology', limit=4)
+cr_prefixes(prefixes="10.1016", works=TRUE, query='ecology', limit=4)
 
 # facets - only avail. when works=TRUE
 cr_prefixes(prefixes="10.1016", works=TRUE, facet=TRUE)
-
-## get facets back
-cr_prefixes(prefixes="10.1016", works=TRUE, facet=TRUE)
-cr_prefixes(prefixes=c('10.1016','10.1371'), works=TRUE, facet=TRUE)
+cr_prefixes(prefixes="10.1016", works=TRUE, facet="license:*", limit=0)
+cr_prefixes(prefixes=c('10.1016','10.1371'), works=TRUE, facet=TRUE,
+  limit=0)
 
 # Use the cursor for deep paging
-cr_prefixes("10.1016", works = TRUE, cursor = "*", cursor_max = 500, limit = 100)
+cr_prefixes("10.1016", works = TRUE, cursor = "*", cursor_max = 500,
+   limit = 100)
 cr_prefixes(c('10.1016', '10.1371'), works = TRUE, cursor = "*",
    cursor_max = 300, limit = 100)
 
@@ -106,14 +158,30 @@ cr_prefixes(c('10.1016', '10.1371'), works = TRUE, cursor = "*",
 cr_prefixes_("10.1016")
 cr_prefixes_(c('10.1016', '10.1371'))
 cr_prefixes_("10.1016", works = TRUE, query = 'ecology', limit = 10)
-cr_prefixes_("10.1016", works = TRUE, query = 'ecology', parse=TRUE, limit = 10)
+cr_prefixes_("10.1016", works = TRUE, query = 'ecology', parse=TRUE,
+   limit = 10)
 cr_prefixes_("10.1016", works = TRUE, cursor = "*",
    cursor_max = 300, limit = 100)
 cr_prefixes_("10.1016", works = TRUE, cursor = "*",
    cursor_max = 300, limit = 100, parse = TRUE)
+
+# field queries
+## query.container-title
+cr_prefixes("10.1016", works = TRUE,
+  flq = c(`query.container-title` = 'Ecology'))
+
+# select only certain fields to return
+res <- cr_prefixes("10.1016", works = TRUE, select = c('DOI', 'title'))
+names(res$data)
 }
 }
 \references{
 \url{https://github.com/CrossRef/rest-api-doc/blob/master/rest_api.md}
 }
-
+\seealso{
+Other crossref: \code{\link{cr_funders}},
+  \code{\link{cr_journals}}, \code{\link{cr_licenses}},
+  \code{\link{cr_members}}, \code{\link{cr_types}},
+  \code{\link{cr_works}}
+}
+\concept{crossref}

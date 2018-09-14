@@ -7,14 +7,14 @@
 get_styles(...)
 }
 \arguments{
-\item{...}{Named parameters passed on to \code{\link[httr]{GET}}}
+\item{...}{Named parameters passed on to \link[crul:HttpClient]{crul::HttpClient}}
 }
 \description{
 Get list of styles from github.com/citation-style-language/styles
 }
 \examples{
 \dontrun{
-get_styles()[1:5]
+x <- get_styles()
+x[1:10]
 }
 }
-
