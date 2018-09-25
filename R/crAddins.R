@@ -157,7 +157,11 @@ crAddins <- function() {
     output$search_table <- DT::renderDataTable({
       req(input$search_query, search_results())
       if ("title" %in% names(search_results())) {
-        search_dt <- search_results()[, c("title", "issued")]
+        if ("issued" %in% names(search_results())) {
+          search_dt <- search_results()[, c("title", "issued")]
+        } else {
+          search_dt <- search_results()[, c("title")]
+        }
       } else {
         search_dt <- data.frame(title = character(), issued = character())
       }
