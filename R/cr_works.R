@@ -238,8 +238,9 @@ parse_works <- function(zzz){
   keys <- c('alternative-id','archive','container-title','created',
             'deposited','DOI','funder','indexed','ISBN','ISSN','issue',
             'issued','license', 'link','member','page','prefix','publisher',
-            'reference-count','score','source', 'subject','subtitle','title',
-            'type','update-policy','URL','volume','abstract')
+            'reference-count', 'score','source', 'subject',
+            'subtitle','title', 'type','update-policy','URL',
+            'volume','abstract')
   manip <- function(which="issued", y) {
     res <- switch(
       which,
@@ -302,6 +303,7 @@ parse_works <- function(zzz){
     out_tmp$link <- list(parse_todf(zzz$link)) %||% NULL
     out_tmp$license <- list(tbl_df(bind_rows(lapply(zzz$license, parse_license)))) %||% NULL
     out_tmp$`clinical-trial-number` <- list(parse_todf(zzz$`clinical-trial-number`)) %||% NULL
+    out_tmp$reference <- list(parse_todf(zzz$reference)) %||% NULL
     out_tmp <- Filter(function(x) length(unlist(x)) > 0, out_tmp)
     names(out_tmp) <- tolower(names(out_tmp))
     return(out_tmp)

@@ -98,12 +98,13 @@ filter_list <- c(
   'from_pub_date','until_pub_date',
   'has_license','license_url','license_version','license_delay','has_full_text',
   'full_text_version','full_text_type','full_text_application',
-  'has_references','has_archive',
-  'archive','has_orcid','orcid','issn','type','directory','doi','updates','is_update',
+  'has_references','reference_visibility','has_archive',
+  'archive','has_orcid','orcid','issn','isbn','type','directory','doi','updates','is_update',
   'has_update_policy','container_title','category_name','type_name',
   'from_created_date', 'until_created_date', 'has_affiliation',
   'assertion_group', 'assertion', 'article_number', 'alternative_id',
-  'has-clinical-trial-number', 'has-abstract'
+  'has_clinical_trial_number', 'has_abstract', 'has_content_domain', 
+  'has_domain_restriction'
 )
 
 filter_deets <- list(
@@ -130,11 +131,13 @@ filter_deets <- list(
   "full_text_type" = list("possible_values" = '{mime_type}' , "description" = "metadata where '<resource>' element's 'content_type' attribute is '{mime_type}' (e.g. 'application/pdf')" ),
   "full_text_application" = list("possible_values" = '{string}' , "description" = "metadata where <resource> link has one of the following intended applications: text-mining, similarity-checking or unspecified" ),
   "has_references" = list("possible_values" = NA , "description" = "metadata for works that have a list of references" ),
+  "reference_visibility" = list("possible_values" = 'open, limited, closed', "description" = "metadata for works where references are either open, limited (to Metadata Plus subscribers) or closed"),
   "has_archive" = list("possible_values" = NA , "description" = "metadata which include name of archive partner" ),
   "archive" = list("possible_values" = '{string}', "description" = "metadata which where value of archive partner is '{string}'" ),
   "has_orcid" = list("possible_values" = NA, "description" = "metadata which includes one or more ORCIDs" ),
   "orcid" = list("possible_values" = '{orcid}', "description" = "metadata where '<orcid>' element's value = '{orcid}'" ),
   "issn" = list("possible_values" = '{issn}', "description" = "metadata where record has an ISSN = '{issn}' Format is 'xxxx_xxxx'." ),
+  "isbn" = list("possible_values" = '{isbn}', "description" = "metadata where record has an ISBN" ),
   "type" = list("possible_values" = '{type}', "description" = "metadata records whose type = '{type}' Type must be an ID value from the list of types returned by the '/types' resource" ),
   "directory" = list("possible_values" = "{directory}", "description" = "metadata records whose article or serial are mentioned in the given '{directory}'. Currently the only supported value is 'doaj'" ),
   "doi" = list("possible_values" = '{doi}', "description" = "metadata describing the DOI '{doi}'" ),
@@ -154,6 +157,8 @@ filter_deets <- list(
   'has_clinical_trial_number' = list("possible_values" = NA, "description" = "metadata for records which include a clinical trial number"), 
   'has_abstract' = list("possible_values" = NA, "description" = "metadata for records which include an abstract"),
   "content_domain" = list("possible_values" = NA, "description" = "metadata where the publisher records a particular domain name as the location Crossmark content will appear"),
+  "has_content_domain" = list("possible_values" = NA, "description" = "metadata where the publisher records a domain name location for Crossmark content"),
+  "has_domain_restriction" = list("possible_values" = NA, "description" = "metadata where the publisher restricts Crossmark usage to content domains"),
   "from_accepted_date" = list("possible_values" = "{date}", "description" = "metadata where accepted date is since (inclusive) {date}"),
   "from_online_pub_date" = list("possible_values" = "{date}", "description" = "metadata where online published date is since (inclusive) {date}"),
   "from_posted_date" = list("possible_values" = "{date}", "description" = "metadata where posted date is since (inclusive) {date}"),
