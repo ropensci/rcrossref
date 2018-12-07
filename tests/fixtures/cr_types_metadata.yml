@@ -1,0 +1,85 @@
+http_interactions:
+- request:
+    method: get
+    uri: https://api.crossref.org/types
+    body:
+      encoding: ''
+      string: ''
+    headers:
+      Accept-Encoding: gzip, deflate
+      Accept: application/json, text/xml, application/xml, */*
+      User-Agent: r-curl/3.2 crul/0.6.1.9100 rOpenSci(rcrossref/0.8.5.9110) (mailto:<crossref_email>)
+      X-USER-AGENT: r-curl/3.2 crul/0.6.1.9100 rOpenSci(rcrossref/0.8.5.9110) (mailto:<crossref_email>)
+  response:
+    status:
+      status_code: '200'
+      message: OK
+      explanation: Request fulfilled, document follows
+    headers:
+      status: HTTP/1.1 200 OK
+      content-type: application/json;charset=UTF-8
+      vary: Accept
+      access-control-allow-origin: '*'
+      access-control-allow-headers: X-Requested-With
+      content-length: '1316'
+      server: http-kit
+      date: Fri, 07 Dec 2018 21:31:34 GMT
+      x-rate-limit-limit: '50'
+      x-rate-limit-interval: 1s
+      connection: close
+    body:
+      encoding: UTF-8
+      string: '{"status":"ok","message-type":"type-list","message-version":"1.0.0","message":{"total-results":28,"items":[{"id":"book-section","label":"Book
+        Section"},{"id":"monograph","label":"Monograph"},{"id":"report","label":"Report"},{"id":"peer-review","label":"Peer
+        Review"},{"id":"book-track","label":"Book Track"},{"id":"journal-article","label":"Journal
+        Article"},{"id":"book-part","label":"Part"},{"id":"other","label":"Other"},{"id":"book","label":"Book"},{"id":"journal-volume","label":"Journal
+        Volume"},{"id":"book-set","label":"Book Set"},{"id":"reference-entry","label":"Reference
+        Entry"},{"id":"proceedings-article","label":"Proceedings Article"},{"id":"journal","label":"Journal"},{"id":"component","label":"Component"},{"id":"book-chapter","label":"Book
+        Chapter"},{"id":"proceedings-series","label":"Proceedings Series"},{"id":"report-series","label":"Report
+        Series"},{"id":"proceedings","label":"Proceedings"},{"id":"standard","label":"Standard"},{"id":"reference-book","label":"Reference
+        Book"},{"id":"posted-content","label":"Posted Content"},{"id":"journal-issue","label":"Journal
+        Issue"},{"id":"dissertation","label":"Dissertation"},{"id":"dataset","label":"Dataset"},{"id":"book-series","label":"Book
+        Series"},{"id":"edited-book","label":"Edited Book"},{"id":"standard-series","label":"Standard
+        Series"}]}}'
+  recorded_at: 2018-12-07 21:31:36 GMT
+  recorded_with: vcr/0.2.0.9101, webmockr/0.2.9.9311
+- request:
+    method: get
+    uri: https://api.crossref.org/types/monograph/works?rows=3
+    body:
+      encoding: ''
+      string: ''
+    headers:
+      Accept-Encoding: gzip, deflate
+      Accept: application/json, text/xml, application/xml, */*
+      User-Agent: r-curl/3.2 crul/0.6.1.9100 rOpenSci(rcrossref/0.8.5.9110) (mailto:<crossref_email>)
+      X-USER-AGENT: r-curl/3.2 crul/0.6.1.9100 rOpenSci(rcrossref/0.8.5.9110) (mailto:<crossref_email>)
+  response:
+    status:
+      status_code: '200'
+      message: OK
+      explanation: Request fulfilled, document follows
+    headers:
+      status: HTTP/1.1 200 OK
+      content-type: application/json;charset=UTF-8
+      vary: Accept
+      access-control-allow-origin: '*'
+      access-control-allow-headers: X-Requested-With
+      content-length: '2694'
+      server: http-kit
+      date: Fri, 07 Dec 2018 21:31:36 GMT
+      x-rate-limit-limit: '50'
+      x-rate-limit-interval: 1s
+      connection: close
+    body:
+      encoding: UTF-8
+      string: '{"status":"ok","message-type":"work-list","message-version":"1.0.0","message":{"facets":{},"total-results":379764,"items":[{"indexed":{"date-parts":[[2018,4,14]],"date-time":"2018-04-14T03:27:54Z","timestamp":1523676474565},"reference-count":0,"publisher":"Hart
+        Publishing","content-domain":{"domain":[],"crossmark-restriction":false},"DOI":"10.5040\/9781472562562","type":"monograph","created":{"date-parts":[[2014,9,18]],"date-time":"2014-09-18T16:26:51Z","timestamp":1411057611000},"source":"Crossref","is-referenced-by-count":0,"title":["Regional
+        and Global Regulation of International Trade"],"prefix":"10.5040","member":"2984","published-online":{"date-parts":[[2002]]},"deposited":{"date-parts":[[2014,9,18]],"date-time":"2014-09-18T16:26:51Z","timestamp":1411057611000},"score":1.0,"issued":{"date-parts":[[2002]]},"ISBN":["9781841132181","9781472562562"],"references-count":0,"URL":"http:\/\/dx.doi.org\/10.5040\/9781472562562"},{"indexed":{"date-parts":[[2018,4,14]],"date-time":"2018-04-14T03:27:41Z","timestamp":1523676461959},"reference-count":0,"publisher":"Hart
+        Publishing","content-domain":{"domain":[],"crossmark-restriction":false},"DOI":"10.5040\/9781472564382","type":"monograph","created":{"date-parts":[[2014,9,18]],"date-time":"2014-09-18T15:39:45Z","timestamp":1411054785000},"source":"Crossref","is-referenced-by-count":0,"title":["The
+        Shifting Allocation of Authority in International Law : Considering Sovereignty,
+        Supremacy and Subsidiarity"],"prefix":"10.5040","member":"2984","published-online":{"date-parts":[[2008]]},"deposited":{"date-parts":[[2014,9,18]],"date-time":"2014-09-18T15:39:45Z","timestamp":1411054785000},"score":1.0,"issued":{"date-parts":[[2008]]},"ISBN":["9781841137971","9781472564382"],"references-count":0,"URL":"http:\/\/dx.doi.org\/10.5040\/9781472564382"},{"indexed":{"date-parts":[[2018,4,14]],"date-time":"2018-04-14T03:28:25Z","timestamp":1523676505181},"reference-count":0,"publisher":"Hart
+        Publishing","content-domain":{"domain":[],"crossmark-restriction":false},"DOI":"10.5040\/9781472566447","type":"monograph","created":{"date-parts":[[2014,9,18]],"date-time":"2014-09-18T16:51:59Z","timestamp":1411059119000},"source":"Crossref","is-referenced-by-count":0,"title":["The
+        Involvement of EU Law in Private Law Relationships"],"prefix":"10.5040","member":"2984","published-online":{"date-parts":[[2013]]},"deposited":{"date-parts":[[2014,9,18]],"date-time":"2014-09-18T16:51:59Z","timestamp":1411059119000},"score":1.0,"issued":{"date-parts":[[2013]]},"ISBN":["9781849463300","9781472566447"],"references-count":0,"URL":"http:\/\/dx.doi.org\/10.5040\/9781472566447"}],"items-per-page":3,"query":{"start-index":0,"search-terms":null}}}'
+  recorded_at: 2018-12-07 21:31:36 GMT
+  recorded_with: vcr/0.2.0.9101, webmockr/0.2.9.9311

@@ -1,0 +1,33 @@
+http_interactions:
+- request:
+    method: get
+    uri: https://api.crossref.org/funders/10.13039/100000001afasfasdf
+    body:
+      encoding: ''
+      string: ''
+    headers:
+      Accept-Encoding: gzip, deflate
+      Accept: application/json, text/xml, application/xml, */*
+      User-Agent: r-curl/3.2 crul/0.6.1.9100 rOpenSci(rcrossref/0.8.5.9110) (mailto:<crossref_email>)
+      X-USER-AGENT: r-curl/3.2 crul/0.6.1.9100 rOpenSci(rcrossref/0.8.5.9110) (mailto:<crossref_email>)
+  response:
+    status:
+      status_code: '404'
+      message: Not Found
+      explanation: Nothing matches the given URI
+    headers:
+      status: HTTP/1.1 404 Not Found
+      content-type: text/plain
+      access-control-allow-origin: '*'
+      access-control-allow-headers: X-Requested-With
+      content-length: '19'
+      server: http-kit
+      date: Fri, 07 Dec 2018 22:36:54 GMT
+      x-rate-limit-limit: '50'
+      x-rate-limit-interval: 1s
+      connection: close
+    body:
+      encoding: UTF-8
+      string: Resource not found.
+  recorded_at: 2018-12-07 22:36:55 GMT
+  recorded_with: vcr/0.2.0.9101, webmockr/0.2.9.9311

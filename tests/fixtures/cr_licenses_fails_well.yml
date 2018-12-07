@@ -1,0 +1,34 @@
+http_interactions:
+- request:
+    method: get
+    uri: https://api.crossref.org/licenses?query=adfaaf
+    body:
+      encoding: ''
+      string: ''
+    headers:
+      Accept-Encoding: gzip, deflate
+      Accept: application/json, text/xml, application/xml, */*
+      User-Agent: r-curl/3.2 crul/0.6.1.9100 rOpenSci(rcrossref/0.8.5.9110) (mailto:<crossref_email>)
+      X-USER-AGENT: r-curl/3.2 crul/0.6.1.9100 rOpenSci(rcrossref/0.8.5.9110) (mailto:<crossref_email>)
+  response:
+    status:
+      status_code: '200'
+      message: OK
+      explanation: Request fulfilled, document follows
+    headers:
+      status: HTTP/1.1 200 OK
+      content-type: application/json;charset=UTF-8
+      vary: Accept
+      access-control-allow-origin: '*'
+      access-control-allow-headers: X-Requested-With
+      content-length: '182'
+      server: http-kit
+      date: Fri, 07 Dec 2018 22:30:04 GMT
+      x-rate-limit-limit: '50'
+      x-rate-limit-interval: 1s
+      connection: close
+    body:
+      encoding: UTF-8
+      string: '{"status":"ok","message-type":"license-list","message-version":"1.0.0","message":{"total-results":0,"items":[],"items-per-page":20,"query":{"start-index":0,"search-terms":"adfaaf"}}}'
+  recorded_at: 2018-12-07 22:30:04 GMT
+  recorded_with: vcr/0.2.0.9101, webmockr/0.2.9.9311

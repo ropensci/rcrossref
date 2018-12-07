@@ -1,0 +1,765 @@
+http_interactions:
+- request:
+    method: get
+    uri: https://api.crossref.org/works/10.1515/crelle-2013-0024
+    body:
+      encoding: ''
+      string: ''
+    headers:
+      Accept-Encoding: gzip, deflate
+      Accept: application/json, text/xml, application/xml, */*
+      User-Agent: r-curl/3.2 crul/0.6.1.9100 rOpenSci(rcrossref/0.8.5.9110) (mailto:<crossref_email>)
+      X-USER-AGENT: r-curl/3.2 crul/0.6.1.9100 rOpenSci(rcrossref/0.8.5.9110) (mailto:<crossref_email>)
+  response:
+    status:
+      status_code: '200'
+      message: OK
+      explanation: Request fulfilled, document follows
+    headers:
+      status: HTTP/1.1 200 OK
+      content-type: application/json;charset=UTF-8
+      vary: Accept
+      access-control-allow-origin: '*'
+      access-control-allow-headers: X-Requested-With
+      content-length: '2808'
+      server: http-kit
+      date: Fri, 07 Dec 2018 21:28:37 GMT
+      x-rate-limit-limit: '50'
+      x-rate-limit-interval: 1s
+      connection: close
+    body:
+      encoding: UTF-8
+      string: '{"status":"ok","message-type":"work","message-version":"1.0.0","message":{"indexed":{"date-parts":[[2018,6,20]],"date-time":"2018-06-20T04:42:36Z","timestamp":1529469756693},"reference-count":0,"publisher":"Walter
+        de Gruyter GmbH","issue":"700","funder":[{"name":"NSF","award":["DMS-0800084","DMS-1206661","DMS-0804042","DMS-1105187"]},{"name":"NSF","award":["DMS-0800084","DMS-1206661","DMS-0804042","DMS-1105187"]},{"name":"NSF","award":["DMS-0800084","DMS-1206661","DMS-0804042","DMS-1105187"]},{"name":"NSF","award":["DMS-0800084","DMS-1206661","DMS-0804042","DMS-1105187"]}],"content-domain":{"domain":[],"crossmark-restriction":false},"short-container-title":[],"published-print":{"date-parts":[[2015,1,1]]},"abstract":"<jats:title>Abstract<\/jats:title><jats:p>We
+        investigate rigidity and stability properties of critical points of quadratic
+        curvature functionals on the space of Riemannian metrics. We show it is possible
+        to \u201cgauge\u201d the Euler\u2013Lagrange equations, in a self-adjoint
+        fashion, to become elliptic. Fredholm theory may then be used to describe
+        local properties of the moduli space of critical metrics. We show a number
+        of compact examples are infinitesimally rigid, and consequently, are isolated
+        critical points in the space of unit-volume Riemannian metrics. We then give
+        examples of critical metrics which are strict local minimizers (up to diffeomorphism
+        and scaling). A corollary is a local \u201creverse Bishop''s inequality\u201d
+        for such metrics. In particular, any metric<\/jats:p>","DOI":"10.1515\/crelle-2013-0024","type":"journal-article","created":{"date-parts":[[2013,5,30]],"date-time":"2013-05-30T20:40:52Z","timestamp":1369946452000},"source":"Crossref","is-referenced-by-count":3,"title":["Rigidity
+        and stability of Einstein metrics for quadratic curvature functionals"],"prefix":"10.1515","volume":"2015","author":[{"given":"Matthew
+        J.","family":"Gursky","sequence":"first","affiliation":[]},{"given":"Jeff
+        A.","family":"Viaclovsky","sequence":"additional","affiliation":[]}],"member":"374","container-title":["Journal
+        f\u00fcr die reine und angewandte Mathematik (Crelles Journal)"],"original-title":[],"link":[{"URL":"https:\/\/www.degruyter.com\/view\/j\/crelle.2015.2015.issue-700\/crelle-2013-0024\/crelle-2013-0024.pdf","content-type":"unspecified","content-version":"vor","intended-application":"similarity-checking"}],"deposited":{"date-parts":[[2017,5,9]],"date-time":"2017-05-09T17:17:13Z","timestamp":1494350233000},"score":1.0,"subtitle":[],"short-title":[],"issued":{"date-parts":[[2015,1,1]]},"references-count":0,"journal-issue":{"issue":"700"},"URL":"http:\/\/dx.doi.org\/10.1515\/crelle-2013-0024","relation":{},"ISSN":["0075-4102","1435-5345"],"issn-type":[{"value":"0075-4102","type":"print"},{"value":"1435-5345","type":"electronic"}]}}'
+  recorded_at: 2018-12-07 21:28:45 GMT
+  recorded_with: vcr/0.2.0.9101, webmockr/0.2.9.9311
+- request:
+    method: get
+    uri: https://api.crossref.org/works/10.1186/isrctn11093872
+    body:
+      encoding: ''
+      string: ''
+    headers:
+      Accept-Encoding: gzip, deflate
+      Accept: application/json, text/xml, application/xml, */*
+      User-Agent: r-curl/3.2 crul/0.6.1.9100 rOpenSci(rcrossref/0.8.5.9110) (mailto:<crossref_email>)
+      X-USER-AGENT: r-curl/3.2 crul/0.6.1.9100 rOpenSci(rcrossref/0.8.5.9110) (mailto:<crossref_email>)
+  response:
+    status:
+      status_code: '200'
+      message: OK
+      explanation: Request fulfilled, document follows
+    headers:
+      status: HTTP/1.1 200 OK
+      content-type: application/json;charset=UTF-8
+      vary: Accept
+      access-control-allow-origin: '*'
+      access-control-allow-headers: X-Requested-With
+      content-length: '1372'
+      server: http-kit
+      date: Fri, 07 Dec 2018 21:28:38 GMT
+      x-rate-limit-limit: '50'
+      x-rate-limit-interval: 1s
+      connection: close
+    body:
+      encoding: UTF-8
+      string: '{"status":"ok","message-type":"work","message-version":"1.0.0","message":{"institution":{"name":"ISRCTN","place":["London,
+        UK"],"acronym":["-"]},"indexed":{"date-parts":[[2018,5,7]],"date-time":"2018-05-07T22:33:30Z","timestamp":1525732410826},"reference-count":0,"publisher":"Springer
+        Nature","funder":[{"DOI":"10.13039\/501100000272","name":"National Institute
+        for Health Research","doi-asserted-by":"publisher","award":[]}],"content-domain":{"domain":["www.isrctn.com"],"crossmark-restriction":true},"short-container-title":[],"DOI":"10.1186\/isrctn11093872","type":"dataset","created":{"date-parts":[[2015,11,11]],"date-time":"2015-11-11T12:20:04Z","timestamp":1447244404000},"update-policy":"http:\/\/dx.doi.org\/10.1186\/isrctn_crossmark_policy","source":"Crossref","is-referenced-by-count":0,"title":["CapaCiTY
+        Study 2 - Chronic Constipation Treatment Pathway"],"prefix":"10.1186","author":[{"given":"Shiva","family":"Taheri","sequence":"first","affiliation":[]}],"member":"297","content-created":{"date-parts":[[2015,11,11]]},"container-title":["http:\/\/isrctn.com\/"],"original-title":[],"deposited":{"date-parts":[[2015,11,11]],"date-time":"2015-11-11T12:20:06Z","timestamp":1447244406000},"score":1.0,"subtitle":[],"short-title":[],"issued":{"date-parts":[[2015,11,11]]},"references-count":0,"URL":"http:\/\/dx.doi.org\/10.1186\/isrctn11093872","relation":{}}}'
+  recorded_at: 2018-12-07 21:28:45 GMT
+  recorded_with: vcr/0.2.0.9101, webmockr/0.2.9.9311
+- request:
+    method: get
+    uri: https://api.crossref.org/works/10.1145/2831244.2831252
+    body:
+      encoding: ''
+      string: ''
+    headers:
+      Accept-Encoding: gzip, deflate
+      Accept: application/json, text/xml, application/xml, */*
+      User-Agent: r-curl/3.2 crul/0.6.1.9100 rOpenSci(rcrossref/0.8.5.9110) (mailto:<crossref_email>)
+      X-USER-AGENT: r-curl/3.2 crul/0.6.1.9100 rOpenSci(rcrossref/0.8.5.9110) (mailto:<crossref_email>)
+  response:
+    status:
+      status_code: '200'
+      message: OK
+      explanation: Request fulfilled, document follows
+    headers:
+      status: HTTP/1.1 200 OK
+      content-type: application/json;charset=UTF-8
+      vary: Accept
+      access-control-allow-origin: '*'
+      access-control-allow-headers: X-Requested-With
+      content-length: '6129'
+      server: http-kit
+      date: Fri, 07 Dec 2018 21:28:39 GMT
+      x-rate-limit-limit: '50'
+      x-rate-limit-interval: 1s
+      connection: close
+    body:
+      encoding: UTF-8
+      string: '{"status":"ok","message-type":"work","message-version":"1.0.0","message":{"indexed":{"date-parts":[[2018,5,7]],"date-time":"2018-05-07T22:34:23Z","timestamp":1525732463334},"publisher-location":"New
+        York, New York, USA","reference-count":18,"publisher":"ACM Press","isbn-type":[{"value":"9781450339933","type":"print"}],"license":[{"URL":"http:\/\/www.acm.org\/publications\/policies\/copyright_policy#Background","start":{"date-parts":[[2015,11,15]],"date-time":"2015-11-15T00:00:00Z","timestamp":1447545600000},"delay-in-days":318,"content-version":"vor"}],"funder":[{"name":"Office
+        of Science of the U.S. Department of Energy","award":["DE-AC02-05CH11231"]},{"name":"National
+        Science Foundatio","award":["1564647"]},{"name":"National Science Foundation
+        award","award":["1561041"]}],"content-domain":{"domain":[],"crossmark-restriction":false},"short-container-title":[],"published-print":{"date-parts":[[2015]]},"DOI":"10.1145\/2831244.2831252","type":"proceedings-article","created":{"date-parts":[[2015,11,11]],"date-time":"2015-11-11T13:07:06Z","timestamp":1447247226000},"source":"Crossref","is-referenced-by-count":1,"title":["Performance
+        evaluation and tuning of BioPig for genomic analysis"],"prefix":"10.1145","author":[{"given":"Lizhen","family":"Shi","sequence":"first","affiliation":[]},{"given":"Zhong","family":"Wang","sequence":"additional","affiliation":[]},{"given":"Weikuan","family":"Yu","sequence":"additional","affiliation":[]},{"given":"Xiandong","family":"Meng","sequence":"additional","affiliation":[]}],"member":"320","reference":[{"key":"key-10.1145\/2831244.2831252-1","unstructured":"1000
+        Genomes Project. http:\/\/www.1000genomes.org\/."},{"key":"key-10.1145\/2831244.2831252-2","unstructured":"Apache
+        Hadoop. http:\/\/hadoop.apache.org\/."},{"key":"key-10.1145\/2831244.2831252-3","unstructured":"DNA
+        Sequencing. https:\/\/en.wikipedia.org\/wiki\/DNA_sequencing."},{"key":"key-10.1145\/2831244.2831252-4","unstructured":"Encode
+        Project. https:\/\/www.encodeproject.org\/."},{"key":"key-10.1145\/2831244.2831252-5","unstructured":"Human
+        Microbiome Project. https:\/\/en.wikipedia.org\/wiki\/Human_Microbiome_Project\/."},{"key":"key-10.1145\/2831244.2831252-6","unstructured":"Sequence
+        Analysis. https:\/\/en.wikipedia.org\/wiki\/Sequence_analysis."},{"key":"key-10.1145\/2831244.2831252-7","unstructured":"J.
+        Dean and S. Ghemawat. Mapreduce: simplified data processing on large clusters.Communications
+        of the ACM, 51(1):107--113, 2008."},{"key":"key-10.1145\/2831244.2831252-8","unstructured":"D.
+        Heger. Hadoop performance tuning-a pragmatic &#38; iterative approach.CMG
+        Journal, 4:97--113, 2013."},{"key":"key-10.1145\/2831244.2831252-9","unstructured":"M.
+        Hess, A. Sczyrba, R. Egan, T.-W. Kim, H. Chokhawala, G. Schroth, S. Luo, D.
+        S. Clark, F. Chen, T. Zhang, et al. Metagenomic discovery of biomass-degrading
+        genes and genomes from cow rumen.Science, 331(6016):463--467, 2011."},{"key":"key-10.1145\/2831244.2831252-10","unstructured":"S.
+        B. Joshi. Apache hadoop performance-tuning methodologies and best practices.
+        InProceedings of the 3rd ACM\/SPEC International Conference on Performance
+        Engineering, pages 241--242. ACM, 2012.","DOI":"10.1145\/2188286.2188323","doi-asserted-by":"crossref"},{"key":"key-10.1145\/2831244.2831252-11","unstructured":"M.
+        Li, L. Zeng, S. Meng, J. Tan, L. Zhang, A. R. Butt, and N. Fuller. Mronline:
+        Mapreduce online performance tuning. InProceedings of the 23rd international
+        symposium on High-performance parallel and distributed computing, pages 165--176.
+        ACM, 2014."},{"key":"key-10.1145\/2831244.2831252-12","unstructured":"M. L.
+        Metzker. Sequencing technologies: the next generation.Nature reviews genetics,
+        11(1):31--46, 2010."},{"key":"key-10.1145\/2831244.2831252-13","unstructured":"H.
+        Nordberg, K. Bhatia, K. Wang, and Z. Wang. Biopig: a hadoop-based analytic
+        toolkit for large-scale sequence data.Bioinformatics, page btt528, 2013."},{"key":"key-10.1145\/2831244.2831252-14","unstructured":"C.
+        Olston, B. Reed, U. Srivastava, R. Kumar, and A. Tomkins. Pig latin: a not-so-foreign
+        language for data processing. InProceedings of the 2008 ACM SIGMOD international
+        conference on Management of data, pages 1099--1110. ACM, 2008.","DOI":"10.1145\/1376616.1376726","doi-asserted-by":"crossref"},{"key":"key-10.1145\/2831244.2831252-15","unstructured":"V.
+        L. Shrinivas Joshi. Java garbage collection characteristics and tuning guidelines
+        for apache hadoop terasort workload. 2012."},{"key":"key-10.1145\/2831244.2831252-16","unstructured":"P.
+        TUNING. Performance tuning. 2009."},{"key":"key-10.1145\/2831244.2831252-17","unstructured":"W.
+        Yu, K. J. Wu, W. Ku, C. Xu, and J. Gao. BMF: bitmapped mass fingerprinting
+        for fast protein identification. In2011 IEEE International Conference on Cluster
+        Computing (CLUSTER), Austin, TX, USA, September 26-30, 2011, pages 17--25,
+        2011.","DOI":"10.1109\/CLUSTER.2011.11","doi-asserted-by":"crossref"},{"key":"key-10.1145\/2831244.2831252-18","unstructured":"J.
+        Zhang, R. Chiodini, A. Badr, and G. Zhang. The impact of next-generation sequencing
+        on genomics.Journal of genetics and genomics, 38(3):95--109, 2011."}],"event":{"name":"the
+        2015 International Workshop","location":"Austin, Texas","sponsor":["IEEE-CS\\DATC,
+        IEEE Computer Society","SIGHPC, ACM Special Interest Group on High Performance
+        Computing, Special Interest Group on High Performance Computing"],"acronym":"DISCS
+        ''15","number":"2015","start":{"date-parts":[[2015,11,15]]},"end":{"date-parts":[[2015,11,15]]}},"container-title":["Proceedings
+        of the 2015 International Workshop on Data-Intensive Scalable Computing Systems
+        - DISCS ''15"],"original-title":[],"link":[{"URL":"http:\/\/dl.acm.org\/ft_gateway.cfm?id=2831252&amp;ftid=1643730&amp;dwn=1","content-type":"unspecified","content-version":"vor","intended-application":"similarity-checking"}],"deposited":{"date-parts":[[2017,6,23]],"date-time":"2017-06-23T23:24:59Z","timestamp":1498260299000},"score":1.0,"subtitle":[],"short-title":[],"issued":{"date-parts":[[2015]]},"ISBN":["9781450339933"],"references-count":18,"URL":"http:\/\/dx.doi.org\/10.1145\/2831244.2831252","relation":{"cites":[]}}}'
+  recorded_at: 2018-12-07 21:28:45 GMT
+  recorded_with: vcr/0.2.0.9101, webmockr/0.2.9.9311
+- request:
+    method: get
+    uri: https://api.crossref.org/works/10.1145/2834800.2834802
+    body:
+      encoding: ''
+      string: ''
+    headers:
+      Accept-Encoding: gzip, deflate
+      Accept: application/json, text/xml, application/xml, */*
+      User-Agent: r-curl/3.2 crul/0.6.1.9100 rOpenSci(rcrossref/0.8.5.9110) (mailto:<crossref_email>)
+      X-USER-AGENT: r-curl/3.2 crul/0.6.1.9100 rOpenSci(rcrossref/0.8.5.9110) (mailto:<crossref_email>)
+  response:
+    status:
+      status_code: '200'
+      message: OK
+      explanation: Request fulfilled, document follows
+    headers:
+      status: HTTP/1.1 200 OK
+      content-type: application/json;charset=UTF-8
+      vary: Accept
+      access-control-allow-origin: '*'
+      access-control-allow-headers: X-Requested-With
+      content-length: '9912'
+      server: http-kit
+      date: Fri, 07 Dec 2018 21:28:41 GMT
+      x-rate-limit-limit: '50'
+      x-rate-limit-interval: 1s
+      connection: close
+    body:
+      encoding: UTF-8
+      string: '{"status":"ok","message-type":"work","message-version":"1.0.0","message":{"indexed":{"date-parts":[[2018,5,7]],"date-time":"2018-05-07T22:34:23Z","timestamp":1525732463665},"publisher-location":"New
+        York, New York, USA","reference-count":29,"publisher":"ACM Press","isbn-type":[{"value":"9781450339940","type":"print"}],"license":[{"URL":"http:\/\/www.acm.org\/publications\/policies\/copyright_policy#Background","start":{"date-parts":[[2015,11,15]],"date-time":"2015-11-15T00:00:00Z","timestamp":1447545600000},"delay-in-days":318,"content-version":"vor"}],"funder":[{"DOI":"10.13039\/100000015","name":"U.S.
+        Department of Energy","doi-asserted-by":"publisher","award":["DE- SC-0010042"]},{"name":"Russian
+        Scientific Foundation","award":["N14-11-00190"]},{"name":"panish Ministerio
+        de Economia y Competitividad","award":["TIN2011- 23283 and TIN2014-53495-R"]}],"content-domain":{"domain":[],"crossmark-restriction":false},"short-container-title":[],"published-print":{"date-parts":[[2015]]},"DOI":"10.1145\/2834800.2834802","type":"proceedings-article","created":{"date-parts":[[2015,11,11]],"date-time":"2015-11-11T13:07:06Z","timestamp":1447247226000},"source":"Crossref","is-referenced-by-count":1,"title":["Adaptive
+        precision solvers for sparse linear systems"],"prefix":"10.1145","author":[{"given":"Hartwig","family":"Anzt","sequence":"first","affiliation":[]},{"given":"Jack","family":"Dongarra","sequence":"additional","affiliation":[]},{"given":"Enrique
+        S.","family":"Quintana-Ort\u00ed","sequence":"additional","affiliation":[]}],"member":"320","reference":[{"key":"key-10.1145\/2834800.2834802-1","unstructured":"The
+        top500 list, 2015. http:\/\/www.top500.org. Last access: July 2015."},{"key":"key-10.1145\/2834800.2834802-2","unstructured":"H.
+        Anzt, E. Chow, and J. Dongarra. Iterative sparse triangular solves for preconditioning.
+        InEuro-Par 2015: Parallel Processing, volume 9233 ofLecture Notes in Computer
+        Science, pages 650--661. 2015.","DOI":"10.1007\/978-3-662-48096-0_50","doi-asserted-by":"crossref"},{"key":"key-10.1145\/2834800.2834802-3","unstructured":"H.
+        Anzt, J. Dongarra, and E. S. Quintana-Ort&#237;. Tuning stationary iterative
+        solvers for fault resilience. InWorkshop on Latest Advances in Scalable Algorithms
+        for Large-Scale Systems, ScalA, 2015. DOI: 10.1145\/2832080.2832081.","DOI":"10.1145\/2832080.2832081","doi-asserted-by":"crossref"},{"key":"key-10.1145\/2834800.2834802-4","unstructured":"H.
+        Anzt and E. S. Quintana-Ort&#237;. Improving the energy efficiency of sparse
+        linear system solvers on multicore and manycore systems.Philosophical Trans.
+        Royal Society of London A: Mathematical, Physical and Engineering Sciences,
+        372(2018), 2014."},{"key":"key-10.1145\/2834800.2834802-5","unstructured":"H.
+        Anzt, S. Tomov, J. Dongarra, and V. Heuveline. A block-asynchronous relaxation
+        method for graphics processing units.Journal of Parallel and Distributed Computing,
+        73(12):1613--1626, 2013."},{"key":"key-10.1145\/2834800.2834802-6","unstructured":"S.
+        Barrachina, M. Castillo, F. D. Igual, R. Mayo, E. S. Quintana-Ort&#237;, and
+        G. Quintana-Ort&#237;. Exploiting the capabilities of modern GPUs for dense
+        matrix computations.Concurrency and Computation: Practice and Experience,
+        21(18):2457--2477, 2009."},{"key":"key-10.1145\/2834800.2834802-7","unstructured":"A.
+        Buttari, J. Dongarra, J. Langou, J. Langou, P. Luszczek, and J. Kurzak. Mixed
+        precision iterative refinement techniques for the solution of dense linear
+        systems.Int. J. High Performance Computing Applications, 21(4):457--466, 2007."},{"key":"key-10.1145\/2834800.2834802-8","unstructured":"Z.
+        Chen. Online-ABFT: An online algorithm based fault tolerance scheme for soft
+        error detection in iterative methods. InProc. 18th ACM SIGPLAN Symp. Principles
+        and Practice of Parallel Programming, PPoPP''13, pages 167--176, 2013."},{"key":"key-10.1145\/2834800.2834802-9","unstructured":"E.
+        Chow, H. Anzt, and J. Dongarra. Asynchronous iterative algorithm for computing
+        incomplete factorizations on GPUs. InLecture Notes in Computer Science, volume
+        9137, pages 1--16, 2015.","DOI":"10.1007\/978-3-319-20119-1_1","doi-asserted-by":"crossref"},{"key":"key-10.1145\/2834800.2834802-10","unstructured":"E.
+        Chow and A. Patel. Fine-grained parallel incomplete LU factorization.SIAM
+        Journal on Scientific Computing, 37(2):C169--C193, 2015."},{"key":"key-10.1145\/2834800.2834802-11","unstructured":"T.
+        A. Davis. The University of Florida Sparse Matrix Collection.NA DIGEST, 92,
+        1994."},{"key":"key-10.1145\/2834800.2834802-12","unstructured":"R. Dennard,
+        F. Gaensslen, V. Rideout, E. Bassous, and A. LeBlanc. Design of ion-implanted
+        MOSFET''s with very small physical dimensions.IEEE J. Solid-State Circuits,
+        9(5):256--268, 1974."},{"key":"key-10.1145\/2834800.2834802-13","unstructured":"J.
+        Elliott, M. Hoemmen, and F. Mueller. Evaluating the impact of SDC on the GMRES
+        iterative solver. InProc. 2014 IEEE 28th Int. Parallel and Distributed Processing
+        Symp., IPDPS''14, pages 1193--1202, 2014.","DOI":"10.1109\/IPDPS.2014.123","doi-asserted-by":"crossref"},{"key":"key-10.1145\/2834800.2834802-14","unstructured":"H.
+        Esmaeilzadeh, E. Blem, R. St. Amant, K. Sankaralingam, and D. Burger. Dark
+        silicon and the end of multicore scaling. InProc. 38th Annual Int. Symp. Computer
+        architecture, ISCA''11, pages 365--376, 2011.","DOI":"10.1145\/2000064.2000108","doi-asserted-by":"crossref"},{"key":"key-10.1145\/2834800.2834802-15","unstructured":"P.
+        Gschwandtner, C. Chalios, D. Nikolopoulos, H. Vandierendonck, and T. Fahringer.
+        On the potential of significance-driven execution for energy-aware HPC.Computer
+        Science--Research and Development, 30:197--206, 2015."},{"key":"key-10.1145\/2834800.2834802-16","unstructured":"N.
+        Hardavellas, M. Ferdman, B. Falsafi, and A. Ailamaki. Toward Dark Silicon
+        in servers.Micro, IEEE, 31(4):6--15, 2011."},{"key":"key-10.1145\/2834800.2834802-17","unstructured":"N.
+        Higham.Accuracy and Stability of Numerical Algorithms.Philadelphia, PA, 1996."},{"key":"key-10.1145\/2834800.2834802-18","unstructured":"M.
+        Hoemmen and M. A. Heroux. Fault-tolerant iterative methods via selective reliability.
+        InProc. 2011 Int. Conf. for High Performance Computing, Networking, Storage
+        and Analysis (SC), 2011."},{"key":"key-10.1145\/2834800.2834802-19","unstructured":"W.
+        Kahan. Lecture notes on the status of IEEE standard 754 for binary floating-point
+        arithmetic, 1997. http:\/\/www.eecs.berkeley.edu\/~wkahan\/ieee754status\/IEEE754.PDF."},{"key":"key-10.1145\/2834800.2834802-20","unstructured":"P.
+        Kogge et al. ExaScale computing study: Technology challenges in achieving
+        ExaScale systems, 2008. http:\/\/users.ece.gatech.edu\/~mrichard\/ExascaleComputingStudyReports\/exascale_final_report_100208.pdf."},{"key":"key-10.1145\/2834800.2834802-21","unstructured":"J.
+        F. Lavignonet al.ETP4HPC strategic research agenda achieving HPC leadership
+        in Europe, 2013. http:\/\/www.etp4hpc.eu\/."},{"key":"key-10.1145\/2834800.2834802-22","unstructured":"S.
+        Liu, K. Pattabiraman, T. Moscibroda, and B. G. Zorn. Flikker: Saving DRAM
+        refresh-power through critical data partitioning. InProc. Sixteenth International
+        Conference on Architectural Support for Programming Languages and Operating
+        Systems, ASPLOS XVI, pages 213--224, 2011."},{"key":"key-10.1145\/2834800.2834802-23","unstructured":"G.
+        Moore. Cramming more components onto integrated circuits.Electronics, 38(8):114--117,
+        1965."},{"key":"key-10.1145\/2834800.2834802-24","unstructured":"A. Rahimi,
+        A. Marongiu, R. Gupta, and L. Benini. A variability-aware OpenMP environment
+        for efficient execution of accuracy-configurable computation on shared-FPU
+        processor clusters. InHardware\/Software Codesign and System Synthesis (CODES+ISSS),
+        2013 International Conference on, pages 1--10, 2013.","DOI":"10.1109\/CODES-ISSS.2013.6659022","doi-asserted-by":"crossref"},{"key":"key-10.1145\/2834800.2834802-25","unstructured":"Y.
+        Saad.Iterative Methods for Sparse Linear Systems.SIAM, 2003."},{"key":"key-10.1145\/2834800.2834802-26","unstructured":"H.
+        F.-W. Sadrozinski and J. Wu.Applications of Field-Programmable Gate Arrays
+        in Scientific Research.CRC Press, 2010."},{"key":"key-10.1145\/2834800.2834802-27","unstructured":"A.
+        Sampson, W. Dietl, E. Fortuna, D. Gnanapragasam, L. Ceze, and D. Grossman.
+        EnerJ: Approximate data types for safe and general low-power computation.
+        InProc. 32Nd ACM SIGPLAN Conference on Programming Language Design and Implementation,
+        PLDI''11, pages 164--174, 2011."},{"key":"key-10.1145\/2834800.2834802-28","unstructured":"P.
+        Sao and R. Vuduc. Self-stabilizing iterative solvers. InWorkshop Latest Advances
+        in Scalable Algorithms for Large-Scale Systems, pages 4:1--4:8, 2013.","DOI":"10.1145\/2530268.2530272","doi-asserted-by":"crossref"},{"key":"key-10.1145\/2834800.2834802-29","unstructured":"Semiconductor
+        Industries Association. International Technology Roadmap for Semiconductors,
+        2013. http:\/\/www.itrs.net\/. Last access: July 2015."}],"event":{"name":"the
+        3rd International Workshop","location":"Austin, Texas","sponsor":["IEEE-CS\\DATC,
+        IEEE Computer Society","SIGHPC, ACM Special Interest Group on High Performance
+        Computing, Special Interest Group on High Performance Computing"],"acronym":"E2SC
+        ''15","number":"3","start":{"date-parts":[[2015,11,15]]},"end":{"date-parts":[[2015,11,15]]}},"container-title":["Proceedings
+        of the 3rd International Workshop on Energy Efficient Supercomputing - E2SC
+        ''15"],"original-title":[],"link":[{"URL":"http:\/\/dl.acm.org\/ft_gateway.cfm?id=2834802&amp;ftid=1643738&amp;dwn=1","content-type":"unspecified","content-version":"vor","intended-application":"similarity-checking"}],"deposited":{"date-parts":[[2017,6,23]],"date-time":"2017-06-23T23:25:00Z","timestamp":1498260300000},"score":1.0,"subtitle":[],"short-title":[],"issued":{"date-parts":[[2015]]},"ISBN":["9781450339940"],"references-count":29,"URL":"http:\/\/dx.doi.org\/10.1145\/2834800.2834802","relation":{"cites":[]}}}'
+  recorded_at: 2018-12-07 21:28:45 GMT
+  recorded_with: vcr/0.2.0.9101, webmockr/0.2.9.9311
+- request:
+    method: get
+    uri: https://api.crossref.org/works/10.1145/2834800.2834802
+    body:
+      encoding: ''
+      string: ''
+    headers:
+      Accept-Encoding: gzip, deflate
+      Accept: application/json, text/xml, application/xml, */*
+      User-Agent: r-curl/3.2 crul/0.6.1.9100 rOpenSci(rcrossref/0.8.5.9110) (mailto:<crossref_email>)
+      X-USER-AGENT: r-curl/3.2 crul/0.6.1.9100 rOpenSci(rcrossref/0.8.5.9110) (mailto:<crossref_email>)
+  response:
+    status:
+      status_code: '200'
+      message: OK
+      explanation: Request fulfilled, document follows
+    headers:
+      status: HTTP/1.1 200 OK
+      content-type: application/json;charset=UTF-8
+      vary: Accept
+      access-control-allow-origin: '*'
+      access-control-allow-headers: X-Requested-With
+      content-length: '9912'
+      server: http-kit
+      date: Fri, 07 Dec 2018 21:28:41 GMT
+      x-rate-limit-limit: '50'
+      x-rate-limit-interval: 1s
+      connection: close
+    body:
+      encoding: UTF-8
+      string: '{"status":"ok","message-type":"work","message-version":"1.0.0","message":{"indexed":{"date-parts":[[2018,5,7]],"date-time":"2018-05-07T22:34:23Z","timestamp":1525732463665},"publisher-location":"New
+        York, New York, USA","reference-count":29,"publisher":"ACM Press","isbn-type":[{"value":"9781450339940","type":"print"}],"license":[{"URL":"http:\/\/www.acm.org\/publications\/policies\/copyright_policy#Background","start":{"date-parts":[[2015,11,15]],"date-time":"2015-11-15T00:00:00Z","timestamp":1447545600000},"delay-in-days":318,"content-version":"vor"}],"funder":[{"DOI":"10.13039\/100000015","name":"U.S.
+        Department of Energy","doi-asserted-by":"publisher","award":["DE- SC-0010042"]},{"name":"Russian
+        Scientific Foundation","award":["N14-11-00190"]},{"name":"panish Ministerio
+        de Economia y Competitividad","award":["TIN2011- 23283 and TIN2014-53495-R"]}],"content-domain":{"domain":[],"crossmark-restriction":false},"short-container-title":[],"published-print":{"date-parts":[[2015]]},"DOI":"10.1145\/2834800.2834802","type":"proceedings-article","created":{"date-parts":[[2015,11,11]],"date-time":"2015-11-11T13:07:06Z","timestamp":1447247226000},"source":"Crossref","is-referenced-by-count":1,"title":["Adaptive
+        precision solvers for sparse linear systems"],"prefix":"10.1145","author":[{"given":"Hartwig","family":"Anzt","sequence":"first","affiliation":[]},{"given":"Jack","family":"Dongarra","sequence":"additional","affiliation":[]},{"given":"Enrique
+        S.","family":"Quintana-Ort\u00ed","sequence":"additional","affiliation":[]}],"member":"320","reference":[{"key":"key-10.1145\/2834800.2834802-1","unstructured":"The
+        top500 list, 2015. http:\/\/www.top500.org. Last access: July 2015."},{"key":"key-10.1145\/2834800.2834802-2","unstructured":"H.
+        Anzt, E. Chow, and J. Dongarra. Iterative sparse triangular solves for preconditioning.
+        InEuro-Par 2015: Parallel Processing, volume 9233 ofLecture Notes in Computer
+        Science, pages 650--661. 2015.","DOI":"10.1007\/978-3-662-48096-0_50","doi-asserted-by":"crossref"},{"key":"key-10.1145\/2834800.2834802-3","unstructured":"H.
+        Anzt, J. Dongarra, and E. S. Quintana-Ort&#237;. Tuning stationary iterative
+        solvers for fault resilience. InWorkshop on Latest Advances in Scalable Algorithms
+        for Large-Scale Systems, ScalA, 2015. DOI: 10.1145\/2832080.2832081.","DOI":"10.1145\/2832080.2832081","doi-asserted-by":"crossref"},{"key":"key-10.1145\/2834800.2834802-4","unstructured":"H.
+        Anzt and E. S. Quintana-Ort&#237;. Improving the energy efficiency of sparse
+        linear system solvers on multicore and manycore systems.Philosophical Trans.
+        Royal Society of London A: Mathematical, Physical and Engineering Sciences,
+        372(2018), 2014."},{"key":"key-10.1145\/2834800.2834802-5","unstructured":"H.
+        Anzt, S. Tomov, J. Dongarra, and V. Heuveline. A block-asynchronous relaxation
+        method for graphics processing units.Journal of Parallel and Distributed Computing,
+        73(12):1613--1626, 2013."},{"key":"key-10.1145\/2834800.2834802-6","unstructured":"S.
+        Barrachina, M. Castillo, F. D. Igual, R. Mayo, E. S. Quintana-Ort&#237;, and
+        G. Quintana-Ort&#237;. Exploiting the capabilities of modern GPUs for dense
+        matrix computations.Concurrency and Computation: Practice and Experience,
+        21(18):2457--2477, 2009."},{"key":"key-10.1145\/2834800.2834802-7","unstructured":"A.
+        Buttari, J. Dongarra, J. Langou, J. Langou, P. Luszczek, and J. Kurzak. Mixed
+        precision iterative refinement techniques for the solution of dense linear
+        systems.Int. J. High Performance Computing Applications, 21(4):457--466, 2007."},{"key":"key-10.1145\/2834800.2834802-8","unstructured":"Z.
+        Chen. Online-ABFT: An online algorithm based fault tolerance scheme for soft
+        error detection in iterative methods. InProc. 18th ACM SIGPLAN Symp. Principles
+        and Practice of Parallel Programming, PPoPP''13, pages 167--176, 2013."},{"key":"key-10.1145\/2834800.2834802-9","unstructured":"E.
+        Chow, H. Anzt, and J. Dongarra. Asynchronous iterative algorithm for computing
+        incomplete factorizations on GPUs. InLecture Notes in Computer Science, volume
+        9137, pages 1--16, 2015.","DOI":"10.1007\/978-3-319-20119-1_1","doi-asserted-by":"crossref"},{"key":"key-10.1145\/2834800.2834802-10","unstructured":"E.
+        Chow and A. Patel. Fine-grained parallel incomplete LU factorization.SIAM
+        Journal on Scientific Computing, 37(2):C169--C193, 2015."},{"key":"key-10.1145\/2834800.2834802-11","unstructured":"T.
+        A. Davis. The University of Florida Sparse Matrix Collection.NA DIGEST, 92,
+        1994."},{"key":"key-10.1145\/2834800.2834802-12","unstructured":"R. Dennard,
+        F. Gaensslen, V. Rideout, E. Bassous, and A. LeBlanc. Design of ion-implanted
+        MOSFET''s with very small physical dimensions.IEEE J. Solid-State Circuits,
+        9(5):256--268, 1974."},{"key":"key-10.1145\/2834800.2834802-13","unstructured":"J.
+        Elliott, M. Hoemmen, and F. Mueller. Evaluating the impact of SDC on the GMRES
+        iterative solver. InProc. 2014 IEEE 28th Int. Parallel and Distributed Processing
+        Symp., IPDPS''14, pages 1193--1202, 2014.","DOI":"10.1109\/IPDPS.2014.123","doi-asserted-by":"crossref"},{"key":"key-10.1145\/2834800.2834802-14","unstructured":"H.
+        Esmaeilzadeh, E. Blem, R. St. Amant, K. Sankaralingam, and D. Burger. Dark
+        silicon and the end of multicore scaling. InProc. 38th Annual Int. Symp. Computer
+        architecture, ISCA''11, pages 365--376, 2011.","DOI":"10.1145\/2000064.2000108","doi-asserted-by":"crossref"},{"key":"key-10.1145\/2834800.2834802-15","unstructured":"P.
+        Gschwandtner, C. Chalios, D. Nikolopoulos, H. Vandierendonck, and T. Fahringer.
+        On the potential of significance-driven execution for energy-aware HPC.Computer
+        Science--Research and Development, 30:197--206, 2015."},{"key":"key-10.1145\/2834800.2834802-16","unstructured":"N.
+        Hardavellas, M. Ferdman, B. Falsafi, and A. Ailamaki. Toward Dark Silicon
+        in servers.Micro, IEEE, 31(4):6--15, 2011."},{"key":"key-10.1145\/2834800.2834802-17","unstructured":"N.
+        Higham.Accuracy and Stability of Numerical Algorithms.Philadelphia, PA, 1996."},{"key":"key-10.1145\/2834800.2834802-18","unstructured":"M.
+        Hoemmen and M. A. Heroux. Fault-tolerant iterative methods via selective reliability.
+        InProc. 2011 Int. Conf. for High Performance Computing, Networking, Storage
+        and Analysis (SC), 2011."},{"key":"key-10.1145\/2834800.2834802-19","unstructured":"W.
+        Kahan. Lecture notes on the status of IEEE standard 754 for binary floating-point
+        arithmetic, 1997. http:\/\/www.eecs.berkeley.edu\/~wkahan\/ieee754status\/IEEE754.PDF."},{"key":"key-10.1145\/2834800.2834802-20","unstructured":"P.
+        Kogge et al. ExaScale computing study: Technology challenges in achieving
+        ExaScale systems, 2008. http:\/\/users.ece.gatech.edu\/~mrichard\/ExascaleComputingStudyReports\/exascale_final_report_100208.pdf."},{"key":"key-10.1145\/2834800.2834802-21","unstructured":"J.
+        F. Lavignonet al.ETP4HPC strategic research agenda achieving HPC leadership
+        in Europe, 2013. http:\/\/www.etp4hpc.eu\/."},{"key":"key-10.1145\/2834800.2834802-22","unstructured":"S.
+        Liu, K. Pattabiraman, T. Moscibroda, and B. G. Zorn. Flikker: Saving DRAM
+        refresh-power through critical data partitioning. InProc. Sixteenth International
+        Conference on Architectural Support for Programming Languages and Operating
+        Systems, ASPLOS XVI, pages 213--224, 2011."},{"key":"key-10.1145\/2834800.2834802-23","unstructured":"G.
+        Moore. Cramming more components onto integrated circuits.Electronics, 38(8):114--117,
+        1965."},{"key":"key-10.1145\/2834800.2834802-24","unstructured":"A. Rahimi,
+        A. Marongiu, R. Gupta, and L. Benini. A variability-aware OpenMP environment
+        for efficient execution of accuracy-configurable computation on shared-FPU
+        processor clusters. InHardware\/Software Codesign and System Synthesis (CODES+ISSS),
+        2013 International Conference on, pages 1--10, 2013.","DOI":"10.1109\/CODES-ISSS.2013.6659022","doi-asserted-by":"crossref"},{"key":"key-10.1145\/2834800.2834802-25","unstructured":"Y.
+        Saad.Iterative Methods for Sparse Linear Systems.SIAM, 2003."},{"key":"key-10.1145\/2834800.2834802-26","unstructured":"H.
+        F.-W. Sadrozinski and J. Wu.Applications of Field-Programmable Gate Arrays
+        in Scientific Research.CRC Press, 2010."},{"key":"key-10.1145\/2834800.2834802-27","unstructured":"A.
+        Sampson, W. Dietl, E. Fortuna, D. Gnanapragasam, L. Ceze, and D. Grossman.
+        EnerJ: Approximate data types for safe and general low-power computation.
+        InProc. 32Nd ACM SIGPLAN Conference on Programming Language Design and Implementation,
+        PLDI''11, pages 164--174, 2011."},{"key":"key-10.1145\/2834800.2834802-28","unstructured":"P.
+        Sao and R. Vuduc. Self-stabilizing iterative solvers. InWorkshop Latest Advances
+        in Scalable Algorithms for Large-Scale Systems, pages 4:1--4:8, 2013.","DOI":"10.1145\/2530268.2530272","doi-asserted-by":"crossref"},{"key":"key-10.1145\/2834800.2834802-29","unstructured":"Semiconductor
+        Industries Association. International Technology Roadmap for Semiconductors,
+        2013. http:\/\/www.itrs.net\/. Last access: July 2015."}],"event":{"name":"the
+        3rd International Workshop","location":"Austin, Texas","sponsor":["IEEE-CS\\DATC,
+        IEEE Computer Society","SIGHPC, ACM Special Interest Group on High Performance
+        Computing, Special Interest Group on High Performance Computing"],"acronym":"E2SC
+        ''15","number":"3","start":{"date-parts":[[2015,11,15]]},"end":{"date-parts":[[2015,11,15]]}},"container-title":["Proceedings
+        of the 3rd International Workshop on Energy Efficient Supercomputing - E2SC
+        ''15"],"original-title":[],"link":[{"URL":"http:\/\/dl.acm.org\/ft_gateway.cfm?id=2834802&amp;ftid=1643738&amp;dwn=1","content-type":"unspecified","content-version":"vor","intended-application":"similarity-checking"}],"deposited":{"date-parts":[[2017,6,23]],"date-time":"2017-06-23T23:25:00Z","timestamp":1498260300000},"score":1.0,"subtitle":[],"short-title":[],"issued":{"date-parts":[[2015]]},"ISBN":["9781450339940"],"references-count":29,"URL":"http:\/\/dx.doi.org\/10.1145\/2834800.2834802","relation":{"cites":[]}}}'
+  recorded_at: 2018-12-07 21:28:45 GMT
+  recorded_with: vcr/0.2.0.9101, webmockr/0.2.9.9311
+- request:
+    method: get
+    uri: https://api.crossref.org/works/10.1145/2834800.2834802
+    body:
+      encoding: ''
+      string: ''
+    headers:
+      Accept-Encoding: gzip, deflate
+      Accept: application/json, text/xml, application/xml, */*
+      User-Agent: r-curl/3.2 crul/0.6.1.9100 rOpenSci(rcrossref/0.8.5.9110) (mailto:<crossref_email>)
+      X-USER-AGENT: r-curl/3.2 crul/0.6.1.9100 rOpenSci(rcrossref/0.8.5.9110) (mailto:<crossref_email>)
+  response:
+    status:
+      status_code: '200'
+      message: OK
+      explanation: Request fulfilled, document follows
+    headers:
+      status: HTTP/1.1 200 OK
+      content-type: application/json;charset=UTF-8
+      vary: Accept
+      access-control-allow-origin: '*'
+      access-control-allow-headers: X-Requested-With
+      content-length: '9912'
+      server: http-kit
+      date: Fri, 07 Dec 2018 21:28:41 GMT
+      x-rate-limit-limit: '50'
+      x-rate-limit-interval: 1s
+      connection: close
+    body:
+      encoding: UTF-8
+      string: '{"status":"ok","message-type":"work","message-version":"1.0.0","message":{"indexed":{"date-parts":[[2018,5,7]],"date-time":"2018-05-07T22:34:23Z","timestamp":1525732463665},"publisher-location":"New
+        York, New York, USA","reference-count":29,"publisher":"ACM Press","isbn-type":[{"value":"9781450339940","type":"print"}],"license":[{"URL":"http:\/\/www.acm.org\/publications\/policies\/copyright_policy#Background","start":{"date-parts":[[2015,11,15]],"date-time":"2015-11-15T00:00:00Z","timestamp":1447545600000},"delay-in-days":318,"content-version":"vor"}],"funder":[{"DOI":"10.13039\/100000015","name":"U.S.
+        Department of Energy","doi-asserted-by":"publisher","award":["DE- SC-0010042"]},{"name":"Russian
+        Scientific Foundation","award":["N14-11-00190"]},{"name":"panish Ministerio
+        de Economia y Competitividad","award":["TIN2011- 23283 and TIN2014-53495-R"]}],"content-domain":{"domain":[],"crossmark-restriction":false},"short-container-title":[],"published-print":{"date-parts":[[2015]]},"DOI":"10.1145\/2834800.2834802","type":"proceedings-article","created":{"date-parts":[[2015,11,11]],"date-time":"2015-11-11T13:07:06Z","timestamp":1447247226000},"source":"Crossref","is-referenced-by-count":1,"title":["Adaptive
+        precision solvers for sparse linear systems"],"prefix":"10.1145","author":[{"given":"Hartwig","family":"Anzt","sequence":"first","affiliation":[]},{"given":"Jack","family":"Dongarra","sequence":"additional","affiliation":[]},{"given":"Enrique
+        S.","family":"Quintana-Ort\u00ed","sequence":"additional","affiliation":[]}],"member":"320","reference":[{"key":"key-10.1145\/2834800.2834802-1","unstructured":"The
+        top500 list, 2015. http:\/\/www.top500.org. Last access: July 2015."},{"key":"key-10.1145\/2834800.2834802-2","unstructured":"H.
+        Anzt, E. Chow, and J. Dongarra. Iterative sparse triangular solves for preconditioning.
+        InEuro-Par 2015: Parallel Processing, volume 9233 ofLecture Notes in Computer
+        Science, pages 650--661. 2015.","DOI":"10.1007\/978-3-662-48096-0_50","doi-asserted-by":"crossref"},{"key":"key-10.1145\/2834800.2834802-3","unstructured":"H.
+        Anzt, J. Dongarra, and E. S. Quintana-Ort&#237;. Tuning stationary iterative
+        solvers for fault resilience. InWorkshop on Latest Advances in Scalable Algorithms
+        for Large-Scale Systems, ScalA, 2015. DOI: 10.1145\/2832080.2832081.","DOI":"10.1145\/2832080.2832081","doi-asserted-by":"crossref"},{"key":"key-10.1145\/2834800.2834802-4","unstructured":"H.
+        Anzt and E. S. Quintana-Ort&#237;. Improving the energy efficiency of sparse
+        linear system solvers on multicore and manycore systems.Philosophical Trans.
+        Royal Society of London A: Mathematical, Physical and Engineering Sciences,
+        372(2018), 2014."},{"key":"key-10.1145\/2834800.2834802-5","unstructured":"H.
+        Anzt, S. Tomov, J. Dongarra, and V. Heuveline. A block-asynchronous relaxation
+        method for graphics processing units.Journal of Parallel and Distributed Computing,
+        73(12):1613--1626, 2013."},{"key":"key-10.1145\/2834800.2834802-6","unstructured":"S.
+        Barrachina, M. Castillo, F. D. Igual, R. Mayo, E. S. Quintana-Ort&#237;, and
+        G. Quintana-Ort&#237;. Exploiting the capabilities of modern GPUs for dense
+        matrix computations.Concurrency and Computation: Practice and Experience,
+        21(18):2457--2477, 2009."},{"key":"key-10.1145\/2834800.2834802-7","unstructured":"A.
+        Buttari, J. Dongarra, J. Langou, J. Langou, P. Luszczek, and J. Kurzak. Mixed
+        precision iterative refinement techniques for the solution of dense linear
+        systems.Int. J. High Performance Computing Applications, 21(4):457--466, 2007."},{"key":"key-10.1145\/2834800.2834802-8","unstructured":"Z.
+        Chen. Online-ABFT: An online algorithm based fault tolerance scheme for soft
+        error detection in iterative methods. InProc. 18th ACM SIGPLAN Symp. Principles
+        and Practice of Parallel Programming, PPoPP''13, pages 167--176, 2013."},{"key":"key-10.1145\/2834800.2834802-9","unstructured":"E.
+        Chow, H. Anzt, and J. Dongarra. Asynchronous iterative algorithm for computing
+        incomplete factorizations on GPUs. InLecture Notes in Computer Science, volume
+        9137, pages 1--16, 2015.","DOI":"10.1007\/978-3-319-20119-1_1","doi-asserted-by":"crossref"},{"key":"key-10.1145\/2834800.2834802-10","unstructured":"E.
+        Chow and A. Patel. Fine-grained parallel incomplete LU factorization.SIAM
+        Journal on Scientific Computing, 37(2):C169--C193, 2015."},{"key":"key-10.1145\/2834800.2834802-11","unstructured":"T.
+        A. Davis. The University of Florida Sparse Matrix Collection.NA DIGEST, 92,
+        1994."},{"key":"key-10.1145\/2834800.2834802-12","unstructured":"R. Dennard,
+        F. Gaensslen, V. Rideout, E. Bassous, and A. LeBlanc. Design of ion-implanted
+        MOSFET''s with very small physical dimensions.IEEE J. Solid-State Circuits,
+        9(5):256--268, 1974."},{"key":"key-10.1145\/2834800.2834802-13","unstructured":"J.
+        Elliott, M. Hoemmen, and F. Mueller. Evaluating the impact of SDC on the GMRES
+        iterative solver. InProc. 2014 IEEE 28th Int. Parallel and Distributed Processing
+        Symp., IPDPS''14, pages 1193--1202, 2014.","DOI":"10.1109\/IPDPS.2014.123","doi-asserted-by":"crossref"},{"key":"key-10.1145\/2834800.2834802-14","unstructured":"H.
+        Esmaeilzadeh, E. Blem, R. St. Amant, K. Sankaralingam, and D. Burger. Dark
+        silicon and the end of multicore scaling. InProc. 38th Annual Int. Symp. Computer
+        architecture, ISCA''11, pages 365--376, 2011.","DOI":"10.1145\/2000064.2000108","doi-asserted-by":"crossref"},{"key":"key-10.1145\/2834800.2834802-15","unstructured":"P.
+        Gschwandtner, C. Chalios, D. Nikolopoulos, H. Vandierendonck, and T. Fahringer.
+        On the potential of significance-driven execution for energy-aware HPC.Computer
+        Science--Research and Development, 30:197--206, 2015."},{"key":"key-10.1145\/2834800.2834802-16","unstructured":"N.
+        Hardavellas, M. Ferdman, B. Falsafi, and A. Ailamaki. Toward Dark Silicon
+        in servers.Micro, IEEE, 31(4):6--15, 2011."},{"key":"key-10.1145\/2834800.2834802-17","unstructured":"N.
+        Higham.Accuracy and Stability of Numerical Algorithms.Philadelphia, PA, 1996."},{"key":"key-10.1145\/2834800.2834802-18","unstructured":"M.
+        Hoemmen and M. A. Heroux. Fault-tolerant iterative methods via selective reliability.
+        InProc. 2011 Int. Conf. for High Performance Computing, Networking, Storage
+        and Analysis (SC), 2011."},{"key":"key-10.1145\/2834800.2834802-19","unstructured":"W.
+        Kahan. Lecture notes on the status of IEEE standard 754 for binary floating-point
+        arithmetic, 1997. http:\/\/www.eecs.berkeley.edu\/~wkahan\/ieee754status\/IEEE754.PDF."},{"key":"key-10.1145\/2834800.2834802-20","unstructured":"P.
+        Kogge et al. ExaScale computing study: Technology challenges in achieving
+        ExaScale systems, 2008. http:\/\/users.ece.gatech.edu\/~mrichard\/ExascaleComputingStudyReports\/exascale_final_report_100208.pdf."},{"key":"key-10.1145\/2834800.2834802-21","unstructured":"J.
+        F. Lavignonet al.ETP4HPC strategic research agenda achieving HPC leadership
+        in Europe, 2013. http:\/\/www.etp4hpc.eu\/."},{"key":"key-10.1145\/2834800.2834802-22","unstructured":"S.
+        Liu, K. Pattabiraman, T. Moscibroda, and B. G. Zorn. Flikker: Saving DRAM
+        refresh-power through critical data partitioning. InProc. Sixteenth International
+        Conference on Architectural Support for Programming Languages and Operating
+        Systems, ASPLOS XVI, pages 213--224, 2011."},{"key":"key-10.1145\/2834800.2834802-23","unstructured":"G.
+        Moore. Cramming more components onto integrated circuits.Electronics, 38(8):114--117,
+        1965."},{"key":"key-10.1145\/2834800.2834802-24","unstructured":"A. Rahimi,
+        A. Marongiu, R. Gupta, and L. Benini. A variability-aware OpenMP environment
+        for efficient execution of accuracy-configurable computation on shared-FPU
+        processor clusters. InHardware\/Software Codesign and System Synthesis (CODES+ISSS),
+        2013 International Conference on, pages 1--10, 2013.","DOI":"10.1109\/CODES-ISSS.2013.6659022","doi-asserted-by":"crossref"},{"key":"key-10.1145\/2834800.2834802-25","unstructured":"Y.
+        Saad.Iterative Methods for Sparse Linear Systems.SIAM, 2003."},{"key":"key-10.1145\/2834800.2834802-26","unstructured":"H.
+        F.-W. Sadrozinski and J. Wu.Applications of Field-Programmable Gate Arrays
+        in Scientific Research.CRC Press, 2010."},{"key":"key-10.1145\/2834800.2834802-27","unstructured":"A.
+        Sampson, W. Dietl, E. Fortuna, D. Gnanapragasam, L. Ceze, and D. Grossman.
+        EnerJ: Approximate data types for safe and general low-power computation.
+        InProc. 32Nd ACM SIGPLAN Conference on Programming Language Design and Implementation,
+        PLDI''11, pages 164--174, 2011."},{"key":"key-10.1145\/2834800.2834802-28","unstructured":"P.
+        Sao and R. Vuduc. Self-stabilizing iterative solvers. InWorkshop Latest Advances
+        in Scalable Algorithms for Large-Scale Systems, pages 4:1--4:8, 2013.","DOI":"10.1145\/2530268.2530272","doi-asserted-by":"crossref"},{"key":"key-10.1145\/2834800.2834802-29","unstructured":"Semiconductor
+        Industries Association. International Technology Roadmap for Semiconductors,
+        2013. http:\/\/www.itrs.net\/. Last access: July 2015."}],"event":{"name":"the
+        3rd International Workshop","location":"Austin, Texas","sponsor":["IEEE-CS\\DATC,
+        IEEE Computer Society","SIGHPC, ACM Special Interest Group on High Performance
+        Computing, Special Interest Group on High Performance Computing"],"acronym":"E2SC
+        ''15","number":"3","start":{"date-parts":[[2015,11,15]]},"end":{"date-parts":[[2015,11,15]]}},"container-title":["Proceedings
+        of the 3rd International Workshop on Energy Efficient Supercomputing - E2SC
+        ''15"],"original-title":[],"link":[{"URL":"http:\/\/dl.acm.org\/ft_gateway.cfm?id=2834802&amp;ftid=1643738&amp;dwn=1","content-type":"unspecified","content-version":"vor","intended-application":"similarity-checking"}],"deposited":{"date-parts":[[2017,6,23]],"date-time":"2017-06-23T23:25:00Z","timestamp":1498260300000},"score":1.0,"subtitle":[],"short-title":[],"issued":{"date-parts":[[2015]]},"ISBN":["9781450339940"],"references-count":29,"URL":"http:\/\/dx.doi.org\/10.1145\/2834800.2834802","relation":{"cites":[]}}}'
+  recorded_at: 2018-12-07 21:28:45 GMT
+  recorded_with: vcr/0.2.0.9101, webmockr/0.2.9.9311
+- request:
+    method: get
+    uri: https://api.crossref.org/works/10.1145/2832099.2832103
+    body:
+      encoding: ''
+      string: ''
+    headers:
+      Accept-Encoding: gzip, deflate
+      Accept: application/json, text/xml, application/xml, */*
+      User-Agent: r-curl/3.2 crul/0.6.1.9100 rOpenSci(rcrossref/0.8.5.9110) (mailto:<crossref_email>)
+      X-USER-AGENT: r-curl/3.2 crul/0.6.1.9100 rOpenSci(rcrossref/0.8.5.9110) (mailto:<crossref_email>)
+  response:
+    status:
+      status_code: '200'
+      message: OK
+      explanation: Request fulfilled, document follows
+    headers:
+      status: HTTP/1.1 200 OK
+      content-type: application/json;charset=UTF-8
+      vary: Accept
+      access-control-allow-origin: '*'
+      access-control-allow-headers: X-Requested-With
+      content-length: '8312'
+      server: http-kit
+      date: Fri, 07 Dec 2018 21:28:42 GMT
+      x-rate-limit-limit: '50'
+      x-rate-limit-interval: 1s
+      connection: close
+    body:
+      encoding: UTF-8
+      string: '{"status":"ok","message-type":"work","message-version":"1.0.0","message":{"indexed":{"date-parts":[[2018,5,7]],"date-time":"2018-05-07T22:34:38Z","timestamp":1525732478721},"publisher-location":"New
+        York, New York, USA","reference-count":24,"publisher":"ACM Press","isbn-type":[{"value":"9781450340373","type":"print"}],"license":[{"URL":"http:\/\/www.acm.org\/publications\/policies\/copyright_policy#Background","start":{"date-parts":[[2015,11,15]],"date-time":"2015-11-15T00:00:00Z","timestamp":1447545600000},"delay-in-days":318,"content-version":"vor"}],"funder":[{"DOI":"10.13039\/501100001691","name":"Japan
+        Society for the Promotion of Science","doi-asserted-by":"publisher","award":["26330145"]},{"name":"National
+        Institute of Information and Communications Technology","award":[]}],"content-domain":{"domain":[],"crossmark-restriction":false},"short-container-title":[],"published-print":{"date-parts":[[2015]]},"DOI":"10.1145\/2832099.2832103","type":"proceedings-article","created":{"date-parts":[[2015,11,11]],"date-time":"2015-11-11T13:07:06Z","timestamp":1447247226000},"source":"Crossref","is-referenced-by-count":1,"title":["Design
+        and implementation of control sequence generator for SDN-enhanced MPI"],"prefix":"10.1145","author":[{"given":"Baatarsuren","family":"Munkhdorj","sequence":"first","affiliation":[]},{"given":"Keichi","family":"Takahashi","sequence":"additional","affiliation":[]},{"given":"Dashdavaa","family":"Khureltulga","sequence":"additional","affiliation":[]},{"given":"Yasuhiro","family":"Watashiba","sequence":"additional","affiliation":[]},{"given":"Yoshiyuki","family":"Kido","sequence":"additional","affiliation":[]},{"given":"Susumu","family":"Date","sequence":"additional","affiliation":[]},{"given":"Shinji","family":"Shimojo","sequence":"additional","affiliation":[]}],"member":"320","reference":[{"key":"key-10.1145\/2832099.2832103-1","unstructured":"Apache
+        Hadoop. https:\/\/hadoop.apache.org\/."},{"key":"key-10.1145\/2832099.2832103-2","unstructured":"Full-Stack
+        OpenFlow Framework in Ruby and C. http:\/\/trema.github.io\/trema\/."},{"key":"key-10.1145\/2832099.2832103-3","unstructured":"Message
+        Passing Interface (MPI). https:\/\/computing.llnl.gov\/tutorials\/mpi\/."},{"key":"key-10.1145\/2832099.2832103-4","unstructured":"MVAPICH:
+        MPI over InfiniBand, 10GigE\/iWARP and RoCE. http:\/\/mvapich.cse.ohio-state.edu\/."},{"key":"key-10.1145\/2832099.2832103-5","unstructured":"Performance
+        Visualization for Parallel Programs. http:\/\/www.mcs.anl.gov\/research\/projects\/perfvis\/."},{"key":"key-10.1145\/2832099.2832103-6","unstructured":"Stanford
+        University Clean State Program. http:\/\/cleanslate.stanford.edu\/."},{"key":"key-10.1145\/2832099.2832103-7","unstructured":"Top
+        500. http:\/\/www.top500.org\/."},{"key":"key-10.1145\/2832099.2832103-8","unstructured":"Writing
+        Netfilter modules. 2012."},{"key":"key-10.1145\/2832099.2832103-9","unstructured":"T.
+        Adachi, N. Shida, K. Miura, S. Sumimoto, A. Uno, M. Kurokawa, F. Shoji, and
+        M. Yokokawa. The design of ultra scalable MPI collective communication on
+        the K computer.Computer Science-Research and Development, 28(2-3):147--155,
+        2013."},{"key":"key-10.1145\/2832099.2832103-10","unstructured":"G. Alm&#225;si,
+        P. Heidelberger, C. J. Archer, X. Martorell, C. C. Erway, J. E. Moreira, B.
+        Steinmacher-Burow, and Y. Zheng. Optimization of MPI collective communication
+        on BlueGene\/L systems. InProceedings of the 19th Annual International Conference
+        on Supercomputing, pages 253--262. ACM, 2005.","DOI":"10.1145\/1088149.1088183","doi-asserted-by":"crossref"},{"key":"key-10.1145\/2832099.2832103-11","unstructured":"M.
+        Blocksome et al. Optimizing MPI collectives using efficient intra-node communication
+        techniques over the BlueGene\/P supercomputer. Technical report, IBM, 2010."},{"key":"key-10.1145\/2832099.2832103-12","unstructured":"W.
+        Braun and M. Menth. Software-Defined Networking using OpenFlow: Protocols,
+        applications and architectural design choices.Future Internet, 6(2):302--336,
+        2014."},{"key":"key-10.1145\/2832099.2832103-13","unstructured":"A. Chan,
+        W. Gropp, and E. Lusk. User''s guide for MPE extensions for MPI programs.
+        Technical report, Argonne National Laboratory, 1998."},{"key":"key-10.1145\/2832099.2832103-14","unstructured":"K.
+        Dashdavaa, S. Date, H. Yamanaka, E. Kawai, Y. Watashiba, K. Ichikawa, H. Abe,
+        and S. Shimojo. Architecture of a high-speed MPI Bcast leveraging Software-Defined
+        Network. InEuro-Par 2013: Parallel Processing Workshops, pages 885--894. Springer,
+        2014."},{"key":"key-10.1145\/2832099.2832103-15","unstructured":"E. Gabriel,
+        G. E. Fagg, G. Bosilca, T. Angskun, J. J. Dongarra, J. M. Squyres, V. Sahay,
+        P. Kambadur, B. Barrett, A. Lumsdaine, et al. Open MPI: Goals, concept, and
+        design of a next generation MPI implementation. InRecent Advances in Parallel
+        Virtual Machine and Message Passing Interface, pages 97--104. Springer, 2004."},{"key":"key-10.1145\/2832099.2832103-16","unstructured":"W.
+        Gropp, E. Lusk, N. Doss, and A. Skjellum. A high-performance, portable implementation
+        of the MPI message passing interface standard.Parallel Computing, 22(6):789--828,
+        1996."},{"key":"key-10.1145\/2832099.2832103-17","unstructured":"R. Hempel.
+        The MPI standard for message passing. InHigh-Performance Computing and Networking,
+        pages 247--252. Springer, 1994.","DOI":"10.1007\/3-540-57981-8_126","doi-asserted-by":"crossref"},{"key":"key-10.1145\/2832099.2832103-18","unstructured":"ONF.
+        Software-Defined Networking: The new norm for networks. Technical report,
+        Open Networking Foundation, 2012."},{"key":"key-10.1145\/2832099.2832103-19","unstructured":"P.
+        Qin, B. Dai, B. Huang, and G. Xu. Bandwidth-aware scheduling with sdn in hadoop:
+        A new trend for big data.arXiv preprint arXiv:1403.2800, 2014."},{"key":"key-10.1145\/2832099.2832103-20","unstructured":"J.
+        M. Squyres and A. Lumsdaine. A component architecture for LAM\/MPI. InRecent
+        Advances in Parallel Virtual Machine and Message Passing Interface, pages
+        379--387. Springer, 2003."},{"key":"key-10.1145\/2832099.2832103-21","unstructured":"K.
+        Takahashi, D. Khureltulga, Y. Watashiba, Y. Kido, S. Shimojo, et al. Performance
+        evaluation of SDN-enhanced MPI_Allreduce on a cluster system with fat-tree
+        interconnect. InHigh Performance Computing &#38; Simulation (HPCS), 2014 International
+        Conference on, pages 784--792. IEEE, 2014."},{"key":"key-10.1145\/2832099.2832103-22","unstructured":"R.
+        Thakur and W. D. Gropp. Improving the performance of collective operations
+        in MPICH. InRecent Advances in Parallel Virtual Machine and Message Passing
+        Interface, pages 257--267. Springer, 2003.","DOI":"10.1007\/978-3-540-39924-7_38","doi-asserted-by":"crossref"},{"key":"key-10.1145\/2832099.2832103-23","unstructured":"G.
+        Wang, T. Ng, and A. Shaikh. Programming your network at run-time for big data
+        applications. InProceedings of the first workshop on Hot topics in software
+        defined networks, pages 103--108. ACM, 2012.","DOI":"10.1145\/2342441.2342462","doi-asserted-by":"crossref"},{"key":"key-10.1145\/2832099.2832103-24","unstructured":"M.
+        Yokokawa, F. Shoji, A. Uno, M. Kurokawa, and T. Watanabe. The K computer:
+        Japanese next-generation supercomputer development project. InProceedings
+        of the 17th IEEE\/ACM International Symposium on Low-power Electronics and
+        Design, pages 371--372. IEEE Press, 2011."}],"event":{"name":"the Fifth International
+        Workshop","location":"Austin, Texas","sponsor":["SIGHPC, ACM Special Interest
+        Group on High Performance Computing, Special Interest Group on High Performance
+        Computing","IEEE-CS\\DATC, IEEE Computer Society"],"acronym":"NDM ''15","number":"5","start":{"date-parts":[[2015,11,15]]},"end":{"date-parts":[[2015,11,15]]}},"container-title":["Proceedings
+        of the Fifth International Workshop on Network-Aware Data Management - NDM
+        ''15"],"original-title":[],"link":[{"URL":"http:\/\/dl.acm.org\/ft_gateway.cfm?id=2832103&amp;ftid=1644573&amp;dwn=1","content-type":"unspecified","content-version":"vor","intended-application":"similarity-checking"}],"deposited":{"date-parts":[[2017,6,23]],"date-time":"2017-06-23T23:25:09Z","timestamp":1498260309000},"score":1.0,"subtitle":[],"short-title":[],"issued":{"date-parts":[[2015]]},"ISBN":["9781450340373"],"references-count":24,"URL":"http:\/\/dx.doi.org\/10.1145\/2832099.2832103","relation":{"cites":[]}}}'
+  recorded_at: 2018-12-07 21:28:45 GMT
+  recorded_with: vcr/0.2.0.9101, webmockr/0.2.9.9311
+- request:
+    method: get
+    uri: https://api.crossref.org/works/10.1016/j.pediatrneurol.2015.06.002
+    body:
+      encoding: ''
+      string: ''
+    headers:
+      Accept-Encoding: gzip, deflate
+      Accept: application/json, text/xml, application/xml, */*
+      User-Agent: r-curl/3.2 crul/0.6.1.9100 rOpenSci(rcrossref/0.8.5.9110) (mailto:<crossref_email>)
+      X-USER-AGENT: r-curl/3.2 crul/0.6.1.9100 rOpenSci(rcrossref/0.8.5.9110) (mailto:<crossref_email>)
+  response:
+    status:
+      status_code: '200'
+      message: OK
+      explanation: Request fulfilled, document follows
+    headers:
+      status: HTTP/1.1 200 OK
+      content-type: application/json;charset=UTF-8
+      vary: Accept
+      access-control-allow-origin: '*'
+      access-control-allow-headers: X-Requested-With
+      content-length: '3489'
+      server: http-kit
+      date: Fri, 07 Dec 2018 21:28:44 GMT
+      x-rate-limit-limit: '50'
+      x-rate-limit-interval: 1s
+      connection: close
+    body:
+      encoding: UTF-8
+      string: '{"status":"ok","message-type":"work","message-version":"1.0.0","message":{"indexed":{"date-parts":[[2018,11,14]],"date-time":"2018-11-14T05:22:39Z","timestamp":1542172959552},"reference-count":36,"publisher":"Elsevier
+        BV","issue":"4","license":[{"URL":"https:\/\/www.elsevier.com\/tdm\/userlicense\/1.0\/","start":{"date-parts":[[2015,10,1]],"date-time":"2015-10-01T00:00:00Z","timestamp":1443657600000},"delay-in-days":0,"content-version":"tdm"},{"URL":"http:\/\/creativecommons.org\/licenses\/by-nc-nd\/4.0\/","start":{"date-parts":[[2015,6,8]],"date-time":"2015-06-08T00:00:00Z","timestamp":1433721600000},"delay-in-days":0,"content-version":"vor"}],"funder":[{"DOI":"10.13039\/100005614","name":"Biogen","doi-asserted-by":"publisher","award":[]}],"content-domain":{"domain":["clinicalkey.jp","clinicalkey.com","clinicalkey.es","pedneur.com","clinicalkey.com.au","clinicalkey.fr","elsevier.com","sciencedirect.com"],"crossmark-restriction":true},"short-container-title":["Pediatric
+        Neurology"],"published-print":{"date-parts":[[2015,10]]},"DOI":"10.1016\/j.pediatrneurol.2015.06.002","type":"journal-article","created":{"date-parts":[[2015,6,12]],"date-time":"2015-06-12T08:12:07Z","timestamp":1434096727000},"page":"293-300","update-policy":"http:\/\/dx.doi.org\/10.1016\/elsevier_cm_policy","source":"Crossref","is-referenced-by-count":11,"title":["Delay
+        in Diagnosis of Spinal Muscular Atrophy: A Systematic Literature Review"],"prefix":"10.1016","volume":"53","author":[{"ORCID":"http:\/\/orcid.org\/0000-0001-9219-2449","authenticated-orcid":false,"given":"Chia-Wei","family":"Lin","sequence":"first","affiliation":[]},{"given":"Stephanie
+        J.","family":"Kalb","sequence":"additional","affiliation":[]},{"given":"Wei-Shi","family":"Yeh","sequence":"additional","affiliation":[]}],"member":"78","container-title":["Pediatric
+        Neurology"],"original-title":[],"language":"en","link":[{"URL":"https:\/\/api.elsevier.com\/content\/article\/PII:S0887899415002751?httpAccept=text\/xml","content-type":"text\/xml","content-version":"vor","intended-application":"text-mining"},{"URL":"https:\/\/api.elsevier.com\/content\/article\/PII:S0887899415002751?httpAccept=text\/plain","content-type":"text\/plain","content-version":"vor","intended-application":"text-mining"}],"deposited":{"date-parts":[[2018,9,21]],"date-time":"2018-09-21T22:29:32Z","timestamp":1537568972000},"score":1.0,"subtitle":[],"short-title":[],"issued":{"date-parts":[[2015,10]]},"references-count":36,"journal-issue":{"published-print":{"date-parts":[[2015,10]]},"issue":"4"},"alternative-id":["S0887899415002751"],"URL":"http:\/\/dx.doi.org\/10.1016\/j.pediatrneurol.2015.06.002","relation":{},"ISSN":["0887-8994"],"issn-type":[{"value":"0887-8994","type":"print"}],"subject":["Pediatrics,
+        Perinatology, and Child Health","Developmental Neuroscience","Neurology","Clinical
+        Neurology"],"assertion":[{"value":"Elsevier","name":"publisher","label":"This
+        article is maintained by"},{"value":"Delay in Diagnosis of Spinal Muscular
+        Atrophy: A Systematic Literature Review","name":"articletitle","label":"Article
+        Title"},{"value":"Pediatric Neurology","name":"journaltitle","label":"Journal
+        Title"},{"value":"https:\/\/doi.org\/10.1016\/j.pediatrneurol.2015.06.002","name":"articlelink","label":"CrossRef
+        DOI link to publisher maintained version"},{"value":"article","name":"content_type","label":"Content
+        Type"},{"value":"Copyright \u00a9 2015 The Authors. Published by Elsevier
+        Inc.","name":"copyright","label":"Copyright"}]}}'
+  recorded_at: 2018-12-07 21:28:45 GMT
+  recorded_with: vcr/0.2.0.9101, webmockr/0.2.9.9311
+- request:
+    method: get
+    uri: https://api.crossref.org/works/10.1016/j.tcs.2015.06.001
+    body:
+      encoding: ''
+      string: ''
+    headers:
+      Accept-Encoding: gzip, deflate
+      Accept: application/json, text/xml, application/xml, */*
+      User-Agent: r-curl/3.2 crul/0.6.1.9100 rOpenSci(rcrossref/0.8.5.9110) (mailto:<crossref_email>)
+      X-USER-AGENT: r-curl/3.2 crul/0.6.1.9100 rOpenSci(rcrossref/0.8.5.9110) (mailto:<crossref_email>)
+  response:
+    status:
+      status_code: '200'
+      message: OK
+      explanation: Request fulfilled, document follows
+    headers:
+      status: HTTP/1.1 200 OK
+      content-type: application/json;charset=UTF-8
+      vary: Accept
+      access-control-allow-origin: '*'
+      access-control-allow-headers: X-Requested-With
+      content-length: '3210'
+      server: http-kit
+      date: Fri, 07 Dec 2018 21:28:44 GMT
+      x-rate-limit-limit: '50'
+      x-rate-limit-interval: 1s
+      connection: close
+    body:
+      encoding: UTF-8
+      string: '{"status":"ok","message-type":"work","message-version":"1.0.0","message":{"indexed":{"date-parts":[[2018,9,21]],"date-time":"2018-09-21T23:11:09Z","timestamp":1537571469038},"reference-count":13,"publisher":"Elsevier
+        BV","license":[{"URL":"https:\/\/www.elsevier.com\/tdm\/userlicense\/1.0\/","start":{"date-parts":[[2015,9,1]],"date-time":"2015-09-01T00:00:00Z","timestamp":1441065600000},"delay-in-days":0,"content-version":"tdm"}],"funder":[{"DOI":"10.13039\/501100003407","name":"Ministero
+        dell\u2019Istruzione, dell\u2019Universit\u00e0 e della Ricerca","doi-asserted-by":"publisher","award":["H41J12000190001"]},{"DOI":"10.13039\/501100001665","name":"Agence
+        Nationale de la Recherche","doi-asserted-by":"crossref","award":["ANR-09-BLAN-0164"]}],"content-domain":{"domain":["elsevier.com","sciencedirect.com"],"crossmark-restriction":true},"short-container-title":["Theoretical
+        Computer Science"],"published-print":{"date-parts":[[2015,9]]},"DOI":"10.1016\/j.tcs.2015.06.001","type":"journal-article","created":{"date-parts":[[2015,6,12]],"date-time":"2015-06-12T08:27:19Z","timestamp":1434097639000},"page":"138-149","update-policy":"http:\/\/dx.doi.org\/10.1016\/elsevier_cm_policy","source":"Crossref","is-referenced-by-count":2,"title":["Reaction
+        systems and extremal combinatorics properties"],"prefix":"10.1016","volume":"598","author":[{"given":"Alberto","family":"Dennunzio","sequence":"first","affiliation":[]},{"ORCID":"http:\/\/orcid.org\/0000-0002-1007-7912","authenticated-orcid":false,"given":"Enrico","family":"Formenti","sequence":"additional","affiliation":[]},{"given":"Luca","family":"Manzoni","sequence":"additional","affiliation":[]}],"member":"78","container-title":["Theoretical
+        Computer Science"],"original-title":[],"language":"en","link":[{"URL":"https:\/\/api.elsevier.com\/content\/article\/PII:S0304397515005034?httpAccept=text\/xml","content-type":"text\/xml","content-version":"vor","intended-application":"text-mining"},{"URL":"https:\/\/api.elsevier.com\/content\/article\/PII:S0304397515005034?httpAccept=text\/plain","content-type":"text\/plain","content-version":"vor","intended-application":"text-mining"}],"deposited":{"date-parts":[[2018,9,21]],"date-time":"2018-09-21T22:28:49Z","timestamp":1537568929000},"score":1.0,"subtitle":[],"short-title":[],"issued":{"date-parts":[[2015,9]]},"references-count":13,"alternative-id":["S0304397515005034"],"URL":"http:\/\/dx.doi.org\/10.1016\/j.tcs.2015.06.001","relation":{},"ISSN":["0304-3975"],"issn-type":[{"value":"0304-3975","type":"print"}],"subject":["Theoretical
+        Computer Science","General Computer Science"],"assertion":[{"value":"Elsevier","name":"publisher","label":"This
+        article is maintained by"},{"value":"Reaction systems and extremal combinatorics
+        properties","name":"articletitle","label":"Article Title"},{"value":"Theoretical
+        Computer Science","name":"journaltitle","label":"Journal Title"},{"value":"https:\/\/doi.org\/10.1016\/j.tcs.2015.06.001","name":"articlelink","label":"CrossRef
+        DOI link to publisher maintained version"},{"value":"article","name":"content_type","label":"Content
+        Type"},{"value":"Copyright \u00a9 2015 Elsevier B.V. All rights reserved.","name":"copyright","label":"Copyright"}]}}'
+  recorded_at: 2018-12-07 21:28:45 GMT
+  recorded_with: vcr/0.2.0.9101, webmockr/0.2.9.9311
+- request:
+    method: get
+    uri: https://api.crossref.org/works/10.1016/j.ffa.2015.10.008
+    body:
+      encoding: ''
+      string: ''
+    headers:
+      Accept-Encoding: gzip, deflate
+      Accept: application/json, text/xml, application/xml, */*
+      User-Agent: r-curl/3.2 crul/0.6.1.9100 rOpenSci(rcrossref/0.8.5.9110) (mailto:<crossref_email>)
+      X-USER-AGENT: r-curl/3.2 crul/0.6.1.9100 rOpenSci(rcrossref/0.8.5.9110) (mailto:<crossref_email>)
+  response:
+    status:
+      status_code: '200'
+      message: OK
+      explanation: Request fulfilled, document follows
+    headers:
+      status: HTTP/1.1 200 OK
+      content-type: application/json;charset=UTF-8
+      vary: Accept
+      access-control-allow-origin: '*'
+      access-control-allow-headers: X-Requested-With
+      content-length: '3359'
+      server: http-kit
+      date: Fri, 07 Dec 2018 21:28:45 GMT
+      x-rate-limit-limit: '50'
+      x-rate-limit-interval: 1s
+      connection: close
+    body:
+      encoding: UTF-8
+      string: '{"status":"ok","message-type":"work","message-version":"1.0.0","message":{"indexed":{"date-parts":[[2018,9,17]],"date-time":"2018-09-17T17:10:25Z","timestamp":1537204225631},"reference-count":25,"publisher":"Elsevier
+        BV","license":[{"URL":"https:\/\/www.elsevier.com\/tdm\/userlicense\/1.0\/","start":{"date-parts":[[2016,1,1]],"date-time":"2016-01-01T00:00:00Z","timestamp":1451606400000},"delay-in-days":0,"content-version":"tdm"}],"funder":[{"DOI":"10.13039\/501100001809","name":"National
+        Natural Science Foundation of China","doi-asserted-by":"publisher","award":["61502048","61370194","61411146001"]}],"content-domain":{"domain":["elsevier.com","sciencedirect.com"],"crossmark-restriction":true},"short-container-title":["Finite
+        Fields and Their Applications"],"published-print":{"date-parts":[[2016,1]]},"DOI":"10.1016\/j.ffa.2015.10.008","type":"journal-article","created":{"date-parts":[[2015,11,18]],"date-time":"2015-11-18T02:15:39Z","timestamp":1447812939000},"page":"328-343","update-policy":"http:\/\/dx.doi.org\/10.1016\/elsevier_cm_policy","source":"Crossref","is-referenced-by-count":1,"title":["Construction
+        of DNA codes by using algebraic number theory"],"prefix":"10.1016","volume":"37","author":[{"ORCID":"http:\/\/orcid.org\/0000-0003-2908-8651","authenticated-orcid":false,"given":"Haibo","family":"Hong","sequence":"first","affiliation":[]},{"given":"Licheng","family":"Wang","sequence":"additional","affiliation":[]},{"given":"Haseeb","family":"Ahmad","sequence":"additional","affiliation":[]},{"given":"Jing","family":"Li","sequence":"additional","affiliation":[]},{"given":"Yixian","family":"Yang","sequence":"additional","affiliation":[]},{"given":"Changzhong","family":"Wu","sequence":"additional","affiliation":[]}],"member":"78","container-title":["Finite
+        Fields and Their Applications"],"original-title":[],"language":"en","link":[{"URL":"https:\/\/api.elsevier.com\/content\/article\/PII:S1071579715001094?httpAccept=text\/plain","content-type":"text\/plain","content-version":"vor","intended-application":"text-mining"},{"URL":"https:\/\/api.elsevier.com\/content\/article\/PII:S1071579715001094?httpAccept=text\/xml","content-type":"text\/xml","content-version":"vor","intended-application":"text-mining"}],"deposited":{"date-parts":[[2018,9,17]],"date-time":"2018-09-17T16:56:42Z","timestamp":1537203402000},"score":1.0,"subtitle":[],"short-title":[],"issued":{"date-parts":[[2016,1]]},"references-count":25,"alternative-id":["S1071579715001094"],"URL":"http:\/\/dx.doi.org\/10.1016\/j.ffa.2015.10.008","relation":{},"ISSN":["1071-5797"],"issn-type":[{"value":"1071-5797","type":"print"}],"subject":["Theoretical
+        Computer Science","General Engineering","Algebra and Number Theory","Applied
+        Mathematics"],"assertion":[{"value":"Elsevier","name":"publisher","label":"This
+        article is maintained by"},{"value":"Construction of DNA codes by using algebraic
+        number theory","name":"articletitle","label":"Article Title"},{"value":"Finite
+        Fields and Their Applications","name":"journaltitle","label":"Journal Title"},{"value":"https:\/\/doi.org\/10.1016\/j.ffa.2015.10.008","name":"articlelink","label":"CrossRef
+        DOI link to publisher maintained version"},{"value":"article","name":"content_type","label":"Content
+        Type"},{"value":"Copyright \u00a9 2015 Elsevier Inc. All rights reserved.","name":"copyright","label":"Copyright"}]}}'
+  recorded_at: 2018-12-07 21:28:45 GMT
+  recorded_with: vcr/0.2.0.9101, webmockr/0.2.9.9311

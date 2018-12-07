@@ -1,0 +1,54 @@
+http_interactions:
+- request:
+    method: get
+    uri: https://api.crossref.org/types/monograph/works?rows=0&facet=t
+    body:
+      encoding: ''
+      string: ''
+    headers:
+      Accept-Encoding: gzip, deflate
+      Accept: application/json, text/xml, application/xml, */*
+      User-Agent: r-curl/3.2 crul/0.6.1.9100 rOpenSci(rcrossref/0.8.5.9110) (mailto:<crossref_email>)
+      X-USER-AGENT: r-curl/3.2 crul/0.6.1.9100 rOpenSci(rcrossref/0.8.5.9110) (mailto:<crossref_email>)
+  response:
+    status:
+      status_code: '200'
+      message: OK
+      explanation: Request fulfilled, document follows
+    headers:
+      status: HTTP/1.1 200 OK
+      content-type: application/json;charset=UTF-8
+      vary: Accept
+      access-control-allow-origin: '*'
+      access-control-allow-headers: X-Requested-With
+      content-length: '6511'
+      server: http-kit
+      date: Fri, 07 Dec 2018 21:34:12 GMT
+      x-rate-limit-limit: '50'
+      x-rate-limit-interval: 1s
+      connection: close
+    body:
+      encoding: UTF-8
+      string: '{"status":"ok","message-type":"work-list","message-version":"1.0.0","message":{"facets":{"affiliation":{"value-count":20,"values":{"university":7009,"of":5627,"usa":1870,"institute":1026,"state":872,"and":753,"the":703,"technology":649,"national":572,"universityusa":487,"india":472,"college":466,"uk":465,"de":411,"australia":362,"school":326,"for":320,"new":312,"research":308,"at":284}},"license":{"value-count":20,"values":{"http:\/\/press.anu.edu.au\/about\/conditions-use":417,"https:\/\/oapen.org\/content\/about-rights":369,"https:\/\/www.cambridge.org\/core\/terms":366,"https:\/\/creativecommons.org\/licenses\/by-nc-nd\/4.0\/":310,"http:\/\/creativecommons.org\/licenses\/by-nc-nd\/3.0\/at\/deed.en":215,"http:\/\/www.emeraldinsight.com\/page\/tdm":205,"https:\/\/creativecommons.org\/licenses\/by-nc-nd\/3.0\/":191,"https:\/\/creativecommons.org\/licenses\/by-nc\/3.0\/":182,"https:\/\/creativecommons.org\/licenses\/by-nc-nd\/2.5\/":87,"https:\/\/creativecommons.org\/licenses\/by\/4.0\/":56,"https:\/\/creativecommons.org\/licenses\/by-nc\/4.0\/":56,"http:\/\/creativecommons.org\/licenses\/by-nc\/3.0\/at\/deed.en":53,"http:\/\/www.springer.com\/tdm":52,"http:\/\/creativecommons.org\/licenses\/by\/4.0":40,"http:\/\/creativecommons.org\/licenses\/by\/4.0\/deed.en":35,"https:\/\/creativecommons.org\/licenses\/by-nc-nd\/2.0\/":32,"https:\/\/creativecommons.org\/licenses\/by-sa\/3.0\/":16,"https:\/\/creativecommons.org\/licenses\/by-sa\/4.0\/":14,"https:\/\/www.ep.liu.se\/cc\/index.en.asp":12,"http:\/\/creativecommons.org\/licenses\/by\/3.0\/at\/deed.en":7}},"container-title":{"value-count":20,"values":{"Classiques
+        des sciences sociales.":2358,"Policy Research Working Papers":1297,"Schriften
+        zum \u00d6ffentlichen Recht":469,"classiques des sciences sociales":429,"Classiques
+        des sciences sociales":249,"Translations of Mathematical\n                        Monographs":243,"Proceedings
+        of the Ocean Drilling Program":237,"Mathematical Surveys and Monographs":208,"Graduate
+        Studies in Mathematics":187,"Schriften zum B\u00fcrgerlichen Recht":185,"Advances
+        in Educational Technologies and Instructional Design":174,"Schriften zum Strafrecht":168,"Pragmatics
+        & Beyond New Series":153,"The Endocrine Society''s 93rd Annual Meeting & Expo,
+        June 4\u20137, 2011 - Boston":139,"World Scientific Series on Nonlinear Science
+        Series A":135,"Strafrechtliche Abhandlungen. Neue Folge":131,"Schriften zum
+        Wirtschaftsrecht":127,"CBMS Regional Conference Series in Mathematics":123,"Advances
+        in Higher Education and Professional Development":123,"Duncker & Humblot reprints":118}},"publisher-name":{"value-count":20,"values":{"Cambridge
+        University Press":25670,"University of Arizona Libraries":16564,"Oxford University
+        Press":12849,"[s.n.]":10108,"DE GRUYTER":9372,"Afghanistan Centre at Kabul
+        University":8486,"Peter Lang D":6427,"Princeton University Press":6082,"De
+        Gruyter":5670,"Nomos":4865,"IGI Global":4797,"J.-M. Tremblay":4740,"CRC Press":4235,"WORLD
+        SCIENTIFIC":4207,"University of Chicago Press":4103,"Harvard University Press":3748,"University
+        of Michigan Press":3740,"Duncker & Humblot":3649,"World Bank":3373,"S. Karger
+        AG":3218}},"orcid":{"value-count":20,"values":{"http:\/\/orcid.org\/0000-0001-5916-0445":11,"http:\/\/orcid.org\/0000-0001-8847-7652":10,"http:\/\/orcid.org\/0000-0002-4205-3237":8,"http:\/\/orcid.org\/0000-0003-4974-7933":6,"http:\/\/orcid.org\/0000-0001-5717-4835":6,"http:\/\/orcid.org\/0000-0001-8538-2404":5,"http:\/\/orcid.org\/0000-0002-7865-7593":4,"http:\/\/orcid.org\/0000-0002-1472-3352":4,"http:\/\/orcid.org\/0000-0003-4957-8818":3,"http:\/\/orcid.org\/0000-0003-4191-5170":3,"http:\/\/orcid.org\/0000-0002-9395-5660":3,"http:\/\/orcid.org\/0000-0002-2246-8515":3,"http:\/\/orcid.org\/0000-0002-0236-6503":2,"http:\/\/orcid.org\/0000-0001-9415-2651":2,"http:\/\/orcid.org\/0000-0001-9000-2824":2,"http:\/\/orcid.org\/0000-0001-8622-2920":2,"http:\/\/orcid.org\/0000-0001-8406-5554":2,"http:\/\/orcid.org\/0000-0001-8280-5096":2,"http:\/\/orcid.org\/0000-0001-7254-7935":2,"http:\/\/orcid.org\/0000-0001-5407-7706":2}},"update-type":{"value-count":0,"values":{}},"published":{"value-count":20,"values":{"2009":17108,"2015":15653,"2017":15296,"2016":14607,"2013":14517,"2012":13674,"2014":12884,"2018":12856,"2011":11066,"2000":10463,"2010":9854,"2008":8657,"2007":8175,"2006":6881,"2005":6156,"2003":5929,"2004":5847,"2002":5127,"2001":4443,"1999":3743}},"funder-name":{"value-count":4,"values":{"National
+        Science Foundation":1,"Funda\u00e7\u00e3o para a Ci\u00eancia e a Tecnologia":1,"Fritz
+        Thyssen Stiftung":1,"Bundesministerium f\u00fcr Bildung und Forschung":1}},"archive":{"value-count":1,"values":{"Portico":1406}},"type-name":{"value-count":1,"values":{"Monograph":379764}},"relation-type":{"value-count":1,"values":{"is-identical-to":824}},"issn":{"value-count":20,"values":{"http:\/\/id.crossref.org\/issn\/1813-9450":1343,"http:\/\/id.crossref.org\/issn\/0582-0200":466,"http:\/\/id.crossref.org\/issn\/2472-5137":243,"http:\/\/id.crossref.org\/issn\/0065-9282":243,"http:\/\/id.crossref.org\/issn\/2331-7159":227,"http:\/\/id.crossref.org\/issn\/0076-5376":227,"http:\/\/id.crossref.org\/issn\/1065-7339":187,"http:\/\/id.crossref.org\/issn\/0720-7387":183,"http:\/\/id.crossref.org\/issn\/2326-8913":174,"http:\/\/id.crossref.org\/issn\/2326-8905":174,"http:\/\/id.crossref.org\/issn\/0558-9126":163,"http:\/\/id.crossref.org\/issn\/0922-842X":153,"http:\/\/id.crossref.org\/issn\/1793-1010":143,"http:\/\/id.crossref.org\/issn\/0582-026X":128,"http:\/\/id.crossref.org\/issn\/2380-5668":125,"http:\/\/id.crossref.org\/issn\/0160-7642":125,"http:\/\/id.crossref.org\/issn\/2327-6991":123,"http:\/\/id.crossref.org\/issn\/2327-6983":123,"http:\/\/id.crossref.org\/issn\/0720-7271":121,"http:\/\/id.crossref.org\/issn\/2195-9714":118}},"source":{"value-count":1,"values":{"Crossref":379764}},"journal-issue":{"value-count":0,"values":{}},"category-name":{"value-count":0,"values":{}},"assertion":{"value-count":1,"values":{"published":5}},"assertion-group":{"value-count":1,"values":{"publication_history":5}},"journal-volume":{"value-count":0,"values":{}},"funder-doi":{"value-count":4,"values":{"http:\/\/dx.doi.org\/10.13039\/https:\/\/doi.org\/10.13039\/501100003390":1,"http:\/\/dx.doi.org\/10.13039\/https:\/\/doi.org\/10.13039\/501100002347":1,"http:\/\/dx.doi.org\/10.13039\/501100001871":1,"http:\/\/dx.doi.org\/10.13039\/100000001":1}}},"total-results":379764,"items":[],"items-per-page":0,"query":{"start-index":0,"search-terms":null}}}'
+  recorded_at: 2018-12-07 21:34:12 GMT
+  recorded_with: vcr/0.2.0.9101, webmockr/0.2.9.9311

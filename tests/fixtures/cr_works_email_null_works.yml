@@ -1,0 +1,817 @@
+http_interactions:
+- request:
+    method: get
+    uri: https://api.crossref.org/works?query=NSF
+    body:
+      encoding: ''
+      string: ''
+    headers:
+      Accept-Encoding: gzip, deflate
+      Accept: application/json, text/xml, application/xml, */*
+      User-Agent: r-curl/3.2 crul/0.6.1.9100 rOpenSci(rcrossref/0.8.5.9110)
+      X-USER-AGENT: r-curl/3.2 crul/0.6.1.9100 rOpenSci(rcrossref/0.8.5.9110)
+  response:
+    status:
+      status_code: '200'
+      message: OK
+      explanation: Request fulfilled, document follows
+    headers:
+      status: HTTP/1.1 200 OK
+      content-type: application/json;charset=UTF-8
+      vary: Accept
+      access-control-allow-origin: '*'
+      access-control-allow-headers: X-Requested-With
+      content-length: '131771'
+      server: http-kit
+      date: Fri, 07 Dec 2018 21:28:53 GMT
+      x-rate-limit-limit: '50'
+      x-rate-limit-interval: 1s
+      connection: close
+    body:
+      encoding: UTF-8
+      string: '{"status":"ok","message-type":"work-list","message-version":"1.0.0","message":{"facets":{},"total-results":38186,"items":[{"indexed":{"date-parts":[[2018,9,12]],"date-time":"2018-09-12T02:40:43Z","timestamp":1536720043140},"reference-count":45,"publisher":"Elsevier
+        BV","issue":"2","license":[{"URL":"https:\/\/www.elsevier.com\/tdm\/userlicense\/1.0\/","start":{"date-parts":[[2018,3,1]],"date-time":"2018-03-01T00:00:00Z","timestamp":1519862400000},"delay-in-days":0,"content-version":"tdm"}],"funder":[{"name":"NSF
+        DMS","award":["1211687","1412428","1521749","0934630","1516400"]},{"name":"NSF
+        DMS","award":["1211687","1412428","1521749","0934630","1516400"]},{"name":"NSF
+        DMS","award":["1211687","1412428","1521749","0934630","1516400"]},{"name":"NSF
+        DMS","award":["1211687","1412428","1521749","0934630","1516400"]},{"name":"NSF
+        DMS","award":["1211687","1412428","1521749","0934630","1516400"]},{"name":"NSF
+        DMS","award":["1211687","1412428","1521749","0934630","1516400"]},{"name":"NSF
+        DMS","award":["1211687","1412428","1521749","0934630","1516400"]},{"name":"NSF
+        DMS","award":["1211687","1412428","1521749","0934630","1516400"]},{"name":"NSF
+        DMS","award":["1211687","1412428","1521749","0934630","1516400"]},{"name":"NSF
+        DMS","award":["1211687","1412428","1521749","0934630","1516400"]},{"name":"NSF
+        DMS","award":["1211687","1412428","1521749","0934630","1516400"]},{"name":"NSF
+        DMS","award":["1211687","1412428","1521749","0934630","1516400"]},{"name":"NSF
+        DMS","award":["1211687","1412428","1521749","0934630","1516400"]},{"name":"NSF
+        DMS","award":["1211687","1412428","1521749","0934630","1516400"]},{"name":"NSF
+        DMS","award":["1211687","1412428","1521749","0934630","1516400"]},{"name":"NSF
+        DMS","award":["1211687","1412428","1521749","0934630","1516400"]}],"content-domain":{"domain":["elsevier.com","sciencedirect.com"],"crossmark-restriction":true},"short-container-title":["Applied
+        and Computational Harmonic Analysis"],"published-print":{"date-parts":[[2018,3]]},"DOI":"10.1016\/j.acha.2016.05.001","type":"journal-article","created":{"date-parts":[[2016,5,13]],"date-time":"2016-05-13T22:09:49Z","timestamp":1463177389000},"page":"294-311","update-policy":"http:\/\/dx.doi.org\/10.1016\/elsevier_cm_policy","source":"Crossref","is-referenced-by-count":1,"title":["A
+        sharp Balian\u2013Low uncertainty principle for shift-invariant spaces"],"prefix":"10.1016","volume":"44","author":[{"given":"Douglas
+        P.","family":"Hardin","sequence":"first","affiliation":[]},{"suffix":"V","given":"Michael
+        C.","family":"Northington","sequence":"additional","affiliation":[]},{"given":"Alexander
+        M.","family":"Powell","sequence":"additional","affiliation":[]}],"member":"78","container-title":["Applied
+        and Computational Harmonic Analysis"],"language":"en","link":[{"URL":"https:\/\/api.elsevier.com\/content\/article\/PII:S1063520316300173?httpAccept=text\/xml","content-type":"text\/xml","content-version":"vor","intended-application":"text-mining"},{"URL":"https:\/\/api.elsevier.com\/content\/article\/PII:S1063520316300173?httpAccept=text\/plain","content-type":"text\/plain","content-version":"vor","intended-application":"text-mining"}],"deposited":{"date-parts":[[2018,9,12]],"date-time":"2018-09-12T01:59:03Z","timestamp":1536717543000},"score":13.629742,"issued":{"date-parts":[[2018,3]]},"references-count":45,"journal-issue":{"published-print":{"date-parts":[[2018,3]]},"issue":"2"},"alternative-id":["S1063520316300173"],"URL":"http:\/\/dx.doi.org\/10.1016\/j.acha.2016.05.001","ISSN":["1063-5203"],"issn-type":[{"value":"1063-5203","type":"print"}],"subject":["Applied
+        Mathematics"],"assertion":[{"value":"Elsevier","name":"publisher","label":"This
+        article is maintained by"},{"value":"A sharp Balian\u2013Low uncertainty principle
+        for shift-invariant spaces","name":"articletitle","label":"Article Title"},{"value":"Applied
+        and Computational Harmonic Analysis","name":"journaltitle","label":"Journal
+        Title"},{"value":"https:\/\/doi.org\/10.1016\/j.acha.2016.05.001","name":"articlelink","label":"CrossRef
+        DOI link to publisher maintained version"},{"value":"article","name":"content_type","label":"Content
+        Type"},{"value":"\u00a9 2016 Elsevier Inc. All rights reserved.","name":"copyright","label":"Copyright"}]},{"indexed":{"date-parts":[[2018,7,30]],"date-time":"2018-07-30T13:22:37Z","timestamp":1532956957074},"reference-count":0,"publisher":"Walter
+        de Gruyter GmbH","issue":"0","funder":[{"name":"NSF","award":["MS 0901330","DMS
+        0652633 FRG","DMS 0636606 RTG","DMS 0600800","DMS 0854977 FRG","DMS 0838210
+        RTG","NSF DMS 0854977"]},{"name":"NSF","award":["MS 0901330","DMS 0652633
+        FRG","DMS 0636606 RTG","DMS 0600800","DMS 0854977 FRG","DMS 0838210 RTG","NSF
+        DMS 0854977"]},{"name":"NSF","award":["MS 0901330","DMS 0652633 FRG","DMS
+        0636606 RTG","DMS 0600800","DMS 0854977 FRG","DMS 0838210 RTG","NSF DMS 0854977"]},{"name":"NSF","award":["MS
+        0901330","DMS 0652633 FRG","DMS 0636606 RTG","DMS 0600800","DMS 0854977 FRG","DMS
+        0838210 RTG","NSF DMS 0854977"]},{"name":"NSF","award":["MS 0901330","DMS
+        0652633 FRG","DMS 0636606 RTG","DMS 0600800","DMS 0854977 FRG","DMS 0838210
+        RTG","NSF DMS 0854977"]},{"name":"NSF","award":["MS 0901330","DMS 0652633
+        FRG","DMS 0636606 RTG","DMS 0600800","DMS 0854977 FRG","DMS 0838210 RTG","NSF
+        DMS 0854977"]},{"name":"NSF","award":["MS 0901330","DMS 0652633 FRG","DMS
+        0636606 RTG","DMS 0600800","DMS 0854977 FRG","DMS 0838210 RTG","NSF DMS 0854977"]},{"name":"FWF","award":["P24572
+        N25","P20778"]},{"name":"FWF","award":["P24572 N25","P20778"]},{"name":"ERC","award":[]}],"content-domain":{"domain":[],"crossmark-restriction":false},"published-print":{"date-parts":[[2016,1,13]]},"abstract":"<jats:title>Abstract<\/jats:title><jats:p>We
+        study the relationship between derived categories of factorizations on gauged
+        Landau\u2013Ginzburg models related by variations of the linearization in
+        Geometric Invariant Theory. Under assumptions on the variation, we show the
+        derived categories are comparable by semi-orthogonal decompositions and we
+        completely describe all components appearing in these semi-orthogonal decompositions.
+        We show how this general framework encompasses many well-known semi-orthogonal
+        decompositions. We then proceed to give applications of this complete description.<\/jats:p><jats:p>In
+        this setting, we verify a question posed by Kawamata: we show that<\/jats:p>","DOI":"10.1515\/crelle-2015-0096","type":"journal-article","created":{"date-parts":[[2016,2,15]],"date-time":"2016-02-15T22:06:41Z","timestamp":1455574001000},"source":"Crossref","is-referenced-by-count":3,"title":["Variation
+        of geometric invariant theory quotients and derived categories"],"prefix":"10.1515","volume":"0","author":[{"given":"Matthew","family":"Ballard","sequence":"first","affiliation":[]},{"given":"David","family":"Favero","sequence":"additional","affiliation":[]},{"given":"Ludmil","family":"Katzarkov","sequence":"additional","affiliation":[]}],"member":"374","container-title":["Journal
+        f\u00fcr die reine und angewandte Mathematik (Crelles Journal)"],"link":[{"URL":"https:\/\/www.degruyter.com\/view\/j\/crll.ahead-of-print\/crelle-2015-0096\/crelle-2015-0096.pdf","content-type":"unspecified","content-version":"vor","intended-application":"similarity-checking"}],"deposited":{"date-parts":[[2017,5,18]],"date-time":"2017-05-18T17:36:12Z","timestamp":1495128972000},"score":13.173502,"issued":{"date-parts":[[2016,1,13]]},"references-count":0,"journal-issue":{"issue":"0"},"URL":"http:\/\/dx.doi.org\/10.1515\/crelle-2015-0096","ISSN":["0075-4102","1435-5345"],"issn-type":[{"value":"0075-4102","type":"print"},{"value":"1435-5345","type":"electronic"}]},{"indexed":{"date-parts":[[2018,5,9]],"date-time":"2018-05-09T10:39:42Z","timestamp":1525862382656},"reference-count":0,"publisher":"Copernicus
+        GmbH","license":[{"URL":"https:\/\/creativecommons.org\/licenses\/by\/3.0\/","start":{"date-parts":[[2017,4,3]],"date-time":"2017-04-03T00:00:00Z","timestamp":1491177600000},"delay-in-days":0,"content-version":"unspecified"}],"funder":[{"DOI":"10.13039\/100000001","name":"National
+        Science Foundation","doi-asserted-by":"publisher","award":["NSF-1044417","NSF-1014180","NSF-1417745","NSF-1417908","NSF-1417700","NSF-1044610"]}],"content-domain":{"domain":[],"crossmark-restriction":false},"short-container-title":["Biogeosciences
+        Discuss."],"abstract":"<jats:p>Permafrost soils store between 1,330&amp;amp;ndash;1,580
+        Pg carbon (C), which is three times the amount of C in global vegetation,
+        almost twice the amount of C in the atmosphere, and half of the global soil
+        organic C pool. Despite the massive amount of C in permafrost, estimates of
+        soil C storage in the high latitude permafrost region are highly uncertain,
+        primarily due to under sampling at all spatial scales; circumpolar soil C
+        estimates lack sufficient continental spatial diversity, regional intensity,
+        and replication at the field-site level. Siberian forests are particularly
+        under sampled, yet the larch forests that dominate this region may store more
+        than twice as much soil C as all other boreal forest types in the continuous
+        permafrost zone combined. Here we present above and belowground C stocks from
+        twenty sites representing a gradient of stand age and structure in a larch
+        watershed of the Kolyma River near Cherskiy, Sakha Republic, Russia. We found
+        that the majority of C stored in the top 1&amp;amp;thinsp;m of the watershed
+        was stored belowground (91&amp;amp;thinsp;%), with 20&amp;amp;thinsp;% in
+        the top 10&amp;amp;thinsp;cm of soil and 42&amp;amp;thinsp;% in the top 30&amp;amp;thinsp;cm.
+        Carbon was more variable in surface soils (10&amp;amp;thinsp;cm; coefficient
+        of variation (CV)&amp;amp;thinsp;=&amp;amp;thinsp;0.35 between stands) than
+        in the top 30&amp;amp;thinsp;cm (CV&amp;amp;thinsp;=&amp;amp;thinsp;0.14)
+        or soil profile to 1&amp;amp;thinsp;m (CV&amp;amp;thinsp;=&amp;amp;thinsp;0.12).
+        Combined active layer and deep frozen deposits (surface &amp;amp;ndash; 15&amp;amp;thinsp;m)
+        contained 205&amp;amp;thinsp;kg C&amp;amp;thinsp;m-2 (yedoma, non-ice wedge)
+        and 331 kg C m-2 (alas), which, even when accounting for landscape-level ice
+        content, is an order of magnitude more C than that stored in the top meter
+        of soil and two orders of magnitude more C than in aboveground biomass. Aboveground
+        biomass was composed of primarily larch (53&amp;amp;thinsp;%) but also included
+        understory vegetation (30&amp;amp;thinsp;%), woody debris (11&amp;amp;thinsp;%)
+        and snag (6&amp;amp;thinsp;%) biomass. While aboveground biomass contained
+        relatively little (9&amp;amp;thinsp;%) of the C stocks in the watershed, aboveground
+        processes were linked to thaw depth and belowground C storage. Thaw depth
+        was significantly negatively related to stand age, and variability of soil
+        C in the top 10&amp;amp;thinsp;cm was related to soil moisture and moss and
+        lichen cover. These results suggest that as the climate warms, changes in
+        stand age and structure may be as important as direct climate effects on belowground
+        environmental conditions and permafrost C vulnerability.\n                    <\/jats:p>","DOI":"10.5194\/bg-2017-88","type":"journal-article","created":{"date-parts":[[2017,4,3]],"date-time":"2017-04-03T08:38:22Z","timestamp":1491208702000},"page":"1-39","source":"Crossref","is-referenced-by-count":1,"title":["Variability
+        in Above and Belowground Carbon Stocks\nin a Siberian Larch Watershed"],"prefix":"10.5194","author":[{"given":"Elizabeth
+        E.","family":"Webb","sequence":"first","affiliation":[]},{"given":"Kathryn","family":"Heard","sequence":"additional","affiliation":[]},{"given":"Susan
+        M.","family":"Natali","sequence":"additional","affiliation":[]},{"given":"Andrew
+        G.","family":"Bunn","sequence":"additional","affiliation":[]},{"given":"Heather
+        D.","family":"Alexander","sequence":"additional","affiliation":[]},{"given":"Logan
+        T.","family":"Berner","sequence":"additional","affiliation":[]},{"given":"Alexander","family":"Kholodov","sequence":"additional","affiliation":[]},{"ORCID":"http:\/\/orcid.org\/0000-0001-8851-7386","authenticated-orcid":false,"given":"Michael
+        M.","family":"Loranty","sequence":"additional","affiliation":[]},{"given":"John
+        D.","family":"Schade","sequence":"additional","affiliation":[]},{"ORCID":"http:\/\/orcid.org\/0000-0002-7791-0972","authenticated-orcid":false,"given":"Valentin","family":"Spektor","sequence":"additional","affiliation":[]},{"given":"Nikita","family":"Zimov","sequence":"additional","affiliation":[]}],"member":"3145","published-online":{"date-parts":[[2017,4,3]]},"container-title":["Biogeosciences
+        Discussions"],"language":"en","link":[{"URL":"https:\/\/www.biogeosciences-discuss.net\/bg-2017-88\/bg-2017-88.pdf","content-type":"unspecified","content-version":"vor","intended-application":"similarity-checking"}],"deposited":{"date-parts":[[2017,7,25]],"date-time":"2017-07-25T14:58:20Z","timestamp":1500994700000},"score":12.907586,"issued":{"date-parts":[[2017,4,3]]},"references-count":0,"URL":"http:\/\/dx.doi.org\/10.5194\/bg-2017-88","ISSN":["1810-6285"],"issn-type":[{"value":"1810-6285","type":"electronic"}]},{"indexed":{"date-parts":[[2018,11,14]],"date-time":"2018-11-14T11:41:16Z","timestamp":1542195676945},"reference-count":75,"publisher":"American
+        Geophysical Union (AGU)","issue":"10","license":[{"URL":"http:\/\/doi.wiley.com\/10.1002\/tdm_license_1.1","start":{"date-parts":[[2018,10,1]],"date-time":"2018-10-01T00:00:00Z","timestamp":1538352000000},"delay-in-days":0,"content-version":"tdm"},{"URL":"http:\/\/onlinelibrary.wiley.com\/termsAndConditions#am","start":{"date-parts":[[2019,10,24]],"date-time":"2019-10-24T00:00:00Z","timestamp":1571875200000},"delay-in-days":388,"content-version":"am"},{"URL":"http:\/\/onlinelibrary.wiley.com\/termsAndConditions#vor","start":{"date-parts":[[2018,10,24]],"date-time":"2018-10-24T00:00:00Z","timestamp":1540339200000},"delay-in-days":23,"content-version":"vor"}],"funder":[{"DOI":"10.13039\/100000001","name":"National
+        Science Foundation","doi-asserted-by":"publisher","award":["NSF-1331939","NSF-1331726","NSF-1331841","NSF-1331846","NSF-1331828","NSF-1360760","NSF-1331940"]}],"content-domain":{"domain":[],"crossmark-restriction":false},"short-container-title":["Global
+        Biogeochem. Cycles"],"published-print":{"date-parts":[[2018,10]]},"DOI":"10.1029\/2018gb005974","type":"journal-article","created":{"date-parts":[[2018,8,22]],"date-time":"2018-08-22T16:02:15Z","timestamp":1534953735000},"page":"1542-1555","source":"Crossref","is-referenced-by-count":0,"title":["Mercury
+        Sourcing and Sequestration in Weathering Profiles at Six Critical Zone Observatories"],"prefix":"10.1029","volume":"32","author":[{"ORCID":"http:\/\/orcid.org\/0000-0002-7699-4596","authenticated-orcid":false,"given":"Justin
+        B.","family":"Richardson","sequence":"first","affiliation":[{"name":"Department
+        of Earth and Atmospheric Sciences; Cornell University; Ithaca NY USA"},{"name":"Department
+        of Geoscience; University of Massachusetts Amherst; Amherst MA USA"}]},{"given":"Arnulfo
+        A.","family":"Aguirre","sequence":"additional","affiliation":[{"name":"Department
+        of Earth and Atmospheric Sciences; Cornell University; Ithaca NY USA"}]},{"ORCID":"http:\/\/orcid.org\/0000-0002-1852-3657","authenticated-orcid":false,"given":"Heather
+        L.","family":"Buss","sequence":"additional","affiliation":[{"name":"School
+        of Earth Sciences; University of Bristol; Bristol UK"}]},{"given":"A.","family":"Toby
+        O''Geen","sequence":"additional","affiliation":[{"name":"Department of Land,
+        Air and Water Resources; University of California; Davis CA USA"}]},{"ORCID":"http:\/\/orcid.org\/0000-0003-3245-478X","authenticated-orcid":false,"given":"Xin","family":"Gu","sequence":"additional","affiliation":[{"name":"Department
+        of Geosciences; The Pennsylvania State University; University Park PA USA"}]},{"given":"Daniella
+        M.","family":"Rempe","sequence":"additional","affiliation":[{"name":"Department
+        of Geosciences, Jackson School of Geosciences; University of Texas Austin;
+        Austin TX USA"}]},{"given":"Daniel de B.","family":"Richter","sequence":"additional","affiliation":[{"name":"University
+        Program in Ecology and Nicholas School of Environment; Duke University; Durham
+        NC USA"}]}],"member":"13","published-online":{"date-parts":[[2018,10,24]]},"reference":[{"issue":"2","key":"10.1029\/2018GB005974-BIB0001|gbc20797-cit-0002","doi-asserted-by":"crossref","first-page":"179","DOI":"10.1016\/j.envpol.2005.02.026","article-title":"Mercury
+        loss from soils following conversion from forest to pasture in Rond\u00f4nia,
+        Western Amazon, Brazil","volume":"137","author":"Almeida","year":"2005","journal-title":"Environmental
+        Pollution"},{"key":"10.1029\/2018GB005974-BIB0002|gbc20797-cit-0003","doi-asserted-by":"crossref","first-page":"410","DOI":"10.1002\/gbc.20040","article-title":"Legacy
+        impacts of all-time anthropogenic emissions on the global mercury cycle","volume":"27","author":"Amos","year":"2013","journal-title":"Global
+        Biogeochemical Cycles"},{"key":"10.1029\/2018GB005974-BIB0003|gbc20797-cit-0004","author":"Andren","first-page":"1","year":"1979","volume-title":"Biogeochemistry
+        of Mercury in the Environment"},{"issue":"9","key":"10.1029\/2018GB005974-BIB0004|gbc20797-cit-0005","doi-asserted-by":"crossref","first-page":"847","DOI":"10.1130\/G33449.1","article-title":"Coupling
+        meteoric 10Be with pedogenic losses of 9Be to improve soil residence time
+        estimates on an ancient North American interfluve","volume":"40","author":"Bacon","year":"2012","journal-title":"Geology"},{"key":"10.1029\/2018GB005974-BIB0075|gbc20797-cit-0076","doi-asserted-by":"crossref","first-page":"167","DOI":"10.1016\/j.gca.2012.04.026","article-title":"Rate
+        constants and mechanisms for the crystallization of Al nano-goethite under
+        environmentally relevant conditions","volume":"88","author":"Bazilevskaya","year":"2012","journal-title":"Geochimica
+        et Cosmochimica Acta"},{"issue":"5","key":"10.1029\/2018GB005974-BIB0005|gbc20797-cit-0006","doi-asserted-by":"crossref","first-page":"1010","DOI":"10.1139\/f92-113","article-title":"On
+        the chemical form of mercury in edible fish and marine invertebrate tissue","volume":"49","author":"Bloom","year":"1992","journal-title":"Canadian
+        Journal of Fisheries and Aquatic Sciences"},{"issue":"3","key":"10.1029\/2018GB005974-BIB0006|gbc20797-cit-0007","doi-asserted-by":"crossref","first-page":"567","DOI":"10.1016\/0016-7037(87)90070-6","article-title":"Constitutive
+        mass balance relations between chemical composition, volume, density, porosity,
+        and strain in metasomatic hydrochemical systems: Results on weathering and
+        pedogenesis","volume":"51","author":"Brimhall","year":"1987","journal-title":"Geochimica
+        et Cosmochimica Acta"},{"issue":"4","key":"10.1029\/2018GB005974-BIB0007|gbc20797-cit-0008","doi-asserted-by":"crossref","first-page":"247","DOI":"10.1111\/j.1472-4669.2006.00058.x","article-title":"The
+        coupling of biological iron cycling and mineral weathering during saprolite
+        formation, Luquillo Mountains, Puerto Rico","volume":"3","author":"Buss","year":"2005","journal-title":"Geobiology"},{"key":"10.1029\/2018GB005974-BIB0008|gbc20797-cit-0009","doi-asserted-by":"crossref","first-page":"224","DOI":"10.1016\/j.gca.2016.09.038","article-title":"Lithological
+        influences on contemporary and long-term regolith weathering at the Luquillo
+        Critical Zone Observatory","volume":"196","author":"Buss","year":"2017","journal-title":"Geochimica
+        et Cosmochimica Acta"},{"key":"10.1029\/2018GB005974-BIB0009|gbc20797-cit-0010","series-title":"US
+        Geological Survey Professional Paper","doi-asserted-by":"crossref","first-page":"249","DOI":"10.3133\/pp1789I","volume-title":"Water
+        quality and landscape processes of four watersheds in eastern Puerto Rico","volume":"1789","author":"Buss","year":"2012"},{"issue":"1","key":"10.1029\/2018GB005974-BIB0010|gbc20797-cit-0011","doi-asserted-by":"crossref","first-page":"48","DOI":"10.1016\/j.envpol.2009.08.028","article-title":"Mercury
+        in urban soils with various types of land use in Beijing, China","volume":"158","author":"Chen","year":"2010","journal-title":"Environmental
+        Pollution"},{"issue":"6260","key":"10.1029\/2018GB005974-BIB0076|gbc20797-cit-0077","doi-asserted-by":"crossref","first-page":"534","DOI":"10.1126\/science.aab2210","article-title":"Geophysical
+        imaging reveals topographic stress control of bedrock weathering","volume":"350","author":"Clair","year":"2015","journal-title":"Science"},{"issue":"1-3","key":"10.1029\/2018GB005974-BIB0011|gbc20797-cit-0012","doi-asserted-by":"crossref","first-page":"247","DOI":"10.1016\/S0048-9697(02)00045-1","article-title":"Forest
+        fire indicators and mercury deposition in an intense land use change region
+        in the Brazilian Amazon (Alta Floresta, MT)","volume":"293","author":"Cordeiro","year":"2002","journal-title":"Science
+        of the Total Environment"},{"key":"10.1029\/2018GB005974-BIB0012|gbc20797-cit-0013","first-page":"825","article-title":"Legacy
+        mercury and stoichiometry with C, N, and S in soil, pore water, and stream
+        water across the upland-wetland interface: The influence of hydrogeologic
+        setting","volume":"118","author":"Demers","year":"2013","journal-title":"Journal
+        of Geophysical Research: Biogeosciences"},{"issue":"1","key":"10.1029\/2018GB005974-BIB0013|gbc20797-cit-0014","doi-asserted-by":"crossref","first-page":"17","DOI":"10.1641\/B570106","article-title":"Mercury
+        contamination in forest and freshwater ecosystems in the northeastern United
+        States","volume":"57","author":"Driscoll","year":"2007","journal-title":"Bioscience"},{"issue":"10","key":"10.1029\/2018GB005974-BIB0014|gbc20797-cit-0015","doi-asserted-by":"crossref","first-page":"4967","DOI":"10.1021\/es305071v","article-title":"Mercury
+        as a global pollutant: Sources, pathways, and effects","volume":"47","author":"Driscoll","year":"2013","journal-title":"Environmental
+        Science & Technology"},{"issue":"3","key":"10.1029\/2018GB005974-BIB0015|gbc20797-cit-0016","doi-asserted-by":"crossref","first-page":"385","DOI":"10.1007\/s11631-017-0169-z","article-title":"Seasonal
+        shifts in the solute ion ratios of vadose zone rock moisture from the Eel
+        River Critical Zone Observatory","volume":"36","author":"Druhan","year":"2017","journal-title":"Acta
+        Geochimica"},{"issue":"2","key":"10.1029\/2018GB005974-BIB0016|gbc20797-cit-0017","doi-asserted-by":"crossref","first-page":"127","DOI":"10.1007\/s10533-007-9172-5","article-title":"Rhizogenic
+        Fe-C redox cycling: A hypothetical biogeochemical mechanism that drives crustal
+        weathering in upland soils","volume":"87","author":"Fimmen","year":"2008","journal-title":"Biogeochemistry"},{"issue":"1-4","key":"10.1029\/2018GB005974-BIB0017|gbc20797-cit-0018","doi-asserted-by":"crossref","first-page":"63","DOI":"10.1007\/s11270-011-0769-x","article-title":"Geochemistry
+        of mercury along a soil profile compared to other elements and to the parental
+        rock: Evidence of external input","volume":"221","author":"Fiorentino","year":"2011","journal-title":"Water,
+        Air, & Soil Pollution"},{"issue":"5","key":"10.1029\/2018GB005974-BIB0018|gbc20797-cit-0019","doi-asserted-by":"crossref","first-page":"467","DOI":"10.1130\/G25487A.1","article-title":"Field
+        evidence for climate-driven changes in sediment supply leading to strath terrace
+        formation","volume":"37","author":"Fuller","year":"2009","journal-title":"Geology"},{"issue":"3-4","key":"10.1029\/2018GB005974-BIB0019|gbc20797-cit-0020","doi-asserted-by":"crossref","first-page":"421","DOI":"10.1007\/s10653-004-1308-0","article-title":"Principal
+        biogeochemical factors affecting the speciation and transport of mercury through
+        the terrestrial environment","volume":"26","author":"Gabriel","year":"2004","journal-title":"Environmental
+        Geochemistry and Health"},{"key":"10.1029\/2018GB005974-BIB0020|gbc20797-cit-0021","first-page":"413","article-title":"Rainfall,
+        runoff and elevation relationships in the Luquillo Mountains of Puerto Rico","volume":"32","author":"Garcia-Martino","year":"1996","journal-title":"Caribbean
+        Journal of Science"},{"issue":"1-3","key":"10.1029\/2018GB005974-BIB0021|gbc20797-cit-0022","doi-asserted-by":"crossref","first-page":"121","DOI":"10.1016\/j.scitotenv.2008.04.001","article-title":"Mercury
+        distribution in tropical soil profiles related to origin of mercury and soil
+        processes","volume":"401","author":"Grimaldi","year":"2008","journal-title":"Science
+        of the Total Environment"},{"issue":"3-4","key":"10.1029\/2018GB005974-BIB0022|gbc20797-cit-0023","doi-asserted-by":"crossref","first-page":"331","DOI":"10.1016\/j.geoderma.2009.08.017","article-title":"Mercury
+        speciation in a tropical soil association; Consequence of gold mining on Hg
+        distribution in French Guiana","volume":"153","author":"Guedron","year":"2009","journal-title":"Geoderma"},{"issue":"11","key":"10.1029\/2018GB005974-BIB0023|gbc20797-cit-0024","doi-asserted-by":"crossref","first-page":"2010","DOI":"10.1016\/j.apgeochem.2006.08.011","article-title":"Weathering
+        versus atmospheric contributions to mercury concentrations in French Guiana
+        soils","volume":"21","author":"Guedron","year":"2006","journal-title":"Applied
+        Geochemistry"},{"issue":"5637","key":"10.1029\/2018GB005974-BIB0024|gbc20797-cit-0025","doi-asserted-by":"crossref","first-page":"1203","DOI":"10.1126\/science.1085941","article-title":"The
+        chemical form of mercury in fish","volume":"301","author":"Harris","year":"2003","journal-title":"Science"},{"issue":"1-3","key":"10.1029\/2018GB005974-BIB0025|gbc20797-cit-0026","doi-asserted-by":"crossref","first-page":"163","DOI":"10.1016\/j.scitotenv.2005.05.023","article-title":"Impact
+        of mercury atmospheric deposition on soils and streams in a mountainous catchment
+        (Vosges, France) polluted by chlor-alkali industrial activity: The important
+        trapping role of the organic matter","volume":"361","author":"Hissler","year":"2006","journal-title":"Science
+        of the Total Environment"},{"issue":"5","key":"10.1029\/2018GB005974-BIB0026|gbc20797-cit-0027","doi-asserted-by":"crossref","first-page":"570","DOI":"10.1007\/s00128-015-1521-9","article-title":"The
+        influence of sample drying procedures on mercury concentrations analyzed in
+        soils","volume":"94","author":"Hojdov\u00e1","year":"2015","journal-title":"Bulletin
+        of Environmental Contamination and Toxicology"},{"issue":"3","key":"10.1029\/2018GB005974-BIB0027|gbc20797-cit-0028","doi-asserted-by":"crossref","first-page":"366","DOI":"10.1002\/esp.3502","article-title":"Geophysical
+        constraints on deep weathering and water storage potential in the Southern
+        Sierra Critical Zone Observatory","volume":"39","author":"Holbrook","year":"2014","journal-title":"Earth
+        Surface Processes and Landforms"},{"issue":"2","key":"10.1029\/2018GB005974-BIB0028|gbc20797-cit-0029","doi-asserted-by":"crossref","first-page":"171","DOI":"10.1016\/j.scitotenv.2009.09.043","article-title":"Is
+        low-level environmental mercury exposure of concern to human health?","volume":"408","author":"Holmes","year":"2009","journal-title":"Science
+        of the Total Environment"},{"key":"10.1029\/2018GB005974-BIB0029|gbc20797-cit-0030","author":"Hunsaker","first-page":"716","year":"2003","volume-title":"First
+        interagency conference on research in the watersheds"},{"issue":"1-3","key":"10.1029\/2018GB005974-BIB0030|gbc20797-cit-0031","doi-asserted-by":"crossref","first-page":"13","DOI":"10.1016\/S0048-9697(02)00553-3","article-title":"500
+        years of mercury production: Global annual inventory by region until 2000
+        and associated emissions","volume":"304","author":"Hylander","year":"2003","journal-title":"Science
+        of the Total Environment"},{"issue":"3","key":"10.1029\/2018GB005974-BIB0031|gbc20797-cit-0032","doi-asserted-by":"crossref","first-page":"928","DOI":"10.2136\/vzj2010.0133","article-title":"Opening
+        the \u201cblack box\u201d: Water chemistry reveals hydrological controls on
+        weathering in the Susquehanna Shale Hills Critical Zone Observatory","volume":"10","author":"Jin","year":"2011","journal-title":"Vadose
+        Zone Journal"},{"issue":"13","key":"10.1029\/2018GB005974-BIB0032|gbc20797-cit-0033","doi-asserted-by":"crossref","first-page":"3669","DOI":"10.1016\/j.gca.2010.03.036","article-title":"Mineral
+        weathering and elemental transport during hillslope evolution at the Susquehanna\/Shale
+        Hills Critical Zone Observatory","volume":"74","author":"Jin","year":"2010","journal-title":"Geochimica
+        et Cosmochimica Acta"},{"issue":"19","key":"10.1029\/2018GB005974-BIB0033|gbc20797-cit-0034","doi-asserted-by":"crossref","first-page":"5874","DOI":"10.1021\/es060377q","article-title":"Sources
+        of mercury wet deposition in eastern Ohio, USA","volume":"40","author":"Keeler","year":"2006","journal-title":"Environmental
+        Science & Technology"},{"issue":"7","key":"10.1029\/2018GB005974-BIB0034|gbc20797-cit-0035","doi-asserted-by":"crossref","first-page":"1105","DOI":"10.1016\/S0016-7037(01)00841-9","article-title":"A
+        non-steady-state compartmental model of global-scale mercury biogeochemistry
+        with interhemispheric atmospheric gradients","volume":"66","author":"Lamborg","year":"2002","journal-title":"Geochimica
+        et Cosmochimica Acta"},{"key":"10.1029\/2018GB005974-BIB0035|gbc20797-cit-0036","doi-asserted-by":"crossref","first-page":"309","DOI":"10.1016\/S0169-555X(98)00023-3","article-title":"The
+        frequency and distribution of recent landslides in three montane tropical
+        regions of Puerto Rico","volume":"24","author":"Larsen","year":"1998","journal-title":"Geomorphology"},{"key":"10.1029\/2018GB005974-BIB0036|gbc20797-cit-0037","doi-asserted-by":"crossref","first-page":"714","DOI":"10.1016\/j.scitotenv.2014.07.036","article-title":"Mercury
+        concentrations in forest soils and stream waters in northeast and south China","volume":"496","author":"Luo","year":"2014","journal-title":"Science
+        of the Total Environment"},{"issue":"20","key":"10.1029\/2018GB005974-BIB0037|gbc20797-cit-0038","doi-asserted-by":"crossref","first-page":"5328","DOI":"10.1016\/j.scitotenv.2009.07.001","article-title":"Mercury
+        in edible mushrooms and underlying soil: Bioconcentration factors and toxicological
+        risk","volume":"407","author":"Melgar","year":"2009","journal-title":"Science
+        of the Total Environment"},{"issue":"2\/3","key":"10.1029\/2018GB005974-BIB0038|gbc20797-cit-0039","doi-asserted-by":"crossref","first-page":"607","DOI":"10.1023\/B:WAFO.0000028381.04393.ed","article-title":"Mercury
+        and methylmercury in runoff from a forested catchment-Concentration, fluxes,
+        and their response to manipulations","volume":"4","author":"Munthe","year":"2004","journal-title":"Water,
+        Air, & Soil Pollution: Focus"},{"key":"10.1029\/2018GB005974-BIB0039|gbc20797-cit-0040","series-title":"US
+        Geological Survey Professional Paper","first-page":"1","volume-title":"Water
+        quality and landscape processes of four watersheds in eastern Puerto Rico","volume":"1789","author":"Murphy","year":"2012"},{"issue":"7","key":"10.1029\/2018GB005974-BIB0040|gbc20797-cit-0041","doi-asserted-by":"crossref","first-page":"e0180987","DOI":"10.1371\/journal.pone.0180987","article-title":"Reassessing
+        rainfall in the Luquillo Mountains, Puerto Rico: Local and global ecohydrological
+        implications","volume":"12","author":"Murphy","year":"2017","journal-title":"PLoS
+        One"},{"issue":"1-3","key":"10.1029\/2018GB005974-BIB0041|gbc20797-cit-0042","doi-asserted-by":"crossref","first-page":"3","DOI":"10.1016\/S0048-9697(02)00552-1","article-title":"Volcanic
+        emissions of mercury to the atmosphere: Global and regional inventories","volume":"304","author":"Nriagu","year":"2003","journal-title":"Science
+        of the Total Environment"},{"issue":"5","key":"10.1029\/2018GB005974-BIB0042|gbc20797-cit-0043","doi-asserted-by":"crossref","first-page":"765","DOI":"10.5194\/bg-6-765-2009","article-title":"Mercury
+        concentrations and pools in four Sierra Nevada forest sites, and relationships
+        to organic carbon and nitrogen","volume":"6","author":"Obrist","year":"2009","journal-title":"Biogeosciences"},{"issue":"9","key":"10.1029\/2018GB005974-BIB0043|gbc20797-cit-0044","doi-asserted-by":"crossref","first-page":"3974","DOI":"10.1021\/es104384m","article-title":"Mercury
+        distribution across 14 U.S. forests. Part 1: Spatial patterns of concentrations
+        in biomass, litter, and soils","volume":"45","author":"Obrist","year":"2011","journal-title":"Environmental
+        Science and Technology"},{"issue":"1-2","key":"10.1029\/2018GB005974-BIB0044|gbc20797-cit-0045","doi-asserted-by":"crossref","first-page":"5","DOI":"10.1016\/j.geoderma.2004.11.005","article-title":"Elemental
+        translocation and loss from three highly weathered soil-bedrock profiles in
+        the southeastern United States","volume":"126","author":"Oh","year":"2005","journal-title":"Geoderma"},{"issue":"13","key":"10.1029\/2018GB005974-BIB0045|gbc20797-cit-0046","doi-asserted-by":"crossref","first-page":"1826","DOI":"10.1002\/esp.3948","article-title":"Architecture
+        of the deep critical zone in the R\u00edo Icacos watershed (Luquillo Critical
+        Zone Observatory, Puerto Rico) inferred from drilling and ground penetrating
+        radar (GPR)","volume":"41","author":"Orlando","year":"2016","journal-title":"Earth
+        Surface Processes and Landforms"},{"key":"10.1029\/2018GB005974-BIB0046|gbc20797-cit-0047","doi-asserted-by":"crossref","first-page":"41","DOI":"10.1002\/2015MS000526","article-title":"A
+        gridded global data set of soil, intact regolith, and sedimentary deposit
+        thicknesses for regional and global land surface modeling","volume":"8","author":"Pelletier","year":"2016","journal-title":"Journal
+        of Advances in Modeling Earth Systems"},{"issue":"4","key":"10.1029\/2018GB005974-BIB0047|gbc20797-cit-0048","doi-asserted-by":"crossref","first-page":"542","DOI":"10.1007\/s11368-011-0468-7","article-title":"Mercury
+        content in volcanic soils across Europe and its relationship with soil properties","volume":"12","author":"Pe\u00f1a-Rodr\u00edguez","year":"2012","journal-title":"Journal
+        of Soils and Sediments"},{"key":"10.1029\/2018GB005974-BIB0048|gbc20797-cit-0049","author":"Pirrone","first-page":"3","year":"2009","volume-title":"Global
+        mercury emissions to the atmosphere from natural and anthropogenic sources"},{"issue":"22","key":"10.1029\/2018GB005974-BIB0049|gbc20797-cit-0050","doi-asserted-by":"crossref","first-page":"6737","DOI":"10.5194\/bg-12-6737-2015","article-title":"Mercury
+        in coniferous and deciduous upland forests in northern New England, USA: Implications
+        of climate change","volume":"12","author":"Richardson","year":"2015","journal-title":"Biogeosciences"},{"key":"10.1029\/2018GB005974-BIB0050|gbc20797-cit-0051","doi-asserted-by":"crossref","first-page":"127","DOI":"10.1016\/j.envpol.2013.07.011","article-title":"Spatial
+        and vertical distribution of mercury in upland forest soils across the northeastern
+        United States","volume":"182","author":"Richardson","year":"2013","journal-title":"Environmental
+        Pollution"},{"key":"10.1029\/2018GB005974-BIB0051|gbc20797-cit-0052","doi-asserted-by":"crossref","first-page":"190","DOI":"10.1016\/j.soilbio.2015.03.001","article-title":"Trace
+        metals and metalloids in forest soils and exotic earthworms in northern New
+        England, USA","volume":"85","author":"Richardson","year":"2015","journal-title":"Soil
+        Biology and Biochemistry"},{"issue":"36","key":"10.1029\/2018GB005974-BIB0052|gbc20797-cit-0053","doi-asserted-by":"crossref","first-page":"27994","DOI":"10.1007\/s11356-017-0356-9","article-title":"Organic
+        horizon and mineral soil mercury along three clear-cut forest chronosequences
+        across the northeastern USA","volume":"24","author":"Richardson","year":"2017","journal-title":"Environmental
+        Science and Pollution Research"},{"key":"10.1029\/2018GB005974-BIB0053|gbc20797-cit-0054","unstructured":"Richardson
+        , J. B. Richter , D. D. 2017 Mercury in soils of the Calhoun Critical Zone
+        Observatory: Importance of redox features in sequestration"},{"key":"10.1029\/2018GB005974-BIB0054|gbc20797-cit-0055","author":"Richter","year":"2001","volume-title":"Understanding
+        soil change: soil sustainability over millennia, centuries, and decades"},{"issue":"1-2","key":"10.1029\/2018GB005974-BIB0055|gbc20797-cit-0056","doi-asserted-by":"crossref","first-page":"223","DOI":"10.1007\/s10646-004-6270-1","article-title":"Mercury
+        concentrations in Bicknell''s thrush and other insectivorous passerines in
+        montane forests of northeastern North America","volume":"14","author":"Rimmer","year":"2005","journal-title":"Ecotoxicology"},{"issue":"1","key":"10.1029\/2018GB005974-BIB0056|gbc20797-cit-0057","doi-asserted-by":"crossref","first-page":"1","DOI":"10.1016\/S0048-9697(98)00265-4","article-title":"The
+        geochemistry of mercury in central Amazonian soils developed on the Alter-do-Chao
+        formation of the lower Tapajos River Valley, Para state, Brazil","volume":"223","author":"Roulet","year":"1998","journal-title":"Science
+        of the Total Environment"},{"key":"10.1029\/2018GB005974-BIB0057|gbc20797-cit-0058","doi-asserted-by":"crossref","first-page":"1463","DOI":"10.1002\/2017GL075571","article-title":"Permafrost
+        stores a globally significant amount of mercury","volume":"45","author":"Schuster","year":"2018","journal-title":"Geophysical
+        Research Letters"},{"issue":"2","key":"10.1029\/2018GB005974-BIB0058|gbc20797-cit-0059","doi-asserted-by":"crossref","first-page":"181","DOI":"10.1023\/A:1010600600099","article-title":"Dynamics
+        of mercury and methylmercury in forest floor and runoff of a forested watershed
+        in Central Europe","volume":"53","author":"Schwesig","year":"2001","journal-title":"Biogeochemistry"},{"issue":"1","key":"10.1029\/2018GB005974-BIB0059|gbc20797-cit-0060","doi-asserted-by":"crossref","first-page":"43","DOI":"10.1146\/annurev.environ.051308.084314","article-title":"Global
+        biogeochemical cycling of mercury: A review","volume":"34","author":"Selin","year":"2009","journal-title":"Annual
+        Review of Environment and Resources"},{"issue":"1","key":"10.1029\/2018GB005974-BIB0060|gbc20797-cit-0061","doi-asserted-by":"crossref","first-page":"143","DOI":"10.1016\/j.envpol.2007.12.031","article-title":"Comparison
+        of total mercury and methylmercury cycling at five sites using the small watershed
+        approach","volume":"154","author":"Shanley","year":"2008","journal-title":"Environmental
+        Pollution"},{"issue":"3","key":"10.1029\/2018GB005974-BIB0061|gbc20797-cit-0062","doi-asserted-by":"crossref","first-page":"1756","DOI":"10.1007\/s11356-012-1115-6","article-title":"Spatial
+        distribution of mercury in topsoil from five regions of China","volume":"20","author":"Shi","year":"2013","journal-title":"Environmental
+        Science and Pollution Research"},{"issue":"3-4","key":"10.1029\/2018GB005974-BIB0062|gbc20797-cit-0063","doi-asserted-by":"crossref","first-page":"399","DOI":"10.1016\/j.epsl.2008.02.029","article-title":"Isotope
+        geochemistry of mercury in source rocks, mineral deposits and spring deposits
+        of the California Coast Ranges, USA","volume":"269","author":"Smith","year":"2008","journal-title":"Earth
+        and Planetary Science Letters"},{"key":"10.1029\/2018GB005974-BIB0063|gbc20797-cit-0064","first-page":"19","article-title":"Geochemical
+        and mineralogical data for soils of the conterminous United States","volume":"801","author":"Smith","year":"2013","journal-title":"US
+        Geological Survey Data Series"},{"key":"10.1029\/2018GB005974-BIB0064|gbc20797-cit-0065","doi-asserted-by":"crossref","first-page":"G03008","DOI":"10.1029\/2009JG001124","article-title":"Anthropogenic
+        impacts on global storage and emissions of mercury from terrestrial soils:
+        Insights from a new global model","volume":"115","author":"Smith-Downey","year":"2010","journal-title":"Journal
+        of Geophysical Research"},{"issue":"11","key":"10.1029\/2018GB005974-BIB0065|gbc20797-cit-0066","doi-asserted-by":"crossref","first-page":"5969","DOI":"10.1021\/acs.est.7b00451","article-title":"Total
+        mercury released to the environment by human activities","volume":"51","author":"Streets","year":"2017","journal-title":"Environmental
+        Science & Technology"},{"issue":"10","key":"10.1029\/2018GB005974-BIB0066|gbc20797-cit-0067","doi-asserted-by":"crossref","first-page":"981","DOI":"10.2475\/10.2016.02","article-title":"Oxidative
+        dissolution under the channel leads geomorphological evolution at the Shale
+        Hills catchment","volume":"316","author":"Sullivan","year":"2016","journal-title":"American
+        Journal of Science"},{"issue":"17","key":"10.1029\/2018GB005974-BIB0067|gbc20797-cit-0068","doi-asserted-by":"crossref","first-page":"10,128","DOI":"10.1021\/es500517s","article-title":"Variation
+        in terrestrial and aquatic sources of methylmercury in stream predators as
+        revealed by stable mercury isotopes","volume":"48","author":"Tsui","year":"2014","journal-title":"Environmental
+        Science & Technology"},{"issue":"18","key":"10.1029\/2018GB005974-BIB0068|gbc20797-cit-0069","doi-asserted-by":"crossref","first-page":"6998","DOI":"10.1021\/es101374y","article-title":"In
+        situ production of methylmercury within a stream channel in northern California","volume":"44","author":"Tsui","year":"2010","journal-title":"Environmental
+        Science & Technology"},{"key":"10.1029\/2018GB005974-BIB0070|gbc20797-cit-0071","series-title":"Ecological
+        Bulletins","first-page":"43","volume-title":"Ecological gradient analyses
+        in a tropical landscape","volume":"54","author":"Weaver","year":"2013"},{"issue":"2","key":"10.1029\/2018GB005974-BIB0071|gbc20797-cit-0072","doi-asserted-by":"crossref","first-page":"209","DOI":"10.1016\/S0016-7037(97)00335-9","article-title":"Chemical
+        weathering in a tropical watershed, Luquillo Mountains, Puerto Rico: I. Long-term
+        versus short-term weathering fluxes","volume":"62","author":"White","year":"1998","journal-title":"Geochimica
+        et Cosmochimica Acta"},{"issue":"4","key":"10.1029\/2018GB005974-BIB0072|gbc20797-cit-0073","doi-asserted-by":"crossref","first-page":"812","DOI":"10.1890\/13-0212.1","article-title":"Soil
+        mercury and its response to atmospheric mercury deposition across the northeastern
+        United States","volume":"24","author":"Yu","year":"2014","journal-title":"Ecological
+        Applications"},{"issue":"2","key":"10.1029\/2018GB005974-BIB0073|gbc20797-cit-0074","doi-asserted-by":"crossref","first-page":"351","DOI":"10.1016\/j.etap.2005.03.007","article-title":"Low
+        dose mercury toxicity and human health","volume":"20","author":"Zahir","year":"2005","journal-title":"Environmental
+        Toxicology and Pharmacology"},{"issue":"4","key":"10.1029\/2018GB005974-BIB0074|gbc20797-cit-0075","doi-asserted-by":"crossref","first-page":"962","DOI":"10.1007\/s11368-015-1062-1","article-title":"Anthropogenic
+        mercury sequestration in different soil types on the southeast coast of China","volume":"15","author":"Zhang","year":"2015","journal-title":"Journal
+        of Soils and Sediments"}],"container-title":["Global Biogeochemical Cycles"],"language":"en","link":[{"URL":"https:\/\/api.wiley.com\/onlinelibrary\/tdm\/v1\/articles\/10.1029%2F2018GB005974","content-type":"application\/pdf","content-version":"vor","intended-application":"text-mining"},{"URL":"http:\/\/api.wiley.com\/onlinelibrary\/chorus\/v1\/articles\/10.1029%2F2018GB005974","content-type":"application\/pdf","content-version":"am","intended-application":"syndication"},{"URL":"http:\/\/onlinelibrary.wiley.com\/wol1\/doi\/10.1029\/2018GB005974\/fullpdf","content-type":"unspecified","content-version":"vor","intended-application":"similarity-checking"}],"deposited":{"date-parts":[[2018,11,14]],"date-time":"2018-11-14T11:25:57Z","timestamp":1542194757000},"score":12.815225,"issued":{"date-parts":[[2018,10]]},"references-count":75,"journal-issue":{"published-print":{"date-parts":[[2018,10]]},"issue":"10"},"URL":"http:\/\/dx.doi.org\/10.1029\/2018gb005974","archive":["Portico"],"relation":{"cites":[]},"ISSN":["0886-6236"],"issn-type":[{"value":"0886-6236","type":"print"}],"subject":["Atmospheric
+        Science","Global and Planetary Change","General Environmental Science","Environmental
+        Chemistry"]},{"indexed":{"date-parts":[[2018,11,27]],"date-time":"2018-11-27T15:22:44Z","timestamp":1543332164106},"reference-count":179,"publisher":"Institute
+        of Electrical and Electronics Engineers (IEEE)","issue":"1","license":[{"URL":"http:\/\/www.ieee.org\/publications_standards\/publications\/rights\/ieeecopyrightform.pdf","start":{"date-parts":[[2017,1,1]],"date-time":"2017-01-01T00:00:00Z","timestamp":1483228800000},"delay-in-days":0,"content-version":"am"},{"URL":"http:\/\/www.ieee.org\/publications_standards\/publications\/rights\/ieeecopyrightform.pdf","start":{"date-parts":[[2017,1,1]],"date-time":"2017-01-01T00:00:00Z","timestamp":1483228800000},"delay-in-days":0,"content-version":"vor"}],"funder":[{"DOI":"10.13039\/100000001","name":"National
+        Science Foundation","doi-asserted-by":"publisher","award":["NSF-1125165","NSF-1135814","NSF
+        CNS-1545050","NSF-1066391","NSFC-61202369","NSF-1442630","NSF CNS-1545037","NSF-1303359"]}],"content-domain":{"domain":[],"crossmark-restriction":false},"short-container-title":["IEEE
+        Commun. Surv. Tutorials"],"published-print":{"date-parts":[[2017]]},"DOI":"10.1109\/comst.2016.2616442","type":"journal-article","created":{"date-parts":[[2016,10,11]],"date-time":"2016-10-11T18:54:47Z","timestamp":1476212087000},"page":"397-422","source":"Crossref","is-referenced-by-count":24,"title":["Survey
+        of Security Advances in Smart Grid: A Data Driven Approach"],"prefix":"10.1109","volume":"19","author":[{"ORCID":"http:\/\/orcid.org\/0000-0003-1973-3995","authenticated-orcid":false,"given":"Song","family":"Tan","sequence":"first","affiliation":[]},{"given":"Debraj","family":"De","sequence":"additional","affiliation":[]},{"given":"Wen-Zhan","family":"Song","sequence":"additional","affiliation":[]},{"given":"Junjie","family":"Yang","sequence":"additional","affiliation":[]},{"given":"Sajal
+        K.","family":"Das","sequence":"additional","affiliation":[]}],"member":"263","container-title":["IEEE
+        Communications Surveys & Tutorials"],"link":[{"URL":"http:\/\/ieeexplore.ieee.org\/ielam\/9739\/7862305\/7588049-aam.pdf","content-type":"application\/pdf","content-version":"am","intended-application":"syndication"},{"URL":"http:\/\/xplorestaging.ieee.org\/ielx7\/9739\/7862305\/07588049.pdf?arnumber=7588049","content-type":"unspecified","content-version":"vor","intended-application":"similarity-checking"}],"deposited":{"date-parts":[[2017,12,13]],"date-time":"2017-12-13T20:32:10Z","timestamp":1513197130000},"score":12.815225,"issued":{"date-parts":[[2017]]},"references-count":179,"journal-issue":{"issue":"1"},"URL":"http:\/\/dx.doi.org\/10.1109\/comst.2016.2616442","ISSN":["1553-877X"],"issn-type":[{"value":"1553-877X","type":"electronic"}]},{"indexed":{"date-parts":[[2018,10,6]],"date-time":"2018-10-06T18:10:40Z","timestamp":1538849440265},"reference-count":59,"publisher":"Elsevier
+        BV","issue":"4","license":[{"URL":"https:\/\/www.elsevier.com\/tdm\/userlicense\/1.0\/","start":{"date-parts":[[2014,10,1]],"date-time":"2014-10-01T00:00:00Z","timestamp":1412121600000},"delay-in-days":0,"content-version":"tdm"},{"URL":"https:\/\/www.elsevier.com\/open-access\/userlicense\/1.0\/","start":{"date-parts":[[2018,10,1]],"date-time":"2018-10-01T00:00:00Z","timestamp":1538352000000},"delay-in-days":1461,"content-version":"vor"}],"funder":[{"name":"NSF","award":["DMS
+        0901330","DMS 0652633 FRG","DMS 0636606 RTG","DMS 0600800","DMS 0854977","DMS
+        0854977 FRG","DMS 0838210 RTG"]},{"name":"NSF","award":["DMS 0901330","DMS
+        0652633 FRG","DMS 0636606 RTG","DMS 0600800","DMS 0854977","DMS 0854977 FRG","DMS
+        0838210 RTG"]},{"name":"NSF","award":["DMS 0901330","DMS 0652633 FRG","DMS
+        0636606 RTG","DMS 0600800","DMS 0854977","DMS 0854977 FRG","DMS 0838210 RTG"]},{"name":"NSF","award":["DMS
+        0901330","DMS 0652633 FRG","DMS 0636606 RTG","DMS 0600800","DMS 0854977","DMS
+        0854977 FRG","DMS 0838210 RTG"]},{"name":"NSF","award":["DMS 0901330","DMS
+        0652633 FRG","DMS 0636606 RTG","DMS 0600800","DMS 0854977","DMS 0854977 FRG","DMS
+        0838210 RTG"]},{"name":"NSF","award":["DMS 0901330","DMS 0652633 FRG","DMS
+        0636606 RTG","DMS 0600800","DMS 0854977","DMS 0854977 FRG","DMS 0838210 RTG"]},{"name":"NSF","award":["DMS
+        0901330","DMS 0652633 FRG","DMS 0636606 RTG","DMS 0600800","DMS 0854977","DMS
+        0854977 FRG","DMS 0838210 RTG"]},{"name":"NSF","award":["DMS 0901330","DMS
+        0652633 FRG","DMS 0636606 RTG","DMS 0600800","DMS 0854977","DMS 0854977 FRG","DMS
+        0838210 RTG"]},{"name":"FWF","award":["P24572 N25","P20778"]},{"name":"FWF","award":["P24572
+        N25","P20778"]},{"name":"ERC","award":[]}],"content-domain":{"domain":[],"crossmark-restriction":false},"short-container-title":["Journal
+        de Math\u00e9matiques Pures et Appliqu\u00e9es"],"published-print":{"date-parts":[[2014,10]]},"DOI":"10.1016\/j.matpur.2014.02.004","type":"journal-article","created":{"date-parts":[[2014,2,14]],"date-time":"2014-02-14T07:01:15Z","timestamp":1392361275000},"page":"702-757","source":"Crossref","is-referenced-by-count":4,"title":["A
+        category of kernels for equivariant factorizations, II: Further implications"],"prefix":"10.1016","volume":"102","author":[{"given":"Matthew","family":"Ballard","sequence":"first","affiliation":[]},{"given":"David","family":"Favero","sequence":"additional","affiliation":[]},{"given":"Ludmil","family":"Katzarkov","sequence":"additional","affiliation":[]}],"member":"78","container-title":["Journal
+        de Math\u00e9matiques Pures et Appliqu\u00e9es"],"language":"en","link":[{"URL":"https:\/\/api.elsevier.com\/content\/article\/PII:S0021782414000129?httpAccept=text\/xml","content-type":"text\/xml","content-version":"vor","intended-application":"text-mining"},{"URL":"https:\/\/api.elsevier.com\/content\/article\/PII:S0021782414000129?httpAccept=text\/plain","content-type":"text\/plain","content-version":"vor","intended-application":"text-mining"}],"deposited":{"date-parts":[[2018,10,6]],"date-time":"2018-10-06T17:50:00Z","timestamp":1538848200000},"score":12.538129,"issued":{"date-parts":[[2014,10]]},"references-count":59,"journal-issue":{"published-print":{"date-parts":[[2014,10]]},"issue":"4"},"alternative-id":["S0021782414000129"],"URL":"http:\/\/dx.doi.org\/10.1016\/j.matpur.2014.02.004","ISSN":["0021-7824"],"issn-type":[{"value":"0021-7824","type":"print"}],"subject":["Applied
+        Mathematics","General Mathematics"]},{"indexed":{"date-parts":[[2018,7,6]],"date-time":"2018-07-06T05:10:11Z","timestamp":1530853811770},"reference-count":48,"publisher":"SAGE
+        Publications","issue":"7","license":[{"URL":"http:\/\/www.sagepub.com\/licence-information-for-chorus","start":{"date-parts":[[2019,7,5]],"date-time":"2019-07-05T00:00:00Z","timestamp":1562284800000},"delay-in-days":399,"content-version":"vor"}],"funder":[{"DOI":"10.13039\/501100004052","name":"King
+        Abdullah University of Science and Technology","doi-asserted-by":"publisher","award":["KUS-C1-016-04"]},{"name":"NIH
+        NCI","award":["R25-CA090301-11"]},{"name":"DOE","award":["DE-NA0002376","DE-AC02-06CH11357","B575363"]},{"name":"DOE","award":["DE-NA0002376","DE-AC02-06CH11357","B575363"]},{"name":"DOE","award":["DE-NA0002376","DE-AC02-06CH11357","B575363"]},{"name":"National
+        Energy Research Scientific Computing Center","award":["DE-AC02-05CH11231"]},{"name":"NSF","award":["CCF
+        0702765","RI-1217991","CCF-0830753","CNS-0551685","CCF-1439145","CCF-0833199","IIS-
+        0916053","IIS-0917266","EFRI-1240483","CCF-1423111"]},{"name":"NSF","award":["CCF
+        0702765","RI-1217991","CCF-0830753","CNS-0551685","CCF-1439145","CCF-0833199","IIS-
+        0916053","IIS-0917266","EFRI-1240483","CCF-1423111"]},{"name":"NSF","award":["CCF
+        0702765","RI-1217991","CCF-0830753","CNS-0551685","CCF-1439145","CCF-0833199","IIS-
+        0916053","IIS-0917266","EFRI-1240483","CCF-1423111"]},{"name":"NSF","award":["CCF
+        0702765","RI-1217991","CCF-0830753","CNS-0551685","CCF-1439145","CCF-0833199","IIS-
+        0916053","IIS-0917266","EFRI-1240483","CCF-1423111"]},{"name":"NSF","award":["CCF
+        0702765","RI-1217991","CCF-0830753","CNS-0551685","CCF-1439145","CCF-0833199","IIS-
+        0916053","IIS-0917266","EFRI-1240483","CCF-1423111"]},{"name":"NSF","award":["CCF
+        0702765","RI-1217991","CCF-0830753","CNS-0551685","CCF-1439145","CCF-0833199","IIS-
+        0916053","IIS-0917266","EFRI-1240483","CCF-1423111"]},{"name":"NSF","award":["CCF
+        0702765","RI-1217991","CCF-0830753","CNS-0551685","CCF-1439145","CCF-0833199","IIS-
+        0916053","IIS-0917266","EFRI-1240483","CCF-1423111"]},{"name":"NSF","award":["CCF
+        0702765","RI-1217991","CCF-0830753","CNS-0551685","CCF-1439145","CCF-0833199","IIS-
+        0916053","IIS-0917266","EFRI-1240483","CCF-1423111"]},{"name":"NSF","award":["CCF
+        0702765","RI-1217991","CCF-0830753","CNS-0551685","CCF-1439145","CCF-0833199","IIS-
+        0916053","IIS-0917266","EFRI-1240483","CCF-1423111"]},{"name":"NSF","award":["CCF
+        0702765","RI-1217991","CCF-0830753","CNS-0551685","CCF-1439145","CCF-0833199","IIS-
+        0916053","IIS-0917266","EFRI-1240483","CCF-1423111"]}],"content-domain":{"domain":["journals.sagepub.com"],"crossmark-restriction":true},"short-container-title":["The
+        International Journal of Robotics Research"],"published-print":{"date-parts":[[2018,6]]},"DOI":"10.1177\/0278364918779555","type":"journal-article","created":{"date-parts":[[2018,7,6]],"date-time":"2018-07-06T04:30:16Z","timestamp":1530851416000},"page":"779-817","update-policy":"http:\/\/dx.doi.org\/10.1177\/sage-journals-update-policy","source":"Crossref","is-referenced-by-count":0,"title":["Sampling-based
+        motion planning with reachable volumes for high-degree-of-freedom manipulators"],"prefix":"10.1177","volume":"37","author":[{"given":"Troy","family":"McMahon","sequence":"first","affiliation":[{"name":"Parasol
+        Lab, Department of Computer Science and Engineering, Texas A&amp;M University,
+        College Station, TX, USA"}]},{"given":"Shawna","family":"Thomas","sequence":"additional","affiliation":[{"name":"Parasol
+        Lab, Department of Computer Science and Engineering, Texas A&amp;M University,
+        College Station, TX, USA"}]},{"given":"Nancy M","family":"Amato","sequence":"additional","affiliation":[{"name":"Parasol
+        Lab, Department of Computer Science and Engineering, Texas A&amp;M University,
+        College Station, TX, USA"}]}],"member":"179","published-online":{"date-parts":[[2018,7,5]]},"reference":[{"key":"bibr1-0278364918779555","DOI":"10.1109\/70.864240","doi-asserted-by":"publisher"},{"key":"bibr2-0278364918779555","DOI":"10.1109\/ICRA.2012.6225256","doi-asserted-by":"publisher"},{"key":"bibr3-0278364918779555","DOI":"10.1109\/ROBOT.2003.1242274","doi-asserted-by":"publisher"},{"key":"bibr4-0278364918779555","DOI":"10.1007\/10991541_7","doi-asserted-by":"publisher"},{"key":"bibr5-0278364918779555","DOI":"10.1109\/ROBOT.2002.1014856","doi-asserted-by":"publisher"},{"key":"bibr6-0278364918779555","author":"Craig
+        JJ","year":"1989","edition":"2","volume-title":"Introduction to Robotics:
+        Mechanics and Control"},{"key":"bibr7-0278364918779555","author":"Garber M","first-page":"541","year":"2003","volume-title":"Algorithmic
+        Foundations of Robotics V"},{"key":"bibr8-0278364918779555","author":"Gottschalk
+        S","volume":"30","first-page":"171","year":"1996","journal-title":"Computer
+        Graphics"},{"key":"bibr9-0278364918779555","author":"Han L","first-page":"920","year":"2004","volume-title":"Proceedings
+        IEEE International Conference on Robotics and Automation (ICRA)"},{"key":"bibr10-0278364918779555","author":"Han
+        L","first-page":"233","year":"2001","volume-title":"New Directions in Algorithmic
+        and Computational Robotics"},{"key":"bibr11-0278364918779555","author":"Han
+        L","first-page":"177","year":"2007","volume-title":"Robotics Science and Systems
+        II"},{"key":"bibr12-0278364918779555","author":"Han L","first-page":"4420","year":"2007","volume-title":"Proceedings
+        IEEE International Conference on Robotics and Automation (ICRA)"},{"key":"bibr13-0278364918779555","author":"Han
+        L","year":"2009","volume-title":"Robotics Science and Systems IV"},{"key":"bibr14-0278364918779555","author":"Han
+        L","first-page":"235","year":"2006","volume-title":"Proceedings of the International
+        Workshop on Algorithmic Foundations of Robotics (WAFR)"},{"key":"bibr15-0278364918779555","DOI":"10.1177\/0278364908097211","doi-asserted-by":"publisher"},{"key":"bibr16-0278364918779555","author":"Han
+        L","year":"2012","volume-title":"Proceedings of the International Workshop
+        on Algorithmic Foundations of Robotics (WAFR)"},{"key":"bibr17-0278364918779555","author":"Han
+        L","first-page":"1346","year":"2009","volume-title":"Proceedings IEEE International
+        Conference on Robotics and Automation (ICRA)"},{"key":"bibr18-0278364918779555","author":"Jaillet
+        L","year":"2011","volume-title":"15th International Symposium on Robotics
+        Research"},{"key":"bibr19-0278364918779555","DOI":"10.1111\/1467-8659.00678","doi-asserted-by":"publisher"},{"key":"bibr20-0278364918779555","DOI":"10.1109\/70.508439","doi-asserted-by":"publisher"},{"key":"bibr21-0278364918779555","DOI":"10.1007\/978-1-4615-4022-9","doi-asserted-by":"publisher"},{"key":"bibr22-0278364918779555","DOI":"10.1109\/ROBOT.1999.770349","doi-asserted-by":"publisher"},{"key":"bibr23-0278364918779555","DOI":"10.1109\/ROBOT.1999.770022","doi-asserted-by":"publisher"},{"key":"bibr24-0278364918779555","author":"LaValle
+        SM","first-page":"293","year":"2001","volume-title":"New Directions in Algorithmic
+        and Computational Robotics"},{"key":"bibr26-0278364918779555","DOI":"10.1145\/359156.359164","doi-asserted-by":"publisher"},{"key":"bibr27-0278364918779555","DOI":"10.1109\/IROS.2014.6943082","doi-asserted-by":"publisher"},{"key":"bibr28-0278364918779555","DOI":"10.1109\/ICRA.2014.6907820","doi-asserted-by":"publisher"},{"key":"bibr29-0278364918779555","DOI":"10.1109\/ICRA.2015.7139607","doi-asserted-by":"publisher"},{"key":"bibr30-0278364918779555","author":"Merlet
+        JP","year":"2002","volume-title":"ASME Biennial Mechanisms and Robotics Conference"},{"key":"bibr31-0278364918779555","DOI":"10.4310\/HHA.2004.v6.n1.a14","doi-asserted-by":"publisher"},{"key":"bibr32-0278364918779555","DOI":"10.1109\/ROBOT.2005.1570432","doi-asserted-by":"publisher"},{"key":"bibr33-0278364918779555","DOI":"10.1109\/IRDS.2002.1043993","doi-asserted-by":"publisher"},{"key":"bibr34-0278364918779555","DOI":"10.1109\/SFCS.1979.10","doi-asserted-by":"publisher"},{"key":"bibr35-0278364918779555","DOI":"10.1017\/CBO9780511526282","doi-asserted-by":"publisher"},{"key":"bibr37-0278364918779555","DOI":"10.1145\/1941553.1941586","doi-asserted-by":"publisher"},{"key":"bibr38-0278364918779555","DOI":"10.1177\/0278364909357643","doi-asserted-by":"publisher"},{"key":"bibr39-0278364918779555","DOI":"10.1177\/0278364902021009119","doi-asserted-by":"publisher"},{"key":"bibr40-0278364918779555","author":"Vargas
+        Estrada A","first-page":"727","year":"2006","volume-title":"Proceedings IEEE
+        International Conference on Robotics and Automation (ICRA)"},{"key":"bibr41-0278364918779555","DOI":"10.1109\/70.86079","doi-asserted-by":"publisher"},{"key":"bibr42-0278364918779555","DOI":"10.1090\/S0002-9947-1932-1501641-2","doi-asserted-by":"publisher"},{"key":"bibr43-0278364918779555","DOI":"10.2307\/2371127","doi-asserted-by":"publisher"},{"key":"bibr44-0278364918779555","author":"Xie
+        D","first-page":"473","year":"2004","volume-title":"Proceedings IEEE International
+        Conference on Robotics and Automation (ICRA)"},{"key":"bibr45-0278364918779555","DOI":"10.1109\/70.976030","doi-asserted-by":"publisher"},{"key":"bibr46-0278364918779555","author":"Yao
+        Z","first-page":"1875","year":"2005","volume-title":"Proceedings IEEE International
+        Conference on Intelligent Robots and Systems (IROS)"},{"key":"bibr47-0278364918779555","DOI":"10.1109\/ROBOT.2005.1570709","doi-asserted-by":"publisher"},{"key":"bibr48-0278364918779555","DOI":"10.1007\/978-1-84882-985-5_27","doi-asserted-by":"publisher"},{"key":"bibr49-0278364918779555","author":"Zhang
+        Y","year":"2013","volume-title":"Proceedings IEEE International Conference
+        on Robotics and Automation (ICRA)"},{"key":"bibr50-0278364918779555","DOI":"10.1177\/0278364913488805","doi-asserted-by":"publisher"}],"container-title":["The
+        International Journal of Robotics Research"],"language":"en","link":[{"URL":"http:\/\/journals.sagepub.com\/doi\/pdf\/10.1177\/0278364918779555","content-type":"application\/pdf","content-version":"vor","intended-application":"text-mining"},{"URL":"http:\/\/journals.sagepub.com\/doi\/full-xml\/10.1177\/0278364918779555","content-type":"application\/xml","content-version":"vor","intended-application":"text-mining"},{"URL":"http:\/\/journals.sagepub.com\/doi\/pdf\/10.1177\/0278364918779555","content-type":"application\/pdf","content-version":"vor","intended-application":"syndication"},{"URL":"http:\/\/journals.sagepub.com\/doi\/pdf\/10.1177\/0278364918779555","content-type":"unspecified","content-version":"vor","intended-application":"similarity-checking"}],"deposited":{"date-parts":[[2018,7,6]],"date-time":"2018-07-06T04:31:18Z","timestamp":1530851478000},"score":12.382717,"issued":{"date-parts":[[2018,6]]},"references-count":48,"journal-issue":{"published-online":{"date-parts":[[2018,5,23]]},"published-print":{"date-parts":[[2018,6]]},"issue":"7"},"alternative-id":["10.1177\/0278364918779555"],"URL":"http:\/\/dx.doi.org\/10.1177\/0278364918779555","relation":{"cites":[]},"ISSN":["0278-3649","1741-3176"],"issn-type":[{"value":"0278-3649","type":"print"},{"value":"1741-3176","type":"electronic"}],"subject":["Mechanical
+        Engineering","Modelling and Simulation","Electrical and Electronic Engineering","Software","Applied
+        Mathematics","Artificial Intelligence"]},{"indexed":{"date-parts":[[2018,5,9]],"date-time":"2018-05-09T05:48:14Z","timestamp":1525844894010},"reference-count":20,"publisher":"Proceedings
+        of the National Academy of Sciences","issue":"45","license":[{"URL":"http:\/\/www.pnas.org\/site\/misc\/userlicense.xhtml","start":{"date-parts":[[2017,5,8]],"date-time":"2017-05-08T00:00:00Z","timestamp":1494201600000},"delay-in-days":199,"content-version":"vor"}],"funder":[{"name":"NSF","award":["DMS-1308877","CCF-0939370","SES-0835531
+        (CDI)","DMS-1309998","DMS-1107000","DMS-1612456"]},{"name":"NSF","award":["DMS-1308877","CCF-0939370","SES-0835531
+        (CDI)","DMS-1309998","DMS-1107000","DMS-1612456"]},{"name":"ARO","award":["W911NF1110114","W911NF1510423"]},{"name":"ARO","award":["W911NF1110114","W911NF1510423"]},{"name":"NSF","award":["DMS-1308877","CCF-0939370","SES-0835531
+        (CDI)","DMS-1309998","DMS-1107000","DMS-1612456"]},{"name":"NSF","award":["DMS-1308877","CCF-0939370","SES-0835531
+        (CDI)","DMS-1309998","DMS-1107000","DMS-1612456"]},{"name":"NSF","award":["DMS-1308877","CCF-0939370","SES-0835531
+        (CDI)","DMS-1309998","DMS-1107000","DMS-1612456"]},{"name":"NSF","award":["DMS-1308877","CCF-0939370","SES-0835531
+        (CDI)","DMS-1309998","DMS-1107000","DMS-1612456"]}],"content-domain":{"domain":["pnas.org"],"crossmark-restriction":true},"short-container-title":["Proc
+        Natl Acad Sci USA"],"published-print":{"date-parts":[[2016,11,8]]},"DOI":"10.1073\/pnas.1525793113","type":"journal-article","created":{"date-parts":[[2016,10,22]],"date-time":"2016-10-22T03:40:38Z","timestamp":1477107638000},"page":"12679-12684","update-policy":"http:\/\/dx.doi.org\/10.1073\/pnas.cm10313","source":"Crossref","is-referenced-by-count":2,"title":["Co-clustering
+        directed graphs to discover asymmetries and directional communities"],"prefix":"10.1073","volume":"113","author":[{"given":"Karl","family":"Rohe","sequence":"first","affiliation":[]},{"given":"Tai","family":"Qin","sequence":"additional","affiliation":[]},{"given":"Bin","family":"Yu","sequence":"additional","affiliation":[]}],"member":"341","published-online":{"date-parts":[[2016,10,21]]},"reference":[{"key":"2016111006203385000_113.45.12679.1","DOI":"10.2307\/2284710","doi-asserted-by":"publisher"},{"key":"2016111006203385000_113.45.12679.2","unstructured":"Dhillon
+        I (2001) Co-clustering documents and words using bipartite spectral graph
+        partitioning. Proceedings of the Seventh ACM SIGKDD International Conference
+        on Knowledge Discovery and Data Mining. (ACM, San Francisco), pp. 269\u2013274.","DOI":"10.1145\/502512.502550","doi-asserted-by":"crossref"},{"key":"2016111006203385000_113.45.12679.3","unstructured":"Ng
+        A Jordan M Weiss Y (2002) On spectral clustering: Analysis and an algorithm.
+        Advances in Neural Information Processing Systems 14: Proceedings of the 2002
+        Conference. (MIT Press, Cambridge, MA), p. 849."},{"key":"2016111006203385000_113.45.12679.4","first-page":"3120","article-title":"Regularized
+        spectral clustering under the degree-corrected stochastic blockmodel","volume":"26","author":"Qin","year":"2013","journal-title":"Adv
+        Neural Inf Process Syst"},{"key":"2016111006203385000_113.45.12679.5","first-page":"35.1","article-title":"Spectral
+        clustering of graphs with general degrees in the extended planted partition
+        model","volume":"2012","author":"Chaudhuri","year":"2012","journal-title":"J
+        Mach Learn Res Proc Track"},{"key":"2016111006203385000_113.45.12679.6","DOI":"10.1214\/13-AOS1138","doi-asserted-by":"publisher"},{"key":"2016111006203385000_113.45.12679.7","unstructured":"Joseph
+        A Yu B (2014) Impact of regularization on spectral clustering. arXiv:1312.1733.","DOI":"10.1109\/ITA.2014.6804241","doi-asserted-by":"crossref"},{"key":"2016111006203385000_113.45.12679.8","unstructured":"Le
+        CM Vershynin R (2015) Concentration and regularization of random graphs. arXiv:1506.00669."},{"key":"2016111006203385000_113.45.12679.9","unstructured":"Page
+        L Brin S Motwani R Winograd T (1999) The PageRank Citation Ranking: Bringing
+        Order to the Web. (Stanford InfoLab, Palo Alto, CA), Technical Report."},{"key":"2016111006203385000_113.45.12679.10","unstructured":"Wikipedia
+        (2013) Enron\u2014Wikipedia, the free encyclopedia. Available at https:\/\/en.wikipedia.org\/wiki\/Enron.
+        Accessed July 16, 2013."},{"key":"2016111006203385000_113.45.12679.11","unstructured":"Cohen
+        WW (2009) Enron email dataset. Available at www.cs.cmu.edu\/\u223cenron\/.
+        Accessed July 16, 2013."},{"key":"2016111006203385000_113.45.12679.12","unstructured":"Egan
+        T (2005) Tapes reveal Enron took a role in crisis. Available at: www.nytimes.com\/2005\/02\/04\/us\/tapes-show-enron-arranged-plant-shutdown.html?_r=0.
+        Accessed July 16, 2013."},{"key":"2016111006203385000_113.45.12679.13","unstructured":"Zhou
+        Y Goldberg M Magdon-Ismail M Wallace W (2007) Strategies for cleaning organizational
+        emails with an application to Enron email dataset. 5th Conference of North
+        American Association for Computational Social and Organizational Science (IEEE,
+        New York)."},{"key":"2016111006203385000_113.45.12679.14","DOI":"10.1111\/rssb.12013","doi-asserted-by":"publisher"},{"key":"2016111006203385000_113.45.12679.15","unstructured":"Adamic
+        LA Glance N (2005) The political blogosphere and the 2004 us election: Divided
+        they blog. Proceedings of the 3rd International Workshop on Link Discovery.
+        (ACM, New York), pp. 36\u201343.","DOI":"10.1145\/1134271.1134277","doi-asserted-by":"crossref"},{"key":"2016111006203385000_113.45.12679.16","DOI":"10.1103\/PhysRevE.83.016107","doi-asserted-by":"publisher"},{"key":"2016111006203385000_113.45.12679.17","DOI":"10.1126\/science.1221762","doi-asserted-by":"publisher"},{"key":"2016111006203385000_113.45.12679.18","DOI":"10.1103\/PhysRevLett.100.118703","doi-asserted-by":"publisher"},{"key":"2016111006203385000_113.45.12679.19","DOI":"10.1038\/nrg2102","doi-asserted-by":"publisher"},{"key":"2016111006203385000_113.45.12679.20","DOI":"10.1016\/0378-8733(83)90021-7","doi-asserted-by":"publisher"}],"container-title":["Proceedings
+        of the National Academy of Sciences"],"language":"en","link":[{"URL":"http:\/\/www.pnas.org\/syndication\/doi\/10.1073\/pnas.1525793113","content-type":"unspecified","content-version":"vor","intended-application":"syndication"},{"URL":"https:\/\/syndication.highwire.org\/content\/doi\/10.1073\/pnas.1525793113","content-type":"unspecified","content-version":"vor","intended-application":"similarity-checking"}],"deposited":{"date-parts":[[2017,6,25]],"date-time":"2017-06-25T01:51:14Z","timestamp":1498355474000},"score":12.3667755,"issued":{"date-parts":[[2016,10,21]]},"references-count":20,"journal-issue":{"published-online":{"date-parts":[[2016,11,8]]},"published-print":{"date-parts":[[2016,11,8]]},"issue":"45"},"alternative-id":["10.1073\/pnas.1525793113"],"URL":"http:\/\/dx.doi.org\/10.1073\/pnas.1525793113","relation":{"cites":[]},"ISSN":["0027-8424","1091-6490"],"issn-type":[{"value":"0027-8424","type":"print"},{"value":"1091-6490","type":"electronic"}]},{"indexed":{"date-parts":[[2018,12,4]],"date-time":"2018-12-04T00:40:49Z","timestamp":1543884049189},"reference-count":0,"publisher":"Institute
+        of Electrical and Electronics Engineers (IEEE)","funder":[{"DOI":"10.13039\/100004402","name":"Southern
+        Company","doi-asserted-by":"crossref","award":[]},{"name":"NSF","award":["NSF-CPS-1135814","NSF-CNS-0914371","NSF-CDI-1125165","NSF-CNS-1066391","NSF-DMS-1222718"]},{"name":"NIH","award":["NIH-R01GM122080","NIH-R01GM113242"]}],"content-domain":{"domain":[],"crossmark-restriction":false},"short-container-title":["IEEE
+        Geosci. Remote Sensing Lett."],"published-print":{"date-parts":[[2018]]},"DOI":"10.1109\/lgrs.2018.2881102","type":"journal-article","created":{"date-parts":[[2018,11,30]],"date-time":"2018-11-30T19:35:24Z","timestamp":1543606524000},"page":"1-5","source":"Crossref","is-referenced-by-count":0,"title":["Optimal
+        Seismic Reflectivity Inversion: Data-Driven \u2113p-Loss-\u2113q-Regularization
+        Sparse Regression"],"prefix":"10.1109","author":[{"ORCID":"http:\/\/orcid.org\/0000-0003-2340-3622","authenticated-orcid":false,"given":"Fangyu","family":"Li","sequence":"first","affiliation":[]},{"given":"Rui","family":"Xie","sequence":"additional","affiliation":[]},{"given":"Wen-Zhan","family":"Song","sequence":"additional","affiliation":[]},{"given":"Hui","family":"Chen","sequence":"additional","affiliation":[]}],"member":"263","container-title":["IEEE
+        Geoscience and Remote Sensing Letters"],"link":[{"URL":"http:\/\/xplorestaging.ieee.org\/ielx7\/8859\/4357975\/08554069.pdf?arnumber=8554069","content-type":"unspecified","content-version":"vor","intended-application":"similarity-checking"}],"deposited":{"date-parts":[[2018,12,3]],"date-time":"2018-12-03T23:58:31Z","timestamp":1543881511000},"score":12.3667755,"issued":{"date-parts":[[2018]]},"references-count":0,"URL":"http:\/\/dx.doi.org\/10.1109\/lgrs.2018.2881102","ISSN":["1545-598X","1558-0571"],"issn-type":[{"value":"1545-598X","type":"print"},{"value":"1558-0571","type":"electronic"}],"subject":["Geotechnical
+        Engineering and Engineering Geology","Electrical and Electronic Engineering"]},{"institution":{"name":"Thomas
+        Jefferson National Accelerator Facility","place":["Newport News, VA (United
+        States)","-"],"acronym":["TJNAF","-"]},"indexed":{"date-parts":[[2018,5,8]],"date-time":"2018-05-08T03:55:29Z","timestamp":1525751729605},"reference-count":0,"publisher":"Office
+        of Scientific and Technical Information  (OSTI)","content-domain":{"domain":[],"crossmark-restriction":false},"DOI":"10.2172\/760448","type":"report","created":{"date-parts":[[2016,2,22]],"date-time":"2016-02-22T16:22:33Z","timestamp":1456158153000},"source":"Crossref","is-referenced-by-count":0,"title":["Measurement
+        of a Weak Polarization Sensitivity to the Beam Orbit of the CEBAF Accelerator"],"prefix":"10.2172","author":[{"given":"Joseph
+        Michael","family":"Grames","sequence":"first","affiliation":[{"name":"Univ.
+        of Illinois, Urbana-Champaign, IL (United States)"}]}],"member":"960","published-online":{"date-parts":[[2000,4,1]]},"deposited":{"date-parts":[[2016,12,28]],"date-time":"2016-12-28T03:01:16Z","timestamp":1482894076000},"score":12.237207,"issued":{"date-parts":[[2000,4,1]]},"references-count":0,"alternative-id":["NSF
+        PHY 89-21146; NSF PHY 92-57057; NSF PHY 93-10871; NSF PHY 94-20787"],"URL":"http:\/\/dx.doi.org\/10.2172\/760448"},{"indexed":{"date-parts":[[2018,10,25]],"date-time":"2018-10-25T17:11:19Z","timestamp":1540487479987},"reference-count":11,"publisher":"Elsevier
+        BV","license":[{"URL":"https:\/\/www.elsevier.com\/tdm\/userlicense\/1.0\/","start":{"date-parts":[[2018,12,1]],"date-time":"2018-12-01T00:00:00Z","timestamp":1543622400000},"delay-in-days":0,"content-version":"tdm"}],"funder":[{"name":"NSF-CCF-TF","award":["0830683"]},{"name":"NSF-VIGRE","award":["0135290"]},{"name":"NSF-CCF","award":["0539972"]},{"name":"NSF-CCF-TF","award":["0830683"]}],"content-domain":{"domain":["elsevier.com","sciencedirect.com"],"crossmark-restriction":true},"short-container-title":["Discrete
+        Applied Mathematics"],"published-print":{"date-parts":[[2018,12]]},"DOI":"10.1016\/j.dam.2018.04.010","type":"journal-article","created":{"date-parts":[[2018,5,10]],"date-time":"2018-05-10T12:30:36Z","timestamp":1525955436000},"page":"65-74","update-policy":"http:\/\/dx.doi.org\/10.1016\/elsevier_cm_policy","source":"Crossref","is-referenced-by-count":0,"title":["Connected
+        realizations of joint-degree matrices"],"prefix":"10.1016","volume":"250","author":[{"given":"Georgios","family":"Amanatidis","sequence":"first","affiliation":[]},{"given":"Bradley","family":"Green","sequence":"additional","affiliation":[]},{"given":"Milena","family":"Mihail","sequence":"additional","affiliation":[]}],"member":"78","container-title":["Discrete
+        Applied Mathematics"],"language":"en","link":[{"URL":"https:\/\/api.elsevier.com\/content\/article\/PII:S0166218X18302300?httpAccept=text\/xml","content-type":"text\/xml","content-version":"vor","intended-application":"text-mining"},{"URL":"https:\/\/api.elsevier.com\/content\/article\/PII:S0166218X18302300?httpAccept=text\/plain","content-type":"text\/plain","content-version":"vor","intended-application":"text-mining"}],"deposited":{"date-parts":[[2018,10,25]],"date-time":"2018-10-25T16:49:51Z","timestamp":1540486191000},"score":12.237207,"issued":{"date-parts":[[2018,12]]},"references-count":11,"alternative-id":["S0166218X18302300"],"URL":"http:\/\/dx.doi.org\/10.1016\/j.dam.2018.04.010","ISSN":["0166-218X"],"issn-type":[{"value":"0166-218X","type":"print"}],"subject":["Applied
+        Mathematics","Discrete Mathematics and Combinatorics"],"assertion":[{"value":"Elsevier","name":"publisher","label":"This
+        article is maintained by"},{"value":"Connected realizations of joint-degree
+        matrices","name":"articletitle","label":"Article Title"},{"value":"Discrete
+        Applied Mathematics","name":"journaltitle","label":"Journal Title"},{"value":"https:\/\/doi.org\/10.1016\/j.dam.2018.04.010","name":"articlelink","label":"CrossRef
+        DOI link to publisher maintained version"},{"value":"article","name":"content_type","label":"Content
+        Type"},{"value":"\u00a9 2018 Elsevier B.V. All rights reserved.","name":"copyright","label":"Copyright"}]},{"indexed":{"date-parts":[[2018,11,19]],"date-time":"2018-11-19T17:02:40Z","timestamp":1542646960795},"reference-count":58,"publisher":"Elsevier
+        BV","license":[{"URL":"https:\/\/www.elsevier.com\/tdm\/userlicense\/1.0\/","start":{"date-parts":[[2014,11,1]],"date-time":"2014-11-01T00:00:00Z","timestamp":1414800000000},"delay-in-days":0,"content-version":"tdm"}],"funder":[{"DOI":"10.13039\/100000181","name":"Air
+        Force Office of Scientific Research","doi-asserted-by":"publisher","award":["10418149"]},{"DOI":"10.13039\/501100001809","name":"National
+        Natural Science Foundation of China","doi-asserted-by":"publisher","award":["11271281"]},{"name":"NSF-CHE","award":["1035218"]},{"name":"NSF-DMR","award":["1105409"]},{"name":"NSF-DMS","award":["1115390","1115420","1418689","1217273"]},{"name":"NSF-DMS","award":["1115390","1115420","1418689","1217273"]},{"name":"NSF-DMS","award":["1115390","1115420","1418689","1217273"]},{"name":"NSF-DCNS","award":["0959382"]},{"name":"NSF-DMS","award":["1115390","1115420","1418689","1217273"]}],"content-domain":{"domain":["elsevier.com","sciencedirect.com"],"crossmark-restriction":true},"short-container-title":["Journal
+        of Computational Physics"],"published-print":{"date-parts":[[2014,11]]},"DOI":"10.1016\/j.jcp.2014.08.001","type":"journal-article","created":{"date-parts":[[2014,8,8]],"date-time":"2014-08-08T19:51:55Z","timestamp":1407527515000},"page":"48-71","update-policy":"http:\/\/dx.doi.org\/10.1016\/elsevier_cm_policy","source":"Crossref","is-referenced-by-count":30,"title":["Second
+        order convex splitting schemes for periodic nonlocal Cahn\u2013Hilliard and
+        Allen\u2013Cahn equations"],"prefix":"10.1016","volume":"277","author":[{"given":"Zhen","family":"Guan","sequence":"first","affiliation":[]},{"given":"John
+        S.","family":"Lowengrub","sequence":"additional","affiliation":[]},{"given":"Cheng","family":"Wang","sequence":"additional","affiliation":[]},{"given":"Steven
+        M.","family":"Wise","sequence":"additional","affiliation":[]}],"member":"78","container-title":["Journal
+        of Computational Physics"],"language":"en","link":[{"URL":"https:\/\/api.elsevier.com\/content\/article\/PII:S0021999114005476?httpAccept=text\/xml","content-type":"text\/xml","content-version":"vor","intended-application":"text-mining"},{"URL":"https:\/\/api.elsevier.com\/content\/article\/PII:S0021999114005476?httpAccept=text\/plain","content-type":"text\/plain","content-version":"vor","intended-application":"text-mining"}],"deposited":{"date-parts":[[2018,10,1]],"date-time":"2018-10-01T02:50:53Z","timestamp":1538362253000},"score":12.131729,"issued":{"date-parts":[[2014,11]]},"references-count":58,"alternative-id":["S0021999114005476"],"URL":"http:\/\/dx.doi.org\/10.1016\/j.jcp.2014.08.001","ISSN":["0021-9991"],"issn-type":[{"value":"0021-9991","type":"print"}],"subject":["Physics
+        and Astronomy (miscellaneous)","Computer Science Applications"],"assertion":[{"value":"Elsevier","name":"publisher","label":"This
+        article is maintained by"},{"value":"Second order convex splitting schemes
+        for periodic nonlocal Cahn\u2013Hilliard and Allen\u2013Cahn equations","name":"articletitle","label":"Article
+        Title"},{"value":"Journal of Computational Physics","name":"journaltitle","label":"Journal
+        Title"},{"value":"https:\/\/doi.org\/10.1016\/j.jcp.2014.08.001","name":"articlelink","label":"CrossRef
+        DOI link to publisher maintained version"},{"value":"article","name":"content_type","label":"Content
+        Type"},{"value":"Copyright \u00a9 2014 Elsevier Inc. All rights reserved.","name":"copyright","label":"Copyright"}]},{"indexed":{"date-parts":[[2018,8,27]],"date-time":"2018-08-27T16:02:40Z","timestamp":1535385760153},"reference-count":18,"publisher":"Elsevier
+        BV","license":[{"URL":"https:\/\/www.elsevier.com\/tdm\/userlicense\/1.0\/","start":{"date-parts":[[2018,7,1]],"date-time":"2018-07-01T00:00:00Z","timestamp":1530403200000},"delay-in-days":0,"content-version":"tdm"}],"funder":[{"DOI":"10.13039\/501100004007","name":"Instituto
+        Nazionale di Fisica Nucleare","doi-asserted-by":"crossref","award":[]},{"DOI":"10.13039\/501100000781","name":"European
+        Research Council","doi-asserted-by":"publisher","award":["FP7\/2007-2013"]},{"DOI":"10.13039\/100000015","name":"U.S.
+        Department of Energy","doi-asserted-by":"publisher","award":["DE-SC0012654","DE-AC02-05CH11231","DE-AC52-07NA27344"]},{"name":"CALDER","award":["335359"]},{"name":"DOE
+        Office of Nuclear Physics","award":["DEFG03-00ER41138","DE-FG02-08ER41551"]},{"name":"National
+        Science Foundation","award":["NSF-PHY-0605119","NSF-PHY-0855314","NSF-PHY-
+        0969852","NSF-PHY-1401832","NSF-PHY-1307204","NSF-PHY-1404205","NSF-PHY-1314881","NSF-PHY-0902171","NSF-PHY-0500337"]}],"content-domain":{"domain":["elsevier.com","sciencedirect.com"],"crossmark-restriction":true},"short-container-title":["Cryogenics"],"published-print":{"date-parts":[[2018,7]]},"DOI":"10.1016\/j.cryogenics.2018.05.001","type":"journal-article","created":{"date-parts":[[2018,5,28]],"date-time":"2018-05-28T09:19:17Z","timestamp":1527499157000},"page":"56-65","update-policy":"http:\/\/dx.doi.org\/10.1016\/elsevier_cm_policy","source":"Crossref","is-referenced-by-count":2,"title":["An
+        active noise cancellation technique for the CUORE Pulse Tube cryocoolers"],"prefix":"10.1016","volume":"93","author":[{"given":"A.","family":"D\u2019Addabbo","sequence":"first","affiliation":[]},{"given":"C.","family":"Bucci","sequence":"additional","affiliation":[]},{"given":"L.","family":"Canonica","sequence":"additional","affiliation":[]},{"given":"S.","family":"Di
+        Domizio","sequence":"additional","affiliation":[]},{"given":"P.","family":"Gorla","sequence":"additional","affiliation":[]},{"given":"L.","family":"Marini","sequence":"additional","affiliation":[]},{"given":"A.","family":"Nucciotti","sequence":"additional","affiliation":[]},{"given":"I.","family":"Nutini","sequence":"additional","affiliation":[]},{"given":"C.","family":"Rusconi","sequence":"additional","affiliation":[]},{"given":"B.","family":"Welliver","sequence":"additional","affiliation":[]}],"member":"78","container-title":["Cryogenics"],"language":"en","link":[{"URL":"https:\/\/api.elsevier.com\/content\/article\/PII:S0011227517304460?httpAccept=text\/xml","content-type":"text\/xml","content-version":"vor","intended-application":"text-mining"},{"URL":"https:\/\/api.elsevier.com\/content\/article\/PII:S0011227517304460?httpAccept=text\/plain","content-type":"text\/plain","content-version":"vor","intended-application":"text-mining"}],"deposited":{"date-parts":[[2018,8,21]],"date-time":"2018-08-21T12:02:02Z","timestamp":1534852922000},"score":12.055894,"issued":{"date-parts":[[2018,7]]},"references-count":18,"alternative-id":["S0011227517304460"],"URL":"http:\/\/dx.doi.org\/10.1016\/j.cryogenics.2018.05.001","ISSN":["0011-2275"],"issn-type":[{"value":"0011-2275","type":"print"}],"subject":["General
+        Physics and Astronomy","General Materials Science"],"assertion":[{"value":"Elsevier","name":"publisher","label":"This
+        article is maintained by"},{"value":"An active noise cancellation technique
+        for the CUORE Pulse Tube cryocoolers","name":"articletitle","label":"Article
+        Title"},{"value":"Cryogenics","name":"journaltitle","label":"Journal Title"},{"value":"https:\/\/doi.org\/10.1016\/j.cryogenics.2018.05.001","name":"articlelink","label":"CrossRef
+        DOI link to publisher maintained version"},{"value":"article","name":"content_type","label":"Content
+        Type"},{"value":"\u00a9 2018 Elsevier Ltd. All rights reserved.","name":"copyright","label":"Copyright"}]},{"indexed":{"date-parts":[[2018,5,4]],"date-time":"2018-05-04T09:31:07Z","timestamp":1525426267740},"publisher-location":"Berlin\/Heidelberg","reference-count":0,"publisher":"Springer-Verlag","content-domain":{"domain":[],"crossmark-restriction":false},"DOI":"10.1007\/springerreference_2066","type":"reference-entry","created":{"date-parts":[[2011,8,1]],"date-time":"2011-08-01T12:30:34Z","timestamp":1312201834000},"source":"Crossref","is-referenced-by-count":0,"title":["NSF"],"prefix":"10.1007","member":"297","container-title":["SpringerReference"],"deposited":{"date-parts":[[2011,8,1]],"date-time":"2011-08-01T12:34:42Z","timestamp":1312202082000},"score":11.991586,"issued":{"date-parts":[[null]]},"references-count":0,"URL":"http:\/\/dx.doi.org\/10.1007\/springerreference_2066"},{"indexed":{"date-parts":[[2018,5,4]],"date-time":"2018-05-04T11:17:50Z","timestamp":1525432670492},"publisher-location":"Berlin\/Heidelberg","reference-count":0,"publisher":"Springer-Verlag","content-domain":{"domain":[],"crossmark-restriction":false},"DOI":"10.1007\/springerreference_36133","type":"reference-entry","created":{"date-parts":[[2011,8,24]],"date-time":"2011-08-24T11:04:09Z","timestamp":1314183849000},"source":"Crossref","is-referenced-by-count":0,"title":["NSF"],"prefix":"10.1007","member":"297","container-title":["SpringerReference"],"deposited":{"date-parts":[[2011,8,24]],"date-time":"2011-08-24T11:13:22Z","timestamp":1314184402000},"score":11.991586,"issued":{"date-parts":[[null]]},"references-count":0,"URL":"http:\/\/dx.doi.org\/10.1007\/springerreference_36133"},{"indexed":{"date-parts":[[2018,10,10]],"date-time":"2018-10-10T22:22:35Z","timestamp":1539210155114},"reference-count":28,"publisher":"AIP
+        Publishing","issue":"12","license":[{"URL":"https:\/\/publishing.aip.org\/authors\/rights-and-permissions","start":{"date-parts":[[2016,12,10]],"date-time":"2016-12-10T00:00:00Z","timestamp":1481328000000},"delay-in-days":375,"content-version":"am"}],"funder":[{"DOI":"10.13039\/100006231","name":"Brookhaven
+        National Laboratory","doi-asserted-by":"publisher","award":["COMPRES","DE
+        - AC02 - 98CH10886"]},{"name":"NSF","award":["EAR 1045629","EAR 0968823","EAR
+        11-57758","EAR 1141895","EAR 1361463"]},{"name":"NSF","award":["EAR 1045629","EAR
+        0968823","EAR 11-57758","EAR 1141895","EAR 1361463"]},{"name":"NSF","award":["EAR
+        1045629","EAR 0968823","EAR 11-57758","EAR 1141895","EAR 1361463"]},{"name":"NSF","award":["EAR
+        1045629","EAR 0968823","EAR 11-57758","EAR 1141895","EAR 1361463"]},{"name":"NSF","award":["EAR
+        1045629","EAR 0968823","EAR 11-57758","EAR 1141895","EAR 1361463"]}],"content-domain":{"domain":["aip.scitation.org"],"crossmark-restriction":true},"short-container-title":["Review
+        of Scientific Instruments"],"published-print":{"date-parts":[[2015,12]]},"DOI":"10.1063\/1.4937398","type":"journal-article","created":{"date-parts":[[2015,12,10]],"date-time":"2015-12-10T19:37:10Z","timestamp":1449776230000},"page":"125106","update-policy":"http:\/\/dx.doi.org\/10.1063\/aip-crossmark-policy-page","source":"Crossref","is-referenced-by-count":2,"title":["In
+        situ analysis of texture development from sinusoidal stress at high pressure
+        and temperature"],"prefix":"10.1063","volume":"86","author":[{"given":"Li","family":"Li","sequence":"first","affiliation":[{"name":"Mineral
+        Physics Institute, Stony Brook University, Stony Brook, New York 11794-2100,
+        USA"}]},{"given":"Donald J.","family":"Weidner","sequence":"additional","affiliation":[{"name":"Mineral
+        Physics Institute, Stony Brook University, Stony Brook, New York 11794-2100,
+        USA"}]}],"member":"317","reference":[{"key":"c1","DOI":"10.1107\/S002188981200516x","doi-asserted-by":"publisher"},{"key":"c2","DOI":"10.1088\/0953\u20138984\/20\/28\/285201","doi-asserted-by":"publisher"},{"key":"c3","DOI":"10.1126\/science.290.5496.1564","doi-asserted-by":"publisher"},{"key":"c4","DOI":"10.1111\/j.1151-2916.1965.tb14695.x","doi-asserted-by":"publisher"},{"key":"c5","DOI":"10.1111\/j.1151-2916.1965.tb16050.x","doi-asserted-by":"publisher"},{"key":"c6","DOI":"10.1029\/2011jb008498","doi-asserted-by":"publisher"},{"key":"c7","DOI":"10.1098\/rspa.1970.0177","doi-asserted-by":"publisher"},{"key":"c8","DOI":"10.1063\/1.2735587","doi-asserted-by":"publisher"},{"key":"c9","DOI":"10.1063\/1.3481163","doi-asserted-by":"publisher"},{"key":"c10","DOI":"10.1063\/1.4880730(85)","doi-asserted-by":"publisher"},{"key":"c11","DOI":"10.1063\/1.1738532","doi-asserted-by":"publisher"},{"key":"c12","DOI":"10.1038\/Nature03266","doi-asserted-by":"publisher"},{"key":"c13","DOI":"10.1029\/JB093iB04p03261","doi-asserted-by":"publisher"},{"key":"c14","DOI":"10.1103\/physrevb.79.064110","doi-asserted-by":"publisher"},{"key":"c15","DOI":"10.1029\/2001jb000920","doi-asserted-by":"publisher"},{"key":"c16","DOI":"10.1016\/j.ijplas.2010.03.005","doi-asserted-by":"publisher"},{"key":"c17","DOI":"10.1111\/j.1151-2916.1970.tb12678.x","doi-asserted-by":"publisher"},{"key":"c18","DOI":"10.1016\/S0012-821X(01)00533-7","doi-asserted-by":"publisher"},{"key":"c19","DOI":"10.1007\/s00269-005-0054-x","doi-asserted-by":"publisher"},{"key":"c20","DOI":"10.1029\/1999JB900411","doi-asserted-by":"publisher"},{"key":"c21","DOI":"10.1016\/0956-7151(94)90191-0","doi-asserted-by":"publisher"},{"key":"c22","DOI":"10.1016\/j.epsl.2004.07.023","doi-asserted-by":"publisher"},{"key":"c23","DOI":"10.1016\/j.epsl.2008.03.063","doi-asserted-by":"publisher"},{"key":"c24","DOI":"10.1029\/2003GL019090","doi-asserted-by":"publisher"},{"key":"c25","DOI":"10.1088\/0953-8984\/18\/25\/S02","doi-asserted-by":"publisher"},{"key":"c26","DOI":"10.1016\/j.epsl.2006.02.028","doi-asserted-by":"publisher"},{"key":"c27","DOI":"10.1016\/S0031-9201(02)00037-7","doi-asserted-by":"publisher"},{"key":"c28","DOI":"10.1038\/375774a0","doi-asserted-by":"publisher"}],"container-title":["Review
+        of Scientific Instruments"],"language":"en","link":[{"URL":"http:\/\/aip.scitation.org\/doi\/am-pdf\/10.1063\/1.4937398","content-type":"application\/pdf","content-version":"am","intended-application":"syndication"},{"URL":"http:\/\/aip.scitation.org\/doi\/pdf\/10.1063\/1.4937398","content-type":"unspecified","content-version":"vor","intended-application":"similarity-checking"}],"deposited":{"date-parts":[[2018,2,15]],"date-time":"2018-02-15T07:34:34Z","timestamp":1518680074000},"score":11.78921,"issued":{"date-parts":[[2015,12]]},"references-count":28,"journal-issue":{"published-print":{"date-parts":[[2015,12]]},"issue":"12"},"alternative-id":["10.1063\/1.4937398"],"URL":"http:\/\/dx.doi.org\/10.1063\/1.4937398","relation":{"cites":[]},"ISSN":["0034-6748","1089-7623"],"issn-type":[{"value":"0034-6748","type":"print"},{"value":"1089-7623","type":"electronic"}]},{"indexed":{"date-parts":[[2018,7,23]],"date-time":"2018-07-23T10:02:34Z","timestamp":1532340154706},"reference-count":64,"publisher":"Elsevier
+        BV","license":[{"URL":"https:\/\/www.elsevier.com\/tdm\/userlicense\/1.0\/","start":{"date-parts":[[2018,8,1]],"date-time":"2018-08-01T00:00:00Z","timestamp":1533081600000},"delay-in-days":0,"content-version":"tdm"}],"funder":[{"name":"NSF-CCF","award":["1714844","1717556"]},{"name":"NSF-DMS","award":["1521748","1160432"]},{"name":"NSF-DMS","award":["1521748","1160432"]},{"name":"NSF-CCF","award":["1714844","1717556"]},{"name":"NSF-ACI","award":["1440638"]}],"content-domain":{"domain":["elsevier.com","sciencedirect.com"],"crossmark-restriction":true},"short-container-title":["Journal
+        of Computational Physics"],"published-print":{"date-parts":[[2018,8]]},"DOI":"10.1016\/j.jcp.2018.04.007","type":"journal-article","created":{"date-parts":[[2018,4,6]],"date-time":"2018-04-06T22:29:34Z","timestamp":1523053774000},"page":"170-190","update-policy":"http:\/\/dx.doi.org\/10.1016\/elsevier_cm_policy","source":"Crossref","is-referenced-by-count":2,"title":["Mesh-free
+        semi-Lagrangian methods for transport on a sphere using radial basis functions"],"prefix":"10.1016","volume":"366","author":[{"ORCID":"http:\/\/orcid.org\/0000-0002-4987-2972","authenticated-orcid":false,"given":"Varun","family":"Shankar","sequence":"first","affiliation":[]},{"given":"Grady
+        B.","family":"Wright","sequence":"additional","affiliation":[]}],"member":"78","container-title":["Journal
+        of Computational Physics"],"language":"en","link":[{"URL":"https:\/\/api.elsevier.com\/content\/article\/PII:S0021999118302213?httpAccept=text\/xml","content-type":"text\/xml","content-version":"vor","intended-application":"text-mining"},{"URL":"https:\/\/api.elsevier.com\/content\/article\/PII:S0021999118302213?httpAccept=text\/plain","content-type":"text\/plain","content-version":"vor","intended-application":"text-mining"}],"deposited":{"date-parts":[[2018,7,5]],"date-time":"2018-07-05T10:34:13Z","timestamp":1530786853000},"score":11.78921,"issued":{"date-parts":[[2018,8]]},"references-count":64,"alternative-id":["S0021999118302213"],"URL":"http:\/\/dx.doi.org\/10.1016\/j.jcp.2018.04.007","ISSN":["0021-9991"],"issn-type":[{"value":"0021-9991","type":"print"}],"subject":["Physics
+        and Astronomy (miscellaneous)","Computer Science Applications"],"assertion":[{"value":"Elsevier","name":"publisher","label":"This
+        article is maintained by"},{"value":"Mesh-free semi-Lagrangian methods for
+        transport on a sphere using radial basis functions","name":"articletitle","label":"Article
+        Title"},{"value":"Journal of Computational Physics","name":"journaltitle","label":"Journal
+        Title"},{"value":"https:\/\/doi.org\/10.1016\/j.jcp.2018.04.007","name":"articlelink","label":"CrossRef
+        DOI link to publisher maintained version"},{"value":"article","name":"content_type","label":"Content
+        Type"},{"value":"\u00a9 2018 Elsevier Inc. All rights reserved.","name":"copyright","label":"Copyright"}]},{"indexed":{"date-parts":[[2018,6,25]],"date-time":"2018-06-25T16:40:57Z","timestamp":1529944857485},"reference-count":38,"publisher":"Springer
+        Nature","issue":"2","license":[{"URL":"http:\/\/www.springer.com\/tdm","start":{"date-parts":[[2018,2,7]],"date-time":"2018-02-07T00:00:00Z","timestamp":1517961600000},"delay-in-days":0,"content-version":"unspecified"}],"funder":[{"name":"NSF","award":["NSF-DMS
+        1521600","NSF-DMS 1216559","NSF 1502640"]},{"name":"NSF","award":["NSF-DMS
+        1521600","NSF-DMS 1216559","NSF 1502640"]},{"name":"AirForce","award":["AFOSR
+        FA9550-15-1-0152"]}],"content-domain":{"domain":["link.springer.com"],"crossmark-restriction":false},"short-container-title":["J
+        Sci Comput"],"published-print":{"date-parts":[[2018,8]]},"DOI":"10.1007\/s10915-018-0655-4","type":"journal-article","created":{"date-parts":[[2018,2,7]],"date-time":"2018-02-07T16:07:08Z","timestamp":1518019628000},"page":"1127-1147","update-policy":"http:\/\/dx.doi.org\/10.1007\/springer_crossmark_policy","source":"Crossref","is-referenced-by-count":0,"title":["Finite
+        Fourier Frame Approximation Using the Inverse Polynomial Reconstruction Method"],"prefix":"10.1007","volume":"76","author":[{"given":"Xinjuan","family":"Chen","sequence":"first","affiliation":[]},{"given":"Jae-Hun","family":"Jung","sequence":"additional","affiliation":[]},{"given":"Anne","family":"Gelb","sequence":"additional","affiliation":[]}],"member":"297","published-online":{"date-parts":[[2018,2,7]]},"reference":[{"key":"655_CR1","year":"1964","unstructured":"Abramowitz,
+        M., Stegun, I. (eds.): Handbook of Mathematical Functions With Formulas, Graphs,
+        and Mathematical Tables. Applied Mathematics Series 55. National Bureau of
+        Standards, New York (1964)","volume-title":"Handbook of Mathematical Functions
+        With Formulas, Graphs, and Mathematical Tables. Applied Mathematics Series
+        55"},{"key":"655_CR2","doi-asserted-by":"crossref","first-page":"357","DOI":"10.1016\/j.acha.2011.07.004","volume":"32","author":"B
+        Adcock","year":"2012","unstructured":"Adcock, B., Hansen, A.C.: Stable reconstruction
+        in Hilbert spaces and the resolution of the Gibbs phenomenon. Appl. Comput.
+        Harmon. Anal. 32, 357\u2013388 (2012)","journal-title":"Appl. Comput. Harmon.
+        Anal."},{"issue":"3","key":"655_CR3","doi-asserted-by":"crossref","first-page":"1690","DOI":"10.1137\/130943431","volume":"7","author":"B
+        Adcock","year":"2014","unstructured":"Adcock, B., Gataric, M., Hansen, A.C.:
+        On stable reconstructions from nonuniform Fourier measurements. SIAM J. Imaging
+        Sci. 7(3), 1690\u20131723 (2014)","journal-title":"SIAM J. Imaging Sci."},{"key":"655_CR4","unstructured":"Adcock,
+        B., Gataric, M., Hansen, A.C.: Recovering piecewise smooth functions from
+        nonuniform Fourier measurements. arXiv:1410.0088 (2014)"},{"issue":"3","key":"655_CR5","doi-asserted-by":"crossref","first-page":"228","DOI":"10.1007\/s10496-007-0228-0","volume":"23","author":"A
+        Barkhudaryan","year":"2007","unstructured":"Barkhudaryan, A., Barkhudaryan,
+        R., Poghosyan, A.: Asymptotic behavior of Eckhoff\u2019s method for Fourier
+        series convergence acceleration. Anal. Theory Appl. 23(3), 228\u2013242 (2007)","journal-title":"Anal.
+        Theory Appl."},{"issue":"295","key":"655_CR6","doi-asserted-by":"crossref","first-page":"2329","DOI":"10.1090\/S0025-5718-2015-02948-2","volume":"84","author":"D
+        Batenkov","year":"2015","unstructured":"Batenkov, D.: Complete algebraic reconstruction
+        of piecewise-smooth functions from Fourier data. Math. Comput. 84(295), 2329\u20132350
+        (2015)","journal-title":"Math. Comput."},{"issue":"1","key":"655_CR7","doi-asserted-by":"crossref","first-page":"130","DOI":"10.1117\/12.408588","volume":"4119","author":"JJ
+        Benedetto","year":"2000","unstructured":"Benedetto, J.J., Wu, H.C.: Non-uniform
+        sampling and spiral MRI reconstruction. Proc. SPIE 4119(1), 130\u2013141 (2000)","journal-title":"Proc.
+        SPIE"},{"issue":"3","key":"655_CR8","doi-asserted-by":"crossref","first-page":"789","DOI":"10.2307\/3062132","volume":"155","author":"JO
+        Cerda","year":"2002","unstructured":"Cerda, J.O., Seip, K.: Fourier frames.
+        Ann. Math. 155(3), 789\u2013806 (2002)","journal-title":"Ann. Math."},{"key":"655_CR9","doi-asserted-by":"crossref","first-page":"17","DOI":"10.1016\/S0377-0427(00)00573-2","volume":"136","author":"H
+        Chen","year":"2001","unstructured":"Chen, H., Shizgal, B.D.: A spectral solution
+        of the Sturm\u2013Liouville equation; comparison of classical and nonclassical
+        basis sets. J. Comput. Appl. Math. 136, 17\u201335 (2001)","journal-title":"J.
+        Comput. Appl. Math."},{"issue":"1\u20133","key":"655_CR10","doi-asserted-by":"crossref","first-page":"117","DOI":"10.1016\/S0024-3795(00)00250-0","volume":"323","author":"O
+        Christensen","year":"2001","unstructured":"Christensen, O., Lindner, A.M.:
+        Frames of exponentials: lower frame bounds for finite subfamilies and approximation
+        of the inverse frame operator. Linear Algebra Appl. 323(1\u20133), 117\u2013130
+        (2001)","journal-title":"Linear Algebra Appl."},{"key":"655_CR11","author":"O
+        Christensen","year":"2002","unstructured":"Christensen, O.: An Introduction
+        to Frames and Riesz Bases. Birkh\u00e4user, New York (2002)","volume-title":"An
+        Introduction to Frames and Riesz Bases"},{"issue":"1","key":"655_CR12","doi-asserted-by":"crossref","first-page":"79","DOI":"10.1007\/BF02510119","volume":"6","author":"O
+        Christensen","year":"2000","unstructured":"Christensen, O.: Finite-dimensional
+        approximation of the inverse frame operator. J. Fourier Anal. Appl. 6(1),
+        79\u201391 (2000)","journal-title":"J. Fourier Anal. Appl."},{"key":"655_CR13","doi-asserted-by":"crossref","first-page":"221","DOI":"10.1016\/j.jat.2005.01.001","volume":"133","author":"O
+        Christensen","year":"2005","unstructured":"Christensen, O., Strohmer, T.:
+        The finite section method and problems in frame theory. J. Approx. Theory
+        133, 221\u2013237 (2005)","journal-title":"J. Approx. Theory"},{"key":"655_CR14","doi-asserted-by":"crossref","first-page":"1271","DOI":"10.1063\/1.527388","volume":"27","author":"I
+        Daubechies","year":"1986","unstructured":"Daubechies, I., Grossmann, A., Meyer,
+        Y.: Painless nonorthogonal expansions. J. Math. Phys. 27, 1271\u20131283 (1986)","journal-title":"J.
+        Math. Phys."},{"issue":"2","key":"655_CR15","doi-asserted-by":"crossref","first-page":"341","DOI":"10.1090\/S0002-9947-1952-0047179-6","volume":"72","author":"RJ
+        Duffin","year":"1952","unstructured":"Duffin, R.J., Schaeffer, A.C.: class
+        of nonharmonic Fourier series. Trans. Am. Math. Soc. 72(2), 341\u2013366 (1952)","journal-title":"Trans.
+        Am. Math. Soc."},{"issue":"210","key":"655_CR16","doi-asserted-by":"crossref","first-page":"671","DOI":"10.1090\/S0025-5718-1995-1265014-7","volume":"64","author":"KS
+        Eckhoff","year":"1995","unstructured":"Eckhoff, K.S.: Accurate reconstructions
+        of functions of finite regularity from truncated Fourier series expansions.
+        Math. Comput. 64(210), 671\u2013690 (1995)","journal-title":"Math. Comput."},{"key":"655_CR17","doi-asserted-by":"crossref","first-page":"423","DOI":"10.1007\/s002110050101","volume":"69","author":"HG
+        Feichtinger","year":"1995","unstructured":"Feichtinger, H.G., Gr\u00f6chenig,
+        K., Strohmer, T.: Efficient numerical methods in non-uniform sampling theory.
+        Numer. Math. 69, 423\u2013440 (1995)","journal-title":"Numer. Math."},{"key":"655_CR18","doi-asserted-by":"crossref","first-page":"158","DOI":"10.1007\/s10915-011-9502-6","volume":"51","author":"A
+        Gelb","year":"2011","unstructured":"Gelb, A., Hines, T.: Recovering exponential
+        accuracy from nonharmonic Fourier data through spectral reprojection. J. Sci.
+        Comput. 51, 158\u2013182 (2011)","journal-title":"J. Sci. Comput."},{"issue":"3","key":"655_CR19","doi-asserted-by":"crossref","first-page":"1222","DOI":"10.1137\/13092160X","volume":"52","author":"A
+        Gelb","year":"2014","unstructured":"Gelb, A., Song, G.: A frame theoretic
+        approach to the nonuniform fast Fourier transform. SIAM J. Numer. Anal. 52(3),
+        1222\u20131242 (2014)","journal-title":"SIAM J. Numer. Anal."},{"issue":"4","key":"655_CR20","doi-asserted-by":"crossref","first-page":"644","DOI":"10.1137\/S0036144596301390","volume":"39","author":"D
+        Gottlieb","year":"1997","unstructured":"Gottlieb, D., Shu, C.-W.: On the Gibbs
+        phenomenon and its resolution. SIAM Rev. 39(4), 644\u2013668 (1997)","journal-title":"SIAM
+        Rev."},{"key":"655_CR21","doi-asserted-by":"crossref","first-page":"81","DOI":"10.1016\/0377-0427(92)90260-5","volume":"43","author":"D
+        Gottlieb","year":"1992","unstructured":"Gottlieb, D., Shu, C.-W., Solomonoff,
+        A., Vandeven, H.: On the Gibbs phenomenon I: recovering exponential accuracy
+        from the Fourier partial sum of a nonperiodic analytic function. J. Comput.
+        Appl. Math. 43, 81\u201392 (1992)","journal-title":"J. Comput. Appl. Math."},{"issue":"12","key":"655_CR22","doi-asserted-by":"crossref","first-page":"3331","DOI":"10.1109\/78.258077","volume":"41","author":"K
+        Gr\u00f6chenig","year":"1993","unstructured":"Gr\u00f6chenig, K.: Acceleration
+        of the frame algorithm. Trans. Signal Process. 41(12), 3331\u20133340 (1993)","journal-title":"Trans.
+        Signal Process."},{"issue":"2","key":"655_CR23","doi-asserted-by":"crossref","first-page":"105","DOI":"10.1007\/s00041-004-8007-1","volume":"10","author":"K
+        Gr\u00f6chenig","year":"2004","unstructured":"Gr\u00f6chenig, K.: Localization
+        of frames, Banach frames, and the invertibility of the frame operator. J.
+        Fourier Anal. Appl. 10(2), 105\u2013132 (2004)","journal-title":"J. Fourier
+        Anal. Appl."},{"issue":"3","key":"655_CR24","doi-asserted-by":"crossref","first-page":"933","DOI":"10.1016\/j.jcp.2009.10.026","volume":"229","author":"T
+        Hrycak","year":"2010","unstructured":"Hrycak, T., Gr\u00f6chenig, K.: Pseudospectral
+        Fourier reconstruction with the modified inverse polynomial reconstruction
+        method. J. Comput. Phys. 229(3), 933\u2013946 (2010)","journal-title":"J.
+        Comput. Phys."},{"issue":"3","key":"655_CR25","doi-asserted-by":"crossref","first-page":"473","DOI":"10.1109\/42.97598","volume":"10","author":"JI
+        Jackson","year":"1991","unstructured":"Jackson, J.I., Meyer, C.H., Nishimura,
+        D.G., Macovski, A.: Selection of a convolution function for Fourier inversion
+        using gridding. IEEE Trans. Med. Imaging 10(3), 473\u2013478 (1991)","journal-title":"IEEE
+        Trans. Med. Imaging"},{"key":"655_CR26","unstructured":"Jung, J.-H.: A hybrid
+        method for the resolution of the Gibbs phenomenon. In: Hesthaven, J.S., R\u00f8nquist,
+        E. M. (eds.) Lecture Notes in Computational Science and Engineering 76, New
+        York, pp. 219\u2013227 (2011)","DOI":"10.1007\/978-3-642-15337-2_19","doi-asserted-by":"crossref"},{"issue":"1","key":"655_CR27","doi-asserted-by":"crossref","first-page":"131","DOI":"10.1016\/j.cam.2004.02.003","volume":"172","author":"J-H
+        Jung","year":"2004","unstructured":"Jung, J.-H., Shizgal, B.D.: Generalization
+        of the inverse polynomial reconstruction method in the resolution of the Gibbs
+        phenomena. J. Comput. Appl. Math. 172(1), 131\u2013151 (2004)","journal-title":"J.
+        Comput. Appl. Math."},{"key":"655_CR28","doi-asserted-by":"crossref","first-page":"477","DOI":"10.1016\/j.jcp.2007.01.018","volume":"224","author":"J-H
+        Jung","year":"2007","unstructured":"Jung, J.-H., Shizgal, B.D.: Short note:
+        on the numerical convergence with the inverse polynomial reconstruction method
+        for the resolution of the Gibbs phenomenon. J. Comput. Phys. 224, 477\u2013488
+        (2007)","journal-title":"J. Comput. Phys."},{"key":"655_CR29","doi-asserted-by":"crossref","first-page":"2265","DOI":"10.1090\/S0025-5718-10-02366-5","volume":"79","author":"G
+        Kvernadze","year":"2010","unstructured":"Kvernadze, G.: Approximation of the
+        discontinuities of a function by its classical orthogonal polynomial Fourier
+        coefficients. Math. Comput. 79, 2265\u20132285 (2010)","journal-title":"Math.
+        Comput."},{"issue":"6","key":"655_CR30","doi-asserted-by":"crossref","first-page":"1182","DOI":"10.1002\/mrm.21391","volume":"58","author":"M
+        Lustig","year":"2007","unstructured":"Lustig, M., Donoho, D., Pauly, J.: Sparse
+        MRI: the application of compressed sensing for rapid MR imaging. Magn. Reson.
+        Med. 58(6), 1182\u20131195 (2007)","journal-title":"Magn. Reson. Med."},{"issue":"1","key":"655_CR31","doi-asserted-by":"crossref","first-page":"179","DOI":"10.1002\/(SICI)1522-2594(199901)41:1<179::AID-MRM25>3.0.CO;2-V","volume":"41","author":"JG
+        Pipe","year":"1999","unstructured":"Pipe, J.G., Menon, P.: Sampling density
+        compensation in MRI: rationale and an iterative numerical solution. Magn.
+        Reson. Med. 41(1), 179\u2013186 (1999)","journal-title":"Magn. Reson. Med."},{"key":"655_CR32","doi-asserted-by":"crossref","first-page":"825","DOI":"10.1016\/S0045-7930(01)00082-2","volume":"31","author":"BD
+        Shizgal","year":"2002","unstructured":"Shizgal, B.D.: Spectral methods based
+        on nonclassical basis functions; the advection diffusion equation. Comput.
+        Fluids 31, 825\u2013843 (2002)","journal-title":"Comput. Fluids"},{"issue":"1","key":"655_CR33","doi-asserted-by":"crossref","first-page":"41","DOI":"10.1016\/S0377-0427(03)00500-4","volume":"161","author":"BD
+        Shizgal","year":"2003","unstructured":"Shizgal, B.D., Jung, J.-H.: Towards
+        the resolution of the Gibbs phenomena. J. Comput. Appl. Math. 161(1), 41\u201365
+        (2003)","journal-title":"J. Comput. Appl. Math."},{"issue":"1","key":"655_CR34","doi-asserted-by":"crossref","first-page":"29","DOI":"10.1007\/BF02087960","volume":"10","author":"A
+        Solomonoff","year":"1995","unstructured":"Solomonoff, A.: Reconstruction of
+        a discontinuous function from a few Fourier coefficients using Bayesian estimation.
+        J. Sci. Comput. 10(1), 29\u201380 (1995)","journal-title":"J. Sci. Comput."},{"key":"655_CR35","doi-asserted-by":"crossref","first-page":"94","DOI":"10.1016\/j.acha.2012.08.002","volume":"35","author":"G
+        Song","year":"2013","unstructured":"Song, G., Gelb, A.: Approximating the
+        inverse frame operator from localized frames. Appl. Comput. Harmon. Anal.
+        35, 94\u2013110 (2013)","journal-title":"Appl. Comput. Harmon. Anal."},{"key":"655_CR36","unstructured":"Viswanathan,
+        A.: Spectral sampling and discontinuity detection methods with application
+        to magnetic resonance imaging. Master\u2019s thesis, Arizona State University,
+        Tempe, Arizona (2008)"},{"issue":"1\u20133","key":"655_CR37","doi-asserted-by":"crossref","first-page":"487","DOI":"10.1007\/s10915-010-9364-3","volume":"45","author":"A
+        Viswanathan","year":"2010","unstructured":"Viswanathan, A., Gelb, A., Cochran,
+        D., Renaut, R.: On reconstruction from non-uniform spectral data. J. Sci.
+        Comput. 45(1\u20133), 487\u2013513 (2010)","journal-title":"J. Sci. Comput."},{"key":"655_CR38","author":"RM
+        Young","year":"1980","unstructured":"Young, R.M.: An Introduction to Nonharmonic
+        Fourier Series. Academic Press, New York (1980)","volume-title":"An Introduction
+        to Nonharmonic Fourier Series"}],"container-title":["Journal of Scientific
+        Computing"],"language":"en","link":[{"URL":"http:\/\/link.springer.com\/article\/10.1007\/s10915-018-0655-4\/fulltext.html","content-type":"text\/html","content-version":"vor","intended-application":"text-mining"},{"URL":"http:\/\/link.springer.com\/content\/pdf\/10.1007\/s10915-018-0655-4.pdf","content-type":"application\/pdf","content-version":"vor","intended-application":"text-mining"},{"URL":"http:\/\/link.springer.com\/content\/pdf\/10.1007\/s10915-018-0655-4.pdf","content-type":"application\/pdf","content-version":"vor","intended-application":"similarity-checking"}],"deposited":{"date-parts":[[2018,6,25]],"date-time":"2018-06-25T16:08:55Z","timestamp":1529942935000},"score":11.78921,"issued":{"date-parts":[[2018,2,7]]},"references-count":38,"journal-issue":{"published-print":{"date-parts":[[2018,8]]},"issue":"2"},"alternative-id":["655"],"URL":"http:\/\/dx.doi.org\/10.1007\/s10915-018-0655-4","relation":{"cites":[]},"ISSN":["0885-7474","1573-7691"],"issn-type":[{"value":"0885-7474","type":"print"},{"value":"1573-7691","type":"electronic"}],"subject":["Theoretical
+        Computer Science","General Engineering","Computational Theory and Mathematics","Software"]},{"indexed":{"date-parts":[[2018,11,16]],"date-time":"2018-11-16T18:42:33Z","timestamp":1542393753819},"reference-count":92,"publisher":"AIP
+        Publishing","issue":"2","license":[{"URL":"http:\/\/creativecommons.org\/licenses\/by\/3.0\/","start":{"date-parts":[[2014,3,27]],"date-time":"2014-03-27T00:00:00Z","timestamp":1395878400000},"delay-in-days":26,"content-version":"vor"}],"funder":[{"DOI":"10.13039\/100000001","name":"National
+        Science Foundation","doi-asserted-by":"publisher","award":["NSF-1158138"]},{"name":"NSF","award":["NSF-1158138","NSF-STC
+        1231306"]},{"name":"NSF","award":["NSF-1158138","NSF-STC 1231306"]}],"content-domain":{"domain":["aip.scitation.org"],"crossmark-restriction":true},"short-container-title":["Structural
+        Dynamics"],"published-print":{"date-parts":[[2014,3]]},"DOI":"10.1063\/1.4869472","type":"journal-article","created":{"date-parts":[[2014,3,28]],"date-time":"2014-03-28T00:32:14Z","timestamp":1395966734000},"page":"024701","update-policy":"http:\/\/dx.doi.org\/10.1063\/aip-crossmark-policy-page","source":"Crossref","is-referenced-by-count":3,"title":["Enzyme
+        transient state kinetics in crystal and solution from the                     perspective
+        of a time-resolved crystallographer"],"prefix":"10.1063","volume":"1","author":[{"given":"Marius","family":"Schmidt","sequence":"first","affiliation":[{"name":"Physics
+        Department, University of Wisconsin,\r                    Milwaukee, Wisconsin
+        53211, USA"}]},{"given":"Dilano K.","family":"Saldin","sequence":"additional","affiliation":[{"name":"Physics
+        Department, University of Wisconsin,\r                    Milwaukee, Wisconsin
+        53211, USA"}]}],"member":"317","reference":[{"key":"c1\/c1_1","DOI":"10.1107\/S0909049511009423","doi-asserted-by":"publisher"},{"key":"c2\/c2_1","DOI":"10.1107\/S0907444913025997","doi-asserted-by":"publisher"},{"key":"c3\/c3_1","DOI":"10.1155\/2013\/167276","doi-asserted-by":"publisher"},{"key":"c4\/c4_1","DOI":"10.1007\/s00249-009-0427-z","doi-asserted-by":"publisher"},{"key":"c5\/c5_1","DOI":"10.1016\/0022-2836(82)90285-6","doi-asserted-by":"publisher"},{"key":"c6\/c6_1","DOI":"10.1073\/pnas.1210938109","doi-asserted-by":"publisher"},{"key":"c7\/c7_1","DOI":"10.1155\/2013\/750371","doi-asserted-by":"publisher"},{"key":"c8\/c8_1","author":"Steinfeld
+        J. I.","year":"1985","edition":"2","volume-title":"Chemical Kinetics and Dynamics"},{"key":"c9\/c9_1","DOI":"10.1038\/nchem.1565","doi-asserted-by":"publisher"},{"key":"c10\/c10_1","DOI":"10.1371\/journal.pone.0009179","doi-asserted-by":"publisher"},{"key":"c11\/c11_1","DOI":"10.1016\/0009-2614(93)89366-P","doi-asserted-by":"publisher"},{"key":"c12\/c12_1","DOI":"10.1021\/ct300082q","doi-asserted-by":"publisher"},{"key":"c13\/c13_1","DOI":"10.1073\/pnas.81.22.7088","doi-asserted-by":"publisher"},{"key":"c14\/c14_1","DOI":"10.1021\/ja00074a073","doi-asserted-by":"publisher"},{"key":"c15\/c15_1","DOI":"10.1016\/S0006-3495(03)75120-0","doi-asserted-by":"publisher"},{"key":"c16\/c16_1","DOI":"10.1016\/S0006-3495(87)83303-9","doi-asserted-by":"publisher"},{"key":"c17\/c17_1","DOI":"10.1021\/bi020598i","doi-asserted-by":"publisher"},{"key":"c18\/c18_1","DOI":"10.1126\/science.287.5458.1615","doi-asserted-by":"publisher"},{"key":"c19\/c19_1","DOI":"10.1146\/annurev.biophys.32.110601.142445","doi-asserted-by":"publisher"},{"key":"c20\/c20_1","author":"Pace
+        C. N.","volume":"10","first-page":"75","year":"1996","journal-title":"Faseb.
+        J.","DOI":"10.1096\/fasebj.10.1.8566551","doi-asserted-by":"crossref"},{"key":"c21\/c21_1","DOI":"10.1073\/pnas.0903995106","doi-asserted-by":"publisher"},{"key":"c22\/c22_1","DOI":"10.1021\/cr960383c","doi-asserted-by":"publisher"},{"key":"c23\/c23_1","DOI":"10.1021\/jp109908u","doi-asserted-by":"publisher"},{"key":"c24\/c24_1","DOI":"10.1016\/S0006-3495(95)80284-5","doi-asserted-by":"publisher"},{"key":"c25\/c25_1","DOI":"10.1016\/S0006-3495(96)79234-2","doi-asserted-by":"publisher"},{"key":"c26\/c26_1","DOI":"10.1007\/s10867-008-9102-3","doi-asserted-by":"publisher"},{"key":"c27\/c27_1","DOI":"10.1021\/bi0110600","doi-asserted-by":"publisher"},{"key":"c28\/c28_1","author":"Parak
+        F.","volume":"65","first-page":"Pa322","year":"1996","journal-title":"Prog.
+        Biophys. Mol. Bio."},{"key":"c29\/c29_1","DOI":"10.1038\/337754a0","doi-asserted-by":"publisher"},{"key":"c30\/c30_1","DOI":"10.1016\/j.jnoncrysol.2006.01.106","doi-asserted-by":"publisher"},{"key":"c31\/c31_1","DOI":"10.1021\/bi00695a021","doi-asserted-by":"publisher"},{"key":"c32\/c32_1","DOI":"10.1073\/pnas.0900336106","doi-asserted-by":"publisher"},{"key":"c33\/c33_1","DOI":"10.1103\/PhysRevLett.107.158102","doi-asserted-by":"publisher"},{"key":"c34\/c34_1","DOI":"10.1146\/annurev.bb.17.060188.002315","doi-asserted-by":"publisher"},{"key":"c35\/c35_1","DOI":"10.1007\/s002490050015","doi-asserted-by":"publisher"},{"key":"c36\/c36_1","DOI":"10.1016\/S0006-3495(96)79775-8","doi-asserted-by":"publisher"},{"key":"c37\/c37_1","DOI":"10.1007\/s002490100152","doi-asserted-by":"publisher"},{"key":"c38\/c38_1","DOI":"10.1529\/biophysj.104.050104","doi-asserted-by":"publisher"},{"key":"c39\/c39_1","DOI":"10.1042\/BST0340975","doi-asserted-by":"publisher"},{"key":"c40\/c40_1","DOI":"10.1073\/pnas.80.1.173","doi-asserted-by":"publisher"},{"key":"c41\/c41_1","DOI":"10.1021\/ja039557f","doi-asserted-by":"publisher"},{"key":"c42\/c42_1","DOI":"10.1002\/prot.10135","doi-asserted-by":"publisher"},{"key":"c43\/c43_1","DOI":"10.1002\/prot.10136","doi-asserted-by":"publisher"},{"key":"c44\/c44_1","DOI":"10.1021\/ja078024u","doi-asserted-by":"publisher"},{"key":"c45\/c45_1","DOI":"10.1107\/S090744490400616X","doi-asserted-by":"publisher"},{"key":"c46\/c46_1","DOI":"10.1016\/j.str.2004.04.008","doi-asserted-by":"publisher"},{"key":"c47\/c47_1","DOI":"10.1073\/pnas.0305983101","doi-asserted-by":"publisher"},{"key":"c48\/c48_1","DOI":"10.1073\/pnas.0409035102","doi-asserted-by":"publisher"},{"key":"c49\/c49_1","DOI":"10.1039\/c2cp41718a","doi-asserted-by":"publisher"},{"key":"c50\/c50_1","DOI":"10.1016\/j.bbabio.2004.04.011","doi-asserted-by":"publisher"},{"key":"c51\/c51_1","DOI":"10.1016\/0005-2728(85)90094-5","doi-asserted-by":"publisher"},{"key":"c52\/c52_1","DOI":"10.1016\/S0006-3495(91)82313-X","doi-asserted-by":"publisher"},{"key":"c53\/c53_1","DOI":"10.1016\/S0006-3495(94)80643-5","doi-asserted-by":"publisher"},{"key":"c54\/c54_1","DOI":"10.1016\/S0006-3495(98)77525-3","doi-asserted-by":"publisher"},{"key":"c55\/c55_1","DOI":"10.1016\/0014-5793(96)00149-4","doi-asserted-by":"publisher"},{"key":"c56\/c56_1","DOI":"10.1021\/bi9623035","doi-asserted-by":"publisher"},{"key":"c57\/c57_1","DOI":"10.1021\/bi00019a004","doi-asserted-by":"publisher"},{"key":"c58\/c58_1","DOI":"10.1126\/science.275.5305.1471","doi-asserted-by":"publisher"},{"key":"c59\/c59_1","DOI":"10.1016\/S0006-3495(03)75018-8","doi-asserted-by":"publisher"},{"key":"c60\/c60_1","DOI":"10.1107\/S0907444904004160","doi-asserted-by":"publisher"},{"key":"c61\/c61_1","DOI":"10.1021\/ja404503q","doi-asserted-by":"publisher"},{"key":"c62\/c62_1","DOI":"10.1021\/jp4001016","doi-asserted-by":"publisher"},{"key":"c63\/c63_1","DOI":"10.1021\/bi002449a","doi-asserted-by":"publisher"},{"key":"c64\/c64_1","DOI":"10.1529\/biophysj.105.074765","doi-asserted-by":"publisher"},{"key":"c65\/c65_1","DOI":"10.1021\/bi00003a022","doi-asserted-by":"publisher"},{"key":"c66\/c66_1","DOI":"10.1063\/1.1749604","doi-asserted-by":"publisher"},{"key":"c67\/c67_1","DOI":"10.1103\/RevModPhys.62.251","doi-asserted-by":"publisher"},{"key":"c68\/c68_1","DOI":"10.1038\/nature12649","doi-asserted-by":"publisher"},{"key":"c69\/c69_1","DOI":"10.1073\/pnas.0508880103","doi-asserted-by":"publisher"},{"key":"c70\/c70_1","DOI":"10.1073\/pnas.0504932102","doi-asserted-by":"publisher"},{"key":"c71\/c71_1","DOI":"10.1073\/pnas.90.12.5801","doi-asserted-by":"publisher"},{"key":"c72\/c72_1","DOI":"10.1021\/jp044272q","doi-asserted-by":"publisher"},{"key":"c73\/c73_1","DOI":"10.1107\/S0108767309054166","doi-asserted-by":"publisher"},{"key":"c74\/c74_1","DOI":"10.1364\/OE.20.012827","doi-asserted-by":"publisher"},{"key":"c75\/c75_1","author":"Pande
+        K.","journal-title":"Philos. Trans. R. Soc. B"},{"key":"c76\/c76_1","DOI":"10.1103\/PhysRevB.81.174105","doi-asserted-by":"publisher"},{"key":"c77\/c77_1","DOI":"10.1107\/S0108767313006016","doi-asserted-by":"publisher"},{"key":"c78\/c78_1","DOI":"10.1103\/PhysRevLett.110.265505","doi-asserted-by":"publisher"},{"key":"c79\/c79_1","DOI":"10.1364\/OE.19.017318","doi-asserted-by":"publisher"},{"key":"c80\/c80_1","DOI":"10.1088\/0953-8984\/21\/13\/134014","doi-asserted-by":"publisher"},{"key":"c81\/c81_1","DOI":"10.1038\/nphys1129","doi-asserted-by":"publisher"},{"key":"c82\/c82_1","DOI":"10.1038\/823","doi-asserted-by":"publisher"},{"key":"c83\/c83_1","DOI":"10.1021\/ja200617t","doi-asserted-by":"publisher"},{"key":"c84\/c84_1","DOI":"10.1103\/PhysRevE.84.011921","doi-asserted-by":"publisher"},{"key":"c85\/c85_1","DOI":"10.1088\/0953-4075\/45\/22\/223001","doi-asserted-by":"publisher"},{"key":"c86\/c86_1","DOI":"10.1109\/TNS.2012.2217755","doi-asserted-by":"publisher"},{"key":"c87\/c87_1","DOI":"10.1126\/science.289.5481.920","doi-asserted-by":"publisher"},{"key":"c88\/c88_1","DOI":"10.1126\/science.289.5481.905","doi-asserted-by":"publisher"},{"key":"c89\/c89_1","DOI":"10.1016\/S0092-8674(01)00546-3","doi-asserted-by":"publisher"},{"key":"c90\/c90_1","DOI":"10.1126\/science.1131127","doi-asserted-by":"publisher"},{"key":"c91\/c91_1","DOI":"10.1146\/annurev.biochem.74.082803.133130","doi-asserted-by":"publisher"},{"key":"c92\/c92_1","DOI":"10.1146\/annurev.ph.55.030193.003543","doi-asserted-by":"publisher"}],"container-title":["Structural
+        Dynamics"],"language":"en","link":[{"URL":"http:\/\/aca.scitation.org\/doi\/pdf\/10.1063\/1.4869472","content-type":"unspecified","content-version":"vor","intended-application":"similarity-checking"}],"deposited":{"date-parts":[[2018,2,15]],"date-time":"2018-02-15T02:46:46Z","timestamp":1518662806000},"score":11.78921,"issued":{"date-parts":[[2014,3]]},"references-count":92,"journal-issue":{"published-print":{"date-parts":[[2014,3]]},"issue":"2"},"alternative-id":["10.1063\/1.4869472"],"URL":"http:\/\/dx.doi.org\/10.1063\/1.4869472","relation":{"cites":[]},"ISSN":["2329-7778"],"issn-type":[{"value":"2329-7778","type":"electronic"}],"assertion":[{"value":"2013-11-29","order":0,"name":"received","label":"received","group":{"name":"publication_history","label":"Publication
+        History"}},{"value":"2014-03-13","order":2,"name":"accepted","label":"accepted","group":{"name":"publication_history","label":"Publication
+        History"}},{"value":"2014-03-27","order":6,"name":"published","label":"published","group":{"name":"publication_history","label":"Publication
+        History"}}]},{"indexed":{"date-parts":[[2018,8,15]],"date-time":"2018-08-15T17:26:19Z","timestamp":1534353979850},"reference-count":47,"publisher":"Springer
+        Nature America, Inc","issue":"2","license":[{"URL":"http:\/\/www.springer.com\/tdm","start":{"date-parts":[[2015,11,12]],"date-time":"2015-11-12T00:00:00Z","timestamp":1447286400000},"delay-in-days":0,"content-version":"unspecified"}],"funder":[{"name":"Andrew
+        Mellon Predoctoral Fellowship","award":[]},{"name":"NSF awards","award":["OIA-1028162","IIS-0534531","IIS-0746696"]},{"name":"NSF
+        awards","award":["OIA-1028162","IIS-0534531","IIS-0746696"]},{"name":"NSF
+        awards","award":["OIA-1028162","IIS-0534531","IIS-0746696"]},{"name":"NSF
+        awards","award":["OIA-1028162","IIS-0534531","IIS-0746696"]},{"name":"NSF
+        awards","award":["OIA-1028162","IIS-0534531","IIS-0746696"]},{"name":"EMC\/
+        Greenplum","award":[]},{"name":"EMC\/ Greenplum","award":[]}],"content-domain":{"domain":["link.springer.com"],"crossmark-restriction":false},"short-container-title":["The
+        VLDB Journal"],"published-print":{"date-parts":[[2016,4]]},"DOI":"10.1007\/s00778-015-0411-4","type":"journal-article","created":{"date-parts":[[2015,11,12]],"date-time":"2015-11-12T12:58:53Z","timestamp":1447333133000},"page":"197-221","update-policy":"http:\/\/dx.doi.org\/10.1007\/springer_crossmark_policy","source":"Crossref","is-referenced-by-count":2,"title":["Avoiding
+        class warfare: managing continuous queries with differentiated classes of
+        service"],"prefix":"10.1007","volume":"25","author":[{"given":"Thao N.","family":"Pham","sequence":"first","affiliation":[]},{"given":"Panos
+        K.","family":"Chrysanthis","sequence":"additional","affiliation":[]},{"given":"Alexandros","family":"Labrinidis","sequence":"additional","affiliation":[]}],"member":"297","published-online":{"date-parts":[[2015,11,12]]},"reference":[{"key":"411_CR1","unstructured":"Esper.
+        http:\/\/esper.codehaus.org"},{"key":"411_CR2","unstructured":"HP Vertica
+        Best Practices: Resource Management. http:\/\/www.vertica.com\/2015\/02\/19\/hp-vertica-best-practices-resource-management"},{"key":"411_CR3","unstructured":"Microsoft
+        StreamInSight. https:\/\/msdn.microsoft.com\/en-us\/sqlserver\/ee476990.aspx"},{"key":"411_CR4","unstructured":"Pacific
+        tsunami warning center. http:\/\/ptwc.weather.gov\/"},{"key":"411_CR5","unstructured":"System
+        S - Stream Computing at IBM Research. http:\/\/researcher.watson.ibm.com\/researcher\/view_group_subpage.php?id=2534"},{"key":"411_CR6","unstructured":"Tropical
+        Atmosphere Ocean Project. http:\/\/www.pmel.noaa.gov\/tao\/"},{"key":"411_CR7","unstructured":"Abadi,
+        D.J., Carney, D., \u00c7etintemel, U., Cherniack, M., Convey, C., Lee, S.,
+        Stonebraker, M., Tatbul, N., Zdonik, S.: Aurora: a new model and architecture
+        for data stream management. In: VLDBJ \u201903","DOI":"10.1007\/s00778-003-0095-z","doi-asserted-by":"crossref"},{"key":"411_CR8","unstructured":"Al
+        Moakar, L., Chrysanthis, P.\u00a0K., Chung, C., Guirguis, S., Labrinidis,
+        A., Neophytou, P., Pruhs, K.: Admission control mechanisms for continuous
+        queries in the cloud. In: ICDE\u201910","DOI":"10.1109\/ICDE.2010.5447822","doi-asserted-by":"crossref"},{"key":"411_CR9","unstructured":"Al
+        Moakar, L., Labrinidis, A., Chrysanthis, P.\u00a0K.: Adaptive class-based
+        scheduling of continuous queries. In: SMDB \u201912","DOI":"10.1109\/ICDEW.2012.38","doi-asserted-by":"crossref"},{"key":"411_CR10","unstructured":"Al
+        Moakar, L., Pham, T.\u00a0N., Neophytou, P., Chrysanthis, P.\u00a0K., Labrinidis,
+        A., Sharaf, M.: Class-based continuous query scheduling for data streams.
+        In: DMSN \u201909","DOI":"10.1145\/1594187.1594199","doi-asserted-by":"crossref"},{"key":"411_CR11","unstructured":"Arasu,
+        A., Cherniack, M., Galvez, E., Maier, D., Maskey, A.\u00a0S., Ryvkina, E.,
+        Stonebraker, M., Tibbetts, R.: Linear road: a stream data management benchmark.
+        In: VLDB\u2019 04","DOI":"10.1016\/B978-012088469-8.50044-9","doi-asserted-by":"crossref"},{"key":"411_CR12","unstructured":"Babcock,
+        B., Babu, S., Datar, M., Motwani, R., Thomas, D.: Operator scheduling in data
+        stream systems. In: VLDBJ \u201904","DOI":"10.1007\/s00778-004-0132-6","doi-asserted-by":"crossref"},{"key":"411_CR13","unstructured":"Babcock,
+        B., Babu, S., Datar, M., Motwani, R., Widom, J.: Models and issues in data
+        stream systems. In: PODS \u201902","DOI":"10.1145\/543613.543615","doi-asserted-by":"crossref"},{"key":"411_CR14","unstructured":"Babcock,
+        B., Datar, M., Motwani, R.: Load shedding for aggregation queries over data
+        streams. In: ICDE \u201904","DOI":"10.1109\/ICDE.2004.1320010","doi-asserted-by":"crossref"},{"key":"411_CR15","unstructured":"Carney,
+        D., \u00c7etintemel, U., Rasin, A., Zdonik, S., Cherniack, M., Stonebraker,
+        M.: Operator scheduling in a data stream manager. In: VLDB\u2019 03","DOI":"10.1016\/B978-012722442-8\/50079-3","doi-asserted-by":"crossref"},{"key":"411_CR16","unstructured":"Castro
+        Fernandez, R., Migliavacca, M., Kalyvianaki, E., Pietzuch, P.: Integrating
+        scale out and fault tolerance in stream processing using operator state management.
+        In: SIGMOD\u201913","DOI":"10.1145\/2463676.2465282","doi-asserted-by":"crossref"},{"key":"411_CR17","unstructured":"Chakravarthy,
+        S., Jiang, Q.: Stream Data Processing: A Quality of Service Perspective Modeling.
+        Load Shedding, and Complex Event Processing. Springer, Scheduling (2009)"},{"key":"411_CR18","unstructured":"Chandrasekaran,
+        S., Cooper, O., Deshpande, A., Franklin, M.\u00a0J., Hellerstein, J.\u00a0M.,
+        Hong, W., Krishnamurthy, S., Madden, S.\u00a0R., Reiss, F., Shah, M.\u00a0A.:
+        TelegraphCQ: continuous dataflow processing. In: SIGMOD \u201903","DOI":"10.1145\/872757.872857","doi-asserted-by":"crossref"},{"issue":"21","key":"411_CR19","doi-asserted-by":"crossref","first-page":"3733","DOI":"10.1016\/j.ins.2009.01.014","volume":"179","author":"JH
+        Chang","year":"2009","unstructured":"Chang, J.H., Kum, H.-C.M.: Frequency-based
+        load shedding over a data stream of tuples. Inf. Sci. 179(21), 3733\u20133744
+        (2009)","journal-title":"Inf. Sci."},{"key":"411_CR20","unstructured":"Chi,
+        Y., Wang, H., Yu, P.\u00a0S.: Loadstar: load shedding in data stream mining.
+        In: VLDB \u201905"},{"key":"411_CR21","unstructured":"Chrysanthis, P.\u00a0K.:
+        AQSIOS\u2014Next Generation Data Stream Management System. CONET Newsletter,
+        June 2010"},{"key":"411_CR22","unstructured":"Dash, R., Fegaras, L.: Synopsis
+        based load shedding in XML streams. In: EDBT\/ICDT \u201909 Workshops","DOI":"10.1145\/1698790.1698806","doi-asserted-by":"crossref"},{"key":"411_CR23","unstructured":"Feng,
+        H., Liu, Z., Xia, C.\u00a0H., Zhang, L.: Load shedding and distributed resource
+        control of stream processing networks. In: Performance Evaluation (2007)","DOI":"10.1016\/j.peva.2007.06.023","doi-asserted-by":"crossref"},{"key":"411_CR24","author":"B
+        Gedik","year":"2007","unstructured":"Gedik, B., Wu, K.-L., Yu, P., Liu, L.:
+        GrubJoin: An Adaptive, Multi-Way. Windowed Stream Join with Time Correlation-Aware
+        CPU Load Shedding, TKDE (2007)","volume-title":"GrubJoin: An Adaptive, Multi-Way"},{"key":"411_CR25","unstructured":"Gedik,
+        B., Wu, K.-L., Yu, P.\u00a0S.: Efficient construction of compact shedding
+        filters for data stream processing. In: ICDE \u201908","DOI":"10.1109\/ICDE.2008.4497448","doi-asserted-by":"crossref"},{"key":"411_CR26","unstructured":"Gedik,
+        B., Wu, K.-L., Yu, P.\u00a0S., Liu, L.: Mobiqual: Qos-aware load shedding
+        in mobile CQ systems. In: ICDE \u201908"},{"issue":"3","key":"411_CR27","doi-asserted-by":"crossref","first-page":"271","DOI":"10.1007\/s10115-006-0044-4","volume":"13","author":"B
+        Gedik","year":"2007","unstructured":"Gedik, B., Wu, K.-L., Yu, P.S., Liu,
+        L.: CPU load shedding for binary stream joins. Knowl. Inf. Syst. 13(3), 271\u2013303
+        (2007)","journal-title":"Knowl. Inf. Syst."},{"key":"411_CR28","unstructured":"Gulisano,
+        V., Jimenez-Peris, R., Patino-Martinez, M., Soriente, C., Valduriez, P.: Streamcloud:
+        an elastic and scalable data streaming system. In: IEEE TPDS, 2012","DOI":"10.1109\/TPDS.2012.24","doi-asserted-by":"crossref"},{"issue":"7","key":"411_CR29","doi-asserted-by":"crossref","first-page":"86","DOI":"10.1145\/2611567","volume":"57","author":"HV
+        Jagadish","year":"2014","unstructured":"Jagadish, H.V., Gehrke, J., Labrinidis,
+        A., Papakonstantinou, Y., Patel, J.M., Ramakrishnan, R., Shahabi, C.: Big
+        data and its technical challenges. CACM 57(7), 86\u201394 (2014)","journal-title":"CACM"},{"key":"411_CR30","unstructured":"Kendai,
+        B., Chakravarthy, S.: Load shedding in MavStream: analysis, implementation,
+        and evaluation. In: BNCOD \u201908","DOI":"10.1007\/978-3-540-70504-8_10","doi-asserted-by":"crossref"},{"key":"411_CR31","unstructured":"Kleiminger,
+        W., Kalyvianaki, E., Pietzuch, P.: Balancing load in stream processing with
+        the cloud. In: ICDEW\u2019 11","DOI":"10.1109\/ICDEW.2011.5767653","doi-asserted-by":"crossref"},{"key":"411_CR32","unstructured":"Kulkarni,
+        D., Ravishankar, C.\u00a0V., Cherniack, M.: Real-time load-adaptive processing
+        of continuous queries over data streams. In: DEBS\u2019 08","DOI":"10.1145\/1385989.1386024","doi-asserted-by":"crossref"},{"key":"411_CR33","unstructured":"Lei,
+        C., Rundensteiner, E.\u00a0A.: Robust distributed query processing for streaming
+        data. In: ACM TODS, 2014","DOI":"10.1145\/2602138","doi-asserted-by":"crossref"},{"key":"411_CR34","unstructured":"Mozafari,
+        B., Zaniolo, C.: Optimal load shedding with aggregates and mining queries.
+        In: ICDE \u201910","DOI":"10.1109\/ICDE.2010.5447867","doi-asserted-by":"crossref"},{"key":"411_CR35","unstructured":"Narayanan,
+        S., Waas, F.: Dynamic prioritization of database queries. In: ICDE \u201911","DOI":"10.1109\/ICDE.2011.5767836","doi-asserted-by":"crossref"},{"key":"411_CR36","unstructured":"Nehme,
+        R.\u00a0V., Rundensteiner, E.\u00a0A.: Clustersheddy: load shedding using
+        moving clusters over spatio-temporal data streams. In: DASFAA\u201907","DOI":"10.1007\/978-3-540-71703-4_54","doi-asserted-by":"crossref"},{"key":"411_CR37","unstructured":"Pham,
+        T.\u00a0N., Al\u00a0Moakar, L., Chrysanthis, P.\u00a0K., Labrinidis, A.: DILoS:
+        a dynamic integrated load manager and scheduler for continuous queries. In:
+        SMDB \u201911","DOI":"10.1109\/ICDEW.2011.5767652","doi-asserted-by":"crossref"},{"key":"411_CR38","unstructured":"Pham,
+        T.\u00a0N., Chrysanthis, P.\u00a0K., Labrinidis, A.: Self-managing load shedding
+        for data stream management systems. In: SMDB \u201913","DOI":"10.1109\/ICDEW.2013.6547429","doi-asserted-by":"crossref"},{"key":"411_CR39","unstructured":"Reiss,
+        F., Hellerstein, J.\u00a0M.: Data triage: an adaptive architecture for load
+        shedding in telegraphCQ. In: ICDE \u201905","DOI":"10.1109\/ICDE.2005.44","doi-asserted-by":"crossref"},{"key":"411_CR40","unstructured":"Sharaf,
+        M.\u00a0A., Chrysanthis, P.\u00a0K., Labrinidis, A., Pruhs, K.: Algorithms
+        and metrics for processing multiple heterogeneous continuous queries. In:
+        ACM TODS, 2008","DOI":"10.1145\/1331904.1331909","doi-asserted-by":"crossref"},{"key":"411_CR41","unstructured":"Tatbul,
+        N., \u00a0\u00c7etintemel, U., Zdonik, S.: Staying FIT: efficient load shedding
+        techniques for distributed stream processing. In: VLDB \u201907"},{"key":"411_CR42","unstructured":"Tatbul,
+        N., \u00c7etintemel, U., Zdonik, S., Cherniack, M., Stonebraker, M.: Load
+        shedding in a data stream manager. In: VLDB \u201903","DOI":"10.1016\/B978-012722442-8\/50035-5","doi-asserted-by":"crossref"},{"key":"411_CR43","unstructured":"Tatbul,
+        N., Zdonik, S.: Window-aware load shedding for aggregation queries over data
+        streams. In: VLDB \u201906"},{"key":"411_CR44","unstructured":"Tu, Y.-C.,
+        Liu, S., Prabhakar, S., Yao, B.: Load shedding in stream databases: a control-based
+        approach. In: VLDB \u201906"},{"key":"411_CR45","unstructured":"Wei, Y., Son,
+        S.\u00a0H., Stankovic, J.\u00a0A.: RTSTREAM: real-time query processing for
+        data streams. In: ISORC\u2019 06"},{"key":"411_CR46","unstructured":"Wolf,
+        J., Bansal, N., Hildrum, K., Parekh, S., Rajan, D., Wagle, R., Wu, K.-L.,
+        Fleischer, L.: SODA: An optimizing scheduler for large-scale stream-based
+        distributed computer systems. In: Middleware\u2019 08"},{"key":"411_CR47","unstructured":"Wu,
+        S., Lv, Y., Yu, G., Gu, Y., Li, X.: A QoS-guaranteeing scheduling algorithm
+        for continuous queries over streams. In: APWeb\/WAIM\u2019 07","DOI":"10.1007\/978-3-540-72524-4_54","doi-asserted-by":"crossref"}],"container-title":["The
+        VLDB Journal"],"language":"en","link":[{"URL":"http:\/\/link.springer.com\/content\/pdf\/10.1007\/s00778-015-0411-4.pdf","content-type":"application\/pdf","content-version":"vor","intended-application":"text-mining"},{"URL":"http:\/\/link.springer.com\/article\/10.1007\/s00778-015-0411-4\/fulltext.html","content-type":"text\/html","content-version":"vor","intended-application":"text-mining"},{"URL":"http:\/\/link.springer.com\/content\/pdf\/10.1007\/s00778-015-0411-4","content-type":"unspecified","content-version":"vor","intended-application":"similarity-checking"}],"deposited":{"date-parts":[[2018,8,15]],"date-time":"2018-08-15T15:42:09Z","timestamp":1534347729000},"score":11.78921,"issued":{"date-parts":[[2015,11,12]]},"references-count":47,"journal-issue":{"published-print":{"date-parts":[[2016,4]]},"issue":"2"},"alternative-id":["411"],"URL":"http:\/\/dx.doi.org\/10.1007\/s00778-015-0411-4","relation":{"cites":[]},"ISSN":["1066-8888","0949-877X"],"issn-type":[{"value":"1066-8888","type":"print"},{"value":"0949-877X","type":"electronic"}],"subject":["Hardware
+        and Architecture","Information Systems"]}],"items-per-page":20,"query":{"start-index":0,"search-terms":"NSF"}}}'
+  recorded_at: 2018-12-07 21:28:54 GMT
+  recorded_with: vcr/0.2.0.9101, webmockr/0.2.9.9311

@@ -1,0 +1,49 @@
+http_interactions:
+- request:
+    method: get
+    uri: https://api.crossref.org/works?sample=3
+    body:
+      encoding: ''
+      string: ''
+    headers:
+      Accept-Encoding: gzip, deflate
+      Accept: application/json, text/xml, application/xml, */*
+      User-Agent: r-curl/3.2 crul/0.6.1.9100 rOpenSci(rcrossref/0.8.5.9110) (mailto:<crossref_email>)
+      X-USER-AGENT: r-curl/3.2 crul/0.6.1.9100 rOpenSci(rcrossref/0.8.5.9110) (mailto:<crossref_email>)
+  response:
+    status:
+      status_code: '200'
+      message: OK
+      explanation: Request fulfilled, document follows
+    headers:
+      status: HTTP/1.1 200 OK
+      content-type: application/json;charset=UTF-8
+      vary: Accept
+      access-control-allow-origin: '*'
+      access-control-allow-headers: X-Requested-With
+      content-length: '5302'
+      server: http-kit
+      date: Fri, 07 Dec 2018 22:46:36 GMT
+      x-rate-limit-limit: '50'
+      x-rate-limit-interval: 1s
+      connection: close
+    body:
+      encoding: UTF-8
+      string: '{"status":"ok","message-type":"work-list","message-version":"1.0.0","message":{"facets":{},"total-results":101602035,"items":[{"indexed":{"date-parts":[[2018,5,3]],"date-time":"2018-05-03T06:54:57Z","timestamp":1525330497638},"reference-count":0,"publisher":"Elsevier
+        BV","issue":"4","license":[{"URL":"http:\/\/www.elsevier.com\/tdm\/userlicense\/1.0\/","start":{"date-parts":[[1921,4,1]],"date-time":"1921-04-01T00:00:00Z","timestamp":-1538524800000},"delay-in-days":0,"content-version":"tdm"}],"content-domain":{"domain":[],"crossmark-restriction":false},"short-container-title":["The
+        Journal of the American Pharmaceutical Association (1912)"],"published-print":{"date-parts":[[1921,4]]},"DOI":"10.1002\/jps.3080100422","type":"journal-article","created":{"date-parts":[[2010,7,2]],"date-time":"2010-07-02T17:01:14Z","timestamp":1278090074000},"page":"304-306","source":"Crossref","is-referenced-by-count":0,"title":["Council
+        Business"],"prefix":"10.1016","volume":"10","member":"78","container-title":["The
+        Journal of the American Pharmaceutical Association (1912)"],"language":"en","link":[{"URL":"http:\/\/api.elsevier.com\/content\/article\/PII:S0898140X1534266X?httpAccept=text\/xml","content-type":"text\/xml","content-version":"vor","intended-application":"text-mining"},{"URL":"http:\/\/api.elsevier.com\/content\/article\/PII:S0898140X1534266X?httpAccept=text\/plain","content-type":"text\/plain","content-version":"vor","intended-application":"text-mining"}],"deposited":{"date-parts":[[2016,9,9]],"date-time":"2016-09-09T01:07:04Z","timestamp":1473383224000},"score":1.0,"issued":{"date-parts":[[1921,4]]},"references-count":0,"journal-issue":{"published-print":{"date-parts":[[1921,4]]},"issue":"4"},"alternative-id":["S0898140X1534266X"],"URL":"http:\/\/dx.doi.org\/10.1002\/jps.3080100422","ISSN":["0898-140X"],"issn-type":[{"value":"0898-140X","type":"print"}]},{"institution":{"name":"American
+        Psychological Association","place":["-"],"acronym":["APA"]},"indexed":{"date-parts":[[2018,4,14]],"date-time":"2018-04-14T08:37:33Z","timestamp":1523695053988},"reference-count":0,"publisher":"American
+        Psychological Association (APA)","content-domain":{"domain":[],"crossmark-restriction":false},"published-print":{"date-parts":[[2014]]},"DOI":"10.1037\/e540502014-001","type":"dataset","created":{"date-parts":[[2014,11,3]],"date-time":"2014-11-03T16:25:37Z","timestamp":1415031937000},"source":"Crossref","is-referenced-by-count":0,"title":["Psychologists''
+        Perceptions of Siblings of the Mentally Ill"],"prefix":"10.1037","author":[{"given":"Alexis
+        J.","family":"Kahan","sequence":"first","affiliation":[]},{"given":"Barbara","family":"Gerson","sequence":"additional","affiliation":[]}],"member":"15","container-title":["PsycEXTRA
+        Dataset"],"deposited":{"date-parts":[[2014,11,3]],"date-time":"2014-11-03T16:29:29Z","timestamp":1415032169000},"score":1.0,"subtitle":["(540502014-001)"],"issued":{"date-parts":[[2014]]},"references-count":0,"alternative-id":["540502014-001"],"URL":"http:\/\/dx.doi.org\/10.1037\/e540502014-001"},{"indexed":{"date-parts":[[2018,11,26]],"date-time":"2018-11-26T08:40:11Z","timestamp":1543221611992},"reference-count":24,"publisher":"Elsevier
+        BV","issue":"12","license":[{"URL":"https:\/\/www.elsevier.com\/tdm\/userlicense\/1.0\/","start":{"date-parts":[[2012,6,1]],"date-time":"2012-06-01T00:00:00Z","timestamp":1338508800000},"delay-in-days":0,"content-version":"tdm"}],"content-domain":{"domain":[],"crossmark-restriction":false},"short-container-title":["Physica
+        B: Condensed Matter"],"published-print":{"date-parts":[[2012,6]]},"DOI":"10.1016\/j.physb.2012.02.007","type":"journal-article","created":{"date-parts":[[2012,2,13]],"date-time":"2012-02-13T19:10:43Z","timestamp":1329160243000},"page":"2072-2077","source":"Crossref","is-referenced-by-count":15,"title":["Room
+        temperature ferroelectricity in multiferroic HoMnO3 ceramics"],"prefix":"10.1016","volume":"407","author":[{"given":"P.P.","family":"Rout","sequence":"first","affiliation":[]},{"given":"S.K.","family":"Pradhan","sequence":"additional","affiliation":[]},{"given":"S.K.","family":"Das","sequence":"additional","affiliation":[]},{"given":"B.K.","family":"Roul","sequence":"additional","affiliation":[]}],"member":"78","container-title":["Physica
+        B: Condensed Matter"],"language":"en","link":[{"URL":"https:\/\/api.elsevier.com\/content\/article\/PII:S0921452612001755?httpAccept=text\/xml","content-type":"text\/xml","content-version":"vor","intended-application":"text-mining"},{"URL":"https:\/\/api.elsevier.com\/content\/article\/PII:S0921452612001755?httpAccept=text\/plain","content-type":"text\/plain","content-version":"vor","intended-application":"text-mining"}],"deposited":{"date-parts":[[2018,11,26]],"date-time":"2018-11-26T07:59:55Z","timestamp":1543219195000},"score":1.0,"issued":{"date-parts":[[2012,6]]},"references-count":24,"journal-issue":{"published-print":{"date-parts":[[2012,6]]},"issue":"12"},"alternative-id":["S0921452612001755"],"URL":"http:\/\/dx.doi.org\/10.1016\/j.physb.2012.02.007","ISSN":["0921-4526"],"issn-type":[{"value":"0921-4526","type":"print"}],"subject":["Electrical
+        and Electronic Engineering","Electronic, Optical and Magnetic Materials","Condensed
+        Matter Physics"]}],"items-per-page":20,"query":{"start-index":0,"search-terms":null}}}'
+  recorded_at: 2018-12-07 22:46:36 GMT
+  recorded_with: vcr/0.2.0.9101, webmockr/0.2.9.9311

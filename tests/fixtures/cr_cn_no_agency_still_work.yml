@@ -1,0 +1,78 @@
+http_interactions:
+- request:
+    method: get
+    uri: https://api.crossref.org/works/10.1890/0012-9615(1999)069[0569:EDILSA]2.0.CO;2/agency
+    body:
+      encoding: ''
+      string: ''
+    headers:
+      Accept-Encoding: gzip, deflate
+      Accept: application/json, text/xml, application/xml, */*
+      User-Agent: r-curl/3.2 crul/0.6.1.9100 rOpenSci(rcrossref/0.8.5.9110) (mailto:<crossref_email>)
+      X-USER-AGENT: r-curl/3.2 crul/0.6.1.9100 rOpenSci(rcrossref/0.8.5.9110) (mailto:<crossref_email>)
+  response:
+    status:
+      status_code: '404'
+      message: Not Found
+      explanation: Nothing matches the given URI
+    headers:
+      status: HTTP/1.1 404 Not Found
+      content-type: text/plain
+      access-control-allow-origin: '*'
+      access-control-allow-headers: X-Requested-With
+      content-length: '19'
+      server: http-kit
+      date: Fri, 07 Dec 2018 22:37:58 GMT
+      x-rate-limit-limit: '50'
+      x-rate-limit-interval: 1s
+      connection: close
+    body:
+      encoding: UTF-8
+      string: Resource not found.
+  recorded_at: 2018-12-07 22:37:59 GMT
+  recorded_with: vcr/0.2.0.9101, webmockr/0.2.9.9311
+- request:
+    method: get
+    uri: https://doi.org/10.1890/0012-9615(1999)069[0569:EDILSA]2.0.CO;2
+    body:
+      encoding: ''
+      string: ''
+    headers:
+      Accept-Encoding: gzip, deflate
+      User-Agent: r-curl/3.2 crul/0.6.1.9100 rOpenSci(rcrossref/0.8.5.9110) (mailto:<crossref_email>)
+      X-USER-AGENT: r-curl/3.2 crul/0.6.1.9100 rOpenSci(rcrossref/0.8.5.9110) (mailto:<crossref_email>)
+      Accept: application/x-bibtex
+  response:
+    status:
+      status_code: '200'
+      message: OK
+      explanation: Request fulfilled, document follows
+    headers:
+      status: HTTP/1.1 200 OK
+      access-control-allow-origin: '*'
+      access-control-allow-headers: X-Requested-With, Accept, Accept-Encoding, Accept-Charset,
+        Accept-Language, Accept-Ranges, Cache-Control
+      access-control-expose-headers: Link
+      link: <http://dx.doi.org/10.1890/0012-9615(1999)069[0569:edilsa]2.0.co;2>; rel="canonical",
+        <https://api.wiley.com/onlinelibrary/tdm/v1/articles/10.1890%2F0012-9615(1999)069%5B0569:EDILSA%5D2.0.CO;2>;
+        version="vor"; rel="item", <https://onlinelibrary.wiley.com/doi/full/10.1890/0012-9615(1999)069%5B0569:EDILSA%5D2.0.CO;2>;
+        version="vor"; rel="item", <http://doi.wiley.com/10.1002/tdm_license_1.1>;
+        version="tdm"; rel="license"
+      content-type: application/x-bibtex
+      content-length: '526'
+      server: http-kit
+      date: Fri, 07 Dec 2018 22:37:59 GMT
+      x-rate-limit-limit: '50'
+      x-rate-limit-interval: 1s
+      connection: close
+    body:
+      encoding: UTF-8
+      string: "@article{Cunningham_1999,\n\tdoi = {10.1890/0012-9615(1999)069[0569:edilsa]2.0.co;2},\n\turl
+        = {https://doi.org/10.1890%2F0012-9615%281999%29069%5B0569%3Aedilsa%5D2.0.co%3B2},\n\tyear
+        = 1999,\n\tmonth = {nov},\n\tpublisher = {Wiley},\n\tvolume = {69},\n\tnumber
+        = {4},\n\tpages = {569--588},\n\tauthor = {Saul A. Cunningham and Bryan Summerhayes
+        and Mark Westoby},\n\ttitle = {{EVOLUTIONARY} {DIVERGENCES} {IN} {LEAF} {STRUCTURE}
+        {AND} {CHEMISTRY}, {COMPARING} {RAINFALL} {AND} {SOIL} {NUTRIENT} {GRADIENTS}},\n\tjournal
+        = {Ecological Monographs}\n}"
+  recorded_at: 2018-12-07 22:37:59 GMT
+  recorded_with: vcr/0.2.0.9101, webmockr/0.2.9.9311

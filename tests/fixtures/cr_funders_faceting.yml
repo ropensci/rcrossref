@@ -1,0 +1,71 @@
+http_interactions:
+- request:
+    method: get
+    uri: https://api.crossref.org/funders/10.13039/100000001/works?rows=0&facet=t
+    body:
+      encoding: ''
+      string: ''
+    headers:
+      Accept-Encoding: gzip, deflate
+      Accept: application/json, text/xml, application/xml, */*
+      User-Agent: r-curl/3.2 crul/0.6.1.9100 rOpenSci(rcrossref/0.8.5.9110) (mailto:<crossref_email>)
+      X-USER-AGENT: r-curl/3.2 crul/0.6.1.9100 rOpenSci(rcrossref/0.8.5.9110) (mailto:<crossref_email>)
+  response:
+    status:
+      status_code: '200'
+      message: OK
+      explanation: Request fulfilled, document follows
+    headers:
+      status: HTTP/1.1 200 OK
+      content-type: application/json;charset=UTF-8
+      vary: Accept
+      access-control-allow-origin: '*'
+      access-control-allow-headers: X-Requested-With
+      content-length: '10357'
+      server: http-kit
+      date: Fri, 07 Dec 2018 22:36:53 GMT
+      x-rate-limit-limit: '50'
+      x-rate-limit-interval: 1s
+      connection: close
+    body:
+      encoding: UTF-8
+      string: '{"status":"ok","message-type":"work-list","message-version":"1.0.0","message":{"facets":{"affiliation":{"value-count":20,"values":{"of":68539,"university":67422,"department":59200,"and":43789,"usa":33099,"united":24471,"chemistry":24158,"engineering":24153,"states":23989,"institute":19406,"science":18220,"for":15535,"state":15157,"sciences":14887,"center":14484,"school":12735,"california":12479,"laboratory":11257,"the":11089,"research":10483}},"license":{"value-count":20,"values":{"https:\/\/www.elsevier.com\/tdm\/userlicense\/1.0\/":37097,"http:\/\/doi.wiley.com\/10.1002\/tdm_license_1.1":23827,"http:\/\/link.aps.org\/licenses\/aps-default-license":17310,"http:\/\/onlinelibrary.wiley.com\/termsAndConditions#vor":15469,"http:\/\/link.aps.org\/licenses\/aps-default-accepted-manuscript-license":15353,"https:\/\/www.elsevier.com\/open-access\/userlicense\/1.0\/":14050,"http:\/\/onlinelibrary.wiley.com\/termsAndConditions#am":13239,"http:\/\/www.springer.com\/tdm":8098,"http:\/\/www.ieee.org\/publications_standards\/publications\/rights\/ieeecopyrightform.pdf":5150,"http:\/\/www.acm.org\/publications\/policies\/copyright_policy#Background":4999,"http:\/\/creativecommons.org\/licenses\/by\/4.0\/":4217,"http:\/\/creativecommons.org\/licenses\/by\/3.0\/":3825,"http:\/\/doi.wiley.com\/10.1002\/tdm_license_1":3822,"https:\/\/publishing.aip.org\/authors\/rights-and-permissions":3808,"https:\/\/link.aps.org\/licenses\/aps-default-license":3727,"http:\/\/onlinelibrary.wiley.com\/termsAndConditions":3699,"https:\/\/link.aps.org\/licenses\/aps-default-accepted-manuscript-license":3682,"http:\/\/iopscience.iop.org\/info\/page\/text-and-data-mining":2960,"http:\/\/pubs.acs.org\/page\/policy\/authorchoice_termsofuse.html":2432,"http:\/\/iopscience.iop.org\/page\/copyright":2366}},"container-title":{"value-count":20,"values":{"Physical
+        Review B":6205,"Physical Review Letters":5220,"Physical Review D":4347,"American
+        Journal of Botany":3343,"The Journal of Chemical Physics":3015,"Journal of
+        the American Chemical Society":2788,"Physical Review A":2378,"Applied Physics
+        Letters":2327,"Physical Review E":2127,"Proceedings of the National Academy
+        of Sciences":2075,"Evolution":1914,"The Journal of Physical Chemistry C":1618,"Journal
+        of Applied Physics":1479,"ACS Applied Materials & Interfaces":1377,"Environmental
+        Science & Technology":1204,"Nano Letters":1198,"ACS Nano":1141,"PLOS ONE":1102,"The
+        Journal of Physical Chemistry B":1058,"Langmuir":1049}},"publisher-name":{"value-count":20,"values":{"Elsevier
+        BV":37653,"American Chemical Society (ACS)":24288,"Wiley":23249,"American
+        Physical Society (APS)":22728,"Institute of Electrical and Electronics Engineers
+        (IEEE)":9822,"AIP Publishing":9150,"Springer Nature":8731,"Royal Society of
+        Chemistry (RSC)":6075,"American Geophysical Union (AGU)":4145,"ACM Press":3827,"Informa
+        UK Limited":3379,"The Optical Society":3226,"IOP Publishing":2954,"Oxford
+        University Press (OUP)":2227,"Proceedings of the National Academy of Sciences":2075,"Springer
+        Nature America, Inc":1947,"Copernicus GmbH":1618,"Public Library of Science
+        (PLoS)":1550,"Frontiers Media SA":1407,"American Association for the Advancement
+        of Science (AAAS)":1379}},"orcid":{"value-count":20,"values":{"http:\/\/orcid.org\/0000-0001-6651-1178":95,"http:\/\/orcid.org\/0000-0003-1960-3402":69,"http:\/\/orcid.org\/0000-0002-8387-5261":63,"http:\/\/orcid.org\/0000-0001-6203-1847":59,"http:\/\/orcid.org\/0000-0001-8771-0141":45,"http:\/\/orcid.org\/0000-0002-2062-131X":44,"http:\/\/orcid.org\/0000-0003-4120-1426":40,"http:\/\/orcid.org\/0000-0001-5837-4740":37,"http:\/\/orcid.org\/0000-0003-2920-5440":36,"http:\/\/orcid.org\/0000-0003-3821-9625":32,"http:\/\/orcid.org\/0000-0003-2037-4168":32,"http:\/\/orcid.org\/0000-0002-6634-7627":32,"http:\/\/orcid.org\/0000-0001-9951-851X":32,"http:\/\/orcid.org\/0000-0003-3977-5789":31,"http:\/\/orcid.org\/0000-0002-6007-3063":29,"http:\/\/orcid.org\/0000-0002-1897-7069":29,"http:\/\/orcid.org\/0000-0001-8255-3853":29,"http:\/\/orcid.org\/0000-0001-6617-7691":29,"http:\/\/orcid.org\/0000-0001-5926-0489":28,"http:\/\/orcid.org\/0000-0001-5916-8834":28}},"update-type":{"value-count":10,"values":{"new_version":260,"correction":48,"erratum":28,"corrected":9,"corrigendum":3,"clarification":3,"retraction":2,"article":2,"invited-paper":1,"addendum":1}},"published":{"value-count":20,"values":{"2017":39446,"2016":38234,"2018":36812,"2015":29341,"2014":15751,"2012":5651,"2011":5359,"2013":5087,"2019":1042,"2010":783,"2009":307,"2008":200,"1996":162,"1989":159,"1990":157,"1991":156,"1985":150,"1997":149,"1999":142,"1988":139}},"funder-name":{"value-count":20,"values":{"National
+        Science Foundation":146803,"U.S. Department of Energy":14378,"National Institutes
+        of Health":10492,"Division of Chemistry":10137,"National Natural Science Foundation
+        of China":9181,"Division of Materials Research":7172,"Air Force Office of
+        Scientific Research":5389,"National Aeronautics and Space Administration":4396,"Army
+        Research Office":4291,"Office of Naval Research":4204,"Basic Energy Sciences":3850,"National
+        Institute of General Medical Sciences":3834,"Division of Chemical, Bioengineering,
+        Environmental, and Transport Systems":3683,"Deutsche Forschungsgemeinschaft":2917,"Division
+        of Graduate Education":2612,"Natural Sciences and Engineering Research Council
+        of Canada":2398,"Defense Advanced Research Projects Agency":2357,"Welch Foundation":2160,"Division
+        of Civil, Mechanical and Manufacturing Innovation":2018,"European Research
+        Council":1821}},"archive":{"value-count":4,"values":{"Portico":25979,"CLOCKSS":1317,"DWT":114,"LOCKSS":80}},"type-name":{"value-count":6,"values":{"Journal
+        Article":178878,"Conference Paper":3962,"Chapter":186,"Dataset":18,"Book":3,"Monograph":1}},"relation-type":{"value-count":10,"values":{"has-preprint":310,"is-supplemented-by":214,"is-part-of":187,"references":95,"has-review":57,"is-version-of":13,"has-part":4,"is-documented-by":3,"is-data-basis-for":3,"is-reply-to":1}},"issn":{"value-count":20,"values":{"http:\/\/id.crossref.org\/issn\/1079-7114":5220,"http:\/\/id.crossref.org\/issn\/0031-9007":5220,"http:\/\/id.crossref.org\/issn\/1550-235X":3563,"http:\/\/id.crossref.org\/issn\/1098-0121":3563,"http:\/\/id.crossref.org\/issn\/0002-9122":3343,"http:\/\/id.crossref.org\/issn\/1089-7690":3015,"http:\/\/id.crossref.org\/issn\/0021-9606":3015,"http:\/\/id.crossref.org\/issn\/1520-5126":2788,"http:\/\/id.crossref.org\/issn\/0002-7863":2788,"http:\/\/id.crossref.org\/issn\/2469-9969":2642,"http:\/\/id.crossref.org\/issn\/2469-9950":2642,"http:\/\/id.crossref.org\/issn\/1550-7998":2606,"http:\/\/id.crossref.org\/issn\/1550-2368":2606,"http:\/\/id.crossref.org\/issn\/1077-3118":2327,"http:\/\/id.crossref.org\/issn\/0003-6951":2327,"http:\/\/id.crossref.org\/issn\/1091-6490":2075,"http:\/\/id.crossref.org\/issn\/0027-8424":2075,"http:\/\/id.crossref.org\/issn\/0014-3820":1914,"http:\/\/id.crossref.org\/issn\/2470-0029":1741,"http:\/\/id.crossref.org\/issn\/2470-0010":1741}},"source":{"value-count":1,"values":{"Crossref":183048}},"journal-issue":{"value-count":20,"values":{"1":14969,"2":12305,"3":12075,"4":11827,"6":9100,"5":8929,"8":6231,"10":5931,"7":5883,"9":5824,"11":5659,"12":5380,"16":2141,"15":2029,"19":2004,"20":1982,"17":1940,"24":1908,"13":1900,"18":1898}},"category-name":{"value-count":20,"values":{"Ecology,
+        Evolution, Behavior and Systematics":8567,"Genetics":4976,"Condensed Matter
+        Physics":4551,"Plant Science":4547,"General Chemistry":4516,"General Medicine":4163,"General
+        Materials Science":4056,"Biochemistry":3879,"Mechanical Engineering":3718,"Molecular
+        Biology":3528,"Physical and Theoretical Chemistry":3419,"Materials Chemistry":3126,"Mechanics
+        of Materials":3042,"Applied Mathematics":3021,"Computer Science Applications":2895,"Electronic,
+        Optical and Magnetic Materials":2789,"General Physics and Astronomy":2590,"Electrical
+        and Electronic Engineering":2476,"Organic Chemistry":2316,"General Biochemistry,
+        Genetics and Molecular Biology":2180}},"assertion":{"value-count":20,"values":{"copyright":35092,"content_type":35088,"publisher":34960,"articlelink":34957,"journaltitle":34089,"articletitle":34089,"history":6075,"similarity_check":5280,"peer_review_method":5276,"related_data":4767,"copyright_licence":4146,"identifier":3791,"peerreview_statement":3376,"aims_and_scope_url":3376,"journal_title":2776,"date_epub":2776,"article_type":2776,"article_title":2776,"copyright_information":2775,"date_accepted":2766}},"assertion-group":{"value-count":20,"values":{"publication_history":8689,"similarity_check":5280,"peer_review_method":5276,"related_data":4746,"copyright_licensing":4147,"author_identifiers":3791,"publication_dates":2776,"peer_review":1000,"crosscheck":795,"associated_articles":171,"copyright_and_licensing":148,"general":125,"volume_supplementary_material":113,"copyright_and_licencing":94,"current-referee-status":7,"article-reports":7,"orcid":5,"multiple_resolution":4,"Copyright_and_licensing":4,"article-comments":1}},"journal-volume":{"value-count":20,"values":{"8":2913,"9":2671,"6":2665,"7":2625,"5":2272,"4":2164,"3":2046,"12":1953,"10":1897,"2":1873,"18":1755,"17":1749,"11":1747,"27":1726,"120":1669,"121":1643,"26":1632,"16":1630,"90":1614,"13":1614}},"funder-doi":{"value-count":20,"values":{"http:\/\/dx.doi.org\/10.13039\/100000001":146634,"http:\/\/dx.doi.org\/10.13039\/100000015":14378,"http:\/\/dx.doi.org\/10.13039\/100000002":10490,"http:\/\/dx.doi.org\/10.13039\/100000165":10137,"http:\/\/dx.doi.org\/10.13039\/501100001809":9180,"http:\/\/dx.doi.org\/10.13039\/100000078":7172,"http:\/\/dx.doi.org\/10.13039\/100000181":5389,"http:\/\/dx.doi.org\/10.13039\/100000104":4396,"http:\/\/dx.doi.org\/10.13039\/100000183":4290,"http:\/\/dx.doi.org\/10.13039\/100000006":4203,"http:\/\/dx.doi.org\/10.13039\/100006151":3850,"http:\/\/dx.doi.org\/10.13039\/100000057":3834,"http:\/\/dx.doi.org\/10.13039\/100000146":3683,"http:\/\/dx.doi.org\/10.13039\/501100001659":2917,"http:\/\/dx.doi.org\/10.13039\/100000082":2612,"http:\/\/dx.doi.org\/10.13039\/501100000038":2398,"http:\/\/dx.doi.org\/10.13039\/100000185":2357,"http:\/\/dx.doi.org\/10.13039\/100000928":2160,"http:\/\/dx.doi.org\/10.13039\/100000147":2018,"http:\/\/dx.doi.org\/10.13039\/501100000781":1821}}},"total-results":183048,"items":[],"items-per-page":0,"query":{"start-index":0,"search-terms":null}}}'
+  recorded_at: 2018-12-07 22:36:54 GMT
+  recorded_with: vcr/0.2.0.9101, webmockr/0.2.9.9311

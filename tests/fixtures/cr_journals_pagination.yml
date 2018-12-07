@@ -1,0 +1,423 @@
+http_interactions:
+- request:
+    method: get
+    uri: https://api.crossref.org/journals/1803-2427/works?rows=5
+    body:
+      encoding: ''
+      string: ''
+    headers:
+      Accept-Encoding: gzip, deflate
+      Accept: application/json, text/xml, application/xml, */*
+      User-Agent: r-curl/3.2 crul/0.6.1.9100 rOpenSci(rcrossref/0.8.5.9110) (mailto:<crossref_email>)
+      X-USER-AGENT: r-curl/3.2 crul/0.6.1.9100 rOpenSci(rcrossref/0.8.5.9110) (mailto:<crossref_email>)
+  response:
+    status:
+      status_code: '200'
+      message: OK
+      explanation: Request fulfilled, document follows
+    headers:
+      status: HTTP/1.1 200 OK
+      content-type: application/json;charset=UTF-8
+      vary: Accept
+      access-control-allow-origin: '*'
+      access-control-allow-headers: X-Requested-With
+      content-length: '49378'
+      server: http-kit
+      date: Fri, 07 Dec 2018 22:32:05 GMT
+      x-rate-limit-limit: '50'
+      x-rate-limit-interval: 1s
+      connection: close
+    body:
+      encoding: UTF-8
+      string: '{"status":"ok","message-type":"work-list","message-version":"1.0.0","message":{"facets":{},"total-results":49,"items":[{"indexed":{"date-parts":[[2018,8,2]],"date-time":"2018-08-02T20:43:01Z","timestamp":1533242581245},"reference-count":50,"publisher":"Walter
+        de Gruyter GmbH","issue":"1","content-domain":{"domain":[],"crossmark-restriction":false},"published-print":{"date-parts":[[2010,1,1]]},"DOI":"10.2478\/v10285-012-0023-2","type":"journal-article","created":{"date-parts":[[2012,8,10]],"date-time":"2012-08-10T09:14:42Z","timestamp":1344590082000},"source":"Crossref","is-referenced-by-count":5,"title":["Structural
+        Versus Functional Habitat Connectivity Measures to Explain Bird Diversity
+        in Fragmented Orchards"],"prefix":"10.2478","volume":"3","author":[{"given":"Susanne","family":"M\u00fchlner","sequence":"first","affiliation":[]},{"given":"Urs","family":"Kormann","sequence":"additional","affiliation":[]},{"given":"Martin","family":"Schmidt-Entling","sequence":"additional","affiliation":[]},{"given":"Felix","family":"Herzog","sequence":"additional","affiliation":[]},{"given":"Debra","family":"Bailey","sequence":"additional","affiliation":[]}],"member":"374","reference":[{"key":"1","doi-asserted-by":"crossref","first-page":"233","DOI":"10.1016\/S0169-2046(02)00242-6","article-title":"The
+        application of least-cost modelling as a functional landscape model","volume":"64","author":"F.
+        Adriaensen","year":"2003","journal-title":"Landscape and Urban Planning"},{"key":"2","doi-asserted-by":"crossref","first-page":"863","DOI":"10.1111\/j.1442-9993.2008.01857.x","article-title":"Using
+        gap-crossing capacity to evaluate functional connectivity of two Atlantic
+        rainforest birds and their response to fragmentation","volume":"33","author":"M.
+        Awade","year":"2008","journal-title":"Austral Ecology"},{"key":"3","doi-asserted-by":"crossref","first-page":"461","DOI":"10.1007\/s10980-006-9035-9","article-title":"The
+        influence of thematic resolution on metric selection for biodiversity monitoring
+        in agricultural landscapes","volume":"22","author":"D. Bailey","year":"2007","journal-title":"Landscape
+        Ecology"},{"key":"4","author":"D. Bailey","year":"2010","article-title":"Effects
+        of habitat amount and isolation on biodiversity in fragmented traditional
+        orchards","journal-title":"Journal of Applied Ecology"},{"key":"5","doi-asserted-by":"crossref","first-page":"1830","DOI":"10.1139\/x95-198","article-title":"Characterizing
+        spatial structure of forest landscapes","volume":"25","author":"E. Baskent","year":"1995","journal-title":"Canadian
+        Journal of Forest Research"},{"key":"6","doi-asserted-by":"crossref","first-page":"219","DOI":"10.1023\/A:1020260326889","article-title":"Gap-crossing
+        decisions by forest birds: An empirical basis for parameterizing spatially-explicit,
+        individual-based models","volume":"17","author":"M. B\u00e9lisle","year":"2002","journal-title":"Landscape
+        Ecology"},{"key":"7","doi-asserted-by":"crossref","first-page":"191","DOI":"10.1016\/j.biocon.2003.11.003","article-title":"Do
+        regional gradients in land-use influence richness, composition and turnover
+        of bird assemblages in small woods?","volume":"119","author":"A. Bennett","year":"2004","journal-title":"Biological
+        Conservation"},{"key":"8","doi-asserted-by":"crossref","first-page":"141","DOI":"10.1111\/j.1365-2664.2007.01393.x","article-title":"Indicators
+        for biodiversity in agricultural landscapes. A pan-European study","volume":"45","author":"R.
+        Billeter","year":"2008","journal-title":"Journal of Applied Ecology"},{"key":"9","doi-asserted-by":"crossref","first-page":"767","DOI":"10.1023\/A:1006538414645","article-title":"Constraints
+        on dispersal and the evolution of the avifauna of the Northern Hemisphere","volume":"12","author":"K.
+        B\u00f6hning-Gaese","year":"1998","journal-title":"Evolutionary Ecology"},{"key":"10","doi-asserted-by":"crossref","first-page":"877","DOI":"10.1007\/s10980-005-5956-y","article-title":"Genetic
+        isolation by distance and landscape connectivity in the American marten (Martes
+        americana)","volume":"21","author":"T. Broquet","year":"2006","journal-title":"Landscape
+        Ecology"},{"key":"11","doi-asserted-by":"crossref","first-page":"265","DOI":"10.1006\/jema.2000.0373","article-title":"Landscape
+        connectivity: A conservation application of graph theory","volume":"59","author":"A.
+        Bunn","year":"2000","journal-title":"Journal of Environmental Management"},{"issue":"10","key":"12","doi-asserted-by":"crossref","first-page":"529","DOI":"10.1890\/1540-9295(2004)002[0529:ACGTCM]2.0.CO;2","article-title":"A
+        comparison-shoppers''s guide to connectivity metrics","volume":"2","author":"J.
+        Calabrese","year":"2004","journal-title":"Frontiers in Ecology and the Environment"},{"key":"13","doi-asserted-by":"crossref","first-page":"561","DOI":"10.1023\/A:1026062530600","article-title":"Incorporating
+        landscape elements into a connectivity measure. A case study for the Speckled
+        wood butterfly","volume":"18","author":"J. Chardon","year":"2003","journal-title":"(Pararge
+        aegeria L.). Landscape Ecology"},{"key":"14","doi-asserted-by":"crossref","first-page":"1204","DOI":"10.1046\/j.1523-1739.1997.96187.x","article-title":"Gap
+        crossing decisions by forest songbirds during the post-fledging period","volume":"11","author":"A.
+        Desrochers","year":"1997","journal-title":"Conservation Biology"},{"key":"15","doi-asserted-by":"crossref","first-page":"314","DOI":"10.1016\/j.ecolmodel.2007.07.002","article-title":"Evaluating
+        least-cost model predictions with empirical dispersal data: A case-study using
+        radiotracking data of hedgehogs","volume":"209","author":"K. Driezen","year":"2007","journal-title":"(Erinaceus
+        europaeus). Ecological Modelling"},{"key":"16","first-page":"687","article-title":"Confounding
+        factors in the detection of species responses to habitat fragmentation","volume":"81","author":"R.
+        Ewers","year":"2006","journal-title":"Biological Reviews"},{"key":"17","author":"R.
+        Forman","year":"1986","volume-title":"Landscape Ecology"},{"key":"18","author":"C.
+        Gillies","volume":"105","first-page":"19774","year":"2008","article-title":"Riparian
+        corridors enhance movement of a forest specialist bird in fragmented tropical
+        forest"},{"key":"19","author":"U. Glutz von Blotzheim","volume":"11-14","year":"1997","volume-title":"Handbuch
+        der V\u00f6gel Mitteleuropas"},{"key":"20","doi-asserted-by":"crossref","first-page":"687","DOI":"10.1023\/B:LAND.0000004184.03500.a8","article-title":"Is
+        landscape connectivity a dependent or independent variable?","volume":"18","author":"B.
+        Goodwin","year":"2003","journal-title":"Landscape Ecology"},{"key":"21","doi-asserted-by":"crossref","first-page":"552","DOI":"10.1034\/j.1600-0706.2002.11824.x","article-title":"How
+        does landscape structure influence landscape connectivity","volume":"99","author":"B.
+        Goodwin","year":"2002","journal-title":"Oikos"},{"key":"22","doi-asserted-by":"crossref","first-page":"678","DOI":"10.1111\/j.1365-2664.2005.01057.x","article-title":"Gap-crossing
+        decisions of woodland songbirds in Scottland: an experimental approach","volume":"42","author":"H.
+        Greegan","year":"2005","journal-title":"Journal of Applied Ecology"},{"key":"23","doi-asserted-by":"crossref","first-page":"845","DOI":"10.1046\/j.1523-1739.1995.09040845.x","article-title":"Dispersal
+        and use of corridors by birds in wooded patches on an agricultural landscape","volume":"9","author":"C.
+        Haas","year":"1995","journal-title":"Conservation Biology"},{"key":"24","doi-asserted-by":"crossref","first-page":"189","DOI":"10.1016\/j.agee.2005.02.003","article-title":"Effect
+        of ecological compensation areas on floristic and breeding bird diversity
+        in Swiss agricultural landscapes","volume":"108","author":"F. Herzog","year":"2005","journal-title":"Agriculture,
+        Ecosystems & Environment"},{"key":"25","author":"T. Keitt","issue":"1\/1","year":"1997","article-title":"Detecting
+        critical scales in fragmented landscapes","journal-title":"Conservation Ecology"},{"key":"26","first-page":"879","article-title":"Connectivity
+        measures. A review","volume":"23","author":"P. Kindlmann","year":"2008","journal-title":"Landscape
+        Ecology"},{"key":"27","doi-asserted-by":"crossref","first-page":"243","DOI":"10.1111\/j.1461-0248.2005.00869.x","article-title":"Mixed
+        biodiversity benefits of agri-environment schemes in five European countries","volume":"9","author":"D.
+        Kleijn","year":"2006","journal-title":"Ecology Letters"},{"key":"28","doi-asserted-by":"crossref","first-page":"335","DOI":"10.1016\/S0006-3207(99)00100-7","article-title":"Landscape-scale
+        conservation of an endangered migrant: the Swift Parrot <i>Lathamus discolor<\/i>
+        in its winter range","volume":"92","author":"R. Mac Nally","year":"2000","journal-title":"Biological
+        Conservation"},{"key":"29","doi-asserted-by":"crossref","first-page":"267","DOI":"10.1007\/s10980-008-9304-x","article-title":"A
+        comparison of metrics predicting landscape connectivity for a highly interactive
+        species along an urban gradient in Colorado, USA","volume":"24","author":"S.
+        Magle","year":"2009","journal-title":"Landscape Ecology"},{"key":"30","doi-asserted-by":"crossref","first-page":"33","DOI":"10.1034\/j.1600-0587.2001.240105.x","article-title":"Local
+        recruitment of great and blue tits (<i>Parus major, P. caeruleus<\/i>) in
+        relation to study plot size and degree of isolation","volume":"24","author":"E.
+        Matthysen","year":"2001","journal-title":"Ecography"},{"key":"31","doi-asserted-by":"crossref","first-page":"2498","DOI":"10.1890\/0012-9658(2000)081[2498:LCAMEO]2.0.CO;2","article-title":"Landscape
+        complementation and metapopulation effects on leopard frog populations","volume":"81","author":"S.
+        Pope","year":"2000","journal-title":"Ecology"},{"key":"32","unstructured":"R
+        Development Core Team (2006). <i>R: A language and environment for statistical
+        computing.<\/i> R Foundation for Statistical Computing, Vienna. Retrieved
+        2009-10-15, from <a target=\"_blank\" href=''http:\/\/www.R-project.org''>http:\/\/www.R-project.org<\/a>"},{"key":"33","doi-asserted-by":"crossref","first-page":"737","DOI":"10.1111\/j.1365-2664.2007.01327.x","article-title":"The
+        relative importance of landscape properties for woodland birds in agricultural
+        environments","volume":"44","author":"J. Radford","year":"2007","journal-title":"Journal
+        of Applied Ecology"},{"key":"34","doi-asserted-by":"crossref","first-page":"317","DOI":"10.1016\/j.biocon.2005.01.039","article-title":"Landscape-level
+        thresholds of habitat cover for woodland-dependent birds","volume":"124","author":"J.
+        Radford","year":"2005","journal-title":"Biological Conservation"},{"key":"35","first-page":"157","article-title":"Contrasting
+        responses of arable spiders to the landscape matrix at different spatial scales","volume":"35","author":"M.
+        Schmidt","year":"2008","journal-title":"Journal of Biogeography"},{"key":"36","doi-asserted-by":"crossref","first-page":"247","DOI":"10.1016\/j.jnc.2005.02.006","article-title":"Estimating
+        the consequences of land-use changes on butterfly diversity in a marginal
+        agricultural landscape in Sweden","volume":"13","author":"C. Schneider","year":"2005","journal-title":"Journal
+        of Nature Conservation"},{"key":"37","doi-asserted-by":"crossref","first-page":"1129","DOI":"10.1111\/j.1365-2664.2005.01085.x","article-title":"Quantifying
+        the impact of environmental factors on arthropod communities in agricultural
+        landscapes across organisational levels and spatial scales","volume":"42","author":"O.
+        Schweiger","year":"2005","journal-title":"Journal of Applied Ecology"},{"key":"38","doi-asserted-by":"crossref","first-page":"2333","DOI":"10.1111\/j.1365-294X.2006.02936.x","article-title":"Gene
+        flow and functional connectivity in the natterjack toad","volume":"15","author":"V.
+        Stevens","year":"2006","journal-title":"Molecular Ecology"},{"key":"39","doi-asserted-by":"crossref","first-page":"571","DOI":"10.2307\/3544927","article-title":"Connectivity
+        is a vital element of landscape structure","volume":"68","author":"P. Taylor","year":"1993","journal-title":"Oikos"},{"key":"40","first-page":"29","article-title":"Landscape
+        connectivity. A return to the basics","volume":"14","author":"P. Taylor","year":"2006","journal-title":"Conservation
+        Biology"},{"key":"41","doi-asserted-by":"crossref","first-page":"633","DOI":"10.1023\/A:1008177324187","article-title":"How
+        should we measure landscape connectivity?","volume":"15","author":"L. Tischendorf","year":"2000a","journal-title":"Landscape
+        Ecology"},{"key":"42","doi-asserted-by":"crossref","first-page":"7","DOI":"10.1034\/j.1600-0706.2000.900102.x","article-title":"On
+        the usage and measurement of landscape connectivity","volume":"90","author":"L.
+        Tischendorf","year":"2000b","journal-title":"Oikos"},{"key":"43","author":"W.
+        Venables","year":"2002","volume-title":"Modern Applied Statistics with S"},{"key":"44","doi-asserted-by":"crossref","first-page":"791","DOI":"10.1023\/B:LAND.0000014492.50765.05","article-title":"Does
+        matrix resistance influence red squirrel <i>(Sciurus vulgaris<\/i> L. 1758)
+        distribution in an urban landscape?","volume":"18","author":"G. Verbeylen","year":"2003","journal-title":"Landscape
+        Ecology"},{"key":"45","doi-asserted-by":"crossref","first-page":"1528","DOI":"10.1111\/j.1523-1739.2005.00245.x","article-title":"The
+        role of immigration in the decline of an isolated migratory bird population","volume":"19","author":"M.
+        Ward","year":"2005","journal-title":"Conservation Biology"},{"key":"46","doi-asserted-by":"crossref","first-page":"385","DOI":"10.2307\/2389612","article-title":"Spatial
+        scaling in ecology","volume":"3","author":"J. Wiens","year":"1989","journal-title":"Functional
+        Ecology"},{"key":"47","author":"J. Wiens","first-page":"23","year":"2002","volume-title":"Integrating
+        Landscape Ecology into Natural Resource Management","DOI":"10.1017\/CBO9780511613654.005","doi-asserted-by":"crossref"},{"key":"48","author":"K.
+        With","first-page":"23","year":"2004","volume-title":"Ecology, Genetics and
+        Evolution of Metapopulations","DOI":"10.1016\/B978-012323448-3\/50004-0","doi-asserted-by":"crossref"},{"key":"49","doi-asserted-by":"crossref","first-page":"761","DOI":"10.1023\/A:1022995922992","article-title":"Empirical
+        patterns of the effects of changing scale on landscape metrics","volume":"17","author":"J.
+        Wu","year":"2002","journal-title":"Landscape Ecology"},{"key":"50","first-page":"89","article-title":"Die
+        Vogelwelt von Nieder- und Hochstammobstkulturen des Kantons Thurgau","volume":"80","author":"D.
+        Zwygart","year":"1983","journal-title":"Der Ornithologische Beobachter"}],"container-title":["Journal
+        of Landscape Ecology"],"link":[{"URL":"https:\/\/www.degruyter.com\/view\/j\/jlecol.2010.3.issue-1\/v10285-012-0023-2\/v10285-012-0023-2.pdf","content-type":"unspecified","content-version":"vor","intended-application":"similarity-checking"}],"deposited":{"date-parts":[[2018,5,9]],"date-time":"2018-05-09T03:43:52Z","timestamp":1525837432000},"score":1.0,"issued":{"date-parts":[[2010,1,1]]},"references-count":50,"journal-issue":{"issue":"1"},"URL":"http:\/\/dx.doi.org\/10.2478\/v10285-012-0023-2","relation":{"cites":[]},"ISSN":["1803-2427"],"issn-type":[{"value":"1803-2427","type":"print"}]},{"indexed":{"date-parts":[[2018,5,9]],"date-time":"2018-05-09T04:12:33Z","timestamp":1525839153936},"reference-count":27,"publisher":"Walter
+        de Gruyter GmbH","issue":"1","content-domain":{"domain":[],"crossmark-restriction":false},"published-print":{"date-parts":[[2012,1,1]]},"DOI":"10.2478\/v10285-012-0049-5","type":"journal-article","created":{"date-parts":[[2012,8,10]],"date-time":"2012-08-10T09:16:05Z","timestamp":1344590165000},"source":"Crossref","is-referenced-by-count":0,"title":["Geographical
+        Assessment of Factors for Sasa Expansion in the Sarobetsu Mire, Japan"],"prefix":"10.2478","volume":"5","author":[{"given":"Masayuki","family":"Takada","sequence":"first","affiliation":[]},{"given":"Takashi","family":"Inoue","sequence":"additional","affiliation":[]},{"given":"Yoshio","family":"Mishima","sequence":"additional","affiliation":[]},{"given":"Hiroko","family":"Fujita","sequence":"additional","affiliation":[]},{"given":"Takashi","family":"Hirano","sequence":"additional","affiliation":[]},{"given":"Yoshiyasu","family":"Fujimura","sequence":"additional","affiliation":[]}],"member":"374","reference":[{"key":"1","unstructured":"Agricultural
+        engineering consultants association (2003). <i>The formation map in Sarobetsu
+        Peatland.<\/i> (in Japanese)"},{"key":"2","first-page":"7","article-title":"Wetland
+        ecosystems, its conservation and restoration in Hokkaido","volume":"12","author":"H.
+        Fujita","year":"2007","journal-title":"Global Environment"},{"key":"3","doi-asserted-by":"crossref","first-page":"9","DOI":"10.1007\/s11258-007-9267-z","article-title":"An
+        inventory of the mires of Hokkaido, Japan-their development, classification,
+        decline, and conservation","volume":"200","author":"H. Fujita","year":"2009","journal-title":"Plant
+        Ecology"},{"key":"4","author":"H. Fujita","volume":"3","first-page":"3","year":"2003","volume-title":"The
+        time series mapping and detecting area changed of dwarf bamboo in Kami-Sarobetsu
+        Mire"},{"key":"5","doi-asserted-by":"crossref","first-page":"182","DOI":"10.2307\/1941811","article-title":"Northern
+        peatlands: Role in the carbon cycle and probable responses to climatic warming","volume":"1","author":"E.
+        Gorham","year":"1991","journal-title":"Ecological Applications"},{"issue":"1","key":"6","first-page":"11","article-title":"Application
+        of quantification theory","volume":"2","author":"C. Hayashi","year":"1954","journal-title":"Research
+        Report of the Institute of Statistical Mathematics"},{"key":"7","doi-asserted-by":"crossref","first-page":"761","DOI":"10.1046\/j.1523-1739.1995.09040761.x","article-title":"An
+        integrated approach to the ecology and management of plant invasions","volume":"9","author":"R.
+        Hobbs","year":"1995","journal-title":"Conservation Biology"},{"key":"8","unstructured":"Hokkaido
+        development agency, 1963: <i>The contour map of peat depth in Sarobetsu Peatland.<\/i>
+        (in Japanese)"},{"key":"9","doi-asserted-by":"crossref","first-page":"952","DOI":"10.1111\/j.1600-0706.2009.18094.x","article-title":"Resilience
+        and alternative equilibria in a mire plant community after experimental disturbance
+        by volcanic ash","volume":"119","author":"S. Hotes","year":"2010","journal-title":"Oikos"},{"key":"10","doi-asserted-by":"crossref","first-page":"706","DOI":"10.1007\/s11284-006-0066-0","article-title":"Dwarf
+        bamboo as an ecological filter for forest regeneration","volume":"22","author":"H.
+        Ito","year":"2007","journal-title":"Ecological Research"},{"key":"11","author":"K.
+        Ito","volume":"13","first-page":"75","year":"1990","volume-title":"A conservational
+        review of Sarobetsu Mire, northern Hokkaido"},{"key":"12","doi-asserted-by":"crossref","first-page":"87","DOI":"10.1002\/hyp.286","article-title":"Water
+        budget and surface-layer water storage in a Sphagnum bog in central Sweden","volume":"16","author":"E.
+        Kellner","year":"2002","journal-title":"Hydrological Processes"},{"issue":"8","key":"13","doi-asserted-by":"crossref","first-page":"2011","DOI":"10.1016\/j.soilbio.2006.02.017","article-title":"Decomposition
+        in peatlands: Reconciling seemingly contrasting results on the impacts of
+        lowered water levels","volume":"38","author":"R. Laiho","year":"2006","journal-title":"Soil
+        Biology and Biochemistry"},{"issue":"4","key":"14","doi-asserted-by":"crossref","first-page":"695","DOI":"10.1016\/j.soilbio.2009.01.004","article-title":"Indirect
+        regulation of heterotrophic peat soil respiration by water level via microbial
+        community structure and temperature sensitivity","volume":"41","author":"P.
+        M\u00e4kiranta","year":"2009","journal-title":"Soil Biology and Biochemistry"},{"key":"15","doi-asserted-by":"crossref","first-page":"999","DOI":"10.1016\/0045-6535(93)90065-D","article-title":"Carbon
+        dynamics in peatlands and other wetland soils - regional and global perspectives","volume":"27","author":"E.
+        Maltby","year":"1993","journal-title":"Chemosphere"},{"key":"16","doi-asserted-by":"crossref","first-page":"61","DOI":"10.1016\/S0378-1127(01)00527-8","article-title":"Effects
+        of dwarf bamboo (<i>Sasa<\/i> sp.) and forest floor microsites on conifer
+        seedling recruitment in a subalpine forest, Japan","volume":"163","author":"Y.
+        Narukawa","year":"2002","journal-title":"Forest Ecology and Management"},{"key":"17","first-page":"695","article-title":"Holocene
+        Evolution of Peatland and Paleoenvironmental Changes in the Sarobetsu Lowland,
+        Hokkaido, Northern Japan","volume":"68A-10","author":"A. Ohira","year":"1995","journal-title":"Geographical
+        Review of Japan"},{"key":"18","doi-asserted-by":"crossref","first-page":"41","DOI":"10.1002\/hyp.1309","article-title":"Statistical
+        characterization of the spatial variability of soil moisture in a cutover
+        peatland","volume":"18","author":"R. Petrone","year":"2004","journal-title":"Hydrological
+        Processes"},{"key":"19","author":"J. Pfadenhauer","first-page":"77","year":"1993","volume-title":"Mires:
+        Process, Exploitation and Conservation"},{"key":"20","author":"H. Rydin","year":"2006","volume-title":"The
+        biology of peatlands","DOI":"10.1093\/acprof:oso\/9780198528722.001.0001","doi-asserted-by":"crossref"},{"key":"21","first-page":"1","article-title":"Holocene
+        marine deposits in Hokkaido and their sedimentary environments","volume":"17","author":"Y.
+        Sakaguchi","year":"1985","journal-title":"Bull Dept Geogr Univ Tokyo"},{"key":"22","doi-asserted-by":"crossref","first-page":"901","DOI":"10.1046\/j.1365-294x.2000.00943.x","article-title":"Clonal
+        structure in a dwarf bamboo (sasa senanensis) population inferred from amplified
+        fragment length polymorphism (AFLP) fingerprints","volume":"9","author":"Y.
+        Suyama","year":"2000","journal-title":"Molecular Ecology"},{"issue":"1","key":"23","doi-asserted-by":"crossref","first-page":"45","DOI":"10.1007\/s11355-008-0061-4","article-title":"Estimation
+        of surface soil properties in peatland using ALOS\/PALSAR","volume":"5","author":"M.
+        Takada","year":"2009","journal-title":"Landscape and Ecological Engineering"},{"key":"24","doi-asserted-by":"crossref","first-page":"246","DOI":"10.1007\/BF03161754","article-title":"Effect
+        of the invasion of vascular plants on heat and water balance in the Sarobetsu
+        mire, northern Japan","volume":"19","author":"K. Takagi","year":"1999","journal-title":"Wetlands"},{"key":"25","author":"H.
+        Takahashi","first-page":"1","year":"2003","article-title":"Microclimate and
+        moving of Sasa frontline in Sarobetsu mire","journal-title":"The third research
+        report on conservation of Sarobetsu mire by Ministry of the Environment"},{"key":"26","author":"J.
+        Takakuwa","volume":"2","first-page":"47","year":"1986","volume-title":"Ecological
+        aspect of Sasa in Mires"},{"key":"27","first-page":"361","article-title":"Study
+        on invasion of <i>Sasa<\/i> sp. in Sarobetsu mire by satellite data","volume":"20","author":"H.
+        Tani","year":"2006","journal-title":"Papers on Environmental Information Science"}],"container-title":["Journal
+        of Landscape Ecology"],"link":[{"URL":"https:\/\/www.degruyter.com\/view\/j\/jlecol.2012.5.issue-1\/v10285-012-0049-5\/v10285-012-0049-5.pdf","content-type":"unspecified","content-version":"vor","intended-application":"similarity-checking"}],"deposited":{"date-parts":[[2018,5,9]],"date-time":"2018-05-09T03:43:52Z","timestamp":1525837432000},"score":1.0,"issued":{"date-parts":[[2012,1,1]]},"references-count":27,"journal-issue":{"issue":"1"},"URL":"http:\/\/dx.doi.org\/10.2478\/v10285-012-0049-5","relation":{"cites":[]},"ISSN":["1803-2427"],"issn-type":[{"value":"1803-2427","type":"print"}]},{"indexed":{"date-parts":[[2018,5,9]],"date-time":"2018-05-09T04:12:36Z","timestamp":1525839156173},"reference-count":24,"publisher":"Walter
+        de Gruyter GmbH","issue":"2","content-domain":{"domain":[],"crossmark-restriction":false},"published-print":{"date-parts":[[2011,1,1]]},"DOI":"10.2478\/v10285-012-0039-7","type":"journal-article","created":{"date-parts":[[2012,8,10]],"date-time":"2012-08-10T09:15:07Z","timestamp":1344590107000},"source":"Crossref","is-referenced-by-count":0,"title":["Multi-Scale
+        Effect on Landscape Pattern Analysis Using Satellite Data with a Range of
+        Spatial Resolutions"],"prefix":"10.2478","volume":"4","author":[{"given":"Yi","family":"Zhao","sequence":"first","affiliation":[]},{"given":"Mizuki","family":"Tomita","sequence":"additional","affiliation":[]},{"given":"Ippei","family":"Harada","sequence":"additional","affiliation":[]},{"given":"Keitarou","family":"Hara","sequence":"additional","affiliation":[]}],"member":"374","reference":[{"key":"1","author":"T.
+        Allen","year":"1982","volume-title":"Hierarchy: Perspectives for ecological
+        complexity"},{"key":"2","unstructured":"Bain, D.J., Brush, G.S. (2004). Placing
+        the pieces: Reconstructing the original property mosaic in a warrant and patent
+        watershed. <i>Landsc Ecol<\/i>, 19(8): 843-856."},{"issue":"2","key":"3","doi-asserted-by":"crossref","first-page":"113","DOI":"10.1007\/BF00153828","article-title":"Effects
+        of sensor spatial resolution on landscape structure parameters","volume":"10","author":"B.
+        Benson","year":"1995","journal-title":"Landsc Ecol"},{"key":"4","author":"J.
+        Brown","year":"2000","volume-title":"Scaling in Biology"},{"issue":"6","key":"5","doi-asserted-by":"crossref","first-page":"1762","DOI":"10.2307\/2937372","article-title":"Habitat
+        patch connectivity and population survival","volume":"66","author":"L. Fahrig","year":"1985","journal-title":"Ecology"},{"key":"6","author":"A.
+        Leit\u00e3o","year":"2006","volume-title":"Measuring landscapes: A Planner''s
+        Handbook"},{"issue":"6","key":"7","doi-asserted-by":"crossref","first-page":"1943","DOI":"10.2307\/1941447","article-title":"The
+        problem of pattern and scale in ecology","volume":"73","author":"S. Leivin","year":"1992","journal-title":"Ecology"},{"issue":"3","key":"8","first-page":"291","article-title":"Scaling
+        effect on the relationship between landscape pattern and land surface temperature:
+        A case study of Indianapolis United States","volume":"75","author":"H. Liu","year":"2009","journal-title":"Photog
+        Eng. and Remote Sens"},{"issue":"8","key":"9","doi-asserted-by":"crossref","first-page":"711","DOI":"10.1023\/A:1022902907827","article-title":"Testing
+        landscape metrics as indicators of habitat loss and fragmentation in continuous
+        eucalpt forest (Queensland, Australia)","volume":"17","author":"C. Mcalpine","year":"2002","journal-title":"Landsc.
+        Ecol"},{"key":"10","author":"K. Mcgarigal","year":"2002","volume-title":"FRAGSTATS:
+        spatial pattern analysis program for categorical maps. Computer software program"},{"issue":"6","key":"11","doi-asserted-by":"crossref","first-page":"363","DOI":"10.1007\/BF00130213","article-title":"The
+        influence of scale and the spatial characteristic of landscape on land-cover
+        mapping using remote sensing","volume":"10","author":"A. Moody","year":"1995","journal-title":"Landsc.
+        Ecol"},{"issue":"2","key":"12","doi-asserted-by":"crossref","first-page":"435","DOI":"10.1023\/B:LAND.0000030521.19856.cb","article-title":"Behavior
+        of class-level landscape metrics across gradients of class aggregation and
+        area","volume":"19","author":"M. Neel","year":"2004","journal-title":"Landsc.
+        Ecol"},{"key":"13","author":"D. Ouattrochi","year":"1997","volume-title":"Scale
+        in Remote Sensing and GIS"},{"key":"14","first-page":"27","article-title":"Global-scale
+        patterns of forest fragmentation","volume":"4","author":"K. Riitters","year":"2000","journal-title":"Conservation
+        Ecol"},{"key":"15","unstructured":"Sakura City (2006). <i>Principles of Yatsu
+        environmental conservation in Sakura city.<\/i> Retrieved 2009-02-15, from
+        <a target=\"_blank\" href=''http:\/\/www.city.sakura.lg.jp\/012543000_kankyohozen\/kan_sei\/yatukankyou\/pdffinalyatsusisinn.pdf''>http:\/\/www.city.sakura.lg.jp\/012543000_kankyohozen\/kan_sei\/yatukankyou\/pdffinalyatsusisinn.pdf<\/a>"},{"issue":"2","key":"16","doi-asserted-by":"crossref","first-page":"197","DOI":"10.1023\/B:LAND.0000021724.60785.65","article-title":"Effects
+        of remote sensor spatial resolution and data aggregation on selected fragmentation
+        indices","volume":"19","author":"S. Saura","year":"2004","journal-title":"Landsc.
+        Ecol"},{"key":"17","author":"D. Schneider","first-page":"113","year":"2001","volume-title":"Scaling
+        Relations in Experimental Ecology"},{"key":"18","author":"K. Takeuchi","year":"2003","volume-title":"SATOYAMA:
+        The traditional rural landscape of Japan"},{"issue":"3","key":"19","doi-asserted-by":"crossref","first-page":"235","DOI":"10.1023\/A:1011112719782","article-title":"Can
+        landscape indices predict ecological processes consistently?","volume":"16","author":"L.
+        Tischendorf","year":"2001","journal-title":"Landsc Ecol"},{"issue":"3-4","key":"20","doi-asserted-by":"crossref","first-page":"153","DOI":"10.1007\/BF00131534","article-title":"Effects
+        of changing spatial scale on the analysis of landscape pattern","volume":"3","author":"M.
+        Turner","year":"1989a","journal-title":"Landsc Ecol"},{"key":"21","first-page":"6","article-title":"Multiscale
+        analysis of landscape heterogeneity: scale variance and pattern metrics","volume":"6","author":"J.
+        Wu","year":"2000","journal-title":"Geographical Infromation Science"},{"issue":"2","key":"22","doi-asserted-by":"crossref","first-page":"125","DOI":"10.1023\/B:LAND.0000021711.40074.ae","article-title":"Effects
+        of changing scale on landscape pattern analysis: scaling relations","volume":"19","author":"J.
+        Wu","year":"2004","journal-title":"Landsc Ecol"},{"key":"23","author":"J.
+        Wu","first-page":"118","year":"2006","volume-title":"Key topics in landscape
+        ecology"},{"issue":"21","key":"24","doi-asserted-by":"crossref","first-page":"4791","DOI":"10.1080\/01431160600702442","article-title":"The
+        effects of sensor spatial resolution and changing grain size on fragmentation
+        indices in urban landscape","volume":"27","author":"M. Zhu","year":"2006","journal-title":"J.
+        of Remote Sens"}],"container-title":["Journal of Landscape Ecology"],"link":[{"URL":"https:\/\/www.degruyter.com\/view\/j\/jlecol.2011.4.issue-2\/v10285-012-0039-7\/v10285-012-0039-7.pdf","content-type":"unspecified","content-version":"vor","intended-application":"similarity-checking"}],"deposited":{"date-parts":[[2018,5,9]],"date-time":"2018-05-09T03:43:43Z","timestamp":1525837423000},"score":1.0,"issued":{"date-parts":[[2011,1,1]]},"references-count":24,"journal-issue":{"issue":"2"},"URL":"http:\/\/dx.doi.org\/10.2478\/v10285-012-0039-7","relation":{"cites":[]},"ISSN":["1803-2427"],"issn-type":[{"value":"1803-2427","type":"print"}]},{"indexed":{"date-parts":[[2018,5,9]],"date-time":"2018-05-09T04:12:36Z","timestamp":1525839156181},"reference-count":30,"publisher":"Walter
+        de Gruyter GmbH","issue":"1","content-domain":{"domain":[],"crossmark-restriction":false},"published-print":{"date-parts":[[2011,1,1]]},"DOI":"10.2478\/v10285-012-0032-1","type":"journal-article","created":{"date-parts":[[2012,8,10]],"date-time":"2012-08-10T09:15:57Z","timestamp":1344590157000},"source":"Crossref","is-referenced-by-count":0,"title":["Desertification
+        of the Typical Steppe Landscape Under Field\/Stock-Farming Management: An
+        Assessment in Wufuhao Settlement, Central Inner Mongolia"],"prefix":"10.2478","volume":"4","author":[{"given":"Hirabuki","family":"Yoshihiko","sequence":"first","affiliation":[]},{"given":"Kanno","family":"Hiroshi","sequence":"additional","affiliation":[]},{"given":"Su","family":"Gencheng","sequence":"additional","affiliation":[]},{"given":"Bao","family":"Yuhai","sequence":"additional","affiliation":[]},{"name":"Sudesiqin","sequence":"additional","affiliation":[]}],"member":"374","reference":[{"key":"1","author":"O.
+        Archibold","year":"1995","volume-title":"Ecology of World Vegetation","DOI":"10.1007\/978-94-011-0009-0","doi-asserted-by":"crossref"},{"issue":"3","key":"2","first-page":"369","article-title":"Adjustment
+        problem of live-stock industry and cultivated agriculture in Inner Mongolia","volume":"11","author":"T.
+        Ba","year":"2006","journal-title":"Yokohama Journal of Social Sciences"},{"issue":"2","key":"3","first-page":"103","article-title":"Actual
+        managerial circumstances of pastoralism and environmental problems in Inner
+        Mongolia Autonomous Region","volume":"12","author":"T. Ba","year":"2007","journal-title":"Yokohama
+        Journal of Social Sciences"},{"key":"4","author":"J. Braun-Blanquet","year":"1964","volume-title":"Pflanzensoziologie:
+        Grundz\u00fcge der Vegetationskunde, 3 Aufl"},{"key":"5","unstructured":"Editorial
+        Committee for Topography of Wuchuan County (1988). <i>Topography of Wuchuan
+        County.<\/i> The Inner Mongolia People''s Publishing House, Hohhot."},{"key":"6","unstructured":"Google
+        Earth (2004-2010). <i>Satellite images of Wufuhao Settlement and its neighbourhood.<\/i>
+        Accessed intermittently during the June 2004-August 2010 period), from <a
+        target=\"_blank\" href=''http:\/\/earth.google.com\/''>http:\/\/earth.google.com\/<\/a>"},{"key":"7","first-page":"147","article-title":"Features
+        and a list of major plant species grown on the salt affected areas of middle
+        to western parts of Inner Mongolia","volume":"14","author":"W. Han","year":"2004","journal-title":"Journal
+        of Arid Land Studies"},{"key":"8","author":"M. Hill","year":"1979","volume-title":"TWINSPAN,
+        A FORTRAN Program for Arranging Multivariate Data in an Ordered Two-way Table
+        by Classification of the Individuals and Attributes"},{"key":"9","doi-asserted-by":"crossref","first-page":"47","DOI":"10.1007\/BF00048870","article-title":"Detrended
+        correspondence analysis, an improved ordination technique","volume":"42","author":"M.
+        Hill","year":"1980","journal-title":"Vegetatio"},{"key":"10","unstructured":"Institute
+        of Plants, Chinese Academy of Science (1982): <i>Vegetation Map of China.<\/i>
+        The Map Publishing House, Beiging."},{"key":"11","first-page":"109","article-title":"Degradation
+        of grassland in Keerqin Sandland, Inner Mongolia, China","volume":"44","author":"S.
+        Kawanabe","year":"1998","journal-title":"Grassland Science"},{"issue":"4","key":"12","doi-asserted-by":"crossref","first-page":"43","DOI":"10.7211\/jjsrt.15.4_43","article-title":"Origin
+        and land classification of the Mu Us Shadi Desert in China","volume":"15","author":"T.
+        Kobayashi","year":"1990","journal-title":"Journal of the Japanese Society
+        of Revegetation Technology"},{"key":"13","author":"H. Koizumi","year":"2000","volume-title":"Ecology
+        of Grasslands and Deserts"},{"key":"14","author":"Y. Konagaya","year":"2005","volume-title":"Ecological
+        Settlement: A Chinese Policy Toward Environment Preservation"},{"key":"15","author":"B.
+        McCune","year":"1999","volume-title":"PC-ORD for Windows: Multivariate Analysis
+        of Ecological Data Version 4.00"},{"key":"16","first-page":"139","article-title":"Experimental
+        study on the effects of grazing pressure on the floristic composition of grassland
+        of Baiyinxile, Xilingole, Inner Mongolia","volume":"15","author":"T. Nakamura","year":"1998","journal-title":"Vegetation
+        Science"},{"key":"17","first-page":"342","article-title":"Effects of grazing
+        on the floristic composition of grasslands in Baiyinxile, Xilingole, Inner
+        Mongolia","volume":"45","author":"T. Nakamura","year":"2000","journal-title":"Grassland
+        Science"},{"key":"18","author":"M. Tokuoka","year":"2002","volume-title":"Illustrated
+        Encyclopedia of Desert and Sandland Woody Plants in China"},{"key":"19","doi-asserted-by":"crossref","first-page":"133","DOI":"10.1016\/j.jaridenv.2004.01.004","article-title":"A
+        landscape-scale assessment of steppe degradation in the Xilin River Basin,
+        Inner Mongolia, China","volume":"59","author":"C. Tong","year":"2004","journal-title":"Journal
+        of Arid Environments"},{"key":"20","unstructured":"United Nations Environment
+        Programme (1992). <i>World Atlas of Desertification (1st ed.<\/i>). Edward
+        Arnold, London."},{"key":"21","unstructured":"United Nations Environment Programme
+        (1997). <i>World Atlas of Desertification (2nd ed.).<\/i> Edward Arnold, London."},{"key":"22","author":"T.
+        Wang","first-page":"49","year":"1999","volume-title":"The United Nations University:
+        New Technologies to Combat Desertification, Proceedings of the International
+        Symposium held in Tehran"},{"key":"23","first-page":"140","article-title":"Species
+        diversity and phytomass of the grasslands in Inner Mongolia, China","volume":"45","author":"Nakamura
+        Wuyunna","year":"1999","journal-title":"Grassland Science"},{"key":"24","first-page":"17","article-title":"Degradation
+        of the grassland ecosystem in Inner Mongolia, China","volume":"8","author":"K.
+        Wuyunna","year":"2004","journal-title":"Vegetation Science News"},{"key":"25","author":"Z.
+        Xu","year":"2004","volume-title":"Handbook of Pasture Management in China"},{"key":"26","first-page":"362","article-title":"Changes
+        in floristic composition of grasslands according to grazing intensity in Inner
+        Mongolia, China","volume":"47","author":"I. Yiruhan","year":"2001","journal-title":"Grassland
+        Science"},{"key":"27","author":"K. Yoshikawa","year":"2004","volume-title":"Nature
+        and Adaptive Restoration in Arid\/Semi-arid Regions"},{"key":"28","author":"M.
+        Yoshino","year":"1977","volume-title":"Desertification in China"},{"key":"29","doi-asserted-by":"crossref","first-page":"418","DOI":"10.1016\/j.ecolmodel.2004.12.019","article-title":"Considerable
+        effects of diversity indices and spatial scales on conclusions relating to
+        ecological diversity","volume":"188","author":"T. Yue","year":"2005","journal-title":"Ecological
+        Modelling"},{"key":"30","author":"Y. Zhao","year":"2005","volume-title":"Key
+        to the Higher Plants of Daqing Mountain in Inner Mongolia"}],"container-title":["Journal
+        of Landscape Ecology"],"link":[{"URL":"https:\/\/www.degruyter.com\/view\/j\/jlecol.2011.4.issue-1\/v10285-012-0032-1\/v10285-012-0032-1.pdf","content-type":"unspecified","content-version":"vor","intended-application":"similarity-checking"}],"deposited":{"date-parts":[[2018,5,9]],"date-time":"2018-05-09T03:44:01Z","timestamp":1525837441000},"score":1.0,"issued":{"date-parts":[[2011,1,1]]},"references-count":30,"journal-issue":{"issue":"1"},"URL":"http:\/\/dx.doi.org\/10.2478\/v10285-012-0032-1","relation":{"cites":[]},"ISSN":["1803-2427"],"issn-type":[{"value":"1803-2427","type":"print"}]},{"indexed":{"date-parts":[[2018,5,9]],"date-time":"2018-05-09T04:12:36Z","timestamp":1525839156218},"reference-count":41,"publisher":"Walter
+        de Gruyter GmbH","issue":"1","content-domain":{"domain":[],"crossmark-restriction":false},"published-print":{"date-parts":[[2008,1,1]]},"DOI":"10.2478\/v10285-012-0005-4","type":"journal-article","created":{"date-parts":[[2012,8,10]],"date-time":"2012-08-10T09:13:33Z","timestamp":1344590013000},"source":"Crossref","is-referenced-by-count":0,"title":["Monitoring
+        of Biodiversity Changes in the Landscape Scale"],"prefix":"10.2478","volume":"1","author":[{"given":"Du\u0161an","family":"Romportl","sequence":"first","affiliation":[]},{"given":"Michal","family":"Andreas","sequence":"additional","affiliation":[]},{"given":"Blanka","family":"Vlas\u00e1kov\u00e1","sequence":"additional","affiliation":[]}],"member":"374","reference":[{"key":"1","author":"K.
+        Absolon","year":"1994","volume-title":"Metodika sb\u011bru dat pro biomonitoring
+        v chr\u00e1n\u011bn\u00fdch \u00fazem\u00edch"},{"key":"2","author":"M. And\u011bra","year":"2000","volume-title":"P\u0159edb\u011b\u017en\u00e1
+        verze, Svazek III. Hmyzo\u017eravci (<i>Insectivora<\/i>)"},{"key":"3","author":"M.
+        And\u011bra","year":"2001","volume-title":"<i>Atlas roz\u0161\u00ed\u0159en\u00ed
+        savc\u016f v \u010cesk\u00e9 republice<\/i>, P\u0159edb\u011b\u017en\u00e1
+        verze, Svazek IV. Hlodavci (<i>Rodentia<\/i>) - \u010d\u00e1st 1. K\u0159e\u010dkovit\u00ed
+        (<i>Cricetidae<\/i>), hrabo\u0161ovit\u00ed (<i>Arvicolidae<\/i>), plchovit\u00ed
+        (<i>Gliridae<\/i>)"},{"key":"4","author":"M. And\u011bra","year":"2002","volume-title":"<i>Atlas
+        roz\u0161\u00ed\u0159en\u00ed savc\u016f v \u010cesk\u00e9 republice<\/i>,
+        P\u0159edb\u011b\u017en\u00e1 verze, Svazek IV. Hlodavci (<i>Rodentia<\/i>)
+        - \u010d\u00e1st 2. My\u0161ovit\u00ed (<i>Muridae<\/i>), my\u0161ivkovit\u00ed
+        (<i>Zapodidae<\/i>)"},{"key":"5","author":"M. And\u011bra","year":"2004","volume-title":"<i>Atlas
+        roz\u0161\u00ed\u0159en\u00ed savc\u016f v \u010cesk\u00e9 republice<\/i>,
+        P\u0159edb\u011b\u017en\u00e1 verze, Svazek IV. Hlodavci (<i>Rodentia<\/i>)
+        - \u010d\u00e1st 3. Veverkovit\u00ed (<i>Sciuridae<\/i>), bobrovit\u00ed (<i>Castoridae<\/i>),
+        nutriovit\u00ed (<i>Myocastoridae<\/i>)"},{"key":"6","author":"M. And\u011bra","year":"1995","volume-title":"<i>Atlas
+        roz\u0161\u00ed\u0159en\u00ed savc\u016f v \u010cesk\u00e9 republice<\/i>,
+        P\u0159edb\u011b\u017en\u00e1 verze, Svazek I. Sudokopytn\u00edci (<i>Artiodactyla<\/i>),
+        zaj\u00edci (<i>Lagomorpha<\/i>)"},{"key":"7","author":"M. And\u011bra","year":"1996","volume-title":"<i>Atlas
+        roz\u0161\u00ed\u0159en\u00ed savc\u016f v \u010cesk\u00e9 republice<\/i>,
+        P\u0159edb\u011b\u017en\u00e1 verze, Svazek II. \u0160elmy"},{"key":"8","unstructured":"Anonymous,
+        (2007). <i>Z\u00e1pis ze zased\u00e1n\u00ed \u010cesk\u00e9ho v\u00fdboru
+        pro \u00damluvu o biologick\u00e9 rozmanitosti a V\u011bdeck\u00e9ho poradn\u00edho
+        sboru dne 7. listopadu 2007<\/i>, M\u017dP. Retrieved 5.1.2008, from <a target=\"_blank\"
+        href=''http:\/\/chm.nature.cz\/cooperation\/fol669615\/fol431464\/CBD_Vybor_zapis_7_11_07.pdf''>http:\/\/chm.nature.cz\/cooperation\/fol669615\/fol431464\/CBD_Vybor_zapis_7_11_07.pdf<\/a>"},{"key":"9","doi-asserted-by":"crossref","first-page":"215","DOI":"10.1016\/j.ecolind.2005.08.011","article-title":"Landscape
+        functions as indicators for the development of local agri-environmental measures","volume":"6","author":"O.
+        Bastian","year":"2006","journal-title":"Ecological Indicators"},{"key":"10","doi-asserted-by":"crossref","first-page":"692","DOI":"10.1016\/j.ecolind.2006.08.001","article-title":"Thematic
+        resolution matters: Indicators of landscape pattern for European agro-ecosystems","volume":"7","author":"D.
+        Bailey","year":"2007","journal-title":"Ecological Indicators"},{"key":"11","doi-asserted-by":"crossref","first-page":"255","DOI":"10.1098\/rstb.2004.1583","article-title":"Using
+        Red List Indices to measure progress towards the 2010 target and beyond","volume":"360","author":"S.
+        Butchart","year":"2005","journal-title":"Phil. Trans. R. Soc. B"},{"issue":"12","key":"12","doi-asserted-by":"crossref","first-page":"2294","DOI":"10.1371\/journal.pbio.0020383","article-title":"Measuring
+        Global Trends in the Status of Biodiversity: Red List Indices for Birds","volume":"2","author":"S.
+        Butchart","year":"2004","journal-title":"PLoS Biol"},{"key":"13","unstructured":"Council
+        of Europe (2000). <i>European Landscape Convention.<\/i> Council of Europe,
+        Florence, pp 9."},{"key":"14","doi-asserted-by":"crossref","first-page":"3","DOI":"10.1016\/S1470-160X(01)00003-6","article-title":"Challenges
+        in the development and use of ecological indicators","volume":"1","author":"V.
+        Dale","year":"2001","journal-title":"Ecological Indicators"},{"key":"15","doi-asserted-by":"crossref","first-page":"87","DOI":"10.1016\/S0167-8809(03)00072-0","article-title":"Biodiversity
+        indicators: the choice of values and measures","volume":"98","author":"P.
+        Duelli","year":"2003","journal-title":"Agriculture, Ecosystems and Environment"},{"key":"16","unstructured":"EEA
+        (2005). <i>Agriculture and environment in EU-15 - the IRENA indicator report.<\/i>
+        EEA, Copenhagen, pp 128."},{"key":"17","unstructured":"EEA (2006). <i>Urban
+        Sprawl in Europe, the ignored challenge.<\/i> EEA, Copenhagen, pp 60."},{"key":"18","unstructured":"EEA
+        (2007). <i>European Environment Agency 2007, Halting the loss of biodiversity
+        by 2010: proposal for a first set of indicators to monitor progress in Europe.<\/i>
+        Copenhagen, pp 182."},{"key":"19","author":"J. Farka\u010d","year":"2005","volume-title":"\u010cerven\u00fd
+        seznam ohro\u017een\u00fdch druh\u016f \u010cesk\u00e9 republiky"},{"key":"20","author":"C.
+        Hambler","year":"2004","volume-title":"Conservation","DOI":"10.1017\/CBO9780511804281","doi-asserted-by":"crossref"},{"key":"21","author":"R.
+        Haines-Young","first-page":"88","year":"2005","volume-title":"European Landscape
+        Character Areas - Typologies, Cartography and Indicators for the Assessment
+        of Sustainable Landscapes"},{"key":"22","author":"V. Han\u00e1k","year":"2005","volume-title":"<i>Atlas
+        roz\u0161\u00ed\u0159en\u00ed savc\u016f v \u010cesk\u00e9 republice<\/i>,
+        P\u0159edb\u011b\u017en\u00e1 verze, Svazek V. Letouni (<i>Chiroptera<\/i>)
+        - \u010d\u00e1st 1. Vr\u00e1pencovit\u00ed (<i>Rhinolophidae<\/i>), netop\u00fdrovit\u00ed
+        (<i>Vespertilionidae - Barbastella barbastellus, Plecotus auritus, Plecotus
+        austriacus<"},{"key":"23","author":"V. Han\u00e1k","year":"2006","volume-title":"<i>Atlas
+        roz\u0161\u00ed\u0159en\u00ed savc\u016f v \u010cesk\u00e9 republice<\/i>,
+        P\u0159edb\u011b\u017en\u00e1 verze, Svazek V. Letouni (<i>Chiroptera<\/i>)
+        - \u010d\u00e1st 2. Netop\u00fdrovit\u00ed (<i>Vespertilionidae<\/i> - rod
+        <i>Myotis<\/i>)"},{"key":"24","first-page":"3","article-title":"S\u010d\u00edt\u00e1n\u00ed
+        netop\u00fdr\u016f na zimovi\u0161t\u00edch v \u010cR: 1969-2001","volume":"5","author":"I.
+        Hor\u00e1\u010dek","year":"2001","journal-title":"Vespertilio"},{"key":"25","first-page":"15","article-title":"Vyu\u017eit\u00ed
+        st\u0159evl\u00edkovit\u00fdch (<i>Coleoptera: Carabidae<\/i>) k indikaci
+        kvality prost\u0159ed\u00ed","volume":"32","author":"K. H\u016frka","year":"1996","journal-title":"Klapalekiana"},{"key":"26","unstructured":"IUCN
+        (2001). <i>IUCN Red List categories and criteria: Version 3.1.<\/i> IUCN Species
+        Survival Comission. IUCN, Gland, Switzerland and Cambridge, U.K."},{"key":"27","first-page":"1","article-title":"Seznam
+        a \u010derven\u00fd seznam mechorost\u016f \u010cesk\u00e9 republiky (2005)","volume":"23","author":"J.
+        Ku\u010dera","year":"2005","journal-title":"P\u0159\u00edroda, Prague"},{"key":"28","doi-asserted-by":"crossref","first-page":"214","DOI":"10.1016\/S0169-5347(03)00090-9","article-title":"Value
+        of the IUCN Red List","volume":"18","author":"J. Lamoreux","year":"2003","journal-title":"Trends
+        Ecol. Evol"},{"key":"29","doi-asserted-by":"crossref","first-page":"3","DOI":"10.1016\/S1470-160X(02)00053-5","article-title":"Applicabality
+        of landscape metrics for the monitoring of landscape change: issues of scale,
+        resolution and interpretability","volume":"2","author":"A. Lausch","year":"2002","journal-title":"Ecological
+        indicators"},{"key":"30","author":"Z. Lipsk\u00fd","first-page":"51","year":"2006","volume-title":"Ochrana
+        krajinn\u00e9ho r\u00e1zu"},{"key":"31","author":"B. Mik\u00e1tov\u00e1","year":"2001","volume-title":"Atlas
+        roz\u0161\u00ed\u0159en\u00ed plaz\u016f v \u010cesk\u00e9 republice"},{"key":"32","author":"K.
+        McGarigal","year":"2007"},{"key":"33","author":"J. Moravec","year":"1994","volume-title":"Atlas
+        roz\u0161\u00ed\u0159en\u00ed oboj\u017eiveln\u00edk\u016f v \u010cesk\u00e9
+        republice"},{"issue":"1","key":"34","doi-asserted-by":"crossref","first-page":"1","DOI":"10.1016\/j.ecolind.2005.08.001","article-title":"Ecological
+        indicators: Theoretical fundamentals of consistent applications in environmental
+        management","volume":"6","author":"F. M\u00fcller","year":"2006","journal-title":"Ecological
+        Indicators"},{"key":"35","first-page":"1","article-title":"\u010cerven\u00fd
+        seznam ohro\u017een\u00fdch druh\u016f \u010cesk\u00e9 republiky, Obratlovci","volume":"22","author":"J.
+        Plesn\u00edk","year":"2003","journal-title":"P\u0159\u00edroda, Prague"},{"key":"36","first-page":"1","article-title":"\u010cern\u00fd
+        a \u010derven\u00fd seznam c\u00e9vnat\u00fdch rostlin \u010cesk\u00e9 republiky
+        (stav v roce 2000)","volume":"18","author":"F. Proch\u00e1zka","year":"2001","journal-title":"P\u0159\u00edroda,
+        Prague"},{"key":"37","doi-asserted-by":"crossref","first-page":"45","DOI":"10.1038\/nature03289","article-title":"A
+        biodiversity intactness index","volume":"404","author":"R. Scholes","year":"2005","journal-title":"Nature"},{"key":"38","author":"K.
+        \u0160\u0165astn\u00fd","year":"2006","volume-title":"Atlas hn\u00edzdn\u00edho
+        roz\u0161\u00ed\u0159en\u00ed pt\u00e1k\u016f v \u010cesk\u00e9 republice
+        2001-2003"},{"key":"39","author":"B. Brink","year":"2006","volume-title":"Indicators
+        as communication tools: an evolution towards composite indicators"},{"key":"40","author":"E.
+        Vav\u0159inov\u00e1","year":"2007","journal-title":"Z\u00e1pis ze zased\u00e1n\u00ed
+        \u010cesk\u00e9ho v\u00fdboru pro \u00damluvu o biologick\u00e9 rozmanitosti
+        a V\u011bdeck\u00e9ho poradn\u00edho sboru dne 7. listopadu 2007, M\u017dP"},{"key":"41","author":"D.
+        Wascher","first-page":"237","year":"2002","volume-title":"The new dimensions
+        of the European landscape"}],"container-title":["Journal of Landscape Ecology"],"link":[{"URL":"https:\/\/www.degruyter.com\/view\/j\/jlecol.2008.1.issue-1\/v10285-012-0005-4\/v10285-012-0005-4.pdf","content-type":"unspecified","content-version":"vor","intended-application":"similarity-checking"}],"deposited":{"date-parts":[[2018,5,9]],"date-time":"2018-05-09T03:43:31Z","timestamp":1525837411000},"score":1.0,"issued":{"date-parts":[[2008,1,1]]},"references-count":41,"journal-issue":{"issue":"1"},"URL":"http:\/\/dx.doi.org\/10.2478\/v10285-012-0005-4","relation":{"cites":[]},"ISSN":["1803-2427"],"issn-type":[{"value":"1803-2427","type":"print"}]}],"items-per-page":5,"query":{"start-index":0,"search-terms":null}}}'
+  recorded_at: 2018-12-07 22:32:06 GMT
+  recorded_with: vcr/0.2.0.9101, webmockr/0.2.9.9311
