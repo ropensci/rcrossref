@@ -1,0 +1,38 @@
+http_interactions:
+- request:
+    method: get
+    uri: https://api.crossref.org/works/10.4018/978-1-4666-9588-7.les2
+    body:
+      encoding: ''
+      string: ''
+    headers:
+      Accept-Encoding: gzip, deflate
+      Accept: application/json, text/xml, application/xml, */*
+      User-Agent: r-curl/3.2 crul/0.6.1.9100 rOpenSci(rcrossref/0.8.5.9110) (mailto:<crossref_email>)
+      X-USER-AGENT: r-curl/3.2 crul/0.6.1.9100 rOpenSci(rcrossref/0.8.5.9110) (mailto:<crossref_email>)
+  response:
+    status:
+      status_code: '200'
+      message: OK
+      explanation: Request fulfilled, document follows
+    headers:
+      status: HTTP/1.1 200 OK
+      content-type: application/json;charset=UTF-8
+      vary: Accept
+      access-control-allow-origin: '*'
+      access-control-allow-headers: X-Requested-With
+      content-length: '1193'
+      server: http-kit
+      date: Fri, 07 Dec 2018 21:28:46 GMT
+      x-rate-limit-limit: '50'
+      x-rate-limit-interval: 1s
+      connection: close
+    body:
+      encoding: UTF-8
+      string: '{"status":"ok","message-type":"work","message-version":"1.0.0","message":{"indexed":{"date-parts":[[2018,5,7]],"date-time":"2018-05-07T22:30:42Z","timestamp":1525732242980},"reference-count":0,"publisher":"IGI
+        Global","isbn-type":[{"value":"9781466695887","type":"electronic"}],"content-domain":{"domain":[],"crossmark-restriction":false},"short-container-title":[],"DOI":"10.4018\/978-1-4666-9588-7.les2","type":"book-chapter","created":{"date-parts":[[2015,11,10]],"date-time":"2015-11-10T19:02:33Z","timestamp":1447182153000},"page":"525-916","source":"Crossref","is-referenced-by-count":0,"title":["\"Racial
+        Epithet\""],"prefix":"10.4018","author":[{"given":"Nicholas D.","family":"Hartlep","sequence":"first","affiliation":[{"name":"Illinois
+        State University, USA"}]}],"member":"2432","container-title":["Impact of the
+        Model Minority Stereotype on Modern Society"],"original-title":[],"deposited":{"date-parts":[[2015,11,10]],"date-time":"2015-11-10T19:02:33Z","timestamp":1447182153000},"score":1.0,"subtitle":[""],"short-title":[],"issued":{"date-parts":[[null]]},"ISBN":["9781466695887"],"references-count":0,"URL":"http:\/\/dx.doi.org\/10.4018\/978-1-4666-9588-7.les2","relation":{}}}'
+  recorded_at: 2018-12-07 21:28:46 GMT
+  recorded_with: vcr/0.2.0.9101, webmockr/0.2.9.9311

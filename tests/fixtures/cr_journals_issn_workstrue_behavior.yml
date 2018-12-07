@@ -1,0 +1,537 @@
+http_interactions:
+- request:
+    method: get
+    uri: https://api.crossref.org/journals/0074-7742/works
+    body:
+      encoding: ''
+      string: ''
+    headers:
+      Accept-Encoding: gzip, deflate
+      Accept: application/json, text/xml, application/xml, */*
+      User-Agent: r-curl/3.2 crul/0.6.1.9100 rOpenSci(rcrossref/0.8.5.9110) (mailto:<crossref_email>)
+      X-USER-AGENT: r-curl/3.2 crul/0.6.1.9100 rOpenSci(rcrossref/0.8.5.9110) (mailto:<crossref_email>)
+  response:
+    status:
+      status_code: '404'
+      message: Not Found
+      explanation: Nothing matches the given URI
+    headers:
+      status: HTTP/1.1 404 Not Found
+      content-type: text/plain
+      access-control-allow-origin: '*'
+      access-control-allow-headers: X-Requested-With
+      content-length: '19'
+      server: http-kit
+      date: Fri, 07 Dec 2018 22:33:25 GMT
+      x-rate-limit-limit: '50'
+      x-rate-limit-interval: 1s
+      connection: close
+    body:
+      encoding: UTF-8
+      string: Resource not found.
+  recorded_at: 2018-12-07 22:33:27 GMT
+  recorded_with: vcr/0.2.0.9101, webmockr/0.2.9.9311
+- request:
+    method: get
+    uri: https://api.crossref.org/journals/0074-7742/works
+    body:
+      encoding: ''
+      string: ''
+    headers:
+      Accept-Encoding: gzip, deflate
+      Accept: application/json, text/xml, application/xml, */*
+      User-Agent: r-curl/3.2 crul/0.6.1.9100 rOpenSci(rcrossref/0.8.5.9110) (mailto:<crossref_email>)
+      X-USER-AGENT: r-curl/3.2 crul/0.6.1.9100 rOpenSci(rcrossref/0.8.5.9110) (mailto:<crossref_email>)
+  response:
+    status:
+      status_code: '404'
+      message: Not Found
+      explanation: Nothing matches the given URI
+    headers:
+      status: HTTP/1.1 404 Not Found
+      content-type: text/plain
+      access-control-allow-origin: '*'
+      access-control-allow-headers: X-Requested-With
+      content-length: '19'
+      server: http-kit
+      date: Fri, 07 Dec 2018 22:33:26 GMT
+      x-rate-limit-limit: '50'
+      x-rate-limit-interval: 1s
+      connection: close
+    body:
+      encoding: UTF-8
+      string: Resource not found.
+  recorded_at: 2018-12-07 22:33:27 GMT
+  recorded_with: vcr/0.2.0.9101, webmockr/0.2.9.9311
+- request:
+    method: get
+    uri: https://api.crossref.org/journals/0074-7742/works
+    body:
+      encoding: ''
+      string: ''
+    headers:
+      Accept-Encoding: gzip, deflate
+      Accept: application/json, text/xml, application/xml, */*
+      User-Agent: r-curl/3.2 crul/0.6.1.9100 rOpenSci(rcrossref/0.8.5.9110) (mailto:<crossref_email>)
+      X-USER-AGENT: r-curl/3.2 crul/0.6.1.9100 rOpenSci(rcrossref/0.8.5.9110) (mailto:<crossref_email>)
+  response:
+    status:
+      status_code: '404'
+      message: Not Found
+      explanation: Nothing matches the given URI
+    headers:
+      status: HTTP/1.1 404 Not Found
+      content-type: text/plain
+      access-control-allow-origin: '*'
+      access-control-allow-headers: X-Requested-With
+      content-length: '19'
+      server: http-kit
+      date: Fri, 07 Dec 2018 22:33:26 GMT
+      x-rate-limit-limit: '50'
+      x-rate-limit-interval: 1s
+      connection: close
+    body:
+      encoding: UTF-8
+      string: Resource not found.
+  recorded_at: 2018-12-07 22:33:27 GMT
+  recorded_with: vcr/0.2.0.9101, webmockr/0.2.9.9311
+- request:
+    method: get
+    uri: https://api.crossref.org/journals/1574-6941/works
+    body:
+      encoding: ''
+      string: ''
+    headers:
+      Accept-Encoding: gzip, deflate
+      Accept: application/json, text/xml, application/xml, */*
+      User-Agent: r-curl/3.2 crul/0.6.1.9100 rOpenSci(rcrossref/0.8.5.9110) (mailto:<crossref_email>)
+      X-USER-AGENT: r-curl/3.2 crul/0.6.1.9100 rOpenSci(rcrossref/0.8.5.9110) (mailto:<crossref_email>)
+  response:
+    status:
+      status_code: '200'
+      message: OK
+      explanation: Request fulfilled, document follows
+    headers:
+      status: HTTP/1.1 200 OK
+      content-type: application/json;charset=UTF-8
+      vary: Accept
+      access-control-allow-origin: '*'
+      access-control-allow-headers: X-Requested-With
+      content-length: '66097'
+      server: http-kit
+      date: Fri, 07 Dec 2018 22:33:27 GMT
+      x-rate-limit-limit: '50'
+      x-rate-limit-interval: 1s
+      connection: close
+    body:
+      encoding: UTF-8
+      string: '{"status":"ok","message-type":"work-list","message-version":"1.0.0","message":{"facets":{},"total-results":3536,"items":[{"indexed":{"date-parts":[[2018,5,2]],"date-time":"2018-05-02T18:54:53Z","timestamp":1525287293256},"reference-count":57,"publisher":"Oxford
+        University Press (OUP)","issue":"1","content-domain":{"domain":[],"crossmark-restriction":false},"published-print":{"date-parts":[[2006,10]]},"DOI":"10.1111\/j.1574-6941.2006.00138.x","type":"journal-article","created":{"date-parts":[[2006,4,20]],"date-time":"2006-04-20T09:54:34Z","timestamp":1145526874000},"page":"41-53","source":"Crossref","is-referenced-by-count":17,"title":["Responses
+        of antioxidants in the lichen Ramalina lacera may serve as an early-warning
+        bioindicator system for the detection of air pollution stress"],"prefix":"10.1093","volume":"58","author":[{"given":"Lior","family":"Weissman","sequence":"first","affiliation":[]},{"given":"Milana","family":"Fraiberg","sequence":"additional","affiliation":[]},{"given":"Lior","family":"Shine","sequence":"additional","affiliation":[]},{"given":"Jacob","family":"Garty","sequence":"additional","affiliation":[]},{"given":"Ayala","family":"Hochman","sequence":"additional","affiliation":[]}],"member":"286","reference":[{"key":"10.1111\/j.1574-6941.2006.00138.x-BIB1|cit1","first-page":"41","article-title":"Prokaryotic
+        iron superoxide dismutase replaces cytosolic copper, zinc superoxide dismutase
+        in protecting yeast cells against oxidative stress","volume":"44","author":"Agius","year":"1998","journal-title":"Biochem
+        Mol Biol Int"},{"key":"10.1111\/j.1574-6941.2006.00138.x-BIB2|cit2","first-page":"175","article-title":"Effects
+        of copper, cobalt and mercury on the chlorophyll content of lichens Cetraria
+        islandica and Flavocetraria cucullata","volume":"93","author":"Backor","year":"2003","journal-title":"J
+        Hattori Bot Lab"},{"key":"10.1111\/j.1574-6941.2006.00138.x-BIB3|cit3","first-page":"223","article-title":"Interaction
+        between sulfur-dioxide and nitrate in some lichens","volume":"31","author":"Balaguer","year":"1991","journal-title":"Environ
+        Exp Bot"},{"key":"10.1111\/j.1574-6941.2006.00138.x-BIB4|cit4","first-page":"248","article-title":"A
+        rapid and sensitive method for the quantitation of microgram quantities of
+        protein utilizing the principle of protein dye binding","volume":"72","author":"Bradford","year":"1976","journal-title":"Anal
+        Biochem"},{"key":"10.1111\/j.1574-6941.2006.00138.x-BIB5|cit5","first-page":"165","article-title":"The
+        cellular location of Cu in lichens and its effects on membrane integrity and
+        chlorophyll fluorescence","volume":"38","author":"Branquinho","year":"1997","journal-title":"Environ
+        Exp Bot"},{"key":"10.1111\/j.1574-6941.2006.00138.x-BIB6|cit6","first-page":"787","article-title":"Superoxide
+        dismutase activity in Peridinium gatunense in Lake Kinneret","volume":"33","author":"Butow","year":"1997","journal-title":"effect
+        of light regime and carbon dioxide concentration"},{"key":"10.1111\/j.1574-6941.2006.00138.x-BIB7|cit7","first-page":"61","article-title":"Effects
+        of sulfur dioxide on lichen lipids and fatty acids","volume":"64","author":"Bychek
+        Guschina","year":"1999","journal-title":"Biochemistry (Moscow)"},{"key":"10.1111\/j.1574-6941.2006.00138.x-BIB8|cit8","first-page":"679","article-title":"Effects
+        of ascorbate feeding on chlorophyll fluorescence and xanthophyll cycle components
+        in the lichen Parmelia quercina (Willd.) Vainio exposed to atmospheric pollutants","volume":"105","author":"Calatayud","year":"1999","journal-title":"Physiol
+        Plantarum"},{"key":"10.1111\/j.1574-6941.2006.00138.x-BIB9|cit9","first-page":"147","article-title":"Temporal
+        variation of pigments and peroxidation products in the lichen Parmotrema uruguense
+        (Kremplh.) Hale transplanted to urban and non-polluted environments","volume":"24","author":"C\u00c3\u00a1nas","year":"1998","journal-title":"Symbiosis"},{"key":"10.1111\/j.1574-6941.2006.00138.x-BIB10|cit10","first-page":"45","article-title":"Comparison
+        among air pollutants, meteorological conditions and some chemical parameters
+        in the transplanted lichen Usnea amblyoclada","volume":"111","author":"Carreras","year":"2001","journal-title":"Environ
+        Pollut"},{"key":"10.1111\/j.1574-6941.2006.00138.x-BIB11|cit11","first-page":"317","article-title":"Comparative
+        biomonitoring of atmospheric quality in five zones of Cordoba city (Argentina)
+        employing the transplanted lichen Usnea sp","volume":"103","author":"Carreras","year":"1998","journal-title":"Environ
+        Pollut"},{"key":"10.1111\/j.1574-6941.2006.00138.x-BIB12|cit12","doi-asserted-by":"crossref","first-page":"433","DOI":"10.1093\/oxfordjournals.pcp.a029186","article-title":"Inactivation
+        and degradation of CuZn-SOD by active oxygen species in wheat chloroplasts
+        exposed to photooxidative stress","volume":"38","author":"Casano","year":"1997","journal-title":"Plant
+        Cell Physiol"},{"key":"10.1111\/j.1574-6941.2006.00138.x-BIB13|cit13","first-page":"192","article-title":"Diversity
+        of structures and properties among catalases","volume":"61","author":"Chelikani","year":"2004","journal-title":"Cell
+        Mol Life Sci"},{"key":"10.1111\/j.1574-6941.2006.00138.x-BIB14|cit14","first-page":"1","article-title":"The
+        effect of Cu, Zn and Pb on the chlorophyll content of the lichens Cladonia
+        convoluta and Cladonia rangiformis","volume":"39","author":"Chettri","year":"1998","journal-title":"Environ
+        Exp Bot"},{"key":"10.1111\/j.1574-6941.2006.00138.x-BIB15|cit15","first-page":"55","article-title":"Cellular
+        impact of metal trace elements in terricolous lichen Diploschistes muscorum
+        (Scop.) R. Sant. \u00e2\u0080\u0093 identification of oxidative stress biomarkers","volume":"152","author":"Cuny","year":"2004","journal-title":"Water
+        Air Soil Poll"},{"key":"10.1111\/j.1574-6941.2006.00138.x-BIB16|cit16","first-page":"648","article-title":"Effects
+        of SO2 fumigations on photosynthetic CO2 gas exchange, chlorophyll a fluorescence
+        emission and antioxidant enzymes in the lichens Evernia prunastri and Ramalina
+        farinacea","volume":"105","author":"Deltoro","year":"1999","journal-title":"Physiol
+        Plantarum"},{"key":"10.1111\/j.1574-6941.2006.00138.x-BIB17|cit17","first-page":"229","article-title":"Changes
+        of physiological and biochemical parameters in the lichen Hypogymnia physodes
+        (L.) NYL. due to the action of air pollutants \u00e2\u0080\u0093 a field study","volume":"34","author":"Egger","year":"1994","journal-title":"Phyton"},{"key":"10.1111\/j.1574-6941.2006.00138.x-BIB18|cit18","doi-asserted-by":"crossref","first-page":"1806","DOI":"10.1139\/b87-250","article-title":"Effects
+        of SO2, O3, and SO2 and O3 in combination on photosynthesis and ultrastructure
+        of 2 lichen species","volume":"65","author":"Eversman","year":"1987","journal-title":"Can
+        J Bot"},{"key":"10.1111\/j.1574-6941.2006.00138.x-BIB19|cit19","first-page":"151","article-title":"Effect
+        of heavy metal ion excess on sunflower leaves","volume":"121","author":"Gallego","year":"1996","journal-title":"evidence
+        for involvement of oxidative stress"},{"key":"10.1111\/j.1574-6941.2006.00138.x-BIB20|cit20","first-page":"428","article-title":"Lichen
+        decline in Desierto de los Leones (Mexico City)","volume":"103","author":"Garcia","year":"2000","journal-title":"Bryologist"},{"key":"10.1111\/j.1574-6941.2006.00138.x-BIB21|cit21","first-page":"309","article-title":"Biomonitoring
+        atmospheric heavy metals with lichens","volume":"20","author":"Garty","year":"2001","journal-title":"theory
+        and application"},{"key":"10.1111\/j.1574-6941.2006.00138.x-BIB22|cit22","first-page":"455","article-title":"The
+        impact of air pollution on the integrity of cell membranes and chlorophyll
+        in the lichen Ramalina duriaei (De Not.) Bagl. transplanted to industrial
+        sites in Israel","volume":"24","author":"Garty","year":"1993","journal-title":"Arch
+        Environ Con Tox"},{"key":"10.1111\/j.1574-6941.2006.00138.x-BIB23|cit23","first-page":"132","article-title":"Differential
+        responses of certain lichen species to sulfur-containing solutions under acidic
+        conditions as expressed by the production of stress-ethylene","volume":"69","author":"Garty","year":"1995","journal-title":"Environ
+        Res"},{"key":"10.1111\/j.1574-6941.2006.00138.x-BIB24|cit24","first-page":"1396","article-title":"Effects
+        of air pollution on cell membrane integrity, spectral reflectance and metal
+        and sulfur concentrations in lichens","volume":"16","author":"Garty","year":"1997","journal-title":"Environ
+        Toxicol Chem"},{"key":"10.1111\/j.1574-6941.2006.00138.x-BIB25|cit25","first-page":"973","article-title":"Airborne
+        elements, cell membranes, and chlorophyll in transplanted lichens","volume":"27","author":"Garty","year":"1998","journal-title":"J
+        Environ Qual"},{"key":"10.1111\/j.1574-6941.2006.00138.x-BIB26|cit26","first-page":"410","article-title":"Comparison
+        of five physiological parameters to assess the vitality of the lichen Ramalina
+        lacera exposed to air pollution","volume":"109","author":"Garty","year":"2000","journal-title":"Physiol
+        Plantarum"},{"key":"10.1111\/j.1574-6941.2006.00138.x-BIB27|cit27","first-page":"159","article-title":"Transplanted
+        lichens in and around the Mount Carmel National Park and the Haifa Bay industrial
+        region in Israel","volume":"85","author":"Garty","year":"2001","journal-title":"physiological
+        and chemical responses"},{"key":"10.1111\/j.1574-6941.2006.00138.x-BIB28|cit28","first-page":"186","article-title":"Lichens
+        as biomonitors around a coal-fired power station in Israel","volume":"91","author":"Garty","year":"2003","journal-title":"Environ
+        Res"},{"key":"10.1111\/j.1574-6941.2006.00138.x-BIB29|cit29","first-page":"267","article-title":"Interactive
+        effects of UV-B radiation and chemical contamination on physiological parameters
+        in the lichen Ramalina lacera","volume":"49","author":"Garty","year":"2004","journal-title":"J
+        Atmosph Chem"},{"key":"10.1111\/j.1574-6941.2006.00138.x-BIB30|cit30","first-page":"124","article-title":"Three
+        different types of catalases in Klebsiella pneumoniae","volume":"268","author":"Goldberg","year":"1989","journal-title":"Arch
+        Biochem Biophys"},{"key":"10.1111\/j.1574-6941.2006.00138.x-BIB31|cit31","first-page":"73","article-title":"Environmental
+        conditions and chemical response of a transplanted lichen to an urban area","volume":"53","author":"Gonzalez","year":"1998","journal-title":"J
+        Environ Manage"},{"key":"10.1111\/j.1574-6941.2006.00138.x-BIB32|cit32","author":"Gries","first-page":"240","year":"1996","volume-title":"Lichen
+        Biology"},{"key":"10.1111\/j.1574-6941.2006.00138.x-BIB33|cit33","first-page":"63","article-title":"Growth
+        inhibition of the filamentous fungus Aspergillus nidulans by cadmium","volume":"49","author":"Guelfi","year":"2003","journal-title":"an
+        antioxidant enzyme approach"},{"key":"10.1111\/j.1574-6941.2006.00138.x-BIB34|cit34","first-page":"185","article-title":"Air
+        pollution and lichen physiology. Physiological responses of different lichens
+        in a transplant experiment following an SO2-gradient","volume":"131","author":"H\u00c3\u00a4ffner","year":"2001","journal-title":"Water
+        Air Soil Poll"},{"key":"10.1111\/j.1574-6941.2006.00138.x-BIB35|cit35","unstructured":"Haifa
+        District Municipal Association for the Environment 2003"},{"key":"10.1111\/j.1574-6941.2006.00138.x-BIB36|cit36","first-page":"203","article-title":"Recovery
+        of the epiphytic lichen flora following air quality improvement in south-west
+        Sweden","volume":"154","author":"Hultengren","year":"2004","journal-title":"Water
+        Air Soil Pollut"},{"key":"10.1111\/j.1574-6941.2006.00138.x-BIB37|cit37","first-page":"620","article-title":"Oxidation
+        of biological systems","volume":"30","author":"Kohen","year":"2002","journal-title":"oxidative
+        stress phenomena, antioxidants, redox reactions, and methods for their quantification"},{"key":"10.1111\/j.1574-6941.2006.00138.x-BIB38|cit38","first-page":"201","article-title":"Physiological
+        responses of the lichen Xanthoparmelia mexicana to oxidative stress of SO2","volume":"42","author":"Kong","year":"1999","journal-title":"Environ
+        Exp Bot"},{"key":"10.1111\/j.1574-6941.2006.00138.x-BIB39|cit39","first-page":"5751","article-title":"Superoxide
+        radical inhibits catalase","volume":"257","author":"Kono","year":"1982","journal-title":"J
+        Biol Chem"},{"key":"10.1111\/j.1574-6941.2006.00138.x-BIB40|cit40","first-page":"263","article-title":"Effects
+        of simulated acid rain on nitrogenase activity (acetylene reduction) in the
+        lichen Stereocaulon paschale (L.) Hoffm., with special reference to nutritional
+        aspects","volume":"128","author":"Kytoviita","year":"1994","journal-title":"New
+        Phytol"},{"key":"10.1111\/j.1574-6941.2006.00138.x-BIB41|cit41","first-page":"680","article-title":"Cleavage
+        of structural proteins during the assembly of the head of bacteriophage T4","volume":"227","author":"Laemmli","year":"1970","journal-title":"Nature"},{"key":"10.1111\/j.1574-6941.2006.00138.x-BIB42|cit42","doi-asserted-by":"crossref","first-page":"591","DOI":"10.1042\/bst0110591","article-title":"Determinations
+        of total carotenoids and chlorophylls a and b of leaf extracts in different
+        solvents","volume":"11","author":"Lichtenthaler","year":"1983","journal-title":"Biochem
+        Soc T"},{"key":"10.1111\/j.1574-6941.2006.00138.x-BIB43|cit43","first-page":"265","article-title":"Protein
+        measurement with the Folin phenol reagent","volume":"193","author":"Lowry","year":"1951","journal-title":"J
+        Biol Chem"},{"key":"10.1111\/j.1574-6941.2006.00138.x-BIB44|cit44","first-page":"18","article-title":"Antioxidant
+        modulation in response to metal-induced oxidative stress in algal chloroplasts","volume":"40","author":"Okamoto","year":"2001","journal-title":"Arch
+        Environ Con Tox"},{"key":"10.1111\/j.1574-6941.2006.00138.x-BIB45|cit45","doi-asserted-by":"crossref","first-page":"309","DOI":"10.1016\/S0176-1617(96)80258-6","article-title":"Physiological,
+        biochemical and molecular effects of sulfur dioxide","volume":"148","author":"Okpodu","year":"1996","journal-title":"J
+        Plant Physiol"},{"key":"10.1111\/j.1574-6941.2006.00138.x-BIB46|cit46","first-page":"7335","article-title":"Electron-tunneling
+        and ab-initio calculations related to the one-electron oxidation of NAD(P)H
+        bound to catalase","volume":"34","author":"Olson","year":"1995","journal-title":"Biochemistry"},{"key":"10.1111\/j.1574-6941.2006.00138.x-BIB47|cit47","first-page":"640","article-title":"Positive
+        correlation between superoxide dismutase and resistance to paraquat toxicity
+        in the green alga Chlorella sorokiniana","volume":"225","author":"Rabinowitch","year":"1983","journal-title":"Arch
+        Biochem Biophys"},{"key":"10.1111\/j.1574-6941.2006.00138.x-BIB48|cit48","first-page":"295","article-title":"Changes
+        in urban lichen diversity after a fall in sulphur dioxide levels in the city
+        of Tampere, SW Finland","volume":"38","author":"Ranta","year":"2001","journal-title":"Ann
+        Bot Fenn"},{"key":"10.1111\/j.1574-6941.2006.00138.x-BIB50|cit49","doi-asserted-by":"crossref","first-page":"421","DOI":"10.1104\/pp.109.2.421","article-title":"Amelioration
+        of ozone-induced oxidative damage in wheat plants grown under high carbon
+        dioxide \u00e2\u0080\u0093 role of antioxidant enzymes","volume":"109","author":"Rao","year":"1995","journal-title":"Plant
+        Physiol"},{"key":"10.1111\/j.1574-6941.2006.00138.x-BIB49|cit50","doi-asserted-by":"crossref","first-page":"69","DOI":"10.1639\/0007-2745(1966)69[69:EOSDOT]2.0.CO;2","article-title":"Effects
+        of sulfur dioxide on the lichen alga, with special reference to chlorophyll","volume":"69","author":"Rao","year":"1965","journal-title":"Bryologist"},{"key":"10.1111\/j.1574-6941.2006.00138.x-BIB51|cit51","first-page":"1231","article-title":"Antioxidant
+        activity applying an improved ABTS radical cation decolorization assay","volume":"26","author":"Re","year":"1999","journal-title":"Free
+        Rad Biol Med"},{"key":"10.1111\/j.1574-6941.2006.00138.x-BIB52|cit52","first-page":"345","article-title":"Effects
+        of ozone fumigation on epiphytic macrolichens","volume":"88","author":"Scheidegger","year":"1995","journal-title":"ultrastructure,
+        CO2 gas exchange and chlorophyll fluorescence"},{"key":"10.1111\/j.1574-6941.2006.00138.x-BIB53|cit53","first-page":"579","article-title":"Contrasting
+        responses of lichens and Vaccinium angustifolium to long-term acidification
+        of a boreal forest ecosystem","volume":"67","author":"Scott","year":"1989","journal-title":"Can
+        J Bot"},{"key":"10.1111\/j.1574-6941.2006.00138.x-BIB54|cit54","first-page":"293","article-title":"The
+        use of lichens in environmental impact assessment","volume":"37","author":"Seaward","year":"2004","journal-title":"Symbiosis"},{"key":"10.1111\/j.1574-6941.2006.00138.x-BIB55|cit55","first-page":"367","article-title":"Comparative
+        studies on Xanthoria parietina, a pollution-resistant lichen, and Ramalina
+        duriaei, a sensitive species","volume":"28","author":"Silberstein","year":"1996","journal-title":"II.
+        Evaluation of possible air pollution-protection mechanisms"},{"key":"10.1111\/j.1574-6941.2006.00138.x-BIB56|cit56","first-page":"6508","article-title":"Characterization
+        of enzymatic antioxidants in the lichen Ramalina lacera and their response
+        to rehydration","volume":"71","author":"Weissman","year":"2005","journal-title":"Appl
+        Environ Microb"},{"key":"10.1111\/j.1574-6941.2006.00138.x-BIB57|cit57","first-page":"139","article-title":"Cellular
+        defenses against damage from reactive oxygen species","volume":"74","author":"Yu","year":"1994","journal-title":"Physiol
+        Rev"}],"container-title":["FEMS Microbiology Ecology"],"language":"en","link":[{"URL":"http:\/\/academic.oup.com\/femsec\/article-pdf\/58\/1\/41\/18101242\/58-1-41.pdf","content-type":"unspecified","content-version":"vor","intended-application":"similarity-checking"}],"deposited":{"date-parts":[[2017,8,23]],"date-time":"2017-08-23T01:53:38Z","timestamp":1503453218000},"score":1.0,"subtitle":["Responses
+        of antioxidants in the lichen Ramalina lacera"],"issued":{"date-parts":[[2006,10]]},"references-count":57,"journal-issue":{"issue":"1"},"URL":"http:\/\/dx.doi.org\/10.1111\/j.1574-6941.2006.00138.x","relation":{"cites":[]},"ISSN":["0168-6496","1574-6941"],"issn-type":[{"value":"0168-6496","type":"print"},{"value":"1574-6941","type":"electronic"}]},{"indexed":{"date-parts":[[2018,5,2]],"date-time":"2018-05-02T19:58:06Z","timestamp":1525291086147},"reference-count":0,"publisher":"Oxford
+        University Press (OUP)","issue":"2","content-domain":{"domain":[],"crossmark-restriction":false},"published-print":{"date-parts":[[1998,2]]},"DOI":"10.1111\/fem.1998.25.issue-2","type":"journal-issue","created":{"date-parts":[[2015,1,7]],"date-time":"2015-01-07T18:19:29Z","timestamp":1420654769000},"source":"Crossref","is-referenced-by-count":2,"prefix":"10.1093","volume":"25","member":"286","container-title":["FEMS
+        Microbiology Ecology"],"language":"en","deposited":{"date-parts":[[2015,1,7]],"date-time":"2015-01-07T18:19:29Z","timestamp":1420654769000},"score":1.0,"issued":{"date-parts":[[1998,2]]},"references-count":0,"journal-issue":{"issue":"2"},"URL":"http:\/\/dx.doi.org\/10.1111\/fem.1998.25.issue-2","ISSN":["0168-6496","1574-6941"],"issn-type":[{"value":"0168-6496","type":"print"},{"value":"1574-6941","type":"electronic"}]},{"indexed":{"date-parts":[[2018,5,2]],"date-time":"2018-05-02T19:58:06Z","timestamp":1525291086214},"reference-count":33,"publisher":"Oxford
+        University Press (OUP)","issue":"2","content-domain":{"domain":[],"crossmark-restriction":false},"published-print":{"date-parts":[[1998,2]]},"DOI":"10.1111\/j.1574-6941.1998.tb00463.x","type":"journal-article","created":{"date-parts":[[2009,12,16]],"date-time":"2009-12-16T23:19:07Z","timestamp":1261005547000},"page":"97-106","source":"Crossref","is-referenced-by-count":9,"title":["Heterotrophic
+        nanoplankton biomass measured by a glucosaminidase assay"],"prefix":"10.1093","volume":"25","author":[{"given":"Mikhail
+        V","family":"Zubkov","sequence":"first","affiliation":[]},{"given":"Michael
+        A","family":"Sleigh","sequence":"additional","affiliation":[]}],"member":"286","reference":[{"key":"10.1111\/j.1574-6941.1998.tb00463.x-BIB1|cit1","first-page":"340","article-title":"A
+        novel free-living prochlorophyte abundant in the oceanic euphotic zone","volume":"334","author":"Chisholm","year":"1988","journal-title":"Nature"},{"key":"10.1111\/j.1574-6941.1998.tb00463.x-BIB2|cit2","first-page":"293","article-title":"Widespread
+        occurrence of a unicellular, marine, planktonic, cyanobacterium","volume":"277","author":"Waterbury","year":"1979","journal-title":"Nature"},{"key":"10.1111\/j.1574-6941.1998.tb00463.x-BIB3|cit3","unstructured":""},{"key":"10.1111\/j.1574-6941.1998.tb00463.x-BIB4|cit4","doi-asserted-by":"crossref","first-page":"409","DOI":"10.1111\/j.1550-7408.1982.tb05423.x","article-title":"The
+        correlation of digestive vacuole pH and size with the digestive cycle in Paramecium
+        caudatum","volume":"29","author":"Fok","year":"1982","journal-title":"J. Protozool."},{"key":"10.1111\/j.1574-6941.1998.tb00463.x-BIB5|cit5","unstructured":"Tetrahymena"},{"key":"10.1111\/j.1574-6941.1998.tb00463.x-BIB6|cit6","unstructured":""},{"key":"10.1111\/j.1574-6941.1998.tb00463.x-BIB7|cit7","first-page":"299","article-title":"Significance
+        of exoenzymatic activities in the ecology of brackish water: measurements
+        by means of methylumbelliferyl-substrates","volume":"11","author":"Hoppe","year":"1983","journal-title":"Mar.
+        Ecol. Prog. Ser."},{"key":"10.1111\/j.1574-6941.1998.tb00463.x-BIB8|cit8","first-page":"197","article-title":"Digestive
+        enzyme activity as a quantitative measure of protistan grazing: the acid lysozyme
+        assay for bacterivory","volume":"100","author":"Gonz\u00c3\u00a1lez","year":"1993","journal-title":"Mar.
+        Ecol. Prog. Ser."},{"key":"10.1111\/j.1574-6941.1998.tb00463.x-BIB9|cit9","first-page":"091","article-title":"4-Methylumbelliferyl-\u00ce\u00b2-N-acetylglucosaminide
+        hydrolysis by a high-affinity enzyme, a putative marker of protozoan bacterivory","volume":"59","author":"Vrba","year":"1993","journal-title":"Appl.
+        Environ. Microbiol."},{"key":"10.1111\/j.1574-6941.1998.tb00463.x-BIB10|cit10","unstructured":""},{"key":"10.1111\/j.1574-6941.1998.tb00463.x-BIB11|cit11","first-page":"233","article-title":"Release
+        of macromolecular organic complexes by heterotrophic marine flagellates","volume":"83","author":"Nagata","year":"1992","journal-title":"Mar.
+        Ecol. Prog. Ser."},{"key":"10.1111\/j.1574-6941.1998.tb00463.x-BIB12|cit12","first-page":"57","article-title":"Bacterivory
+        by starved marine heterotrophic nanoflagellates of two species which feed
+        differently, estimated by uptake of dual radioactive labelled bacteria","volume":"17","author":"Zubkov","year":"1995","journal-title":"FEMS
+        Microb. Ecol."},{"key":"10.1111\/j.1574-6941.1998.tb00463.x-BIB13|cit13","first-page":"943","article-title":"The
+        use of DAPI for identifying and counting aquatic microflora","volume":"25","author":"Porter","year":"1980","journal-title":"Limnol.
+        Oceanogr."},{"key":"10.1111\/j.1574-6941.1998.tb00463.x-BIB14|cit14","first-page":"958","article-title":"Use
+        of monodispersed, fluorescently labeled bacteria to estimate in situ protozoan
+        bacterivory","volume":"53","author":"Sherr","year":"1987","journal-title":"Appl.
+        Environ. Microbiol."},{"key":"10.1111\/j.1574-6941.1998.tb00463.x-BIB15|cit15","unstructured":""},{"key":"10.1111\/j.1574-6941.1998.tb00463.x-BIB16|cit16","first-page":"201","article-title":"Protein
+        content and protein synthesis rates of planktonic marine bacteria","volume":"51","author":"Simon","year":"1989","journal-title":"Mar.
+        Ecol. Prog. Ser."},{"key":"10.1111\/j.1574-6941.1998.tb00463.x-BIB17|cit17","first-page":"922","article-title":"Growth
+        kinetics of the omnivorous oligotrich ciliate Strombidium sp","volume":"36","author":"Ohman","year":"1991","journal-title":"Limnol.
+        Oceanogr."},{"key":"10.1111\/j.1574-6941.1998.tb00463.x-BIB18|cit18","first-page":"157","article-title":"Ingestion
+        and assimilation by marine protists fed on bacteria labeled with radioactive
+        thymidine and leucine estimated without separating predator and prey","volume":"30","author":"Zubkov","year":"1995","journal-title":"Microb.
+        Ecol."},{"key":"10.1111\/j.1574-6941.1998.tb00463.x-BIB19|cit19","unstructured":""},{"key":"10.1111\/j.1574-6941.1998.tb00463.x-BIB20|cit20","unstructured":""},{"key":"10.1111\/j.1574-6941.1998.tb00463.x-BIB21|cit21","doi-asserted-by":"crossref","first-page":"81","DOI":"10.1007\/PL00006644","article-title":"Evaluation
+        of extracellular, high-affinity \u00ce\u00b2-N-acetylglucosaminidase measurements
+        from freshwater lakes: an enzyme assay to estimate protistan grazing on bacteria
+        and picocyanobacteria","volume":"32","author":"Vrba","year":"1996","journal-title":"Microb.
+        Ecol."},{"key":"10.1111\/j.1574-6941.1998.tb00463.x-BIB22|cit22","first-page":"53","article-title":"Influence
+        of zooplankton grazing on free dissolved enzyme in the sea","volume":"121","author":"Bochdansky","year":"1995","journal-title":"Mar.
+        Ecol. Prog. Ser."},{"key":"10.1111\/j.1574-6941.1998.tb00463.x-BIB23|cit23","first-page":"237","article-title":"Phagotrophic
+        nanoflagellates contribute to occurrence of \u00ce\u00b1-glucosidase and aminopeptidase
+        in marine environments","volume":"114","author":"Karner","year":"1994","journal-title":"Mar.
+        Ecol. Prog. Ser."},{"key":"10.1111\/j.1574-6941.1998.tb00463.x-BIB24|cit24","first-page":"263","article-title":"Secretion
+        of \u00ce\u00b2-glucosidase by Ochromonas danica","volume":"109","author":"Meyer","year":"1976","journal-title":"Arch.
+        Microbiol."},{"key":"10.1111\/j.1574-6941.1998.tb00463.x-BIB25|cit25","first-page":"71","article-title":"Estimates
+        of protozoan bacterivory: from microscopy to ectoenzyme assay? Mar","volume":"8","author":"\u00c5\u00a0Imek","year":"1994","journal-title":"Microb.
+        Food Webs"},{"key":"10.1111\/j.1574-6941.1998.tb00463.x-BIB26|cit26","first-page":"159","article-title":"Lysosomal
+        enzymes of Paramecium caudatum and Paramecium tetraurelia","volume":"139","author":"Fok","year":"1982","journal-title":"Exp.
+        Cell Res."},{"key":"10.1111\/j.1574-6941.1998.tb00463.x-BIB27|cit27","first-page":"1761","article-title":"Effects
+        of fixation on cell volume of marine planktonic protozoa","volume":"55","author":"Choi","year":"1989","journal-title":"Appl.
+        Environ. Microbiol."},{"key":"10.1111\/j.1574-6941.1998.tb00463.x-BIB28|cit28","first-page":"1097","article-title":"An
+        experimentally determined carbon: volume ratio for marine \u00e2\u0080\u0098oligotrichous\u00e2\u0080\u0099
+        ciliates from estuarine and coastal waters","volume":"34","author":"Putt","year":"1989","journal-title":"Limnol.
+        Oceanogr."},{"key":"10.1111\/j.1574-6941.1998.tb00463.x-BIB29|cit29","first-page":"171","article-title":"Cell
+        volume to cell carbon conversion factors for bacterivorous Monas sp. enriched
+        from seawater","volume":"36","author":"B\u00c3\u00b8rsheim","year":"1987","journal-title":"Mar.
+        Ecol. Prog. Ser."},{"key":"10.1111\/j.1574-6941.1998.tb00463.x-BIB30|cit30","first-page":"15","article-title":"Content
+        of carbon, nitrogen, oxygen, sulfur and phosphorus in native aquatic and cultured
+        bacteria","volume":"10","author":"Fagerbakke","year":"1996","journal-title":"Aquat.
+        Microb. Ecol."},{"key":"10.1111\/j.1574-6941.1998.tb00463.x-BIB31|cit31","first-page":"607","article-title":"Microplankton
+        of the North Pacific central gyre","volume":"60","author":"Beers","year":"1975","journal-title":"Population
+        structure and abundance, June 1973. Int. Rev. Ges. Hydrobiol."},{"key":"10.1111\/j.1574-6941.1998.tb00463.x-BIB32|cit32","first-page":"99","article-title":"Respiration
+        rates in heterotrophic free-living Protozoa","volume":"9","author":"Fenchel","year":"1983","journal-title":"Microb.
+        Ecol."},{"key":"10.1111\/j.1574-6941.1998.tb00463.x-BIB33|cit33","first-page":"1","article-title":"The
+        annual cycle of the protozooplankton in Kiel Bight","volume":"63","author":"Smetacek","year":"1981","journal-title":"Mar.
+        Biol."}],"container-title":["FEMS Microbiology Ecology"],"language":"en","link":[{"URL":"http:\/\/academic.oup.com\/femsec\/article-pdf\/25\/2\/97\/18093968\/25-2-97.pdf","content-type":"unspecified","content-version":"vor","intended-application":"similarity-checking"}],"deposited":{"date-parts":[[2017,8,23]],"date-time":"2017-08-23T06:58:43Z","timestamp":1503471523000},"score":1.0,"issued":{"date-parts":[[1998,2]]},"references-count":33,"journal-issue":{"issue":"2"},"URL":"http:\/\/dx.doi.org\/10.1111\/j.1574-6941.1998.tb00463.x","relation":{"cites":[]},"ISSN":["0168-6496","1574-6941"],"issn-type":[{"value":"0168-6496","type":"print"},{"value":"1574-6941","type":"electronic"}]},{"indexed":{"date-parts":[[2018,5,2]],"date-time":"2018-05-02T19:58:06Z","timestamp":1525291086318},"reference-count":35,"publisher":"Oxford
+        University Press (OUP)","issue":"2","content-domain":{"domain":[],"crossmark-restriction":false},"published-print":{"date-parts":[[1998,2]]},"DOI":"10.1111\/j.1574-6941.1998.tb00470.x","type":"journal-article","created":{"date-parts":[[2009,12,16]],"date-time":"2009-12-16T23:19:39Z","timestamp":1261005579000},"page":"171-178","source":"Crossref","is-referenced-by-count":7,"title":["Light
+        causes selection among two phycoerythrin-rich Synechococcus isolates from
+        Lake Constance"],"prefix":"10.1093","volume":"25","author":[{"given":"Christine","family":"Postius","sequence":"first","affiliation":[]},{"given":"Ulrich","family":"Kenter","sequence":"additional","affiliation":[]},{"given":"Alexander","family":"Wacker","sequence":"additional","affiliation":[]},{"given":"Anneliese","family":"Ernst","sequence":"additional","affiliation":[]},{"given":"Peter","family":"B\u00c3\u00b6ger","sequence":"additional","affiliation":[]}],"member":"286","reference":[{"key":"10.1111\/j.1574-6941.1998.tb00470.x-BIB1|cit1","first-page":"119","article-title":"Adaptation
+        of cyanobacteria to environmental stimuli: new steps towards molecular mechanisms","volume":"104","author":"Tandeau
+        de Marsac","year":"1993","journal-title":"FEMS Microbiol. Rev."},{"key":"10.1111\/j.1574-6941.1998.tb00470.x-BIB2|cit2","first-page":"2472","article-title":"Algal
+        picoplankton from marine and freshwater ecosystems: a multidisciplinary perspective","volume":"43","author":"Stockner","year":"1986","journal-title":"Can.
+        J. Fish. Aquat. Sci."},{"key":"10.1111\/j.1574-6941.1998.tb00470.x-BIB3|cit3","first-page":"1179","article-title":"Dynamics
+        of autotrophic picoplankton in Lake Constance","volume":"10","author":"Weisse","year":"1988","journal-title":"J.
+        Plankton Res."},{"key":"10.1111\/j.1574-6941.1998.tb00470.x-BIB4|cit4","first-page":"493","article-title":"Ecological
+        characteristics of autotrophic picoplankton in a prealpine lake","volume":"76","author":"Weisse","year":"1991","journal-title":"Int.
+        Rev. Ges. Hydrobiol."},{"key":"10.1111\/j.1574-6941.1998.tb00470.x-BIB5|cit5","first-page":"821","article-title":"Seasonal
+        and interannual variation of autotrophic picoplankton in a large prealpine
+        lake (Lake Constance)","volume":"24","author":"Weisse","year":"1991","journal-title":"Verh.
+        Int. Limnol."},{"key":"10.1111\/j.1574-6941.1998.tb00470.x-BIB6|cit6","doi-asserted-by":"crossref","first-page":"197","DOI":"10.1111\/j.1574-6941.1995.tb00143.x","article-title":"Genetic
+        diversity among Synechococcus spp","volume":"17","author":"Ernst","year":"1995","journal-title":"(cyanobacteria)
+        isolated from the pelagial of Lake Constance. FEMS Microbiol. Ecol."},{"key":"10.1111\/j.1574-6941.1998.tb00470.x-BIB7|cit7","first-page":"1159","article-title":"Persistence
+        and genetic diversity among strains of phycoerythrin-rich cyanobacteria from
+        the picoplankton of Lake Constance","volume":"18","author":"Postius","year":"1996","journal-title":"J.
+        Plankton Res."},{"key":"10.1111\/j.1574-6941.1998.tb00470.x-BIB8|cit8","first-page":"1","article-title":"Glycosylated
+        surface proteins reflect genetic diversity among Synechococcus spp","volume":"48","author":"Ernst","year":"1996","journal-title":"of
+        Lake Constance. Arch. Hydrobiol. Spec. Issues Adv. Limnol."},{"key":"10.1111\/j.1574-6941.1998.tb00470.x-BIB9|cit9","first-page":"161","article-title":"Cyanobacterial
+        picoplankton from Lake Constance: II","volume":"105","author":"Ernst","year":"1992","journal-title":"Classification
+        of isolates by cell morphology and pigmentation composition. Bot. Acta"},{"key":"10.1111\/j.1574-6941.1998.tb00470.x-BIB10|cit10","unstructured":""},{"key":"10.1111\/j.1574-6941.1998.tb00470.x-BIB11|cit11","unstructured":""},{"key":"10.1111\/j.1574-6941.1998.tb00470.x-BIB12|cit12","first-page":"119","article-title":"Photooxidation
+        of cyanobacteria in natural conditions","volume":"31","author":"Eloff","year":"1976","journal-title":"Appl.
+        Environ. Microbiol."},{"key":"10.1111\/j.1574-6941.1998.tb00470.x-BIB13|cit13","first-page":"295","article-title":"Physiological
+        response of phytoplankton to natural light regimes","volume":"6","author":"Falkowski","year":"1984","journal-title":"J.
+        Plankton Res."},{"key":"10.1111\/j.1574-6941.1998.tb00470.x-BIB14|cit14","first-page":"237","article-title":"Blooming
+        of cyanobacteria in turbulent water with steep light gradients: The effect
+        of intermittent light and dark periods on the oxygen evolution capacity of
+        Synechocystis sp","volume":"18","author":"Schubert","year":"1995","journal-title":"PCC
+        6803. FEMS Microbiol. Ecol."},{"key":"10.1111\/j.1574-6941.1998.tb00470.x-BIB15|cit15","doi-asserted-by":"crossref","first-page":"1797","DOI":"10.1093\/plankt\/18.10.1797","article-title":"Photoacclimation
+        in the marine alga Nannochloropsis sp","volume":"18","author":"Fisher","year":"1996","journal-title":"(Eustigmatophyte):
+        a kinetic study. J. Plankton Res."},{"key":"10.1111\/j.1574-6941.1998.tb00470.x-BIB16|cit16","first-page":"1015","article-title":"The
+        control of the production process of phytoplankton by the physical structure
+        of the aquatic environment with special reference to its optical properties","volume":"53","author":"Pr\u00c3\u00a9zelin","year":"1991","journal-title":"Aquat.
+        Sci."},{"key":"10.1111\/j.1574-6941.1998.tb00470.x-BIB17|cit17","first-page":"505","article-title":"Phototrophic
+        picoplankton in temperate lakes: seasonal abundance and importance along a
+        trophic gradient","volume":"76","author":"S\u00c3\u00b8ndergaard","year":"1991","journal-title":"Int.
+        Rev. Ges. Hydrobiol."},{"key":"10.1111\/j.1574-6941.1998.tb00470.x-BIB18|cit18","first-page":"13","article-title":"Fluorometric
+        characterization of two picocyanobacteria strains from lakes of different
+        underwater light quality","volume":"81","author":"Callieri","year":"1996","journal-title":"Int.
+        Rev. Ges. Hydrobiol."},{"key":"10.1111\/j.1574-6941.1998.tb00470.x-BIB19|cit19","first-page":"268","article-title":"The
+        first decade of oligotrophication in Lake Constance","volume":"93","author":"Gaedke","year":"1993","journal-title":"I.
+        The response of phytoplankton biomass and cell size. Oecologia"},{"key":"10.1111\/j.1574-6941.1998.tb00470.x-BIB20|cit20","doi-asserted-by":"crossref","first-page":"1","DOI":"10.1099\/00221287-111-1-1","article-title":"Generic
+        assignments, strain histories and properties of pure cultures of cyanobacteria","volume":"111","author":"Rippka","year":"1979","journal-title":"J.
+        Gen. Microbiol."},{"key":"10.1111\/j.1574-6941.1998.tb00470.x-BIB21|cit21","first-page":"1307","article-title":"Cyanobacterial
+        picoplankton from Lake Constance: I","volume":"13","author":"Ernst","year":"1991","journal-title":"Isolation
+        by fluorescence characteristics. J. Plankton Res."},{"key":"10.1111\/j.1574-6941.1998.tb00470.x-BIB22|cit22","first-page":"318","article-title":"Complementary
+        adaptation: physiological conditions and action spectra","volume":"167","author":"Tandeau
+        de Marsac","year":"1988","journal-title":"Methods Enzymol."},{"key":"10.1111\/j.1574-6941.1998.tb00470.x-BIB23|cit23","first-page":"1623","article-title":"Zeaxanthin
+        and \u00ce\u00b2-carotene in Synechococcus WH7803 respond differently to irradiance","volume":"3","author":"Kana","year":"1988","journal-title":"Limnol.
+        Oceanogr."},{"key":"10.1111\/j.1574-6941.1998.tb00470.x-BIB24|cit24","first-page":"2575","article-title":"Utilization
+        of light for nitrogen fixation by a new Synechocystis strain is extended by
+        its low photosynthetic efficiency","volume":"60","author":"Brass","year":"1994","journal-title":"Appl.
+        Environ. Microbiol."},{"key":"10.1111\/j.1574-6941.1998.tb00470.x-BIB25|cit25","unstructured":"Synechococcus"},{"key":"10.1111\/j.1574-6941.1998.tb00470.x-BIB26|cit26","first-page":"497","article-title":"Effect
+        of irradiances up to 2000 \u00ce\u00bcE m\u00e2\u0088\u00922s\u00e2\u0088\u00921
+        on marine Synechococcus WH7803-II","volume":"34","author":"Kana","year":"1987","journal-title":"Photosynthetic
+        responses and mechanisms. Deep-Sea Res."},{"key":"10.1111\/j.1574-6941.1998.tb00470.x-BIB27|cit27","first-page":"110","article-title":"Acclimation
+        Processes in the light-harvesting system of the cyanobacterium Anacystis nidulans
+        following a light shift from white to red light","volume":"78","author":"L\u00c3\u00b6nneborg","year":"1985","journal-title":"Plant
+        Physiol."},{"key":"10.1111\/j.1574-6941.1998.tb00470.x-BIB28|cit28","first-page":"1","article-title":"Carotenoids
+        and photoprotection in plants: A role for the xanthophyll zeaxanthin","volume":"1020","author":"Demmig-Adams","year":"1990","journal-title":"Biochim.
+        Biophys. Acta"},{"key":"10.1111\/j.1574-6941.1998.tb00470.x-BIB29|cit29","first-page":"1130","article-title":"Ultraphytoplankton
+        succession is triggered by deep winter mixing in the Gulf of Aqaba (Eilat),
+        Red Sea","volume":"40","author":"Lindell","year":"1995","journal-title":"Limnol.
+        Oceanogr."},{"key":"10.1111\/j.1574-6941.1998.tb00470.x-BIB30|cit30","first-page":"635","article-title":"Predation
+        on marine picoplankton populations examined with an \u00e2\u0080\u0098add-in\u00e2\u0080\u0099
+        approach","volume":"18","author":"Perez","year":"1996","journal-title":"J.
+        Plankton Res."},{"key":"10.1111\/j.1574-6941.1998.tb00470.x-BIB31|cit31","first-page":"587","article-title":"Morphological
+        and compositional shifts in an experimental bacterial community influenced
+        by protists with contrasting feeding modes","volume":"63","author":"S\u00c4\u00b1\u00cc\u0080mek","year":"1997","journal-title":"Appl.
+        Environ. Microbiol."},{"key":"10.1111\/j.1574-6941.1998.tb00470.x-BIB32|cit32","first-page":"63","article-title":"Selective
+        feeding of a freshwater chrysomonad, Paraphysomonas sp., on chroococcoid cyanobacteria
+        and nanoflagellates","volume":"48","author":"M\u00c3\u00bcller","year":"1996","journal-title":"Arch.
+        Hydrobiol. Spec. Issues Adv. Limnol."},{"key":"10.1111\/j.1574-6941.1998.tb00470.x-BIB33|cit33","first-page":"539","article-title":"occurrence
+        of viable phototrophic picoplankton in the aphotic zone of Lake Biwa, Japan","volume":"18","author":"Eguchi","year":"1996","journal-title":"J.
+        Plankton Res."},{"key":"10.1111\/j.1574-6941.1998.tb00470.x-BIB34|cit34","first-page":"423","article-title":"Cyanoprokaryotes
+        in the Baltic Sea ice and winter plankton","volume":"83","author":"Laamanen","year":"1996","journal-title":"Arch.
+        Hydrobiol. Suppl. Algol. Stud."},{"key":"10.1111\/j.1574-6941.1998.tb00470.x-BIB35|cit35","first-page":"293","article-title":"Adaptation
+        to sulfide and to the underwater light field in three cyanobacterial isolates
+        from Lake Arcas (Spain)","volume":"21","author":"Camacho","year":"1996","journal-title":"FEMS
+        Microbiol. Ecol."}],"container-title":["FEMS Microbiology Ecology"],"language":"en","link":[{"URL":"http:\/\/academic.oup.com\/femsec\/article-pdf\/25\/2\/171\/18093797\/25-2-171.pdf","content-type":"unspecified","content-version":"vor","intended-application":"similarity-checking"}],"deposited":{"date-parts":[[2017,8,23]],"date-time":"2017-08-23T06:53:36Z","timestamp":1503471216000},"score":1.0,"issued":{"date-parts":[[1998,2]]},"references-count":35,"journal-issue":{"issue":"2"},"URL":"http:\/\/dx.doi.org\/10.1111\/j.1574-6941.1998.tb00470.x","relation":{"cites":[]},"ISSN":["0168-6496","1574-6941"],"issn-type":[{"value":"0168-6496","type":"print"},{"value":"1574-6941","type":"electronic"}]},{"indexed":{"date-parts":[[2018,5,2]],"date-time":"2018-05-02T19:58:06Z","timestamp":1525291086363},"reference-count":0,"publisher":"Oxford
+        University Press (OUP)","issue":"3","content-domain":{"domain":[],"crossmark-restriction":false},"published-print":{"date-parts":[[2001,5]]},"DOI":"10.1111\/fem.2001.35.issue-3","type":"journal-issue","created":{"date-parts":[[2015,1,7]],"date-time":"2015-01-07T18:28:13Z","timestamp":1420655293000},"source":"Crossref","is-referenced-by-count":2,"prefix":"10.1093","volume":"35","member":"286","container-title":["FEMS
+        Microbiology Ecology"],"language":"en","deposited":{"date-parts":[[2015,1,7]],"date-time":"2015-01-07T18:28:13Z","timestamp":1420655293000},"score":1.0,"issued":{"date-parts":[[2001,5]]},"references-count":0,"journal-issue":{"issue":"3"},"URL":"http:\/\/dx.doi.org\/10.1111\/fem.2001.35.issue-3","ISSN":["0168-6496","1574-6941"],"issn-type":[{"value":"0168-6496","type":"print"},{"value":"1574-6941","type":"electronic"}]},{"indexed":{"date-parts":[[2018,5,2]],"date-time":"2018-05-02T19:58:06Z","timestamp":1525291086442},"reference-count":0,"publisher":"Oxford
+        University Press (OUP)","issue":"1","content-domain":{"domain":[],"crossmark-restriction":false},"published-print":{"date-parts":[[1993,10]]},"DOI":"10.1111\/fem.1993.13.issue-1","type":"journal-issue","created":{"date-parts":[[2015,1,7]],"date-time":"2015-01-07T18:09:40Z","timestamp":1420654180000},"source":"Crossref","is-referenced-by-count":0,"prefix":"10.1093","volume":"13","member":"286","container-title":["FEMS
+        Microbiology Ecology"],"language":"en","deposited":{"date-parts":[[2015,1,7]],"date-time":"2015-01-07T18:09:40Z","timestamp":1420654180000},"score":1.0,"issued":{"date-parts":[[1993,10]]},"references-count":0,"journal-issue":{"issue":"1"},"URL":"http:\/\/dx.doi.org\/10.1111\/fem.1993.13.issue-1","ISSN":["0168-6496","1574-6941"],"issn-type":[{"value":"0168-6496","type":"print"},{"value":"1574-6941","type":"electronic"}]},{"indexed":{"date-parts":[[2018,5,2]],"date-time":"2018-05-02T19:58:06Z","timestamp":1525291086458},"reference-count":0,"publisher":"Oxford
+        University Press (OUP)","issue":"2","content-domain":{"domain":[],"crossmark-restriction":false},"published-print":{"date-parts":[[1996,10]]},"DOI":"10.1111\/fem.1996.21.issue-2","type":"journal-issue","created":{"date-parts":[[2015,1,7]],"date-time":"2015-01-07T18:16:48Z","timestamp":1420654608000},"source":"Crossref","is-referenced-by-count":0,"prefix":"10.1093","volume":"21","member":"286","container-title":["FEMS
+        Microbiology Ecology"],"language":"en","deposited":{"date-parts":[[2015,1,7]],"date-time":"2015-01-07T18:16:48Z","timestamp":1420654608000},"score":1.0,"issued":{"date-parts":[[1996,10]]},"references-count":0,"journal-issue":{"issue":"2"},"URL":"http:\/\/dx.doi.org\/10.1111\/fem.1996.21.issue-2","ISSN":["0168-6496","1574-6941"],"issn-type":[{"value":"0168-6496","type":"print"},{"value":"1574-6941","type":"electronic"}]},{"indexed":{"date-parts":[[2018,5,2]],"date-time":"2018-05-02T19:58:06Z","timestamp":1525291086454},"reference-count":37,"publisher":"Oxford
+        University Press (OUP)","issue":"2","content-domain":{"domain":[],"crossmark-restriction":false},"published-print":{"date-parts":[[1998,2]]},"DOI":"10.1111\/j.1574-6941.1998.tb00471.x","type":"journal-article","created":{"date-parts":[[2009,12,16]],"date-time":"2009-12-16T23:19:57Z","timestamp":1261005597000},"page":"179-188","source":"Crossref","is-referenced-by-count":12,"title":["Micro-ecology
+        of peat: minimally invasive analysis using confocal laser scanning microscopy,
+        membrane inlet mass spectrometry and PCR amplification of methanogen-specific
+        gene sequences"],"prefix":"10.1093","volume":"25","author":[{"given":"David","family":"Lloyd","sequence":"first","affiliation":[]},{"given":"Katie
+        L","family":"Thomas","sequence":"additional","affiliation":[]},{"given":"Anthony","family":"Hayes","sequence":"additional","affiliation":[]},{"given":"Bethan","family":"Hill","sequence":"additional","affiliation":[]},{"given":"Barbara
+        A","family":"Hales","sequence":"additional","affiliation":[]},{"given":"Clive","family":"Edwards","sequence":"additional","affiliation":[]},{"given":"Jon
+        R","family":"Saunders","sequence":"additional","affiliation":[]},{"given":"Donald
+        A","family":"Ritchie","sequence":"additional","affiliation":[]},{"given":"Matthew","family":"Upton","sequence":"additional","affiliation":[]}],"member":"286","reference":[{"key":"10.1111\/j.1574-6941.1998.tb00471.x-BIB1|cit1","first-page":"476","article-title":"Microbial
+        processes and the cycling of atmospheric trace gases","volume":"10","author":"Lloyd","year":"1995","journal-title":"Trends
+        Ecol. Evol."},{"key":"10.1111\/j.1574-6941.1998.tb00471.x-BIB2|cit2","first-page":"182","article-title":"Northern
+        peatlands \u00e2\u0080\u0093 role in the carbon cycle and probable responses
+        to climatic warming","volume":"1","author":"Gorham","year":"1991","journal-title":"Ecol.
+        Applic."},{"key":"10.1111\/j.1574-6941.1998.tb00471.x-BIB3|cit3","first-page":"926","article-title":"Exchange
+        of materials between terrestrial ecosystems and the atmosphere","volume":"238","author":"Mooney","year":"1987","journal-title":"Science"},{"key":"10.1111\/j.1574-6941.1998.tb00471.x-BIB4|cit4","first-page":"1129","article-title":"Continuing
+        worldwide increase in tropospheric methane 1978 to 1987","volume":"239","author":"Blake","year":"1988","journal-title":"Science"},{"key":"10.1111\/j.1574-6941.1998.tb00471.x-BIB5|cit5","first-page":"313","article-title":"Slowing
+        down of the global accumulation of atmospheric methane during the 1980''s","volume":"358","author":"Steele","year":"1992","journal-title":"Nature"},{"key":"10.1111\/j.1574-6941.1998.tb00471.x-BIB6|cit6","first-page":"1","article-title":"The
+        exchange of trace gases between land and atmosphere","volume":"10","author":"Lloyd","year":"1995","journal-title":"Trends
+        Ecol. Evol."},{"key":"10.1111\/j.1574-6941.1998.tb00471.x-BIB7|cit7","first-page":"183","article-title":"Factors
+        affecting methane production in peat soils","volume":"43","author":"Svensson","year":"1993","journal-title":"Suo"},{"key":"10.1111\/j.1574-6941.1998.tb00471.x-BIB8|cit8","first-page":"587","article-title":"Methane
+        flux: water table relations in Northern wetlands","volume":"20","author":"Moore","year":"1993","journal-title":"Geophys.
+        Res. Lett."},{"key":"10.1111\/j.1574-6941.1998.tb00471.x-BIB9|cit9","first-page":"233","article-title":"Direct
+        mass spectrometric measurement of gases in peat cores","volume":"13","author":"Benstead","year":"1994","journal-title":"FEMS
+        Microbiol. Ecol."},{"key":"10.1111\/j.1574-6941.1998.tb00471.x-BIB10|cit10","first-page":"321","article-title":"Methane
+        production and consumption in temperate and subarctic peat soils: response
+        to temperature and pH","volume":"25","author":"Dunfield","year":"1993","journal-title":"Soil
+        Biol. Biochem."},{"key":"10.1111\/j.1574-6941.1998.tb00471.x-BIB11|cit11","first-page":"17","article-title":"Role
+        of wetland plants in the diurnal control of CH4 and CO2 fluxes in peat","volume":"28","author":"Thomas","year":"1996","journal-title":"Soil
+        Biol. Biochem."},{"key":"10.1111\/j.1574-6941.1998.tb00471.x-BIB12|cit12","first-page":"893","article-title":"CH4
+        production, oxidation and emission in a UK ombrotrophic peat bog: influence
+        of SO2\u00e2\u0088\u00924 from acid rain","volume":"27","author":"Nedwell","year":"1995","journal-title":"Soil
+        Biol. Biochem."},{"key":"10.1111\/j.1574-6941.1998.tb00471.x-BIB13|cit13","first-page":"239","article-title":"Methane
+        efflux from emergent vegetation in peatlands","volume":"84","author":"Shannon","year":"1996","journal-title":"J.
+        Ecol."},{"key":"10.1111\/j.1574-6941.1998.tb00471.x-BIB14|cit14","first-page":"609","article-title":"Soil
+        microorganisms as controllers of atmospheric trace gases (H2, CO, CH4, OCS,
+        N2O and NO)","volume":"60","author":"Conrad","year":"1996","journal-title":"Microbiol.
+        Rev."},{"key":"10.1111\/j.1574-6941.1998.tb00471.x-BIB15|cit15","unstructured":""},{"key":"10.1111\/j.1574-6941.1998.tb00471.x-BIB16|cit16","first-page":"57","article-title":"Spatial
+        and temporal variations of dissolved gases (CH4, CO2 and O2) in peat cores","volume":"31","author":"Benstead","year":"1996","journal-title":"Microb.
+        Ecol."},{"key":"10.1111\/j.1574-6941.1998.tb00471.x-BIB17|cit17","first-page":"191","article-title":"A
+        comparison of different methods for the measurement of dissolved gas gradients
+        in waterlogged peat cores","volume":"24","author":"Thomas","year":"1995","journal-title":"J.
+        Microbiol. Methods"},{"key":"10.1111\/j.1574-6941.1998.tb00471.x-BIB18|cit18","first-page":"11","article-title":"Mass
+        spectrometry as an ecological tool for in situ measurement of dissolved gases
+        in sediment systems","volume":"38","author":"Lloyd","year":"1986","journal-title":"FEMS
+        Microbiol. Ecol."},{"key":"10.1111\/j.1574-6941.1998.tb00471.x-BIB19|cit19","first-page":"668","article-title":"Isolation
+        and identification of methanogen-specific DNA from blanket bog peat by PCR-amplification
+        and sequence analysis","volume":"62","author":"Hales","year":"1996","journal-title":"Appl.
+        Environ. Microbiol."},{"key":"10.1111\/j.1574-6941.1998.tb00471.x-BIB20|cit20","doi-asserted-by":"crossref","first-page":"1479","DOI":"10.1099\/00221287-138-7-1479","article-title":"The
+        use of rRNA sequences and fluorescent probes to investigate the phylogenetic
+        positions of the anaerobic ciliate Metopus palaeformis and its archaebacterial
+        endosymbiont","volume":"138","author":"Embley","year":"1992","journal-title":"J.
+        Gen. Microbiol."},{"key":"10.1111\/j.1574-6941.1998.tb00471.x-BIB21|cit21","first-page":"179","article-title":"Quadrupole
+        mass spectrometry in the monitoring and control of fermentations","volume":"1","author":"Lloyd","year":"1985","journal-title":"Biosensors"},{"key":"10.1111\/j.1574-6941.1998.tb00471.x-BIB22|cit22","first-page":"17","article-title":"A
+        membrane-covered photobacterium probe for oxygen measurements in the nanomolar
+        range","volume":"116","author":"Lloyd","year":"1981","journal-title":"Anal.
+        Biochem."},{"key":"10.1111\/j.1574-6941.1998.tb00471.x-BIB23|cit23","first-page":"2137","article-title":"Oxygen
+        affinities of the bioluminescence systems of various species of luminous bacteria","volume":"131","author":"Lloyd","year":"1985","journal-title":"J.
+        Gen. Microbiol."},{"key":"10.1111\/j.1574-6941.1998.tb00471.x-BIB24|cit24","unstructured":""},{"key":"10.1111\/j.1574-6941.1998.tb00471.x-BIB25|cit25","first-page":"1","article-title":"Vigour,
+        vitality and viability of microorganisms","volume":"133","author":"Lloyd","year":"1995","journal-title":"FEMS
+        Microbiol. Lett."},{"key":"10.1111\/j.1574-6941.1998.tb00471.x-BIB26|cit26","first-page":"1801","article-title":"Use
+        of a fluorescent redox probe for direct visualisation of actively respiring
+        bacteria","volume":"58","author":"Rodriguez","year":"1992","journal-title":"Appl.
+        Environ. Microbiol."},{"key":"10.1111\/j.1574-6941.1998.tb00471.x-BIB27|cit27","unstructured":""},{"key":"10.1111\/j.1574-6941.1998.tb00471.x-BIB28|cit28","first-page":"103","article-title":"Measurement
+        of denitrification in estuarine sediment using membrane inlet mass spectrometry","volume":"16","author":"Thomas","year":"1995","journal-title":"FEMS
+        Microbiol. Ecol."},{"key":"10.1111\/j.1574-6941.1998.tb00471.x-BIB29|cit29","first-page":"145","article-title":"A
+        membrane-inlet mass spectrometer miniprobe for the direct simultaneous measurement
+        of multiple gas species with a spatial resolution of 1 mm","volume":"25","author":"Lloyd","year":"1996","journal-title":"J.
+        Microbiol. Methods"},{"key":"10.1111\/j.1574-6941.1998.tb00471.x-BIB30|cit30","unstructured":""},{"key":"10.1111\/j.1574-6941.1998.tb00471.x-BIB31|cit31","first-page":"215","article-title":"Methanogenesis
+        and methanotrophy within a Sphagnum peatland","volume":"18","author":"Krumholz","year":"1995","journal-title":"FEMS
+        Microbiol. Ecol."},{"key":"10.1111\/j.1574-6941.1998.tb00471.x-BIB32|cit32","first-page":"261","article-title":"Kinetics
+        of CH4 oxidation in oxic soils exposed to ambient air or high CH4 mixing ratios","volume":"101","author":"Bender","year":"1992","journal-title":"FEMS
+        Microbiol. Ecol."},{"key":"10.1111\/j.1574-6941.1998.tb00471.x-BIB33|cit33","first-page":"116","article-title":"Detection
+        of methanotrophic bacteria in environmental samples using the polymerase chain
+        reaction","volume":"61","author":"McDonald","year":"1995","journal-title":"Appl.
+        Environ. Microbiol."},{"key":"10.1111\/j.1574-6941.1998.tb00471.x-BIB34|cit34","first-page":"830","article-title":"The
+        optimization and application of two direct visible count methods for bacteria
+        in distributed drinking water","volume":"40","author":"Coallier","year":"1994","journal-title":"Can.
+        J. Microbiol."},{"key":"10.1111\/j.1574-6941.1998.tb00471.x-BIB35|cit35","first-page":"2869","article-title":"Viability
+        of indigenous soil bacteria assayed by respiratory activity and growth","volume":"60","author":"Winding","year":"1994","journal-title":"Appl.
+        Environ. Microbiol."},{"key":"10.1111\/j.1574-6941.1998.tb00471.x-BIB36|cit36","first-page":"165","article-title":"Use
+        of two oxonols and a fluorescent tetrazolium dye to monitor starvation of
+        Escherichia coli in sea-water by flow cytometry","volume":"22","author":"L\u00c3\u00b3pez-Amor\u00c3\u00b3s","year":"1995","journal-title":"J.
+        Microbiol. Methods"},{"key":"10.1111\/j.1574-6941.1998.tb00471.x-BIB37|cit37","first-page":"67","article-title":"The
+        effect of environmental factors on estimated viable and total populations
+        of planktonic bacteria in lakes and experimental enclosures","volume":"7","author":"Jones","year":"1977","journal-title":"Freshwater
+        Biol."}],"container-title":["FEMS Microbiology Ecology"],"language":"en","link":[{"URL":"http:\/\/academic.oup.com\/femsec\/article-pdf\/25\/2\/179\/18093819\/25-2-179.pdf","content-type":"unspecified","content-version":"vor","intended-application":"similarity-checking"}],"deposited":{"date-parts":[[2017,8,23]],"date-time":"2017-08-23T06:53:57Z","timestamp":1503471237000},"score":1.0,"issued":{"date-parts":[[1998,2]]},"references-count":37,"journal-issue":{"issue":"2"},"URL":"http:\/\/dx.doi.org\/10.1111\/j.1574-6941.1998.tb00471.x","relation":{"cites":[]},"ISSN":["0168-6496","1574-6941"],"issn-type":[{"value":"0168-6496","type":"print"},{"value":"1574-6941","type":"electronic"}]},{"indexed":{"date-parts":[[2018,5,2]],"date-time":"2018-05-02T19:58:06Z","timestamp":1525291086539},"reference-count":0,"publisher":"Oxford
+        University Press (OUP)","issue":"2","content-domain":{"domain":[],"crossmark-restriction":false},"published-print":{"date-parts":[[2002,11]]},"DOI":"10.1111\/fem.2002.42.issue-2","type":"journal-issue","created":{"date-parts":[[2015,1,7]],"date-time":"2015-01-07T18:33:08Z","timestamp":1420655588000},"source":"Crossref","is-referenced-by-count":1,"prefix":"10.1093","volume":"42","member":"286","container-title":["FEMS
+        Microbiology Ecology"],"language":"en","deposited":{"date-parts":[[2015,1,7]],"date-time":"2015-01-07T18:33:08Z","timestamp":1420655588000},"score":1.0,"issued":{"date-parts":[[2002,11]]},"references-count":0,"journal-issue":{"issue":"2"},"URL":"http:\/\/dx.doi.org\/10.1111\/fem.2002.42.issue-2","ISSN":["0168-6496","1574-6941"],"issn-type":[{"value":"0168-6496","type":"print"},{"value":"1574-6941","type":"electronic"}]},{"indexed":{"date-parts":[[2018,5,2]],"date-time":"2018-05-02T19:58:09Z","timestamp":1525291089745},"reference-count":0,"publisher":"Oxford
+        University Press (OUP)","issue":"1","content-domain":{"domain":[],"crossmark-restriction":false},"published-print":{"date-parts":[[2002,10]]},"DOI":"10.1111\/fem.2002.42.issue-1","type":"journal-issue","created":{"date-parts":[[2015,1,7]],"date-time":"2015-01-07T18:32:45Z","timestamp":1420655565000},"source":"Crossref","is-referenced-by-count":0,"prefix":"10.1093","volume":"42","member":"286","container-title":["FEMS
+        Microbiology Ecology"],"language":"en","deposited":{"date-parts":[[2015,1,7]],"date-time":"2015-01-07T18:32:45Z","timestamp":1420655565000},"score":1.0,"issued":{"date-parts":[[2002,10]]},"references-count":0,"journal-issue":{"issue":"1"},"URL":"http:\/\/dx.doi.org\/10.1111\/fem.2002.42.issue-1","ISSN":["0168-6496","1574-6941"],"issn-type":[{"value":"0168-6496","type":"print"},{"value":"1574-6941","type":"electronic"}]},{"indexed":{"date-parts":[[2018,5,2]],"date-time":"2018-05-02T19:58:09Z","timestamp":1525291089875},"reference-count":0,"publisher":"Oxford
+        University Press (OUP)","issue":"2","content-domain":{"domain":[],"crossmark-restriction":false},"published-print":{"date-parts":[[2003,3]]},"DOI":"10.1111\/fem.2003.43.issue-2","type":"journal-issue","created":{"date-parts":[[2015,1,7]],"date-time":"2015-01-07T18:34:40Z","timestamp":1420655680000},"source":"Crossref","is-referenced-by-count":4,"prefix":"10.1093","volume":"43","member":"286","container-title":["FEMS
+        Microbiology Ecology"],"language":"en","deposited":{"date-parts":[[2015,1,7]],"date-time":"2015-01-07T18:34:40Z","timestamp":1420655680000},"score":1.0,"issued":{"date-parts":[[2003,3]]},"references-count":0,"journal-issue":{"issue":"2"},"URL":"http:\/\/dx.doi.org\/10.1111\/fem.2003.43.issue-2","ISSN":["0168-6496","1574-6941"],"issn-type":[{"value":"0168-6496","type":"print"},{"value":"1574-6941","type":"electronic"}]},{"indexed":{"date-parts":[[2018,5,2]],"date-time":"2018-05-02T19:58:10Z","timestamp":1525291090475},"reference-count":0,"publisher":"Oxford
+        University Press (OUP)","issue":"3","content-domain":{"domain":[],"crossmark-restriction":false},"published-print":{"date-parts":[[2000,6]]},"DOI":"10.1111\/fem.2000.32.issue-3","type":"journal-issue","created":{"date-parts":[[2015,1,7]],"date-time":"2015-01-07T18:25:44Z","timestamp":1420655144000},"source":"Crossref","is-referenced-by-count":0,"prefix":"10.1093","volume":"32","member":"286","container-title":["FEMS
+        Microbiology Ecology"],"language":"en","deposited":{"date-parts":[[2015,1,7]],"date-time":"2015-01-07T18:25:44Z","timestamp":1420655144000},"score":1.0,"issued":{"date-parts":[[2000,6]]},"references-count":0,"journal-issue":{"issue":"3"},"URL":"http:\/\/dx.doi.org\/10.1111\/fem.2000.32.issue-3","ISSN":["0168-6496","1574-6941"],"issn-type":[{"value":"0168-6496","type":"print"},{"value":"1574-6941","type":"electronic"}]},{"indexed":{"date-parts":[[2018,5,2]],"date-time":"2018-05-02T19:58:10Z","timestamp":1525291090528},"reference-count":0,"publisher":"Oxford
+        University Press (OUP)","issue":"2","content-domain":{"domain":[],"crossmark-restriction":false},"published-print":{"date-parts":[[2003,11]]},"DOI":"10.1111\/fem.2003.46.issue-2","type":"journal-issue","created":{"date-parts":[[2015,1,7]],"date-time":"2015-01-07T18:36:46Z","timestamp":1420655806000},"source":"Crossref","is-referenced-by-count":0,"prefix":"10.1093","volume":"46","member":"286","container-title":["FEMS
+        Microbiology Ecology"],"language":"en","deposited":{"date-parts":[[2015,1,7]],"date-time":"2015-01-07T18:36:46Z","timestamp":1420655806000},"score":1.0,"issued":{"date-parts":[[2003,11]]},"references-count":0,"journal-issue":{"issue":"2"},"URL":"http:\/\/dx.doi.org\/10.1111\/fem.2003.46.issue-2","ISSN":["0168-6496","1574-6941"],"issn-type":[{"value":"0168-6496","type":"print"},{"value":"1574-6941","type":"electronic"}]},{"indexed":{"date-parts":[[2018,5,2]],"date-time":"2018-05-02T19:58:11Z","timestamp":1525291091353},"reference-count":0,"publisher":"Oxford
+        University Press (OUP)","issue":"1","content-domain":{"domain":[],"crossmark-restriction":false},"published-print":{"date-parts":[[2003,5]]},"DOI":"10.1111\/fem.2003.44.issue-1","type":"journal-issue","created":{"date-parts":[[2015,1,7]],"date-time":"2015-01-07T18:35:18Z","timestamp":1420655718000},"source":"Crossref","is-referenced-by-count":0,"prefix":"10.1093","volume":"44","member":"286","container-title":["FEMS
+        Microbiology Ecology"],"language":"en","deposited":{"date-parts":[[2015,1,7]],"date-time":"2015-01-07T18:35:18Z","timestamp":1420655718000},"score":1.0,"issued":{"date-parts":[[2003,5]]},"references-count":0,"journal-issue":{"issue":"1"},"URL":"http:\/\/dx.doi.org\/10.1111\/fem.2003.44.issue-1","ISSN":["0168-6496","1574-6941"],"issn-type":[{"value":"0168-6496","type":"print"},{"value":"1574-6941","type":"electronic"}]},{"indexed":{"date-parts":[[2018,5,2]],"date-time":"2018-05-02T19:58:11Z","timestamp":1525291091356},"reference-count":0,"publisher":"Oxford
+        University Press (OUP)","issue":"1","content-domain":{"domain":[],"crossmark-restriction":false},"published-print":{"date-parts":[[2001,8]]},"DOI":"10.1111\/fem.2001.37.issue-1","type":"journal-issue","created":{"date-parts":[[2015,1,7]],"date-time":"2015-01-07T18:29:29Z","timestamp":1420655369000},"source":"Crossref","is-referenced-by-count":2,"prefix":"10.1093","volume":"37","member":"286","container-title":["FEMS
+        Microbiology Ecology"],"language":"en","deposited":{"date-parts":[[2015,1,7]],"date-time":"2015-01-07T18:29:29Z","timestamp":1420655369000},"score":1.0,"issued":{"date-parts":[[2001,8]]},"references-count":0,"journal-issue":{"issue":"1"},"URL":"http:\/\/dx.doi.org\/10.1111\/fem.2001.37.issue-1","ISSN":["0168-6496","1574-6941"],"issn-type":[{"value":"0168-6496","type":"print"},{"value":"1574-6941","type":"electronic"}]},{"indexed":{"date-parts":[[2018,5,2]],"date-time":"2018-05-02T19:58:11Z","timestamp":1525291091383},"reference-count":0,"publisher":"Oxford
+        University Press (OUP)","issue":"3","content-domain":{"domain":[],"crossmark-restriction":false},"published-print":{"date-parts":[[1999,3]]},"DOI":"10.1111\/fem.1999.28.issue-3","type":"journal-issue","created":{"date-parts":[[2015,1,7]],"date-time":"2015-01-07T18:22:08Z","timestamp":1420654928000},"source":"Crossref","is-referenced-by-count":0,"prefix":"10.1093","volume":"28","member":"286","container-title":["FEMS
+        Microbiology Ecology"],"language":"en","deposited":{"date-parts":[[2015,1,7]],"date-time":"2015-01-07T18:22:08Z","timestamp":1420654928000},"score":1.0,"issued":{"date-parts":[[1999,3]]},"references-count":0,"journal-issue":{"issue":"3"},"URL":"http:\/\/dx.doi.org\/10.1111\/fem.1999.28.issue-3","ISSN":["0168-6496","1574-6941"],"issn-type":[{"value":"0168-6496","type":"print"},{"value":"1574-6941","type":"electronic"}]},{"indexed":{"date-parts":[[2018,5,2]],"date-time":"2018-05-02T19:58:15Z","timestamp":1525291095679},"reference-count":0,"publisher":"Oxford
+        University Press (OUP)","issue":"1","content-domain":{"domain":[],"crossmark-restriction":false},"published-print":{"date-parts":[[2003,7]]},"DOI":"10.1111\/fem.2003.45.issue-1","type":"journal-issue","created":{"date-parts":[[2015,1,7]],"date-time":"2015-01-07T18:35:57Z","timestamp":1420655757000},"source":"Crossref","is-referenced-by-count":0,"prefix":"10.1093","volume":"45","member":"286","container-title":["FEMS
+        Microbiology Ecology"],"language":"en","deposited":{"date-parts":[[2015,1,7]],"date-time":"2015-01-07T18:35:57Z","timestamp":1420655757000},"score":1.0,"issued":{"date-parts":[[2003,7]]},"references-count":0,"journal-issue":{"issue":"1"},"URL":"http:\/\/dx.doi.org\/10.1111\/fem.2003.45.issue-1","ISSN":["0168-6496","1574-6941"],"issn-type":[{"value":"0168-6496","type":"print"},{"value":"1574-6941","type":"electronic"}]},{"indexed":{"date-parts":[[2018,5,2]],"date-time":"2018-05-02T19:58:15Z","timestamp":1525291095991},"reference-count":0,"publisher":"Oxford
+        University Press (OUP)","issue":"3","content-domain":{"domain":[],"crossmark-restriction":false},"published-print":{"date-parts":[[2008,6]]},"DOI":"10.1111\/fem.2008.64.issue-3","type":"journal-issue","created":{"date-parts":[[2015,1,7]],"date-time":"2015-01-07T18:49:17Z","timestamp":1420656557000},"source":"Crossref","is-referenced-by-count":0,"prefix":"10.1093","volume":"64","member":"286","container-title":["FEMS
+        Microbiology Ecology"],"language":"en","deposited":{"date-parts":[[2015,1,7]],"date-time":"2015-01-07T18:49:17Z","timestamp":1420656557000},"score":1.0,"issued":{"date-parts":[[2008,6]]},"references-count":0,"journal-issue":{"issue":"3"},"URL":"http:\/\/dx.doi.org\/10.1111\/fem.2008.64.issue-3","ISSN":["0168-6496","1574-6941"],"issn-type":[{"value":"0168-6496","type":"print"},{"value":"1574-6941","type":"electronic"}]},{"indexed":{"date-parts":[[2018,5,2]],"date-time":"2018-05-02T19:58:16Z","timestamp":1525291096064},"reference-count":0,"publisher":"Oxford
+        University Press (OUP)","issue":"1","content-domain":{"domain":[],"crossmark-restriction":false},"published-print":{"date-parts":[[2002,7]]},"DOI":"10.1111\/fem.2002.41.issue-1","type":"journal-issue","created":{"date-parts":[[2015,1,7]],"date-time":"2015-01-07T18:31:46Z","timestamp":1420655506000},"source":"Crossref","is-referenced-by-count":2,"prefix":"10.1093","volume":"41","member":"286","container-title":["FEMS
+        Microbiology Ecology"],"language":"en","deposited":{"date-parts":[[2015,1,7]],"date-time":"2015-01-07T18:31:46Z","timestamp":1420655506000},"score":1.0,"issued":{"date-parts":[[2002,7]]},"references-count":0,"journal-issue":{"issue":"1"},"URL":"http:\/\/dx.doi.org\/10.1111\/fem.2002.41.issue-1","ISSN":["0168-6496","1574-6941"],"issn-type":[{"value":"0168-6496","type":"print"},{"value":"1574-6941","type":"electronic"}]},{"indexed":{"date-parts":[[2018,5,2]],"date-time":"2018-05-02T19:58:16Z","timestamp":1525291096537},"reference-count":0,"publisher":"Oxford
+        University Press (OUP)","issue":"1","content-domain":{"domain":[],"crossmark-restriction":false},"published-print":{"date-parts":[[1998,9]]},"DOI":"10.1111\/fem.1998.27.issue-1","type":"journal-issue","created":{"date-parts":[[2015,1,7]],"date-time":"2015-01-07T18:20:58Z","timestamp":1420654858000},"source":"Crossref","is-referenced-by-count":0,"prefix":"10.1093","volume":"27","member":"286","container-title":["FEMS
+        Microbiology Ecology"],"language":"en","deposited":{"date-parts":[[2015,1,7]],"date-time":"2015-01-07T18:20:58Z","timestamp":1420654858000},"score":1.0,"issued":{"date-parts":[[1998,9]]},"references-count":0,"journal-issue":{"issue":"1"},"URL":"http:\/\/dx.doi.org\/10.1111\/fem.1998.27.issue-1","ISSN":["0168-6496","1574-6941"],"issn-type":[{"value":"0168-6496","type":"print"},{"value":"1574-6941","type":"electronic"}]}],"items-per-page":20,"query":{"start-index":0,"search-terms":null}}}'
+  recorded_at: 2018-12-07 22:33:27 GMT
+  recorded_with: vcr/0.2.0.9101, webmockr/0.2.9.9311

@@ -5,7 +5,7 @@ Description: Client for various 'CrossRef' 'APIs', including 'metadata' search
     (including 'bibtex', 'citeproc-json', 'rdf-xml', etc.), convert 'DOIs'
     to 'PMIDs', and 'vice versa', get citations for 'DOIs', and get links to
     full text of articles when available.
-Version: 0.8.5.9100
+Version: 0.8.5.9110
 License: MIT + file LICENSE
 Authors@R: c(
     person("Scott", "Chamberlain", role = c("aut", "cre"), 
@@ -39,7 +39,8 @@ Imports:
 Suggests:
     roxygen2 (>= 6.1.0),
     testthat,
-    knitr
+    knitr,
+    vcr
 RoxygenNote: 6.1.0
 X-schema.org-applicationCategory: Literature
 X-schema.org-keywords: text-ming, literature, pdf, xml, publications, citations, full-text, TDM, Crossref

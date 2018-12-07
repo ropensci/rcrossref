@@ -1,0 +1,271 @@
+http_interactions:
+- request:
+    method: get
+    uri: https://api.crossref.org/works/10.1126/science.169.3946.635/agency
+    body:
+      encoding: ''
+      string: ''
+    headers:
+      Accept-Encoding: gzip, deflate
+      Accept: application/json, text/xml, application/xml, */*
+      User-Agent: r-curl/3.2 crul/0.6.1.9100 rOpenSci(rcrossref/0.8.5.9110) (mailto:<crossref_email>)
+      X-USER-AGENT: r-curl/3.2 crul/0.6.1.9100 rOpenSci(rcrossref/0.8.5.9110) (mailto:<crossref_email>)
+  response:
+    status:
+      status_code: '200'
+      message: OK
+      explanation: Request fulfilled, document follows
+    headers:
+      status: HTTP/1.1 200 OK
+      content-type: application/json;charset=UTF-8
+      vary: Accept
+      access-control-allow-origin: '*'
+      access-control-allow-headers: X-Requested-With
+      content-length: '166'
+      server: http-kit
+      date: Fri, 07 Dec 2018 22:43:21 GMT
+      x-rate-limit-limit: '50'
+      x-rate-limit-interval: 1s
+      connection: close
+    body:
+      encoding: ASCII-8BIT
+      string: eyJzdGF0dXMiOiJvayIsIm1lc3NhZ2UtdHlwZSI6IndvcmstYWdlbmN5IiwibWVzc2FnZS12ZXJzaW9uIjoiMS4wLjAiLCJtZXNzYWdlIjp7IkRPSSI6IjEwLjExMjZcL3NjaWVuY2UuMTY5LjM5NDYuNjM1IiwiYWdlbmN5Ijp7ImlkIjoiY3Jvc3NyZWYiLCJsYWJlbCI6IkNyb3NzcmVmIn19fQ==
+  recorded_at: 2018-12-07 22:43:26 GMT
+  recorded_with: vcr/0.2.0.9101, webmockr/0.2.9.9311
+- request:
+    method: get
+    uri: https://doi.org/10.1126/science.169.3946.635
+    body:
+      encoding: ''
+      string: ''
+    headers:
+      Accept-Encoding: gzip, deflate
+      User-Agent: r-curl/3.2 crul/0.6.1.9100 rOpenSci(rcrossref/0.8.5.9110) (mailto:<crossref_email>)
+      X-USER-AGENT: r-curl/3.2 crul/0.6.1.9100 rOpenSci(rcrossref/0.8.5.9110) (mailto:<crossref_email>)
+      Accept: application/rdf+xml
+  response:
+    status:
+      status_code: '200'
+      message: OK
+      explanation: Request fulfilled, document follows
+    headers:
+      status: HTTP/1.1 200 OK
+      access-control-allow-origin: '*'
+      access-control-allow-headers: X-Requested-With, Accept, Accept-Encoding, Accept-Charset,
+        Accept-Language, Accept-Ranges, Cache-Control
+      access-control-expose-headers: Link
+      link: <http://dx.doi.org/10.1126/science.169.3946.635>; rel="canonical", <https://syndication.highwire.org/content/doi/10.1126/science.169.3946.635>;
+        version="vor"; rel="item"
+      content-type: application/rdf+xml
+      content-length: '2000'
+      server: http-kit
+      date: Fri, 07 Dec 2018 22:43:22 GMT
+      x-rate-limit-limit: '50'
+      x-rate-limit-interval: 1s
+      connection: close
+    body:
+      encoding: ASCII-8BIT
+      string: PHJkZjpSREYKICAgIHhtbG5zOnJkZj0iaHR0cDovL3d3dy53My5vcmcvMTk5OS8wMi8yMi1yZGYtc3ludGF4LW5zIyIKICAgIHhtbG5zOmouMD0iaHR0cDovL3B1cmwub3JnL2RjL3Rlcm1zLyIKICAgIHhtbG5zOmouMT0iaHR0cDovL3ByaXNtc3RhbmRhcmQub3JnL25hbWVzcGFjZXMvYmFzaWMvMi4xLyIKICAgIHhtbG5zOm93bD0iaHR0cDovL3d3dy53My5vcmcvMjAwMi8wNy9vd2wjIgogICAgeG1sbnM6ai4yPSJodHRwOi8vcHVybC5vcmcvb250b2xvZ3kvYmliby8iCiAgICB4bWxuczpqLjM9Imh0dHA6Ly94bWxucy5jb20vZm9hZi8wLjEvIj4KICA8cmRmOkRlc2NyaXB0aW9uIHJkZjphYm91dD0iaHR0cDovL2R4LmRvaS5vcmcvMTAuMTEyNi9zY2llbmNlLjE2OS4zOTQ2LjYzNSI+CiAgICA8ai4xOnN0YXJ0aW5nUGFnZT42MzU8L2ouMTpzdGFydGluZ1BhZ2U+CiAgICA8b3dsOnNhbWVBcyByZGY6cmVzb3VyY2U9ImRvaToxMC4xMTI2L3NjaWVuY2UuMTY5LjM5NDYuNjM1Ii8+CiAgICA8b3dsOnNhbWVBcyByZGY6cmVzb3VyY2U9ImluZm86ZG9pLzEwLjExMjYvc2NpZW5jZS4xNjkuMzk0Ni42MzUiLz4KICAgIDxqLjA6aWRlbnRpZmllcj4xMC4xMTI2L3NjaWVuY2UuMTY5LjM5NDYuNjM1PC9qLjA6aWRlbnRpZmllcj4KICAgIDxqLjA6cHVibGlzaGVyPkFtZXJpY2FuIEFzc29jaWF0aW9uIGZvciB0aGUgQWR2YW5jZW1lbnQgb2YgU2NpZW5jZSAoQUFBUyk8L2ouMDpwdWJsaXNoZXI+CiAgICA8ai4wOmNyZWF0b3I+CiAgICAgIDxqLjM6UGVyc29uIHJkZjphYm91dD0iaHR0cDovL2lkLmNyb3NzcmVmLm9yZy9jb250cmlidXRvci9oLXMtZnJhbmstM25ldzdyMnVscG5haiI+CiAgICAgICAgPGouMzpuYW1lPkguIFMuIEZyYW5rPC9qLjM6bmFtZT4KICAgICAgICA8ai4zOmZhbWlseU5hbWU+RnJhbms8L2ouMzpmYW1pbHlOYW1lPgogICAgICAgIDxqLjM6Z2l2ZW5OYW1lPkguIFMuPC9qLjM6Z2l2ZW5OYW1lPgogICAgICA8L2ouMzpQZXJzb24+CiAgICA8L2ouMDpjcmVhdG9yPgogICAgPGouMTpkb2k+MTAuMTEyNi9zY2llbmNlLjE2OS4zOTQ2LjYzNTwvai4xOmRvaT4KICAgIDxqLjI6cGFnZUVuZD42NDE8L2ouMjpwYWdlRW5kPgogICAgPGouMjpkb2k+MTAuMTEyNi9zY2llbmNlLjE2OS4zOTQ2LjYzNTwvai4yOmRvaT4KICAgIDxqLjI6dm9sdW1lPjE2OTwvai4yOnZvbHVtZT4KICAgIDxqLjA6aXNQYXJ0T2Y+CiAgICAgIDxqLjI6Sm91cm5hbCByZGY6YWJvdXQ9Imh0dHA6Ly9pZC5jcm9zc3JlZi5vcmcvaXNzbi8wMDM2LTgwNzUiPgogICAgICAgIDxqLjE6aXNzbj4xMDk1LTkyMDM8L2ouMTppc3NuPgogICAgICAgIDxqLjI6aXNzbj4xMDk1LTkyMDM8L2ouMjppc3NuPgogICAgICAgIDxvd2w6c2FtZUFzPnVybjppc3NuOjEwOTUtOTIwMzwvb3dsOnNhbWVBcz4KICAgICAgICA8b3dsOnNhbWVBcz51cm46aXNzbjowMDM2LTgwNzU8L293bDpzYW1lQXM+CiAgICAgICAgPGouMDp0aXRsZT5TY2llbmNlPC9qLjA6dGl0bGU+CiAgICAgICAgPGouMTppc3NuPjAwMzYtODA3NTwvai4xOmlzc24+CiAgICAgICAgPGouMjppc3NuPjAwMzYtODA3NTwvai4yOmlzc24+CiAgICAgIDwvai4yOkpvdXJuYWw+CiAgICA8L2ouMDppc1BhcnRPZj4KICAgIDxqLjA6dGl0bGU+VGhlIFN0cnVjdHVyZSBvZiBPcmRpbmFyeSBXYXRlcjogTmV3IGRhdGEgYW5kIGludGVycHJldGF0aW9ucyBhcmUgeWllbGRpbmcgbmV3IGluc2lnaHRzIGludG8gdGhpcyBmYXNjaW5hdGluZyBzdWJzdGFuY2U8L2ouMDp0aXRsZT4KICAgIDxqLjE6ZW5kaW5nUGFnZT42NDE8L2ouMTplbmRpbmdQYWdlPgogICAgPGouMDpkYXRlIHJkZjpkYXRhdHlwZT0iaHR0cDovL3d3dy53My5vcmcvMjAwMS9YTUxTY2hlbWEjZGF0ZSIKICAgID4xOTcwLTA4LTE0PC9qLjA6ZGF0ZT4KICAgIDxqLjE6dm9sdW1lPjE2OTwvai4xOnZvbHVtZT4KICAgIDxqLjI6cGFnZVN0YXJ0PjYzNTwvai4yOnBhZ2VTdGFydD4KICA8L3JkZjpEZXNjcmlwdGlvbj4KPC9yZGY6UkRGPgo=
+  recorded_at: 2018-12-07 22:43:26 GMT
+  recorded_with: vcr/0.2.0.9101, webmockr/0.2.9.9311
+- request:
+    method: get
+    uri: https://api.crossref.org/works/10.1126/science.169.3946.635/agency
+    body:
+      encoding: ''
+      string: ''
+    headers:
+      Accept-Encoding: gzip, deflate
+      Accept: application/json, text/xml, application/xml, */*
+      User-Agent: r-curl/3.2 crul/0.6.1.9100 rOpenSci(rcrossref/0.8.5.9110) (mailto:<crossref_email>)
+      X-USER-AGENT: r-curl/3.2 crul/0.6.1.9100 rOpenSci(rcrossref/0.8.5.9110) (mailto:<crossref_email>)
+  response:
+    status:
+      status_code: '200'
+      message: OK
+      explanation: Request fulfilled, document follows
+    headers:
+      status: HTTP/1.1 200 OK
+      content-type: application/json;charset=UTF-8
+      vary: Accept
+      access-control-allow-origin: '*'
+      access-control-allow-headers: X-Requested-With
+      content-length: '166'
+      server: http-kit
+      date: Fri, 07 Dec 2018 22:43:22 GMT
+      x-rate-limit-limit: '50'
+      x-rate-limit-interval: 1s
+      connection: close
+    body:
+      encoding: ASCII-8BIT
+      string: eyJzdGF0dXMiOiJvayIsIm1lc3NhZ2UtdHlwZSI6IndvcmstYWdlbmN5IiwibWVzc2FnZS12ZXJzaW9uIjoiMS4wLjAiLCJtZXNzYWdlIjp7IkRPSSI6IjEwLjExMjZcL3NjaWVuY2UuMTY5LjM5NDYuNjM1IiwiYWdlbmN5Ijp7ImlkIjoiY3Jvc3NyZWYiLCJsYWJlbCI6IkNyb3NzcmVmIn19fQ==
+  recorded_at: 2018-12-07 22:43:26 GMT
+  recorded_with: vcr/0.2.0.9101, webmockr/0.2.9.9311
+- request:
+    method: get
+    uri: https://api.crossref.org/works/10.1126/science.169.3946.635/agency
+    body:
+      encoding: ''
+      string: ''
+    headers:
+      Accept-Encoding: gzip, deflate
+      Accept: application/json, text/xml, application/xml, */*
+      User-Agent: r-curl/3.2 crul/0.6.1.9100 rOpenSci(rcrossref/0.8.5.9110) (mailto:<crossref_email>)
+      X-USER-AGENT: r-curl/3.2 crul/0.6.1.9100 rOpenSci(rcrossref/0.8.5.9110) (mailto:<crossref_email>)
+  response:
+    status:
+      status_code: '200'
+      message: OK
+      explanation: Request fulfilled, document follows
+    headers:
+      status: HTTP/1.1 200 OK
+      content-type: application/json;charset=UTF-8
+      vary: Accept
+      access-control-allow-origin: '*'
+      access-control-allow-headers: X-Requested-With
+      content-length: '166'
+      server: http-kit
+      date: Fri, 07 Dec 2018 22:43:23 GMT
+      x-rate-limit-limit: '50'
+      x-rate-limit-interval: 1s
+      connection: close
+    body:
+      encoding: ASCII-8BIT
+      string: eyJzdGF0dXMiOiJvayIsIm1lc3NhZ2UtdHlwZSI6IndvcmstYWdlbmN5IiwibWVzc2FnZS12ZXJzaW9uIjoiMS4wLjAiLCJtZXNzYWdlIjp7IkRPSSI6IjEwLjExMjZcL3NjaWVuY2UuMTY5LjM5NDYuNjM1IiwiYWdlbmN5Ijp7ImlkIjoiY3Jvc3NyZWYiLCJsYWJlbCI6IkNyb3NzcmVmIn19fQ==
+  recorded_at: 2018-12-07 22:43:26 GMT
+  recorded_with: vcr/0.2.0.9101, webmockr/0.2.9.9311
+- request:
+    method: get
+    uri: https://doi.org/10.1126/science.169.3946.635
+    body:
+      encoding: ''
+      string: ''
+    headers:
+      Accept-Encoding: gzip, deflate
+      User-Agent: r-curl/3.2 crul/0.6.1.9100 rOpenSci(rcrossref/0.8.5.9110) (mailto:<crossref_email>)
+      X-USER-AGENT: r-curl/3.2 crul/0.6.1.9100 rOpenSci(rcrossref/0.8.5.9110) (mailto:<crossref_email>)
+      Accept: application/vnd.crossref.unixref+xml
+  response:
+    status:
+      status_code: '200'
+      message: OK
+      explanation: Request fulfilled, document follows
+    headers:
+      status: HTTP/1.1 200 OK
+      access-control-allow-origin: '*'
+      access-control-allow-headers: X-Requested-With, Accept, Accept-Encoding, Accept-Charset,
+        Accept-Language, Accept-Ranges, Cache-Control
+      access-control-expose-headers: Link
+      link: <http://dx.doi.org/10.1126/science.169.3946.635>; rel="canonical", <https://syndication.highwire.org/content/doi/10.1126/science.169.3946.635>;
+        version="vor"; rel="item"
+      content-type: application/vnd.crossref.unixref+xml
+      content-length: '2282'
+      server: http-kit
+      date: Fri, 07 Dec 2018 22:43:23 GMT
+      x-rate-limit-limit: '50'
+      x-rate-limit-interval: 1s
+      connection: close
+    body:
+      encoding: ASCII-8BIT
+      string: PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPGRvaV9yZWNvcmRzPg0KICA8ZG9pX3JlY29yZCBvd25lcj0iMTAuMTEyNiIgdGltZXN0YW1wPSIyMDE2LTEyLTIzIDE0OjU0OjA3Ij4NCiAgICA8Y3Jvc3NyZWY+DQogICAgICA8am91cm5hbD4NCiAgICAgICAgPGpvdXJuYWxfbWV0YWRhdGEgbGFuZ3VhZ2U9ImVuIj4NCiAgICAgICAgICA8ZnVsbF90aXRsZT5TY2llbmNlPC9mdWxsX3RpdGxlPg0KICAgICAgICAgIDxhYmJyZXZfdGl0bGU+U2NpZW5jZTwvYWJicmV2X3RpdGxlPg0KICAgICAgICAgIDxpc3NuIG1lZGlhX3R5cGU9InByaW50Ij4wMDM2LTgwNzU8L2lzc24+DQogICAgICAgICAgPGlzc24gbWVkaWFfdHlwZT0iZWxlY3Ryb25pYyI+MTA5NS05MjAzPC9pc3NuPg0KICAgICAgICA8L2pvdXJuYWxfbWV0YWRhdGE+DQogICAgICAgIDxqb3VybmFsX2lzc3VlPg0KICAgICAgICAgIDxwdWJsaWNhdGlvbl9kYXRlIG1lZGlhX3R5cGU9InByaW50Ij4NCiAgICAgICAgICAgIDxtb250aD4wODwvbW9udGg+DQogICAgICAgICAgICA8ZGF5PjE0PC9kYXk+DQogICAgICAgICAgICA8eWVhcj4xOTcwPC95ZWFyPg0KICAgICAgICAgIDwvcHVibGljYXRpb25fZGF0ZT4NCiAgICAgICAgICA8am91cm5hbF92b2x1bWU+DQogICAgICAgICAgICA8dm9sdW1lPjE2OTwvdm9sdW1lPg0KICAgICAgICAgIDwvam91cm5hbF92b2x1bWU+DQogICAgICAgICAgPGlzc3VlPjM5NDY8L2lzc3VlPg0KICAgICAgICA8L2pvdXJuYWxfaXNzdWU+DQogICAgICAgIDxqb3VybmFsX2FydGljbGUgcHVibGljYXRpb25fdHlwZT0iYWJzdHJhY3Rfb25seSI+DQogICAgICAgICAgPHRpdGxlcz4NCiAgICAgICAgICAgIDx0aXRsZT5UaGUgU3RydWN0dXJlIG9mIE9yZGluYXJ5IFdhdGVyOiBOZXcgZGF0YSBhbmQgaW50ZXJwcmV0YXRpb25zIGFyZSB5aWVsZGluZyBuZXcgaW5zaWdodHMgaW50byB0aGlzIGZhc2NpbmF0aW5nIHN1YnN0YW5jZTwvdGl0bGU+DQogICAgICAgICAgPC90aXRsZXM+DQogICAgICAgICAgPGNvbnRyaWJ1dG9ycz4NCiAgICAgICAgICAgIDxwZXJzb25fbmFtZSBzZXF1ZW5jZT0iZmlyc3QiIGNvbnRyaWJ1dG9yX3JvbGU9ImF1dGhvciI+DQogICAgICAgICAgICAgIDxnaXZlbl9uYW1lPkguIFMuPC9naXZlbl9uYW1lPg0KICAgICAgICAgICAgICA8c3VybmFtZT5GcmFuazwvc3VybmFtZT4NCiAgICAgICAgICAgIDwvcGVyc29uX25hbWU+DQogICAgICAgICAgPC9jb250cmlidXRvcnM+DQogICAgICAgICAgPHB1YmxpY2F0aW9uX2RhdGUgbWVkaWFfdHlwZT0icHJpbnQiPg0KICAgICAgICAgICAgPG1vbnRoPjA4PC9tb250aD4NCiAgICAgICAgICAgIDxkYXk+MTQ8L2RheT4NCiAgICAgICAgICAgIDx5ZWFyPjE5NzA8L3llYXI+DQogICAgICAgICAgPC9wdWJsaWNhdGlvbl9kYXRlPg0KICAgICAgICAgIDxwYWdlcz4NCiAgICAgICAgICAgIDxmaXJzdF9wYWdlPjYzNTwvZmlyc3RfcGFnZT4NCiAgICAgICAgICAgIDxsYXN0X3BhZ2U+NjQxPC9sYXN0X3BhZ2U+DQogICAgICAgICAgPC9wYWdlcz4NCiAgICAgICAgICA8cHVibGlzaGVyX2l0ZW0+DQogICAgICAgICAgICA8aXRlbV9udW1iZXIgaXRlbV9udW1iZXJfdHlwZT0ic2VxdWVuY2UtbnVtYmVyIj4xNjkvMzk0Ni82MzU8L2l0ZW1fbnVtYmVyPg0KICAgICAgICAgIDwvcHVibGlzaGVyX2l0ZW0+DQogICAgICAgICAgPGRvaV9kYXRhPg0KICAgICAgICAgICAgPGRvaT4xMC4xMTI2L3NjaWVuY2UuMTY5LjM5NDYuNjM1PC9kb2k+DQogICAgICAgICAgICA8dGltZXN0YW1wPjIwMDYxMDI1MDg1MjwvdGltZXN0YW1wPg0KICAgICAgICAgICAgPHJlc291cmNlPmh0dHA6Ly93d3cuc2NpZW5jZW1hZy5vcmcvY2dpL2RvaS8xMC4xMTI2L3NjaWVuY2UuMTY5LjM5NDYuNjM1PC9yZXNvdXJjZT4NCiAgICAgICAgICAgIDxjb2xsZWN0aW9uIHByb3BlcnR5PSJjcmF3bGVyLWJhc2VkIj4NCiAgICAgICAgICAgICAgPGl0ZW0gY3Jhd2xlcj0iaVBhcmFkaWdtcyI+DQogICAgICAgICAgICAgICAgPHJlc291cmNlPmh0dHBzOi8vc3luZGljYXRpb24uaGlnaHdpcmUub3JnL2NvbnRlbnQvZG9pLzEwLjExMjYvc2NpZW5jZS4xNjkuMzk0Ni42MzU8L3Jlc291cmNlPg0KICAgICAgICAgICAgICA8L2l0ZW0+DQogICAgICAgICAgICA8L2NvbGxlY3Rpb24+DQogICAgICAgICAgPC9kb2lfZGF0YT4NCiAgICAgICAgPC9qb3VybmFsX2FydGljbGU+DQogICAgICA8L2pvdXJuYWw+DQogICAgPC9jcm9zc3JlZj4NCiAgPC9kb2lfcmVjb3JkPg0KPC9kb2lfcmVjb3Jkcz4=
+  recorded_at: 2018-12-07 22:43:26 GMT
+  recorded_with: vcr/0.2.0.9101, webmockr/0.2.9.9311
+- request:
+    method: get
+    uri: https://doi.org/10.1126/science.169.3946.635
+    body:
+      encoding: ''
+      string: ''
+    headers:
+      Accept-Encoding: gzip, deflate
+      User-Agent: r-curl/3.2 crul/0.6.1.9100 rOpenSci(rcrossref/0.8.5.9110) (mailto:<crossref_email>)
+      X-USER-AGENT: r-curl/3.2 crul/0.6.1.9100 rOpenSci(rcrossref/0.8.5.9110) (mailto:<crossref_email>)
+      Accept: application/vnd.crossref.unixref+xml
+  response:
+    status:
+      status_code: '200'
+      message: OK
+      explanation: Request fulfilled, document follows
+    headers:
+      status: HTTP/1.1 200 OK
+      access-control-allow-origin: '*'
+      access-control-allow-headers: X-Requested-With, Accept, Accept-Encoding, Accept-Charset,
+        Accept-Language, Accept-Ranges, Cache-Control
+      access-control-expose-headers: Link
+      link: <http://dx.doi.org/10.1126/science.169.3946.635>; rel="canonical", <https://syndication.highwire.org/content/doi/10.1126/science.169.3946.635>;
+        version="vor"; rel="item"
+      content-type: application/vnd.crossref.unixref+xml
+      content-length: '2282'
+      server: http-kit
+      date: Fri, 07 Dec 2018 22:43:24 GMT
+      x-rate-limit-limit: '50'
+      x-rate-limit-interval: 1s
+      connection: close
+    body:
+      encoding: ASCII-8BIT
+      string: PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPGRvaV9yZWNvcmRzPg0KICA8ZG9pX3JlY29yZCBvd25lcj0iMTAuMTEyNiIgdGltZXN0YW1wPSIyMDE2LTEyLTIzIDE0OjU0OjA3Ij4NCiAgICA8Y3Jvc3NyZWY+DQogICAgICA8am91cm5hbD4NCiAgICAgICAgPGpvdXJuYWxfbWV0YWRhdGEgbGFuZ3VhZ2U9ImVuIj4NCiAgICAgICAgICA8ZnVsbF90aXRsZT5TY2llbmNlPC9mdWxsX3RpdGxlPg0KICAgICAgICAgIDxhYmJyZXZfdGl0bGU+U2NpZW5jZTwvYWJicmV2X3RpdGxlPg0KICAgICAgICAgIDxpc3NuIG1lZGlhX3R5cGU9InByaW50Ij4wMDM2LTgwNzU8L2lzc24+DQogICAgICAgICAgPGlzc24gbWVkaWFfdHlwZT0iZWxlY3Ryb25pYyI+MTA5NS05MjAzPC9pc3NuPg0KICAgICAgICA8L2pvdXJuYWxfbWV0YWRhdGE+DQogICAgICAgIDxqb3VybmFsX2lzc3VlPg0KICAgICAgICAgIDxwdWJsaWNhdGlvbl9kYXRlIG1lZGlhX3R5cGU9InByaW50Ij4NCiAgICAgICAgICAgIDxtb250aD4wODwvbW9udGg+DQogICAgICAgICAgICA8ZGF5PjE0PC9kYXk+DQogICAgICAgICAgICA8eWVhcj4xOTcwPC95ZWFyPg0KICAgICAgICAgIDwvcHVibGljYXRpb25fZGF0ZT4NCiAgICAgICAgICA8am91cm5hbF92b2x1bWU+DQogICAgICAgICAgICA8dm9sdW1lPjE2OTwvdm9sdW1lPg0KICAgICAgICAgIDwvam91cm5hbF92b2x1bWU+DQogICAgICAgICAgPGlzc3VlPjM5NDY8L2lzc3VlPg0KICAgICAgICA8L2pvdXJuYWxfaXNzdWU+DQogICAgICAgIDxqb3VybmFsX2FydGljbGUgcHVibGljYXRpb25fdHlwZT0iYWJzdHJhY3Rfb25seSI+DQogICAgICAgICAgPHRpdGxlcz4NCiAgICAgICAgICAgIDx0aXRsZT5UaGUgU3RydWN0dXJlIG9mIE9yZGluYXJ5IFdhdGVyOiBOZXcgZGF0YSBhbmQgaW50ZXJwcmV0YXRpb25zIGFyZSB5aWVsZGluZyBuZXcgaW5zaWdodHMgaW50byB0aGlzIGZhc2NpbmF0aW5nIHN1YnN0YW5jZTwvdGl0bGU+DQogICAgICAgICAgPC90aXRsZXM+DQogICAgICAgICAgPGNvbnRyaWJ1dG9ycz4NCiAgICAgICAgICAgIDxwZXJzb25fbmFtZSBzZXF1ZW5jZT0iZmlyc3QiIGNvbnRyaWJ1dG9yX3JvbGU9ImF1dGhvciI+DQogICAgICAgICAgICAgIDxnaXZlbl9uYW1lPkguIFMuPC9naXZlbl9uYW1lPg0KICAgICAgICAgICAgICA8c3VybmFtZT5GcmFuazwvc3VybmFtZT4NCiAgICAgICAgICAgIDwvcGVyc29uX25hbWU+DQogICAgICAgICAgPC9jb250cmlidXRvcnM+DQogICAgICAgICAgPHB1YmxpY2F0aW9uX2RhdGUgbWVkaWFfdHlwZT0icHJpbnQiPg0KICAgICAgICAgICAgPG1vbnRoPjA4PC9tb250aD4NCiAgICAgICAgICAgIDxkYXk+MTQ8L2RheT4NCiAgICAgICAgICAgIDx5ZWFyPjE5NzA8L3llYXI+DQogICAgICAgICAgPC9wdWJsaWNhdGlvbl9kYXRlPg0KICAgICAgICAgIDxwYWdlcz4NCiAgICAgICAgICAgIDxmaXJzdF9wYWdlPjYzNTwvZmlyc3RfcGFnZT4NCiAgICAgICAgICAgIDxsYXN0X3BhZ2U+NjQxPC9sYXN0X3BhZ2U+DQogICAgICAgICAgPC9wYWdlcz4NCiAgICAgICAgICA8cHVibGlzaGVyX2l0ZW0+DQogICAgICAgICAgICA8aXRlbV9udW1iZXIgaXRlbV9udW1iZXJfdHlwZT0ic2VxdWVuY2UtbnVtYmVyIj4xNjkvMzk0Ni82MzU8L2l0ZW1fbnVtYmVyPg0KICAgICAgICAgIDwvcHVibGlzaGVyX2l0ZW0+DQogICAgICAgICAgPGRvaV9kYXRhPg0KICAgICAgICAgICAgPGRvaT4xMC4xMTI2L3NjaWVuY2UuMTY5LjM5NDYuNjM1PC9kb2k+DQogICAgICAgICAgICA8dGltZXN0YW1wPjIwMDYxMDI1MDg1MjwvdGltZXN0YW1wPg0KICAgICAgICAgICAgPHJlc291cmNlPmh0dHA6Ly93d3cuc2NpZW5jZW1hZy5vcmcvY2dpL2RvaS8xMC4xMTI2L3NjaWVuY2UuMTY5LjM5NDYuNjM1PC9yZXNvdXJjZT4NCiAgICAgICAgICAgIDxjb2xsZWN0aW9uIHByb3BlcnR5PSJjcmF3bGVyLWJhc2VkIj4NCiAgICAgICAgICAgICAgPGl0ZW0gY3Jhd2xlcj0iaVBhcmFkaWdtcyI+DQogICAgICAgICAgICAgICAgPHJlc291cmNlPmh0dHBzOi8vc3luZGljYXRpb24uaGlnaHdpcmUub3JnL2NvbnRlbnQvZG9pLzEwLjExMjYvc2NpZW5jZS4xNjkuMzk0Ni42MzU8L3Jlc291cmNlPg0KICAgICAgICAgICAgICA8L2l0ZW0+DQogICAgICAgICAgICA8L2NvbGxlY3Rpb24+DQogICAgICAgICAgPC9kb2lfZGF0YT4NCiAgICAgICAgPC9qb3VybmFsX2FydGljbGU+DQogICAgICA8L2pvdXJuYWw+DQogICAgPC9jcm9zc3JlZj4NCiAgPC9kb2lfcmVjb3JkPg0KPC9kb2lfcmVjb3Jkcz4=
+  recorded_at: 2018-12-07 22:43:26 GMT
+  recorded_with: vcr/0.2.0.9101, webmockr/0.2.9.9311
+- request:
+    method: get
+    uri: https://api.crossref.org/works/10.3233/ISU-150780/agency
+    body:
+      encoding: ''
+      string: ''
+    headers:
+      Accept-Encoding: gzip, deflate
+      Accept: application/json, text/xml, application/xml, */*
+      User-Agent: r-curl/3.2 crul/0.6.1.9100 rOpenSci(rcrossref/0.8.5.9110) (mailto:<crossref_email>)
+      X-USER-AGENT: r-curl/3.2 crul/0.6.1.9100 rOpenSci(rcrossref/0.8.5.9110) (mailto:<crossref_email>)
+  response:
+    status:
+      status_code: '200'
+      message: OK
+      explanation: Request fulfilled, document follows
+    headers:
+      status: HTTP/1.1 200 OK
+      content-type: application/json;charset=UTF-8
+      vary: Accept
+      access-control-allow-origin: '*'
+      access-control-allow-headers: X-Requested-With
+      content-length: '150'
+      server: http-kit
+      date: Fri, 07 Dec 2018 22:43:25 GMT
+      x-rate-limit-limit: '50'
+      x-rate-limit-interval: 1s
+      connection: close
+    body:
+      encoding: ASCII-8BIT
+      string: eyJzdGF0dXMiOiJvayIsIm1lc3NhZ2UtdHlwZSI6IndvcmstYWdlbmN5IiwibWVzc2FnZS12ZXJzaW9uIjoiMS4wLjAiLCJtZXNzYWdlIjp7IkRPSSI6IjEwLjMyMzNcL2lzdS0xNTA3ODAiLCJhZ2VuY3kiOnsiaWQiOiJtZWRyYSIsImxhYmVsIjoibUVEUkEifX19
+  recorded_at: 2018-12-07 22:43:26 GMT
+  recorded_with: vcr/0.2.0.9101, webmockr/0.2.9.9311
+- request:
+    method: get
+    uri: https://doi.org/10.3233/ISU-150780
+    body:
+      encoding: ''
+      string: ''
+    headers:
+      Accept-Encoding: gzip, deflate
+      User-Agent: r-curl/3.2 crul/0.6.1.9100 rOpenSci(rcrossref/0.8.5.9110) (mailto:<crossref_email>)
+      X-USER-AGENT: r-curl/3.2 crul/0.6.1.9100 rOpenSci(rcrossref/0.8.5.9110) (mailto:<crossref_email>)
+      Accept: application/vnd.medra.onixdoi+xml
+  response:
+    status:
+      status_code: '200'
+      message: OK
+      explanation: Request fulfilled, document follows
+    headers:
+      status: HTTP/1.1 200 OK
+      date: Fri, 07 Dec 2018 22:43:26 GMT
+      server: Apache-Coyote/1.1
+      cache-control: no-transform, max-age=60
+      access-control-allow-origin: '*'
+      vary: Accept
+      content-type: application/vnd.medra.onixdoi+xml;charset=UTF-8
+      transfer-encoding: chunked
+    body:
+      encoding: ASCII-8BIT
+      string: PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPE9OSVhET0lTZXJpYWxBcnRpY2xlV29ya1JlZ2lzdHJhdGlvbk1lc3NhZ2UgeG1sbnM9Imh0dHA6Ly93d3cuZWRpdGV1ci5vcmcvb25peC9ET0lNZXRhZGF0YS8yLjAiCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIHhtbG5zOmNsPSJodHRwOi8vd3d3Lm1lZHJhLm9yZy9ET0lNZXRhZGF0YS8yLjAvQ2l0YXRpb25zIj4KICAgPEhlYWRlcj4KICAgICAgPEZyb21Db21wYW55Pm1FRFJBPC9Gcm9tQ29tcGFueT4KICAgICAgPEZyb21FbWFpbD5tZWRyYUBtZWRyYS5vcmc8L0Zyb21FbWFpbD4KICAgICAgPFRvQ29tcGFueT5QdWJsaWNTZXJ2aWNlPC9Ub0NvbXBhbnk+CiAgICAgIDxTZW50RGF0ZT4yMDE4MTIwNzIzNDMyNjwvU2VudERhdGU+CiAgIDwvSGVhZGVyPgogICA8RE9JU2VyaWFsQXJ0aWNsZVdvcms+CiAgICAgIDxOb3RpZmljYXRpb25UeXBlPjA2PC9Ob3RpZmljYXRpb25UeXBlPgogICAgICA8RE9JPjEwLjMyMzMvSVNVLTE1MDc4MDwvRE9JPgogICAgICA8RE9JV2Vic2l0ZUxpbms+aHR0cDovL3d3dy5tZWRyYS5vcmcvc2VydmxldC9hbGlhc1Jlc29sdmVyP2FsaWFzPWlvc3ByZXNzJmFtcDtkb2k9MTAuMzIzMy9JU1UtMTUwNzgwPC9ET0lXZWJzaXRlTGluaz4KICAgICAgPERPSVN0cnVjdHVyYWxUeXBlPkFic3RyYWN0aW9uPC9ET0lTdHJ1Y3R1cmFsVHlwZT4KICAgICAgPERPSU1vZGU+QWJzdHJhY3Q8L0RPSU1vZGU+CiAgICAgIDxSZWdpc3RyYW50TmFtZT5EZWZhdWx0IFJlZ2lzdHJhbnQ8L1JlZ2lzdHJhbnROYW1lPgogICAgICA8UmVnaXN0cmF0aW9uQXV0aG9yaXR5Pm1FRFJBPC9SZWdpc3RyYXRpb25BdXRob3JpdHk+CiAgICAgIDxXb3JrSWRlbnRpZmllcj4KICAgICAgICAgPFdvcmtJRFR5cGU+MDE8L1dvcmtJRFR5cGU+CiAgICAgICAgIDxJRFZhbHVlPklTVTc4MDwvSURWYWx1ZT4KICAgICAgPC9Xb3JrSWRlbnRpZmllcj4KICAgICAgPFNlcmlhbFB1YmxpY2F0aW9uPgogICAgICAgICA8U2VyaWFsV29yaz4KICAgICAgICAgICAgPFdvcmtJZGVudGlmaWVyPgogICAgICAgICAgICAgICA8V29ya0lEVHlwZT4xNjwvV29ya0lEVHlwZT4KICAgICAgICAgICAgICAgPElEVmFsdWU+MDE2Ny01MjY1PC9JRFZhbHVlPgogICAgICAgICAgICA8L1dvcmtJZGVudGlmaWVyPgogICAgICAgICAgICA8VGl0bGU+CiAgICAgICAgICAgICAgIDxUaXRsZVR5cGU+MDU8L1RpdGxlVHlwZT4KICAgICAgICAgICAgICAgPFRpdGxlVGV4dD5JU1U8L1RpdGxlVGV4dD4KICAgICAgICAgICAgPC9UaXRsZT4KICAgICAgICAgICAgPFRpdGxlPgogICAgICAgICAgICAgICA8VGl0bGVUeXBlPjAxPC9UaXRsZVR5cGU+CiAgICAgICAgICAgICAgIDxUaXRsZVRleHQ+SW5mb3JtYXRpb24gU2VydmljZXMgJmFtcDsgVXNlPC9UaXRsZVRleHQ+CiAgICAgICAgICAgIDwvVGl0bGU+CiAgICAgICAgICAgIDxQdWJsaXNoZXI+CiAgICAgICAgICAgICAgIDxQdWJsaXNoaW5nUm9sZT4wMTwvUHVibGlzaGluZ1JvbGU+CiAgICAgICAgICAgICAgIDxQdWJsaXNoZXJOYW1lPklPUyBQcmVzczwvUHVibGlzaGVyTmFtZT4KICAgICAgICAgICAgPC9QdWJsaXNoZXI+CiAgICAgICAgICAgIDxDb3VudHJ5T2ZQdWJsaWNhdGlvbj5OTDwvQ291bnRyeU9mUHVibGljYXRpb24+CiAgICAgICAgIDwvU2VyaWFsV29yaz4KICAgICAgICAgPFNlcmlhbFZlcnNpb24+CiAgICAgICAgICAgIDxQcm9kdWN0SWRlbnRpZmllcj4KICAgICAgICAgICAgICAgPFByb2R1Y3RJRFR5cGU+MDc8L1Byb2R1Y3RJRFR5cGU+CiAgICAgICAgICAgICAgIDxJRFZhbHVlPjE4NzU4Nzg5PC9JRFZhbHVlPgogICAgICAgICAgICA8L1Byb2R1Y3RJZGVudGlmaWVyPgogICAgICAgICAgICA8UHJvZHVjdEZvcm0+SkQ8L1Byb2R1Y3RGb3JtPgogICAgICAgICA8L1NlcmlhbFZlcnNpb24+CiAgICAgICAgIDxTZXJpYWxWZXJzaW9uPgogICAgICAgICAgICA8UHJvZHVjdElkZW50aWZpZXI+CiAgICAgICAgICAgICAgIDxQcm9kdWN0SURUeXBlPjA3PC9Qcm9kdWN0SURUeXBlPgogICAgICAgICAgICAgICA8SURWYWx1ZT4wMTY3NTI2NTwvSURWYWx1ZT4KICAgICAgICAgICAgPC9Qcm9kdWN0SWRlbnRpZmllcj4KICAgICAgICAgICAgPFByb2R1Y3RGb3JtPkpCPC9Qcm9kdWN0Rm9ybT4KICAgICAgICAgPC9TZXJpYWxWZXJzaW9uPgogICAgICA8L1NlcmlhbFB1YmxpY2F0aW9uPgogICAgICA8Sm91cm5hbElzc3VlPgogICAgICAgICA8Sm91cm5hbFZvbHVtZU51bWJlcj4zNTwvSm91cm5hbFZvbHVtZU51bWJlcj4KICAgICAgICAgPEpvdXJuYWxJc3N1ZU51bWJlcj4zPC9Kb3VybmFsSXNzdWVOdW1iZXI+CiAgICAgICAgIDxKb3VybmFsSXNzdWVEZXNpZ25hdGlvbj5BUEUgMjAxNSDigJMgV2ViMjU6IFRoZSBSb2FkIEFoZWFkOyBFeHBsb3JpbmcgdGhlIEZ1dHVyZSBvZiBTY2hvbGFybHkgQ29tbXVuaWNhdGlvbiAmYW1wOyBBY2FkZW1pYyBQdWJsaXNoaW5nLiBUaGUgMTB0aCBJbnRlcm5hdGlvbmFsIEFjYWRlbWljIFB1Ymxpc2hpbmcgaW4gRXVyb3BlIENvbmZlcmVuY2UgMjDigJMyMSBKYW51YXJ5IDIwMTUsIEJlcmxpbjwvSm91cm5hbElzc3VlRGVzaWduYXRpb24+CiAgICAgICAgIDxKb3VybmFsSXNzdWVEYXRlPgogICAgICAgICAgICA8RGF0ZUZvcm1hdD4wMDwvRGF0ZUZvcm1hdD4KICAgICAgICAgICAgPERhdGU+MjAxNTEyMTg8L0RhdGU+CiAgICAgICAgIDwvSm91cm5hbElzc3VlRGF0ZT4KICAgICAgPC9Kb3VybmFsSXNzdWU+CiAgICAgIDxDb250ZW50SXRlbT4KICAgICAgICAgPFRleHRJdGVtPgogICAgICAgICAgICA8VGV4dEl0ZW1UeXBlPjExPC9UZXh0SXRlbVR5cGU+CiAgICAgICAgICAgIDxQYWdlUnVuPgogICAgICAgICAgICAgICA8Rmlyc3RQYWdlTnVtYmVyPjE4NTwvRmlyc3RQYWdlTnVtYmVyPgogICAgICAgICAgICAgICA8TGFzdFBhZ2VOdW1iZXI+MTg4PC9MYXN0UGFnZU51bWJlcj4KICAgICAgICAgICAgPC9QYWdlUnVuPgogICAgICAgICA8L1RleHRJdGVtPgogICAgICAgICA8VGl0bGU+CiAgICAgICAgICAgIDxUaXRsZVR5cGU+MDE8L1RpdGxlVHlwZT4KICAgICAgICAgICAgPFRpdGxlVGV4dD5EYXRhIGFjY2Vzc2liaWxpdHkgYW5kIHJlcHJvZHVjaWJpbGl0eTogTW92aW5nIHRvIHRyYW5zcGFyZW50IHB1Ymxpc2hpbmcgaW4gdGhlwqBiaW9zY2llbmNlczwvVGl0bGVUZXh0PgogICAgICAgICA8L1RpdGxlPgogICAgICAgICA8Q29udHJpYnV0b3I+CiAgICAgICAgICAgIDxTZXF1ZW5jZU51bWJlcj4xPC9TZXF1ZW5jZU51bWJlcj4KICAgICAgICAgICAgPENvbnRyaWJ1dG9yUm9sZT5BMDE8L0NvbnRyaWJ1dG9yUm9sZT4KICAgICAgICAgICAgPFBlcnNvbk5hbWU+QmVybmQgUHVsdmVyZXI8L1BlcnNvbk5hbWU+CiAgICAgICAgICAgIDxQZXJzb25OYW1lSW52ZXJ0ZWQ+UHVsdmVyZXIsIEJlcm5kPC9QZXJzb25OYW1lSW52ZXJ0ZWQ+CiAgICAgICAgICAgIDxOYW1lc0JlZm9yZUtleT5CZXJuZDwvTmFtZXNCZWZvcmVLZXk+CiAgICAgICAgICAgIDxLZXlOYW1lcz5QdWx2ZXJlcjwvS2V5TmFtZXM+CiAgICAgICAgICAgIDxQcm9mZXNzaW9uYWxBZmZpbGlhdGlvbj4KICAgICAgICAgICAgICAgPEFmZmlsaWF0aW9uPkUtbWFpbDrCoGJlcm5kLnB1bHZlcmVyQGVtYm8ub3JnPC9BZmZpbGlhdGlvbj4KICAgICAgICAgICAgPC9Qcm9mZXNzaW9uYWxBZmZpbGlhdGlvbj4KICAgICAgICAgPC9Db250cmlidXRvcj4KICAgICAgICAgPFN1YmplY3Q+CiAgICAgICAgICAgIDxTdWJqZWN0U2NoZW1lSWRlbnRpZmllcj4yMDwvU3ViamVjdFNjaGVtZUlkZW50aWZpZXI+CiAgICAgICAgICAgIDxTdWJqZWN0SGVhZGluZ1RleHQ+UmVzZWFyY2ggQXJ0aWNsZTwvU3ViamVjdEhlYWRpbmdUZXh0PgogICAgICAgICA8L1N1YmplY3Q+CiAgICAgICAgIDxQdWJsaWNhdGlvbkRhdGU+MjAxNTEyMTg8L1B1YmxpY2F0aW9uRGF0ZT4KICAgICAgICAgPENvcHlyaWdodFN0YXRlbWVudD4KICAgICAgICAgICAgPENvcHlyaWdodFllYXI+MjAxNTwvQ29weXJpZ2h0WWVhcj4KICAgICAgICAgICAgPENvcHlyaWdodE93bmVyPgogICAgICAgICAgICAgICA8Q29ycG9yYXRlTmFtZT5JT1MgUHJlc3MgYW5kIHRoZSBhdXRob3JzLjwvQ29ycG9yYXRlTmFtZT4KICAgICAgICAgICAgPC9Db3B5cmlnaHRPd25lcj4KICAgICAgICAgPC9Db3B5cmlnaHRTdGF0ZW1lbnQ+CiAgICAgIDwvQ29udGVudEl0ZW0+CiAgIDwvRE9JU2VyaWFsQXJ0aWNsZVdvcms+CjwvT05JWERPSVNlcmlhbEFydGljbGVXb3JrUmVnaXN0cmF0aW9uTWVzc2FnZT4=
+  recorded_at: 2018-12-07 22:43:26 GMT
+  recorded_with: vcr/0.2.0.9101, webmockr/0.2.9.9311

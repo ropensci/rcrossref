@@ -1,0 +1,346 @@
+http_interactions:
+- request:
+    method: get
+    uri: https://api.crossref.org/journals/blblbl
+    body:
+      encoding: ''
+      string: ''
+    headers:
+      Accept-Encoding: gzip, deflate
+      Accept: application/json, text/xml, application/xml, */*
+      User-Agent: r-curl/3.2 crul/0.6.1.9100 rOpenSci(rcrossref/0.8.5.9110) (mailto:<crossref_email>)
+      X-USER-AGENT: r-curl/3.2 crul/0.6.1.9100 rOpenSci(rcrossref/0.8.5.9110) (mailto:<crossref_email>)
+  response:
+    status:
+      status_code: '404'
+      message: Not Found
+      explanation: Nothing matches the given URI
+    headers:
+      status: HTTP/1.1 404 Not Found
+      content-type: text/plain
+      access-control-allow-origin: '*'
+      access-control-allow-headers: X-Requested-With
+      content-length: '19'
+      server: http-kit
+      date: Fri, 07 Dec 2018 22:33:17 GMT
+      x-rate-limit-limit: '50'
+      x-rate-limit-interval: 1s
+      connection: close
+    body:
+      encoding: UTF-8
+      string: Resource not found.
+  recorded_at: 2018-12-07 22:33:20 GMT
+  recorded_with: vcr/0.2.0.9101, webmockr/0.2.9.9311
+- request:
+    method: get
+    uri: https://api.crossref.org/journals/1932-6203
+    body:
+      encoding: ''
+      string: ''
+    headers:
+      Accept-Encoding: gzip, deflate
+      Accept: application/json, text/xml, application/xml, */*
+      User-Agent: r-curl/3.2 crul/0.6.1.9100 rOpenSci(rcrossref/0.8.5.9110) (mailto:<crossref_email>)
+      X-USER-AGENT: r-curl/3.2 crul/0.6.1.9100 rOpenSci(rcrossref/0.8.5.9110) (mailto:<crossref_email>)
+  response:
+    status:
+      status_code: '200'
+      message: OK
+      explanation: Request fulfilled, document follows
+    headers:
+      status: HTTP/1.1 200 OK
+      content-type: application/json;charset=UTF-8
+      vary: Accept
+      access-control-allow-origin: '*'
+      access-control-allow-headers: X-Requested-With
+      content-length: '3404'
+      server: http-kit
+      date: Fri, 07 Dec 2018 22:33:17 GMT
+      x-rate-limit-limit: '50'
+      x-rate-limit-interval: 1s
+      connection: close
+    body:
+      encoding: UTF-8
+      string: '{"status":"ok","message-type":"journal","message-version":"1.0.0","message":{"last-status-check-time":1544158538912,"counts":{"total-dois":210211,"current-dois":61713,"backfile-dois":148498},"breakdowns":{"dois-by-issued-year":[[2013,32992],[2014,31880],[2015,29815],[2012,24111],[2016,23022],[2017,21150],[2018,17541],[2011,14047],[2010,6924],[2009,4542],[2008,2819],[2007,1230],[2006,138]]},"publisher":"Public
+        Library of Science","coverage":{"affiliations-current":0.0,"similarity-checking-current":0.9856756329536438,"funders-backfile":0.0,"licenses-backfile":0.9952457547187805,"funders-current":0.5805745720863342,"affiliations-backfile":0.0,"resource-links-backfile":0.0,"orcids-backfile":0.0,"update-policies-current":1.0,"open-references-backfile":1.0,"orcids-current":0.5733799934387207,"similarity-checking-backfile":0.8827795386314392,"references-backfile":0.8827795386314392,"award-numbers-backfile":0.0,"update-policies-backfile":0.9999326467514038,"licenses-current":0.9856756329536438,"award-numbers-current":0.4930403530597687,"abstracts-backfile":0.0,"resource-links-current":0.0,"abstracts-current":0.0,"open-references-current":1.0,"references-current":0.9856756329536438},"title":"PLoS
+        ONE","subjects":[{"name":"General Agricultural and Biological Sciences","ASJC":1100},{"name":"General
+        Biochemistry, Genetics and Molecular Biology","ASJC":1300},{"name":"General
+        Medicine","ASJC":2700}],"coverage-type":{"all":{"last-status-check-time":1544158536155,"affiliations":0.0,"abstracts":0.0,"orcids":0.1683308631181717,"licenses":0.9924361705780029,"references":0.9129874110221863,"funders":0.17044302821159363,"similarity-checking":0.9129874110221863,"award-numbers":0.14474503695964813,"update-policies":0.9999524354934692,"resource-links":0.0,"open-references":1.0},"backfile":{"last-status-check-time":1544158535230,"affiliations":0.0,"abstracts":0.0,"orcids":0.0,"licenses":0.9952457547187805,"references":0.8827795386314392,"funders":0.0,"similarity-checking":0.8827795386314392,"award-numbers":0.0,"update-policies":0.9999326467514038,"resource-links":0.0,"open-references":1.0},"current":{"last-status-check-time":1544158534287,"affiliations":0.0,"abstracts":0.0,"orcids":0.5733799934387207,"licenses":0.9856756329536438,"references":0.9856756329536438,"funders":0.5805745720863342,"similarity-checking":0.9856756329536438,"award-numbers":0.4930403530597687,"update-policies":1.0,"resource-links":0.0,"open-references":1.0}},"flags":{"deposits-abstracts-current":false,"deposits-orcids-current":true,"deposits":true,"deposits-affiliations-backfile":false,"deposits-update-policies-backfile":true,"deposits-similarity-checking-backfile":true,"deposits-award-numbers-current":true,"deposits-resource-links-current":false,"deposits-articles":true,"deposits-affiliations-current":false,"deposits-funders-current":true,"deposits-references-backfile":true,"deposits-abstracts-backfile":false,"deposits-licenses-backfile":true,"deposits-award-numbers-backfile":false,"deposits-open-references-backfile":true,"deposits-open-references-current":true,"deposits-references-current":true,"deposits-resource-links-backfile":false,"deposits-orcids-backfile":false,"deposits-funders-backfile":false,"deposits-update-policies-current":true,"deposits-similarity-checking-current":true,"deposits-licenses-current":true},"ISSN":["1932-6203"],"issn-type":[{"value":"1932-6203","type":"electronic"}]}}'
+  recorded_at: 2018-12-07 22:33:20 GMT
+  recorded_with: vcr/0.2.0.9101, webmockr/0.2.9.9311
+- request:
+    method: get
+    uri: https://api.crossref.org/journals/blblbl
+    body:
+      encoding: ''
+      string: ''
+    headers:
+      Accept-Encoding: gzip, deflate
+      Accept: application/json, text/xml, application/xml, */*
+      User-Agent: r-curl/3.2 crul/0.6.1.9100 rOpenSci(rcrossref/0.8.5.9110) (mailto:<crossref_email>)
+      X-USER-AGENT: r-curl/3.2 crul/0.6.1.9100 rOpenSci(rcrossref/0.8.5.9110) (mailto:<crossref_email>)
+  response:
+    status:
+      status_code: '404'
+      message: Not Found
+      explanation: Nothing matches the given URI
+    headers:
+      status: HTTP/1.1 404 Not Found
+      content-type: text/plain
+      access-control-allow-origin: '*'
+      access-control-allow-headers: X-Requested-With
+      content-length: '19'
+      server: http-kit
+      date: Fri, 07 Dec 2018 22:33:18 GMT
+      x-rate-limit-limit: '50'
+      x-rate-limit-interval: 1s
+      connection: close
+    body:
+      encoding: UTF-8
+      string: Resource not found.
+  recorded_at: 2018-12-07 22:33:20 GMT
+  recorded_with: vcr/0.2.0.9101, webmockr/0.2.9.9311
+- request:
+    method: get
+    uri: https://api.crossref.org/journals/blblbl
+    body:
+      encoding: ''
+      string: ''
+    headers:
+      Accept-Encoding: gzip, deflate
+      Accept: application/json, text/xml, application/xml, */*
+      User-Agent: r-curl/3.2 crul/0.6.1.9100 rOpenSci(rcrossref/0.8.5.9110) (mailto:<crossref_email>)
+      X-USER-AGENT: r-curl/3.2 crul/0.6.1.9100 rOpenSci(rcrossref/0.8.5.9110) (mailto:<crossref_email>)
+  response:
+    status:
+      status_code: '404'
+      message: Not Found
+      explanation: Nothing matches the given URI
+    headers:
+      status: HTTP/1.1 404 Not Found
+      content-type: text/plain
+      access-control-allow-origin: '*'
+      access-control-allow-headers: X-Requested-With
+      content-length: '19'
+      server: http-kit
+      date: Fri, 07 Dec 2018 22:33:18 GMT
+      x-rate-limit-limit: '50'
+      x-rate-limit-interval: 1s
+      connection: close
+    body:
+      encoding: UTF-8
+      string: Resource not found.
+  recorded_at: 2018-12-07 22:33:20 GMT
+  recorded_with: vcr/0.2.0.9101, webmockr/0.2.9.9311
+- request:
+    method: get
+    uri: https://api.crossref.org/journals/1932-6203
+    body:
+      encoding: ''
+      string: ''
+    headers:
+      Accept-Encoding: gzip, deflate
+      Accept: application/json, text/xml, application/xml, */*
+      User-Agent: r-curl/3.2 crul/0.6.1.9100 rOpenSci(rcrossref/0.8.5.9110) (mailto:<crossref_email>)
+      X-USER-AGENT: r-curl/3.2 crul/0.6.1.9100 rOpenSci(rcrossref/0.8.5.9110) (mailto:<crossref_email>)
+  response:
+    status:
+      status_code: '200'
+      message: OK
+      explanation: Request fulfilled, document follows
+    headers:
+      status: HTTP/1.1 200 OK
+      content-type: application/json;charset=UTF-8
+      vary: Accept
+      access-control-allow-origin: '*'
+      access-control-allow-headers: X-Requested-With
+      content-length: '3404'
+      server: http-kit
+      date: Fri, 07 Dec 2018 22:33:18 GMT
+      x-rate-limit-limit: '50'
+      x-rate-limit-interval: 1s
+      connection: close
+    body:
+      encoding: UTF-8
+      string: '{"status":"ok","message-type":"journal","message-version":"1.0.0","message":{"last-status-check-time":1544158538912,"counts":{"total-dois":210211,"current-dois":61713,"backfile-dois":148498},"breakdowns":{"dois-by-issued-year":[[2013,32992],[2014,31880],[2015,29815],[2012,24111],[2016,23022],[2017,21150],[2018,17541],[2011,14047],[2010,6924],[2009,4542],[2008,2819],[2007,1230],[2006,138]]},"publisher":"Public
+        Library of Science","coverage":{"affiliations-current":0.0,"similarity-checking-current":0.9856756329536438,"funders-backfile":0.0,"licenses-backfile":0.9952457547187805,"funders-current":0.5805745720863342,"affiliations-backfile":0.0,"resource-links-backfile":0.0,"orcids-backfile":0.0,"update-policies-current":1.0,"open-references-backfile":1.0,"orcids-current":0.5733799934387207,"similarity-checking-backfile":0.8827795386314392,"references-backfile":0.8827795386314392,"award-numbers-backfile":0.0,"update-policies-backfile":0.9999326467514038,"licenses-current":0.9856756329536438,"award-numbers-current":0.4930403530597687,"abstracts-backfile":0.0,"resource-links-current":0.0,"abstracts-current":0.0,"open-references-current":1.0,"references-current":0.9856756329536438},"title":"PLoS
+        ONE","subjects":[{"name":"General Agricultural and Biological Sciences","ASJC":1100},{"name":"General
+        Biochemistry, Genetics and Molecular Biology","ASJC":1300},{"name":"General
+        Medicine","ASJC":2700}],"coverage-type":{"all":{"last-status-check-time":1544158536155,"affiliations":0.0,"abstracts":0.0,"orcids":0.1683308631181717,"licenses":0.9924361705780029,"references":0.9129874110221863,"funders":0.17044302821159363,"similarity-checking":0.9129874110221863,"award-numbers":0.14474503695964813,"update-policies":0.9999524354934692,"resource-links":0.0,"open-references":1.0},"backfile":{"last-status-check-time":1544158535230,"affiliations":0.0,"abstracts":0.0,"orcids":0.0,"licenses":0.9952457547187805,"references":0.8827795386314392,"funders":0.0,"similarity-checking":0.8827795386314392,"award-numbers":0.0,"update-policies":0.9999326467514038,"resource-links":0.0,"open-references":1.0},"current":{"last-status-check-time":1544158534287,"affiliations":0.0,"abstracts":0.0,"orcids":0.5733799934387207,"licenses":0.9856756329536438,"references":0.9856756329536438,"funders":0.5805745720863342,"similarity-checking":0.9856756329536438,"award-numbers":0.4930403530597687,"update-policies":1.0,"resource-links":0.0,"open-references":1.0}},"flags":{"deposits-abstracts-current":false,"deposits-orcids-current":true,"deposits":true,"deposits-affiliations-backfile":false,"deposits-update-policies-backfile":true,"deposits-similarity-checking-backfile":true,"deposits-award-numbers-current":true,"deposits-resource-links-current":false,"deposits-articles":true,"deposits-affiliations-current":false,"deposits-funders-current":true,"deposits-references-backfile":true,"deposits-abstracts-backfile":false,"deposits-licenses-backfile":true,"deposits-award-numbers-backfile":false,"deposits-open-references-backfile":true,"deposits-open-references-current":true,"deposits-references-current":true,"deposits-resource-links-backfile":false,"deposits-orcids-backfile":false,"deposits-funders-backfile":false,"deposits-update-policies-current":true,"deposits-similarity-checking-current":true,"deposits-licenses-current":true},"ISSN":["1932-6203"],"issn-type":[{"value":"1932-6203","type":"electronic"}]}}'
+  recorded_at: 2018-12-07 22:33:20 GMT
+  recorded_with: vcr/0.2.0.9101, webmockr/0.2.9.9311
+- request:
+    method: get
+    uri: https://api.crossref.org/journals/1932-6203
+    body:
+      encoding: ''
+      string: ''
+    headers:
+      Accept-Encoding: gzip, deflate
+      Accept: application/json, text/xml, application/xml, */*
+      User-Agent: r-curl/3.2 crul/0.6.1.9100 rOpenSci(rcrossref/0.8.5.9110) (mailto:<crossref_email>)
+      X-USER-AGENT: r-curl/3.2 crul/0.6.1.9100 rOpenSci(rcrossref/0.8.5.9110) (mailto:<crossref_email>)
+  response:
+    status:
+      status_code: '200'
+      message: OK
+      explanation: Request fulfilled, document follows
+    headers:
+      status: HTTP/1.1 200 OK
+      content-type: application/json;charset=UTF-8
+      vary: Accept
+      access-control-allow-origin: '*'
+      access-control-allow-headers: X-Requested-With
+      content-length: '3404'
+      server: http-kit
+      date: Fri, 07 Dec 2018 22:33:19 GMT
+      x-rate-limit-limit: '50'
+      x-rate-limit-interval: 1s
+      connection: close
+    body:
+      encoding: UTF-8
+      string: '{"status":"ok","message-type":"journal","message-version":"1.0.0","message":{"last-status-check-time":1544158538912,"counts":{"total-dois":210211,"current-dois":61713,"backfile-dois":148498},"breakdowns":{"dois-by-issued-year":[[2013,32992],[2014,31880],[2015,29815],[2012,24111],[2016,23022],[2017,21150],[2018,17541],[2011,14047],[2010,6924],[2009,4542],[2008,2819],[2007,1230],[2006,138]]},"publisher":"Public
+        Library of Science","coverage":{"affiliations-current":0.0,"similarity-checking-current":0.9856756329536438,"funders-backfile":0.0,"licenses-backfile":0.9952457547187805,"funders-current":0.5805745720863342,"affiliations-backfile":0.0,"resource-links-backfile":0.0,"orcids-backfile":0.0,"update-policies-current":1.0,"open-references-backfile":1.0,"orcids-current":0.5733799934387207,"similarity-checking-backfile":0.8827795386314392,"references-backfile":0.8827795386314392,"award-numbers-backfile":0.0,"update-policies-backfile":0.9999326467514038,"licenses-current":0.9856756329536438,"award-numbers-current":0.4930403530597687,"abstracts-backfile":0.0,"resource-links-current":0.0,"abstracts-current":0.0,"open-references-current":1.0,"references-current":0.9856756329536438},"title":"PLoS
+        ONE","subjects":[{"name":"General Agricultural and Biological Sciences","ASJC":1100},{"name":"General
+        Biochemistry, Genetics and Molecular Biology","ASJC":1300},{"name":"General
+        Medicine","ASJC":2700}],"coverage-type":{"all":{"last-status-check-time":1544158536155,"affiliations":0.0,"abstracts":0.0,"orcids":0.1683308631181717,"licenses":0.9924361705780029,"references":0.9129874110221863,"funders":0.17044302821159363,"similarity-checking":0.9129874110221863,"award-numbers":0.14474503695964813,"update-policies":0.9999524354934692,"resource-links":0.0,"open-references":1.0},"backfile":{"last-status-check-time":1544158535230,"affiliations":0.0,"abstracts":0.0,"orcids":0.0,"licenses":0.9952457547187805,"references":0.8827795386314392,"funders":0.0,"similarity-checking":0.8827795386314392,"award-numbers":0.0,"update-policies":0.9999326467514038,"resource-links":0.0,"open-references":1.0},"current":{"last-status-check-time":1544158534287,"affiliations":0.0,"abstracts":0.0,"orcids":0.5733799934387207,"licenses":0.9856756329536438,"references":0.9856756329536438,"funders":0.5805745720863342,"similarity-checking":0.9856756329536438,"award-numbers":0.4930403530597687,"update-policies":1.0,"resource-links":0.0,"open-references":1.0}},"flags":{"deposits-abstracts-current":false,"deposits-orcids-current":true,"deposits":true,"deposits-affiliations-backfile":false,"deposits-update-policies-backfile":true,"deposits-similarity-checking-backfile":true,"deposits-award-numbers-current":true,"deposits-resource-links-current":false,"deposits-articles":true,"deposits-affiliations-current":false,"deposits-funders-current":true,"deposits-references-backfile":true,"deposits-abstracts-backfile":false,"deposits-licenses-backfile":true,"deposits-award-numbers-backfile":false,"deposits-open-references-backfile":true,"deposits-open-references-current":true,"deposits-references-current":true,"deposits-resource-links-backfile":false,"deposits-orcids-backfile":false,"deposits-funders-backfile":false,"deposits-update-policies-current":true,"deposits-similarity-checking-current":true,"deposits-licenses-current":true},"ISSN":["1932-6203"],"issn-type":[{"value":"1932-6203","type":"electronic"}]}}'
+  recorded_at: 2018-12-07 22:33:20 GMT
+  recorded_with: vcr/0.2.0.9101, webmockr/0.2.9.9311
+- request:
+    method: get
+    uri: https://api.crossref.org/journals/blblbl
+    body:
+      encoding: ''
+      string: ''
+    headers:
+      Accept-Encoding: gzip, deflate
+      Accept: application/json, text/xml, application/xml, */*
+      User-Agent: r-curl/3.2 crul/0.6.1.9100 rOpenSci(rcrossref/0.8.5.9110) (mailto:<crossref_email>)
+      X-USER-AGENT: r-curl/3.2 crul/0.6.1.9100 rOpenSci(rcrossref/0.8.5.9110) (mailto:<crossref_email>)
+  response:
+    status:
+      status_code: '404'
+      message: Not Found
+      explanation: Nothing matches the given URI
+    headers:
+      status: HTTP/1.1 404 Not Found
+      content-type: text/plain
+      access-control-allow-origin: '*'
+      access-control-allow-headers: X-Requested-With
+      content-length: '19'
+      server: http-kit
+      date: Fri, 07 Dec 2018 22:33:19 GMT
+      x-rate-limit-limit: '50'
+      x-rate-limit-interval: 1s
+      connection: close
+    body:
+      encoding: UTF-8
+      string: Resource not found.
+  recorded_at: 2018-12-07 22:33:20 GMT
+  recorded_with: vcr/0.2.0.9101, webmockr/0.2.9.9311
+- request:
+    method: get
+    uri: https://api.crossref.org/journals/blblbl
+    body:
+      encoding: ''
+      string: ''
+    headers:
+      Accept-Encoding: gzip, deflate
+      Accept: application/json, text/xml, application/xml, */*
+      User-Agent: r-curl/3.2 crul/0.6.1.9100 rOpenSci(rcrossref/0.8.5.9110) (mailto:<crossref_email>)
+      X-USER-AGENT: r-curl/3.2 crul/0.6.1.9100 rOpenSci(rcrossref/0.8.5.9110) (mailto:<crossref_email>)
+  response:
+    status:
+      status_code: '404'
+      message: Not Found
+      explanation: Nothing matches the given URI
+    headers:
+      status: HTTP/1.1 404 Not Found
+      content-type: text/plain
+      access-control-allow-origin: '*'
+      access-control-allow-headers: X-Requested-With
+      content-length: '19'
+      server: http-kit
+      date: Fri, 07 Dec 2018 22:33:19 GMT
+      x-rate-limit-limit: '50'
+      x-rate-limit-interval: 1s
+      connection: close
+    body:
+      encoding: UTF-8
+      string: Resource not found.
+  recorded_at: 2018-12-07 22:33:20 GMT
+  recorded_with: vcr/0.2.0.9101, webmockr/0.2.9.9311
+- request:
+    method: get
+    uri: https://api.crossref.org/journals/1932-6203
+    body:
+      encoding: ''
+      string: ''
+    headers:
+      Accept-Encoding: gzip, deflate
+      Accept: application/json, text/xml, application/xml, */*
+      User-Agent: r-curl/3.2 crul/0.6.1.9100 rOpenSci(rcrossref/0.8.5.9110) (mailto:<crossref_email>)
+      X-USER-AGENT: r-curl/3.2 crul/0.6.1.9100 rOpenSci(rcrossref/0.8.5.9110) (mailto:<crossref_email>)
+  response:
+    status:
+      status_code: '200'
+      message: OK
+      explanation: Request fulfilled, document follows
+    headers:
+      status: HTTP/1.1 200 OK
+      content-type: application/json;charset=UTF-8
+      vary: Accept
+      access-control-allow-origin: '*'
+      access-control-allow-headers: X-Requested-With
+      content-length: '3404'
+      server: http-kit
+      date: Fri, 07 Dec 2018 22:33:20 GMT
+      x-rate-limit-limit: '50'
+      x-rate-limit-interval: 1s
+      connection: close
+    body:
+      encoding: UTF-8
+      string: '{"status":"ok","message-type":"journal","message-version":"1.0.0","message":{"last-status-check-time":1544158538912,"counts":{"total-dois":210211,"current-dois":61713,"backfile-dois":148498},"breakdowns":{"dois-by-issued-year":[[2013,32992],[2014,31880],[2015,29815],[2012,24111],[2016,23022],[2017,21150],[2018,17541],[2011,14047],[2010,6924],[2009,4542],[2008,2819],[2007,1230],[2006,138]]},"publisher":"Public
+        Library of Science","coverage":{"affiliations-current":0.0,"similarity-checking-current":0.9856756329536438,"funders-backfile":0.0,"licenses-backfile":0.9952457547187805,"funders-current":0.5805745720863342,"affiliations-backfile":0.0,"resource-links-backfile":0.0,"orcids-backfile":0.0,"update-policies-current":1.0,"open-references-backfile":1.0,"orcids-current":0.5733799934387207,"similarity-checking-backfile":0.8827795386314392,"references-backfile":0.8827795386314392,"award-numbers-backfile":0.0,"update-policies-backfile":0.9999326467514038,"licenses-current":0.9856756329536438,"award-numbers-current":0.4930403530597687,"abstracts-backfile":0.0,"resource-links-current":0.0,"abstracts-current":0.0,"open-references-current":1.0,"references-current":0.9856756329536438},"title":"PLoS
+        ONE","subjects":[{"name":"General Agricultural and Biological Sciences","ASJC":1100},{"name":"General
+        Biochemistry, Genetics and Molecular Biology","ASJC":1300},{"name":"General
+        Medicine","ASJC":2700}],"coverage-type":{"all":{"last-status-check-time":1544158536155,"affiliations":0.0,"abstracts":0.0,"orcids":0.1683308631181717,"licenses":0.9924361705780029,"references":0.9129874110221863,"funders":0.17044302821159363,"similarity-checking":0.9129874110221863,"award-numbers":0.14474503695964813,"update-policies":0.9999524354934692,"resource-links":0.0,"open-references":1.0},"backfile":{"last-status-check-time":1544158535230,"affiliations":0.0,"abstracts":0.0,"orcids":0.0,"licenses":0.9952457547187805,"references":0.8827795386314392,"funders":0.0,"similarity-checking":0.8827795386314392,"award-numbers":0.0,"update-policies":0.9999326467514038,"resource-links":0.0,"open-references":1.0},"current":{"last-status-check-time":1544158534287,"affiliations":0.0,"abstracts":0.0,"orcids":0.5733799934387207,"licenses":0.9856756329536438,"references":0.9856756329536438,"funders":0.5805745720863342,"similarity-checking":0.9856756329536438,"award-numbers":0.4930403530597687,"update-policies":1.0,"resource-links":0.0,"open-references":1.0}},"flags":{"deposits-abstracts-current":false,"deposits-orcids-current":true,"deposits":true,"deposits-affiliations-backfile":false,"deposits-update-policies-backfile":true,"deposits-similarity-checking-backfile":true,"deposits-award-numbers-current":true,"deposits-resource-links-current":false,"deposits-articles":true,"deposits-affiliations-current":false,"deposits-funders-current":true,"deposits-references-backfile":true,"deposits-abstracts-backfile":false,"deposits-licenses-backfile":true,"deposits-award-numbers-backfile":false,"deposits-open-references-backfile":true,"deposits-open-references-current":true,"deposits-references-current":true,"deposits-resource-links-backfile":false,"deposits-orcids-backfile":false,"deposits-funders-backfile":false,"deposits-update-policies-current":true,"deposits-similarity-checking-current":true,"deposits-licenses-current":true},"ISSN":["1932-6203"],"issn-type":[{"value":"1932-6203","type":"electronic"}]}}'
+  recorded_at: 2018-12-07 22:33:20 GMT
+  recorded_with: vcr/0.2.0.9101, webmockr/0.2.9.9311
+- request:
+    method: get
+    uri: https://api.crossref.org/journals/1932-6203
+    body:
+      encoding: ''
+      string: ''
+    headers:
+      Accept-Encoding: gzip, deflate
+      Accept: application/json, text/xml, application/xml, */*
+      User-Agent: r-curl/3.2 crul/0.6.1.9100 rOpenSci(rcrossref/0.8.5.9110) (mailto:<crossref_email>)
+      X-USER-AGENT: r-curl/3.2 crul/0.6.1.9100 rOpenSci(rcrossref/0.8.5.9110) (mailto:<crossref_email>)
+  response:
+    status:
+      status_code: '200'
+      message: OK
+      explanation: Request fulfilled, document follows
+    headers:
+      status: HTTP/1.1 200 OK
+      content-type: application/json;charset=UTF-8
+      vary: Accept
+      access-control-allow-origin: '*'
+      access-control-allow-headers: X-Requested-With
+      content-length: '3404'
+      server: http-kit
+      date: Fri, 07 Dec 2018 22:33:20 GMT
+      x-rate-limit-limit: '50'
+      x-rate-limit-interval: 1s
+      connection: close
+    body:
+      encoding: UTF-8
+      string: '{"status":"ok","message-type":"journal","message-version":"1.0.0","message":{"last-status-check-time":1544158538912,"counts":{"total-dois":210211,"current-dois":61713,"backfile-dois":148498},"breakdowns":{"dois-by-issued-year":[[2013,32992],[2014,31880],[2015,29815],[2012,24111],[2016,23022],[2017,21150],[2018,17541],[2011,14047],[2010,6924],[2009,4542],[2008,2819],[2007,1230],[2006,138]]},"publisher":"Public
+        Library of Science","coverage":{"affiliations-current":0.0,"similarity-checking-current":0.9856756329536438,"funders-backfile":0.0,"licenses-backfile":0.9952457547187805,"funders-current":0.5805745720863342,"affiliations-backfile":0.0,"resource-links-backfile":0.0,"orcids-backfile":0.0,"update-policies-current":1.0,"open-references-backfile":1.0,"orcids-current":0.5733799934387207,"similarity-checking-backfile":0.8827795386314392,"references-backfile":0.8827795386314392,"award-numbers-backfile":0.0,"update-policies-backfile":0.9999326467514038,"licenses-current":0.9856756329536438,"award-numbers-current":0.4930403530597687,"abstracts-backfile":0.0,"resource-links-current":0.0,"abstracts-current":0.0,"open-references-current":1.0,"references-current":0.9856756329536438},"title":"PLoS
+        ONE","subjects":[{"name":"General Agricultural and Biological Sciences","ASJC":1100},{"name":"General
+        Biochemistry, Genetics and Molecular Biology","ASJC":1300},{"name":"General
+        Medicine","ASJC":2700}],"coverage-type":{"all":{"last-status-check-time":1544158536155,"affiliations":0.0,"abstracts":0.0,"orcids":0.1683308631181717,"licenses":0.9924361705780029,"references":0.9129874110221863,"funders":0.17044302821159363,"similarity-checking":0.9129874110221863,"award-numbers":0.14474503695964813,"update-policies":0.9999524354934692,"resource-links":0.0,"open-references":1.0},"backfile":{"last-status-check-time":1544158535230,"affiliations":0.0,"abstracts":0.0,"orcids":0.0,"licenses":0.9952457547187805,"references":0.8827795386314392,"funders":0.0,"similarity-checking":0.8827795386314392,"award-numbers":0.0,"update-policies":0.9999326467514038,"resource-links":0.0,"open-references":1.0},"current":{"last-status-check-time":1544158534287,"affiliations":0.0,"abstracts":0.0,"orcids":0.5733799934387207,"licenses":0.9856756329536438,"references":0.9856756329536438,"funders":0.5805745720863342,"similarity-checking":0.9856756329536438,"award-numbers":0.4930403530597687,"update-policies":1.0,"resource-links":0.0,"open-references":1.0}},"flags":{"deposits-abstracts-current":false,"deposits-orcids-current":true,"deposits":true,"deposits-affiliations-backfile":false,"deposits-update-policies-backfile":true,"deposits-similarity-checking-backfile":true,"deposits-award-numbers-current":true,"deposits-resource-links-current":false,"deposits-articles":true,"deposits-affiliations-current":false,"deposits-funders-current":true,"deposits-references-backfile":true,"deposits-abstracts-backfile":false,"deposits-licenses-backfile":true,"deposits-award-numbers-backfile":false,"deposits-open-references-backfile":true,"deposits-open-references-current":true,"deposits-references-current":true,"deposits-resource-links-backfile":false,"deposits-orcids-backfile":false,"deposits-funders-backfile":false,"deposits-update-policies-current":true,"deposits-similarity-checking-current":true,"deposits-licenses-current":true},"ISSN":["1932-6203"],"issn-type":[{"value":"1932-6203","type":"electronic"}]}}'
+  recorded_at: 2018-12-07 22:33:20 GMT
+  recorded_with: vcr/0.2.0.9101, webmockr/0.2.9.9311

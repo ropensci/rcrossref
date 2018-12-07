@@ -1,0 +1,33 @@
+http_interactions:
+- request:
+    method: get
+    uri: http://www.crossref.org/openurl/?id=doi%3A10.1371%2Fjournal.pone.004&pid=cboettig%40ropensci.org&noredirect=TRUE
+    body:
+      encoding: ''
+      string: ''
+    headers:
+      Accept-Encoding: gzip, deflate
+      Accept: application/json, text/xml, application/xml, */*
+      User-Agent: r-curl/3.2 crul/0.6.1.9100 rOpenSci(rcrossref/0.8.5.9110) (mailto:<crossref_email>)
+      X-USER-AGENT: r-curl/3.2 crul/0.6.1.9100 rOpenSci(rcrossref/0.8.5.9110) (mailto:<crossref_email>)
+  response:
+    status:
+      status_code: '200'
+      message: OK
+      explanation: Request fulfilled, document follows
+    headers:
+      status: HTTP/1.1 200 OK
+      server: Apache-Coyote/1.1
+      crossref-deployment-name: qs4-1
+      content-type: text/xml;charset=UTF-8
+      content-language: en-US
+      transfer-encoding: chunked
+      date: Fri, 07 Dec 2018 22:45:08 GMT
+      connection: close
+    body:
+      encoding: UTF-8
+      string: |-
+        <?xml version="1.0" encoding="UTF-8"?>
+        <crossref_result xmlns="http://www.crossref.org/qrschema/2.0" version="2.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.crossref.org/qrschema/2.0 https://www.crossref.org/schema/crossref_query_output2.0.xsd"><query_result><head><doi_batch_id>none</doi_batch_id></head><body><query status="unresolved" fl_count="0"><doi>10.1371/journal.pone.004</doi></query></body></query_result></crossref_result>
+  recorded_at: 2018-12-07 22:45:08 GMT
+  recorded_with: vcr/0.2.0.9101, webmockr/0.2.9.9311
