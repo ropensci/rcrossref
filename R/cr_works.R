@@ -82,6 +82,9 @@
 #' cr_works(query="ecology", sort='relevance', order="asc")
 #' res <- cr_works(query="ecology", sort='score', order="asc")
 #' res$data$score
+#' cr_works(query="ecology", sort='published')
+#' x=cr_works(query="ecology", sort='published-print')
+#' x=cr_works(query="ecology", sort='published-online')
 #'
 #' # Get a random number of results
 #' cr_works(sample=1)
@@ -236,10 +239,11 @@ parse_facets <- function(x){
 
 parse_works <- function(zzz){
   keys <- c('alternative-id','archive','container-title','created',
-            'deposited','DOI','funder','indexed','ISBN','ISSN','issue',
-            'issued','license', 'link','member','page','prefix','publisher',
-            'reference-count', 'score','source', 'subject',
-            'subtitle','title', 'type','update-policy','URL',
+            'deposited','published-print','published-online','DOI',
+            'funder','indexed','ISBN',
+            'ISSN','issue','issued','license', 'link','member','page',
+            'prefix','publisher','reference-count', 'score','source', 
+            'subject','subtitle','title', 'type','update-policy','URL',
             'volume','abstract')
   manip <- function(which="issued", y) {
     res <- switch(
@@ -251,6 +255,8 @@ parse_works <- function(zzz){
                                       collapse = ",")),
       created = list(make_date(y[[which]]$`date-parts`)),
       deposited = list(make_date(y[[which]]$`date-parts`)),
+      `published-print` = list(make_date(y[[which]]$`date-parts`)),
+      `published-online` = list(make_date(y[[which]]$`date-parts`)),
       DOI = list(y[[which]]),
       indexed = list(make_date(y[[which]]$`date-parts`)),
       ISBN = list(paste0(unlist(y[[which]]), collapse = ",")),

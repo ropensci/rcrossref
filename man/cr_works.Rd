@@ -179,6 +179,9 @@ cr_works(facet = "license:*", limit=0)
 cr_works(query="ecology", sort='relevance', order="asc")
 res <- cr_works(query="ecology", sort='score', order="asc")
 res$data$score
+cr_works(query="ecology", sort='published')
+x=cr_works(query="ecology", sort='published-print')
+x=cr_works(query="ecology", sort='published-online')
 
 # Get a random number of results
 cr_works(sample=1)
