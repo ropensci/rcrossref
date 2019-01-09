@@ -1,0 +1,80 @@
+http_interactions:
+- request:
+    method: get
+    uri: https://api.crossref.org/works/10.3389/fgene.2017.00147
+    body:
+      encoding: ''
+      string: ''
+    headers:
+      Accept-Encoding: gzip, deflate
+      Accept: application/json, text/xml, application/xml, */*
+      User-Agent: r-curl/3.2 crul/0.7.0.9100 rOpenSci(rcrossref/0.8.5.9323)
+      X-USER-AGENT: r-curl/3.2 crul/0.7.0.9100 rOpenSci(rcrossref/0.8.5.9323)
+  response:
+    status:
+      status_code: '200'
+      message: OK
+      explanation: Request fulfilled, document follows
+    headers:
+      status: HTTP/1.1 200 OK
+      content-type: application/json;charset=UTF-8
+      vary: Accept
+      access-control-allow-origin: '*'
+      access-control-allow-headers: X-Requested-With
+      content-length: '7814'
+      server: http-kit
+      date: Wed, 09 Jan 2019 19:00:03 GMT
+      x-rate-limit-limit: '50'
+      x-rate-limit-interval: 1s
+      connection: close
+    body:
+      encoding: UTF-8
+      string: '{"status":"ok","message-type":"work","message-version":"1.0.0","message":{"indexed":{"date-parts":[[2018,9,25]],"date-time":"2018-09-25T15:02:41Z","timestamp":1537887761635},"reference-count":22,"publisher":"Frontiers
+        Media SA","funder":[{"DOI":"10.13039\/501100001824","name":"Grantov\u00e1
+        Agentura \u010cesk\u00e9 Republiky","doi-asserted-by":"publisher","award":["GA15-00885S"]},{"award":[]}],"content-domain":{"domain":["frontiersin.org"],"crossmark-restriction":true},"short-container-title":["Front.
+        Genet."],"DOI":"10.3389\/fgene.2017.00147","type":"journal-article","created":{"date-parts":[[2017,10,10]],"date-time":"2017-10-10T04:14:18Z","timestamp":1507608858000},"update-policy":"http:\/\/dx.doi.org\/10.3389\/crossmark-policy","source":"Crossref","is-referenced-by-count":1,"title":["An
+        Algorithm for Template-Based Prediction of Secondary Structures of Individual
+        RNA Sequences"],"prefix":"10.3389","volume":"8","author":[{"given":"Josef","family":"P\u00e1nek","sequence":"first","affiliation":[]},{"given":"Martin","family":"Modr\u00e1k","sequence":"additional","affiliation":[]},{"given":"Marek","family":"Schwarz","sequence":"additional","affiliation":[]}],"member":"1965","published-online":{"date-parts":[[2017,10,10]]},"reference":[{"key":"B1","doi-asserted-by":"publisher","first-page":"D163","DOI":"10.1093\/nar\/gkj142","article-title":"The
+        tmRDB and SRPDB resources","volume":"34","author":"Andersen","year":"2006","journal-title":"Nucleic
+        Acids Res"},{"key":"B2","doi-asserted-by":"publisher","first-page":"1974","DOI":"10.1093\/bioinformatics\/btp250","article-title":"VARNA:
+        interactive drawing and editing of the RNA secondary structure","volume":"25","author":"Darty","year":"2009","journal-title":"Bioinformatics"},{"key":"B3","doi-asserted-by":"publisher","first-page":"D136","DOI":"10.1093\/nar\/gkn766","article-title":"Rfam:
+        updates to the RNA families database","volume":"37","author":"Gardner","year":"2009","journal-title":"Nucleic
+        Acids Res"},{"key":"B4","doi-asserted-by":"publisher","first-page":"140","DOI":"10.1186\/1471-2105-5-140","article-title":"A
+        comprehensive comparison of comparative RNA structure prediction approaches","volume":"5","author":"Gardner","year":"2004","journal-title":"BMC
+        Bioinformatics"},{"key":"B5","author":"Gorodkin","year":"2014","volume-title":"RNA
+        Sequence, Structure, and Function Computational and Bioinformatic Methods","DOI":"10.1007\/978-1-62703-709-9","doi-asserted-by":"crossref"},{"key":"B6","doi-asserted-by":"publisher","first-page":"301","DOI":"10.1016\/S0959-440X(02)00339-1","article-title":"The
+        accuracy of ribosomal RNA comparative structure models","volume":"12","author":"Gutell","year":"2002","journal-title":"Curr.
+        Opin. Struct. Biol."},{"key":"B7","doi-asserted-by":"publisher","first-page":"i330","DOI":"10.1093\/bioinformatics\/btp228","article-title":"Predictions
+        of RNA secondary structure by combining homologous sequence information","volume":"25","author":"Hamada","year":"2009","journal-title":"Bioinformatics"},{"key":"B8","author":"Hofacker","year":"2004","article-title":"RNA
+        secondary structure analysis using the Vienna RNA package","journal-title":"Curr.
+        Protoc. Bioinformatics","DOI":"10.1002\/0471250953.bi1202s04","doi-asserted-by":"publisher"},{"key":"B9","doi-asserted-by":"publisher","first-page":"2222","DOI":"10.1093\/bioinformatics\/bth229","article-title":"Alignment
+        of RNA base pairing probability matrices","volume":"20","author":"Hofacker","year":"2004","journal-title":"Bioinformatics"},{"key":"B10","doi-asserted-by":"publisher","first-page":"103","DOI":"10.1038\/nature09322","article-title":"Genome-wide
+        measurement of RNA secondary structure in yeast","volume":"467","author":"Kertesz","year":"2010","journal-title":"Nature"},{"key":"B11","doi-asserted-by":"publisher","first-page":"434","DOI":"10.1093\/bioinformatics\/btl636","article-title":"Robust
+        prediction of consensus secondary structures using averaged base pairing probability
+        matrices","volume":"23","author":"Kiryu","year":"2007","journal-title":"Bioinformatics"},{"key":"B12","author":"Kreyszig","year":"1979","volume-title":"Advanced
+        Engineering Mathematics"},{"key":"B13","doi-asserted-by":"publisher","first-page":"26","DOI":"10.1186\/1748-7188-6-26","article-title":"ViennaRNA
+        Package 2.0","volume":"6","author":"Lorenz","year":"2011","journal-title":"Algorithms
+        Mol. Biol."},{"key":"B14","doi-asserted-by":"publisher","first-page":"e165","DOI":"10.1093\/nar\/gku909","article-title":"SHAPE-Seq
+        2.0: systematic optimization and extension of high-throughput chemical probing
+        of RNA secondary structure with next generation sequencing","volume":"42","author":"Loughrey","year":"2014","journal-title":"Nucleic
+        Acids Res"},{"key":"B15","doi-asserted-by":"publisher","first-page":"1178","DOI":"10.1261\/rna.7650904","article-title":"Using
+        an RNA secondary structure partition function to determine confidence in base
+        pairs predicted by free energy minimization","volume":"10","author":"Mathews","year":"2004","journal-title":"RNA"},{"key":"B16","doi-asserted-by":"publisher","first-page":"526","DOI":"10.1016\/j.jmb.2006.01.067","article-title":"Revolutions
+        in RNA secondary structure prediction","volume":"359","author":"Mathews","year":"2006","journal-title":"J.
+        Mol. Biol."},{"key":"B17","doi-asserted-by":"publisher","first-page":"2933","DOI":"10.1093\/bioinformatics\/btt509","article-title":"Infernal
+        1.1: 100-fold faster RNA homology searches","volume":"29","author":"Nawrocki","year":"2013","journal-title":"Bioinformatics"},{"key":"B18","doi-asserted-by":"publisher","first-page":"2804","DOI":"10.1101\/gad.447207","article-title":"A
+        small RNA regulates multiple ABC transporter mRNAs by targeting C\/A-rich
+        elements inside and upstream of ribosome-binding sites","volume":"21","author":"Sharma","year":"2007","journal-title":"Genes
+        Dev."},{"key":"B19","doi-asserted-by":"publisher","first-page":"W373","DOI":"10.1093\/nar\/gkq316","article-title":"Freiburg
+        RNA Tools: a web server integrating INTARNA, EXPARNA and LOCARNA","volume":"38","author":"Smith","year":"2010","journal-title":"Nucleic
+        Acids Res"},{"key":"B20","doi-asserted-by":"publisher","first-page":"1078","DOI":"10.1107\/S0907444998009378","article-title":"Protein
+        Data Bank (PDB): database of three-dimensional structural information of biological
+        macromolecules","volume":"54","author":"Sussman","year":"1998","journal-title":"Acta
+        Crystallogr. D Biol. Crystallogr."},{"key":"B21","doi-asserted-by":"crossref","first-page":"4673","DOI":"10.1093\/nar\/22.22.4673","article-title":"CLUSTAL
+        W: improving the sensitivity of progressive multiple sequence alignment through
+        sequence weighting, position-specific gap penalties and weight matrix choice","volume":"22","author":"Thompson","year":"1994","journal-title":"Nucleic
+        Acids Res"},{"key":"B22","doi-asserted-by":"publisher","first-page":"995","DOI":"10.1038\/nmeth.1529","article-title":"FragSeq:
+        transcriptome-wide RNA structure probing using high-throughput sequencing","volume":"7","author":"Underwood","year":"2010","journal-title":"Nat.
+        Methods"}],"container-title":["Frontiers in Genetics"],"original-title":[],"link":[{"URL":"http:\/\/journal.frontiersin.org\/article\/10.3389\/fgene.2017.00147\/full","content-type":"unspecified","content-version":"vor","intended-application":"similarity-checking"}],"deposited":{"date-parts":[[2017,10,10]],"date-time":"2017-10-10T04:14:22Z","timestamp":1507608862000},"score":1.0,"subtitle":[],"short-title":[],"issued":{"date-parts":[[2017,10,10]]},"references-count":22,"alternative-id":["10.3389\/fgene.2017.00147"],"URL":"http:\/\/dx.doi.org\/10.3389\/fgene.2017.00147","relation":{"has-preprint":[{"id-type":"doi","id":"10.1101\/171108","asserted-by":"object"}],"cites":[]},"ISSN":["1664-8021"],"issn-type":[{"value":"1664-8021","type":"electronic"}]}}'
+  recorded_at: 2019-01-09 19:00:03 GMT
+  recorded_with: vcr/0.2.0, webmockr/0.3.0

@@ -352,6 +352,7 @@ parse_todf <- function(x){
           w <- unlist(w, recursive = FALSE)
         }
       }
+      if (length(w) == 0) return(NULL)
       w[sapply(w, function(b) length(b) == 0)] <- NULL
       data.frame(w, stringsAsFactors = FALSE)
     })))

@@ -192,3 +192,14 @@ test_that("cr_works - email NULL works", {
   })
 })
 
+test_that("cr_works - handles empty funder item", {
+  # a 2nd empty array comes through in the funder array: { award: [ ] }
+  # it should be dropped in the parse_todf() internal function
+  vcr::use_cassette("cr_works_empty_funder", {
+    a <- cr_works(dois = "10.3389/fgene.2017.00147")
+    expect_is(a, "list")
+    expect_is(a$data, "data.frame")
+    expect_is(a$data$funder, "list")
+    expect_is(a$data$funder[[1]], "data.frame")
+  })
+})
