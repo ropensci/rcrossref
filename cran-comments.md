@@ -1,7 +1,7 @@
 ## Test environments
 
-* local OS X install, R 3.4.3 RC
-* ubuntu 14.04.5 LTS (on Travis-CI), R 3.4.2
+* local OS X install, R 3.5.2 patched
+* ubuntu 14.04.5 LTS (on Travis-CI), R 3.5.2
 * win-builder (devel and release)
 
 ## R CMD check results
@@ -11,18 +11,16 @@
    License components with restrictions and base license permitting such:
      MIT + file LICENSE
    File 'LICENSE':
-     YEAR: 2017
+     YEAR: 2019
      COPYRIGHT HOLDER: Scott Chamberlain
 
 ## Reverse dependencies
 
-* I have run R CMD check on the 4 downstream dependencies, and 
-found no problems related to this new version.
+* I have run R CMD check on the 4 downstream dependencies. There was a problem in one package (roadoi), but I've sent a pull request that has been merged to that package and they will submit a patch to CRAN soon. See the summary at <https://github.com/ropensci/rcrossref/tree/master/revdep>
 
 -------
 
-This submission improves documentation, and puts this client better 
-in line with the API that it interacts with. 
+This submission xx
 
 Thanks!
 Scott Chamberlain

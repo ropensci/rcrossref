@@ -1,27 +1,16 @@
-# Setup
+# roadoi
 
-## Platform
+Version: 0.5.1
 
-|setting  |value                                  |
-|:--------|:--------------------------------------|
-|version  |R version 3.4.3 RC (2017-11-23 r73782) |
-|system   |x86_64, darwin15.6.0                   |
-|ui       |X11                                    |
-|language |(EN)                                   |
-|collate  |en_US.UTF-8                            |
-|tz       |America/Los_Angeles                    |
-|date     |2017-12-03                             |
+## Newly broken
 
-## Packages
-
-|package   |*  |version    |date       |source                              |
-|:---------|:--|:----------|:----------|:-----------------------------------|
-|rcrossref |   |0.7.0.9419 |2017-12-03 |Github (ropensci/rcrossref@658c826) |
-
-# Check results
-
-0 packages with problems
-
-
-
+*   checking re-building of vignette outputs ... WARNING
+    ```
+    Error in re-building vignettes:
+      ...
+    Quitting from lines 192-195 (intro.Rmd) 
+    Error: processing vignette 'intro.Rmd' failed with diagnostics:
+    object 'DOI' not found
+    Execution halted
+    ```
 

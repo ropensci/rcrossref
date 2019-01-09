@@ -44,7 +44,7 @@ Filters allow you to narrow queries. All filter results are lists.  The followin
 | `has_full_text` | `{logical}` | metadata that includes any full text `<resource>` elements. |
 | `full_text_version` | `{string}`  | metadata where `<resource>` element's `content_version` attribute is `{string}`. |
 | `full_text_type` | `{mime_type}`  | metadata where `<resource>` element's `content_type` attribute is `{mime_type}` (e.g. `application/pdf`). |
-| `public_references` | | metadata where publishers allow references to be distributed publically. [^*] |
+| `public_references` | | metadata where publishers allow references to be distributed publicly. [^*] |
 | `has_references` | `{logical}` | metadata for works that have a list of references |
 | `has_archive` | `{logical}` | metadata which include name of archive partner |
 | `archive` | `{string}` | metadata which where value of archive partner is `{string}` |
@@ -60,8 +60,8 @@ Filters allow you to narrow queries. All filter results are lists.  The followin
 | `container_title` | | metadata for records with a publication title exactly with an exact match |
 | `publisher_name` | | metadata for records with an exact matching publisher name |
 | `category_name` | |metadata for records with an exact matching category label |
-| `type_name` | | metadata for records with an exacty matching type label |
-| `award_number` |{`award_number`} |metadata for records with a matching award nunber. Optionally combine with `award_funder` |
+| `type_name` | | metadata for records with an exactly matching type label |
+| `award_number` |{`award_number`} |metadata for records with a matching award number. Optionally combine with `award_funder` |
 | `award_funder` | {`funder doi or id`} | metadata for records with an award with matching funder. Optionally combine with `award_number` |
 | `from_created_date` | {`date`} | metadata first deposited since (inclusive) `{date}` |
 | `until_created_date` | {`date`} | metadata first deposited before (inclusive) `{date}` |

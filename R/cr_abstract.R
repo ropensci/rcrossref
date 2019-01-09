@@ -16,6 +16,10 @@
 #' # cr_abstract(doi = '10.1007/12080.1874-1746')
 #' 
 #' # cr_abstract(cr_r(1))
+#' 
+#' # loop through many DOIs, allowing for failures
+#' dois <- cr_r(10, filter = c(has_abstract = TRUE))
+#' res <- lapply(dois, function(z) tryCatch(cr_abstract(z), error = function(e) e))
 #' }
 cr_abstract <- function(doi, ...) {
   url <- paste0('http://api.crossref.org/works/', doi, '.xml')

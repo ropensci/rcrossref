@@ -1,0 +1,35 @@
+http_interactions:
+- request:
+    method: get
+    uri: https://api.crossref.org/members?cursor=5
+    body:
+      encoding: ''
+      string: ''
+    headers:
+      Accept-Encoding: gzip, deflate
+      Accept: application/json, text/xml, application/xml, */*
+      User-Agent: r-curl/3.2 crul/0.6.1.9100 rOpenSci(rcrossref/0.8.5.9110) (mailto:<crossref_email>)
+      X-USER-AGENT: r-curl/3.2 crul/0.6.1.9100 rOpenSci(rcrossref/0.8.5.9110) (mailto:<crossref_email>)
+  response:
+    status:
+      status_code: '400'
+      message: Bad Request
+      explanation: Bad request syntax or unsupported method
+    headers:
+      status: HTTP/1.1 400 Bad Request
+      content-type: application/json;charset=UTF-8
+      vary: Accept
+      access-control-allow-origin: '*'
+      access-control-allow-headers: X-Requested-With
+      content-length: '164'
+      server: http-kit
+      date: Fri, 07 Dec 2018 22:51:46 GMT
+      x-rate-limit-limit: '50'
+      x-rate-limit-interval: 1s
+      connection: close
+    body:
+      encoding: UTF-8
+      string: '{"status":"failed","message-type":"validation-failure","message":[{"type":"parameter-not-allowed","value":"cursor","message":"This
+        route does not support cursor"}]}'
+  recorded_at: 2018-12-07 22:51:46 GMT
+  recorded_with: vcr/0.2.0.9101, webmockr/0.2.9.9311

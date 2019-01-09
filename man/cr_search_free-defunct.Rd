@@ -2,11 +2,11 @@
 % Please edit documentation in R/cr_search_free.r
 \name{cr_search_free}
 \alias{cr_search_free}
-\title{Search the CrossRef Metatdata for DOIs using free form references.}
+\title{Search the CrossRef Metadata for DOIs using free form references.}
 \usage{
 cr_search_free(...)
 }
 \description{
-Search the CrossRef Metatdata for DOIs using free form references.
+Search the CrossRef Metadata for DOIs using free form references.
 }
 \keyword{internal}

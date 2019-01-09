@@ -1,8 +1,10 @@
 #' Search CrossRef works (articles)
 #'
 #' @export
-#'
-#' @param dois Search by a single DOI or many DOIs.
+#' @family crossref
+#' @param dois Search by a single DOI or many DOIs.  Note that using this 
+#' parameter at the same time as the `query`, `limit`, `select` or `flq` 
+#' parameter will result in an error.
 #' @template args
 #' @template moreargs
 #' @template cursor_args
@@ -81,6 +83,9 @@
 #' cr_works(query="ecology", sort='relevance', order="asc")
 #' res <- cr_works(query="ecology", sort='score', order="asc")
 #' res$data$score
+#' cr_works(query="ecology", sort='published')
+#' x=cr_works(query="ecology", sort='published-print')
+#' x=cr_works(query="ecology", sort='published-online')
 #'
 #' # Get a random number of results
 #' cr_works(sample=1)
@@ -255,10 +260,12 @@ parse_facets <- function(x){
 
 parse_works <- function(zzz){
   keys <- c('alternative-id','archive','container-title','created',
-            'deposited','DOI','funder','indexed','ISBN','ISSN','issue',
-            'issued','license', 'link','member','page','prefix','publisher',
-            'reference-count','score','source', 'subject','subtitle','title',
-            'type','update-policy','URL','volume','abstract')
+            'deposited','published-print','published-online','DOI',
+            'funder','indexed','ISBN',
+            'ISSN','issue','issued','license', 'link','member','page',
+            'prefix','publisher','reference-count', 'score','source', 
+            'subject','subtitle','title', 'type','update-policy','URL',
+            'volume','abstract')
   manip <- function(which="issued", y) {
     res <- switch(
       which,
@@ -269,6 +276,8 @@ parse_works <- function(zzz){
                                       collapse = ",")),
       created = list(make_date(y[[which]]$`date-parts`)),
       deposited = list(make_date(y[[which]]$`date-parts`)),
+      `published-print` = list(make_date(y[[which]]$`date-parts`)),
+      `published-online` = list(make_date(y[[which]]$`date-parts`)),
       DOI = list(y[[which]]),
       indexed = list(make_date(y[[which]]$`date-parts`)),
       ISBN = list(paste0(unlist(y[[which]]), collapse = ",")),
@@ -279,7 +288,6 @@ parse_works <- function(zzz){
           sprintf("%02d",
                   unlist(y[[which]]$`date-parts`)), collapse = "-")
       ),
-      license = list(parse_license(y[[which]])),
       member = list(y[[which]]),
       page = list(y[[which]]),
       prefix = list(y[[which]]),
@@ -313,17 +321,16 @@ parse_works <- function(zzz){
     NULL
   } else {
     tmp <- unlist(lapply(keys, manip, y = zzz))
-    #tmp[vapply(tmp, function(z) nchar(z) == 0 || is.na(z), TRUE)] <- NULL
     out_tmp <- data.frame(
       as.list(Filter(function(x) nchar(x) > 0, tmp)), 
       stringsAsFactors = FALSE)
-    # out_tmp <- data.frame(as.list(unlist(lapply(keys, manip, y = zzz))),
-    #                       stringsAsFactors = FALSE)
     out_tmp$assertion <- list(parse_todf(zzz$assertion)) %||% NULL
     out_tmp$author <- list(parse_todf(zzz$author)) %||% NULL
     out_tmp$funder <- list(parse_todf(zzz$funder)) %||% NULL
     out_tmp$link <- list(parse_todf(zzz$link)) %||% NULL
+    out_tmp$license <- list(tbl_df(bind_rows(lapply(zzz$license, parse_license)))) %||% NULL
     out_tmp$`clinical-trial-number` <- list(parse_todf(zzz$`clinical-trial-number`)) %||% NULL
+    out_tmp$reference <- list(parse_todf(zzz$reference)) %||% NULL
     out_tmp <- Filter(function(x) length(unlist(x)) > 0, out_tmp)
     names(out_tmp) <- tolower(names(out_tmp))
     return(out_tmp)
@@ -341,8 +348,8 @@ parse_license <- function(x){
   if (is.null(x)) {
     NULL
   } else {
-    date <- make_date(x[[1]]$start$`date-parts`)
-    data.frame(date = date, x[[1]][!names(x[[1]]) == "start"],
+    date <- make_date(x$start$`date-parts`)
+    data.frame(date = date, x[!names(x) == "start"],
                stringsAsFactors = FALSE)
   }
 }
@@ -366,6 +373,7 @@ parse_todf <- function(x){
           w <- unlist(w, recursive = FALSE)
         }
       }
+      if (length(w) == 0) return(NULL)
       w[sapply(w, function(b) length(b) == 0)] <- NULL
       data.frame(w, stringsAsFactors = FALSE)
     })))

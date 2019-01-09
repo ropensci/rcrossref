@@ -1,0 +1,54 @@
+http_interactions:
+- request:
+    method: get
+    uri: https://api.crossref.org/works?query=science&select=DOI%2Ctitle
+    body:
+      encoding: ''
+      string: ''
+    headers:
+      Accept-Encoding: gzip, deflate
+      Accept: application/json, text/xml, application/xml, */*
+      User-Agent: r-curl/3.2 crul/0.6.1.9100 rOpenSci(rcrossref/0.8.5.9110) (mailto:<crossref_email>)
+      X-USER-AGENT: r-curl/3.2 crul/0.6.1.9100 rOpenSci(rcrossref/0.8.5.9110) (mailto:<crossref_email>)
+  response:
+    status:
+      status_code: '200'
+      message: OK
+      explanation: Request fulfilled, document follows
+    headers:
+      status: HTTP/1.1 200 OK
+      content-type: application/json;charset=UTF-8
+      vary: Accept
+      access-control-allow-origin: '*'
+      access-control-allow-headers: X-Requested-With
+      content-length: '2051'
+      server: http-kit
+      date: Fri, 07 Dec 2018 21:28:48 GMT
+      x-rate-limit-limit: '50'
+      x-rate-limit-interval: 1s
+      connection: close
+    body:
+      encoding: UTF-8
+      string: '{"status":"ok","message-type":"work-list","message-version":"1.0.0","message":{"facets":{},"total-results":6170162,"items":[{"DOI":"10.1126\/science.1174131","title":["\n            Science\n            for
+        Science\n          "]},{"DOI":"10.1002\/scin.5591821322","title":["People:
+        The science life: Alt science"]},{"DOI":"10.1126\/science.caredit.a0900139","title":["The
+        Audacity in Science Series"]},{"DOI":"10.1126\/science.caredit.a0900138","title":["Science
+        Training and Collaboration in Eastern Europe: Resources"]},{"DOI":"10.1002\/scin.5591821302","title":["Science
+        notebook"]},{"DOI":"10.1126\/science.caredit.a1500165","title":["Leaving science
+        for science writing"]},{"DOI":"10.1126\/science.caredit.a1300099","title":["When
+        All Science Becomes Data Science"]},{"DOI":"10.1126\/science.caredit.a1400310","title":["More
+        science doctorates, fewer post-doctorate science jobs"]},{"DOI":"10.1126\/science.caredit.a0800074","title":["Science
+        Careers Podcast Index"]},{"DOI":"10.1093\/med\/9780198717607.003.0001","title":["Science
+        before science"]},{"DOI":"10.1126\/science.caredit.a1600051","title":["Studying
+        the science of science"]},{"DOI":"10.1126\/science.caredit.aat2794","title":["Celebrating
+        women in science"]},{"DOI":"10.1126\/science.caredit.a1000124","title":["The
+        Best of Science Careers, 2010"]},{"DOI":"10.1126\/science.caredit.a0700144","title":["Special
+        Feature: Experiences of Ethnic Minorities in Science"]},{"DOI":"10.1126\/science.caredit.a0700148","title":["Experiences
+        of Ethnic Minorities in Science: Resources"]},{"DOI":"10.1126\/science.caredit.a1100144","title":["Science
+        Careers 2011: The Year''s Best Stories"]},{"DOI":"10.1126\/science.caredit.a1200141","title":["Science
+        Careers 2012: The Year''s Best Stories"]},{"DOI":"10.18173\/2354-1075","title":["Journal
+        of Science, Educational Science"]},{"DOI":"10.1002\/scin.5591821202","title":["Science
+        notebook"]},{"DOI":"10.1126\/science.caredit.a1300194","title":["Elsewhere
+        in Science Index"]}],"items-per-page":20,"query":{"start-index":0,"search-terms":"science"}}}'
+  recorded_at: 2018-12-07 21:28:48 GMT
+  recorded_with: vcr/0.2.0.9101, webmockr/0.2.9.9311

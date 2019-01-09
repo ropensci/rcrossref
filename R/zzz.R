@@ -38,7 +38,8 @@ cr_GET <- function(endpoint, args, todf = TRUE, on_error = warning, parse = TRUE
   }
   doi <- gsub("works/|/agency|funders/", "", endpoint)
   if (!res$status_code < 300) {
-    on_error(sprintf("%s: %s - (%s)", res$status_code, get_err(res), doi), call. = FALSE)
+    on_error(sprintf("%s (%s): %s - %s", res$status_code, err_type(res), 
+      get_route(res), get_err(res)), call. = FALSE)
     list(message = NULL)
   } else {
     stopifnot(res$response_headers$`content-type` == "application/json;charset=UTF-8")
@@ -61,19 +62,54 @@ get_err <- function(x) {
   } else if (x$response_headers$`content-type` == "text/html") {
     html <- xml2::read_html(xx)
     tmp <- xml2::xml_text(xml2::xml_find_first(html, '//h3[@class="info"]'))
-  } else if (x$response_headers$`content-type` == "application/json;charset=UTF-8") {
+  } else if (
+    x$response_headers$`content-type` == "application/json;charset=UTF-8" ||
+    x$response_headers$`content-type` == "application/json"
+  ) {
     tmp <- jsonlite::fromJSON(xx, FALSE)
   } else {
     tmp <- xx
   }
   if (inherits(tmp, "list")) {
-    tmp$message[[1]]$message
+    if (any(haz_names(tmp$message))) {
+      mssg <- tryCatch(tmp$message$description, error = function(e) e)
+      if (inherits(mssg, "error")) tmp$message$message else mssg
+    } else {
+      tmp$message[[1]]$message 
+    }
   } else {
     if (any(class(tmp) %in% c("HTMLInternalDocument", "xml_document"))) {
       return("Server error - check your query - or api.crossref.org may be experiencing problems")
     } else {
       return(tmp)
     }
+  }
+}
+
+get_route <- function(x) {
+  ff <- crul::url_parse(x$url)
+  paste0("/", ff$path)
+}
+
+err_type <- function(x) {
+  if (x$status_code >= 200 && x$status_code < 300) return("success")
+  if (x$status_code >= 300 && x$status_code < 400) return("redirection")
+  if (x$status_code >= 400 && x$status_code < 500) return("client error")
+  if (x$status_code >= 500) return("server error")
+}
+
+# modified from purrr:::rep_along
+repp_along <- function(x, y) {
+  rep(y, length.out = length(x))
+}
+
+# modified from purrr:::has_names
+haz_names <- function (x) {
+  nms <- names(x)
+  if (is.null(nms)) {
+    repp_along(x, FALSE)
+  } else {
+    !(is.na(nms) | nms == "")
   }
 }
 
@@ -105,6 +141,15 @@ check_number <- function(x) {
     tt <- tryCatch(as.numeric(x), warning = function(w) w)
     if (inherits(tt, "warning") || !class(x) %in% c('integer', 'numeric')) {
       stop(call, " value illegal, must be an integer", call. = FALSE)
+    }
+  }
+}
+
+assert <- function(x, y) {
+  if (!is.null(x)) {
+    if (!inherits(x, y)) {
+      stop(deparse(substitute(x)), " must be of class ",
+          paste0(y, collapse = ", "), call. = FALSE)
     }
   }
 }
@@ -143,7 +188,7 @@ prep_args <- function(query, filter, offset, limit, sample, sort,
   check_number(sample)
   filter <- filter_handler(filter)
   flq <- field_query_handler(flq)
-  stopifnot(class(facet) %in% c('logical', 'character'))
+  assert(facet, c('logical', 'character'))
   if (inherits(facet, "logical")) {
     facet <- if (facet) "t" else NULL
   }
@@ -172,7 +217,7 @@ get_email <- function() {
   if (identical(email, "")) {
     NULL
   } else {
-  paste0("(mailto:", val_email(email), ")")
+    paste0("(mailto:", val_email(email), ")")
   }
 }
 

@@ -1,7 +1,7 @@
 #' Search CrossRef journals
 #'
 #' @export
-#'
+#' @family crossref
 #' @param issn (character) One or more ISSN's. Format: XXXX-XXXX.
 #' @template args
 #' @template moreargs

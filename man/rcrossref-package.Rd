@@ -48,6 +48,26 @@ The numbers can change so we can't give a rate limit that will always
 be in effect. If you're curious pass in \code{verbose = TRUE} to
 your function call, and you'll get headers that will display these rate
 limits.
+
+\strong{Be nice and share your email with Crossref}
+
+The Crossref team encourage requests with appropriate contact information
+and will forward you to a dedicated API cluster for improved performance when
+you share your email address with them.
+\url{https://github.com/CrossRef/rest-api-doc#good-manners--more-reliable-service}
+
+To pass your email address to Crossref via this client, simply store it
+as environment variable in \code{.Renviron} like this:
+\enumerate{
+\item Open file:
+\code{file.edit("~/.Renviron")}
+\item Add email address to be shared with Crossref
+\code{crossref_email = name@example.com}
+\item Save the file and restart your R session
+}
+
+Don't wanna share your email any longer? Simply delete it from
+\code{~/.Renviron}
 }
 
 \section{Text mining}{
@@ -81,33 +101,12 @@ high and low level.
 
 \section{RStudio Addin}{
 
-On installation of \pkg{rcrossref} you get an RStudio Addin. To use the addin,
+On installation of \pkg{rcrossref} you get an RStudio Addin. To use the Addin,
 go to the top toolbar > Tools > Addins > Add Crossref Citations. You'll get a
 window pop up that you can put in DOIs for. If the DOI is found, the bibtex
 citations will be added to a file called \code{crossref.bib}. New citations
 will be appended to that file. Addin authored by Hao Zhu
 \url{https://github.com/haozhu233}
-}
-
-\section{Be nice and share your email with Crossref}{
-
-The Crossref team encourage requests with appropriate contact information
-and will forward you to a dedicated API cluster for improved performance when
-you share your email address with them.
-\url{https://github.com/CrossRef/rest-api-doc#good-manners--more-reliable-service}
-
-To pass your email address to Crossref via this client, simply store it
-as environment variable in \code{.Renviron} like this:
-\enumerate{
-\item Open file:
-\code{file.edit("~/.Renviron")}
-\item Add email address to be shared with Crossref
-\code{crossref_email = name@example.com}
-\item Save the file and restart your R session
-}
-
-Don't wanna share your email any longer? Simply delete it from
-\code{~/.Renviron}
 }
 
 \keyword{package}

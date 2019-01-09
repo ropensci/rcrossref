@@ -14,7 +14,7 @@ cran-comments.md
 ^\.httr-oauth$
 ^CODE_OF_CONDUCT\.md$
 ^cran-comments\.md$
-revdep
+^revdep$
 .github
 tmpscratch*
 ^codemeta\.json$

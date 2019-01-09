@@ -8,8 +8,9 @@
 cr_licenses(query = NULL, offset = NULL, limit = NULL, sort = NULL,
   order = NULL, .progress = "none", ...)
 
-cr_licenses_(query = NULL, offset = NULL, limit = NULL, sort = NULL,
-  order = NULL, .progress = "none", parse = FALSE, ...)
+cr_licenses_(query = NULL, offset = NULL, limit = NULL,
+  sort = NULL, order = NULL, .progress = "none", parse = FALSE,
+  ...)
 }
 \arguments{
 \item{query}{Query terms}
@@ -19,21 +20,21 @@ cr_licenses_(query = NULL, offset = NULL, limit = NULL, sort = NULL,
 \item{limit}{Number of results to return in the query. Not relavant when
 searching with specific dois. Default: 20. Max: 1000}
 
-\item{sort}{Field to sort on. Acceptable set of fields to sort on: 
+\item{sort}{Field to sort on. Acceptable set of fields to sort on:
 \itemize{
- \item \code{score} OR \code{relevance} - Sort by relevance score
- \item \code{updated} - Sort by date of most recent change to metadata. 
- Currently the same as deposited.
- \item \code{deposited} - Sort by time of most recent deposit
- \item \code{indexed} - Sort by time of most recent index
- \item \code{published} - Sort by publication date
- \item \code{published-print} - Sort by print publication date
- \item \code{published-online} - Sort by online publication date
- \item \code{issued} - Sort by issued date (earliest known publication date)
- \item \code{is-referenced-by-count} - Sort by number of times this DOI is 
- referenced by other Crossref DOIs
- \item \code{references-count} - Sort by number of references included in 
- the references section of the document identified by this DOI
+\item \code{score} OR \code{relevance} - Sort by relevance score
+\item \code{updated} - Sort by date of most recent change to metadata.
+Currently the same as deposited.
+\item \code{deposited} - Sort by time of most recent deposit
+\item \code{indexed} - Sort by time of most recent index
+\item \code{published} - Sort by publication date
+\item \code{published-print} - Sort by print publication date
+\item \code{published-online} - Sort by online publication date
+\item \code{issued} - Sort by issued date (earliest known publication date)
+\item \code{is-referenced-by-count} - Sort by number of times this DOI is
+referenced by other Crossref DOIs
+\item \code{references-count} - Sort by number of references included in
+the references section of the document identified by this DOI
 }}
 
 \item{order}{(character) Sort order, one of 'asc' or 'desc'}
@@ -71,3 +72,10 @@ cr_licenses_(query = "elsevier", parse=TRUE)
 \references{
 \url{https://github.com/CrossRef/rest-api-doc/blob/master/rest_api.md}
 }
+\seealso{
+Other crossref: \code{\link{cr_funders}},
+  \code{\link{cr_journals}}, \code{\link{cr_members}},
+  \code{\link{cr_prefixes}}, \code{\link{cr_types}},
+  \code{\link{cr_works}}
+}
+\concept{crossref}

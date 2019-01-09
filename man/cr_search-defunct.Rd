@@ -2,11 +2,11 @@
 % Please edit documentation in R/cr_search.r
 \name{cr_search}
 \alias{cr_search}
-\title{Search the CrossRef Metatdata API.}
+\title{Search the CrossRef Metadata API.}
 \usage{
 cr_search(...)
 }
 \description{
-Search the CrossRef Metatdata API.
+Search the CrossRef Metadata API.
 }
 \keyword{internal}

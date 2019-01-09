@@ -1,4 +1,4 @@
-#' Search the CrossRef Metatdata for DOIs using free form references.
+#' Search the CrossRef Metadata for DOIs using free form references.
 #'
 #' @export
 #' @rdname cr_search_free-defunct

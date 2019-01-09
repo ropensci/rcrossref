@@ -1,0 +1,69 @@
+http_interactions:
+- request:
+    method: get
+    uri: https://api.crossref.org/journals
+    body:
+      encoding: ''
+      string: ''
+    headers:
+      Accept-Encoding: gzip, deflate
+      Accept: application/json, text/xml, application/xml, */*
+      User-Agent: r-curl/3.2 crul/0.6.1.9100 rOpenSci(rcrossref/0.8.5.9110) (mailto:<crossref_email>)
+      X-USER-AGENT: r-curl/3.2 crul/0.6.1.9100 rOpenSci(rcrossref/0.8.5.9110) (mailto:<crossref_email>)
+  response:
+    status:
+      status_code: '200'
+      message: OK
+      explanation: Request fulfilled, document follows
+    headers:
+      status: HTTP/1.1 200 OK
+      content-type: application/json;charset=UTF-8
+      vary: Accept
+      access-control-allow-origin: '*'
+      access-control-allow-headers: X-Requested-With
+      content-length: '5658'
+      server: http-kit
+      date: Fri, 07 Dec 2018 22:32:04 GMT
+      x-rate-limit-limit: '50'
+      x-rate-limit-interval: 1s
+      connection: close
+    body:
+      encoding: UTF-8
+      string: '{"status":"ok","message-type":"journal-list","message-version":"1.0.0","message":{"items-per-page":20,"query":{"start-index":0,"search-terms":null},"total-results":63475,"items":[{"last-status-check-time":null,"counts":null,"breakdowns":null,"publisher":"Innovative
+        Medical Technologies Development Foundation","coverage":null,"title":"36510","subjects":[],"coverage-type":null,"flags":null,"ISSN":[],"issn-type":[]},{"last-status-check-time":null,"counts":null,"breakdowns":null,"publisher":"Fundacao
+        Educacional de Criciuma- FUCRI","coverage":null,"title":"A ESCALA DE BORG
+        COMO INSTRUMENTO DE MENSURA\u00c7\u00c3O DA INTENSIDADE DE AULAS DE ZUMBA","subjects":[],"coverage-type":null,"flags":null,"ISSN":[],"issn-type":[]},{"last-status-check-time":null,"counts":null,"breakdowns":null,"publisher":"Cairo
+        Center for Development Benchmarking","coverage":null,"title":"A General Approach
+        to Panel Data Set-Theoretic Research","subjects":[],"coverage-type":null,"flags":null,"ISSN":[],"issn-type":[]},{"last-status-check-time":null,"counts":null,"breakdowns":null,"publisher":"Fundacao
+        Educacional de Criciuma- FUCRI","coverage":null,"title":"A INFLU\u00caNCIA
+        DA PUBLICIDADE NA TRANSI\u00c7\u00c3O NUTRICIONAL UMA S\u00cdNTESE PARA ENTENDER
+        A OBESIDADE","subjects":[],"coverage-type":null,"flags":null,"ISSN":[],"issn-type":[]},{"last-status-check-time":null,"counts":null,"breakdowns":null,"publisher":"Fundacao
+        Educacional de Criciuma- FUCRI","coverage":null,"title":"A INFLU\u00caNCIA
+        DE 15 SEMANAS DE ATIVIDADES PSICOMOTORAS NA AUTONOMIA FUNCIONAL DE IDOSOS","subjects":[],"coverage-type":null,"flags":null,"ISSN":[],"issn-type":[]},{"last-status-check-time":null,"counts":null,"breakdowns":null,"publisher":"Fundacao
+        Educacional de Criciuma- FUCRI","coverage":null,"title":"A INFLU\u00caNCIA
+        DE 15 SEMANAS DE ATIVIDADES PSICOMOTORAS NA AUTONOMIA FUNCIONAL DE IDOSOS","subjects":[],"coverage-type":null,"flags":null,"ISSN":[],"issn-type":[]},{"last-status-check-time":null,"counts":null,"breakdowns":null,"publisher":"Fundacao
+        Educacional de Criciuma- FUCRI","coverage":null,"title":"A PROMO\u00c7\u00c3O
+        DA SA\u00daDE E O FORTALECIMENTO DE V\u00cdNCULOS COMUNIT\u00c1RIOS POR MEIO
+        DA ATIVIDADE F\u00cdSICA UM RELATO DE EXPERI\u00caNCIA","subjects":[],"coverage-type":null,"flags":null,"ISSN":[],"issn-type":[]},{"last-status-check-time":null,"counts":null,"breakdowns":null,"publisher":"Fundacao
+        Educacional de Criciuma- FUCRI","coverage":null,"title":"A S100B NO DIAGN\u00d3STICO
+        DO TRANSTORNO BIPOLAR REVIS\u00c3O SISTEM\u00c1TICA E METAN\u00c1LISE","subjects":[],"coverage-type":null,"flags":null,"ISSN":[],"issn-type":[]},{"last-status-check-time":null,"counts":null,"breakdowns":null,"publisher":"Uniwersytet
+        Lodzki (University of Lodz)","coverage":null,"title":"Acta Universitatis Lodziensis
+        Folia Archaeologica","subjects":[],"coverage-type":null,"flags":null,"ISSN":[],"issn-type":[]},{"last-status-check-time":null,"counts":null,"breakdowns":null,"publisher":"Uniwersytet
+        Lodzki (University of Lodz)","coverage":null,"title":"Acta Universitatis Lodziensis
+        Folia Librorum","subjects":[],"coverage-type":null,"flags":null,"ISSN":[],"issn-type":[]},{"last-status-check-time":null,"counts":null,"breakdowns":null,"publisher":"Uniwersytet
+        Lodzki (University of Lodz)","coverage":null,"title":"Acta Universitatis Lodziensis
+        Folia Litteraria Rossica","subjects":[],"coverage-type":null,"flags":null,"ISSN":[],"issn-type":[]},{"last-status-check-time":null,"counts":null,"breakdowns":null,"publisher":"Uniwersytet
+        Lodzki (University of Lodz)","coverage":null,"title":"Acta Universitatis Lodziensis
+        Folia Philosophica Ethica \u2013 Aesthetica \u2013 Practica","subjects":[],"coverage-type":null,"flags":null,"ISSN":[],"issn-type":[]},{"last-status-check-time":null,"counts":null,"breakdowns":null,"publisher":"Universitat
+        Jaume I","coverage":null,"title":"adComunica Revista Cient\u00edfica de Estrategias
+        Tendencias e Innovaci\u00f3n en Comunicaci\u00f3n","subjects":[],"coverage-type":null,"flags":null,"ISSN":[],"issn-type":[]},{"last-status-check-time":null,"counts":null,"breakdowns":null,"publisher":"Intellectual
+        Consortium of Drug Discovery and Technology Development Incorporation","coverage":null,"title":"Advanced
+        Geosciences","subjects":[],"coverage-type":null,"flags":null,"ISSN":[],"issn-type":[]},{"last-status-check-time":null,"counts":null,"breakdowns":null,"publisher":"Elsevier
+        ","coverage":null,"title":"Advances in Antiviral Drug Design","subjects":[],"coverage-type":null,"flags":null,"ISSN":[],"issn-type":[]},{"last-status-check-time":null,"counts":null,"breakdowns":null,"publisher":"Elsevier
+        ","coverage":null,"title":"Advances in Botanical Research","subjects":[],"coverage-type":null,"flags":null,"ISSN":[],"issn-type":[]},{"last-status-check-time":null,"counts":null,"breakdowns":null,"publisher":"Elsevier
+        ","coverage":null,"title":"Advances in Cancer Research","subjects":[],"coverage-type":null,"flags":null,"ISSN":[],"issn-type":[]},{"last-status-check-time":null,"counts":null,"breakdowns":null,"publisher":"Elsevier
+        ","coverage":null,"title":"Advances in Carbohydrate Chemistry and Biochemistry","subjects":[],"coverage-type":null,"flags":null,"ISSN":[],"issn-type":[]},{"last-status-check-time":null,"counts":null,"breakdowns":null,"publisher":"Elsevier
+        ","coverage":null,"title":"Advances in Cell Aging and Gerontology","subjects":[],"coverage-type":null,"flags":null,"ISSN":[],"issn-type":[]},{"last-status-check-time":null,"counts":null,"breakdowns":null,"publisher":"Elsevier
+        ","coverage":null,"title":"Advances in Chemical Engineering","subjects":[],"coverage-type":null,"flags":null,"ISSN":[],"issn-type":[]}]}}'
+  recorded_at: 2018-12-07 22:32:04 GMT
+  recorded_with: vcr/0.2.0.9101, webmockr/0.2.9.9311

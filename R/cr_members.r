@@ -1,8 +1,8 @@
 #' Search CrossRef members
 #'
 #' @export
-#'
-#' @param member_ids One or more member ids. See examples. ALternatively,
+#' @family crossref
+#' @param member_ids One or more member ids. See examples. Alternatively,
 #' you can query for them using the query parameter.
 #' @template args
 #' @template moreargs

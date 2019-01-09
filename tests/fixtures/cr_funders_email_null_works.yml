@@ -1,0 +1,44 @@
+http_interactions:
+- request:
+    method: get
+    uri: https://api.crossref.org/funders/10.13039/100000001
+    body:
+      encoding: ''
+      string: ''
+    headers:
+      Accept-Encoding: gzip, deflate
+      Accept: application/json, text/xml, application/xml, */*
+      User-Agent: r-curl/3.2 crul/0.6.1.9100 rOpenSci(rcrossref/0.8.5.9110)
+      X-USER-AGENT: r-curl/3.2 crul/0.6.1.9100 rOpenSci(rcrossref/0.8.5.9110)
+  response:
+    status:
+      status_code: '200'
+      message: OK
+      explanation: Request fulfilled, document follows
+    headers:
+      status: HTTP/1.1 200 OK
+      content-type: application/json;charset=UTF-8
+      vary: Accept
+      access-control-allow-origin: '*'
+      access-control-allow-headers: X-Requested-With
+      content-length: '2254'
+      server: http-kit
+      date: Fri, 07 Dec 2018 22:36:57 GMT
+      x-rate-limit-limit: '50'
+      x-rate-limit-interval: 1s
+      connection: close
+    body:
+      encoding: UTF-8
+      string: '{"status":"ok","message-type":"funder","message-version":"1.0.0","message":{"hierarchy-names":{"100010608":"Office
+        of Inspector General","100000179":"Office of the Director","100005716":"National
+        Science Board","100000081":"Directorate for Education and Human Resources","100000083":"Directorate
+        for Computer and Information Science and Engineering","100005441":"Office
+        of Budget, Finance and Award Management","100000001":"National Science Foundation","100000076":"Directorate
+        for Biological Sciences","100000084":"Directorate for Engineering","more":null,"100000088":"Directorate
+        for Social, Behavioral and Economic Sciences","100005447":"Office of Information
+        and Resource Management","100000086":"Directorate for Mathematical and Physical
+        Sciences","100000085":"Directorate for Geosciences"},"replaced-by":[],"work-count":146634,"name":"National
+        Science Foundation","descendants":["100000076","100010608","100005716","100000179","100005447","100000086","100000085","100000088","100005441","100000081","100000084","100000083","100000152","100000155","100000154","100000156","100000153","100000089","100006603","100000178","100000177","100007522","100000176","100000106","100005714","100005450","100005448","100005449","100000165","100000164","100000121","100006091","100000078","100000166","100000159","100000087","100000160","100000141","100007352","100000163","100000162","100000175","100000174","100007521","100005717","100000077","100000170","100000169","100005446","100005445","100005442","100005444","100005443","100005554","100005553","100000082","100000171","100000173","100000172","100000149","100000148","100000151","100000150","100000147","100000146","100000105","100000143","100000145","100000144","100007523"],"descendant-work-count":183048,"id":"100000001","tokens":["national","science","foundation","nsf"],"replaces":[],"uri":"http:\/\/dx.doi.org\/10.13039\/100000001","hierarchy":{"100000001":{"100010608":{},"100000179":{"more":true},"100005716":{},"100000081":{"more":true},"100000083":{"more":true},"100005441":{"more":true},"100000076":{"more":true},"100000084":{"more":true},"100000088":{"more":true},"100005447":{"more":true},"100000086":{"more":true},"100000085":{"more":true}}},"alt-names":["NSF"],"location":"United
+        States"}}'
+  recorded_at: 2018-12-07 22:36:57 GMT
+  recorded_with: vcr/0.2.0.9101, webmockr/0.2.9.9311
