@@ -223,7 +223,7 @@ fundref_GET_ <- function(x, args, works, cursor = NULL, cursor_max = NULL,
 }
 
 parse_fund <- function(x) {
-  if (is.null(x) || is.na(x)) {
+  if (is.null(x) || all(is.na(x))) {
     NA
   } else {
     desc <- unlist(x$descendants)
