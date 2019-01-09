@@ -101,7 +101,7 @@ high and low level.
 
 \section{RStudio Addin}{
 
-On installation of \pkg{rcrossref} you get an RStudio Addin. To use the addin,
+On installation of \pkg{rcrossref} you get an RStudio Addin. To use the Addin,
 go to the top toolbar > Tools > Addins > Add Crossref Citations. You'll get a
 window pop up that you can put in DOIs for. If the DOI is found, the bibtex
 citations will be added to a file called \code{crossref.bib}. New citations

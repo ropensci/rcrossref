@@ -1,4 +1,4 @@
-#' Search the CrossRef Metatdata API.
+#' Search the CrossRef Metadata API.
 #' 
 #' @export
 #' @rdname cr_search-defunct

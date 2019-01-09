@@ -15,7 +15,7 @@ rcrossref 0.8.4
 
 ### BUG FIXES
 
-* fixed bug in `cr_works()` in which field queries should have been possible for title and affilitation, but were not. Fixed now.  (#149)
+* fixed bug in `cr_works()` in which field queries should have been possible for title and affiliation, but were not. Fixed now.  (#149)
 * `cr_journals()` was not correctly parsing data when more than 1 ISSN given and `works` set to `TRUE`, fixed now (#156)
 * `cr_journals()` was not correctly parsing data when no ISSN found and `works` set to `TRUE`, fixed now (#150)
 * `cr_journals()` was not correctly handling queries with multiple ISSN's and `works` set to `FALSE`, fixed now (#151)
@@ -101,7 +101,7 @@ surely (#101)
 * sleeping now between tests to avoid making crossref rate
 limit gate keepers mad (#125)
 * `cr_search` and `cr_search_free` are now defunct. They were marked
-deprecated in previous version, and warned of defunctifying, and now
+deprecated in previous version, and warned of defunct, and now
 they are defunct. Similar functionality can be done with e.g., `cr_works()`
 (#102)
 * `crosscite` is now defunct. The functionality of this function can be
@@ -120,7 +120,7 @@ rcrossref 0.5.8
 
 ### NEW FEATURES
 
-* Addded an RStudio Addin for searching for citations. See `?rcrossref` for
+* Added an RStudio Addin for searching for citations. See `?rcrossref` for
 more. Addin authored by Hao Zhu @haozhu233 (#114)
 * New function `cr_abstract()` that tries to get an abstract via XML provided by
 Crossref - NOTE: an abstract is rarely available though (#116)

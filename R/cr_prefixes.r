@@ -33,7 +33,7 @@
 #'
 #' CrossRef also has member IDs for depositing organisations. A single member
 #' may control multiple owner prefixes, which in turn may control a number of
-#' DOIs. When looking at works published by a certain organisaton, member
+#' DOIs. When looking at works published by a certain organisation, member
 #' IDs and the member routes should be used.
 #'
 #' @references

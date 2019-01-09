@@ -8,9 +8,9 @@
 #' "crossref-xml", "datacite-xml","bibentry", or "crossref-tdm". The format
 #' "citeproc-json-ish" is a format that is not quite proper citeproc-json
 #' @param style a CSL style (for text format only). See [get_styles()]
-#' for options. Default: apa. If there's a style that CrossRef doesn't support
+#' for options. Default: 'apa'. If there's a style that CrossRef doesn't support
 #' you'll get a  `(500) Internal Server Error`
-#' @param locale Lansguage locale. See `?Sys.getlocale`
+#' @param locale Language locale. See `?Sys.getlocale`
 #' @param raw (logical) Return raw text in the format given by `format`
 #' parameter. Default: `FALSE`
 #' @param url (character) Base URL for the content negotiation request. 

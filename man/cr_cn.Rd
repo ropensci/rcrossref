@@ -16,10 +16,10 @@ cr_cn(dois, format = "bibtex", style = "apa", locale = "en-US",
 "citeproc-json-ish" is a format that is not quite proper citeproc-json}
 
 \item{style}{a CSL style (for text format only). See \code{\link[=get_styles]{get_styles()}}
-for options. Default: apa. If there's a style that CrossRef doesn't support
+for options. Default: 'apa'. If there's a style that CrossRef doesn't support
 you'll get a  \code{(500) Internal Server Error}}
 
-\item{locale}{Lansguage locale. See \code{?Sys.getlocale}}
+\item{locale}{Language locale. See \code{?Sys.getlocale}}
 
 \item{raw}{(logical) Return raw text in the format given by \code{format}
 parameter. Default: \code{FALSE}}
