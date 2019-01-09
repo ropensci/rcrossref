@@ -59,6 +59,7 @@ test_that("cr_works fails correctly", {
 
     expect_error(cr_works(timeout_ms = 1))
     expect_equal(NROW(cr_works(query = "adfaaf")$data), 0)
+    expect_warning(cr_works(sample = 200), "less than or equal to 100")
   })
 })
 
@@ -202,4 +203,28 @@ test_that("cr_works - handles empty funder item", {
     expect_is(a$data$funder, "list")
     expect_is(a$data$funder[[1]], "data.frame")
   })
+})
+
+test_that("cr_works - async", {
+  skip_on_cran() # async mocking/webmockr/vcr not supported yet
+
+  queries <- c("ecology", "science", "cellular", "birds", "European",
+    "bears", "beets", "laughter", "hapiness", "funding")
+  x <- cr_works(query = queries, async = TRUE)
+  expect_true(all(vapply(x, is.data.frame, logical(1))))
+  expect_equal(length(queries), length(x))
+  expect_is(x[[1]], "data.frame")
+})
+
+test_that("cr_works fails well: arguments that dont require http requests", {
+  skip_on_cran()
+
+  expect_error(cr_works(limit = 'foo'), "limit value illegal")
+  expect_error(cr_works(limit = 1050), "limit parameter must be 1000 or less")
+
+  expect_error(cr_works(offset = 'foo'), "offset value illegal")
+
+  expect_error(cr_works(sample = 'foo'), "sample value illegal")
+  
+  expect_error(cr_works(async = 5), "is not TRUE")
 })

@@ -15,7 +15,7 @@ cr_works_(dois = NULL, query = NULL, filter = NULL, offset = NULL,
   limit = NULL, sample = NULL, sort = NULL, order = NULL,
   facet = FALSE, cursor = NULL, cursor_max = 5000,
   .progress = "none", parse = FALSE, flq = NULL, select = NULL,
-  ...)
+  async = FALSE, ...)
 }
 \arguments{
 \item{dois}{Search by a single DOI or many DOIs.  Note that using this
@@ -226,6 +226,9 @@ names(res$data)
 queries <- c("ecology", "science", "cellular", "birds", "European",
   "bears", "beets", "laughter", "hapiness", "funding")
 res <- cr_works(query = queries, async = TRUE)
+res_json <- cr_works_(query = queries, async = TRUE)
+unname(vapply(res_json, class, ""))
+jsonlite::fromJSON(res_json[[1]])
 
 queries <- c("ecology", "science", "cellular")
 res <- cr_works(query = queries, async = TRUE, verbose = TRUE)

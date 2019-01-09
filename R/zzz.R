@@ -183,6 +183,7 @@ field_query_handler <- function(x) {
 
 prep_args <- function(query, filter, offset, limit, sample, sort, 
                       order, facet, cursor, flq, select) {
+  check_number(limit)
   check_limit(limit)
   check_number(offset)
   check_number(sample)

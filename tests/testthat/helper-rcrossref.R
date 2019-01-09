@@ -6,3 +6,5 @@ invisible(vcr::vcr_configure(
         "<crossref_email>" = Sys.getenv("crossref_email")
     )
 ))
+
+pj <- function(x) jsonlite::fromJSON(x)

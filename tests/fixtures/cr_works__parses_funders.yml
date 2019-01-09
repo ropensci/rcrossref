@@ -1,0 +1,86 @@
+http_interactions:
+- request:
+    method: get
+    uri: https://api.crossref.org/works/10.1515/crelle-2013-0024
+    body:
+      encoding: ''
+      string: ''
+    headers:
+      Accept-Encoding: gzip, deflate
+      Accept: application/json, text/xml, application/xml, */*
+      User-Agent: r-curl/3.2 crul/0.7.0.9100 rOpenSci(rcrossref/0.8.6.9100) (mailto:<crossref_email>)
+      X-USER-AGENT: r-curl/3.2 crul/0.7.0.9100 rOpenSci(rcrossref/0.8.6.9100) (mailto:<crossref_email>)
+  response:
+    status:
+      status_code: '200'
+      message: OK
+      explanation: Request fulfilled, document follows
+    headers:
+      status: HTTP/1.1 200 OK
+      content-type: application/json;charset=UTF-8
+      vary: Accept
+      access-control-allow-origin: '*'
+      access-control-allow-headers: X-Requested-With
+      content-length: '2808'
+      server: http-kit
+      date: Wed, 09 Jan 2019 21:30:09 GMT
+      x-rate-limit-limit: '50'
+      x-rate-limit-interval: 1s
+      connection: close
+    body:
+      encoding: UTF-8
+      string: '{"status":"ok","message-type":"work","message-version":"1.0.0","message":{"indexed":{"date-parts":[[2018,6,20]],"date-time":"2018-06-20T04:42:36Z","timestamp":1529469756693},"reference-count":0,"publisher":"Walter
+        de Gruyter GmbH","issue":"700","funder":[{"name":"NSF","award":["DMS-0800084","DMS-1206661","DMS-0804042","DMS-1105187"]},{"name":"NSF","award":["DMS-0800084","DMS-1206661","DMS-0804042","DMS-1105187"]},{"name":"NSF","award":["DMS-0800084","DMS-1206661","DMS-0804042","DMS-1105187"]},{"name":"NSF","award":["DMS-0800084","DMS-1206661","DMS-0804042","DMS-1105187"]}],"content-domain":{"domain":[],"crossmark-restriction":false},"short-container-title":[],"published-print":{"date-parts":[[2015,1,1]]},"abstract":"<jats:title>Abstract<\/jats:title><jats:p>We
+        investigate rigidity and stability properties of critical points of quadratic
+        curvature functionals on the space of Riemannian metrics. We show it is possible
+        to \u201cgauge\u201d the Euler\u2013Lagrange equations, in a self-adjoint
+        fashion, to become elliptic. Fredholm theory may then be used to describe
+        local properties of the moduli space of critical metrics. We show a number
+        of compact examples are infinitesimally rigid, and consequently, are isolated
+        critical points in the space of unit-volume Riemannian metrics. We then give
+        examples of critical metrics which are strict local minimizers (up to diffeomorphism
+        and scaling). A corollary is a local \u201creverse Bishop''s inequality\u201d
+        for such metrics. In particular, any metric<\/jats:p>","DOI":"10.1515\/crelle-2013-0024","type":"journal-article","created":{"date-parts":[[2013,5,30]],"date-time":"2013-05-30T20:40:52Z","timestamp":1369946452000},"source":"Crossref","is-referenced-by-count":3,"title":["Rigidity
+        and stability of Einstein metrics for quadratic curvature functionals"],"prefix":"10.1515","volume":"2015","author":[{"given":"Matthew
+        J.","family":"Gursky","sequence":"first","affiliation":[]},{"given":"Jeff
+        A.","family":"Viaclovsky","sequence":"additional","affiliation":[]}],"member":"374","container-title":["Journal
+        f\u00fcr die reine und angewandte Mathematik (Crelles Journal)"],"original-title":[],"link":[{"URL":"https:\/\/www.degruyter.com\/view\/j\/crelle.2015.2015.issue-700\/crelle-2013-0024\/crelle-2013-0024.pdf","content-type":"unspecified","content-version":"vor","intended-application":"similarity-checking"}],"deposited":{"date-parts":[[2017,5,9]],"date-time":"2017-05-09T17:17:13Z","timestamp":1494350233000},"score":1.0,"subtitle":[],"short-title":[],"issued":{"date-parts":[[2015,1,1]]},"references-count":0,"journal-issue":{"issue":"700"},"URL":"http:\/\/dx.doi.org\/10.1515\/crelle-2013-0024","relation":{},"ISSN":["0075-4102","1435-5345"],"issn-type":[{"value":"0075-4102","type":"print"},{"value":"1435-5345","type":"electronic"}]}}'
+  recorded_at: 2019-01-09 21:30:10 GMT
+  recorded_with: vcr/0.2.0, webmockr/0.3.0
+- request:
+    method: get
+    uri: https://api.crossref.org/works/10.1186/isrctn11093872
+    body:
+      encoding: ''
+      string: ''
+    headers:
+      Accept-Encoding: gzip, deflate
+      Accept: application/json, text/xml, application/xml, */*
+      User-Agent: r-curl/3.2 crul/0.7.0.9100 rOpenSci(rcrossref/0.8.6.9100) (mailto:<crossref_email>)
+      X-USER-AGENT: r-curl/3.2 crul/0.7.0.9100 rOpenSci(rcrossref/0.8.6.9100) (mailto:<crossref_email>)
+  response:
+    status:
+      status_code: '200'
+      message: OK
+      explanation: Request fulfilled, document follows
+    headers:
+      status: HTTP/1.1 200 OK
+      content-type: application/json;charset=UTF-8
+      vary: Accept
+      access-control-allow-origin: '*'
+      access-control-allow-headers: X-Requested-With
+      content-length: '1372'
+      server: http-kit
+      date: Wed, 09 Jan 2019 21:30:10 GMT
+      x-rate-limit-limit: '50'
+      x-rate-limit-interval: 1s
+      connection: close
+    body:
+      encoding: UTF-8
+      string: '{"status":"ok","message-type":"work","message-version":"1.0.0","message":{"institution":{"name":"ISRCTN","place":["London,
+        UK"],"acronym":["-"]},"indexed":{"date-parts":[[2018,5,7]],"date-time":"2018-05-07T22:33:30Z","timestamp":1525732410826},"reference-count":0,"publisher":"Springer
+        Nature","funder":[{"DOI":"10.13039\/501100000272","name":"National Institute
+        for Health Research","doi-asserted-by":"publisher","award":[]}],"content-domain":{"domain":["www.isrctn.com"],"crossmark-restriction":true},"short-container-title":[],"DOI":"10.1186\/isrctn11093872","type":"dataset","created":{"date-parts":[[2015,11,11]],"date-time":"2015-11-11T12:20:04Z","timestamp":1447244404000},"update-policy":"http:\/\/dx.doi.org\/10.1186\/isrctn_crossmark_policy","source":"Crossref","is-referenced-by-count":0,"title":["CapaCiTY
+        Study 2 - Chronic Constipation Treatment Pathway"],"prefix":"10.1186","author":[{"given":"Shiva","family":"Taheri","sequence":"first","affiliation":[]}],"member":"297","content-created":{"date-parts":[[2015,11,11]]},"container-title":["http:\/\/isrctn.com\/"],"original-title":[],"deposited":{"date-parts":[[2015,11,11]],"date-time":"2015-11-11T12:20:06Z","timestamp":1447244406000},"score":1.0,"subtitle":[],"short-title":[],"issued":{"date-parts":[[2015,11,11]]},"references-count":0,"URL":"http:\/\/dx.doi.org\/10.1186\/isrctn11093872","relation":{}}}'
+  recorded_at: 2019-01-09 21:30:10 GMT
+  recorded_with: vcr/0.2.0, webmockr/0.3.0

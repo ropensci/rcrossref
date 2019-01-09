@@ -1,4 +1,4 @@
-cr_async <- function(endpoint, args, ...) {
+cr_async <- function(endpoint, args, parse = TRUE, ...) {
   if (length(args) == 0) stop('no arguments passed to async call')
   lengths <- vapply(args, length, 1)
   if (length(lengths[unname(lengths) > 1]) > 1) {
@@ -15,7 +15,9 @@ cr_async <- function(endpoint, args, ...) {
   cli$request()
   cli$status()
   cli$responses()
-  lapply(cli$parse(), function(z) {
+  txt <- cli$parse()
+  if (!parse) return(txt)
+  lapply(txt, function(z) {
     dplyr::tbl_df(dplyr::bind_rows(
       lapply(jsonlite::fromJSON(z, simplifyVector = FALSE)$message$items,
         parse_works)
