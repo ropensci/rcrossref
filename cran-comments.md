@@ -1,7 +1,7 @@
 ## Test environments
 
-* local OS X install, R 3.5.1 patched
-* ubuntu 14.04.5 LTS (on Travis-CI), R 3.5.1
+* local OS X install, R 3.5.2 patched
+* ubuntu 14.04.5 LTS (on Travis-CI), R 3.5.2
 * win-builder (devel and release)
 
 ## R CMD check results
@@ -11,7 +11,7 @@
    License components with restrictions and base license permitting such:
      MIT + file LICENSE
    File 'LICENSE':
-     YEAR: 2018
+     YEAR: 2019
      COPYRIGHT HOLDER: Scott Chamberlain
 
 ## Reverse dependencies
@@ -20,7 +20,7 @@
 
 -------
 
-This submission includes many bug fixes and some minor improvements. 
+This submission xx
 
 Thanks!
 Scott Chamberlain
