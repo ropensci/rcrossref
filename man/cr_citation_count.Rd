@@ -44,6 +44,14 @@ Unfortunately, we can not do anything about this.
 I would imagine it's best to use this data instead of from the publishers,
 and this data you can get programatically :)
 }
+\section{failure behavior}{
+
+When a DOI does not exist, we may not get a proper HTTP status code
+to throw a proper stop status, so we grep on the text itself, and throw
+a stop if only one DOI passed and not using async, or warning if more
+than one DOI passed or if using async.
+}
+
 \examples{
 \dontrun{
 cr_citation_count(doi="10.1371/journal.pone.0042793")

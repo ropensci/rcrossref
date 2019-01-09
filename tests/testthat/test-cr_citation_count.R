@@ -29,6 +29,7 @@ test_that("cr_citation_count fails correctly", {
   vcr::use_cassette("cr_citation_count_fails_well", {
     expect_error(cr_citation_count(doi="10.1371/journal.pone.0042793", 
       timeout_ms = 1))
-    expect_equal(cr_citation_count("10.1371/journal.pone.004"), NA)
+    expect_equal(cr_citation_count("10.1371/journal.pone.004")$count, 
+      NA_integer_)
   })
 })

@@ -7,13 +7,9 @@
 \usage{
 cr_works(dois = NULL, query = NULL, filter = NULL, offset = NULL,
   limit = NULL, sample = NULL, sort = NULL, order = NULL,
-<<<<<<< HEAD
-  facet = FALSE, cursor = NULL, cursor_max = 5000, .progress = "none",
-  flq = NULL, select = NULL, async = FALSE, ...)
-=======
   facet = FALSE, cursor = NULL, cursor_max = 5000,
-  .progress = "none", flq = NULL, select = NULL, ...)
->>>>>>> master
+  .progress = "none", flq = NULL, select = NULL, async = FALSE,
+  ...)
 
 cr_works_(dois = NULL, query = NULL, filter = NULL, offset = NULL,
   limit = NULL, sample = NULL, sort = NULL, order = NULL,
