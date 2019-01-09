@@ -105,6 +105,7 @@
 #' @importFrom DT datatable dataTableOutput renderDataTable
 #' @importFrom stringr str_detect str_match str_replace
 #' @importFrom stats setNames
+#' @importFrom crul HttpRequest AsyncVaried
 #' @name rcrossref-package
 #' @aliases rcrossref
 #' @docType package

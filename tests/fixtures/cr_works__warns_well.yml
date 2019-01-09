@@ -1,0 +1,274 @@
+http_interactions:
+- request:
+    method: get
+    uri: https://api.crossref.org/works/blblbl
+    body:
+      encoding: ''
+      string: ''
+    headers:
+      Accept-Encoding: gzip, deflate
+      Accept: application/json, text/xml, application/xml, */*
+      User-Agent: r-curl/3.2 crul/0.7.0.9100 rOpenSci(rcrossref/0.8.6.9100) (mailto:<crossref_email>)
+      X-USER-AGENT: r-curl/3.2 crul/0.7.0.9100 rOpenSci(rcrossref/0.8.6.9100) (mailto:<crossref_email>)
+  response:
+    status:
+      status_code: '404'
+      message: Not Found
+      explanation: Nothing matches the given URI
+    headers:
+      status: HTTP/1.1 404 Not Found
+      content-type: text/plain
+      access-control-allow-origin: '*'
+      access-control-allow-headers: X-Requested-With
+      content-length: '19'
+      server: http-kit
+      date: Wed, 09 Jan 2019 21:18:55 GMT
+      x-rate-limit-limit: '50'
+      x-rate-limit-interval: 1s
+      connection: close
+    body:
+      encoding: UTF-8
+      string: Resource not found.
+  recorded_at: 2019-01-09 21:18:57 GMT
+  recorded_with: vcr/0.2.0, webmockr/0.3.0
+- request:
+    method: get
+    uri: https://api.crossref.org/works/10.1038/nnano.2014.279
+    body:
+      encoding: ''
+      string: ''
+    headers:
+      Accept-Encoding: gzip, deflate
+      Accept: application/json, text/xml, application/xml, */*
+      User-Agent: r-curl/3.2 crul/0.7.0.9100 rOpenSci(rcrossref/0.8.6.9100) (mailto:<crossref_email>)
+      X-USER-AGENT: r-curl/3.2 crul/0.7.0.9100 rOpenSci(rcrossref/0.8.6.9100) (mailto:<crossref_email>)
+  response:
+    status:
+      status_code: '200'
+      message: OK
+      explanation: Request fulfilled, document follows
+    headers:
+      status: HTTP/1.1 200 OK
+      content-type: application/json;charset=UTF-8
+      vary: Accept
+      access-control-allow-origin: '*'
+      access-control-allow-headers: X-Requested-With
+      content-length: '4599'
+      server: http-kit
+      date: Wed, 09 Jan 2019 21:18:55 GMT
+      x-rate-limit-limit: '50'
+      x-rate-limit-interval: 1s
+      connection: close
+    body:
+      encoding: UTF-8
+      string: '{"status":"ok","message-type":"work","message-version":"1.0.0","message":{"indexed":{"date-parts":[[2018,12,17]],"date-time":"2018-12-17T13:24:13Z","timestamp":1545053053642},"reference-count":12,"publisher":"Springer
+        Nature","issue":"1","license":[{"URL":"http:\/\/www.springer.com\/tdm","start":{"date-parts":[[2014,11,10]],"date-time":"2014-11-10T00:00:00Z","timestamp":1415577600000},"delay-in-days":0,"content-version":"unspecified"}],"content-domain":{"domain":["link.springer.com"],"crossmark-restriction":false},"short-container-title":["Nature
+        Nanotech"],"published-print":{"date-parts":[[2015,1]]},"DOI":"10.1038\/nnano.2014.279","type":"journal-article","created":{"date-parts":[[2014,11,7]],"date-time":"2014-11-07T14:30:15Z","timestamp":1415370615000},"page":"22-24","update-policy":"http:\/\/dx.doi.org\/10.1007\/springer_crossmark_policy","source":"Crossref","is-referenced-by-count":29,"title":["Charges
+        ride the spin wave"],"prefix":"10.1038","volume":"10","author":[{"given":"Timo","family":"Kuschel","sequence":"first","affiliation":[]},{"given":"G\u00fcnter","family":"Reiss","sequence":"additional","affiliation":[]}],"member":"297","published-online":{"date-parts":[[2014,11,10]]},"reference":[{"key":"nnano.2014.279-b1","author":"Manchon
+        A.","volume":"78","first-page":"212405","year":"2008","journal-title":"Phys.
+        Rev. B","DOI":"10.1103\/PhysRevB.78.212405","doi-asserted-by":"crossref"},{"key":"nnano.2014.279-b2","author":"Ciccarelli
+        C.","volume":"10","first-page":"50","year":"2015","journal-title":"Nature
+        Nanotech.","DOI":"10.1038\/nnano.2014.252","doi-asserted-by":"crossref"},{"key":"nnano.2014.279-b3","author":"Dyakonov
+        M. I.","volume":"13","first-page":"467","year":"1971","journal-title":"Sov.
+        Phys. JETP Lett."},{"key":"nnano.2014.279-b4","author":"Wolf S.","volume":"294","first-page":"1488","year":"2001","journal-title":"Science","DOI":"10.1126\/science.1065389","doi-asserted-by":"crossref"},{"key":"nnano.2014.279-b5","author":"Bauer
+        G. E. W.","volume":"11","first-page":"391","year":"2012","journal-title":"Nature
+        Mater.","DOI":"10.1038\/nmat3301","doi-asserted-by":"crossref"},{"key":"nnano.2014.279-b6","author":"Uchida
+        K.","volume":"97","first-page":"172505","year":"2010","journal-title":"Appl.
+        Phys. Lett.","DOI":"10.1063\/1.3507386","doi-asserted-by":"crossref"},{"key":"nnano.2014.279-b7","author":"Flipse
+        J.","volume":"113","first-page":"027601","year":"2014","journal-title":"Phys.
+        Rev. Lett.","DOI":"10.1103\/PhysRevLett.113.027601","doi-asserted-by":"crossref"},{"key":"nnano.2014.279-b8","author":"Hirsch
+        J. E.","volume":"83","first-page":"1834","year":"1999","journal-title":"Phys.
+        Rev. Lett.","DOI":"10.1103\/PhysRevLett.83.1834","doi-asserted-by":"crossref"},{"key":"nnano.2014.279-b9","author":"Kato
+        Y. K.","volume":"306","first-page":"1910","year":"2004","journal-title":"Science","DOI":"10.1126\/science.1105514","doi-asserted-by":"crossref"},{"key":"nnano.2014.279-b10","author":"Saitoh
+        E.","volume":"88","first-page":"182509","year":"2006","journal-title":"Appl.
+        Phys. Lett.","DOI":"10.1063\/1.2199473","doi-asserted-by":"crossref"},{"key":"nnano.2014.279-b11","author":"Meier
+        D.","volume":"88","first-page":"184425","year":"2013","journal-title":"Phys.
+        Rev. B","DOI":"10.1103\/PhysRevB.88.184425","doi-asserted-by":"crossref"},{"key":"nnano.2014.279-b12","author":"Schmid
+        M.","volume":"111","first-page":"187201","year":"2013","journal-title":"Phys.
+        Rev. Lett.","DOI":"10.1103\/PhysRevLett.111.187201","doi-asserted-by":"crossref"}],"container-title":["Nature
+        Nanotechnology"],"original-title":[],"language":"en","link":[{"URL":"http:\/\/www.nature.com\/articles\/nnano.2014.279.pdf","content-type":"application\/pdf","content-version":"vor","intended-application":"text-mining"},{"URL":"http:\/\/www.nature.com\/articles\/nnano.2014.279","content-type":"text\/html","content-version":"vor","intended-application":"text-mining"},{"URL":"http:\/\/www.nature.com\/articles\/nnano.2014.279.pdf","content-type":"application\/pdf","content-version":"vor","intended-application":"similarity-checking"}],"deposited":{"date-parts":[[2017,12,26]],"date-time":"2017-12-26T23:44:47Z","timestamp":1514331887000},"score":1.0,"subtitle":["Spin
+        orbitronics"],"short-title":[],"issued":{"date-parts":[[2014,11,10]]},"references-count":12,"journal-issue":{"published-print":{"date-parts":[[2015,1]]},"issue":"1"},"alternative-id":["BFnnano2014279"],"URL":"http:\/\/dx.doi.org\/10.1038\/nnano.2014.279","relation":{"cites":[]},"ISSN":["1748-3387","1748-3395"],"issn-type":[{"value":"1748-3387","type":"print"},{"value":"1748-3395","type":"electronic"}]}}'
+  recorded_at: 2019-01-09 21:18:57 GMT
+  recorded_with: vcr/0.2.0, webmockr/0.3.0
+- request:
+    method: get
+    uri: https://api.crossref.org/works/blblbl
+    body:
+      encoding: ''
+      string: ''
+    headers:
+      Accept-Encoding: gzip, deflate
+      Accept: application/json, text/xml, application/xml, */*
+      User-Agent: r-curl/3.2 crul/0.7.0.9100 rOpenSci(rcrossref/0.8.6.9100) (mailto:<crossref_email>)
+      X-USER-AGENT: r-curl/3.2 crul/0.7.0.9100 rOpenSci(rcrossref/0.8.6.9100) (mailto:<crossref_email>)
+  response:
+    status:
+      status_code: '404'
+      message: Not Found
+      explanation: Nothing matches the given URI
+    headers:
+      status: HTTP/1.1 404 Not Found
+      content-type: text/plain
+      access-control-allow-origin: '*'
+      access-control-allow-headers: X-Requested-With
+      content-length: '19'
+      server: http-kit
+      date: Wed, 09 Jan 2019 21:18:56 GMT
+      x-rate-limit-limit: '50'
+      x-rate-limit-interval: 1s
+      connection: close
+    body:
+      encoding: UTF-8
+      string: Resource not found.
+  recorded_at: 2019-01-09 21:18:57 GMT
+  recorded_with: vcr/0.2.0, webmockr/0.3.0
+- request:
+    method: get
+    uri: https://api.crossref.org/works/blblbl
+    body:
+      encoding: ''
+      string: ''
+    headers:
+      Accept-Encoding: gzip, deflate
+      Accept: application/json, text/xml, application/xml, */*
+      User-Agent: r-curl/3.2 crul/0.7.0.9100 rOpenSci(rcrossref/0.8.6.9100) (mailto:<crossref_email>)
+      X-USER-AGENT: r-curl/3.2 crul/0.7.0.9100 rOpenSci(rcrossref/0.8.6.9100) (mailto:<crossref_email>)
+  response:
+    status:
+      status_code: '404'
+      message: Not Found
+      explanation: Nothing matches the given URI
+    headers:
+      status: HTTP/1.1 404 Not Found
+      content-type: text/plain
+      access-control-allow-origin: '*'
+      access-control-allow-headers: X-Requested-With
+      content-length: '19'
+      server: http-kit
+      date: Wed, 09 Jan 2019 21:18:56 GMT
+      x-rate-limit-limit: '50'
+      x-rate-limit-interval: 1s
+      connection: close
+    body:
+      encoding: UTF-8
+      string: Resource not found.
+  recorded_at: 2019-01-09 21:18:57 GMT
+  recorded_with: vcr/0.2.0, webmockr/0.3.0
+- request:
+    method: get
+    uri: https://api.crossref.org/works/10.1038/nnano.2014.279
+    body:
+      encoding: ''
+      string: ''
+    headers:
+      Accept-Encoding: gzip, deflate
+      Accept: application/json, text/xml, application/xml, */*
+      User-Agent: r-curl/3.2 crul/0.7.0.9100 rOpenSci(rcrossref/0.8.6.9100) (mailto:<crossref_email>)
+      X-USER-AGENT: r-curl/3.2 crul/0.7.0.9100 rOpenSci(rcrossref/0.8.6.9100) (mailto:<crossref_email>)
+  response:
+    status:
+      status_code: '200'
+      message: OK
+      explanation: Request fulfilled, document follows
+    headers:
+      status: HTTP/1.1 200 OK
+      content-type: application/json;charset=UTF-8
+      vary: Accept
+      access-control-allow-origin: '*'
+      access-control-allow-headers: X-Requested-With
+      content-length: '4599'
+      server: http-kit
+      date: Wed, 09 Jan 2019 21:18:56 GMT
+      x-rate-limit-limit: '50'
+      x-rate-limit-interval: 1s
+      connection: close
+    body:
+      encoding: UTF-8
+      string: '{"status":"ok","message-type":"work","message-version":"1.0.0","message":{"indexed":{"date-parts":[[2018,12,17]],"date-time":"2018-12-17T13:24:13Z","timestamp":1545053053642},"reference-count":12,"publisher":"Springer
+        Nature","issue":"1","license":[{"URL":"http:\/\/www.springer.com\/tdm","start":{"date-parts":[[2014,11,10]],"date-time":"2014-11-10T00:00:00Z","timestamp":1415577600000},"delay-in-days":0,"content-version":"unspecified"}],"content-domain":{"domain":["link.springer.com"],"crossmark-restriction":false},"short-container-title":["Nature
+        Nanotech"],"published-print":{"date-parts":[[2015,1]]},"DOI":"10.1038\/nnano.2014.279","type":"journal-article","created":{"date-parts":[[2014,11,7]],"date-time":"2014-11-07T14:30:15Z","timestamp":1415370615000},"page":"22-24","update-policy":"http:\/\/dx.doi.org\/10.1007\/springer_crossmark_policy","source":"Crossref","is-referenced-by-count":29,"title":["Charges
+        ride the spin wave"],"prefix":"10.1038","volume":"10","author":[{"given":"Timo","family":"Kuschel","sequence":"first","affiliation":[]},{"given":"G\u00fcnter","family":"Reiss","sequence":"additional","affiliation":[]}],"member":"297","published-online":{"date-parts":[[2014,11,10]]},"reference":[{"key":"nnano.2014.279-b1","author":"Manchon
+        A.","volume":"78","first-page":"212405","year":"2008","journal-title":"Phys.
+        Rev. B","DOI":"10.1103\/PhysRevB.78.212405","doi-asserted-by":"crossref"},{"key":"nnano.2014.279-b2","author":"Ciccarelli
+        C.","volume":"10","first-page":"50","year":"2015","journal-title":"Nature
+        Nanotech.","DOI":"10.1038\/nnano.2014.252","doi-asserted-by":"crossref"},{"key":"nnano.2014.279-b3","author":"Dyakonov
+        M. I.","volume":"13","first-page":"467","year":"1971","journal-title":"Sov.
+        Phys. JETP Lett."},{"key":"nnano.2014.279-b4","author":"Wolf S.","volume":"294","first-page":"1488","year":"2001","journal-title":"Science","DOI":"10.1126\/science.1065389","doi-asserted-by":"crossref"},{"key":"nnano.2014.279-b5","author":"Bauer
+        G. E. W.","volume":"11","first-page":"391","year":"2012","journal-title":"Nature
+        Mater.","DOI":"10.1038\/nmat3301","doi-asserted-by":"crossref"},{"key":"nnano.2014.279-b6","author":"Uchida
+        K.","volume":"97","first-page":"172505","year":"2010","journal-title":"Appl.
+        Phys. Lett.","DOI":"10.1063\/1.3507386","doi-asserted-by":"crossref"},{"key":"nnano.2014.279-b7","author":"Flipse
+        J.","volume":"113","first-page":"027601","year":"2014","journal-title":"Phys.
+        Rev. Lett.","DOI":"10.1103\/PhysRevLett.113.027601","doi-asserted-by":"crossref"},{"key":"nnano.2014.279-b8","author":"Hirsch
+        J. E.","volume":"83","first-page":"1834","year":"1999","journal-title":"Phys.
+        Rev. Lett.","DOI":"10.1103\/PhysRevLett.83.1834","doi-asserted-by":"crossref"},{"key":"nnano.2014.279-b9","author":"Kato
+        Y. K.","volume":"306","first-page":"1910","year":"2004","journal-title":"Science","DOI":"10.1126\/science.1105514","doi-asserted-by":"crossref"},{"key":"nnano.2014.279-b10","author":"Saitoh
+        E.","volume":"88","first-page":"182509","year":"2006","journal-title":"Appl.
+        Phys. Lett.","DOI":"10.1063\/1.2199473","doi-asserted-by":"crossref"},{"key":"nnano.2014.279-b11","author":"Meier
+        D.","volume":"88","first-page":"184425","year":"2013","journal-title":"Phys.
+        Rev. B","DOI":"10.1103\/PhysRevB.88.184425","doi-asserted-by":"crossref"},{"key":"nnano.2014.279-b12","author":"Schmid
+        M.","volume":"111","first-page":"187201","year":"2013","journal-title":"Phys.
+        Rev. Lett.","DOI":"10.1103\/PhysRevLett.111.187201","doi-asserted-by":"crossref"}],"container-title":["Nature
+        Nanotechnology"],"original-title":[],"language":"en","link":[{"URL":"http:\/\/www.nature.com\/articles\/nnano.2014.279.pdf","content-type":"application\/pdf","content-version":"vor","intended-application":"text-mining"},{"URL":"http:\/\/www.nature.com\/articles\/nnano.2014.279","content-type":"text\/html","content-version":"vor","intended-application":"text-mining"},{"URL":"http:\/\/www.nature.com\/articles\/nnano.2014.279.pdf","content-type":"application\/pdf","content-version":"vor","intended-application":"similarity-checking"}],"deposited":{"date-parts":[[2017,12,26]],"date-time":"2017-12-26T23:44:47Z","timestamp":1514331887000},"score":1.0,"subtitle":["Spin
+        orbitronics"],"short-title":[],"issued":{"date-parts":[[2014,11,10]]},"references-count":12,"journal-issue":{"published-print":{"date-parts":[[2015,1]]},"issue":"1"},"alternative-id":["BFnnano2014279"],"URL":"http:\/\/dx.doi.org\/10.1038\/nnano.2014.279","relation":{"cites":[]},"ISSN":["1748-3387","1748-3395"],"issn-type":[{"value":"1748-3387","type":"print"},{"value":"1748-3395","type":"electronic"}]}}'
+  recorded_at: 2019-01-09 21:18:57 GMT
+  recorded_with: vcr/0.2.0, webmockr/0.3.0
+- request:
+    method: get
+    uri: https://api.crossref.org/works/10.1038/nnano.2014.279
+    body:
+      encoding: ''
+      string: ''
+    headers:
+      Accept-Encoding: gzip, deflate
+      Accept: application/json, text/xml, application/xml, */*
+      User-Agent: r-curl/3.2 crul/0.7.0.9100 rOpenSci(rcrossref/0.8.6.9100) (mailto:<crossref_email>)
+      X-USER-AGENT: r-curl/3.2 crul/0.7.0.9100 rOpenSci(rcrossref/0.8.6.9100) (mailto:<crossref_email>)
+  response:
+    status:
+      status_code: '200'
+      message: OK
+      explanation: Request fulfilled, document follows
+    headers:
+      status: HTTP/1.1 200 OK
+      content-type: application/json;charset=UTF-8
+      vary: Accept
+      access-control-allow-origin: '*'
+      access-control-allow-headers: X-Requested-With
+      content-length: '4599'
+      server: http-kit
+      date: Wed, 09 Jan 2019 21:18:57 GMT
+      x-rate-limit-limit: '50'
+      x-rate-limit-interval: 1s
+      connection: close
+    body:
+      encoding: UTF-8
+      string: '{"status":"ok","message-type":"work","message-version":"1.0.0","message":{"indexed":{"date-parts":[[2018,12,17]],"date-time":"2018-12-17T13:24:13Z","timestamp":1545053053642},"reference-count":12,"publisher":"Springer
+        Nature","issue":"1","license":[{"URL":"http:\/\/www.springer.com\/tdm","start":{"date-parts":[[2014,11,10]],"date-time":"2014-11-10T00:00:00Z","timestamp":1415577600000},"delay-in-days":0,"content-version":"unspecified"}],"content-domain":{"domain":["link.springer.com"],"crossmark-restriction":false},"short-container-title":["Nature
+        Nanotech"],"published-print":{"date-parts":[[2015,1]]},"DOI":"10.1038\/nnano.2014.279","type":"journal-article","created":{"date-parts":[[2014,11,7]],"date-time":"2014-11-07T14:30:15Z","timestamp":1415370615000},"page":"22-24","update-policy":"http:\/\/dx.doi.org\/10.1007\/springer_crossmark_policy","source":"Crossref","is-referenced-by-count":29,"title":["Charges
+        ride the spin wave"],"prefix":"10.1038","volume":"10","author":[{"given":"Timo","family":"Kuschel","sequence":"first","affiliation":[]},{"given":"G\u00fcnter","family":"Reiss","sequence":"additional","affiliation":[]}],"member":"297","published-online":{"date-parts":[[2014,11,10]]},"reference":[{"key":"nnano.2014.279-b1","author":"Manchon
+        A.","volume":"78","first-page":"212405","year":"2008","journal-title":"Phys.
+        Rev. B","DOI":"10.1103\/PhysRevB.78.212405","doi-asserted-by":"crossref"},{"key":"nnano.2014.279-b2","author":"Ciccarelli
+        C.","volume":"10","first-page":"50","year":"2015","journal-title":"Nature
+        Nanotech.","DOI":"10.1038\/nnano.2014.252","doi-asserted-by":"crossref"},{"key":"nnano.2014.279-b3","author":"Dyakonov
+        M. I.","volume":"13","first-page":"467","year":"1971","journal-title":"Sov.
+        Phys. JETP Lett."},{"key":"nnano.2014.279-b4","author":"Wolf S.","volume":"294","first-page":"1488","year":"2001","journal-title":"Science","DOI":"10.1126\/science.1065389","doi-asserted-by":"crossref"},{"key":"nnano.2014.279-b5","author":"Bauer
+        G. E. W.","volume":"11","first-page":"391","year":"2012","journal-title":"Nature
+        Mater.","DOI":"10.1038\/nmat3301","doi-asserted-by":"crossref"},{"key":"nnano.2014.279-b6","author":"Uchida
+        K.","volume":"97","first-page":"172505","year":"2010","journal-title":"Appl.
+        Phys. Lett.","DOI":"10.1063\/1.3507386","doi-asserted-by":"crossref"},{"key":"nnano.2014.279-b7","author":"Flipse
+        J.","volume":"113","first-page":"027601","year":"2014","journal-title":"Phys.
+        Rev. Lett.","DOI":"10.1103\/PhysRevLett.113.027601","doi-asserted-by":"crossref"},{"key":"nnano.2014.279-b8","author":"Hirsch
+        J. E.","volume":"83","first-page":"1834","year":"1999","journal-title":"Phys.
+        Rev. Lett.","DOI":"10.1103\/PhysRevLett.83.1834","doi-asserted-by":"crossref"},{"key":"nnano.2014.279-b9","author":"Kato
+        Y. K.","volume":"306","first-page":"1910","year":"2004","journal-title":"Science","DOI":"10.1126\/science.1105514","doi-asserted-by":"crossref"},{"key":"nnano.2014.279-b10","author":"Saitoh
+        E.","volume":"88","first-page":"182509","year":"2006","journal-title":"Appl.
+        Phys. Lett.","DOI":"10.1063\/1.2199473","doi-asserted-by":"crossref"},{"key":"nnano.2014.279-b11","author":"Meier
+        D.","volume":"88","first-page":"184425","year":"2013","journal-title":"Phys.
+        Rev. B","DOI":"10.1103\/PhysRevB.88.184425","doi-asserted-by":"crossref"},{"key":"nnano.2014.279-b12","author":"Schmid
+        M.","volume":"111","first-page":"187201","year":"2013","journal-title":"Phys.
+        Rev. Lett.","DOI":"10.1103\/PhysRevLett.111.187201","doi-asserted-by":"crossref"}],"container-title":["Nature
+        Nanotechnology"],"original-title":[],"language":"en","link":[{"URL":"http:\/\/www.nature.com\/articles\/nnano.2014.279.pdf","content-type":"application\/pdf","content-version":"vor","intended-application":"text-mining"},{"URL":"http:\/\/www.nature.com\/articles\/nnano.2014.279","content-type":"text\/html","content-version":"vor","intended-application":"text-mining"},{"URL":"http:\/\/www.nature.com\/articles\/nnano.2014.279.pdf","content-type":"application\/pdf","content-version":"vor","intended-application":"similarity-checking"}],"deposited":{"date-parts":[[2017,12,26]],"date-time":"2017-12-26T23:44:47Z","timestamp":1514331887000},"score":1.0,"subtitle":["Spin
+        orbitronics"],"short-title":[],"issued":{"date-parts":[[2014,11,10]]},"references-count":12,"journal-issue":{"published-print":{"date-parts":[[2015,1]]},"issue":"1"},"alternative-id":["BFnnano2014279"],"URL":"http:\/\/dx.doi.org\/10.1038\/nnano.2014.279","relation":{"cites":[]},"ISSN":["1748-3387","1748-3395"],"issn-type":[{"value":"1748-3387","type":"print"},{"value":"1748-3395","type":"electronic"}]}}'
+  recorded_at: 2019-01-09 21:18:57 GMT
+  recorded_with: vcr/0.2.0, webmockr/0.3.0

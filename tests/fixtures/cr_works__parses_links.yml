@@ -1,0 +1,91 @@
+http_interactions:
+- request:
+    method: get
+    uri: https://api.crossref.org/works?filter=has-full-text%3Afalse&rows=3
+    body:
+      encoding: ''
+      string: ''
+    headers:
+      Accept-Encoding: gzip, deflate
+      Accept: application/json, text/xml, application/xml, */*
+      User-Agent: r-curl/3.2 crul/0.7.0.9100 rOpenSci(rcrossref/0.8.6.9100) (mailto:<crossref_email>)
+      X-USER-AGENT: r-curl/3.2 crul/0.7.0.9100 rOpenSci(rcrossref/0.8.6.9100) (mailto:<crossref_email>)
+  response:
+    status:
+      status_code: '200'
+      message: OK
+      explanation: Request fulfilled, document follows
+    headers:
+      status: HTTP/1.1 200 OK
+      content-type: application/json;charset=UTF-8
+      vary: Accept
+      access-control-allow-origin: '*'
+      access-control-allow-headers: X-Requested-With
+      content-length: '3544'
+      server: http-kit
+      date: Wed, 09 Jan 2019 21:23:23 GMT
+      x-rate-limit-limit: '50'
+      x-rate-limit-interval: 1s
+      connection: close
+    body:
+      encoding: UTF-8
+      string: '{"status":"ok","message-type":"work-list","message-version":"1.0.0","message":{"facets":{},"total-results":30555115,"items":[{"indexed":{"date-parts":[[2018,4,13]],"date-time":"2018-04-13T01:45:10Z","timestamp":1523583910841},"publisher-location":"Cambridge","reference-count":0,"publisher":"Cambridge
+        University Press","content-domain":{"domain":[],"crossmark-restriction":false},"DOI":"10.1017\/cbo9781139923651.027","type":"book-chapter","created":{"date-parts":[[2015,6,6]],"date-time":"2015-06-06T05:27:57Z","timestamp":1433568477000},"source":"Crossref","is-referenced-by-count":0,"title":["Plate
+        Section"],"prefix":"10.1017","author":[{"given":"Samuel","family":"Sharpe","sequence":"first","affiliation":[]},{"given":"Joseph","family":"Bonomi","sequence":"additional","affiliation":[]}],"member":"56","container-title":["The
+        Alabaster Sarcophagus of Oimenepthah I., King of Egypt"],"deposited":{"date-parts":[[2018,4,13]],"date-time":"2018-04-13T01:18:49Z","timestamp":1523582329000},"score":1.0,"issued":{"date-parts":[[null]]},"ISBN":["9781139923651"],"references-count":0,"URL":"http:\/\/dx.doi.org\/10.1017\/cbo9781139923651.027"},{"indexed":{"date-parts":[[2018,4,13]],"date-time":"2018-04-13T01:44:53Z","timestamp":1523583893997},"publisher-location":"Cambridge","reference-count":0,"publisher":"Cambridge
+        University Press","content-domain":{"domain":[],"crossmark-restriction":false},"DOI":"10.1017\/cbo9781107252820.131","type":"book-chapter","created":{"date-parts":[[2014,11,6]],"date-time":"2014-11-06T06:04:57Z","timestamp":1415253897000},"source":"Crossref","is-referenced-by-count":0,"title":["Plate
+        Section"],"prefix":"10.1017","author":[{"given":"Henry John","family":"Elwes","sequence":"first","affiliation":[]},{"given":"Augustine","family":"Henry","sequence":"additional","affiliation":[]}],"member":"56","container-title":["The
+        Trees of Great Britain and Ireland"],"deposited":{"date-parts":[[2018,4,13]],"date-time":"2018-04-13T01:20:02Z","timestamp":1523582402000},"score":1.0,"issued":{"date-parts":[[null]]},"ISBN":["9781107252820"],"references-count":0,"URL":"http:\/\/dx.doi.org\/10.1017\/cbo9781107252820.131"},{"indexed":{"date-parts":[[2018,4,11]],"date-time":"2018-04-11T16:15:05Z","timestamp":1523463305338},"reference-count":0,"publisher":"Coquina
+        Press","content-domain":{"domain":[],"crossmark-restriction":false},"DOI":"10.26879\/327","type":"journal-article","created":{"date-parts":[[2017,10,20]],"date-time":"2017-10-20T14:52:55Z","timestamp":1508511175000},"source":"Crossref","is-referenced-by-count":0,"title":["X-ray
+        micro-CT reconstruction reveals eight antennomeres in a new fossil taxon that
+        constitutes a sister clade to Dundoxenos and Triozocera (Strepsiptera: Corioxenidae)"],"prefix":"10.26879","author":[{"given":"H","family":"Henderickx","sequence":"first","affiliation":[]},{"given":"J","family":"Bosselaers","sequence":"additional","affiliation":[]},{"given":"L","family":"Van
+        Hoorebeke","sequence":"additional","affiliation":[]},{"given":"M","family":"Boone","sequence":"additional","affiliation":[]}],"member":"11409","published-online":{"date-parts":[[2013]]},"container-title":["Palaeontologia
+        Electronica"],"language":"en","deposited":{"date-parts":[[2018,4,11]],"date-time":"2018-04-11T15:46:45Z","timestamp":1523461605000},"score":1.0,"issued":{"date-parts":[[2013]]},"references-count":0,"URL":"http:\/\/dx.doi.org\/10.26879\/327","ISSN":["1094-8074"],"issn-type":[{"value":"1094-8074","type":"electronic"}]}],"items-per-page":3,"query":{"start-index":0,"search-terms":null}}}'
+  recorded_at: 2019-01-09 21:24:00 GMT
+  recorded_with: vcr/0.2.0, webmockr/0.3.0
+- request:
+    method: get
+    uri: https://api.crossref.org/works?filter=has-full-text%3Atrue&rows=3
+    body:
+      encoding: ''
+      string: ''
+    headers:
+      Accept-Encoding: gzip, deflate
+      Accept: application/json, text/xml, application/xml, */*
+      User-Agent: r-curl/3.2 crul/0.7.0.9100 rOpenSci(rcrossref/0.8.6.9100) (mailto:<crossref_email>)
+      X-USER-AGENT: r-curl/3.2 crul/0.7.0.9100 rOpenSci(rcrossref/0.8.6.9100) (mailto:<crossref_email>)
+  response:
+    status:
+      status_code: '200'
+      message: OK
+      explanation: Request fulfilled, document follows
+    headers:
+      status: HTTP/1.1 200 OK
+      content-type: application/json;charset=UTF-8
+      vary: Accept
+      access-control-allow-origin: '*'
+      access-control-allow-headers: X-Requested-With
+      content-length: '4853'
+      server: http-kit
+      date: Wed, 09 Jan 2019 21:24:00 GMT
+      x-rate-limit-limit: '50'
+      x-rate-limit-interval: 1s
+      connection: close
+    body:
+      encoding: UTF-8
+      string: '{"status":"ok","message-type":"work-list","message-version":"1.0.0","message":{"facets":{},"total-results":71737546,"items":[{"indexed":{"date-parts":[[2018,4,13]],"date-time":"2018-04-13T01:38:52Z","timestamp":1523583532754},"reference-count":0,"publisher":"Informa
+        UK Limited","issue":"12","content-domain":{"domain":[],"crossmark-restriction":false},"short-container-title":["Geologiska
+        F\u00f6reningen i Stockholm F\u00f6rhandlingar"],"published-print":{"date-parts":[[1875,5,5]]},"DOI":"10.1080\/11035897509448098","type":"journal-article","created":{"date-parts":[[2010,1,7]],"date-time":"2010-01-07T20:03:24Z","timestamp":1262894604000},"page":"501-506","source":"Crossref","is-referenced-by-count":0,"title":["Geologiska
+        notiser fr\u00e5n en resa i Norra Ryssland, sommaren 1874"],"prefix":"10.1080","volume":"2","author":[{"given":"Gust","family":"Nauckhoff","sequence":"first","affiliation":[]}],"member":"301","published-online":{"date-parts":[[2010,1,6]]},"container-title":["Geologiska
+        F\u00f6reningen i Stockholm F\u00f6rhandlingar"],"language":"en","link":[{"URL":"https:\/\/www.tandfonline.com\/doi\/pdf\/10.1080\/11035897509448098","content-type":"unspecified","content-version":"vor","intended-application":"similarity-checking"}],"deposited":{"date-parts":[[2017,10,12]],"date-time":"2017-10-12T12:47:30Z","timestamp":1507812450000},"score":1.0,"issued":{"date-parts":[[1875,5,5]]},"references-count":0,"journal-issue":{"published-online":{"date-parts":[[2010,1,6]]},"published-print":{"date-parts":[[1875,5,5]]},"issue":"12"},"alternative-id":["10.1080\/11035897509448098"],"URL":"http:\/\/dx.doi.org\/10.1080\/11035897509448098","ISSN":["0016-786X"],"issn-type":[{"value":"0016-786X","type":"print"}]},{"indexed":{"date-parts":[[2018,4,13]],"date-time":"2018-04-13T01:38:52Z","timestamp":1523583532754},"reference-count":0,"publisher":"Informa
+        UK Limited","issue":"4","content-domain":{"domain":[],"crossmark-restriction":false},"short-container-title":["Geologiska
+        F\u00f6reningen i Stockholm F\u00f6rhandlingar"],"published-print":{"date-parts":[[1876,4,6]]},"DOI":"10.1080\/11035897609446990","type":"journal-article","created":{"date-parts":[[2010,1,7]],"date-time":"2010-01-07T20:04:26Z","timestamp":1262894666000},"page":"123-133","source":"Crossref","is-referenced-by-count":1,"title":["Bidrag
+        till k\u00e4nnedomen af L\u00e5ngbansgrufvans mineralier"],"prefix":"10.1080","volume":"3","author":[{"given":"C.
+        W.","family":"Blomstrand","sequence":"first","affiliation":[]}],"member":"301","published-online":{"date-parts":[[2010,1,6]]},"container-title":["Geologiska
+        F\u00f6reningen i Stockholm F\u00f6rhandlingar"],"language":"en","link":[{"URL":"https:\/\/www.tandfonline.com\/doi\/pdf\/10.1080\/11035897609446990","content-type":"unspecified","content-version":"vor","intended-application":"similarity-checking"}],"deposited":{"date-parts":[[2017,10,12]],"date-time":"2017-10-12T12:47:26Z","timestamp":1507812446000},"score":1.0,"issued":{"date-parts":[[1876,4,6]]},"references-count":0,"journal-issue":{"published-online":{"date-parts":[[2010,1,6]]},"published-print":{"date-parts":[[1876,4,6]]},"issue":"4"},"alternative-id":["10.1080\/11035897609446990"],"URL":"http:\/\/dx.doi.org\/10.1080\/11035897609446990","ISSN":["0016-786X"],"issn-type":[{"value":"0016-786X","type":"print"}]},{"indexed":{"date-parts":[[2018,4,13]],"date-time":"2018-04-13T01:38:52Z","timestamp":1523583532761},"reference-count":0,"publisher":"Informa
+        UK Limited","issue":"4","content-domain":{"domain":[],"crossmark-restriction":false},"short-container-title":["Geologiska
+        F\u00f6reningen i Stockholm F\u00f6rhandlingar"],"published-print":{"date-parts":[[1876,4,6]]},"DOI":"10.1080\/11035897609446989","type":"journal-article","created":{"date-parts":[[2010,1,7]],"date-time":"2010-01-07T20:04:29Z","timestamp":1262894669000},"page":"119-123","source":"Crossref","is-referenced-by-count":0,"title":["M\u00f6tet
+        den 6 April 1876"],"prefix":"10.1080","volume":"3","member":"301","published-online":{"date-parts":[[2010,1,6]]},"container-title":["Geologiska
+        F\u00f6reningen i Stockholm F\u00f6rhandlingar"],"language":"en","link":[{"URL":"https:\/\/www.tandfonline.com\/doi\/pdf\/10.1080\/11035897609446989","content-type":"unspecified","content-version":"vor","intended-application":"similarity-checking"}],"deposited":{"date-parts":[[2017,10,12]],"date-time":"2017-10-12T12:47:27Z","timestamp":1507812447000},"score":1.0,"issued":{"date-parts":[[1876,4,6]]},"references-count":0,"journal-issue":{"published-online":{"date-parts":[[2010,1,6]]},"published-print":{"date-parts":[[1876,4,6]]},"issue":"4"},"alternative-id":["10.1080\/11035897609446989"],"URL":"http:\/\/dx.doi.org\/10.1080\/11035897609446989","ISSN":["0016-786X"],"issn-type":[{"value":"0016-786X","type":"print"}]}],"items-per-page":3,"query":{"start-index":0,"search-terms":null}}}'
+  recorded_at: 2019-01-09 21:24:00 GMT
+  recorded_with: vcr/0.2.0, webmockr/0.3.0

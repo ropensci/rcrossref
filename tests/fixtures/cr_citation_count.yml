@@ -8,8 +8,8 @@ http_interactions:
     headers:
       Accept-Encoding: gzip, deflate
       Accept: application/json, text/xml, application/xml, */*
-      User-Agent: r-curl/3.2 crul/0.6.1.9100 rOpenSci(rcrossref/0.8.5.9110) (mailto:<crossref_email>)
-      X-USER-AGENT: r-curl/3.2 crul/0.6.1.9100 rOpenSci(rcrossref/0.8.5.9110) (mailto:<crossref_email>)
+      User-Agent: r-curl/3.2 crul/0.7.0.9100 rOpenSci(rcrossref/0.8.6.9100) (mailto:<crossref_email>)
+      X-USER-AGENT: r-curl/3.2 crul/0.7.0.9100 rOpenSci(rcrossref/0.8.6.9100) (mailto:<crossref_email>)
   response:
     status:
       status_code: '200'
@@ -18,19 +18,83 @@ http_interactions:
     headers:
       status: HTTP/1.1 200 OK
       server: Apache-Coyote/1.1
-      crossref-deployment-name: qs3-1
+      crossref-deployment-name: qs5-1
       content-type: text/xml;charset=UTF-8
       content-language: en-US
       transfer-encoding: chunked
-      date: Fri, 07 Dec 2018 22:45:07 GMT
+      date: Wed, 09 Jan 2019 19:33:56 GMT
       connection: close
     body:
       encoding: UTF-8
       string: |-
         <?xml version="1.0" encoding="UTF-8"?>
-        <crossref_result xmlns="http://www.crossref.org/qrschema/2.0" version="2.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.crossref.org/qrschema/2.0 https://www.crossref.org/schema/crossref_query_output2.0.xsd"><query_result><head><doi_batch_id>none</doi_batch_id></head><body><query status="resolved" fl_count="23"><doi type="journal_article">10.1371/journal.pone.0042793</doi><issn type="electronic">1932-6203</issn><journal_title>PLoS ONE</journal_title><contributors><contributor sequence="first" contributor_role="editor"><given_name>Nancy</given_name><surname>Mock</surname></contributor><contributor sequence="first" contributor_role="author"><given_name>Rocío</given_name><surname>Calvo</surname></contributor><contributor sequence="additional" contributor_role="author"><given_name>Yuhui</given_name><surname>Zheng</surname></contributor><contributor sequence="additional" contributor_role="author"><given_name>Santosh</given_name><surname>Kumar</surname></contributor><contributor sequence="additional" contributor_role="author"><given_name>Analia</given_name><surname>Olgiati</surname></contributor><contributor sequence="additional" contributor_role="author"><given_name>Lisa</given_name><surname>Berkman</surname></contributor></contributors><volume>7</volume><issue>8</issue><first_page>e42793</first_page><year media_type="online">2012</year><publication_type>full_text</publication_type><article_title>Well-Being and Social Capital on Planet Earth: Cross-National Evidence from 142 Countries</article_title></query></body></query_result></crossref_result>
-  recorded_at: 2018-12-07 22:45:08 GMT
-  recorded_with: vcr/0.2.0.9101, webmockr/0.2.9.9311
+        <crossref_result xmlns="http://www.crossref.org/qrschema/2.0" version="2.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.crossref.org/qrschema/2.0 https://www.crossref.org/schema/crossref_query_output2.0.xsd"><query_result><head><doi_batch_id>none</doi_batch_id></head><body><query status="resolved" fl_count="25"><doi type="journal_article">10.1371/journal.pone.0042793</doi><issn type="electronic">1932-6203</issn><journal_title>PLoS ONE</journal_title><contributors><contributor sequence="first" contributor_role="editor"><given_name>Nancy</given_name><surname>Mock</surname></contributor><contributor sequence="first" contributor_role="author"><given_name>Rocío</given_name><surname>Calvo</surname></contributor><contributor sequence="additional" contributor_role="author"><given_name>Yuhui</given_name><surname>Zheng</surname></contributor><contributor sequence="additional" contributor_role="author"><given_name>Santosh</given_name><surname>Kumar</surname></contributor><contributor sequence="additional" contributor_role="author"><given_name>Analia</given_name><surname>Olgiati</surname></contributor><contributor sequence="additional" contributor_role="author"><given_name>Lisa</given_name><surname>Berkman</surname></contributor></contributors><volume>7</volume><issue>8</issue><first_page>e42793</first_page><year media_type="online">2012</year><publication_type>full_text</publication_type><article_title>Well-Being and Social Capital on Planet Earth: Cross-National Evidence from 142 Countries</article_title></query></body></query_result></crossref_result>
+  recorded_at: 2019-01-09 19:33:58 GMT
+  recorded_with: vcr/0.2.0, webmockr/0.3.0
+- request:
+    method: get
+    uri: http://www.crossref.org/openurl/?id=doi%3A10.1371%2Fjournal.pone.0042793&pid=cboettig%40ropensci.org&noredirect=TRUE
+    body:
+      encoding: ''
+      string: ''
+    headers:
+      Accept-Encoding: gzip, deflate
+      Accept: application/json, text/xml, application/xml, */*
+      User-Agent: r-curl/3.2 crul/0.7.0.9100 rOpenSci(rcrossref/0.8.6.9100) (mailto:<crossref_email>)
+      X-USER-AGENT: r-curl/3.2 crul/0.7.0.9100 rOpenSci(rcrossref/0.8.6.9100) (mailto:<crossref_email>)
+  response:
+    status:
+      status_code: '200'
+      message: OK
+      explanation: Request fulfilled, document follows
+    headers:
+      status: HTTP/1.1 200 OK
+      server: Apache-Coyote/1.1
+      crossref-deployment-name: cr6-1
+      content-type: text/xml;charset=UTF-8
+      content-language: en-US
+      transfer-encoding: chunked
+      date: Wed, 09 Jan 2019 19:33:57 GMT
+      connection: close
+    body:
+      encoding: UTF-8
+      string: |-
+        <?xml version="1.0" encoding="UTF-8"?>
+        <crossref_result xmlns="http://www.crossref.org/qrschema/2.0" version="2.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.crossref.org/qrschema/2.0 https://www.crossref.org/schema/crossref_query_output2.0.xsd"><query_result><head><doi_batch_id>none</doi_batch_id></head><body><query status="resolved" fl_count="25"><doi type="journal_article">10.1371/journal.pone.0042793</doi><issn type="electronic">1932-6203</issn><journal_title>PLoS ONE</journal_title><contributors><contributor sequence="first" contributor_role="editor"><given_name>Nancy</given_name><surname>Mock</surname></contributor><contributor sequence="first" contributor_role="author"><given_name>Rocío</given_name><surname>Calvo</surname></contributor><contributor sequence="additional" contributor_role="author"><given_name>Yuhui</given_name><surname>Zheng</surname></contributor><contributor sequence="additional" contributor_role="author"><given_name>Santosh</given_name><surname>Kumar</surname></contributor><contributor sequence="additional" contributor_role="author"><given_name>Analia</given_name><surname>Olgiati</surname></contributor><contributor sequence="additional" contributor_role="author"><given_name>Lisa</given_name><surname>Berkman</surname></contributor></contributors><volume>7</volume><issue>8</issue><first_page>e42793</first_page><year media_type="online">2012</year><publication_type>full_text</publication_type><article_title>Well-Being and Social Capital on Planet Earth: Cross-National Evidence from 142 Countries</article_title></query></body></query_result></crossref_result>
+  recorded_at: 2019-01-09 19:33:58 GMT
+  recorded_with: vcr/0.2.0, webmockr/0.3.0
+- request:
+    method: get
+    uri: http://www.crossref.org/openurl/?id=doi%3A10.1371%2Fjournal.pone.0042793&pid=cboettig%40ropensci.org&noredirect=TRUE
+    body:
+      encoding: ''
+      string: ''
+    headers:
+      Accept-Encoding: gzip, deflate
+      Accept: application/json, text/xml, application/xml, */*
+      User-Agent: r-curl/3.2 crul/0.7.0.9100 rOpenSci(rcrossref/0.8.6.9100) (mailto:<crossref_email>)
+      X-USER-AGENT: r-curl/3.2 crul/0.7.0.9100 rOpenSci(rcrossref/0.8.6.9100) (mailto:<crossref_email>)
+  response:
+    status:
+      status_code: '200'
+      message: OK
+      explanation: Request fulfilled, document follows
+    headers:
+      status: HTTP/1.1 200 OK
+      server: Apache-Coyote/1.1
+      crossref-deployment-name: qs5-1
+      content-type: text/xml;charset=UTF-8
+      content-language: en-US
+      transfer-encoding: chunked
+      date: Wed, 09 Jan 2019 19:33:57 GMT
+      connection: close
+    body:
+      encoding: UTF-8
+      string: |-
+        <?xml version="1.0" encoding="UTF-8"?>
+        <crossref_result xmlns="http://www.crossref.org/qrschema/2.0" version="2.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.crossref.org/qrschema/2.0 https://www.crossref.org/schema/crossref_query_output2.0.xsd"><query_result><head><doi_batch_id>none</doi_batch_id></head><body><query status="resolved" fl_count="25"><doi type="journal_article">10.1371/journal.pone.0042793</doi><issn type="electronic">1932-6203</issn><journal_title>PLoS ONE</journal_title><contributors><contributor sequence="first" contributor_role="editor"><given_name>Nancy</given_name><surname>Mock</surname></contributor><contributor sequence="first" contributor_role="author"><given_name>Rocío</given_name><surname>Calvo</surname></contributor><contributor sequence="additional" contributor_role="author"><given_name>Yuhui</given_name><surname>Zheng</surname></contributor><contributor sequence="additional" contributor_role="author"><given_name>Santosh</given_name><surname>Kumar</surname></contributor><contributor sequence="additional" contributor_role="author"><given_name>Analia</given_name><surname>Olgiati</surname></contributor><contributor sequence="additional" contributor_role="author"><given_name>Lisa</given_name><surname>Berkman</surname></contributor></contributors><volume>7</volume><issue>8</issue><first_page>e42793</first_page><year media_type="online">2012</year><publication_type>full_text</publication_type><article_title>Well-Being and Social Capital on Planet Earth: Cross-National Evidence from 142 Countries</article_title></query></body></query_result></crossref_result>
+  recorded_at: 2019-01-09 19:33:58 GMT
+  recorded_with: vcr/0.2.0, webmockr/0.3.0
 - request:
     method: get
     uri: http://www.crossref.org/openurl/?id=doi%3A10.1016%2Fj.fbr.2012.01.001&pid=cboettig%40ropensci.org&noredirect=TRUE
@@ -40,8 +104,8 @@ http_interactions:
     headers:
       Accept-Encoding: gzip, deflate
       Accept: application/json, text/xml, application/xml, */*
-      User-Agent: r-curl/3.2 crul/0.6.1.9100 rOpenSci(rcrossref/0.8.5.9110) (mailto:<crossref_email>)
-      X-USER-AGENT: r-curl/3.2 crul/0.6.1.9100 rOpenSci(rcrossref/0.8.5.9110) (mailto:<crossref_email>)
+      User-Agent: r-curl/3.2 crul/0.7.0.9100 rOpenSci(rcrossref/0.8.6.9100) (mailto:<crossref_email>)
+      X-USER-AGENT: r-curl/3.2 crul/0.7.0.9100 rOpenSci(rcrossref/0.8.6.9100) (mailto:<crossref_email>)
   response:
     status:
       status_code: '200'
@@ -50,16 +114,16 @@ http_interactions:
     headers:
       status: HTTP/1.1 200 OK
       server: Apache-Coyote/1.1
-      crossref-deployment-name: qs2-2
+      crossref-deployment-name: cr6-1
       content-type: text/xml;charset=UTF-8
       content-language: en-US
       transfer-encoding: chunked
-      date: Fri, 07 Dec 2018 22:45:07 GMT
+      date: Wed, 09 Jan 2019 19:33:57 GMT
       connection: close
     body:
       encoding: UTF-8
       string: |-
         <?xml version="1.0" encoding="UTF-8"?>
-        <crossref_result xmlns="http://www.crossref.org/qrschema/2.0" version="2.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.crossref.org/qrschema/2.0 https://www.crossref.org/schema/crossref_query_output2.0.xsd"><query_result><head><doi_batch_id>none</doi_batch_id></head><body><query status="resolved" fl_count="112"><doi type="journal_article">10.1016/j.fbr.2012.01.001</doi><issn type="print">17494613</issn><journal_title>Fungal Biology Reviews</journal_title><contributors><contributor sequence="first" contributor_role="author"><given_name>Suzanne W.</given_name><surname>Simard</surname></contributor><contributor sequence="additional" contributor_role="author"><given_name>Kevin J.</given_name><surname>Beiler</surname></contributor><contributor sequence="additional" contributor_role="author"><given_name>Marcus A.</given_name><surname>Bingham</surname></contributor><contributor sequence="additional" contributor_role="author"><given_name>Julie R.</given_name><surname>Deslippe</surname></contributor><contributor sequence="additional" contributor_role="author"><given_name>Leanne J.</given_name><surname>Philip</surname></contributor><contributor sequence="additional" contributor_role="author"><given_name>François P.</given_name><surname>Teste</surname></contributor></contributors><volume>26</volume><issue>1</issue><first_page>39</first_page><last_page>60</last_page><year media_type="print">2012</year><publication_type>full_text</publication_type><article_title>Mycorrhizal networks: Mechanisms, ecology and modelling</article_title></query></body></query_result></crossref_result>
-  recorded_at: 2018-12-07 22:45:08 GMT
-  recorded_with: vcr/0.2.0.9101, webmockr/0.2.9.9311
+        <crossref_result xmlns="http://www.crossref.org/qrschema/2.0" version="2.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.crossref.org/qrschema/2.0 https://www.crossref.org/schema/crossref_query_output2.0.xsd"><query_result><head><doi_batch_id>none</doi_batch_id></head><body><query status="resolved" fl_count="114"><doi type="journal_article">10.1016/j.fbr.2012.01.001</doi><issn type="print">17494613</issn><journal_title>Fungal Biology Reviews</journal_title><contributors><contributor sequence="first" contributor_role="author"><given_name>Suzanne W.</given_name><surname>Simard</surname></contributor><contributor sequence="additional" contributor_role="author"><given_name>Kevin J.</given_name><surname>Beiler</surname></contributor><contributor sequence="additional" contributor_role="author"><given_name>Marcus A.</given_name><surname>Bingham</surname></contributor><contributor sequence="additional" contributor_role="author"><given_name>Julie R.</given_name><surname>Deslippe</surname></contributor><contributor sequence="additional" contributor_role="author"><given_name>Leanne J.</given_name><surname>Philip</surname></contributor><contributor sequence="additional" contributor_role="author"><given_name>François P.</given_name><surname>Teste</surname></contributor></contributors><volume>26</volume><issue>1</issue><first_page>39</first_page><last_page>60</last_page><year media_type="print">2012</year><publication_type>full_text</publication_type><article_title>Mycorrhizal networks: Mechanisms, ecology and modelling</article_title></query></body></query_result></crossref_result>
+  recorded_at: 2019-01-09 19:33:58 GMT
+  recorded_with: vcr/0.2.0, webmockr/0.3.0

@@ -5,21 +5,26 @@
 \title{Get a citation count via CrossRef OpenURL}
 \usage{
 cr_citation_count(doi, url = "http://www.crossref.org/openurl/",
-  key = "cboettig@ropensci.org", ...)
+  key = "cboettig@ropensci.org", async = FALSE, ...)
 }
 \arguments{
-\item{doi}{(character) digital object identifier for an article}
+\item{doi}{(character) One or more digital object identifiers. If
+\code{async=FALSE} we do synchronous HTTP requests in an \code{lapply} call, but
+if \code{async=TRUE}, we do asynchronous HTTP requests.}
 
 \item{url}{(character) the url for the function (should be left to default)}
 
 \item{key}{your Crossref OpenURL email address, either enter, or loads
 from \code{.Rprofile}. We use a default, so you don't need to pass this.}
 
+\item{async}{(logical) use async HTTP requests. Default: \code{FALSE}}
+
 \item{...}{Curl options passed on to \code{\link[crul:HttpClient]{crul::HttpClient()}}}
 }
 \value{
-single numeric value - the citation count, or NA if not found or
-no count available
+a data.frame, with columns \code{doi} and \code{count}. The count column
+has numeric values that are the citation count for that DOI, or \code{NA} if
+not found or no count available
 }
 \description{
 Get a citation count via CrossRef OpenURL
@@ -39,17 +44,47 @@ Unfortunately, we can not do anything about this.
 I would imagine it's best to use this data instead of from the publishers,
 and this data you can get programatically :)
 }
+\section{failure behavior}{
+
+When a DOI does not exist, we may not get a proper HTTP status code
+to throw a proper stop status, so we grep on the text itself, and throw
+a stop if only one DOI passed and not using async, or warning if more
+than one DOI passed or if using async.
+}
+
 \examples{
 \dontrun{
 cr_citation_count(doi="10.1371/journal.pone.0042793")
 cr_citation_count(doi="10.1016/j.fbr.2012.01.001")
+## many
+dois <- c("10.1016/j.fbr.2012.01.001", "10.1371/journal.pone.0042793")
+cr_citation_count(doi = dois)
 # DOI not found
 cr_citation_count(doi="10.1016/j.fbr.2012")
+
+# asyc
+dois <- c("10.1016/j.fbr.2012.01.001", "10.1371/journal.pone.0042793", 
+ "10.1016/j.fbr.2012", "10.1109/tsp.2006.874779", "10.1007/bf02231542", 
+ "10.1007/s00277-016-2782-z", "10.1002/9781118339893.wbeccp020", 
+ "10.1177/011542659200700105", "10.1002/chin.197444438", 
+ "10.1002/9781118619599.ch4", "10.1007/s00466-012-0724-8", 
+ "10.1017/s0376892900029477", "10.1167/16.12.824")
+res <- cr_citation_count(doi = dois, async = TRUE)
+## verbose curl
+res <- cr_citation_count(doi = dois, async = TRUE, verbose = TRUE)
+res
+## time comparison
+system.time(cr_citation_count(doi = dois, async = TRUE))
+system.time(cr_citation_count(doi = dois, async = FALSE))
+
+# from a set of random DOIs
+cr_citation_count(cr_r(50), async = TRUE)
 }
 }
 \seealso{
 \code{\link[=cr_search]{cr_search()}}, \code{\link[=cr_r]{cr_r()}}
 }
 \author{
-Carl Boettiger \email{cboettig@gmail.com}
+Carl Boettiger \email{cboettig@gmail.com},
+Scott Chamberlain \email{myrmecocystus@gmail.com}
 }
