@@ -20,7 +20,7 @@
 
 -------
 
-This submission xx
+This submission includes a few new features, and many small changes and bug fixes.
 
 Thanks!
 Scott Chamberlain

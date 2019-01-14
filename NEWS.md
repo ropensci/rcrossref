@@ -3,28 +3,23 @@ rcrossref 0.9.0
 
 ### NEW FEATURES
 
-* xx (#xxx) 
-* xx (#xxx)
-* xx (#xxx)
-* xx (#xxx)
-* xx (#xxx) 
-
+* big Crossref Addin update (#171) all work by @haozhu233
+* Async HTTP introduced for `cr_works()`, `cr_works_()`, and `cr_citation_count()`. See the new parameter `async` (logical) in those functions. For `cr_citation_count()`, it now accepts more than 1 DOI, and the output has changed from a numeric value to a data.frame (columns: `doi` and `count`). With `async=TRUE` for `cr_works()` you get a list of data.frame's; while for `cr_works_()` you get a list of JSON's (#121) (#160) (#182)
 
 ### MINOR IMPROVEMENTS
 
-* xx (#xxx) 
-* xx (#xxx)
-* xx (#xxx)
-* xx (#xxx)
-* xx (#xxx)
+* package tests now using `vcr` for HTTP request/response caching (#178) (#179)
+* in `works` data, now returning `published-print` and `published-online` fields (#181)
+* add new filters for `/works` routes (when `works = TRUE`): `isbn`, `reference_visibility`, `has_content_domain`, and `has_domain_restriction` (#176) (#177)
+* add new return element in `/works` routes (when `works = TRUE`): `$reference` gives the references cited in the article (these are not the articles citing the target article, sorry) (#176)
+* improve documentation on the "polite pool". If you supply an email address Crossref will put you in the polite pool (#173) (#175) thanks @poldham
+* added example to `cr_abstract()` of handling many DOIs while allowing for failures without stopping progress (#174) thanks @zackbatist
 
 ### BUG FIXES
 
-* xx (#xxx) 
-* xx (#xxx)
-* xx (#xxx)
-* xx (#xxx)
-* xx (#xxx)
+* fix internal parsing of funder data in `cr_works()` (#180) thanks @nicholasmfraser for the bug report
+* fix for `cr_citation_count()`: when given a bad/invalid/malformed DOI, throw warning and give back an `NA` (#164) thanks for the report @chreman
+* Fix for instances in the package where we incorrectly were doing logical comparison's; detected via _R_CHECK_LENGTH_1_LOGIC2_
 
 
 rcrossref 0.8.4
