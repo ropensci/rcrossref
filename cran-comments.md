@@ -16,7 +16,7 @@
 
 ## Reverse dependencies
 
-* I have run R CMD check on the 4 downstream dependencies. There was a problem in one package (roadoi), but I've sent a pull request that has been merged to that package and they will submit a patch to CRAN soon. See the summary at <https://github.com/ropensci/rcrossref/tree/master/revdep>
+* I have run R CMD check on the 5 downstream dependencies. There were no problems. See the summary at <https://github.com/ropensci/rcrossref/tree/master/revdep>
 
 -------
 
