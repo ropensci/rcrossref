@@ -10,14 +10,14 @@
   "codeRepository": "https://github.com/ropensci/rcrossref",
   "issueTracker": "https://github.com/ropensci/rcrossref/issues",
   "license": "https://spdx.org/licenses/MIT",
-  "version": "0.8.4",
+  "version": "0.9.0",
   "programmingLanguage": {
     "@type": "ComputerLanguage",
     "name": "R",
-    "version": "3.5.1",
+    "version": "3.5.2",
     "url": "https://r-project.org"
   },
-  "runtimePlatform": "R version 3.5.1 Patched (2018-07-18 r74978)",
+  "runtimePlatform": "R version 3.5.2 Patched (2018-12-31 r75943)",
   "provider": {
     "@id": "https://cran.r-project.org",
     "@type": "Organization",
@@ -34,13 +34,18 @@
     },
     {
       "@type": "Person",
-      "givenName": "Carl",
-      "familyName": "Boettiger"
+      "givenName": "Hao",
+      "familyName": "Zhu"
     },
     {
       "@type": "Person",
-      "givenName": "Ted",
-      "familyName": "Hart"
+      "givenName": "Najko",
+      "familyName": "Jahn"
+    },
+    {
+      "@type": "Person",
+      "givenName": "Carl",
+      "familyName": "Boettiger"
     },
     {
       "@type": "Person",
@@ -62,7 +67,7 @@
       "@type": "SoftwareApplication",
       "identifier": "roxygen2",
       "name": "roxygen2",
-      "version": ">= 6.1.0",
+      "version": ">= 6.1.1",
       "provider": {
         "@id": "https://cran.r-project.org",
         "@type": "Organization",
@@ -94,6 +99,19 @@
         "url": "https://cran.r-project.org"
       },
       "sameAs": "https://CRAN.R-project.org/package=knitr"
+    },
+    {
+      "@type": "SoftwareApplication",
+      "identifier": "vcr",
+      "name": "vcr",
+      "version": ">= 0.2.2",
+      "provider": {
+        "@id": "https://cran.r-project.org",
+        "@type": "Organization",
+        "name": "Comprehensive R Archive Network (CRAN)",
+        "url": "https://cran.r-project.org"
+      },
+      "sameAs": "https://CRAN.R-project.org/package=vcr"
     }
   ],
   "softwareRequirements": [
@@ -124,7 +142,7 @@
       "@type": "SoftwareApplication",
       "identifier": "crul",
       "name": "crul",
-      "version": ">= 0.4.0",
+      "version": ">= 0.7.0",
       "provider": {
         "@id": "https://cran.r-project.org",
         "@type": "Organization",
@@ -242,13 +260,18 @@
         "url": "https://cran.r-project.org"
       },
       "sameAs": "https://CRAN.R-project.org/package=DT"
+    },
+    {
+      "@type": "SoftwareApplication",
+      "identifier": "stats",
+      "name": "stats"
     }
   ],
   "contIntegration": "https://travis-ci.org/ropensci/rcrossref",
   "developmentStatus": "active",
   "releaseNotes": "https://github.com/ropensci/rcrossref/blob/master/NEWS.md",
   "readme": "https://github.com/ropensci/rcrossref/blob/master/README.md",
-  "fileSize": "213.328KB",
+  "fileSize": "2314.504KB",
   "applicationCategory": "Literature",
   "isPartOf": "https://ropensci.org",
   "keywords": ["text-ming", "literature", "pdf", "xml", "publications", "citations", "full-text", "TDM", "Crossref", "crossref-api", "doi", "metadata", "api", "r", "rstats", "api-wrapper", "r-package"]
