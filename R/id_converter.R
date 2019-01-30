@@ -1,26 +1,48 @@
 #' Get a PMID from a DOI, and vice versa.
 #'
 #' @export
-#' @param x (character) One doi, pmid, or pmcid
-#' @param type (character) one of doi, pmid, or pmcid
-#' @param ... Curl args passed on to [crul::HttpClient]
-#' @references Uses the http://www.ncbi.nlm.nih.gov/pmc/tools/id-converter-api/
+#' @param x (character) One or more of: doi, pmid, pmcid, or manuscript id, 
+#' see examples. required.
+#' @param type (character) one of doi, pmid, pmcid, or manuscript id
+#' @param ... Curl args passed on to [crul::verb-GET]
+#' @references https://www.ncbi.nlm.nih.gov/pmc/tools/id-converter-api/
 #' @examples \dontrun{
 #' # get a pmid/pmcid from a doi
 #' id_converter("10.1038/ng.590")
 #'
 #' # pmid to doi/pmcid
 #' id_converter("20495566", "pmid")
+#' id_converter("20495566")
+#' # id_converter("20495566", "doi") #error
 #'
 #' # pmcid to doi/pmid
 #' id_converter("PMC2883744", "pmcid")
+#' id_converter("PMC2883744")
+#' id_converter("PMC2883744", "doi")
+#' 
+#' # manuscript id
+#' id_converter("NIHMS311352")
+#' 
+#' # more than 1 ID
+#' id_converter(c("PMC3531190","PMC3245039"))
+#' ## 10 random DOIs
+#' ids <- cr_r()
+#' id_converter(ids)
 #'
 #' # error, wrong type passed for id given
 #' # id_converter("PMC2883744", "doi")
+#' # error, 200 ids or less
+#' # ids <- cr_r(100)
+#' # id_converter(c(ids, ids, ids))
 #' }
-`id_converter` <- function(x, type = "doi", ...){
-  args <- list(tool = "my_tool", email = "my_email@example.com",
-               ids = x, idtype = type, format = "json")
+`id_converter` <- function(x, type = NULL, ...) {
+  assert(x, c("numeric", "integer", "character"))
+  if (length(x) > 1) {
+    if (length(x) > 200) stop("200 ids or less please")
+    x <- paste0(x, collapse = ",")
+  }
+  args <- cr_compact(list(tool = "rcrossref", email = "myrmecocystus@gmail.com",
+    ids = x, idtype = type, format = "json"))
   cli <- crul::HttpClient$new(
     url = idcon_base(),
     headers = list(
@@ -34,4 +56,4 @@
   jsonlite::fromJSON(res$parse("UTF-8"))
 }
 
-idcon_base <- function() "http://www.ncbi.nlm.nih.gov/pmc/utils/idconv/v1.0"
+idcon_base <- function() "https://www.ncbi.nlm.nih.gov/pmc/utils/idconv/v1.0/"

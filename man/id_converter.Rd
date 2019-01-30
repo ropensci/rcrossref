@@ -4,14 +4,15 @@
 \alias{id_converter}
 \title{Get a PMID from a DOI, and vice versa.}
 \usage{
-id_converter(x, type = "doi", ...)
+id_converter(x, type = NULL, ...)
 }
 \arguments{
-\item{x}{(character) One doi, pmid, or pmcid}
+\item{x}{(character) One or more of: doi, pmid, pmcid, or manuscript id,
+see examples. required.}
 
-\item{type}{(character) one of doi, pmid, or pmcid}
+\item{type}{(character) one of doi, pmid, pmcid, or manuscript id}
 
-\item{...}{Curl args passed on to \link[crul:HttpClient]{crul::HttpClient}}
+\item{...}{Curl args passed on to \link[crul:verb-GET]{crul::verb-GET}}
 }
 \description{
 Get a PMID from a DOI, and vice versa.
@@ -23,14 +24,30 @@ id_converter("10.1038/ng.590")
 
 # pmid to doi/pmcid
 id_converter("20495566", "pmid")
+id_converter("20495566")
+# id_converter("20495566", "doi") #error
 
 # pmcid to doi/pmid
 id_converter("PMC2883744", "pmcid")
+id_converter("PMC2883744")
+id_converter("PMC2883744", "doi")
+
+# manuscript id
+id_converter("NIHMS311352")
+
+# more than 1 ID
+id_converter(c("PMC3531190","PMC3245039"))
+## 10 random DOIs
+ids <- cr_r()
+id_converter(ids)
 
 # error, wrong type passed for id given
 # id_converter("PMC2883744", "doi")
+# error, 200 ids or less
+# ids <- cr_r(100)
+# id_converter(c(ids, ids, ids))
 }
 }
 \references{
-Uses the http://www.ncbi.nlm.nih.gov/pmc/tools/id-converter-api/
+https://www.ncbi.nlm.nih.gov/pmc/tools/id-converter-api/
 }
