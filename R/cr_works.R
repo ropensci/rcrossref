@@ -184,7 +184,7 @@ cr_works <- function(dois = NULL, query = NULL, filter = NULL, offset = NULL,
              facets = parse_facets(tmp$message$facets))
       }
     } else {
-      list(meta = NULL, data = parse_works(tmp$message), facets = NULL)
+      list(meta = NULL, data = tbl_df(parse_works(tmp$message)), facets = NULL)
     }
   }
 }
