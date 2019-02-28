@@ -142,7 +142,7 @@
 #' system.time(lapply(queries, function(z) cr_works(query = z)))
 #' }
 
-`cr_works` <- function(dois = NULL, query = NULL, filter = NULL, offset = NULL,
+cr_works <- function(dois = NULL, query = NULL, filter = NULL, offset = NULL,
   limit = NULL, sample = NULL, sort = NULL, order = NULL, facet=FALSE,
   cursor = NULL, cursor_max = 5000, .progress="none", flq = NULL, 
   select = NULL, async = FALSE, ...) {
@@ -191,7 +191,7 @@
 
 #' @export
 #' @rdname cr_works
-`cr_works_` <- function(dois = NULL, query = NULL, filter = NULL, offset = NULL,
+cr_works_ <- function(dois = NULL, query = NULL, filter = NULL, offset = NULL,
   limit = NULL, sample = NULL, sort = NULL, order = NULL, facet=FALSE,
   cursor = NULL, cursor_max = 5000, .progress="none", parse=FALSE,
   flq = NULL, select = NULL, async = FALSE, ...) {
