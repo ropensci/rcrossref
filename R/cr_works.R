@@ -144,7 +144,7 @@
 
 cr_works <- function(dois = NULL, query = NULL, filter = NULL, offset = NULL,
   limit = NULL, sample = NULL, sort = NULL, order = NULL, facet=FALSE,
-  cursor = NULL, cursor_max = 5000, .progress="none", flq = NULL, 
+  cursor = NULL, cursor_max = 5000, .progress="none", flq = NULL,
   select = NULL, async = FALSE, ...) {
 
   if (cursor_max != as.integer(cursor_max)) {
