@@ -2,8 +2,8 @@
 #'
 #' @export
 #' @family crossref
-#' @param dois Search by a single DOI or many DOIs.  Note that using this 
-#' parameter at the same time as the `query`, `limit`, `select` or `flq` 
+#' @param dois Search by a single DOI or many DOIs.  Note that using this
+#' parameter at the same time as the `query`, `limit`, `select` or `flq`
 #' parameter will result in an error.
 #' @template args
 #' @template moreargs
@@ -29,12 +29,12 @@
 #'  \item `cr_works_()` - Does data request, and gives back json (default)
 #'  or lists, with no attempt to parse to data.frame's
 #' }
-#' 
+#'
 #' @section Explanation of some data fields:
 #' \itemize{
-#'  \item score: a term frequency, inverse document frequency score that 
-#'  comes from the Crossref Solr backend, based on bibliographic metadata 
-#'  fields title, publication title, authors, ISSN, publisher, and 
+#'  \item score: a term frequency, inverse document frequency score that
+#'  comes from the Crossref Solr backend, based on bibliographic metadata
+#'  fields title, publication title, authors, ISSN, publisher, and
 #'  date of publication.
 #' }
 #'
@@ -118,11 +118,11 @@
 #' ## query.author and query.title
 #' res <- cr_works(query = "ecology",
 #'   flq = c(query.author = 'Smith', query.title = 'cell'))
-#' 
+#'
 #' # select only certain fields to return
 #' res <- cr_works(query = "NSF", select = c('DOI', 'title'))
 #' names(res$data)
-#' 
+#'
 #' # asyc
 #' queries <- c("ecology", "science", "cellular", "birds", "European",
 #'   "bears", "beets", "laughter", "hapiness", "funding")
@@ -130,11 +130,11 @@
 #' res_json <- cr_works_(query = queries, async = TRUE)
 #' unname(vapply(res_json, class, ""))
 #' jsonlite::fromJSON(res_json[[1]])
-#' 
+#'
 #' queries <- c("ecology", "science", "cellular")
 #' res <- cr_works(query = queries, async = TRUE, verbose = TRUE)
 #' res
-#' 
+#'
 #' # time
 #' queries <- c("ecology", "science", "cellular", "birds", "European",
 #'   "bears", "beets", "laughter", "hapiness", "funding")
@@ -142,9 +142,9 @@
 #' system.time(lapply(queries, function(z) cr_works(query = z)))
 #' }
 
-`cr_works` <- function(dois = NULL, query = NULL, filter = NULL, offset = NULL,
+cr_works <- function(dois = NULL, query = NULL, filter = NULL, offset = NULL,
   limit = NULL, sample = NULL, sort = NULL, order = NULL, facet=FALSE,
-  cursor = NULL, cursor_max = 5000, .progress="none", flq = NULL, 
+  cursor = NULL, cursor_max = 5000, .progress="none", flq = NULL,
   select = NULL, async = FALSE, ...) {
 
   if (cursor_max != as.integer(cursor_max)) {
@@ -184,16 +184,16 @@
              facets = parse_facets(tmp$message$facets))
       }
     } else {
-      list(meta = NULL, data = parse_works(tmp$message), facets = NULL)
+      list(meta = NULL, data = tbl_df(parse_works(tmp$message)), facets = NULL)
     }
   }
 }
 
 #' @export
 #' @rdname cr_works
-`cr_works_` <- function(dois = NULL, query = NULL, filter = NULL, offset = NULL,
+cr_works_ <- function(dois = NULL, query = NULL, filter = NULL, offset = NULL,
   limit = NULL, sample = NULL, sort = NULL, order = NULL, facet=FALSE,
-  cursor = NULL, cursor_max = 5000, .progress="none", parse=FALSE, 
+  cursor = NULL, cursor_max = 5000, .progress="none", parse=FALSE,
   flq = NULL, select = NULL, async = FALSE, ...) {
 
   if (cursor_max != as.integer(cursor_max)) {
@@ -271,7 +271,7 @@ parse_works <- function(zzz){
             'deposited','published-print','published-online','DOI',
             'funder','indexed','ISBN',
             'ISSN','issue','issued','license', 'link','member','page',
-            'prefix','publisher','reference-count', 'score','source', 
+            'prefix','publisher','reference-count', 'score','source',
             'subject','subtitle','title', 'type','update-policy','URL',
             'volume','abstract')
   manip <- function(which="issued", y) {
@@ -330,7 +330,7 @@ parse_works <- function(zzz){
   } else {
     tmp <- unlist(lapply(keys, manip, y = zzz))
     out_tmp <- data.frame(
-      as.list(Filter(function(x) nchar(x) > 0, tmp)), 
+      as.list(Filter(function(x) nchar(x) > 0, tmp)),
       stringsAsFactors = FALSE)
     out_tmp$assertion <- list(parse_todf(zzz$assertion)) %||% NULL
     out_tmp$author <- list(parse_todf(zzz$author)) %||% NULL
