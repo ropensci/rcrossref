@@ -1,6 +1,7 @@
 testing.R
 .Rproj.user
 .Rhistory
+.Rproj
 .httr-oauth
 inst/vign/cache/
 revdep/checks.noindex
