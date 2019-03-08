@@ -1,9 +1,5 @@
 # CONTRIBUTING #
 
-## Please contribute!
-
-We love collaboration.
-
 ## Bugs?
 
 * Submit an issue on the [Issues page](https://github.com/ropensci/rcrossref/issues) - be sure to include R session information and a reproducible example.
@@ -71,6 +67,6 @@ Be conservative about adding new dependencies.
 
 ## Also, check out our [discussion forum](https://discuss.ropensci.org)
 
-## Prefer to Email? Get in touch: [scott@ropensci.org](mailto:scott@ropensci.org)
+## Prefer to Email? Get in touch: [myrmecocystus@gmail.com](mailto:myrmecocystus@gmail.com)
 
 ## Thanks for contributing!
