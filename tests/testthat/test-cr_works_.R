@@ -1,4 +1,4 @@
-context("testing cr_works")
+context("testing cr_works_")
 
 vcr::use_cassette("cr_works_", {
   test_that("cr_works_ works", {
