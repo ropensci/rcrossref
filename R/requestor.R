@@ -6,12 +6,20 @@ Requestor <- R6::R6Class("Requestor",
   cursor_max = NA,
   cursor_out = list(),
   should_parse = FALSE,
-  initialize = function(path, args, cursor, cursor_max, should_parse) {
+  progress = FALSE,
+
+  initialize = function(path, args, cursor, cursor_max, should_parse,
+    .progress) {
+
     if (!missing(path)) self$path <- path
     if (!missing(cursor)) self$cursor <- cursor
     if (!missing(args)) self$args <- args
     if (!missing(cursor_max)) self$cursor_max <- cursor_max
     if (!missing(should_parse)) self$should_parse <- should_parse
+    if (!missing(.progress)) {
+      if (!inherits(.progress, "logical")) .progress <- FALSE
+      self$progress <- .progress
+    }
   },
   GETcursor = function(...) {
     res <- cr_GET(self$path, self$args, todf = FALSE, 
@@ -30,8 +38,16 @@ Requestor <- R6::R6Class("Requestor",
     totals <- tot
     iter <- 1
     totcount <- totals
+
+    if (self$progress) {
+      pb <- utils::txtProgressBar(min = 1, max = min(max_avail, self$cursor_max)/self$args$rows,
+        initial = 1, style = 3)
+      on.exit(close(pb))
+    }
+
     while (!is.null(cu) && self$cursor_max > totcount && totcount < max_avail) {
       iter <- iter + 1
+      if (self$progress) utils::setTxtProgressBar(pb, iter)
       self$args$cursor <- cu
       res <- cr_GET(endpoint = self$path, self$args, todf = FALSE, 
                     parse = self$should_parse)

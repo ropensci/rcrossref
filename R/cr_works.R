@@ -99,6 +99,9 @@
 #' cr_works(query="NSF", cursor = "*", cursor_max = 300, limit = 100)
 #' cr_works(query="NSF", cursor = "*", cursor_max = 300, limit = 100,
 #'    facet = TRUE)
+#' ## with optional progress bar
+#' x <- cr_works(query="NSF", cursor = "*", cursor_max = 1200, limit = 200, 
+#'   .progress = TRUE)
 #'
 #' # Low level function - does no parsing to data.frame, get json or a list
 #' cr_works_(query = "NSF")
@@ -173,7 +176,7 @@ cr_works <- function(dois = NULL, query = NULL, filter = NULL, offset = NULL,
     list(meta = NULL, data = df, facets = NULL)
   } else {
     tmp <- cr_get_cursor(dois, args = args, cursor = cursor,
-                         cursor_max = cursor_max, ...)
+                         cursor_max = cursor_max, .progress, ...)
     if (is.null(dois)) {
       if (!is.null(cursor) || is.null(tmp$message)) {
         tmp
@@ -212,15 +215,16 @@ cr_works_ <- function(dois = NULL, query = NULL, filter = NULL, offset = NULL,
           cursor_max = cursor_max, parse = parse, .progress = .progress, ...)
   } else {
     cr_get_cursor_(dois, args = args, cursor = cursor,
-                   cursor_max = cursor_max, parse = parse, ...)
+                   cursor_max = cursor_max, parse = parse,
+                   .progress = .progress, ...)
   }
 }
 
-cr_get_cursor <- function(x, args, cursor, cursor_max, ...) {
+cr_get_cursor <- function(x, args, cursor, cursor_max, .progress, ...) {
   path <- if (!is.null(x)) sprintf("works/%s", x) else "works"
   if (!is.null(cursor)) {
     rr <- Requestor$new(path = path, args = args, cursor_max = cursor_max,
-                        should_parse = TRUE, ...)
+                        should_parse = TRUE, .progress = .progress, ...)
     rr$GETcursor()
     rr$parse()
   } else {
@@ -228,11 +232,11 @@ cr_get_cursor <- function(x, args, cursor, cursor_max, ...) {
   }
 }
 
-cr_get_cursor_ <- function(x, args, cursor, cursor_max, parse, ...) {
+cr_get_cursor_ <- function(x, args, cursor, cursor_max, parse, .progress, ...) {
   path <- if (!is.null(x)) sprintf("works/%s", x) else "works"
   if (!is.null(cursor)) {
     rr <- Requestor$new(path = path, args = args, cursor_max = cursor_max,
-                        should_parse = parse, ...)
+                        should_parse = parse, .progress = .progress, ...)
     rr$GETcursor()
     rr$cursor_out
   } else {
