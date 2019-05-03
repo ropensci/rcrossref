@@ -1,18 +1,12 @@
 ## Test environments
 
-* local OS X install, R 3.5.2 patched
-* ubuntu 14.04.5 LTS (on Travis-CI), R 3.5.2
+* local OS X install, R 3.6.0 patched
+* ubuntu 14.04.5 LTS (on Travis-CI), R 3.6.0
 * win-builder (devel and release)
 
 ## R CMD check results
 
-0 errors | 0 warnings | 1 note
-
-   License components with restrictions and base license permitting such:
-     MIT + file LICENSE
-   File 'LICENSE':
-     YEAR: 2019
-     COPYRIGHT HOLDER: Scott Chamberlain
+0 errors | 0 warnings | 0 notes
 
 ## Reverse dependencies
 
@@ -20,7 +14,7 @@
 
 -------
 
-This submission includes a few new features, and many small changes and bug fixes.
+This submission includes new functionality for some functions, a slight fix for a function, and fixes non-ascii text in a test fixture that was causing cran check failures on debian clang devel.
 
 Thanks!
 Scott Chamberlain

@@ -117,18 +117,18 @@ cr_funders(query="NSF")
 #> 
 #> $data
 #> # A tibble: 10 x 6
-#>    id     location  name          alt.names        uri       tokens        
-#>    <chr>  <chr>     <chr>         <chr>            <chr>     <chr>         
-#>  1 50110… Norway    Norsk Sykepl… NSF, Norwegian … http://d… norsk, sykepl…
-#>  2 10000… United S… Center for H… CHM, NSF, Unive… http://d… center, for, …
-#>  3 10000… United S… National Sle… NSF              http://d… national, sle…
-#>  4 50110… Sri Lanka National Sci… National Scienc… http://d… national, sci…
-#>  5 10000… Denmark   Statens Natu… Danish National… http://d… statens, natu…
-#>  6 10000… United S… Office of th… NSF Office of t… http://d… office, of, t…
-#>  7 50110… Australia National Str… NSF              http://d… national, str…
-#>  8 10000… United S… National Sci… NSF              http://d… national, sci…
-#>  9 50110… China     National Nat… NSFC-Yunnan Joi… http://d… national, nat…
-#> 10 50110… China     National Nat… Natural Science… http://d… national, nat…
+#>    id     name          alt.names         uri       tokens         location
+#>    <chr>  <chr>         <chr>             <chr>     <chr>          <chr>   
+#>  1 50110… Norsk Sykepl… NSF, Norwegian N… http://d… norsk, sykepl… <NA>    
+#>  2 10000… Center for H… CHM, NSF, Univer… http://d… center, for, … United …
+#>  3 10000… National Sle… NSF               http://d… national, sle… United …
+#>  4 50110… National Str… NSF               http://d… national, str… <NA>    
+#>  5 10000… Statens Natu… Danish National … http://d… statens, natu… Denmark 
+#>  6 10000… Office of th… NSF Office of th… http://d… office, of, t… United …
+#>  7 50110… National Sci… National Science… http://d… national, sci… <NA>    
+#>  8 10000… National Sci… NSF               http://d… national, sci… United …
+#>  9 50110… National Nat… NSFC-Yunnan Join… http://d… national, nat… China   
+#> 10 50110… National Nat… Natural Science … http://d… national, nat… China   
 #> 
 #> $facets
 #> NULL
@@ -163,19 +163,18 @@ cr_works(filter=c(has_orcid=TRUE, from_pub_date='2004-04-04'), limit=1)
 ```
 #> $meta
 #>   total_results search_terms start_index items_per_page
-#> 1       2085016           NA           0              1
+#> 1       2452441           NA           0              1
 #> 
 #> $data
-#> # A tibble: 1 x 27
-#>   alternative.id container.title created deposited published.print
-#>   <chr>          <chr>           <chr>   <chr>     <chr>          
-#> 1 BFgim2014129   Genetics in Me… 2014-0… 2017-12-… 2015-06        
-#> # … with 22 more variables: published.online <chr>, doi <chr>,
-#> #   indexed <chr>, issn <chr>, issue <chr>, issued <chr>, member <chr>,
+#> # A tibble: 1 x 25
+#>   container.title created deposited published.online doi   indexed issn 
+#>   <chr>           <chr>   <chr>     <chr>            <chr> <chr>   <chr>
+#> 1 The Cryosphere  2013-0… 2018-07-… 2013-02-11       10.5… 2019-0… 1994…
+#> # … with 18 more variables: issue <chr>, issued <chr>, member <chr>,
 #> #   page <chr>, prefix <chr>, publisher <chr>, reference.count <chr>,
-#> #   score <chr>, source <chr>, title <chr>, type <chr>,
-#> #   update.policy <chr>, url <chr>, volume <chr>, author <list>,
-#> #   link <list>, license <list>, reference <list>
+#> #   score <chr>, source <chr>, title <chr>, type <chr>, url <chr>,
+#> #   volume <chr>, abstract <chr>, author <list>, link <list>,
+#> #   license <list>, reference <list>
 #> 
 #> $facets
 #> NULL
@@ -193,8 +192,8 @@ cr_journals(issn=c('1803-2427','2326-4225'))
 #> # A tibble: 2 x 53
 #>   title publisher issn  last_status_che… deposits_abstra… deposits_orcids…
 #>   <chr> <chr>     <chr> <date>           <lgl>            <lgl>           
-#> 1 Jour… "De Gruy… 1805… 2019-01-14       TRUE             FALSE           
-#> 2 Jour… American… 2326… 2019-01-14       FALSE            FALSE           
+#> 1 Jour… "De Gruy… 1805… 2019-03-24       TRUE             FALSE           
+#> 2 Jour… American… 2326… 2019-03-24       FALSE            FALSE           
 #> # … with 47 more variables: deposits <lgl>,
 #> #   deposits_affiliations_backfile <lgl>,
 #> #   deposits_update_policies_backfile <lgl>,
@@ -240,10 +239,10 @@ cr_licenses(query = 'elsevier')
 ```
 #> $meta
 #>   total_results search_terms start_index items_per_page
-#> 1            31     elsevier           0             20
+#> 1            34     elsevier           0             20
 #> 
 #> $data
-#> # A tibble: 31 x 2
+#> # A tibble: 34 x 2
 #>    URL                                                      work.count
 #>    <chr>                                                         <int>
 #>  1 http://aspb.org/publications/aspb-journals/open-articles          1
@@ -251,12 +250,12 @@ cr_licenses(query = 'elsevier')
 #>  3 http://creativecommons.org/licenses/by-nc-nd/4.0/                 7
 #>  4 http://creativecommons.org/licenses/by-nc/4.0                     1
 #>  5 http://creativecommons.org/licenses/by-nc/4.0/                    2
-#>  6 http://creativecommons.org/licenses/by/3.0/                       1
-#>  7 http://creativecommons.org/licenses/by/4.0                        2
-#>  8 http://creativecommons.org/licenses/by/4.0/                       4
-#>  9 http://doi.wiley.com/10.1002/tdm_license_1                      155
-#> 10 http://doi.wiley.com/10.1002/tdm_license_1.1                   2207
-#> # … with 21 more rows
+#>  6 http://creativecommons.org/licenses/by/2.0                        1
+#>  7 http://creativecommons.org/licenses/by/3.0/                       1
+#>  8 http://creativecommons.org/licenses/by/4.0                        3
+#>  9 http://creativecommons.org/licenses/by/4.0/                       6
+#> 10 http://doi.wiley.com/10.1002/tdm_license_1                      155
+#> # … with 24 more rows
 ```
 
 ### Search based on DOI prefixes
@@ -304,11 +303,11 @@ cr_members(query='ecology', limit = 5)
 #> # A tibble: 5 x 56
 #>      id primary_name location last_status_che… total.dois current.dois
 #>   <int> <chr>        <chr>    <date>           <chr>      <chr>       
-#> 1   336 Japanese So… 5-3 Yon… 2019-01-14       1202       127         
-#> 2  1950 Journal of … Suite 8… 2019-01-14       27         0           
-#> 3  2080 The Japan S… 5-3 Yon… 2019-01-14       688        18          
-#> 4  2151 Ecology and… 5-3 Yon… 2019-01-14       394        50          
-#> 5  2169 Italian Soc… Diparti… 2019-01-14       1261       277         
+#> 1   336 Japanese So… 5-3 Yon… 2019-04-16       1220       145         
+#> 2  1950 Journal of … Suite 8… 2019-04-16       27         0           
+#> 3  2080 The Japan S… 5-3 Yon… 2019-04-16       691        21          
+#> 4  2151 Ecology and… 5-3 Yon… 2019-04-16       404        60          
+#> 5  2169 Italian Soc… Diparti… 2019-04-16       1286       302         
 #> # … with 50 more variables: backfile.dois <chr>, prefixes <chr>,
 #> #   coverge.affiliations.current <chr>,
 #> #   coverge.similarity.checking.current <chr>,
@@ -364,11 +363,16 @@ cr_r()
 ```
 
 ```
-#>  [1] "10.1016/j.ijcard.2010.09.031"    "10.1039/ct9099500138"           
-#>  [3] "10.1055/s-2003-43252"            "10.1016/j.yexmp.2003.11.004"    
-#>  [5] "10.1016/s0734-3299(10)79442-9"   "10.1590/s0102-311x2004000800019"
-#>  [7] "10.1016/0009-2614(82)83542-2"    "10.1016/0022-3697(61)90122-6"   
-#>  [9] "10.1016/j.na.2009.06.013"        "10.1145/800231.807011"
+#>  [1] "10.2174/187221207782411584"        
+#>  [2] "10.1016/b978-0-08-202565-8.50005-5"
+#>  [3] "10.1016/0003-9861(72)90232-9"      
+#>  [4] "10.1093/nq/s4-v.130.607h"          
+#>  [5] "10.1109/epepemc.2012.6397467"      
+#>  [6] "10.1016/j.psychsport.2013.02.004"  
+#>  [7] "10.7247/jtomc.2014.1695"           
+#>  [8] "10.1109/sensor.1995.721776"        
+#>  [9] "10.1080/00268977100100441"         
+#> [10] "10.1002/jcp.24935"
 ```
 
 You can pass in the number of DOIs you want back (default is 10)
@@ -379,6 +383,6 @@ cr_r(2)
 ```
 
 ```
-#> [1] "10.1088/0957-0233/3/7/008"   "10.1109/iconip.2002.1198212"
+#> [1] "10.1007/s10708-010-9338-x"   "10.1007/978-94-007-0354-4_1"
 ```
 

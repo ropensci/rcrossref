@@ -1,3 +1,16 @@
+rcrossref 0.9.2
+===============
+
+## NEW FEATURES
+
+* `cr_funders()`, `cr_journals()`, `cr_licenses()`, `cr_members()`, `cr_prefixes()`, `cr_types()`, `cr_works()` gain ability to show a progress bar when using deep pagination when using `works=TRUE` (#186) (#188)
+
+### MINOR IMPROVEMENTS
+
+* fix a test fixture that had non-ascii characters (#187)
+* `cr_works()` returned a tibble in the `$data` slot in each case except for when a single DOI was passed to the `doi` parameter. now fixed  (#184) thanks @martinjhnhadley
+
+
 rcrossref 0.9.0
 ===============
 
