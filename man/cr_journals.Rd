@@ -159,6 +159,9 @@ cr_journals(issn='1932-6203', works = TRUE, cursor = "*", cursor_max = 500,
    limit = 100)
 cr_journals(c('1932-6203', '0028-0836'), works = TRUE, cursor = "*",
    cursor_max = 300, limit = 100)
+## with optional progress bar
+cr_journals(issn='1932-6203', works = TRUE, cursor = "*", cursor_max = 500,
+   limit = 100, .progress = TRUE)
 
 # fails, if you want works, you must give an ISSN
 # cr_journals(query = "ecology", filter=c(has_full_text = TRUE),

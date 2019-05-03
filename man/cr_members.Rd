@@ -142,6 +142,9 @@ cr_members(member_ids=98, works = TRUE, cursor = "*",
    cursor_max = 500, limit = 100)
 cr_members(member_ids=c(10, 98, 45), works = TRUE, cursor = "*",
    cursor_max = 200, limit = 100)
+## with optional progress bar
+cr_members(member_ids=98, works = TRUE, cursor = "*",
+   cursor_max = 500, limit = 100, .progress = TRUE)
 
 # data not found
 # cr_members(query="adfdf")

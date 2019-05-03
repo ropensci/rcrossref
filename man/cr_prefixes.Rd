@@ -155,6 +155,9 @@ cr_prefixes("10.1016", works = TRUE, cursor = "*", cursor_max = 500,
    limit = 100)
 cr_prefixes(c('10.1016', '10.1371'), works = TRUE, cursor = "*",
    cursor_max = 300, limit = 100)
+## with optional progress bar
+cr_prefixes("10.1016", works = TRUE, cursor = "*", cursor_max = 500,
+   limit = 100, .progress = TRUE)
 
 # Low level function - does no parsing to data.frame, get json or a list
 cr_prefixes_("10.1016")

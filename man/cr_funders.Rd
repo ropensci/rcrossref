@@ -161,6 +161,9 @@ cr_funders('100000001', works = TRUE, cursor = "*", cursor_max = 500,
    limit = 100)
 cr_funders(c('100000001', '100000002'), works = TRUE, cursor = "*",
    cursor_max = 300, limit = 100)
+## with optional progress bar
+cr_funders('100000001', works = TRUE, cursor = "*", cursor_max = 500,
+   limit = 100, .progress = TRUE)
 
 # Low level function - does no parsing to data.frame, get json or a list
 cr_funders_(query = 'nsf')
