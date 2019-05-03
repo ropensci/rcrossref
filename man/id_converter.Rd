@@ -30,7 +30,6 @@ id_converter("20495566")
 # pmcid to doi/pmid
 id_converter("PMC2883744", "pmcid")
 id_converter("PMC2883744")
-id_converter("PMC2883744", "doi")
 
 # manuscript id
 id_converter("NIHMS311352")

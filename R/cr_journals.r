@@ -60,8 +60,8 @@
 #' cr_journals(c('1932-6203', '0028-0836'), works = TRUE, cursor = "*",
 #'    cursor_max = 300, limit = 100)
 #' ## with optional progress bar
-#' cr_journals(issn='1932-6203', works = TRUE, cursor = "*", cursor_max = 500,
-#'    limit = 100, .progress = TRUE)
+#' cr_journals(issn='1932-6203', works = TRUE, cursor = "*", cursor_max = 90,
+#'    limit = 30, .progress = TRUE)
 #'
 #' # fails, if you want works, you must give an ISSN
 #' # cr_journals(query = "ecology", filter=c(has_full_text = TRUE),
@@ -137,7 +137,7 @@
       } else {
         stats::setNames(facets,
           vapply(res2, function(z) {
-            if ("issn" %in% names(z)) z[['issn']][[1]] else z$items[[1]]$issn[[1]]
+            if ("issn" %in% names(z)) z[['issn']][[1]] else z$items[[1]]$issn[[1]]$value
           }, "")
         )
       }
