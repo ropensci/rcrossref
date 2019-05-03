@@ -8,8 +8,8 @@ http_interactions:
     headers:
       Accept-Encoding: gzip, deflate
       Accept: application/json, text/xml, application/xml, */*
-      User-Agent: r-curl/3.2 crul/0.6.1.9100 rOpenSci(rcrossref/0.8.5.9110) (mailto:<crossref_email>)
-      X-USER-AGENT: r-curl/3.2 crul/0.6.1.9100 rOpenSci(rcrossref/0.8.5.9110) (mailto:<crossref_email>)
+      User-Agent: r-curl/3.3 crul/0.7.4 rOpenSci(rcrossref/0.9.0.9110) (mailto:<crossref_email>)
+      X-USER-AGENT: r-curl/3.3 crul/0.7.4 rOpenSci(rcrossref/0.9.0.9110) (mailto:<crossref_email>)
   response:
     status:
       status_code: '200'
@@ -23,15 +23,15 @@ http_interactions:
       access-control-allow-headers: X-Requested-With
       content-length: '166'
       server: http-kit
-      date: Fri, 07 Dec 2018 22:38:03 GMT
+      date: Fri, 03 May 2019 22:21:42 GMT
       x-rate-limit-limit: '50'
       x-rate-limit-interval: 1s
       connection: close
     body:
-      encoding: UTF-8
-      string: '{"status":"ok","message-type":"work-agency","message-version":"1.0.0","message":{"DOI":"10.1126\/science.169.3946.635","agency":{"id":"crossref","label":"Crossref"}}}'
-  recorded_at: 2018-12-07 22:38:17 GMT
-  recorded_with: vcr/0.2.0.9101, webmockr/0.2.9.9311
+      encoding: ASCII-8BIT
+      string: eyJzdGF0dXMiOiJvayIsIm1lc3NhZ2UtdHlwZSI6IndvcmstYWdlbmN5IiwibWVzc2FnZS12ZXJzaW9uIjoiMS4wLjAiLCJtZXNzYWdlIjp7IkRPSSI6IjEwLjExMjZcL3NjaWVuY2UuMTY5LjM5NDYuNjM1IiwiYWdlbmN5Ijp7ImlkIjoiY3Jvc3NyZWYiLCJsYWJlbCI6IkNyb3NzcmVmIn19fQ==
+  recorded_at: 2019-05-03 22:21:53 GMT
+  recorded_with: vcr/0.2.6, webmockr/0.3.4.9100
 - request:
     method: get
     uri: https://data.datacite.org/10.1126/science.169.3946.635
@@ -40,8 +40,8 @@ http_interactions:
       string: ''
     headers:
       Accept-Encoding: gzip, deflate
-      User-Agent: r-curl/3.2 crul/0.6.1.9100 rOpenSci(rcrossref/0.8.5.9110) (mailto:<crossref_email>)
-      X-USER-AGENT: r-curl/3.2 crul/0.6.1.9100 rOpenSci(rcrossref/0.8.5.9110) (mailto:<crossref_email>)
+      User-Agent: r-curl/3.3 crul/0.7.4 rOpenSci(rcrossref/0.9.0.9110) (mailto:<crossref_email>)
+      X-USER-AGENT: r-curl/3.3 crul/0.7.4 rOpenSci(rcrossref/0.9.0.9110) (mailto:<crossref_email>)
       Accept: text/x-bibliography; style = apa; locale = en-US
   response:
     status:
@@ -54,24 +54,22 @@ http_interactions:
       connection: keep-alive
       content-encoding: gzip
       content-type: text/plain; charset=utf-8
-      date: Fri, 07 Dec 2018 22:38:05 GMT
-      etag: W/"8d913af6b5e29a0f476026658b5f9ce9"
-      server: nginx/1.14.0 + Phusion Passenger 5.3.7
+      date: Fri, 03 May 2019 22:21:44 GMT
+      etag: W/"6c28b2a28fb40f22d75a7b162a747afc"
+      server: nginx/1.15.8 + Phusion Passenger 6.0.2
       status:
       - HTTP/1.1 200 OK
       - 200 OK
       transfer-encoding: chunked
       vary: Accept-Encoding, Origin
-      x-powered-by: Phusion Passenger 5.3.7
-      x-request-id: 85c4e015-2cd7-47f4-bbbc-92ce08ff88e8
-      x-runtime: '0.809639'
+      x-powered-by: Phusion Passenger 6.0.2
+      x-request-id: bc9b5971-fb93-4b58-8143-ad46c5dce6a1
+      x-runtime: '0.148816'
     body:
-      encoding: UTF-8
-      string: 'Frank, H. S. (1970). The Structure of Ordinary Water: New data and
-        interpretations are yielding new insights into this fascinating substance.
-        <i>Science</i>, <i>169</i>, 635–641. https://doi.org/10.1126/science.169.3946.635'
-  recorded_at: 2018-12-07 22:38:17 GMT
-  recorded_with: vcr/0.2.0.9101, webmockr/0.2.9.9311
+      encoding: ASCII-8BIT
+      string: RnJhbmssIEguIFMuICgxOTcwKS4gVGhlIFN0cnVjdHVyZSBvZiBPcmRpbmFyeSBXYXRlcjogTmV3IGRhdGEgYW5kIGludGVycHJldGF0aW9ucyBhcmUgeWllbGRpbmcgbmV3IGluc2lnaHRzIGludG8gdGhpcyBmYXNjaW5hdGluZyBzdWJzdGFuY2UuIDxpPlNjaWVuY2U8L2k+LCA8aT4xNjk8L2k+KDM5NDYpLCA2MzXigJM2NDEuIGh0dHBzOi8vZG9pLm9yZy8xMC4xMTI2L3NjaWVuY2UuMTY5LjM5NDYuNjM1
+  recorded_at: 2019-05-03 22:21:53 GMT
+  recorded_with: vcr/0.2.6, webmockr/0.3.4.9100
 - request:
     method: get
     uri: https://api.crossref.org/works/10.1126/science.169.3946.635/agency
@@ -81,8 +79,8 @@ http_interactions:
     headers:
       Accept-Encoding: gzip, deflate
       Accept: application/json, text/xml, application/xml, */*
-      User-Agent: r-curl/3.2 crul/0.6.1.9100 rOpenSci(rcrossref/0.8.5.9110) (mailto:<crossref_email>)
-      X-USER-AGENT: r-curl/3.2 crul/0.6.1.9100 rOpenSci(rcrossref/0.8.5.9110) (mailto:<crossref_email>)
+      User-Agent: r-curl/3.3 crul/0.7.4 rOpenSci(rcrossref/0.9.0.9110) (mailto:<crossref_email>)
+      X-USER-AGENT: r-curl/3.3 crul/0.7.4 rOpenSci(rcrossref/0.9.0.9110) (mailto:<crossref_email>)
   response:
     status:
       status_code: '200'
@@ -96,15 +94,15 @@ http_interactions:
       access-control-allow-headers: X-Requested-With
       content-length: '166'
       server: http-kit
-      date: Fri, 07 Dec 2018 22:38:06 GMT
+      date: Fri, 03 May 2019 22:21:44 GMT
       x-rate-limit-limit: '50'
       x-rate-limit-interval: 1s
       connection: close
     body:
-      encoding: UTF-8
-      string: '{"status":"ok","message-type":"work-agency","message-version":"1.0.0","message":{"DOI":"10.1126\/science.169.3946.635","agency":{"id":"crossref","label":"Crossref"}}}'
-  recorded_at: 2018-12-07 22:38:17 GMT
-  recorded_with: vcr/0.2.0.9101, webmockr/0.2.9.9311
+      encoding: ASCII-8BIT
+      string: eyJzdGF0dXMiOiJvayIsIm1lc3NhZ2UtdHlwZSI6IndvcmstYWdlbmN5IiwibWVzc2FnZS12ZXJzaW9uIjoiMS4wLjAiLCJtZXNzYWdlIjp7IkRPSSI6IjEwLjExMjZcL3NjaWVuY2UuMTY5LjM5NDYuNjM1IiwiYWdlbmN5Ijp7ImlkIjoiY3Jvc3NyZWYiLCJsYWJlbCI6IkNyb3NzcmVmIn19fQ==
+  recorded_at: 2019-05-03 22:21:53 GMT
+  recorded_with: vcr/0.2.6, webmockr/0.3.4.9100
 - request:
     method: get
     uri: https://api.crossref.org/works/10.1126/science.169.3946.635/agency
@@ -114,8 +112,8 @@ http_interactions:
     headers:
       Accept-Encoding: gzip, deflate
       Accept: application/json, text/xml, application/xml, */*
-      User-Agent: r-curl/3.2 crul/0.6.1.9100 rOpenSci(rcrossref/0.8.5.9110) (mailto:<crossref_email>)
-      X-USER-AGENT: r-curl/3.2 crul/0.6.1.9100 rOpenSci(rcrossref/0.8.5.9110) (mailto:<crossref_email>)
+      User-Agent: r-curl/3.3 crul/0.7.4 rOpenSci(rcrossref/0.9.0.9110) (mailto:<crossref_email>)
+      X-USER-AGENT: r-curl/3.3 crul/0.7.4 rOpenSci(rcrossref/0.9.0.9110) (mailto:<crossref_email>)
   response:
     status:
       status_code: '200'
@@ -129,15 +127,15 @@ http_interactions:
       access-control-allow-headers: X-Requested-With
       content-length: '166'
       server: http-kit
-      date: Fri, 07 Dec 2018 22:38:06 GMT
+      date: Fri, 03 May 2019 22:21:45 GMT
       x-rate-limit-limit: '50'
       x-rate-limit-interval: 1s
       connection: close
     body:
-      encoding: UTF-8
-      string: '{"status":"ok","message-type":"work-agency","message-version":"1.0.0","message":{"DOI":"10.1126\/science.169.3946.635","agency":{"id":"crossref","label":"Crossref"}}}'
-  recorded_at: 2018-12-07 22:38:17 GMT
-  recorded_with: vcr/0.2.0.9101, webmockr/0.2.9.9311
+      encoding: ASCII-8BIT
+      string: eyJzdGF0dXMiOiJvayIsIm1lc3NhZ2UtdHlwZSI6IndvcmstYWdlbmN5IiwibWVzc2FnZS12ZXJzaW9uIjoiMS4wLjAiLCJtZXNzYWdlIjp7IkRPSSI6IjEwLjExMjZcL3NjaWVuY2UuMTY5LjM5NDYuNjM1IiwiYWdlbmN5Ijp7ImlkIjoiY3Jvc3NyZWYiLCJsYWJlbCI6IkNyb3NzcmVmIn19fQ==
+  recorded_at: 2019-05-03 22:21:53 GMT
+  recorded_with: vcr/0.2.6, webmockr/0.3.4.9100
 - request:
     method: get
     uri: https://data.datacite.org/10.1126/science.169.3946.635
@@ -146,8 +144,8 @@ http_interactions:
       string: ''
     headers:
       Accept-Encoding: gzip, deflate
-      User-Agent: r-curl/3.2 crul/0.6.1.9100 rOpenSci(rcrossref/0.8.5.9110) (mailto:<crossref_email>)
-      X-USER-AGENT: r-curl/3.2 crul/0.6.1.9100 rOpenSci(rcrossref/0.8.5.9110) (mailto:<crossref_email>)
+      User-Agent: r-curl/3.3 crul/0.7.4 rOpenSci(rcrossref/0.9.0.9110) (mailto:<crossref_email>)
+      X-USER-AGENT: r-curl/3.3 crul/0.7.4 rOpenSci(rcrossref/0.9.0.9110) (mailto:<crossref_email>)
       Accept: text/x-bibliography; style = apa; locale = en-US
   response:
     status:
@@ -160,24 +158,22 @@ http_interactions:
       connection: keep-alive
       content-encoding: gzip
       content-type: text/plain; charset=utf-8
-      date: Fri, 07 Dec 2018 22:38:07 GMT
-      etag: W/"c4eb3bb203262a1d7f8217b55eefa5d6"
-      server: nginx/1.14.0 + Phusion Passenger 5.3.7
+      date: Fri, 03 May 2019 22:21:45 GMT
+      etag: W/"4513f721dabe39d37ab0f6d6a15b7e30"
+      server: nginx/1.15.8 + Phusion Passenger 6.0.2
       status:
       - HTTP/1.1 200 OK
       - 200 OK
       transfer-encoding: chunked
       vary: Accept-Encoding, Origin
-      x-powered-by: Phusion Passenger 5.3.7
-      x-request-id: 1db15dd5-d25e-49a2-99c9-8a1be2c86386
-      x-runtime: '0.428304'
+      x-powered-by: Phusion Passenger 6.0.2
+      x-request-id: 68b4c2f3-7df9-4df2-993a-fe4373ab63aa
+      x-runtime: '0.192589'
     body:
-      encoding: UTF-8
-      string: 'Frank, H. S. (1970). The Structure of Ordinary Water: New data and
-        interpretations are yielding new insights into this fascinating substance.
-        <i>Science</i>, <i>169</i>, 635–641. https://doi.org/10.1126/science.169.3946.635'
-  recorded_at: 2018-12-07 22:38:17 GMT
-  recorded_with: vcr/0.2.0.9101, webmockr/0.2.9.9311
+      encoding: ASCII-8BIT
+      string: RnJhbmssIEguIFMuICgxOTcwKS4gVGhlIFN0cnVjdHVyZSBvZiBPcmRpbmFyeSBXYXRlcjogTmV3IGRhdGEgYW5kIGludGVycHJldGF0aW9ucyBhcmUgeWllbGRpbmcgbmV3IGluc2lnaHRzIGludG8gdGhpcyBmYXNjaW5hdGluZyBzdWJzdGFuY2UuIDxpPlNjaWVuY2U8L2k+LCA8aT4xNjk8L2k+KDM5NDYpLCA2MzXigJM2NDEuIGh0dHBzOi8vZG9pLm9yZy8xMC4xMTI2L3NjaWVuY2UuMTY5LjM5NDYuNjM1
+  recorded_at: 2019-05-03 22:21:53 GMT
+  recorded_with: vcr/0.2.6, webmockr/0.3.4.9100
 - request:
     method: get
     uri: https://data.datacite.org/10.1126/science.169.3946.635
@@ -186,8 +182,8 @@ http_interactions:
       string: ''
     headers:
       Accept-Encoding: gzip, deflate
-      User-Agent: r-curl/3.2 crul/0.6.1.9100 rOpenSci(rcrossref/0.8.5.9110) (mailto:<crossref_email>)
-      X-USER-AGENT: r-curl/3.2 crul/0.6.1.9100 rOpenSci(rcrossref/0.8.5.9110) (mailto:<crossref_email>)
+      User-Agent: r-curl/3.3 crul/0.7.4 rOpenSci(rcrossref/0.9.0.9110) (mailto:<crossref_email>)
+      X-USER-AGENT: r-curl/3.3 crul/0.7.4 rOpenSci(rcrossref/0.9.0.9110) (mailto:<crossref_email>)
       Accept: text/x-bibliography; style = apa; locale = en-US
   response:
     status:
@@ -200,24 +196,22 @@ http_interactions:
       connection: keep-alive
       content-encoding: gzip
       content-type: text/plain; charset=utf-8
-      date: Fri, 07 Dec 2018 22:38:08 GMT
-      etag: W/"e4e480f23a58eae4ace95ffd0f0b76b0"
-      server: nginx/1.14.0 + Phusion Passenger 5.3.7
+      date: Fri, 03 May 2019 22:21:45 GMT
+      etag: W/"4513f721dabe39d37ab0f6d6a15b7e30"
+      server: nginx/1.15.8 + Phusion Passenger 6.0.2
       status:
       - HTTP/1.1 200 OK
       - 200 OK
       transfer-encoding: chunked
       vary: Accept-Encoding, Origin
-      x-powered-by: Phusion Passenger 5.3.7
-      x-request-id: b8f66979-b30a-4299-b861-54a6d334e0c7
-      x-runtime: '0.841140'
+      x-powered-by: Phusion Passenger 6.0.2
+      x-request-id: 90386896-0ff3-47f7-861b-bd5ec25a1823
+      x-runtime: '0.183811'
     body:
-      encoding: UTF-8
-      string: 'Frank, H. S. (1970). The Structure of Ordinary Water: New data and
-        interpretations are yielding new insights into this fascinating substance.
-        <i>Science</i>, <i>169</i>, 635–641. https://doi.org/10.1126/science.169.3946.635'
-  recorded_at: 2018-12-07 22:38:17 GMT
-  recorded_with: vcr/0.2.0.9101, webmockr/0.2.9.9311
+      encoding: ASCII-8BIT
+      string: RnJhbmssIEguIFMuICgxOTcwKS4gVGhlIFN0cnVjdHVyZSBvZiBPcmRpbmFyeSBXYXRlcjogTmV3IGRhdGEgYW5kIGludGVycHJldGF0aW9ucyBhcmUgeWllbGRpbmcgbmV3IGluc2lnaHRzIGludG8gdGhpcyBmYXNjaW5hdGluZyBzdWJzdGFuY2UuIDxpPlNjaWVuY2U8L2k+LCA8aT4xNjk8L2k+KDM5NDYpLCA2MzXigJM2NDEuIGh0dHBzOi8vZG9pLm9yZy8xMC4xMTI2L3NjaWVuY2UuMTY5LjM5NDYuNjM1
+  recorded_at: 2019-05-03 22:21:53 GMT
+  recorded_with: vcr/0.2.6, webmockr/0.3.4.9100
 - request:
     method: get
     uri: https://api.crossref.org/works/10.1126/science.169.3946.635/agency
@@ -227,8 +221,8 @@ http_interactions:
     headers:
       Accept-Encoding: gzip, deflate
       Accept: application/json, text/xml, application/xml, */*
-      User-Agent: r-curl/3.2 crul/0.6.1.9100 rOpenSci(rcrossref/0.8.5.9110) (mailto:<crossref_email>)
-      X-USER-AGENT: r-curl/3.2 crul/0.6.1.9100 rOpenSci(rcrossref/0.8.5.9110) (mailto:<crossref_email>)
+      User-Agent: r-curl/3.3 crul/0.7.4 rOpenSci(rcrossref/0.9.0.9110) (mailto:<crossref_email>)
+      X-USER-AGENT: r-curl/3.3 crul/0.7.4 rOpenSci(rcrossref/0.9.0.9110) (mailto:<crossref_email>)
   response:
     status:
       status_code: '200'
@@ -242,15 +236,15 @@ http_interactions:
       access-control-allow-headers: X-Requested-With
       content-length: '166'
       server: http-kit
-      date: Fri, 07 Dec 2018 22:38:09 GMT
+      date: Fri, 03 May 2019 22:21:46 GMT
       x-rate-limit-limit: '50'
       x-rate-limit-interval: 1s
       connection: close
     body:
-      encoding: UTF-8
-      string: '{"status":"ok","message-type":"work-agency","message-version":"1.0.0","message":{"DOI":"10.1126\/science.169.3946.635","agency":{"id":"crossref","label":"Crossref"}}}'
-  recorded_at: 2018-12-07 22:38:17 GMT
-  recorded_with: vcr/0.2.0.9101, webmockr/0.2.9.9311
+      encoding: ASCII-8BIT
+      string: eyJzdGF0dXMiOiJvayIsIm1lc3NhZ2UtdHlwZSI6IndvcmstYWdlbmN5IiwibWVzc2FnZS12ZXJzaW9uIjoiMS4wLjAiLCJtZXNzYWdlIjp7IkRPSSI6IjEwLjExMjZcL3NjaWVuY2UuMTY5LjM5NDYuNjM1IiwiYWdlbmN5Ijp7ImlkIjoiY3Jvc3NyZWYiLCJsYWJlbCI6IkNyb3NzcmVmIn19fQ==
+  recorded_at: 2019-05-03 22:21:53 GMT
+  recorded_with: vcr/0.2.6, webmockr/0.3.4.9100
 - request:
     method: get
     uri: https://api.crossref.org/works/10.1126/science.169.3946.635/agency
@@ -260,8 +254,8 @@ http_interactions:
     headers:
       Accept-Encoding: gzip, deflate
       Accept: application/json, text/xml, application/xml, */*
-      User-Agent: r-curl/3.2 crul/0.6.1.9100 rOpenSci(rcrossref/0.8.5.9110) (mailto:<crossref_email>)
-      X-USER-AGENT: r-curl/3.2 crul/0.6.1.9100 rOpenSci(rcrossref/0.8.5.9110) (mailto:<crossref_email>)
+      User-Agent: r-curl/3.3 crul/0.7.4 rOpenSci(rcrossref/0.9.0.9110) (mailto:<crossref_email>)
+      X-USER-AGENT: r-curl/3.3 crul/0.7.4 rOpenSci(rcrossref/0.9.0.9110) (mailto:<crossref_email>)
   response:
     status:
       status_code: '200'
@@ -275,15 +269,15 @@ http_interactions:
       access-control-allow-headers: X-Requested-With
       content-length: '166'
       server: http-kit
-      date: Fri, 07 Dec 2018 22:38:09 GMT
+      date: Fri, 03 May 2019 22:21:46 GMT
       x-rate-limit-limit: '50'
       x-rate-limit-interval: 1s
       connection: close
     body:
-      encoding: UTF-8
-      string: '{"status":"ok","message-type":"work-agency","message-version":"1.0.0","message":{"DOI":"10.1126\/science.169.3946.635","agency":{"id":"crossref","label":"Crossref"}}}'
-  recorded_at: 2018-12-07 22:38:17 GMT
-  recorded_with: vcr/0.2.0.9101, webmockr/0.2.9.9311
+      encoding: ASCII-8BIT
+      string: eyJzdGF0dXMiOiJvayIsIm1lc3NhZ2UtdHlwZSI6IndvcmstYWdlbmN5IiwibWVzc2FnZS12ZXJzaW9uIjoiMS4wLjAiLCJtZXNzYWdlIjp7IkRPSSI6IjEwLjExMjZcL3NjaWVuY2UuMTY5LjM5NDYuNjM1IiwiYWdlbmN5Ijp7ImlkIjoiY3Jvc3NyZWYiLCJsYWJlbCI6IkNyb3NzcmVmIn19fQ==
+  recorded_at: 2019-05-03 22:21:53 GMT
+  recorded_with: vcr/0.2.6, webmockr/0.3.4.9100
 - request:
     method: get
     uri: http://dx.doi.org/10.1126/science.169.3946.635
@@ -292,8 +286,8 @@ http_interactions:
       string: ''
     headers:
       Accept-Encoding: gzip, deflate
-      User-Agent: r-curl/3.2 crul/0.6.1.9100 rOpenSci(rcrossref/0.8.5.9110) (mailto:<crossref_email>)
-      X-USER-AGENT: r-curl/3.2 crul/0.6.1.9100 rOpenSci(rcrossref/0.8.5.9110) (mailto:<crossref_email>)
+      User-Agent: r-curl/3.3 crul/0.7.4 rOpenSci(rcrossref/0.9.0.9110) (mailto:<crossref_email>)
+      X-USER-AGENT: r-curl/3.3 crul/0.7.4 rOpenSci(rcrossref/0.9.0.9110) (mailto:<crossref_email>)
       Accept: text/x-bibliography; style = apa; locale = en-US
   response:
     status:
@@ -311,16 +305,15 @@ http_interactions:
       content-type: text/x-bibliography
       content-length: '206'
       server: http-kit
-      date: Fri, 07 Dec 2018 22:38:10 GMT
+      date: Fri, 03 May 2019 22:21:47 GMT
       x-rate-limit-limit: '50'
       x-rate-limit-interval: 1s
       connection: close
     body:
-      encoding: UTF-8
-      string: |
-        Frank, H. S. (1970). The Structure of Ordinary Water: New data and interpretations are yielding new insights into this fascinating substance. Science, 169(3946), 635–641. doi:10.1126/science.169.3946.635
-  recorded_at: 2018-12-07 22:38:17 GMT
-  recorded_with: vcr/0.2.0.9101, webmockr/0.2.9.9311
+      encoding: ASCII-8BIT
+      string: RnJhbmssIEguIFMuICgxOTcwKS4gVGhlIFN0cnVjdHVyZSBvZiBPcmRpbmFyeSBXYXRlcjogTmV3IGRhdGEgYW5kIGludGVycHJldGF0aW9ucyBhcmUgeWllbGRpbmcgbmV3IGluc2lnaHRzIGludG8gdGhpcyBmYXNjaW5hdGluZyBzdWJzdGFuY2UuIFNjaWVuY2UsIDE2OSgzOTQ2KSwgNjM14oCTNjQxLiBkb2k6MTAuMTEyNi9zY2llbmNlLjE2OS4zOTQ2LjYzNQo=
+  recorded_at: 2019-05-03 22:21:53 GMT
+  recorded_with: vcr/0.2.6, webmockr/0.3.4.9100
 - request:
     method: get
     uri: https://api.crossref.org/works/10.1126/science.169.3946.635/agency
@@ -330,8 +323,8 @@ http_interactions:
     headers:
       Accept-Encoding: gzip, deflate
       Accept: application/json, text/xml, application/xml, */*
-      User-Agent: r-curl/3.2 crul/0.6.1.9100 rOpenSci(rcrossref/0.8.5.9110) (mailto:<crossref_email>)
-      X-USER-AGENT: r-curl/3.2 crul/0.6.1.9100 rOpenSci(rcrossref/0.8.5.9110) (mailto:<crossref_email>)
+      User-Agent: r-curl/3.3 crul/0.7.4 rOpenSci(rcrossref/0.9.0.9110) (mailto:<crossref_email>)
+      X-USER-AGENT: r-curl/3.3 crul/0.7.4 rOpenSci(rcrossref/0.9.0.9110) (mailto:<crossref_email>)
   response:
     status:
       status_code: '200'
@@ -345,15 +338,15 @@ http_interactions:
       access-control-allow-headers: X-Requested-With
       content-length: '166'
       server: http-kit
-      date: Fri, 07 Dec 2018 22:38:11 GMT
+      date: Fri, 03 May 2019 22:21:48 GMT
       x-rate-limit-limit: '50'
       x-rate-limit-interval: 1s
       connection: close
     body:
-      encoding: UTF-8
-      string: '{"status":"ok","message-type":"work-agency","message-version":"1.0.0","message":{"DOI":"10.1126\/science.169.3946.635","agency":{"id":"crossref","label":"Crossref"}}}'
-  recorded_at: 2018-12-07 22:38:17 GMT
-  recorded_with: vcr/0.2.0.9101, webmockr/0.2.9.9311
+      encoding: ASCII-8BIT
+      string: eyJzdGF0dXMiOiJvayIsIm1lc3NhZ2UtdHlwZSI6IndvcmstYWdlbmN5IiwibWVzc2FnZS12ZXJzaW9uIjoiMS4wLjAiLCJtZXNzYWdlIjp7IkRPSSI6IjEwLjExMjZcL3NjaWVuY2UuMTY5LjM5NDYuNjM1IiwiYWdlbmN5Ijp7ImlkIjoiY3Jvc3NyZWYiLCJsYWJlbCI6IkNyb3NzcmVmIn19fQ==
+  recorded_at: 2019-05-03 22:21:53 GMT
+  recorded_with: vcr/0.2.6, webmockr/0.3.4.9100
 - request:
     method: get
     uri: https://api.crossref.org/works/10.1126/science.169.3946.635/agency
@@ -363,8 +356,8 @@ http_interactions:
     headers:
       Accept-Encoding: gzip, deflate
       Accept: application/json, text/xml, application/xml, */*
-      User-Agent: r-curl/3.2 crul/0.6.1.9100 rOpenSci(rcrossref/0.8.5.9110) (mailto:<crossref_email>)
-      X-USER-AGENT: r-curl/3.2 crul/0.6.1.9100 rOpenSci(rcrossref/0.8.5.9110) (mailto:<crossref_email>)
+      User-Agent: r-curl/3.3 crul/0.7.4 rOpenSci(rcrossref/0.9.0.9110) (mailto:<crossref_email>)
+      X-USER-AGENT: r-curl/3.3 crul/0.7.4 rOpenSci(rcrossref/0.9.0.9110) (mailto:<crossref_email>)
   response:
     status:
       status_code: '200'
@@ -378,15 +371,15 @@ http_interactions:
       access-control-allow-headers: X-Requested-With
       content-length: '166'
       server: http-kit
-      date: Fri, 07 Dec 2018 22:38:11 GMT
+      date: Fri, 03 May 2019 22:21:48 GMT
       x-rate-limit-limit: '50'
       x-rate-limit-interval: 1s
       connection: close
     body:
-      encoding: UTF-8
-      string: '{"status":"ok","message-type":"work-agency","message-version":"1.0.0","message":{"DOI":"10.1126\/science.169.3946.635","agency":{"id":"crossref","label":"Crossref"}}}'
-  recorded_at: 2018-12-07 22:38:17 GMT
-  recorded_with: vcr/0.2.0.9101, webmockr/0.2.9.9311
+      encoding: ASCII-8BIT
+      string: eyJzdGF0dXMiOiJvayIsIm1lc3NhZ2UtdHlwZSI6IndvcmstYWdlbmN5IiwibWVzc2FnZS12ZXJzaW9uIjoiMS4wLjAiLCJtZXNzYWdlIjp7IkRPSSI6IjEwLjExMjZcL3NjaWVuY2UuMTY5LjM5NDYuNjM1IiwiYWdlbmN5Ijp7ImlkIjoiY3Jvc3NyZWYiLCJsYWJlbCI6IkNyb3NzcmVmIn19fQ==
+  recorded_at: 2019-05-03 22:21:53 GMT
+  recorded_with: vcr/0.2.6, webmockr/0.3.4.9100
 - request:
     method: get
     uri: http://dx.doi.org/10.1126/science.169.3946.635
@@ -395,8 +388,8 @@ http_interactions:
       string: ''
     headers:
       Accept-Encoding: gzip, deflate
-      User-Agent: r-curl/3.2 crul/0.6.1.9100 rOpenSci(rcrossref/0.8.5.9110) (mailto:<crossref_email>)
-      X-USER-AGENT: r-curl/3.2 crul/0.6.1.9100 rOpenSci(rcrossref/0.8.5.9110) (mailto:<crossref_email>)
+      User-Agent: r-curl/3.3 crul/0.7.4 rOpenSci(rcrossref/0.9.0.9110) (mailto:<crossref_email>)
+      X-USER-AGENT: r-curl/3.3 crul/0.7.4 rOpenSci(rcrossref/0.9.0.9110) (mailto:<crossref_email>)
       Accept: text/x-bibliography; style = apa; locale = en-US
   response:
     status:
@@ -414,16 +407,15 @@ http_interactions:
       content-type: text/x-bibliography
       content-length: '206'
       server: http-kit
-      date: Fri, 07 Dec 2018 22:38:12 GMT
+      date: Fri, 03 May 2019 22:21:49 GMT
       x-rate-limit-limit: '50'
       x-rate-limit-interval: 1s
       connection: close
     body:
-      encoding: UTF-8
-      string: |
-        Frank, H. S. (1970). The Structure of Ordinary Water: New data and interpretations are yielding new insights into this fascinating substance. Science, 169(3946), 635–641. doi:10.1126/science.169.3946.635
-  recorded_at: 2018-12-07 22:38:17 GMT
-  recorded_with: vcr/0.2.0.9101, webmockr/0.2.9.9311
+      encoding: ASCII-8BIT
+      string: RnJhbmssIEguIFMuICgxOTcwKS4gVGhlIFN0cnVjdHVyZSBvZiBPcmRpbmFyeSBXYXRlcjogTmV3IGRhdGEgYW5kIGludGVycHJldGF0aW9ucyBhcmUgeWllbGRpbmcgbmV3IGluc2lnaHRzIGludG8gdGhpcyBmYXNjaW5hdGluZyBzdWJzdGFuY2UuIFNjaWVuY2UsIDE2OSgzOTQ2KSwgNjM14oCTNjQxLiBkb2k6MTAuMTEyNi9zY2llbmNlLjE2OS4zOTQ2LjYzNQo=
+  recorded_at: 2019-05-03 22:21:53 GMT
+  recorded_with: vcr/0.2.6, webmockr/0.3.4.9100
 - request:
     method: get
     uri: http://dx.doi.org/10.1126/science.169.3946.635
@@ -432,8 +424,8 @@ http_interactions:
       string: ''
     headers:
       Accept-Encoding: gzip, deflate
-      User-Agent: r-curl/3.2 crul/0.6.1.9100 rOpenSci(rcrossref/0.8.5.9110) (mailto:<crossref_email>)
-      X-USER-AGENT: r-curl/3.2 crul/0.6.1.9100 rOpenSci(rcrossref/0.8.5.9110) (mailto:<crossref_email>)
+      User-Agent: r-curl/3.3 crul/0.7.4 rOpenSci(rcrossref/0.9.0.9110) (mailto:<crossref_email>)
+      X-USER-AGENT: r-curl/3.3 crul/0.7.4 rOpenSci(rcrossref/0.9.0.9110) (mailto:<crossref_email>)
       Accept: text/x-bibliography; style = apa; locale = en-US
   response:
     status:
@@ -451,16 +443,15 @@ http_interactions:
       content-type: text/x-bibliography
       content-length: '206'
       server: http-kit
-      date: Fri, 07 Dec 2018 22:38:12 GMT
+      date: Fri, 03 May 2019 22:21:49 GMT
       x-rate-limit-limit: '50'
       x-rate-limit-interval: 1s
       connection: close
     body:
-      encoding: UTF-8
-      string: |
-        Frank, H. S. (1970). The Structure of Ordinary Water: New data and interpretations are yielding new insights into this fascinating substance. Science, 169(3946), 635–641. doi:10.1126/science.169.3946.635
-  recorded_at: 2018-12-07 22:38:17 GMT
-  recorded_with: vcr/0.2.0.9101, webmockr/0.2.9.9311
+      encoding: ASCII-8BIT
+      string: RnJhbmssIEguIFMuICgxOTcwKS4gVGhlIFN0cnVjdHVyZSBvZiBPcmRpbmFyeSBXYXRlcjogTmV3IGRhdGEgYW5kIGludGVycHJldGF0aW9ucyBhcmUgeWllbGRpbmcgbmV3IGluc2lnaHRzIGludG8gdGhpcyBmYXNjaW5hdGluZyBzdWJzdGFuY2UuIFNjaWVuY2UsIDE2OSgzOTQ2KSwgNjM14oCTNjQxLiBkb2k6MTAuMTEyNi9zY2llbmNlLjE2OS4zOTQ2LjYzNQo=
+  recorded_at: 2019-05-03 22:21:53 GMT
+  recorded_with: vcr/0.2.6, webmockr/0.3.4.9100
 - request:
     method: get
     uri: https://api.crossref.org/works/10.5284/1011335/agency
@@ -470,8 +461,8 @@ http_interactions:
     headers:
       Accept-Encoding: gzip, deflate
       Accept: application/json, text/xml, application/xml, */*
-      User-Agent: r-curl/3.2 crul/0.6.1.9100 rOpenSci(rcrossref/0.8.5.9110) (mailto:<crossref_email>)
-      X-USER-AGENT: r-curl/3.2 crul/0.6.1.9100 rOpenSci(rcrossref/0.8.5.9110) (mailto:<crossref_email>)
+      User-Agent: r-curl/3.3 crul/0.7.4 rOpenSci(rcrossref/0.9.0.9110) (mailto:<crossref_email>)
+      X-USER-AGENT: r-curl/3.3 crul/0.7.4 rOpenSci(rcrossref/0.9.0.9110) (mailto:<crossref_email>)
   response:
     status:
       status_code: '200'
@@ -485,15 +476,15 @@ http_interactions:
       access-control-allow-headers: X-Requested-With
       content-length: '153'
       server: http-kit
-      date: Fri, 07 Dec 2018 22:38:13 GMT
+      date: Fri, 03 May 2019 22:21:50 GMT
       x-rate-limit-limit: '50'
       x-rate-limit-interval: 1s
       connection: close
     body:
-      encoding: UTF-8
-      string: '{"status":"ok","message-type":"work-agency","message-version":"1.0.0","message":{"DOI":"10.5284\/1011335","agency":{"id":"datacite","label":"DataCite"}}}'
-  recorded_at: 2018-12-07 22:38:17 GMT
-  recorded_with: vcr/0.2.0.9101, webmockr/0.2.9.9311
+      encoding: ASCII-8BIT
+      string: eyJzdGF0dXMiOiJvayIsIm1lc3NhZ2UtdHlwZSI6IndvcmstYWdlbmN5IiwibWVzc2FnZS12ZXJzaW9uIjoiMS4wLjAiLCJtZXNzYWdlIjp7IkRPSSI6IjEwLjUyODRcLzEwMTEzMzUiLCJhZ2VuY3kiOnsiaWQiOiJkYXRhY2l0ZSIsImxhYmVsIjoiRGF0YUNpdGUifX19
+  recorded_at: 2019-05-03 22:21:53 GMT
+  recorded_with: vcr/0.2.6, webmockr/0.3.4.9100
 - request:
     method: get
     uri: https://citation.crosscite.org/format?doi=10.5284%2F1011335&lang=en-US&style=apa
@@ -502,8 +493,8 @@ http_interactions:
       string: ''
     headers:
       Accept-Encoding: gzip, deflate
-      User-Agent: r-curl/3.2 crul/0.6.1.9100 rOpenSci(rcrossref/0.8.5.9110) (mailto:<crossref_email>)
-      X-USER-AGENT: r-curl/3.2 crul/0.6.1.9100 rOpenSci(rcrossref/0.8.5.9110) (mailto:<crossref_email>)
+      User-Agent: r-curl/3.3 crul/0.7.4 rOpenSci(rcrossref/0.9.0.9110) (mailto:<crossref_email>)
+      X-USER-AGENT: r-curl/3.3 crul/0.7.4 rOpenSci(rcrossref/0.9.0.9110) (mailto:<crossref_email>)
       Accept: application/x-bibtex
   response:
     status:
@@ -516,7 +507,7 @@ http_interactions:
       connection: keep-alive
       content-encoding: gzip
       content-type: text/plain
-      date: Fri, 07 Dec 2018 22:38:14 GMT
+      date: Fri, 03 May 2019 22:21:52 GMT
       server: nginx/1.14.0 + Phusion Passenger 5.3.7
       status:
       - HTTP/1.1 200 OK
@@ -524,11 +515,10 @@ http_interactions:
       transfer-encoding: chunked
       x-powered-by: Phusion Passenger 5.3.7
     body:
-      encoding: UTF-8
-      string: |
-        AC Archaeology Ltd. (2011). Land at Hill Barton, Clyst St Mary, Devon (NGR SY 0002 9083) Hill Barton Industrial Park Strip Map and Sample Excavation Summary Report. Archaeology Data Service. https://doi.org/10.5284/1011335
-  recorded_at: 2018-12-07 22:38:17 GMT
-  recorded_with: vcr/0.2.0.9101, webmockr/0.2.9.9311
+      encoding: ASCII-8BIT
+      string: QUMgQXJjaGFlb2xvZ3kgTHRkLiAoMjAxMSkuIExhbmQgYXQgSGlsbCBCYXJ0b24sIENseXN0IFN0IE1hcnksIERldm9uIChOR1IgU1kgMDAwMiA5MDgzKSBIaWxsIEJhcnRvbiBJbmR1c3RyaWFsIFBhcmsgU3RyaXAgTWFwIGFuZCBTYW1wbGUgRXhjYXZhdGlvbiBTdW1tYXJ5IFJlcG9ydC4gQXJjaGFlb2xvZ3kgRGF0YSBTZXJ2aWNlLiBodHRwczovL2RvaS5vcmcvMTAuNTI4NC8xMDExMzM1Cg==
+  recorded_at: 2019-05-03 22:21:53 GMT
+  recorded_with: vcr/0.2.6, webmockr/0.3.4.9100
 - request:
     method: get
     uri: https://api.crossref.org/works/10.5284/1011335/agency
@@ -538,8 +528,8 @@ http_interactions:
     headers:
       Accept-Encoding: gzip, deflate
       Accept: application/json, text/xml, application/xml, */*
-      User-Agent: r-curl/3.2 crul/0.6.1.9100 rOpenSci(rcrossref/0.8.5.9110) (mailto:<crossref_email>)
-      X-USER-AGENT: r-curl/3.2 crul/0.6.1.9100 rOpenSci(rcrossref/0.8.5.9110) (mailto:<crossref_email>)
+      User-Agent: r-curl/3.3 crul/0.7.4 rOpenSci(rcrossref/0.9.0.9110) (mailto:<crossref_email>)
+      X-USER-AGENT: r-curl/3.3 crul/0.7.4 rOpenSci(rcrossref/0.9.0.9110) (mailto:<crossref_email>)
   response:
     status:
       status_code: '200'
@@ -553,15 +543,15 @@ http_interactions:
       access-control-allow-headers: X-Requested-With
       content-length: '153'
       server: http-kit
-      date: Fri, 07 Dec 2018 22:38:15 GMT
+      date: Fri, 03 May 2019 22:21:53 GMT
       x-rate-limit-limit: '50'
       x-rate-limit-interval: 1s
       connection: close
     body:
-      encoding: UTF-8
-      string: '{"status":"ok","message-type":"work-agency","message-version":"1.0.0","message":{"DOI":"10.5284\/1011335","agency":{"id":"datacite","label":"DataCite"}}}'
-  recorded_at: 2018-12-07 22:38:17 GMT
-  recorded_with: vcr/0.2.0.9101, webmockr/0.2.9.9311
+      encoding: ASCII-8BIT
+      string: eyJzdGF0dXMiOiJvayIsIm1lc3NhZ2UtdHlwZSI6IndvcmstYWdlbmN5IiwibWVzc2FnZS12ZXJzaW9uIjoiMS4wLjAiLCJtZXNzYWdlIjp7IkRPSSI6IjEwLjUyODRcLzEwMTEzMzUiLCJhZ2VuY3kiOnsiaWQiOiJkYXRhY2l0ZSIsImxhYmVsIjoiRGF0YUNpdGUifX19
+  recorded_at: 2019-05-03 22:21:53 GMT
+  recorded_with: vcr/0.2.6, webmockr/0.3.4.9100
 - request:
     method: get
     uri: https://api.crossref.org/works/10.5284/1011335/agency
@@ -571,8 +561,8 @@ http_interactions:
     headers:
       Accept-Encoding: gzip, deflate
       Accept: application/json, text/xml, application/xml, */*
-      User-Agent: r-curl/3.2 crul/0.6.1.9100 rOpenSci(rcrossref/0.8.5.9110) (mailto:<crossref_email>)
-      X-USER-AGENT: r-curl/3.2 crul/0.6.1.9100 rOpenSci(rcrossref/0.8.5.9110) (mailto:<crossref_email>)
+      User-Agent: r-curl/3.3 crul/0.7.4 rOpenSci(rcrossref/0.9.0.9110) (mailto:<crossref_email>)
+      X-USER-AGENT: r-curl/3.3 crul/0.7.4 rOpenSci(rcrossref/0.9.0.9110) (mailto:<crossref_email>)
   response:
     status:
       status_code: '200'
@@ -586,15 +576,15 @@ http_interactions:
       access-control-allow-headers: X-Requested-With
       content-length: '153'
       server: http-kit
-      date: Fri, 07 Dec 2018 22:38:16 GMT
+      date: Fri, 03 May 2019 22:21:53 GMT
       x-rate-limit-limit: '50'
       x-rate-limit-interval: 1s
       connection: close
     body:
-      encoding: UTF-8
-      string: '{"status":"ok","message-type":"work-agency","message-version":"1.0.0","message":{"DOI":"10.5284\/1011335","agency":{"id":"datacite","label":"DataCite"}}}'
-  recorded_at: 2018-12-07 22:38:17 GMT
-  recorded_with: vcr/0.2.0.9101, webmockr/0.2.9.9311
+      encoding: ASCII-8BIT
+      string: eyJzdGF0dXMiOiJvayIsIm1lc3NhZ2UtdHlwZSI6IndvcmstYWdlbmN5IiwibWVzc2FnZS12ZXJzaW9uIjoiMS4wLjAiLCJtZXNzYWdlIjp7IkRPSSI6IjEwLjUyODRcLzEwMTEzMzUiLCJhZ2VuY3kiOnsiaWQiOiJkYXRhY2l0ZSIsImxhYmVsIjoiRGF0YUNpdGUifX19
+  recorded_at: 2019-05-03 22:21:53 GMT
+  recorded_with: vcr/0.2.6, webmockr/0.3.4.9100
 - request:
     method: get
     uri: https://citation.crosscite.org/format?doi=10.5284%2F1011335&lang=en-US&style=apa
@@ -603,8 +593,8 @@ http_interactions:
       string: ''
     headers:
       Accept-Encoding: gzip, deflate
-      User-Agent: r-curl/3.2 crul/0.6.1.9100 rOpenSci(rcrossref/0.8.5.9110) (mailto:<crossref_email>)
-      X-USER-AGENT: r-curl/3.2 crul/0.6.1.9100 rOpenSci(rcrossref/0.8.5.9110) (mailto:<crossref_email>)
+      User-Agent: r-curl/3.3 crul/0.7.4 rOpenSci(rcrossref/0.9.0.9110) (mailto:<crossref_email>)
+      X-USER-AGENT: r-curl/3.3 crul/0.7.4 rOpenSci(rcrossref/0.9.0.9110) (mailto:<crossref_email>)
       Accept: application/x-bibtex
   response:
     status:
@@ -617,7 +607,7 @@ http_interactions:
       connection: keep-alive
       content-encoding: gzip
       content-type: text/plain
-      date: Fri, 07 Dec 2018 22:38:16 GMT
+      date: Fri, 03 May 2019 22:21:54 GMT
       server: nginx/1.14.0 + Phusion Passenger 5.3.7
       status:
       - HTTP/1.1 200 OK
@@ -625,11 +615,10 @@ http_interactions:
       transfer-encoding: chunked
       x-powered-by: Phusion Passenger 5.3.7
     body:
-      encoding: UTF-8
-      string: |
-        AC Archaeology Ltd. (2011). Land at Hill Barton, Clyst St Mary, Devon (NGR SY 0002 9083) Hill Barton Industrial Park Strip Map and Sample Excavation Summary Report. Archaeology Data Service. https://doi.org/10.5284/1011335
-  recorded_at: 2018-12-07 22:38:17 GMT
-  recorded_with: vcr/0.2.0.9101, webmockr/0.2.9.9311
+      encoding: ASCII-8BIT
+      string: QUMgQXJjaGFlb2xvZ3kgTHRkLiAoMjAxMSkuIExhbmQgYXQgSGlsbCBCYXJ0b24sIENseXN0IFN0IE1hcnksIERldm9uIChOR1IgU1kgMDAwMiA5MDgzKSBIaWxsIEJhcnRvbiBJbmR1c3RyaWFsIFBhcmsgU3RyaXAgTWFwIGFuZCBTYW1wbGUgRXhjYXZhdGlvbiBTdW1tYXJ5IFJlcG9ydC4gQXJjaGFlb2xvZ3kgRGF0YSBTZXJ2aWNlLiBodHRwczovL2RvaS5vcmcvMTAuNTI4NC8xMDExMzM1Cg==
+  recorded_at: 2019-05-03 22:21:53 GMT
+  recorded_with: vcr/0.2.6, webmockr/0.3.4.9100
 - request:
     method: get
     uri: https://citation.crosscite.org/format?doi=10.5284%2F1011335&lang=en-US&style=apa
@@ -638,8 +627,8 @@ http_interactions:
       string: ''
     headers:
       Accept-Encoding: gzip, deflate
-      User-Agent: r-curl/3.2 crul/0.6.1.9100 rOpenSci(rcrossref/0.8.5.9110) (mailto:<crossref_email>)
-      X-USER-AGENT: r-curl/3.2 crul/0.6.1.9100 rOpenSci(rcrossref/0.8.5.9110) (mailto:<crossref_email>)
+      User-Agent: r-curl/3.3 crul/0.7.4 rOpenSci(rcrossref/0.9.0.9110) (mailto:<crossref_email>)
+      X-USER-AGENT: r-curl/3.3 crul/0.7.4 rOpenSci(rcrossref/0.9.0.9110) (mailto:<crossref_email>)
       Accept: application/x-bibtex
   response:
     status:
@@ -652,7 +641,7 @@ http_interactions:
       connection: keep-alive
       content-encoding: gzip
       content-type: text/plain
-      date: Fri, 07 Dec 2018 22:38:17 GMT
+      date: Fri, 03 May 2019 22:21:54 GMT
       server: nginx/1.14.0 + Phusion Passenger 5.3.7
       status:
       - HTTP/1.1 200 OK
@@ -660,8 +649,7 @@ http_interactions:
       transfer-encoding: chunked
       x-powered-by: Phusion Passenger 5.3.7
     body:
-      encoding: UTF-8
-      string: |
-        AC Archaeology Ltd. (2011). Land at Hill Barton, Clyst St Mary, Devon (NGR SY 0002 9083) Hill Barton Industrial Park Strip Map and Sample Excavation Summary Report. Archaeology Data Service. https://doi.org/10.5284/1011335
-  recorded_at: 2018-12-07 22:38:17 GMT
-  recorded_with: vcr/0.2.0.9101, webmockr/0.2.9.9311
+      encoding: ASCII-8BIT
+      string: QUMgQXJjaGFlb2xvZ3kgTHRkLiAoMjAxMSkuIExhbmQgYXQgSGlsbCBCYXJ0b24sIENseXN0IFN0IE1hcnksIERldm9uIChOR1IgU1kgMDAwMiA5MDgzKSBIaWxsIEJhcnRvbiBJbmR1c3RyaWFsIFBhcmsgU3RyaXAgTWFwIGFuZCBTYW1wbGUgRXhjYXZhdGlvbiBTdW1tYXJ5IFJlcG9ydC4gQXJjaGFlb2xvZ3kgRGF0YSBTZXJ2aWNlLiBodHRwczovL2RvaS5vcmcvMTAuNTI4NC8xMDExMzM1Cg==
+  recorded_at: 2019-05-03 22:21:53 GMT
+  recorded_with: vcr/0.2.6, webmockr/0.3.4.9100

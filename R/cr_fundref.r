@@ -64,6 +64,9 @@
 #'    limit = 100)
 #' cr_funders(c('100000001', '100000002'), works = TRUE, cursor = "*",
 #'    cursor_max = 300, limit = 100)
+#' ## with optional progress bar
+#' cr_funders('100000001', works = TRUE, cursor = "*", cursor_max = 500,
+#'    limit = 100, .progress = TRUE)
 #'
 #' # Low level function - does no parsing to data.frame, get json or a list
 #' cr_funders_(query = 'nsf')
@@ -136,7 +139,7 @@
     }
   } else {
     res <- fundref_GET(dois, args = args, works = works, cursor = cursor,
-                       cursor_max = cursor_max, ...)
+                       cursor_max = cursor_max, .progress = .progress, ...)
     if (!is.null(cursor)) {
       res
     } else {
@@ -187,7 +190,9 @@
   }
 }
 
-fundref_GET <- function(x, args, works, cursor = NULL, cursor_max = NULL, ...){
+fundref_GET <- function(x, args, works, cursor = NULL, cursor_max = NULL,
+  .progress, ...) {
+
   path <- if (!is.null(x)) {
     if (works) sprintf("funders/%s/works", x) else sprintf("funders/%s", x)
   } else {
@@ -196,7 +201,7 @@ fundref_GET <- function(x, args, works, cursor = NULL, cursor_max = NULL, ...){
 
   if (!is.null(cursor) && works) {
     rr <- Requestor$new(path = path, args = args, cursor_max = cursor_max,
-                        should_parse = TRUE, ...)
+                        should_parse = TRUE, .progress = .progress, ...)
     rr$GETcursor()
     rr$parse()
   } else {
@@ -205,7 +210,7 @@ fundref_GET <- function(x, args, works, cursor = NULL, cursor_max = NULL, ...){
 }
 
 fundref_GET_ <- function(x, args, works, cursor = NULL, cursor_max = NULL,
-                         parse, ...){
+                         parse, .progress, ...) {
   path <- if (!is.null(x)) {
     if (works) sprintf("funders/%s/works", x) else sprintf("funders/%s", x)
   } else {
@@ -214,7 +219,7 @@ fundref_GET_ <- function(x, args, works, cursor = NULL, cursor_max = NULL,
 
   if (!is.null(cursor) && works) {
     rr <- Requestor$new(path = path, args = args, cursor_max = cursor_max,
-                        should_parse = parse, ...)
+                        should_parse = parse, .progress = .progress, ...)
     rr$GETcursor()
     rr$cursor_out
   } else {

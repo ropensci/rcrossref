@@ -79,7 +79,9 @@ found than this value, you will get only those found.}
 \item{.progress}{Show a \code{plyr}-style progress bar? Options are "none", "text",
 "tk", "win", and "time".  See \code{\link[plyr]{create_progress_bar}} for details
 of each. Only used when passing in multiple ids (e.g., multiple DOIs, DOI prefixes,
-etc.)}
+etc.), or when using the \code{cursor} param. When using the \code{cursor} param,
+this argument only accept a boolean, either \code{TRUE} or \code{FALSE}; any
+non-boolean is coerced to \code{FALSE}.}
 
 \item{flq}{field queries. One or more field queries. Acceptable set of
 field query parameters are:
@@ -198,6 +200,9 @@ cr_works(filter=c(award.number='CBET-0756451',
 cr_works(query="NSF", cursor = "*", cursor_max = 300, limit = 100)
 cr_works(query="NSF", cursor = "*", cursor_max = 300, limit = 100,
    facet = TRUE)
+## with optional progress bar
+x <- cr_works(query="NSF", cursor = "*", cursor_max = 1200, limit = 200, 
+  .progress = TRUE)
 
 # Low level function - does no parsing to data.frame, get json or a list
 cr_works_(query = "NSF")

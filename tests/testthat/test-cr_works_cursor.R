@@ -24,3 +24,13 @@ test_that("cr_works cursor fails correctly", {
                  "cursor_max must be an integer")
   })
 })
+
+test_that("cr_works cursor works with progress bar", {
+  vcr::use_cassette("cr_works_with_cursor_and_progress_bar", {
+    expect_output(
+      cr_works(query="ecology", cursor = "*", cursor_max = 90,
+        limit = 30, .progress = TRUE),
+      "======="
+    )
+  })
+})

@@ -60,6 +60,9 @@
 #'    limit = 100)
 #' cr_prefixes(c('10.1016', '10.1371'), works = TRUE, cursor = "*",
 #'    cursor_max = 300, limit = 100)
+#' ## with optional progress bar
+#' cr_prefixes("10.1016", works = TRUE, cursor = "*", cursor_max = 500,
+#'    limit = 100, .progress = TRUE)
 #'
 #' # Low level function - does no parsing to data.frame, get json or a list
 #' cr_prefixes_("10.1016")
@@ -121,7 +124,7 @@
     }
   } else {
     tmp <- prefixes_GET(prefixes, args, works = works, cursor = cursor,
-                        cursor_max = cursor_max, ...)
+                        cursor_max = cursor_max, .progress = .progress, ...)
     if (!is.null(cursor)) {
       tmp
     } else {
@@ -159,11 +162,13 @@
   }
 }
 
-prefixes_GET <- function(x, args, works, cursor = NULL, cursor_max = NULL, ...){
+prefixes_GET <- function(x, args, works, cursor = NULL, cursor_max = NULL, 
+  .progress = "none", ...) {
+
   path <- if (works) sprintf("prefixes/%s/works", x) else sprintf("prefixes/%s", x)
   if (!is.null(cursor) && works) {
     rr <- Requestor$new(path = path, args = args, cursor_max = cursor_max,
-                        should_parse = TRUE, ...)
+                        should_parse = TRUE, .progress = .progress, ...)
     rr$GETcursor()
     rr$parse()
   } else {
@@ -171,11 +176,13 @@ prefixes_GET <- function(x, args, works, cursor = NULL, cursor_max = NULL, ...){
   }
 }
 
-prefixes_GET_ <- function(x, args, works, cursor = NULL, cursor_max = NULL, parse, ...){
+prefixes_GET_ <- function(x, args, works, cursor = NULL, cursor_max = NULL, parse,
+  .progress, ...) {
+
   path <- if (works) sprintf("prefixes/%s/works", x) else sprintf("prefixes/%s", x)
   if (!is.null(cursor) && works) {
     rr <- Requestor$new(path = path, args = args, cursor_max = cursor_max,
-                        should_parse = parse, ...)
+                        should_parse = parse, .progress = .progress, ...)
     rr$GETcursor()
     rr$cursor_out
   } else {
