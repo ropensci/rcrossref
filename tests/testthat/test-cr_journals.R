@@ -79,3 +79,13 @@ test_that("ISSNs that fail, and works=TRUE", {
       "Resource not found")
   })
 })
+
+test_that("cr_journals cursor works with progress bar", {
+  vcr::use_cassette("cr_journals_with_cursor_and_progress_bar", {
+    expect_output(
+      cr_journals(issn='1932-6203', works = TRUE, cursor = "*",
+        cursor_max = 90, limit = 30, .progress = TRUE),
+      "======="
+    )
+  })
+})

@@ -8,8 +8,68 @@ http_interactions:
     headers:
       Accept-Encoding: gzip, deflate
       Accept: application/json, text/xml, application/xml, */*
-      User-Agent: r-curl/3.2 crul/0.7.0.9100 rOpenSci(rcrossref/0.8.6.9100) (mailto:<crossref_email>)
-      X-USER-AGENT: r-curl/3.2 crul/0.7.0.9100 rOpenSci(rcrossref/0.8.6.9100) (mailto:<crossref_email>)
+      User-Agent: r-curl/3.3 crul/0.7.4 rOpenSci(rcrossref/0.9.0.9110) (mailto:<crossref_email>)
+      X-USER-AGENT: r-curl/3.3 crul/0.7.4 rOpenSci(rcrossref/0.9.0.9110) (mailto:<crossref_email>)
+  response:
+    status:
+      status_code: '200'
+      message: OK
+      explanation: Request fulfilled, document follows
+    headers:
+      status: HTTP/1.1 200 OK
+      server: Apache-Coyote/1.1
+      crossref-deployment-name: qs2-2
+      content-type: text/xml;charset=UTF-8
+      content-language: en-US
+      transfer-encoding: chunked
+      date: Fri, 03 May 2019 22:20:16 GMT
+      connection: close
+    body:
+      encoding: ASCII-8BIT
+      string: PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPGNyb3NzcmVmX3Jlc3VsdCB4bWxucz0iaHR0cDovL3d3dy5jcm9zc3JlZi5vcmcvcXJzY2hlbWEvMi4wIiB2ZXJzaW9uPSIyLjAiIHhtbG5zOnhzaT0iaHR0cDovL3d3dy53My5vcmcvMjAwMS9YTUxTY2hlbWEtaW5zdGFuY2UiIHhzaTpzY2hlbWFMb2NhdGlvbj0iaHR0cDovL3d3dy5jcm9zc3JlZi5vcmcvcXJzY2hlbWEvMi4wIGh0dHBzOi8vd3d3LmNyb3NzcmVmLm9yZy9zY2hlbWEvY3Jvc3NyZWZfcXVlcnlfb3V0cHV0Mi4wLnhzZCI+PHF1ZXJ5X3Jlc3VsdD48aGVhZD48ZG9pX2JhdGNoX2lkPm5vbmU8L2RvaV9iYXRjaF9pZD48L2hlYWQ+PGJvZHk+PHF1ZXJ5IHN0YXR1cz0icmVzb2x2ZWQiIGZsX2NvdW50PSIyNSI+PGRvaSB0eXBlPSJqb3VybmFsX2FydGljbGUiPjEwLjEzNzEvam91cm5hbC5wb25lLjAwNDI3OTM8L2RvaT48aXNzbiB0eXBlPSJlbGVjdHJvbmljIj4xOTMyLTYyMDM8L2lzc24+PGpvdXJuYWxfdGl0bGU+UExvUyBPTkU8L2pvdXJuYWxfdGl0bGU+PGNvbnRyaWJ1dG9ycz48Y29udHJpYnV0b3Igc2VxdWVuY2U9ImZpcnN0IiBjb250cmlidXRvcl9yb2xlPSJlZGl0b3IiPjxnaXZlbl9uYW1lPk5hbmN5PC9naXZlbl9uYW1lPjxzdXJuYW1lPk1vY2s8L3N1cm5hbWU+PC9jb250cmlidXRvcj48Y29udHJpYnV0b3Igc2VxdWVuY2U9ImZpcnN0IiBjb250cmlidXRvcl9yb2xlPSJhdXRob3IiPjxnaXZlbl9uYW1lPlJvY8OtbzwvZ2l2ZW5fbmFtZT48c3VybmFtZT5DYWx2bzwvc3VybmFtZT48L2NvbnRyaWJ1dG9yPjxjb250cmlidXRvciBzZXF1ZW5jZT0iYWRkaXRpb25hbCIgY29udHJpYnV0b3Jfcm9sZT0iYXV0aG9yIj48Z2l2ZW5fbmFtZT5ZdWh1aTwvZ2l2ZW5fbmFtZT48c3VybmFtZT5aaGVuZzwvc3VybmFtZT48L2NvbnRyaWJ1dG9yPjxjb250cmlidXRvciBzZXF1ZW5jZT0iYWRkaXRpb25hbCIgY29udHJpYnV0b3Jfcm9sZT0iYXV0aG9yIj48Z2l2ZW5fbmFtZT5TYW50b3NoPC9naXZlbl9uYW1lPjxzdXJuYW1lPkt1bWFyPC9zdXJuYW1lPjwvY29udHJpYnV0b3I+PGNvbnRyaWJ1dG9yIHNlcXVlbmNlPSJhZGRpdGlvbmFsIiBjb250cmlidXRvcl9yb2xlPSJhdXRob3IiPjxnaXZlbl9uYW1lPkFuYWxpYTwvZ2l2ZW5fbmFtZT48c3VybmFtZT5PbGdpYXRpPC9zdXJuYW1lPjwvY29udHJpYnV0b3I+PGNvbnRyaWJ1dG9yIHNlcXVlbmNlPSJhZGRpdGlvbmFsIiBjb250cmlidXRvcl9yb2xlPSJhdXRob3IiPjxnaXZlbl9uYW1lPkxpc2E8L2dpdmVuX25hbWU+PHN1cm5hbWU+QmVya21hbjwvc3VybmFtZT48L2NvbnRyaWJ1dG9yPjwvY29udHJpYnV0b3JzPjx2b2x1bWU+Nzwvdm9sdW1lPjxpc3N1ZT44PC9pc3N1ZT48Zmlyc3RfcGFnZT5lNDI3OTM8L2ZpcnN0X3BhZ2U+PHllYXIgbWVkaWFfdHlwZT0ib25saW5lIj4yMDEyPC95ZWFyPjxwdWJsaWNhdGlvbl90eXBlPmZ1bGxfdGV4dDwvcHVibGljYXRpb25fdHlwZT48YXJ0aWNsZV90aXRsZT5XZWxsLUJlaW5nIGFuZCBTb2NpYWwgQ2FwaXRhbCBvbiBQbGFuZXQgRWFydGg6IENyb3NzLU5hdGlvbmFsIEV2aWRlbmNlIGZyb20gMTQyIENvdW50cmllczwvYXJ0aWNsZV90aXRsZT48L3F1ZXJ5PjwvYm9keT48L3F1ZXJ5X3Jlc3VsdD48L2Nyb3NzcmVmX3Jlc3VsdD4=
+  recorded_at: 2019-05-03 22:20:17 GMT
+  recorded_with: vcr/0.2.6, webmockr/0.3.4.9100
+- request:
+    method: get
+    uri: http://www.crossref.org/openurl/?id=doi%3A10.1371%2Fjournal.pone.0042793&pid=cboettig%40ropensci.org&noredirect=TRUE
+    body:
+      encoding: ''
+      string: ''
+    headers:
+      Accept-Encoding: gzip, deflate
+      Accept: application/json, text/xml, application/xml, */*
+      User-Agent: r-curl/3.3 crul/0.7.4 rOpenSci(rcrossref/0.9.0.9110) (mailto:<crossref_email>)
+      X-USER-AGENT: r-curl/3.3 crul/0.7.4 rOpenSci(rcrossref/0.9.0.9110) (mailto:<crossref_email>)
+  response:
+    status:
+      status_code: '200'
+      message: OK
+      explanation: Request fulfilled, document follows
+    headers:
+      status: HTTP/1.1 200 OK
+      server: Apache-Coyote/1.1
+      crossref-deployment-name: qs2-2
+      content-type: text/xml;charset=UTF-8
+      content-language: en-US
+      transfer-encoding: chunked
+      date: Fri, 03 May 2019 22:20:16 GMT
+      connection: close
+    body:
+      encoding: ASCII-8BIT
+      string: PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPGNyb3NzcmVmX3Jlc3VsdCB4bWxucz0iaHR0cDovL3d3dy5jcm9zc3JlZi5vcmcvcXJzY2hlbWEvMi4wIiB2ZXJzaW9uPSIyLjAiIHhtbG5zOnhzaT0iaHR0cDovL3d3dy53My5vcmcvMjAwMS9YTUxTY2hlbWEtaW5zdGFuY2UiIHhzaTpzY2hlbWFMb2NhdGlvbj0iaHR0cDovL3d3dy5jcm9zc3JlZi5vcmcvcXJzY2hlbWEvMi4wIGh0dHBzOi8vd3d3LmNyb3NzcmVmLm9yZy9zY2hlbWEvY3Jvc3NyZWZfcXVlcnlfb3V0cHV0Mi4wLnhzZCI+PHF1ZXJ5X3Jlc3VsdD48aGVhZD48ZG9pX2JhdGNoX2lkPm5vbmU8L2RvaV9iYXRjaF9pZD48L2hlYWQ+PGJvZHk+PHF1ZXJ5IHN0YXR1cz0icmVzb2x2ZWQiIGZsX2NvdW50PSIyNSI+PGRvaSB0eXBlPSJqb3VybmFsX2FydGljbGUiPjEwLjEzNzEvam91cm5hbC5wb25lLjAwNDI3OTM8L2RvaT48aXNzbiB0eXBlPSJlbGVjdHJvbmljIj4xOTMyLTYyMDM8L2lzc24+PGpvdXJuYWxfdGl0bGU+UExvUyBPTkU8L2pvdXJuYWxfdGl0bGU+PGNvbnRyaWJ1dG9ycz48Y29udHJpYnV0b3Igc2VxdWVuY2U9ImZpcnN0IiBjb250cmlidXRvcl9yb2xlPSJlZGl0b3IiPjxnaXZlbl9uYW1lPk5hbmN5PC9naXZlbl9uYW1lPjxzdXJuYW1lPk1vY2s8L3N1cm5hbWU+PC9jb250cmlidXRvcj48Y29udHJpYnV0b3Igc2VxdWVuY2U9ImZpcnN0IiBjb250cmlidXRvcl9yb2xlPSJhdXRob3IiPjxnaXZlbl9uYW1lPlJvY8OtbzwvZ2l2ZW5fbmFtZT48c3VybmFtZT5DYWx2bzwvc3VybmFtZT48L2NvbnRyaWJ1dG9yPjxjb250cmlidXRvciBzZXF1ZW5jZT0iYWRkaXRpb25hbCIgY29udHJpYnV0b3Jfcm9sZT0iYXV0aG9yIj48Z2l2ZW5fbmFtZT5ZdWh1aTwvZ2l2ZW5fbmFtZT48c3VybmFtZT5aaGVuZzwvc3VybmFtZT48L2NvbnRyaWJ1dG9yPjxjb250cmlidXRvciBzZXF1ZW5jZT0iYWRkaXRpb25hbCIgY29udHJpYnV0b3Jfcm9sZT0iYXV0aG9yIj48Z2l2ZW5fbmFtZT5TYW50b3NoPC9naXZlbl9uYW1lPjxzdXJuYW1lPkt1bWFyPC9zdXJuYW1lPjwvY29udHJpYnV0b3I+PGNvbnRyaWJ1dG9yIHNlcXVlbmNlPSJhZGRpdGlvbmFsIiBjb250cmlidXRvcl9yb2xlPSJhdXRob3IiPjxnaXZlbl9uYW1lPkFuYWxpYTwvZ2l2ZW5fbmFtZT48c3VybmFtZT5PbGdpYXRpPC9zdXJuYW1lPjwvY29udHJpYnV0b3I+PGNvbnRyaWJ1dG9yIHNlcXVlbmNlPSJhZGRpdGlvbmFsIiBjb250cmlidXRvcl9yb2xlPSJhdXRob3IiPjxnaXZlbl9uYW1lPkxpc2E8L2dpdmVuX25hbWU+PHN1cm5hbWU+QmVya21hbjwvc3VybmFtZT48L2NvbnRyaWJ1dG9yPjwvY29udHJpYnV0b3JzPjx2b2x1bWU+Nzwvdm9sdW1lPjxpc3N1ZT44PC9pc3N1ZT48Zmlyc3RfcGFnZT5lNDI3OTM8L2ZpcnN0X3BhZ2U+PHllYXIgbWVkaWFfdHlwZT0ib25saW5lIj4yMDEyPC95ZWFyPjxwdWJsaWNhdGlvbl90eXBlPmZ1bGxfdGV4dDwvcHVibGljYXRpb25fdHlwZT48YXJ0aWNsZV90aXRsZT5XZWxsLUJlaW5nIGFuZCBTb2NpYWwgQ2FwaXRhbCBvbiBQbGFuZXQgRWFydGg6IENyb3NzLU5hdGlvbmFsIEV2aWRlbmNlIGZyb20gMTQyIENvdW50cmllczwvYXJ0aWNsZV90aXRsZT48L3F1ZXJ5PjwvYm9keT48L3F1ZXJ5X3Jlc3VsdD48L2Nyb3NzcmVmX3Jlc3VsdD4=
+  recorded_at: 2019-05-03 22:20:17 GMT
+  recorded_with: vcr/0.2.6, webmockr/0.3.4.9100
+- request:
+    method: get
+    uri: http://www.crossref.org/openurl/?id=doi%3A10.1371%2Fjournal.pone.0042793&pid=cboettig%40ropensci.org&noredirect=TRUE
+    body:
+      encoding: ''
+      string: ''
+    headers:
+      Accept-Encoding: gzip, deflate
+      Accept: application/json, text/xml, application/xml, */*
+      User-Agent: r-curl/3.3 crul/0.7.4 rOpenSci(rcrossref/0.9.0.9110) (mailto:<crossref_email>)
+      X-USER-AGENT: r-curl/3.3 crul/0.7.4 rOpenSci(rcrossref/0.9.0.9110) (mailto:<crossref_email>)
   response:
     status:
       status_code: '200'
@@ -22,79 +82,13 @@ http_interactions:
       content-type: text/xml;charset=UTF-8
       content-language: en-US
       transfer-encoding: chunked
-      date: Wed, 09 Jan 2019 19:33:56 GMT
+      date: Fri, 03 May 2019 22:20:16 GMT
       connection: close
     body:
-      encoding: UTF-8
-      string: |-
-        <?xml version="1.0" encoding="UTF-8"?>
-        <crossref_result xmlns="http://www.crossref.org/qrschema/2.0" version="2.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.crossref.org/qrschema/2.0 https://www.crossref.org/schema/crossref_query_output2.0.xsd"><query_result><head><doi_batch_id>none</doi_batch_id></head><body><query status="resolved" fl_count="25"><doi type="journal_article">10.1371/journal.pone.0042793</doi><issn type="electronic">1932-6203</issn><journal_title>PLoS ONE</journal_title><contributors><contributor sequence="first" contributor_role="editor"><given_name>Nancy</given_name><surname>Mock</surname></contributor><contributor sequence="first" contributor_role="author"><given_name>Rocío</given_name><surname>Calvo</surname></contributor><contributor sequence="additional" contributor_role="author"><given_name>Yuhui</given_name><surname>Zheng</surname></contributor><contributor sequence="additional" contributor_role="author"><given_name>Santosh</given_name><surname>Kumar</surname></contributor><contributor sequence="additional" contributor_role="author"><given_name>Analia</given_name><surname>Olgiati</surname></contributor><contributor sequence="additional" contributor_role="author"><given_name>Lisa</given_name><surname>Berkman</surname></contributor></contributors><volume>7</volume><issue>8</issue><first_page>e42793</first_page><year media_type="online">2012</year><publication_type>full_text</publication_type><article_title>Well-Being and Social Capital on Planet Earth: Cross-National Evidence from 142 Countries</article_title></query></body></query_result></crossref_result>
-  recorded_at: 2019-01-09 19:33:58 GMT
-  recorded_with: vcr/0.2.0, webmockr/0.3.0
-- request:
-    method: get
-    uri: http://www.crossref.org/openurl/?id=doi%3A10.1371%2Fjournal.pone.0042793&pid=cboettig%40ropensci.org&noredirect=TRUE
-    body:
-      encoding: ''
-      string: ''
-    headers:
-      Accept-Encoding: gzip, deflate
-      Accept: application/json, text/xml, application/xml, */*
-      User-Agent: r-curl/3.2 crul/0.7.0.9100 rOpenSci(rcrossref/0.8.6.9100) (mailto:<crossref_email>)
-      X-USER-AGENT: r-curl/3.2 crul/0.7.0.9100 rOpenSci(rcrossref/0.8.6.9100) (mailto:<crossref_email>)
-  response:
-    status:
-      status_code: '200'
-      message: OK
-      explanation: Request fulfilled, document follows
-    headers:
-      status: HTTP/1.1 200 OK
-      server: Apache-Coyote/1.1
-      crossref-deployment-name: cr6-1
-      content-type: text/xml;charset=UTF-8
-      content-language: en-US
-      transfer-encoding: chunked
-      date: Wed, 09 Jan 2019 19:33:57 GMT
-      connection: close
-    body:
-      encoding: UTF-8
-      string: |-
-        <?xml version="1.0" encoding="UTF-8"?>
-        <crossref_result xmlns="http://www.crossref.org/qrschema/2.0" version="2.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.crossref.org/qrschema/2.0 https://www.crossref.org/schema/crossref_query_output2.0.xsd"><query_result><head><doi_batch_id>none</doi_batch_id></head><body><query status="resolved" fl_count="25"><doi type="journal_article">10.1371/journal.pone.0042793</doi><issn type="electronic">1932-6203</issn><journal_title>PLoS ONE</journal_title><contributors><contributor sequence="first" contributor_role="editor"><given_name>Nancy</given_name><surname>Mock</surname></contributor><contributor sequence="first" contributor_role="author"><given_name>Rocío</given_name><surname>Calvo</surname></contributor><contributor sequence="additional" contributor_role="author"><given_name>Yuhui</given_name><surname>Zheng</surname></contributor><contributor sequence="additional" contributor_role="author"><given_name>Santosh</given_name><surname>Kumar</surname></contributor><contributor sequence="additional" contributor_role="author"><given_name>Analia</given_name><surname>Olgiati</surname></contributor><contributor sequence="additional" contributor_role="author"><given_name>Lisa</given_name><surname>Berkman</surname></contributor></contributors><volume>7</volume><issue>8</issue><first_page>e42793</first_page><year media_type="online">2012</year><publication_type>full_text</publication_type><article_title>Well-Being and Social Capital on Planet Earth: Cross-National Evidence from 142 Countries</article_title></query></body></query_result></crossref_result>
-  recorded_at: 2019-01-09 19:33:58 GMT
-  recorded_with: vcr/0.2.0, webmockr/0.3.0
-- request:
-    method: get
-    uri: http://www.crossref.org/openurl/?id=doi%3A10.1371%2Fjournal.pone.0042793&pid=cboettig%40ropensci.org&noredirect=TRUE
-    body:
-      encoding: ''
-      string: ''
-    headers:
-      Accept-Encoding: gzip, deflate
-      Accept: application/json, text/xml, application/xml, */*
-      User-Agent: r-curl/3.2 crul/0.7.0.9100 rOpenSci(rcrossref/0.8.6.9100) (mailto:<crossref_email>)
-      X-USER-AGENT: r-curl/3.2 crul/0.7.0.9100 rOpenSci(rcrossref/0.8.6.9100) (mailto:<crossref_email>)
-  response:
-    status:
-      status_code: '200'
-      message: OK
-      explanation: Request fulfilled, document follows
-    headers:
-      status: HTTP/1.1 200 OK
-      server: Apache-Coyote/1.1
-      crossref-deployment-name: qs5-1
-      content-type: text/xml;charset=UTF-8
-      content-language: en-US
-      transfer-encoding: chunked
-      date: Wed, 09 Jan 2019 19:33:57 GMT
-      connection: close
-    body:
-      encoding: UTF-8
-      string: |-
-        <?xml version="1.0" encoding="UTF-8"?>
-        <crossref_result xmlns="http://www.crossref.org/qrschema/2.0" version="2.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.crossref.org/qrschema/2.0 https://www.crossref.org/schema/crossref_query_output2.0.xsd"><query_result><head><doi_batch_id>none</doi_batch_id></head><body><query status="resolved" fl_count="25"><doi type="journal_article">10.1371/journal.pone.0042793</doi><issn type="electronic">1932-6203</issn><journal_title>PLoS ONE</journal_title><contributors><contributor sequence="first" contributor_role="editor"><given_name>Nancy</given_name><surname>Mock</surname></contributor><contributor sequence="first" contributor_role="author"><given_name>Rocío</given_name><surname>Calvo</surname></contributor><contributor sequence="additional" contributor_role="author"><given_name>Yuhui</given_name><surname>Zheng</surname></contributor><contributor sequence="additional" contributor_role="author"><given_name>Santosh</given_name><surname>Kumar</surname></contributor><contributor sequence="additional" contributor_role="author"><given_name>Analia</given_name><surname>Olgiati</surname></contributor><contributor sequence="additional" contributor_role="author"><given_name>Lisa</given_name><surname>Berkman</surname></contributor></contributors><volume>7</volume><issue>8</issue><first_page>e42793</first_page><year media_type="online">2012</year><publication_type>full_text</publication_type><article_title>Well-Being and Social Capital on Planet Earth: Cross-National Evidence from 142 Countries</article_title></query></body></query_result></crossref_result>
-  recorded_at: 2019-01-09 19:33:58 GMT
-  recorded_with: vcr/0.2.0, webmockr/0.3.0
+      encoding: ASCII-8BIT
+      string: PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPGNyb3NzcmVmX3Jlc3VsdCB4bWxucz0iaHR0cDovL3d3dy5jcm9zc3JlZi5vcmcvcXJzY2hlbWEvMi4wIiB2ZXJzaW9uPSIyLjAiIHhtbG5zOnhzaT0iaHR0cDovL3d3dy53My5vcmcvMjAwMS9YTUxTY2hlbWEtaW5zdGFuY2UiIHhzaTpzY2hlbWFMb2NhdGlvbj0iaHR0cDovL3d3dy5jcm9zc3JlZi5vcmcvcXJzY2hlbWEvMi4wIGh0dHBzOi8vd3d3LmNyb3NzcmVmLm9yZy9zY2hlbWEvY3Jvc3NyZWZfcXVlcnlfb3V0cHV0Mi4wLnhzZCI+PHF1ZXJ5X3Jlc3VsdD48aGVhZD48ZG9pX2JhdGNoX2lkPm5vbmU8L2RvaV9iYXRjaF9pZD48L2hlYWQ+PGJvZHk+PHF1ZXJ5IHN0YXR1cz0icmVzb2x2ZWQiIGZsX2NvdW50PSIyNSI+PGRvaSB0eXBlPSJqb3VybmFsX2FydGljbGUiPjEwLjEzNzEvam91cm5hbC5wb25lLjAwNDI3OTM8L2RvaT48aXNzbiB0eXBlPSJlbGVjdHJvbmljIj4xOTMyLTYyMDM8L2lzc24+PGpvdXJuYWxfdGl0bGU+UExvUyBPTkU8L2pvdXJuYWxfdGl0bGU+PGNvbnRyaWJ1dG9ycz48Y29udHJpYnV0b3Igc2VxdWVuY2U9ImZpcnN0IiBjb250cmlidXRvcl9yb2xlPSJlZGl0b3IiPjxnaXZlbl9uYW1lPk5hbmN5PC9naXZlbl9uYW1lPjxzdXJuYW1lPk1vY2s8L3N1cm5hbWU+PC9jb250cmlidXRvcj48Y29udHJpYnV0b3Igc2VxdWVuY2U9ImZpcnN0IiBjb250cmlidXRvcl9yb2xlPSJhdXRob3IiPjxnaXZlbl9uYW1lPlJvY8OtbzwvZ2l2ZW5fbmFtZT48c3VybmFtZT5DYWx2bzwvc3VybmFtZT48L2NvbnRyaWJ1dG9yPjxjb250cmlidXRvciBzZXF1ZW5jZT0iYWRkaXRpb25hbCIgY29udHJpYnV0b3Jfcm9sZT0iYXV0aG9yIj48Z2l2ZW5fbmFtZT5ZdWh1aTwvZ2l2ZW5fbmFtZT48c3VybmFtZT5aaGVuZzwvc3VybmFtZT48L2NvbnRyaWJ1dG9yPjxjb250cmlidXRvciBzZXF1ZW5jZT0iYWRkaXRpb25hbCIgY29udHJpYnV0b3Jfcm9sZT0iYXV0aG9yIj48Z2l2ZW5fbmFtZT5TYW50b3NoPC9naXZlbl9uYW1lPjxzdXJuYW1lPkt1bWFyPC9zdXJuYW1lPjwvY29udHJpYnV0b3I+PGNvbnRyaWJ1dG9yIHNlcXVlbmNlPSJhZGRpdGlvbmFsIiBjb250cmlidXRvcl9yb2xlPSJhdXRob3IiPjxnaXZlbl9uYW1lPkFuYWxpYTwvZ2l2ZW5fbmFtZT48c3VybmFtZT5PbGdpYXRpPC9zdXJuYW1lPjwvY29udHJpYnV0b3I+PGNvbnRyaWJ1dG9yIHNlcXVlbmNlPSJhZGRpdGlvbmFsIiBjb250cmlidXRvcl9yb2xlPSJhdXRob3IiPjxnaXZlbl9uYW1lPkxpc2E8L2dpdmVuX25hbWU+PHN1cm5hbWU+QmVya21hbjwvc3VybmFtZT48L2NvbnRyaWJ1dG9yPjwvY29udHJpYnV0b3JzPjx2b2x1bWU+Nzwvdm9sdW1lPjxpc3N1ZT44PC9pc3N1ZT48Zmlyc3RfcGFnZT5lNDI3OTM8L2ZpcnN0X3BhZ2U+PHllYXIgbWVkaWFfdHlwZT0ib25saW5lIj4yMDEyPC95ZWFyPjxwdWJsaWNhdGlvbl90eXBlPmZ1bGxfdGV4dDwvcHVibGljYXRpb25fdHlwZT48YXJ0aWNsZV90aXRsZT5XZWxsLUJlaW5nIGFuZCBTb2NpYWwgQ2FwaXRhbCBvbiBQbGFuZXQgRWFydGg6IENyb3NzLU5hdGlvbmFsIEV2aWRlbmNlIGZyb20gMTQyIENvdW50cmllczwvYXJ0aWNsZV90aXRsZT48L3F1ZXJ5PjwvYm9keT48L3F1ZXJ5X3Jlc3VsdD48L2Nyb3NzcmVmX3Jlc3VsdD4=
+  recorded_at: 2019-05-03 22:20:17 GMT
+  recorded_with: vcr/0.2.6, webmockr/0.3.4.9100
 - request:
     method: get
     uri: http://www.crossref.org/openurl/?id=doi%3A10.1016%2Fj.fbr.2012.01.001&pid=cboettig%40ropensci.org&noredirect=TRUE
@@ -104,8 +98,8 @@ http_interactions:
     headers:
       Accept-Encoding: gzip, deflate
       Accept: application/json, text/xml, application/xml, */*
-      User-Agent: r-curl/3.2 crul/0.7.0.9100 rOpenSci(rcrossref/0.8.6.9100) (mailto:<crossref_email>)
-      X-USER-AGENT: r-curl/3.2 crul/0.7.0.9100 rOpenSci(rcrossref/0.8.6.9100) (mailto:<crossref_email>)
+      User-Agent: r-curl/3.3 crul/0.7.4 rOpenSci(rcrossref/0.9.0.9110) (mailto:<crossref_email>)
+      X-USER-AGENT: r-curl/3.3 crul/0.7.4 rOpenSci(rcrossref/0.9.0.9110) (mailto:<crossref_email>)
   response:
     status:
       status_code: '200'
@@ -114,16 +108,14 @@ http_interactions:
     headers:
       status: HTTP/1.1 200 OK
       server: Apache-Coyote/1.1
-      crossref-deployment-name: cr6-1
+      crossref-deployment-name: qs5-1
       content-type: text/xml;charset=UTF-8
       content-language: en-US
       transfer-encoding: chunked
-      date: Wed, 09 Jan 2019 19:33:57 GMT
+      date: Fri, 03 May 2019 22:20:17 GMT
       connection: close
     body:
-      encoding: UTF-8
-      string: |-
-        <?xml version="1.0" encoding="UTF-8"?>
-        <crossref_result xmlns="http://www.crossref.org/qrschema/2.0" version="2.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.crossref.org/qrschema/2.0 https://www.crossref.org/schema/crossref_query_output2.0.xsd"><query_result><head><doi_batch_id>none</doi_batch_id></head><body><query status="resolved" fl_count="114"><doi type="journal_article">10.1016/j.fbr.2012.01.001</doi><issn type="print">17494613</issn><journal_title>Fungal Biology Reviews</journal_title><contributors><contributor sequence="first" contributor_role="author"><given_name>Suzanne W.</given_name><surname>Simard</surname></contributor><contributor sequence="additional" contributor_role="author"><given_name>Kevin J.</given_name><surname>Beiler</surname></contributor><contributor sequence="additional" contributor_role="author"><given_name>Marcus A.</given_name><surname>Bingham</surname></contributor><contributor sequence="additional" contributor_role="author"><given_name>Julie R.</given_name><surname>Deslippe</surname></contributor><contributor sequence="additional" contributor_role="author"><given_name>Leanne J.</given_name><surname>Philip</surname></contributor><contributor sequence="additional" contributor_role="author"><given_name>François P.</given_name><surname>Teste</surname></contributor></contributors><volume>26</volume><issue>1</issue><first_page>39</first_page><last_page>60</last_page><year media_type="print">2012</year><publication_type>full_text</publication_type><article_title>Mycorrhizal networks: Mechanisms, ecology and modelling</article_title></query></body></query_result></crossref_result>
-  recorded_at: 2019-01-09 19:33:58 GMT
-  recorded_with: vcr/0.2.0, webmockr/0.3.0
+      encoding: ASCII-8BIT
+      string: PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPGNyb3NzcmVmX3Jlc3VsdCB4bWxucz0iaHR0cDovL3d3dy5jcm9zc3JlZi5vcmcvcXJzY2hlbWEvMi4wIiB2ZXJzaW9uPSIyLjAiIHhtbG5zOnhzaT0iaHR0cDovL3d3dy53My5vcmcvMjAwMS9YTUxTY2hlbWEtaW5zdGFuY2UiIHhzaTpzY2hlbWFMb2NhdGlvbj0iaHR0cDovL3d3dy5jcm9zc3JlZi5vcmcvcXJzY2hlbWEvMi4wIGh0dHBzOi8vd3d3LmNyb3NzcmVmLm9yZy9zY2hlbWEvY3Jvc3NyZWZfcXVlcnlfb3V0cHV0Mi4wLnhzZCI+PHF1ZXJ5X3Jlc3VsdD48aGVhZD48ZG9pX2JhdGNoX2lkPm5vbmU8L2RvaV9iYXRjaF9pZD48L2hlYWQ+PGJvZHk+PHF1ZXJ5IHN0YXR1cz0icmVzb2x2ZWQiIGZsX2NvdW50PSIxMjYiPjxkb2kgdHlwZT0iam91cm5hbF9hcnRpY2xlIj4xMC4xMDE2L2ouZmJyLjIwMTIuMDEuMDAxPC9kb2k+PGlzc24gdHlwZT0icHJpbnQiPjE3NDk0NjEzPC9pc3NuPjxqb3VybmFsX3RpdGxlPkZ1bmdhbCBCaW9sb2d5IFJldmlld3M8L2pvdXJuYWxfdGl0bGU+PGNvbnRyaWJ1dG9ycz48Y29udHJpYnV0b3Igc2VxdWVuY2U9ImZpcnN0IiBjb250cmlidXRvcl9yb2xlPSJhdXRob3IiPjxnaXZlbl9uYW1lPlN1emFubmUgVy48L2dpdmVuX25hbWU+PHN1cm5hbWU+U2ltYXJkPC9zdXJuYW1lPjwvY29udHJpYnV0b3I+PGNvbnRyaWJ1dG9yIHNlcXVlbmNlPSJhZGRpdGlvbmFsIiBjb250cmlidXRvcl9yb2xlPSJhdXRob3IiPjxnaXZlbl9uYW1lPktldmluIEouPC9naXZlbl9uYW1lPjxzdXJuYW1lPkJlaWxlcjwvc3VybmFtZT48L2NvbnRyaWJ1dG9yPjxjb250cmlidXRvciBzZXF1ZW5jZT0iYWRkaXRpb25hbCIgY29udHJpYnV0b3Jfcm9sZT0iYXV0aG9yIj48Z2l2ZW5fbmFtZT5NYXJjdXMgQS48L2dpdmVuX25hbWU+PHN1cm5hbWU+QmluZ2hhbTwvc3VybmFtZT48L2NvbnRyaWJ1dG9yPjxjb250cmlidXRvciBzZXF1ZW5jZT0iYWRkaXRpb25hbCIgY29udHJpYnV0b3Jfcm9sZT0iYXV0aG9yIj48Z2l2ZW5fbmFtZT5KdWxpZSBSLjwvZ2l2ZW5fbmFtZT48c3VybmFtZT5EZXNsaXBwZTwvc3VybmFtZT48L2NvbnRyaWJ1dG9yPjxjb250cmlidXRvciBzZXF1ZW5jZT0iYWRkaXRpb25hbCIgY29udHJpYnV0b3Jfcm9sZT0iYXV0aG9yIj48Z2l2ZW5fbmFtZT5MZWFubmUgSi48L2dpdmVuX25hbWU+PHN1cm5hbWU+UGhpbGlwPC9zdXJuYW1lPjwvY29udHJpYnV0b3I+PGNvbnRyaWJ1dG9yIHNlcXVlbmNlPSJhZGRpdGlvbmFsIiBjb250cmlidXRvcl9yb2xlPSJhdXRob3IiPjxnaXZlbl9uYW1lPkZyYW7Dp29pcyBQLjwvZ2l2ZW5fbmFtZT48c3VybmFtZT5UZXN0ZTwvc3VybmFtZT48L2NvbnRyaWJ1dG9yPjwvY29udHJpYnV0b3JzPjx2b2x1bWU+MjY8L3ZvbHVtZT48aXNzdWU+MTwvaXNzdWU+PGZpcnN0X3BhZ2U+Mzk8L2ZpcnN0X3BhZ2U+PGxhc3RfcGFnZT42MDwvbGFzdF9wYWdlPjx5ZWFyIG1lZGlhX3R5cGU9InByaW50Ij4yMDEyPC95ZWFyPjxwdWJsaWNhdGlvbl90eXBlPmZ1bGxfdGV4dDwvcHVibGljYXRpb25fdHlwZT48YXJ0aWNsZV90aXRsZT5NeWNvcnJoaXphbCBuZXR3b3JrczogTWVjaGFuaXNtcywgZWNvbG9neSBhbmQgbW9kZWxsaW5nPC9hcnRpY2xlX3RpdGxlPjwvcXVlcnk+PC9ib2R5PjwvcXVlcnlfcmVzdWx0PjwvY3Jvc3NyZWZfcmVzdWx0Pg==
+  recorded_at: 2019-05-03 22:20:17 GMT
+  recorded_with: vcr/0.2.6, webmockr/0.3.4.9100

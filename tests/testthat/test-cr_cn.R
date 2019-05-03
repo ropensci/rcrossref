@@ -83,5 +83,5 @@ test_that("cr_cn works with different URLs", {
       cr_cn("10.5284/1011335", url = "https://citation.crosscite.org/format"),
       "Archaeology"
     )
-  })
+  }, preserve_exact_body_bytes = TRUE)
 })

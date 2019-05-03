@@ -71,3 +71,13 @@ vcr::use_cassette("cr_funders_email_null_works", {
     expect_is(cr_funders(dois=c('10.13039/100000001')), "list")
   })
 })
+
+test_that("cr_funders cursor works with progress bar", {
+  vcr::use_cassette("cr_funders_with_cursor_and_progress_bar", {
+    expect_output(
+      cr_funders('100000001', works = TRUE, cursor = "*",
+        cursor_max = 90, limit = 30, .progress = TRUE),
+      "======="
+    )
+  })
+})

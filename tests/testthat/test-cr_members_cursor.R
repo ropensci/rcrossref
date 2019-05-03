@@ -25,3 +25,13 @@ test_that("cr_members cursor fails correctly", {
                  "cursor_max must be an integer")
   })
 })
+
+test_that("cr_members cursor works with progress bar", {
+  vcr::use_cassette("cr_members_with_cursor_and_progress_bar", {
+    expect_output(
+      cr_members(member_ids=98, works = TRUE, cursor = "*",
+        cursor_max = 90, limit = 30, .progress = TRUE),
+      "======="
+    )
+  })
+})

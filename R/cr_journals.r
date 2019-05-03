@@ -59,6 +59,9 @@
 #'    limit = 100)
 #' cr_journals(c('1932-6203', '0028-0836'), works = TRUE, cursor = "*",
 #'    cursor_max = 300, limit = 100)
+#' ## with optional progress bar
+#' cr_journals(issn='1932-6203', works = TRUE, cursor = "*", cursor_max = 500,
+#'    limit = 100, .progress = TRUE)
 #'
 #' # fails, if you want works, you must give an ISSN
 #' # cr_journals(query = "ecology", filter=c(has_full_text = TRUE),
@@ -141,7 +144,8 @@
       list(data = df, facets = facets)
     }
   } else {
-    tmp <- journal_GET(issn, args, works, cursor, cursor_max, ...)
+    tmp <- journal_GET(issn, args, works, cursor, cursor_max,
+      .progress = .progress, ...)
     if (!is.null(cursor)) {
       tmp
     } else {
@@ -189,7 +193,9 @@
   }
 }
 
-journal_GET <- function(x, args, works, cursor = NULL, cursor_max = NULL, ...){
+journal_GET <- function(x, args, works, cursor = NULL, cursor_max = NULL,
+  .progress, ...) {
+
   path <- if (!is.null(x)) {
     if (works) sprintf("journals/%s/works", x) else sprintf("journals/%s", x)
   } else {
@@ -198,7 +204,7 @@ journal_GET <- function(x, args, works, cursor = NULL, cursor_max = NULL, ...){
 
   if (!is.null(cursor) && works) {
     rr <- Requestor$new(path = path, args = args, cursor_max = cursor_max,
-                        should_parse = TRUE, ...)
+                        should_parse = TRUE, .progress = .progress, ...)
     rr$GETcursor()
     rr$parse()
   } else {
@@ -207,7 +213,7 @@ journal_GET <- function(x, args, works, cursor = NULL, cursor_max = NULL, ...){
 }
 
 journal_GET_ <- function(x, args, works, cursor = NULL, cursor_max = NULL,
-                         parse, ...){
+                         parse, .progress, ...) {
   path <- if (!is.null(x)) {
     if (works) sprintf("journals/%s/works", x) else sprintf("journals/%s", x)
   } else {
@@ -216,7 +222,7 @@ journal_GET_ <- function(x, args, works, cursor = NULL, cursor_max = NULL,
 
   if (!is.null(cursor) && works) {
     rr <- Requestor$new(path = path, args = args, cursor_max = cursor_max,
-                        should_parse = parse, ...)
+                        should_parse = parse, .progress = .progress, ...)
     rr$GETcursor()
     rr$cursor_out
   } else {

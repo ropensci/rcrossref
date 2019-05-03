@@ -58,3 +58,13 @@ test_that("cr_prefixes fails correctly", {
     )
   })
 })
+
+test_that("cr_prefixes cursor works with progress bar", {
+  vcr::use_cassette("cr_prefixes_with_cursor_and_progress_bar", {
+    expect_output(
+      cr_prefixes("10.1016", works = TRUE, cursor = "*", cursor_max = 90,
+        limit = 30, .progress = TRUE),
+      "======="
+    )
+  })
+})

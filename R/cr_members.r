@@ -45,7 +45,10 @@
 #'    cursor_max = 500, limit = 100)
 #' cr_members(member_ids=c(10, 98, 45), works = TRUE, cursor = "*",
 #'    cursor_max = 200, limit = 100)
-#'
+#' ## with optional progress bar
+#' cr_members(member_ids=98, works = TRUE, cursor = "*",
+#'    cursor_max = 500, limit = 100, .progress = TRUE)
+#' 
 #' # data not found
 #' # cr_members(query="adfdf")
 #' # cr_members(member_ids=c(323234343434,3434343434), works=TRUE, facet=TRUE)
@@ -104,7 +107,8 @@
     }
   } else if (length(member_ids) == 1) {
     tmp <- member_GET(member_ids, args = args, works = works,
-                      cursor = cursor, cursor_max = cursor_max, ...)
+                      cursor = cursor, cursor_max = cursor_max, 
+                      .progress = .progress, ...)
     if (!is.null(cursor)) {
       tmp
     } else {
@@ -147,7 +151,7 @@
   }
 }
 
-member_GET <- function(x, args, works, cursor = NULL, cursor_max = NULL, ...){
+member_GET <- function(x, args, works, cursor = NULL, cursor_max = NULL, .progress, ...){
   path <- if (!is.null(x)) {
     if (works) sprintf("members/%s/works", x) else sprintf("members/%s", x)
   } else {
@@ -156,7 +160,7 @@ member_GET <- function(x, args, works, cursor = NULL, cursor_max = NULL, ...){
 
   if (!is.null(cursor) && works) {
     rr <- Requestor$new(path = path, args = args, cursor_max = cursor_max,
-                        should_parse = TRUE, ...)
+                        should_parse = TRUE, .progress = .progress, ...)
     rr$GETcursor()
     rr$parse()
   } else {
@@ -165,7 +169,7 @@ member_GET <- function(x, args, works, cursor = NULL, cursor_max = NULL, ...){
 }
 
 member_GET_ <- function(x, args, works, cursor = NULL, cursor_max = NULL,
-                        parse, ...) {
+                        parse, .progress, ...) {
   path <- if (!is.null(x)) {
     if (works) sprintf("members/%s/works", x) else sprintf("members/%s", x)
   } else {
@@ -174,7 +178,7 @@ member_GET_ <- function(x, args, works, cursor = NULL, cursor_max = NULL,
 
   if (!is.null(cursor) && works) {
     rr <- Requestor$new(path = path, args = args, cursor_max = cursor_max,
-                        should_parse = parse, ...)
+                        should_parse = parse, .progress = .progress, ...)
     rr$GETcursor()
     rr$cursor_out
   } else {

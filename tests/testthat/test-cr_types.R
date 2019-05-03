@@ -55,3 +55,13 @@ test_that("cr_types fails correctly", {
     expect_error(cr_types(types="monograph", timeout_ms = 1))
   })
 })
+
+test_that("cr_types cursor works with progress bar", {
+  vcr::use_cassette("cr_types_with_cursor_and_progress_bar", {
+    expect_output(
+      cr_types("journal-article", works = TRUE, cursor = "*",
+        cursor_max = 90, limit = 30, .progress = TRUE),
+      "======="
+    )
+  })
+})
