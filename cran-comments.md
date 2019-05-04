@@ -10,7 +10,7 @@
 
 ## Reverse dependencies
 
-* I have run R CMD check on the 5 downstream dependencies. There were no problems. See the summary at <https://github.com/ropensci/rcrossref/tree/master/revdep>
+* I have run R CMD check on the 7 downstream dependencies. There were no problems. See the summary at <https://github.com/ropensci/rcrossref/tree/master/revdep>
 
 -------
 

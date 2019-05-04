@@ -2,31 +2,21 @@
 
 |field    |value                                       |
 |:--------|:-------------------------------------------|
-|version  |R version 3.5.2 Patched (2018-12-31 r75943) |
-|os       |macOS Mojave 10.14.2                        |
+|version  |R version 3.6.0 Patched (2019-04-30 r76446) |
+|os       |macOS Mojave 10.14.4                        |
 |system   |x86_64, darwin15.6.0                        |
 |ui       |X11                                         |
 |language |(EN)                                        |
 |collate  |en_US.UTF-8                                 |
 |ctype    |en_US.UTF-8                                 |
 |tz       |US/Pacific                                  |
-|date     |2019-01-14                                  |
+|date     |2019-05-04                                  |
 
 # Dependencies
 
-|package   |old   |new |Δ  |
-|:---------|:-----|:---|:--|
-|rcrossref |0.8.4 |NA  |*  |
+|package   |old   |new   |Δ  |
+|:---------|:-----|:-----|:--|
+|rcrossref |0.9.0 |0.9.2 |*  |
 
 # Revdeps
-
-## All (5)
-
-|package                         |version |error |warning |note |
-|:-------------------------------|:-------|:-----|:-------|:----|
-|crminer                         |0.2.0   |      |        |     |
-|fulltext                        |1.1.0   |      |        |     |
-|rcoreoa                         |0.3.0   |      |        |     |
-|[ref.ICAR](problems.md#reficar) |1.0     |      |        |1    |
-|roadoi                          |0.5.2   |      |        |     |
 

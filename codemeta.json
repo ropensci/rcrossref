@@ -10,14 +10,14 @@
   "codeRepository": "https://github.com/ropensci/rcrossref",
   "issueTracker": "https://github.com/ropensci/rcrossref/issues",
   "license": "https://spdx.org/licenses/MIT",
-  "version": "0.9.0",
+  "version": "0.9.2",
   "programmingLanguage": {
     "@type": "ComputerLanguage",
     "name": "R",
-    "version": "3.5.2",
+    "version": "3.6.0",
     "url": "https://r-project.org"
   },
-  "runtimePlatform": "R version 3.5.2 Patched (2018-12-31 r75943)",
+  "runtimePlatform": "R version 3.6.0 Patched (2019-04-30 r76446)",
   "provider": {
     "@id": "https://cran.r-project.org",
     "@type": "Organization",
@@ -104,7 +104,7 @@
       "@type": "SoftwareApplication",
       "identifier": "vcr",
       "name": "vcr",
-      "version": ">= 0.2.2",
+      "version": ">= 0.2.6",
       "provider": {
         "@id": "https://cran.r-project.org",
         "@type": "Organization",
@@ -142,7 +142,7 @@
       "@type": "SoftwareApplication",
       "identifier": "crul",
       "name": "crul",
-      "version": ">= 0.7.0",
+      "version": ">= 0.7.4",
       "provider": {
         "@id": "https://cran.r-project.org",
         "@type": "Organization",
@@ -271,8 +271,11 @@
   "developmentStatus": "active",
   "releaseNotes": "https://github.com/ropensci/rcrossref/blob/master/NEWS.md",
   "readme": "https://github.com/ropensci/rcrossref/blob/master/README.md",
-  "fileSize": "2314.504KB",
+  "fileSize": "3164.206KB",
   "applicationCategory": "Literature",
   "isPartOf": "https://ropensci.org",
-  "keywords": ["text-ming", "literature", "pdf", "xml", "publications", "citations", "full-text", "TDM", "Crossref", "crossref-api", "doi", "metadata", "api", "r", "rstats", "api-wrapper", "r-package"]
+  "keywords": ["text-ming", "literature", "pdf", "xml", "publications", "citations", "full-text", "TDM", "Crossref", "crossref-api", "doi", "metadata", "api", "r", "rstats", "api-wrapper", "r-package"],
+  "contributor": {},
+  "copyrightHolder": {},
+  "funder": {}
 }
