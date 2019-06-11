@@ -16,7 +16,7 @@ etc.), or when using the \code{cursor} param. When using the \code{cursor} param
 this argument only accept a boolean, either \code{TRUE} or \code{FALSE}; any
 non-boolean is coerced to \code{FALSE}.}
 
-\item{...}{Named parameters passed on to \code{\link[crul]{HttpClient}}}
+\item{...}{Named parameters passed on to \code{\link[crul]{verb-GET}}}
 }
 \description{
 Check the DOI minting agency on one or more dois

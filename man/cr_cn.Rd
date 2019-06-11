@@ -34,7 +34,7 @@ non-boolean is coerced to \code{FALSE}.}
 \item{url}{(character) Base URL for the content negotiation request.
 Default: "https://doi.org"}
 
-\item{...}{Named parameters passed on to \code{\link[crul]{HttpClient}}}
+\item{...}{Named parameters passed on to \code{\link[crul]{verb-GET}}}
 }
 \description{
 Get citations in various formats from CrossRef.
