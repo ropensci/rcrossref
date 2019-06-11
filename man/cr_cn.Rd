@@ -5,7 +5,7 @@
 \title{Get citations in various formats from CrossRef.}
 \usage{
 cr_cn(dois, format = "bibtex", style = "apa", locale = "en-US",
-  raw = FALSE, .progress = "none", url = NULL, ...)
+  raw = FALSE, .progress = "none", url = NULL, cache = list(), ...)
 }
 \arguments{
 \item{dois}{Search by a single DOI or many DOIs.}
@@ -34,6 +34,8 @@ non-boolean is coerced to \code{FALSE}.}
 \item{url}{(character) Base URL for the content negotiation request.
 Default: "https://doi.org"}
 
+\item{cache}{(list) named list of caching options. See Details.}
+
 \item{...}{Named parameters passed on to \code{\link[crul]{HttpClient}}}
 }
 \description{
@@ -60,6 +62,14 @@ Note that the format type \code{citeproc-json} uses the CrossRef API at
 \code{http://data.medra.org}. DOI agency is checked first (see
 \code{\link[=cr_agency]{cr_agency()}}).
 }
+\section{cache parameter options}{
+
+\itemize{
+\item path: directory path to cache in
+\item expire: expire time; leave as \code{NULL} to not expire. default: \code{NULL}
+}
+}
+
 \examples{
 \dontrun{
 cr_cn(dois="10.1126/science.169.3946.635")
@@ -128,5 +138,11 @@ cr_cn("10.5284/1011335", url = "https://citation.crosscite.org/format",
    style = "plant-cell-and-environment")
 cr_cn("10.5284/1011335", url = "https://data.datacite.org", 
    style = "plant-cell-and-environment")
+
+# with caching
+## never expire
+dir <- file.path(tempdir(), "mydir")
+# list.files(dir)
+cr_cn(dois="10.1126/science.169.3946.635", cache = list(path = dir))
 }
 }

@@ -36,12 +36,14 @@ Imports:
     miniUI,
     stringr,
     DT,
-    stats
+    stats,
+    webmiddens (>= 0.0.1.9130)
 Suggests:
     roxygen2 (>= 6.1.1),
     testthat,
     knitr,
     vcr (>= 0.2.6)
+Remotes: ropenscilabs/webmiddens@expiry
 RoxygenNote: 6.1.1
 X-schema.org-applicationCategory: Literature
 X-schema.org-keywords: text-ming, literature, pdf, xml, publications, citations, full-text, TDM, Crossref
