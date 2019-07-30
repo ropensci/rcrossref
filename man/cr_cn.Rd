@@ -36,7 +36,7 @@ Default: "https://doi.org"}
 
 \item{cache}{(list) named list of caching options. See Details.}
 
-\item{...}{Named parameters passed on to \code{\link[crul]{HttpClient}}}
+\item{...}{Named parameters passed on to \code{\link[crul]{verb-GET}}}
 }
 \description{
 Get citations in various formats from CrossRef.
@@ -141,8 +141,22 @@ cr_cn("10.5284/1011335", url = "https://data.datacite.org",
 
 # with caching
 ## never expire
-dir <- file.path(tempdir(), "mydir")
+unloadNamespace("vcr")
+# dir <- file.path(tempdir(), "mydir")
+dir <- "stuff"
 # list.files(dir)
 cr_cn(dois="10.1126/science.169.3946.635", cache = list(path = dir))
+cr_cn(dois="10.1002/app.27716", cache = list(path = dir))
+
+(dois <- cr_r(15))
+system.time((b=cr_cn(dois)))
+system.time((f=cr_cn(dois, cache = list(path = dir))))
+system.time((g=cr_cn(dois, cache = list(path = dir))))
+
+cr_cn(dois, cache = list(path = dir, expire = 3))
+cr_cn(dois, cache = list(path = dir, expire = 3))
+
+cr_cn("10.1090/s0025-5718-65-99948-5", cache = list(path = dir, expire = 10))
+cr_cn("10.1090/s0025-5718-65-99948-5", cache = list(path = dir))
 }
 }

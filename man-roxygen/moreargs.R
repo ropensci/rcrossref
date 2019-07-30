@@ -4,4 +4,4 @@
 #' etc.), or when using the \code{cursor} param. When using the \code{cursor} param,
 #' this argument only accept a boolean, either \code{TRUE} or \code{FALSE}; any
 #' non-boolean is coerced to \code{FALSE}.
-#' @param ... Named parameters passed on to \code{\link[crul]{HttpClient}}
+#' @param ... Named parameters passed on to \code{\link[crul]{verb-GET}}

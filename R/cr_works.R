@@ -224,8 +224,8 @@ cr_get_cursor <- function(x, args, cursor, cursor_max, .progress, ...) {
   path <- if (!is.null(x)) sprintf("works/%s", x) else "works"
   if (!is.null(cursor)) {
     rr <- Requestor$new(path = path, args = args, cursor_max = cursor_max,
-                        should_parse = TRUE, .progress = .progress, ...)
-    rr$GETcursor()
+                        should_parse = TRUE, .progress = .progress)
+    rr$GETcursor(...)
     rr$parse()
   } else {
     cr_GET(endpoint = path, args, todf = FALSE, ...)
@@ -236,8 +236,8 @@ cr_get_cursor_ <- function(x, args, cursor, cursor_max, parse, .progress, ...) {
   path <- if (!is.null(x)) sprintf("works/%s", x) else "works"
   if (!is.null(cursor)) {
     rr <- Requestor$new(path = path, args = args, cursor_max = cursor_max,
-                        should_parse = parse, .progress = .progress, ...)
-    rr$GETcursor()
+                        should_parse = parse, .progress = .progress)
+    rr$GETcursor(...)
     rr$cursor_out
   } else {
     cr_GET(endpoint = path, args, todf = FALSE, parse = parse, ...)

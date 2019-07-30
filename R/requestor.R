@@ -40,7 +40,10 @@ Requestor <- R6::R6Class("Requestor",
     totcount <- totals
 
     if (self$progress) {
-      pb <- utils::txtProgressBar(min = 1, max = min(max_avail, self$cursor_max)/self$args$rows,
+      pb <- utils::txtProgressBar(
+        min = 1, 
+        max = min(max_avail, self$cursor_max) / 
+          self$args$rows %||% res$message$`items-per-page`,
         initial = 1, style = 3)
       on.exit(close(pb))
     }
@@ -50,7 +53,7 @@ Requestor <- R6::R6Class("Requestor",
       if (self$progress) utils::setTxtProgressBar(pb, iter)
       self$args$cursor <- cu
       res <- cr_GET(endpoint = self$path, self$args, todf = FALSE, 
-                    parse = self$should_parse)
+                    parse = self$should_parse, ...)
       if (self$should_parse) {
         cu <- res$message$`next-cursor`
         tot <- length(res$message$items)
@@ -67,10 +70,11 @@ Requestor <- R6::R6Class("Requestor",
   parse = function(parse = TRUE) {
     x <- self$cursor_out
     meta <- parse_meta(x[[1]])
+    meta$next_cursor <- x[[length(x)]]$message$`next-cursor`
     list(meta = meta,
-         data = bind_rows(lapply(x, function(z) {
+         data = tbl_df(bind_rows(lapply(x, function(z) {
            bind_rows(lapply(z$message$items, parse_works))
-         })),
+         }))),
          facets = cr_compact(
            lapply(x, function(z) parse_facets(z$message$facets))
           )
