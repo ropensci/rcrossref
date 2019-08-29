@@ -52,9 +52,9 @@ If you are intending to access Crossref regularly you will want to send your ema
 
 Details on how to register your email in a call can be found at `?rcrossref-package`. To pass your email address to Crossref, simply store it as an environment variable in .Renviron like this:
 
-Open file: file.edit("~/.Renviron")
+Open file: `file.edit("~/.Renviron")`
 
-Add email address to be shared with Crossref crossref_email= "name@example.com"
+Add email address to be shared with Crossref `crossref_email= "name@example.com"`
 
 Save the file and restart your R session
 
@@ -105,7 +105,7 @@ Citation count, using OpenURL
 ```r
 cr_citation_count(doi = "10.1371/journal.pone.0042793")
 #>                            doi count
-#> 1 10.1371/journal.pone.0042793    25
+#> 1 10.1371/journal.pone.0042793    34
 ```
 
 ## Search Crossref metadata API
@@ -119,22 +119,27 @@ The following functions all use the [CrossRef API](https://github.com/CrossRef/r
 cr_funders(query = "NSF")
 #> $meta
 #>   total_results search_terms start_index items_per_page
-#> 1            10          NSF           0             20
+#> 1            15          NSF           0             20
 #> 
 #> $data
-#> # A tibble: 10 x 6
-#>    id     name          alt.names         uri       tokens         location
-#>    <chr>  <chr>         <chr>             <chr>     <chr>          <chr>   
-#>  1 50110… Norsk Sykepl… NSF, Norwegian N… http://d… norsk, sykepl… <NA>    
-#>  2 10000… Center for H… CHM, NSF, Univer… http://d… center, for, … United …
-#>  3 10000… National Sle… NSF               http://d… national, sle… United …
-#>  4 50110… National Str… NSF               http://d… national, str… <NA>    
-#>  5 10000… Statens Natu… Danish National … http://d… statens, natu… Denmark 
-#>  6 10000… Office of th… NSF Office of th… http://d… office, of, t… United …
-#>  7 50110… National Sci… National Science… http://d… national, sci… <NA>    
-#>  8 10000… National Sci… NSF               http://d… national, sci… United …
-#>  9 50110… National Nat… NSFC-Yunnan Join… http://d… national, nat… China   
-#> 10 50110… National Nat… Natural Science … http://d… national, nat… China   
+#> # A tibble: 15 x 6
+#>    id     location  name           alt.names        uri       tokens       
+#>    <chr>  <chr>     <chr>          <chr>            <chr>     <chr>        
+#>  1 10000… United S… Center for Hi… CHM, NSF, Unive… http://d… center, for,…
+#>  2 50110… China     Natural Scien… Anhui Provincia… http://d… natural, sci…
+#>  3 10000… <NA>      Statens Natur… Danish National… http://d… statens, nat…
+#>  4 50110… <NA>      National Stro… NSF              http://d… national, st…
+#>  5 10000… United S… National Slee… NSF              http://d… national, sl…
+#>  6 10000… United S… National Scie… USA NSF, NSF, U… http://d… national, sc…
+#>  7 10000… United S… Office of the… NSF Office of t… http://d… office, of, …
+#>  8 50110… China     National Natu… NNSF of China, … http://d… national, na…
+#>  9 10001… United S… BioXFEL Scien… National Scienc… http://d… bioxfel, sci…
+#> 10 50110… <NA>      National Scie… National Scienc… http://d… national, sc…
+#> 11 50110… <NA>      Norsk Sykeple… NSF, Norwegian … http://d… norsk, sykep…
+#> 12 50110… China     National Natu… NSFC-Yunnan Joi… http://d… national, na…
+#> 13 50110… China     National Natu… NSFC-Shandong J… http://d… national, na…
+#> 14 10001… China     Innovative Re… Fund for innova… http://d… innovative, …
+#> 15 10001… China     National Outs… National Outsta… http://d… national, ou…
 #> 
 #> $facets
 #> NULL
@@ -163,18 +168,19 @@ cr_agency(dois = '10.13039/100000001')
 cr_works(filter = c(has_orcid = TRUE, from_pub_date = '2004-04-04'), limit = 1)
 #> $meta
 #>   total_results search_terms start_index items_per_page
-#> 1       2452441           NA           0              1
+#> 1       2860222           NA           0              1
 #> 
 #> $data
-#> # A tibble: 1 x 25
-#>   container.title created deposited published.online doi   indexed issn 
-#>   <chr>           <chr>   <chr>     <chr>            <chr> <chr>   <chr>
-#> 1 The Cryosphere  2013-0… 2018-07-… 2013-02-11       10.5… 2019-0… 1994…
-#> # … with 18 more variables: issue <chr>, issued <chr>, member <chr>,
+#> # A tibble: 1 x 27
+#>   alternative.id container.title created deposited published.print
+#>   <chr>          <chr>           <chr>   <chr>     <chr>          
+#> 1 BFhdy201435    Heredity        2014-0… 2019-04-… 2014-11        
+#> # … with 22 more variables: published.online <chr>, doi <chr>,
+#> #   indexed <chr>, issn <chr>, issue <chr>, issued <chr>, member <chr>,
 #> #   page <chr>, prefix <chr>, publisher <chr>, reference.count <chr>,
-#> #   score <chr>, source <chr>, title <chr>, type <chr>, url <chr>,
-#> #   volume <chr>, abstract <chr>, author <list>, link <list>,
-#> #   license <list>, reference <list>
+#> #   score <chr>, source <chr>, subject <chr>, title <chr>, type <chr>,
+#> #   url <chr>, volume <chr>, author <list>, link <list>, license <list>,
+#> #   reference <list>
 #> 
 #> $facets
 #> NULL
@@ -189,8 +195,8 @@ cr_journals(issn = c('1803-2427','2326-4225'))
 #> # A tibble: 2 x 53
 #>   title publisher issn  last_status_che… deposits_abstra… deposits_orcids…
 #>   <chr> <chr>     <chr> <date>           <lgl>            <lgl>           
-#> 1 Jour… "De Gruy… 1805… 2019-03-24       TRUE             FALSE           
-#> 2 Jour… American… 2326… 2019-03-24       FALSE            FALSE           
+#> 1 Jour… "De Gruy… 1805… 2019-08-26       TRUE             FALSE           
+#> 2 Jour… American… 2326… 2019-08-28       FALSE            FALSE           
 #> # … with 47 more variables: deposits <lgl>,
 #> #   deposits_affiliations_backfile <lgl>,
 #> #   deposits_update_policies_backfile <lgl>,
@@ -233,23 +239,23 @@ cr_journals(issn = c('1803-2427','2326-4225'))
 cr_licenses(query = 'elsevier')
 #> $meta
 #>   total_results search_terms start_index items_per_page
-#> 1            34     elsevier           0             20
+#> 1            35     elsevier           0             20
 #> 
 #> $data
-#> # A tibble: 34 x 2
+#> # A tibble: 35 x 2
 #>    URL                                                      work.count
 #>    <chr>                                                         <int>
 #>  1 http://aspb.org/publications/aspb-journals/open-articles          1
-#>  2 http://creativecommons.org/licenses/by-nc-nd/3.0/                13
-#>  3 http://creativecommons.org/licenses/by-nc-nd/4.0/                 7
-#>  4 http://creativecommons.org/licenses/by-nc/4.0                     1
-#>  5 http://creativecommons.org/licenses/by-nc/4.0/                    2
-#>  6 http://creativecommons.org/licenses/by/2.0                        1
-#>  7 http://creativecommons.org/licenses/by/3.0/                       1
-#>  8 http://creativecommons.org/licenses/by/4.0                        3
-#>  9 http://creativecommons.org/licenses/by/4.0/                       6
+#>  2 http://creativecommons.org/licenses/by-nc-nd/3.0/                12
+#>  3 http://creativecommons.org/licenses/by-nc-nd/4.0/                 8
+#>  4 http://creativecommons.org/licenses/by-nc/4.0/                    2
+#>  5 http://creativecommons.org/licenses/by/2.0                        1
+#>  6 http://creativecommons.org/licenses/by/3.0/                       1
+#>  7 http://creativecommons.org/licenses/by/3.0/igo/                   1
+#>  8 http://creativecommons.org/licenses/by/4.0                        8
+#>  9 http://creativecommons.org/licenses/by/4.0/                      10
 #> 10 http://doi.wiley.com/10.1002/tdm_license_1                      155
-#> # … with 24 more rows
+#> # … with 25 more rows
 ```
 
 ### Search based on DOI prefixes
@@ -261,12 +267,18 @@ cr_prefixes(prefixes = c('10.1016','10.1371','10.1023','10.4176','10.1093'))
 #> NULL
 #> 
 #> $data
-#>                               member                             name
-#> 1   http://id.crossref.org/member/78                      Elsevier BV
-#> 2  http://id.crossref.org/member/340 Public Library of Science (PLoS)
-#> 3  http://id.crossref.org/member/297                  Springer Nature
-#> 4 http://id.crossref.org/member/1989             Co-Action Publishing
-#> 5  http://id.crossref.org/member/286    Oxford University Press (OUP)
+#>                               member
+#> 1   http://id.crossref.org/member/78
+#> 2  http://id.crossref.org/member/340
+#> 3  http://id.crossref.org/member/297
+#> 4 http://id.crossref.org/member/1989
+#> 5  http://id.crossref.org/member/286
+#>                                      name
+#> 1                             Elsevier BV
+#> 2        Public Library of Science (PLoS)
+#> 3 Springer Science and Business Media LLC
+#> 4                    Co-Action Publishing
+#> 5           Oxford University Press (OUP)
 #>                                  prefix
 #> 1 http://id.crossref.org/prefix/10.1016
 #> 2 http://id.crossref.org/prefix/10.1371
@@ -285,17 +297,17 @@ cr_prefixes(prefixes = c('10.1016','10.1371','10.1023','10.4176','10.1093'))
 cr_members(query = 'ecology', limit = 5)
 #> $meta
 #>   total_results search_terms start_index items_per_page
-#> 1            19      ecology           0              5
+#> 1            21      ecology           0              5
 #> 
 #> $data
 #> # A tibble: 5 x 56
 #>      id primary_name location last_status_che… total.dois current.dois
 #>   <int> <chr>        <chr>    <date>           <chr>      <chr>       
-#> 1   336 Japanese So… 5-3 Yon… 2019-04-16       1220       145         
-#> 2  1950 Journal of … Suite 8… 2019-04-16       27         0           
-#> 3  2080 The Japan S… 5-3 Yon… 2019-04-16       691        21          
-#> 4  2151 Ecology and… 5-3 Yon… 2019-04-16       404        60          
-#> 5  2169 Italian Soc… Diparti… 2019-04-16       1286       302         
+#> 1   336 Japanese So… 5-3 Yon… 2019-08-29       1242       167         
+#> 2  1950 Journal of … Suite 8… 2019-08-29       27         0           
+#> 3  2080 The Japan S… 5-3 Yon… 2019-08-29       693        23          
+#> 4  2151 Ecology and… 5-3 Yon… 2019-08-29       404        60          
+#> 5  2169 Italian Soc… Diparti… 2019-08-29       1318       334         
 #> # … with 50 more variables: backfile.dois <chr>, prefixes <chr>,
 #> #   coverge.affiliations.current <chr>,
 #> #   coverge.similarity.checking.current <chr>,
@@ -348,16 +360,16 @@ cr_members(query = 'ecology', limit = 5)
 
 ```r
 cr_r()
-#>  [1] "10.1097/00005110-199711000-00007"  
-#>  [2] "10.4079/vol1iss1pp65-66"           
-#>  [3] "10.4172/2161-038x.s5-003"          
-#>  [4] "10.1111/j.1540-6261.1967.tb02994.x"
-#>  [5] "10.1080/095740401750534484"        
-#>  [6] "10.4236/jssm.2017.103026"          
-#>  [7] "10.1159/000448755"                 
-#>  [8] "10.1021/ja01175a045"               
-#>  [9] "10.1149/05810.0087ecst"            
-#> [10] "10.1016/0378-1135(90)90004-f"
+#>  [1] "10.1007/s12666-019-01694-0"             
+#>  [2] "10.1371/journal.pone.0124206.t003"      
+#>  [3] "10.1023/a:1023041901029"                
+#>  [4] "10.1016/s0140-6736(01)36020-8"          
+#>  [5] "10.1246/nikkashi1948.70.200"            
+#>  [6] "10.1371/journal.pone.0167592.s003"      
+#>  [7] "10.1061/(asce)0733-9372(1996)122:4(284)"
+#>  [8] "10.1007/978-3-322-87654-6_9"            
+#>  [9] "10.1016/j.jsp.2018.12.007"              
+#> [10] "10.1001/archopht.1980.01020040935030"
 ```
 
 You can pass in the number of DOIs you want back (default is 10)
@@ -365,8 +377,7 @@ You can pass in the number of DOIs you want back (default is 10)
 
 ```r
 cr_r(2)
-#> [1] "10.1016/j.bbcan.2012.03.004"       
-#> [2] "10.1111/j.1476-5381.1950.tb00568.x"
+#> [1] "10.1017/cbo9780511487002.003" "10.1007/bf02632352"
 ```
 
 ## Get full text
@@ -381,16 +392,16 @@ out <-
   cr_works(filter = list(has_full_text = TRUE,
     license_url = "http://creativecommons.org/licenses/by/3.0/"))
 (dois <- out$data$doi)
-#>  [1] "10.1016/j.celrep.2013.01.013"     "10.1016/j.biortech.2013.01.084"  
-#>  [3] "10.1016/j.epsl.2013.01.005"       "10.1016/j.neuropharm.2013.01.024"
-#>  [5] "10.1016/j.ebcr.2012.12.001"       "10.1155/2013/121692"             
-#>  [7] "10.1155/2013/158969"              "10.1155/2013/721606"             
-#>  [9] "10.1155/2013/150397"              "10.1155/2013/178138"             
-#> [11] "10.1155/2013/710579"              "10.1155/2013/528279"             
-#> [13] "10.1155/2013/634670"              "10.1155/2013/729162"             
-#> [15] "10.1155/2013/127497"              "10.1155/2013/635086"             
-#> [17] "10.1155/2013/263285"              "10.1155/2013/248159"             
-#> [19] "10.1155/2013/748687"              "10.1155/2013/673601"
+#>  [1] "10.1103/physrevstab.9.014202"   "10.1016/j.physletb.2006.01.060"
+#>  [3] "10.5194/cp-2016-40"             "10.1155/2013/524165"           
+#>  [5] "10.1103/physrevstab.8.124001"   "10.1088/1742-6596/793/1/012019"
+#>  [7] "10.1088/1742-6596/840/1/012038" "10.1155/2013/353956"           
+#>  [9] "10.1016/j.jmb.2010.02.048"      "10.1155/2012/128108"           
+#> [11] "10.1155/2014/269357"            "10.1088/1757-899x/245/1/012021"
+#> [13] "10.1155/2010/424161"            "10.3897/zookeys.176.2318"      
+#> [15] "10.1080/10273660310001628365"   "10.1155/2012/531982"           
+#> [17] "10.1088/1748-9326/10/1/014002"  "10.1155/2011/172615"           
+#> [19] "10.1155/1994/756247"            "10.1016/j.physletb.2006.01.032"
 ```
 
 From the output of `cr_works` we can get full text links if we know where to look:
@@ -398,20 +409,20 @@ From the output of `cr_works` we can get full text links if we know where to loo
 
 ```r
 do.call("rbind", out$data$link)
-#> # A tibble: 55 x 4
+#> # A tibble: 53 x 4
 #>    URL                       content.type content.version intended.applica…
 #>    <chr>                     <chr>        <chr>           <chr>            
-#>  1 https://api.elsevier.com… text/xml     vor             text-mining      
-#>  2 https://api.elsevier.com… text/plain   vor             text-mining      
+#>  1 http://link.aps.org/arti… unspecified  vor             syndication      
+#>  2 http://harvest.aps.org/v… unspecified  vor             similarity-check…
 #>  3 https://api.elsevier.com… text/xml     vor             text-mining      
 #>  4 https://api.elsevier.com… text/plain   vor             text-mining      
-#>  5 https://api.elsevier.com… text/xml     vor             text-mining      
-#>  6 https://api.elsevier.com… text/plain   vor             text-mining      
-#>  7 https://api.elsevier.com… text/xml     vor             text-mining      
-#>  8 https://api.elsevier.com… text/plain   vor             text-mining      
-#>  9 https://api.elsevier.com… text/xml     vor             text-mining      
-#> 10 https://api.elsevier.com… text/plain   vor             text-mining      
-#> # … with 45 more rows
+#>  5 http://www.clim-past-dis… unspecified  vor             similarity-check…
+#>  6 http://downloads.hindawi… application… vor             text-mining      
+#>  7 http://downloads.hindawi… application… vor             text-mining      
+#>  8 http://downloads.hindawi… unspecified  vor             similarity-check…
+#>  9 http://link.aps.org/arti… unspecified  vor             syndication      
+#> 10 http://harvest.aps.org/v… unspecified  vor             similarity-check…
+#> # … with 43 more rows
 ```
 
 From there, you can grab your full text, but because most links require
