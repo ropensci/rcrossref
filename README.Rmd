@@ -56,9 +56,9 @@ If you are intending to access Crossref regularly you will want to send your ema
 
 Details on how to register your email in a call can be found at `?rcrossref-package`. To pass your email address to Crossref, simply store it as an environment variable in .Renviron like this:
 
-Open file: file.edit("~/.Renviron")
+Open file: `file.edit("~/.Renviron")`
 
-Add email address to be shared with Crossref crossref_email= "name@example.com"
+Add email address to be shared with Crossref `crossref_email= "name@example.com"`
 
 Save the file and restart your R session
 
