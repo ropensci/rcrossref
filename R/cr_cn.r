@@ -114,19 +114,17 @@
 #' # with caching
 #' ## never expire
 #' unloadNamespace("vcr")
-#' # dir <- file.path(tempdir(), "mydir")
-#' dir <- "stuff"
-#' # list.files(dir)
+#' dir <- "stuff2"
 #' cr_cn(dois="10.1126/science.169.3946.635", cache = list(path = dir))
 #' cr_cn(dois="10.1002/app.27716", cache = list(path = dir))
 #' 
-#' (dois <- cr_r(15))
+#' (dois <- cr_r(10))
 #' system.time((b=cr_cn(dois)))
 #' system.time((f=cr_cn(dois, cache = list(path = dir))))
 #' system.time((g=cr_cn(dois, cache = list(path = dir))))
 #' 
-#' cr_cn(dois, cache = list(path = dir, expire = 3))
-#' cr_cn(dois, cache = list(path = dir, expire = 3))
+#' cr_cn(dois[1:4], cache = list(path = dir, expire = 3))
+#' cr_cn(dois[1:4], cache = list(path = dir, expire = 3))
 #' 
 #' cr_cn("10.1090/s0025-5718-65-99948-5", cache = list(path = dir, expire = 10))
 #' cr_cn("10.1090/s0025-5718-65-99948-5", cache = list(path = dir))
@@ -151,8 +149,12 @@
                                 "crossref-tdm", "onix-xml"))
 
   cn <- function(doi, ...){
+    # agency_id <- NULL
     agency_id <- suppressWarnings(GET_agency_id(doi))
-    # agency_id <- mid$call(suppressWarnings(GET_agency_id(doi)), expire = cache$expire)
+    # agency_id <- if (length(cache$path) > 0) 
+    #   mid$call(suppressWarnings(GET_agency_id(doi)), expire = cache$expire)
+    # else
+    #   suppressWarnings(GET_agency_id(doi))
     if (is.null(agency_id)) {
       warning(doi, " agency not found - proceeding with 'crossref' ...",
               call. = FALSE)
