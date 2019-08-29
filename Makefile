@@ -29,8 +29,5 @@ check:
 test:
 	${RSCRIPT} -e "devtools::test()"
 
-pkgdocs:
-	${RSCRIPT} -e "pkgdown::build_site()"
-
 revdep:
 	${RSCRIPT} -e "revdepcheck::revdep_reset(); revdepcheck::revdep_check()"
