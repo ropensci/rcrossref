@@ -16,6 +16,10 @@ the old metadata search API at http://search.labs.crossref.org/, their
 DOI Content Negotiation service at
 \url{http://citation.crosscite.org/docs.html}, and
 the \emph{Text and Data Mining} project \url{http://tdmsupport.crossref.org/}
+
+Crossref's API issue tracker lives at https://gitlab.com/crossref/issues
+it's a good place to go ask them about things related to their API
+that go beyond the R interface here.
 }
 
 \section{Defunct}{
@@ -33,7 +37,7 @@ When you search with query terms, on Crossref servers they are not searching
 full text, or even abstracts of articles, but only what is available in the
 data that is returned to you. That is, they search article titles, authors,
 etc. For some discussion on this, see
-\url{https://github.com/CrossRef/rest-api-doc/issues/101}.
+https://gitlab.com/crossref/issues/issues/101
 }
 
 \section{Rate limiting}{

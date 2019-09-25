@@ -24,10 +24,11 @@ R interface to various CrossRef APIs
 
 ## CrossRef documentation
 
-* Crossref API: [https://github.com/CrossRef/rest-api-doc/blob/master/rest_api.md](https://github.com/CrossRef/rest-api-doc/blob/master/rest_api.md)
-* Crossref metadata search API (http://search.labs.crossref.org/)
-* CrossRef [DOI Content Negotiation](http://citation.crosscite.org/docs.html)
-* Text and Data Mining [TDM](http://tdmsupport.crossref.org/)
+* Crossref API: https://github.com/CrossRef/rest-api-doc/blob/master/rest_api.md
+* Crossref's API issue tracker: https://gitlab.com/crossref/issues
+* Crossref metadata search API: http://search.labs.crossref.org/
+* CrossRef DOI Content Negotiation (http://citation.crosscite.org/docs.html)
+* Text and Data Mining (TDM) (http://tdmsupport.crossref.org/)
 
 ## Installation
 
