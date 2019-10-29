@@ -13,6 +13,7 @@ crAddins <- function() {
   types <- cr_types()$data
   types <- sort(setNames(types$id, types$label))
   types <- c("Any Type" = "any", types)
+  choices <- stats::setNames(c("asc", "desc"), enc2utf8(c("\u25B2", "\u25BC")))
   ui <- miniPage(
     gadgetTitleBar("Add Crossref Citations"),
     miniTabstripPanel(
@@ -39,7 +40,7 @@ crAddins <- function() {
             selectInput(
               "search_order",
               label = NULL, width = "95%",
-              choices = c("\u25B2" = "asc", "\u25BC" = "desc"),
+              choices = choices,
               selected = "desc"
             )
           ),
