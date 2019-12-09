@@ -16,7 +16,7 @@ Authors@R: c(
     person("Carl", "Boettiger", role = "aut"),
     person("Karthik", "Ram", role = "aut")
     )
-URL: https://github.com/ropensci/rcrossref
+URL: https://docs.ropensci.org/rcrossref, https://github.com/ropensci/rcrossref
 BugReports: https://github.com/ropensci/rcrossref/issues
 VignetteBuilder: knitr
 Roxygen: list(markdown = TRUE)
