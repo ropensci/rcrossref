@@ -24,11 +24,11 @@ R interface to various CrossRef APIs
 
 ## CrossRef documentation
 
-* Crossref API: https://github.com/CrossRef/rest-api-doc/blob/master/rest_api.md
-* Crossref's API issue tracker: https://gitlab.com/crossref/issues
-* Crossref metadata search API: http://search.labs.crossref.org/
-* CrossRef DOI Content Negotiation (http://citation.crosscite.org/docs.html)
-* Text and Data Mining (TDM) (http://tdmsupport.crossref.org/)
+* [Crossref API](https://github.com/CrossRef/rest-api-doc#readme)
+* [Crossref's API issue tracker](https://gitlab.com/crossref/issues)
+* [Crossref metadata search API](https://www.crossref.org/labs/crossref-metadata-search/)
+* [Crossref DOI Content Negotiation](https://citation.crosscite.org/docs.html)
+* [Crossref Text and Data Mining (TDM) Services](https://tdmsupport.crossref.org/)
 
 ## Installation
 
@@ -53,7 +53,7 @@ library('rcrossref')
 
 ### Register for the Polite Pool
 
-If you are intending to access Crossref regularly you will want to send your email address with your queries. This has the advantage that queries are placed in the polite pool of servers. Including your email address is good practice as described in the Crossref documentation under [Good manners](https://github.com/CrossRef/rest-api-doc). The second advantage is that Crossref can contact you if there is a problem with a query.
+If you are intending to access Crossref regularly you will want to send your email address with your queries. This has the advantage that queries are placed in the polite pool of servers. Including your email address is good practice as described in the Crossref documentation under [Good manners](https://github.com/CrossRef/rest-api-doc#good-manners--more-reliable-service). The second advantage is that Crossref can contact you if there is a problem with a query.
 
 Details on how to register your email in a call can be found at `?rcrossref-package`. To pass your email address to Crossref, simply store it as an environment variable in .Renviron like this:
 
@@ -95,7 +95,7 @@ cr_citation_count(doi = "10.1371/journal.pone.0042793")
 
 ## Search Crossref metadata API
 
-The following functions all use the [CrossRef API](https://github.com/CrossRef/rest-api-doc/blob/master/rest_api.md).
+The following functions all use the [CrossRef API](https://github.com/CrossRef/rest-api-doc#readme).
 
 ### Look up funder information
 
