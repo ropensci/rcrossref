@@ -31,3 +31,6 @@ test:
 
 revdep:
 	${RSCRIPT} -e "revdepcheck::revdep_reset(); revdepcheck::revdep_check()"
+
+readme:
+	${RSCRIPT} -e "knitr::knit('README.Rmd')"
