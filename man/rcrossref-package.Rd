@@ -5,9 +5,6 @@
 \alias{rcrossref-package}
 \alias{rcrossref}
 \title{R Client for Various CrossRef APIs.}
-\description{
-R Client for Various CrossRef APIs.
-}
 \section{Crossref APIs}{
 
 rcrossref interacts with the main Crossref metadata search API at
@@ -30,7 +27,7 @@ for details.
 
 \section{What am I actually searching?}{
 
-When you use the \code{cr_*()} functions in this package, you are using
+When you use the \verb{cr_*()} functions in this package, you are using
 the Crossref search API described at
 \url{https://github.com/CrossRef/rest-api-doc/blob/master/rest_api.md}.
 When you search with query terms, on Crossref servers they are not searching
@@ -71,7 +68,7 @@ as environment variable in \code{.Renviron} like this:
 }
 
 Don't wanna share your email any longer? Simply delete it from
-\code{~/.Renviron}
+\verb{~/.Renviron}
 }
 
 \section{Text mining}{

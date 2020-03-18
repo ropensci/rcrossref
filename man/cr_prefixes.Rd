@@ -5,16 +5,44 @@
 \alias{cr_prefixes_}
 \title{Search CrossRef prefixes}
 \usage{
-cr_prefixes(prefixes, query = NULL, filter = NULL, offset = NULL,
-  limit = NULL, sample = NULL, sort = NULL, order = NULL,
-  facet = FALSE, works = FALSE, cursor = NULL, cursor_max = 5000,
-  .progress = "none", flq = NULL, select = NULL, ...)
+cr_prefixes(
+  prefixes,
+  query = NULL,
+  filter = NULL,
+  offset = NULL,
+  limit = NULL,
+  sample = NULL,
+  sort = NULL,
+  order = NULL,
+  facet = FALSE,
+  works = FALSE,
+  cursor = NULL,
+  cursor_max = 5000,
+  .progress = "none",
+  flq = NULL,
+  select = NULL,
+  ...
+)
 
-cr_prefixes_(prefixes, query = NULL, filter = NULL, offset = NULL,
-  limit = NULL, sample = NULL, sort = NULL, order = NULL,
-  facet = FALSE, works = FALSE, cursor = NULL, cursor_max = 5000,
-  .progress = "none", parse = FALSE, flq = NULL, select = NULL,
-  ...)
+cr_prefixes_(
+  prefixes,
+  query = NULL,
+  filter = NULL,
+  offset = NULL,
+  limit = NULL,
+  sample = NULL,
+  sort = NULL,
+  order = NULL,
+  facet = FALSE,
+  works = FALSE,
+  cursor = NULL,
+  cursor_max = 5000,
+  .progress = "none",
+  parse = FALSE,
+  flq = NULL,
+  select = NULL,
+  ...
+)
 }
 \arguments{
 \item{prefixes}{(character) Publisher prefixes, one or more in a vector or
@@ -199,9 +227,12 @@ names(res$data)
 \url{https://github.com/CrossRef/rest-api-doc/blob/master/rest_api.md}
 }
 \seealso{
-Other crossref: \code{\link{cr_funders}},
-  \code{\link{cr_journals}}, \code{\link{cr_licenses}},
-  \code{\link{cr_members}}, \code{\link{cr_types}},
-  \code{\link{cr_works}}
+Other crossref: 
+\code{\link{cr_funders}()},
+\code{\link{cr_journals}()},
+\code{\link{cr_licenses}()},
+\code{\link{cr_members}()},
+\code{\link{cr_types}()},
+\code{\link{cr_works}()}
 }
 \concept{crossref}

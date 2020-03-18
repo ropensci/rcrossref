@@ -5,17 +5,44 @@
 \alias{cr_journals_}
 \title{Search CrossRef journals}
 \usage{
-cr_journals(issn = NULL, query = NULL, filter = NULL,
-  offset = NULL, limit = NULL, sample = NULL, sort = NULL,
-  order = NULL, facet = FALSE, works = FALSE, cursor = NULL,
-  cursor_max = 5000, .progress = "none", flq = NULL, select = NULL,
-  ...)
+cr_journals(
+  issn = NULL,
+  query = NULL,
+  filter = NULL,
+  offset = NULL,
+  limit = NULL,
+  sample = NULL,
+  sort = NULL,
+  order = NULL,
+  facet = FALSE,
+  works = FALSE,
+  cursor = NULL,
+  cursor_max = 5000,
+  .progress = "none",
+  flq = NULL,
+  select = NULL,
+  ...
+)
 
-cr_journals_(issn = NULL, query = NULL, filter = NULL,
-  offset = NULL, limit = NULL, sample = NULL, sort = NULL,
-  order = NULL, facet = FALSE, works = FALSE, cursor = NULL,
-  cursor_max = 5000, .progress = "none", parse = FALSE, flq = NULL,
-  select = NULL, ...)
+cr_journals_(
+  issn = NULL,
+  query = NULL,
+  filter = NULL,
+  offset = NULL,
+  limit = NULL,
+  sample = NULL,
+  sort = NULL,
+  order = NULL,
+  facet = FALSE,
+  works = FALSE,
+  cursor = NULL,
+  cursor_max = 5000,
+  .progress = "none",
+  parse = FALSE,
+  flq = NULL,
+  select = NULL,
+  ...
+)
 }
 \arguments{
 \item{issn}{(character) One or more ISSN's. Format: XXXX-XXXX.}
@@ -205,9 +232,12 @@ names(res$data)
 \url{https://github.com/CrossRef/rest-api-doc/blob/master/rest_api.md}
 }
 \seealso{
-Other crossref: \code{\link{cr_funders}},
-  \code{\link{cr_licenses}}, \code{\link{cr_members}},
-  \code{\link{cr_prefixes}}, \code{\link{cr_types}},
-  \code{\link{cr_works}}
+Other crossref: 
+\code{\link{cr_funders}()},
+\code{\link{cr_licenses}()},
+\code{\link{cr_members}()},
+\code{\link{cr_prefixes}()},
+\code{\link{cr_types}()},
+\code{\link{cr_works}()}
 }
 \concept{crossref}

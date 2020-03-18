@@ -1,5 +1,5 @@
-#' R Client for Various CrossRef APIs.
-#'
+#' @title rcrossref
+#' @description R Client for Various CrossRef APIs.
 #' @section Crossref APIs:
 #' rcrossref interacts with the main Crossref metadata search API at
 #' <https://github.com/CrossRef/rest-api-doc/blob/master/rest_api.md>,

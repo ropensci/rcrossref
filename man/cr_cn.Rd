@@ -4,8 +4,16 @@
 \alias{cr_cn}
 \title{Get citations in various formats from CrossRef.}
 \usage{
-cr_cn(dois, format = "bibtex", style = "apa", locale = "en-US",
-  raw = FALSE, .progress = "none", url = NULL, ...)
+cr_cn(
+  dois,
+  format = "bibtex",
+  style = "apa",
+  locale = "en-US",
+  raw = FALSE,
+  .progress = "none",
+  url = NULL,
+  ...
+)
 }
 \arguments{
 \item{dois}{Search by a single DOI or many DOIs.}
@@ -17,7 +25,7 @@ cr_cn(dois, format = "bibtex", style = "apa", locale = "en-US",
 
 \item{style}{a CSL style (for text format only). See \code{\link[=get_styles]{get_styles()}}
 for options. Default: 'apa'. If there's a style that CrossRef doesn't support
-you'll get a  \code{(500) Internal Server Error}}
+you'll get a  \verb{(500) Internal Server Error}}
 
 \item{locale}{Language locale. See \code{?Sys.getlocale}}
 
@@ -56,8 +64,8 @@ See \code{\link[=cr_agency]{cr_agency()}}
 
 Note that the format type \code{citeproc-json} uses the CrossRef API at
 \code{api.crossref.org}, while all others are content negotiated via
-\code{http://data.crossref.org}, \code{http://data.datacite.org} or
-\code{http://data.medra.org}. DOI agency is checked first (see
+\verb{http://data.crossref.org}, \verb{http://data.datacite.org} or
+\verb{http://data.medra.org}. DOI agency is checked first (see
 \code{\link[=cr_agency]{cr_agency()}}).
 }
 \examples{
@@ -88,7 +96,7 @@ cr_cn(dois, "text", "apa")
 # Cycle through random styles - print style on each try
 stys <- get_styles()
 foo <- function(x){
- cat(sprintf("<Style>:\%s\\n", x), sep = "\\n\\n")
+ cat(sprintf("<Style>:\%s\n", x), sep = "\n\n")
  cat(cr_cn("10.1126/science.169.3946.635", "text", style=x))
 }
 foo(sample(stys, 1))

@@ -4,8 +4,13 @@
 \alias{cr_citation_count}
 \title{Get a citation count via CrossRef OpenURL}
 \usage{
-cr_citation_count(doi, url = "http://www.crossref.org/openurl/",
-  key = "cboettig@ropensci.org", async = FALSE, ...)
+cr_citation_count(
+  doi,
+  url = "http://www.crossref.org/openurl/",
+  key = "cboettig@ropensci.org",
+  async = FALSE,
+  ...
+)
 }
 \arguments{
 \item{doi}{(character) One or more digital object identifiers. If

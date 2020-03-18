@@ -1,7 +1,6 @@
 language: r
-sudo: false
 cache: packages
-dist: trusty
+os: linux
 
 addons:
   apt:
@@ -11,7 +10,7 @@ addons:
 r_binary_packages:
   - covr
 
-matrix:
+jobs:
   include:
     - os: linux
       r: oldrel
@@ -20,14 +19,12 @@ matrix:
       env: R_CODECOV=true
     - os: linux
       r: devel
-      env: _R_CHECK_LENGTH_1_LOGIC2_=TRUE
+      env: _R_CHECK_LENGTH_1_LOGIC2_=verbose
 
 after_success:
   - if [[ "${R_CODECOV}" ]]; then R -e 'covr::codecov()'; fi
 
 notifications:
   email:
-    on_success: never
-    on_failure: never
-  slack:
-    secure: Q8AQQdRyHJC8fcyc5vD+H25QHfi6mkU8r7tKMxPLkA5RFkHQsOoO+9eUSH6g55rUw3EyIcj7SUbxmbjH4dhh3RNeLz+OmEcUzwKK1kza0VUWOgRwytHY66oigUFwewYwn+D+bNUYhcA/iXkBtlEx/oI+C9MSP2qR+Bd9AYfc5nw=
+    on_success: change
+    on_failure: change

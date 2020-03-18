@@ -5,17 +5,44 @@
 \alias{cr_works_}
 \title{Search CrossRef works (articles)}
 \usage{
-cr_works(dois = NULL, query = NULL, filter = NULL, offset = NULL,
-  limit = NULL, sample = NULL, sort = NULL, order = NULL,
-  facet = FALSE, cursor = NULL, cursor_max = 5000,
-  .progress = "none", flq = NULL, select = NULL, async = FALSE,
-  ...)
+cr_works(
+  dois = NULL,
+  query = NULL,
+  filter = NULL,
+  offset = NULL,
+  limit = NULL,
+  sample = NULL,
+  sort = NULL,
+  order = NULL,
+  facet = FALSE,
+  cursor = NULL,
+  cursor_max = 5000,
+  .progress = "none",
+  flq = NULL,
+  select = NULL,
+  async = FALSE,
+  ...
+)
 
-cr_works_(dois = NULL, query = NULL, filter = NULL, offset = NULL,
-  limit = NULL, sample = NULL, sort = NULL, order = NULL,
-  facet = FALSE, cursor = NULL, cursor_max = 5000,
-  .progress = "none", parse = FALSE, flq = NULL, select = NULL,
-  async = FALSE, ...)
+cr_works_(
+  dois = NULL,
+  query = NULL,
+  filter = NULL,
+  offset = NULL,
+  limit = NULL,
+  sample = NULL,
+  sort = NULL,
+  order = NULL,
+  facet = FALSE,
+  cursor = NULL,
+  cursor_max = 5000,
+  .progress = "none",
+  parse = FALSE,
+  flq = NULL,
+  select = NULL,
+  async = FALSE,
+  ...
+)
 }
 \arguments{
 \item{dois}{Search by a single DOI or many DOIs.  Note that using this
@@ -265,9 +292,12 @@ system.time(lapply(queries, function(z) cr_works(query = z)))
 \url{https://github.com/CrossRef/rest-api-doc/blob/master/rest_api.md}
 }
 \seealso{
-Other crossref: \code{\link{cr_funders}},
-  \code{\link{cr_journals}}, \code{\link{cr_licenses}},
-  \code{\link{cr_members}}, \code{\link{cr_prefixes}},
-  \code{\link{cr_types}}
+Other crossref: 
+\code{\link{cr_funders}()},
+\code{\link{cr_journals}()},
+\code{\link{cr_licenses}()},
+\code{\link{cr_members}()},
+\code{\link{cr_prefixes}()},
+\code{\link{cr_types}()}
 }
 \concept{crossref}
