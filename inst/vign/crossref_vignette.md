@@ -19,7 +19,7 @@ Or development version from GitHub
 
 
 ```r
-devtools::install_github("ropensci/rcrossref")
+remotes::install_github("ropensci/rcrossref")
 ```
 
 

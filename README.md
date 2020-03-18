@@ -1,5 +1,5 @@
-rcrossref
-=========
+rcrossref: R interface to CrossRef APIs
+=======================================
 
 
 
@@ -10,10 +10,6 @@ rcrossref
 [![codecov.io](https://codecov.io/github/ropensci/rcrossref/coverage.svg?branch=master)](https://codecov.io/github/ropensci/rcrossref?branch=master)
 [![rstudio mirror downloads](https://cranlogs.r-pkg.org/badges/rcrossref)](https://github.com/metacran/cranlogs.app)
 [![cran version](https://www.r-pkg.org/badges/version/rcrossref)](https://cran.r-project.org/package=rcrossref)
-
-R interface to various CrossRef APIs
-====================================
-
 
 ## CrossRef documentation
 
@@ -36,8 +32,7 @@ Or development version from GitHub
 
 
 ```r
-install.packages("devtools")
-devtools::install_github("ropensci/rcrossref")
+remotes::install_github("ropensci/rcrossref")
 ```
 
 Load `rcrossref`
@@ -107,7 +102,7 @@ Citation count, using OpenURL
 ```r
 cr_citation_count(doi = "10.1371/journal.pone.0042793")
 #>                            doi count
-#> 1 10.1371/journal.pone.0042793    37
+#> 1 10.1371/journal.pone.0042793    38
 ```
 
 ## Search Crossref metadata API
@@ -121,27 +116,29 @@ The following functions all use the CrossRef API https://github.com/CrossRef/res
 cr_funders(query = "NSF")
 #> $meta
 #>   total_results search_terms start_index items_per_page
-#> 1            15          NSF           0             20
+#> 1            17          NSF           0             20
 #> 
 #> $data
-#> # A tibble: 15 x 6
-#>    id     location  name            alt.names          uri       tokens         
-#>    <chr>  <chr>     <chr>           <chr>              <chr>     <chr>          
-#>  1 10000… United S… Center for Hie… CHM, NSF, Univers… http://d… center, for, h…
-#>  2 50110… China     Natural Scienc… Anhui Provincial … http://d… natural, scien…
-#>  3 10000… <NA>      Statens Naturv… Danish National S… http://d… statens, natur…
-#>  4 50110… <NA>      National Strok… NSF                http://d… national, stro…
-#>  5 10000… United S… National Sleep… NSF                http://d… national, slee…
-#>  6 10000… United S… National Scien… USA NSF, NSF, US … http://d… national, scie…
-#>  7 10000… United S… Office of the … NSF Office of the… http://d… office, of, th…
-#>  8 50110… China     National Natur… NNSF of China, NS… http://d… national, natu…
-#>  9 10001… United S… BioXFEL Scienc… National Science … http://d… bioxfel, scien…
-#> 10 50110… <NA>      National Scien… National Science … http://d… national, scie…
-#> 11 50110… <NA>      Norsk Sykeplei… NSF, Norwegian Nu… http://d… norsk, sykeple…
-#> 12 50110… China     National Natur… NSFC-Yunnan Joint… http://d… national, natu…
-#> 13 50110… China     National Natur… NSFC-Shandong Joi… http://d… national, natu…
-#> 14 10001… China     Innovative Res… Fund for innovati… http://d… innovative, re…
-#> 15 10001… China     National Outst… National Outstand… http://d… national, outs…
+#> # A tibble: 17 x 6
+#>    id     name            alt.names          uri        tokens          location
+#>    <chr>  <chr>           <chr>              <chr>      <chr>           <chr>   
+#>  1 50110… National Scien… NSF, National Sci… http://dx… national, scie… <NA>    
+#>  2 10000… National Sleep… NSF                http://dx… national, slee… United …
+#>  3 10000… National Scien… USA NSF, US NSF, … http://dx… national, scie… United …
+#>  4 10000… Office of the … NSF Office of the… http://dx… office, of, th… United …
+#>  5 50110… National Natur… NNSF of China, NS… http://dx… national, natu… China   
+#>  6 10001… BioXFEL Scienc… National Science … http://dx… bioxfel, scien… United …
+#>  7 50110… Norsk Sykeplei… NSF, Norwegian Nu… http://dx… norsk, sykeple… <NA>    
+#>  8 10000… Center for Hie… CHM, NSF, Univers… http://dx… center, for, h… United …
+#>  9 10001… Kansas NSF EPS… KNE, NSF EPSCoR    http://dx… kansas, nsf, e… United …
+#> 10 50110… Natural Scienc… Anhui Provincial … http://dx… natural, scien… China   
+#> 11 10000… Statens Naturv… Danish National S… http://dx… statens, natur… <NA>    
+#> 12 50110… National Strok… NSF                http://dx… national, stro… <NA>    
+#> 13 50110… NSFC-Henan Joi… NSFC-Henan Provin… http://dx… nsfc, henan, j… China   
+#> 14 50110… National Natur… NSFC-Yunnan Joint… http://dx… national, natu… China   
+#> 15 50110… National Natur… NSFC-Shandong Joi… http://dx… national, natu… China   
+#> 16 10001… Innovative Res… Fund for innovati… http://dx… innovative, re… China   
+#> 17 10001… National Outst… National Outstand… http://dx… national, outs… China   
 #> 
 #> $facets
 #> NULL
@@ -170,7 +167,7 @@ cr_agency(dois = '10.13039/100000001')
 cr_works(filter = c(has_orcid = TRUE, from_pub_date = '2004-04-04'), limit = 1)
 #> $meta
 #>   total_results search_terms start_index items_per_page
-#> 1       3618834           NA           0              1
+#> 1       3682545           NA           0              1
 #> 
 #> $data
 #> # A tibble: 1 x 23
@@ -195,8 +192,8 @@ cr_journals(issn = c('1803-2427','2326-4225'))
 #> # A tibble: 2 x 53
 #>   title publisher issn  last_status_che… deposits_abstra… deposits_orcids…
 #>   <chr> <chr>     <chr> <date>           <lgl>            <lgl>           
-#> 1 Jour… "De Gruy… 1805… 2020-03-04       TRUE             FALSE           
-#> 2 Jour… "America… 2326… 2020-03-04       FALSE            FALSE           
+#> 1 Jour… "De Gruy… 1805… 2020-03-17       TRUE             FALSE           
+#> 2 Jour… "America… 2326… 2020-03-11       FALSE            FALSE           
 #> # … with 47 more variables: deposits <lgl>,
 #> #   deposits_affiliations_backfile <lgl>,
 #> #   deposits_update_policies_backfile <lgl>,
@@ -244,7 +241,7 @@ cr_licenses(query = 'elsevier')
 #>    <chr>                                                         <int>
 #>  1 http://aspb.org/publications/aspb-journals/open-articles          1
 #>  2 http://creativecommons.org/licenses/by-nc-nd/3.0/                11
-#>  3 http://creativecommons.org/licenses/by-nc-nd/4.0/                12
+#>  3 http://creativecommons.org/licenses/by-nc-nd/4.0/                13
 #>  4 http://creativecommons.org/licenses/by-nc/4.0/                    3
 #>  5 http://creativecommons.org/licenses/by/2.0                        1
 #>  6 http://creativecommons.org/licenses/by/3.0/                       1
@@ -288,17 +285,17 @@ cr_prefixes(prefixes = c('10.1016','10.1371','10.1023','10.4176','10.1093'))
 cr_members(query = 'ecology', limit = 5)
 #> $meta
 #>   total_results search_terms start_index items_per_page
-#> 1            21      ecology           0              5
+#> 1            22      ecology           0              5
 #> 
 #> $data
 #> # A tibble: 5 x 56
 #>      id primary_name location last_status_che… total.dois current.dois
 #>   <int> <chr>        <chr>    <date>           <chr>      <chr>       
-#> 1   336 Japanese So… 5-3 Yon… 2020-03-02       1271       139         
-#> 2  1950 Journal of … Suite 8… 2020-03-02       0          0           
-#> 3  2080 The Japan S… 5-3 Yon… 2020-03-02       700        19          
-#> 4  2151 Ecology and… 5-3 Yon… 2020-03-02       414        37          
-#> 5  2169 Italian Soc… Diparti… 2020-03-02       1358       222         
+#> 1   336 Japanese So… 5-3 Yon… 2020-03-18       1273       141         
+#> 2  1950 Journal of … Suite 8… 2020-03-18       0          0           
+#> 3  2080 The Japan S… 5-3 Yon… 2020-03-18       700        19          
+#> 4  2151 Ecology and… 5-3 Yon… 2020-03-18       414        37          
+#> 5  2169 Italian Soc… Diparti… 2020-03-18       1360       224         
 #> # … with 50 more variables: backfile.dois <chr>, prefixes <chr>,
 #> #   coverge.affiliations.current <chr>,
 #> #   coverge.similarity.checking.current <chr>, coverge.funders.backfile <chr>,
@@ -346,11 +343,11 @@ cr_members(query = 'ecology', limit = 5)
 
 ```r
 cr_r()
-#>  [1] "10.17226/582"                    "10.1007/s10460-014-9493-7"      
-#>  [3] "10.5962/bhl.title.141506"        "10.1093/jac/dkh345"             
-#>  [5] "10.1080/08856257.2017.1410327"   "10.4135/9781544307725.n14"      
-#>  [7] "10.1093/es/khi093"               "10.1080/003655299750025390"     
-#>  [9] "10.1016/s0140-6736(01)89718-x"   "10.7748/ns1999.11.14.8.42.c2707"
+#>  [1] "10.32387/prokla.v41i165.332"   "10.1016/j.toxlet.2016.06.2117"
+#>  [3] "10.1016/s0140-6736(99)02080-2" "10.26717/bjstr.2018.02.000741"
+#>  [5] "10.1134/s0021364015040025"     "10.1021/cen-v059n019.p006a"   
+#>  [7] "10.2307/40147801"              "10.1007/s00421-016-3378-y"    
+#>  [9] "10.1016/j.talanta.2007.10.030" "10.1134/1.1780558"
 ```
 
 You can pass in the number of DOIs you want back (default is 10)
@@ -358,8 +355,7 @@ You can pass in the number of DOIs you want back (default is 10)
 
 ```r
 cr_r(2)
-#> [1] "10.1093/oxfordjournals.afraf.a095443"
-#> [2] "10.1016/s0140-6736(62)92704-6"
+#> [1] "10.2307/250291"        "10.2991/3ca-13.2013.9"
 ```
 
 ## Get full text
