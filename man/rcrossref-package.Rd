@@ -4,7 +4,10 @@
 \name{rcrossref-package}
 \alias{rcrossref-package}
 \alias{rcrossref}
-\title{R Client for Various CrossRef APIs.}
+\title{rcrossref}
+\description{
+R Client for Various CrossRef APIs.
+}
 \section{Crossref APIs}{
 
 rcrossref interacts with the main Crossref metadata search API at

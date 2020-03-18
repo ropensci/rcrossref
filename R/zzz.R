@@ -159,7 +159,6 @@ ifnullna <- function(x) {
 }
 
 flq_set <- c(
-  'query.title',
   'query.container-title',
   'query.author',
   'query.editor',
