@@ -63,10 +63,4 @@ Be conservative about adding new dependencies.
 * Use `<-` instead of `=` for assignment
 * Always use `snake_case` (and all lowercase) instead of `camelCase`
 
-
-
-## Also, check out our [discussion forum](https://discuss.ropensci.org)
-
-## Prefer to Email? Get in touch: [myrmecocystus@gmail.com](mailto:myrmecocystus@gmail.com)
-
-## Thanks for contributing!
+## Check out our [discussion forum](https://discuss.ropensci.org)
