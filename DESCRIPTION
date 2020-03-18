@@ -41,6 +41,7 @@ Suggests:
     roxygen2 (>= 7.1.0),
     testthat,
     knitr,
+    rmarkdown,
     vcr (>= 0.2.6)
 RoxygenNote: 7.1.0
 X-schema.org-applicationCategory: Literature
