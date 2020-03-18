@@ -4,7 +4,7 @@ author: Scott Chamberlain
 date: "`r Sys.Date()`"
 output: rmarkdown::html_vignette
 vignette: >
-    %\VignetteIndexEntry{introduction}
+    %\VignetteIndexEntry{rcrossref introduction}
     %\VignetteEngine{knitr::rmarkdown}
     %\VignetteEncoding{UTF-8}
 ---
