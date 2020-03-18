@@ -1,5 +1,5 @@
-#' R Client for Various CrossRef APIs.
-#'
+#' @title rcrossref
+#' @description R Client for Various CrossRef APIs.
 #' @section Crossref APIs:
 #' rcrossref interacts with the main Crossref metadata search API at
 #' <https://github.com/CrossRef/rest-api-doc/blob/master/rest_api.md>,
@@ -7,6 +7,10 @@
 #' DOI Content Negotiation service at
 #' <http://citation.crosscite.org/docs.html>, and
 #' the \emph{Text and Data Mining} project <http://tdmsupport.crossref.org/>
+#' 
+#' Crossref's API issue tracker lives at https://gitlab.com/crossref/issues
+#' it's a good place to go ask them about things related to their API
+#' that go beyond the R interface here.
 #'
 #' @section Defunct:
 #' See [rcrossref-deprecated] and [rcrossref-defunct]
@@ -20,7 +24,7 @@
 #' full text, or even abstracts of articles, but only what is available in the
 #' data that is returned to you. That is, they search article titles, authors,
 #' etc. For some discussion on this, see
-#' <https://github.com/CrossRef/rest-api-doc/issues/101>.
+#' https://gitlab.com/crossref/issues/issues/101
 #'
 #' @section Rate limiting:
 #' From time to time Crossref needs to impose rate limits to ensure that

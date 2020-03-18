@@ -4,7 +4,7 @@
 \name{rcrossref-package}
 \alias{rcrossref-package}
 \alias{rcrossref}
-\title{R Client for Various CrossRef APIs.}
+\title{rcrossref}
 \description{
 R Client for Various CrossRef APIs.
 }
@@ -16,6 +16,10 @@ the old metadata search API at http://search.labs.crossref.org/, their
 DOI Content Negotiation service at
 \url{http://citation.crosscite.org/docs.html}, and
 the \emph{Text and Data Mining} project \url{http://tdmsupport.crossref.org/}
+
+Crossref's API issue tracker lives at https://gitlab.com/crossref/issues
+it's a good place to go ask them about things related to their API
+that go beyond the R interface here.
 }
 
 \section{Defunct}{
@@ -26,14 +30,14 @@ for details.
 
 \section{What am I actually searching?}{
 
-When you use the \code{cr_*()} functions in this package, you are using
+When you use the \verb{cr_*()} functions in this package, you are using
 the Crossref search API described at
 \url{https://github.com/CrossRef/rest-api-doc/blob/master/rest_api.md}.
 When you search with query terms, on Crossref servers they are not searching
 full text, or even abstracts of articles, but only what is available in the
 data that is returned to you. That is, they search article titles, authors,
 etc. For some discussion on this, see
-\url{https://github.com/CrossRef/rest-api-doc/issues/101}.
+https://gitlab.com/crossref/issues/issues/101
 }
 
 \section{Rate limiting}{
@@ -67,7 +71,7 @@ as environment variable in \code{.Renviron} like this:
 }
 
 Don't wanna share your email any longer? Simply delete it from
-\code{~/.Renviron}
+\verb{~/.Renviron}
 }
 
 \section{Text mining}{

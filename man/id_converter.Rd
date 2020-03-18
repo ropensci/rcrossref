@@ -36,9 +36,6 @@ id_converter("NIHMS311352")
 
 # more than 1 ID
 id_converter(c("PMC3531190","PMC3245039"))
-## 10 random DOIs
-ids <- cr_r()
-id_converter(ids)
 
 # error, wrong type passed for id given
 # id_converter("PMC2883744", "doi")

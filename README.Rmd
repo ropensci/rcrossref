@@ -1,5 +1,5 @@
-rcrossref
-=========
+rcrossref: R interface to CrossRef APIs
+=======================================
 
 ```{r echo=FALSE}
 knitr::opts_chunk$set(
@@ -11,23 +11,20 @@ knitr::opts_chunk$set(
 ```
 
 [![cran checks](https://cranchecks.info/badges/worst/rcrossref)](https://cranchecks.info/pkgs/rcrossref)
-[![Project Status: Active - The project has reached a stable, usable state and is being actively developed.](http://www.repostatus.org/badges/latest/active.svg)](http://www.repostatus.org/#active)
+[![Project Status: Active - The project has reached a stable, usable state and is being actively developed.](https://www.repostatus.org/badges/latest/active.svg)](https://www.repostatus.org/#active)
 [![Build Status](https://api.travis-ci.org/ropensci/rcrossref.png)](https://travis-ci.org/ropensci/rcrossref)
 [![Build status](https://ci.appveyor.com/api/projects/status/jbo6y7dg4qiq7mol/branch/master)](https://ci.appveyor.com/project/sckott/rcrossref/branch/master)
 [![codecov.io](https://codecov.io/github/ropensci/rcrossref/coverage.svg?branch=master)](https://codecov.io/github/ropensci/rcrossref?branch=master)
-[![rstudio mirror downloads](http://cranlogs.r-pkg.org/badges/rcrossref)](https://github.com/metacran/cranlogs.app)
-[![cran version](http://www.r-pkg.org/badges/version/rcrossref)](https://cran.r-project.org/package=rcrossref)
-
-R interface to various CrossRef APIs
-====================================
-
+[![rstudio mirror downloads](https://cranlogs.r-pkg.org/badges/rcrossref)](https://github.com/metacran/cranlogs.app)
+[![cran version](https://www.r-pkg.org/badges/version/rcrossref)](https://cran.r-project.org/package=rcrossref)
 
 ## CrossRef documentation
 
-* Crossref API: [https://github.com/CrossRef/rest-api-doc/blob/master/rest_api.md](https://github.com/CrossRef/rest-api-doc/blob/master/rest_api.md)
-* Crossref metadata search API (http://search.labs.crossref.org/)
-* CrossRef [DOI Content Negotiation](http://citation.crosscite.org/docs.html)
-* Text and Data Mining [TDM](http://tdmsupport.crossref.org/)
+* Crossref API: https://github.com/CrossRef/rest-api-doc#readme
+* Crossref's API issue tracker: https://gitlab.com/crossref/issues
+* Crossref metadata search API: https://www.crossref.org/labs/crossref-metadata-search/
+* Crossref DOI Content Negotiation: https://citation.crosscite.org/docs.html
+* Crossref Text and Data Mining (TDM) Services: https://tdmsupport.crossref.org/
 
 ## Installation
 
@@ -40,8 +37,7 @@ install.packages("rcrossref")
 Or development version from GitHub
 
 ```{r eval=FALSE}
-install.packages("devtools")
-devtools::install_github("ropensci/rcrossref")
+remotes::install_github("ropensci/rcrossref")
 ```
 
 Load `rcrossref`
@@ -52,13 +48,13 @@ library('rcrossref')
 
 ### Register for the Polite Pool
 
-If you are intending to access Crossref regularly you will want to send your email address with your queries. This has the advantage that queries are placed in the polite pool of servers. Including your email address is good practice as described in the Crossref documentation under [Good manners](https://github.com/CrossRef/rest-api-doc). The second advantage is that Crossref can contact you if there is a problem with a query.
+If you are intending to access Crossref regularly you will want to send your email address with your queries. This has the advantage that queries are placed in the polite pool of servers. Including your email address is good practice as described in the Crossref documentation under Good manners (https://github.com/CrossRef/rest-api-doc#good-manners--more-reliable-service). The second advantage is that Crossref can contact you if there is a problem with a query.
 
 Details on how to register your email in a call can be found at `?rcrossref-package`. To pass your email address to Crossref, simply store it as an environment variable in .Renviron like this:
 
-Open file: file.edit("~/.Renviron")
+Open file: `file.edit("~/.Renviron")`
 
-Add email address to be shared with Crossref crossref_email= "name@example.com"
+Add email address to be shared with Crossref `crossref_email= "name@example.com"`
 
 Save the file and restart your R session
 
@@ -66,7 +62,7 @@ To stop sharing your email when using rcrossref simply delete it from your .Renv
 
 ## Citation search
 
-Use CrossRef's [DOI Content Negotiation](http://citation.crosscite.org/docs.html) service, where you can citations back in various formats, including `apa`
+Use CrossRef's DOI Content Negotiation (https://citation.crosscite.org/docs.html) service, where you can citations back in various formats, including `apa`
 
 ```{r}
 cr_cn(dois = "10.1126/science.169.3946.635", format = "text", style = "apa")
@@ -94,7 +90,7 @@ cr_citation_count(doi = "10.1371/journal.pone.0042793")
 
 ## Search Crossref metadata API
 
-The following functions all use the [CrossRef API](https://github.com/CrossRef/rest-api-doc/blob/master/rest_api.md).
+The following functions all use the CrossRef API https://github.com/CrossRef/rest-api-doc#readme
 
 ### Look up funder information
 
@@ -154,7 +150,7 @@ cr_r(2)
 
 ## Get full text
 
-Publishers can optionally provide links in the metadata they provide to Crossref for full text of the work, but that data is often missing. Find out more about it at [http://tdmsupport.crossref.org/](http://tdmsupport.crossref.org/).
+Publishers can optionally provide links in the metadata they provide to Crossref for full text of the work, but that data is often missing. Find out more about it at https://support.crossref.org/hc/en-us/articles/215750183-Crossref-Text-and-Data-Mining-Services
 
 Get some DOIs for articles that provide full text, and that have `CC-BY 3.0` licenses (i.e., more likely to actually be open)
 
@@ -199,16 +195,16 @@ crm_pdf(links)
 #>   Created: 2014-09-15
 ```
 
-See also [fulltext](https://github.com/ropensci/fulltext) for getting scholarly text 
+See also fulltext (https://github.com/ropensci/fulltext) for getting scholarly text 
 for text mining.
 
 
 ## Meta
 
-* Please [report any issues or bugs](https://github.com/ropensci/rcrossref/issues).
+* Please report any issues or bugs: https://github.com/ropensci/rcrossref/issues
 * License: MIT
 * Get citation information for `rcrossref` in R doing `citation(package = 'rcrossref')`
-* Please note that this project is released with a [Contributor Code of Conduct](CODE_OF_CONDUCT.md). By participating in this project you agree to abide by its terms.
+* Please note that this project is released with a [Contributor Code of Conduct][coc]. By participating in this project you agree to abide by its terms.
 
 ---
 
@@ -217,3 +213,5 @@ This package is part of a richer suite called [fulltext](https://github.com/rope
 ---
 
 [![rofooter](https://ropensci.org/public_images/github_footer.png)](https://ropensci.org)
+
+[coc]: https://github.com/ropensci/rcrossref/blob/master/CODE_OF_CONDUCT.md

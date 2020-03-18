@@ -118,9 +118,9 @@
 #' res <- cr_works(query = "ecology",
 #'   flq = c(`query.container-title` = 'Ecology'))
 #'
-#' ## query.author and query.title
+#' ## query.author and query.bibliographic
 #' res <- cr_works(query = "ecology",
-#'   flq = c(query.author = 'Smith', query.title = 'cell'))
+#'   flq = c(query.author = 'Smith', query.bibliographic = 'cell'))
 #'
 #' # select only certain fields to return
 #' res <- cr_works(query = "NSF", select = c('DOI', 'title'))

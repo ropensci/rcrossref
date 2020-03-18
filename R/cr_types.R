@@ -54,8 +54,6 @@
 #' cr_types_('monograph', parse = TRUE)
 #' cr_types_("journal-article", works = TRUE, cursor = "*",
 #'    cursor_max = 300, limit = 100)
-#' cr_types_("journal-article", works = TRUE, cursor = "*",
-#'    cursor_max = 300, limit = 100, parse = TRUE)
 #'
 #' # field queries
 #' ## query.container-title

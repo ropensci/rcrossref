@@ -5,7 +5,7 @@ Description: Client for various 'CrossRef' 'APIs', including 'metadata' search
     (including 'bibtex', 'citeproc-json', 'rdf-xml', etc.), convert 'DOIs'
     to 'PMIDs', and 'vice versa', get citations for 'DOIs', and get links to
     full text of articles when available.
-Version: 0.9.2.9610
+Version: 0.9.2.98
 License: MIT + file LICENSE
 Authors@R: c(
     person("Scott", "Chamberlain", role = c("aut", "cre"), 
@@ -16,7 +16,7 @@ Authors@R: c(
     person("Carl", "Boettiger", role = "aut"),
     person("Karthik", "Ram", role = "aut")
     )
-URL: https://github.com/ropensci/rcrossref
+URL: https://docs.ropensci.org/rcrossref, https://github.com/ropensci/rcrossref
 BugReports: https://github.com/ropensci/rcrossref/issues
 VignetteBuilder: knitr
 Roxygen: list(markdown = TRUE)
@@ -39,12 +39,13 @@ Imports:
     stats,
     webmiddens (>= 0.0.1.9130)
 Suggests:
-    roxygen2 (>= 6.1.1),
+    roxygen2 (>= 7.1.0),
     testthat,
     knitr,
+    rmarkdown,
     vcr (>= 0.2.6)
 Remotes: ropenscilabs/webmiddens@expiry
-RoxygenNote: 6.1.1
+RoxygenNote: 7.1.0
 X-schema.org-applicationCategory: Literature
 X-schema.org-keywords: text-ming, literature, pdf, xml, publications, citations, full-text, TDM, Crossref
 X-schema.org-isPartOf: https://ropensci.org

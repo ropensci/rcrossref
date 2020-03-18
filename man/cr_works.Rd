@@ -5,17 +5,44 @@
 \alias{cr_works_}
 \title{Search CrossRef works (articles)}
 \usage{
-cr_works(dois = NULL, query = NULL, filter = NULL, offset = NULL,
-  limit = NULL, sample = NULL, sort = NULL, order = NULL,
-  facet = FALSE, cursor = NULL, cursor_max = 5000,
-  .progress = "none", flq = NULL, select = NULL, async = FALSE,
-  ...)
+cr_works(
+  dois = NULL,
+  query = NULL,
+  filter = NULL,
+  offset = NULL,
+  limit = NULL,
+  sample = NULL,
+  sort = NULL,
+  order = NULL,
+  facet = FALSE,
+  cursor = NULL,
+  cursor_max = 5000,
+  .progress = "none",
+  flq = NULL,
+  select = NULL,
+  async = FALSE,
+  ...
+)
 
-cr_works_(dois = NULL, query = NULL, filter = NULL, offset = NULL,
-  limit = NULL, sample = NULL, sort = NULL, order = NULL,
-  facet = FALSE, cursor = NULL, cursor_max = 5000,
-  .progress = "none", parse = FALSE, flq = NULL, select = NULL,
-  async = FALSE, ...)
+cr_works_(
+  dois = NULL,
+  query = NULL,
+  filter = NULL,
+  offset = NULL,
+  limit = NULL,
+  sample = NULL,
+  sort = NULL,
+  order = NULL,
+  facet = FALSE,
+  cursor = NULL,
+  cursor_max = 5000,
+  .progress = "none",
+  parse = FALSE,
+  flq = NULL,
+  select = NULL,
+  async = FALSE,
+  ...
+)
 }
 \arguments{
 \item{dois}{Search by a single DOI or many DOIs.  Note that using this
@@ -89,18 +116,21 @@ non-boolean is coerced to \code{FALSE}.}
 \item{flq}{field queries. One or more field queries. Acceptable set of
 field query parameters are:
 \itemize{
-\item \code{query.title} - Query title and subtitle
-\item \code{query.container-title}    - Query container-title aka. publication name
+\item \code{query.container-title}    - Query container-title aka.
+publication name
 \item \code{query.author} - Query author first and given names
 \item \code{query.editor} - Query editor first and given names
 \item \code{query.chair}    - Query chair first and given names
 \item \code{query.translator} - Query translator first and given names
-\item \code{query.contributor} - Query author, editor, chair and translator
-first and given names
-\item \code{query.bibliographic} - Query bibliographic information, useful for
-citation lookup. Includes titles, authors, ISSNs and publication years
+\item \code{query.contributor} - Query author, editor, chair and
+translator first and given names
+\item \code{query.bibliographic} - Query bibliographic information, useful
+for citation lookup. Includes titles, authors, ISSNs and publication years
 \item \code{query.affiliation} - Query contributor affiliations
-}}
+}
+
+Note: \code{query.title} has been removed - use \code{query.bibliographic}
+as a replacement}
 
 \item{select}{(character) One or more field to return (only those fields
 are returned)}
@@ -234,9 +264,9 @@ res <- cr_works(query = "ecology", flq = c(query.author = 'Boettiger'))
 res <- cr_works(query = "ecology",
   flq = c(`query.container-title` = 'Ecology'))
 
-## query.author and query.title
+## query.author and query.bibliographic
 res <- cr_works(query = "ecology",
-  flq = c(query.author = 'Smith', query.title = 'cell'))
+  flq = c(query.author = 'Smith', query.bibliographic = 'cell'))
 
 # select only certain fields to return
 res <- cr_works(query = "NSF", select = c('DOI', 'title'))
@@ -265,9 +295,12 @@ system.time(lapply(queries, function(z) cr_works(query = z)))
 \url{https://github.com/CrossRef/rest-api-doc/blob/master/rest_api.md}
 }
 \seealso{
-Other crossref: \code{\link{cr_funders}},
-  \code{\link{cr_journals}}, \code{\link{cr_licenses}},
-  \code{\link{cr_members}}, \code{\link{cr_prefixes}},
-  \code{\link{cr_types}}
+Other crossref: 
+\code{\link{cr_funders}()},
+\code{\link{cr_journals}()},
+\code{\link{cr_licenses}()},
+\code{\link{cr_members}()},
+\code{\link{cr_prefixes}()},
+\code{\link{cr_types}()}
 }
 \concept{crossref}

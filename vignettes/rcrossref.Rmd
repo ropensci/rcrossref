@@ -1,15 +1,23 @@
-<!--
-%\VignetteEngine{knitr::knitr}
-%\VignetteIndexEntry{Crossref vignette}
-%\VignetteEncoding{UTF-8}
--->
+---
+title: rcrossref introduction 
+author: Scott Chamberlain
+date: "`r Sys.Date()`"
+output: rmarkdown::html_vignette
+vignette: >
+    %\VignetteIndexEntry{rcrossref introduction}
+    %\VignetteEngine{knitr::rmarkdown}
+    %\VignetteEncoding{UTF-8}
+---
 
 ```{r echo=FALSE}
+NOT_CRAN <- identical(tolower(Sys.getenv("NOT_CRAN")), "true")
 knitr::opts_chunk$set(
   comment = "#>",
+  collapse = TRUE,
   warning = FALSE,
   message = FALSE,
-  cache = FALSE
+  purl = NOT_CRAN,
+  eval = NOT_CRAN
 )
 ```
 
@@ -24,7 +32,7 @@ install.packages("rcrossref")
 Or development version from GitHub
 
 ```{r eval=FALSE}
-devtools::install_github("ropensci/rcrossref")
+remotes::install_github("ropensci/rcrossref")
 ```
 
 ```{r}

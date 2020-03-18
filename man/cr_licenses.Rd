@@ -5,12 +5,26 @@
 \alias{cr_licenses_}
 \title{Search CrossRef licenses}
 \usage{
-cr_licenses(query = NULL, offset = NULL, limit = NULL, sort = NULL,
-  order = NULL, .progress = "none", ...)
+cr_licenses(
+  query = NULL,
+  offset = NULL,
+  limit = NULL,
+  sort = NULL,
+  order = NULL,
+  .progress = "none",
+  ...
+)
 
-cr_licenses_(query = NULL, offset = NULL, limit = NULL,
-  sort = NULL, order = NULL, .progress = "none", parse = FALSE,
-  ...)
+cr_licenses_(
+  query = NULL,
+  offset = NULL,
+  limit = NULL,
+  sort = NULL,
+  order = NULL,
+  .progress = "none",
+  parse = FALSE,
+  ...
+)
 }
 \arguments{
 \item{query}{Query terms}
@@ -73,9 +87,12 @@ cr_licenses_(query = "elsevier", parse=TRUE)
 \url{https://github.com/CrossRef/rest-api-doc/blob/master/rest_api.md}
 }
 \seealso{
-Other crossref: \code{\link{cr_funders}},
-  \code{\link{cr_journals}}, \code{\link{cr_members}},
-  \code{\link{cr_prefixes}}, \code{\link{cr_types}},
-  \code{\link{cr_works}}
+Other crossref: 
+\code{\link{cr_funders}()},
+\code{\link{cr_journals}()},
+\code{\link{cr_members}()},
+\code{\link{cr_prefixes}()},
+\code{\link{cr_types}()},
+\code{\link{cr_works}()}
 }
 \concept{crossref}
