@@ -217,7 +217,7 @@
       )
       # response <- cli$get(query = args, ...)
       # response <- mid$call(cli$get(query = args, ...), expire = cache$expire)
-      response <- if (length(cache$path) > 0) mid$call(cli$get(query = args, ...), expire = cache$expire) else cli$get(query = args, ...)
+      response <- if (length(cache$path) > 0) mid$r(cli$get(query = args, ...), expire = cache$expire) else cli$get(query = args, ...)
     }
     warn_status(response)
     if (response$status_code < 202) {
