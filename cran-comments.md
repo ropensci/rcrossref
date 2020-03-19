@@ -1,7 +1,7 @@
 ## Test environments
 
-* local OS X install, R 3.6.0 patched
-* ubuntu 14.04.5 LTS (on Travis-CI), R 3.6.0
+* local OS X install, R 3.6.3 Patched
+* ubuntu 16.04 LTS (on Travis-CI), R 3.6.3
 * win-builder (devel and release)
 
 ## R CMD check results
@@ -14,7 +14,7 @@
 
 -------
 
-This submission includes new functionality for some functions, a slight fix for a function, and fixes non-ascii text in a test fixture that was causing cran check failures on debian clang devel.
+This submission includes documentation improvements, and a few bug fixes.
 
 Thanks!
 Scott Chamberlain

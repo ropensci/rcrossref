@@ -2,21 +2,21 @@
 
 |field    |value                                       |
 |:--------|:-------------------------------------------|
-|version  |R version 3.6.0 Patched (2019-04-30 r76446) |
-|os       |macOS Mojave 10.14.4                        |
+|version  |R version 3.6.3 Patched (2020-02-29 r77909) |
+|os       |macOS Catalina 10.15.3                      |
 |system   |x86_64, darwin15.6.0                        |
 |ui       |X11                                         |
 |language |(EN)                                        |
 |collate  |en_US.UTF-8                                 |
 |ctype    |en_US.UTF-8                                 |
 |tz       |US/Pacific                                  |
-|date     |2019-05-04                                  |
+|date     |2020-03-19                                  |
 
 # Dependencies
 
 |package   |old   |new   |Δ  |
 |:---------|:-----|:-----|:--|
-|rcrossref |0.9.0 |0.9.2 |*  |
+|rcrossref |0.9.2 |1.0.0 |*  |
 
 # Revdeps
 
