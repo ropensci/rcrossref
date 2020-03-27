@@ -15,7 +15,6 @@
 #' parameter. Default: `FALSE`
 #' @param url (character) Base URL for the content negotiation request. 
 #' Default: "https://doi.org"
-#' @param cache (list) named list of caching options. See Details.
 #' 
 #' @template moreargs
 #' @details See <http://citation.crosscite.org/docs.html> for more info
@@ -38,10 +37,13 @@
 #'   `http://data.medra.org`. DOI agency is checked first (see
 #'   [cr_agency()]).
 #'
-#' @section cache parameter options:
+#' @section caching:
 #' 
-#' - path: directory path to cache in
-#' - expire: expire time; leave as `NULL` to not expire. default: `NULL`
+#' Caching is done using the package \pkg{webmiddens}. To cache requests
+#' first enable webmiddens `webmiddens::wm_enable()`, then configure where to
+#' cache files `webmiddens::wm_configuration("somedirectory")`. See examples
+#' for an example. To see where you're cached files are go to the path shown
+#' when you run `webmiddens::midden_current()`
 #' 
 #' @examples \dontrun{
 #' cr_cn(dois="10.1126/science.169.3946.635")
@@ -53,7 +55,6 @@
 #'
 #' # return an R bibentry type
 #' cr_cn("10.1126/science.169.3946.635", "bibentry")
-#' cr_cn("10.6084/m9.figshare.97218", "bibentry")
 #'
 #' # return an apa style citation
 #' cr_cn("10.1126/science.169.3946.635", "text", "apa")
@@ -82,7 +83,6 @@
 #' ## But most do work
 #' cr_cn("10.5284/1011335", "text")
 #' cr_cn("10.5284/1011335", "datacite-xml")
-#' cr_cn("10.5284/1011335", "rdf-xml")
 #' cr_cn("10.5284/1011335", "turtle")
 #' cr_cn("10.5284/1011335", "citeproc-json-ish")
 #' cr_cn("10.5284/1011335", "ris")
@@ -113,35 +113,29 @@
 #' 
 #' # with caching
 #' ## never expire
-#' unloadNamespace("vcr")
-#' dir <- "stuff2"
-#' cr_cn(dois="10.1126/science.169.3946.635", cache = list(path = dir))
-#' cr_cn(dois="10.1002/app.27716", cache = list(path = dir))
+#' webmiddens::wm_enable()
+#' webmiddens::wm_configuration("foostuff")
+#' cr_cn(dois="10.1126/science.169.3946.635", verbose=TRUE)
+#' cr_cn(dois="10.1002/app.27716", verbose=TRUE)
 #' 
 #' (dois <- cr_r(10))
 #' system.time((b=cr_cn(dois)))
-#' system.time((f=cr_cn(dois, cache = list(path = dir))))
-#' system.time((g=cr_cn(dois, cache = list(path = dir))))
+#' system.time((f=cr_cn(dois)))
+#' system.time((g=cr_cn(dois)))
 #' 
-#' cr_cn(dois[1:4], cache = list(path = dir, expire = 3))
-#' cr_cn(dois[1:4], cache = list(path = dir, expire = 3))
+#' ## expire
+#' Sys.setenv(WEBMIDDENS_EXPIRY_SEC = 5)
+#' cr_cn(dois[1:4])
+#' Sys.sleep(5)
+#' cr_cn(dois[1:4])
 #' 
-#' cr_cn("10.1090/s0025-5718-65-99948-5", cache = list(path = dir, expire = 10))
-#' cr_cn("10.1090/s0025-5718-65-99948-5", cache = list(path = dir))
+#' Sys.setenv(WEBMIDDENS_EXPIRY_SEC = 7200)
+#' cr_cn("10.1090/s0025-5718-65-99948-5")
+#' cr_cn("10.1090/s0025-5718-65-99948-5")
 #' }
 
 `cr_cn` <- function(dois, format = "bibtex", style = 'apa',
-  locale = "en-US", raw = FALSE, .progress = "none", url = NULL, cache = list(),
-  ...) {
-
-  if (length(cache$path) > 0) {
-    assert(cache$path, "character")
-    assert(cache$expire, c("integer", "numeric"))
-    mid <- webmiddens::midden$new()
-    mid$init(path = cache$path)
-    # mid$call(..., expire = cache$expire)
-    # list.files(mid$cache_path)
-  }
+  locale = "en-US", raw = FALSE, .progress = "none", url = NULL, ...) {
 
   format <- match.arg(format, c("rdf-xml", "turtle", "citeproc-json",
                                 "citeproc-json-ish", "text", "ris", "bibtex",
@@ -149,12 +143,7 @@
                                 "crossref-tdm", "onix-xml"))
 
   cn <- function(doi, ...){
-    # agency_id <- NULL
-    agency_id <- suppressWarnings(GET_agency_id(doi))
-    # agency_id <- if (length(cache$path) > 0) 
-    #   mid$call(suppressWarnings(GET_agency_id(doi)), expire = cache$expire)
-    # else
-    #   suppressWarnings(GET_agency_id(doi))
+    agency_id <- suppressWarnings(use_midden(GET_agency_id(doi)))
     if (is.null(agency_id)) {
       warning(doi, " agency not found - proceeding with 'crossref' ...",
               call. = FALSE)
@@ -200,8 +189,7 @@
           `User-Agent` = rcrossref_ua(), `X-USER-AGENT` = rcrossref_ua()
         )
       )
-      # response <- cli$get(...)
-      response <- if (length(cache$path) > 0) mid$call(cli$get(...), expire = cache$expire) else cli$get(...)
+      response <- use_midden(cli$get(...))
     } else {
       if (format == "text") {
         type <- paste(type, "; style = ", style, "; locale = ", locale,
@@ -215,9 +203,7 @@
           Accept = type
         )
       )
-      # response <- cli$get(query = args, ...)
-      # response <- mid$call(cli$get(query = args, ...), expire = cache$expire)
-      response <- if (length(cache$path) > 0) mid$r(cli$get(query = args, ...), expire = cache$expire) else cli$get(query = args, ...)
+      response <- use_midden(cli$get(query = args, ...))
     }
     warn_status(response)
     if (response$status_code < 202) {

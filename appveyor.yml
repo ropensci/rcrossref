@@ -15,6 +15,7 @@ test_script:
 
 on_failure:
   - travis-tool.sh dump_logs
+  - travis-tool.sh install_github ropensci/webmockr@middens ropenscilabs/webmiddens
 
 environment:
   global:

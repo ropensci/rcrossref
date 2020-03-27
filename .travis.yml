@@ -10,6 +10,10 @@ addons:
 r_binary_packages:
   - covr
 
+r_github_packages:
+  - ropensci/webmockr@middens
+  - ropenscilabs/webmiddens
+
 jobs:
   include:
     - os: linux

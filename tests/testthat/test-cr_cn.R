@@ -1,5 +1,7 @@
 context("testing cr_cn")
 
+# webmiddens::wm_disable()
+
 test_that("cr_cn returns", {
   vcr::use_cassette("cr_cn_citeproc_json", {
     b <- cr_cn(dois = "10.1126/science.169.3946.635", format = "citeproc-json")

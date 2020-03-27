@@ -5,7 +5,7 @@ Description: Client for various 'CrossRef' 'APIs', including 'metadata' search
     (including 'bibtex', 'citeproc-json', 'rdf-xml', etc.), convert 'DOIs'
     to 'PMIDs', and 'vice versa', get citations for 'DOIs', and get links to
     full text of articles when available.
-Version: 1.0.0.91
+Version: 1.0.0.93
 License: MIT + file LICENSE
 Authors@R: c(
     person("Scott", "Chamberlain", role = c("aut", "cre"), 
@@ -37,7 +37,7 @@ Imports:
     stringr,
     DT,
     stats,
-    webmiddens (>= 0.0.2.94)
+    webmiddens (>= 0.0.3.91)
 Suggests:
     roxygen2 (>= 7.1.0),
     testthat,

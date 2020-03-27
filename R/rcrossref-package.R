@@ -110,7 +110,7 @@
 #' @importFrom stringr str_detect str_match str_replace
 #' @importFrom stats setNames
 #' @importFrom crul HttpRequest AsyncVaried
-#' @importFrom webmiddens midden
+#' @importFrom webmiddens use_midden
 #' @name rcrossref-package
 #' @aliases rcrossref
 #' @docType package

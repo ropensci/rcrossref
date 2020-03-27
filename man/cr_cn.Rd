@@ -12,7 +12,6 @@ cr_cn(
   raw = FALSE,
   .progress = "none",
   url = NULL,
-  cache = list(),
   ...
 )
 }
@@ -43,8 +42,6 @@ non-boolean is coerced to \code{FALSE}.}
 \item{url}{(character) Base URL for the content negotiation request.
 Default: "https://doi.org"}
 
-\item{cache}{(list) named list of caching options. See Details.}
-
 \item{...}{Named parameters passed on to \code{\link[crul]{verb-GET}}}
 }
 \description{
@@ -71,12 +68,13 @@ Note that the format type \code{citeproc-json} uses the CrossRef API at
 \verb{http://data.medra.org}. DOI agency is checked first (see
 \code{\link[=cr_agency]{cr_agency()}}).
 }
-\section{cache parameter options}{
+\section{caching}{
 
-\itemize{
-\item path: directory path to cache in
-\item expire: expire time; leave as \code{NULL} to not expire. default: \code{NULL}
-}
+
+Caching is done using the package \pkg{webmiddens}. To cache requests
+first enable webmiddens \code{webmiddens::wm_enable()}, then configure where to
+cache files \code{webmiddens::wm_configuration("somedirectory")}. See examples
+for an example.
 }
 
 \examples{
@@ -90,7 +88,6 @@ cr_cn("10.1126/science.169.3946.635", "text")
 
 # return an R bibentry type
 cr_cn("10.1126/science.169.3946.635", "bibentry")
-cr_cn("10.6084/m9.figshare.97218", "bibentry")
 
 # return an apa style citation
 cr_cn("10.1126/science.169.3946.635", "text", "apa")
@@ -119,7 +116,6 @@ foo(sample(stys, 1))
 ## But most do work
 cr_cn("10.5284/1011335", "text")
 cr_cn("10.5284/1011335", "datacite-xml")
-cr_cn("10.5284/1011335", "rdf-xml")
 cr_cn("10.5284/1011335", "turtle")
 cr_cn("10.5284/1011335", "citeproc-json-ish")
 cr_cn("10.5284/1011335", "ris")
@@ -150,20 +146,24 @@ cr_cn("10.5284/1011335", url = "https://data.datacite.org",
 
 # with caching
 ## never expire
-unloadNamespace("vcr")
-dir <- "stuff2"
-cr_cn(dois="10.1126/science.169.3946.635", cache = list(path = dir))
-cr_cn(dois="10.1002/app.27716", cache = list(path = dir))
+webmiddens::wm_enable()
+webmiddens::wm_configuration("foostuff")
+cr_cn(dois="10.1126/science.169.3946.635", verbose=TRUE)
+cr_cn(dois="10.1002/app.27716", verbose=TRUE)
 
 (dois <- cr_r(10))
 system.time((b=cr_cn(dois)))
-system.time((f=cr_cn(dois, cache = list(path = dir))))
-system.time((g=cr_cn(dois, cache = list(path = dir))))
+system.time((f=cr_cn(dois)))
+system.time((g=cr_cn(dois)))
 
-cr_cn(dois[1:4], cache = list(path = dir, expire = 3))
-cr_cn(dois[1:4], cache = list(path = dir, expire = 3))
+## expire
+Sys.setenv(WEBMIDDENS_EXPIRY_SEC = 5)
+cr_cn(dois[1:4])
+Sys.sleep(5)
+cr_cn(dois[1:4])
 
-cr_cn("10.1090/s0025-5718-65-99948-5", cache = list(path = dir, expire = 10))
-cr_cn("10.1090/s0025-5718-65-99948-5", cache = list(path = dir))
+Sys.setenv(WEBMIDDENS_EXPIRY_SEC = 7200)
+cr_cn("10.1090/s0025-5718-65-99948-5")
+cr_cn("10.1090/s0025-5718-65-99948-5")
 }
 }
