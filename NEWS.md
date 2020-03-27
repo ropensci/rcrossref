@@ -1,3 +1,19 @@
+rcrossref 1.0.0
+===============
+
+### MINOR IMPROVEMENTS
+
+* docs page vignette has names (#197)
+* `query.title` field query is no longer supported by Crossref, removed from package (#198)
+* fix some links in readme (#199)
+* improve documentation for how to do deep paging (new section "Deep paging"), and how to use the cursor specifically (#190)
+
+### BUG FIXES
+
+* fix error when progress used and when limit param not used  (#190)
+* encoding fix for the Crossref RStudio Addin (#194) (#201)
+
+
 rcrossref 0.9.2
 ===============
 
