@@ -40,10 +40,17 @@
 #' @section caching:
 #' 
 #' Caching is done using the package \pkg{webmiddens}. To cache requests
-#' first enable webmiddens `webmiddens::wm_enable()`, then configure where to
-#' cache files `webmiddens::wm_configuration("somedirectory")`. See examples
-#' for an example. To see where you're cached files are go to the path shown
-#' when you run `webmiddens::midden_current()`
+#' first enable webmiddens `wm_enable()` - enabling means that all
+#' following data requests with this function will be cached. Next, configure
+#' where to cache files `wm_configuration("somedirectory")`. See
+#' examples for an example. To see where you're cached files are go to the
+#' path shown when you run `webmiddens::midden_current()`
+#' 
+#' The first time you get results for a given DOI, the result is stored
+#' on disk (aka, the cache), so that next time the same query is made,
+#' and until expiry of the cache, the result is read from disk without
+#' any HTTP requests. See webmiddens docs for more:
+#' https://docs.ropensci.org/webmiddens/
 #' 
 #' @examples \dontrun{
 #' cr_cn(dois="10.1126/science.169.3946.635")
@@ -113,15 +120,18 @@
 #' 
 #' # with caching
 #' ## never expire
-#' webmiddens::wm_enable()
-#' webmiddens::wm_configuration("foostuff")
+#' library(webmiddens)
+#' wm_enable()
+#' wm_configuration("foostuff")
 #' cr_cn(dois="10.1126/science.169.3946.635", verbose=TRUE)
 #' cr_cn(dois="10.1002/app.27716", verbose=TRUE)
 #' 
+#' # 10 random DOIs - see that the request is much faster the second time
+#' ## note: you could try turninig off WiFI on the 2nd request and it
+#' ## would still work
 #' (dois <- cr_r(10))
 #' system.time((b=cr_cn(dois)))
 #' system.time((f=cr_cn(dois)))
-#' system.time((g=cr_cn(dois)))
 #' 
 #' ## expire
 #' Sys.setenv(WEBMIDDENS_EXPIRY_SEC = 5)
