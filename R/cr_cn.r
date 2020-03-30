@@ -42,7 +42,7 @@
 #' Caching is done using the package \pkg{webmiddens}. To cache requests
 #' first enable webmiddens `webmiddens::wm_enable()`, then configure where to
 #' cache files `webmiddens::wm_configuration("somedirectory")`. See examples
-#' for an example. To see where you're cached files are go to the path shown
+#' for an example. To see where your cached files are go to the path shown
 #' when you run `webmiddens::midden_current()`
 #' 
 #' @examples \dontrun{
