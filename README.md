@@ -58,7 +58,7 @@ To stop sharing your email when using rcrossref simply delete it from your .Renv
 
 ## Citation search
 
-Use CrossRef's DOI Content Negotiation (https://citation.crosscite.org/docs.html) service, where you can citations back in various formats, including `apa`
+Use CrossRef's DOI Content Negotiation (https://citation.crosscite.org/docs.html) service, where you can get citations back in various formats, including `apa`
 
 
 ```r
