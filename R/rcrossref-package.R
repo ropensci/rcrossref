@@ -93,7 +93,7 @@
 #' <https://github.com/haozhu233>
 #'
 #' @importFrom methods as
-#' @importFrom utils modifyList packageVersion
+#' @importFrom utils modifyList packageVersion URLdecode
 #' @importFrom dplyr bind_rows tbl_df
 #' @importFrom R6 R6Class
 #' @importFrom xml2 read_xml xml_attr xml_find_all xml_find_first xml_text
