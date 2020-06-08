@@ -110,6 +110,7 @@
 #' @importFrom stringr str_detect str_match str_replace
 #' @importFrom stats setNames
 #' @importFrom crul HttpRequest AsyncVaried
+#' @importFrom tibble as_tibble
 #' @name rcrossref-package
 #' @aliases rcrossref
 #' @docType package

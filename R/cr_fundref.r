@@ -100,7 +100,7 @@
                  .progress = .progress)
     if (!is.null(cursor)) {
       out <- lapply(res, "[[", "data")
-      df <- tbl_df(bind_rows(out))
+      df <- tibble::as_tibble(bind_rows(out))
       facets <- stats::setNames(lapply(res, function(x) parse_facets(x$facets)),
                                 dois)
       facets <- if (all(vapply(facets, is.null, logical(1)))) NULL else facets
@@ -121,7 +121,7 @@
           } else {
             tmp <- lapply(out, function(x) lapply(x$items, parse_works))
             tmp <- tmp[!sapply(tmp, length) == 0]
-            df <- tbl_df(bind_rows(do.call('c', tmp)))
+            df <- tibble::as_tibble(bind_rows(do.call('c', tmp)))
             facets <- stats::setNames(lapply(res, function(x)
               parse_facets(x$facets)), dois)
             facets <- if (all(vapply(facets, is.null, logical(1))))
@@ -149,12 +149,12 @@
         if (is.null(dois)) {
           list(
             meta = parse_meta(res),
-            data = tbl_df(bind_rows(lapply(res$message$items, parse_fundref))),
+            data = tibble::as_tibble(bind_rows(lapply(res$message$items, parse_fundref))),
             facets = parse_facets(res$message$facets)
           )
         } else {
           if (works) {
-            wout <- tbl_df(bind_rows(lapply(res$message$items, parse_works)))
+            wout <- tibble::as_tibble(bind_rows(lapply(res$message$items, parse_works)))
             meta <- parse_meta(res)
           } else {
             wout <- parse_fund(res$message)

@@ -31,6 +31,7 @@ Imports:
     plyr,
     bibtex,
     dplyr (>= 0.7.4),
+    tibble,
     R6,
     shiny,
     miniUI,

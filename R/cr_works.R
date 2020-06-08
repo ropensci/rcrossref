@@ -166,7 +166,7 @@ cr_works <- function(dois = NULL, query = NULL, filter = NULL, offset = NULL,
                  cursor_max = cursor_max, .progress = .progress, ...)
     res <- lapply(res, "[[", "message")
     res <- lapply(res, parse_works)
-    df <- tbl_df(bind_rows(res))
+    df <- tibble::as_tibble(bind_rows(res))
     #exclude rows with empty DOI value until CrossRef API supports
     #input validation
     if (nrow(df[df$doi == "", ]) > 0) {
@@ -183,11 +183,11 @@ cr_works <- function(dois = NULL, query = NULL, filter = NULL, offset = NULL,
       } else {
         meta <- parse_meta(tmp)
         list(meta = meta,
-             data = tbl_df(bind_rows(lapply(tmp$message$items, parse_works))),
+             data = tibble::as_tibble(bind_rows(lapply(tmp$message$items, parse_works))),
              facets = parse_facets(tmp$message$facets))
       }
     } else {
-      list(meta = NULL, data = tbl_df(parse_works(tmp$message)), facets = NULL)
+      list(meta = NULL, data = tibble::as_tibble(parse_works(tmp$message)), facets = NULL)
     }
   }
 }
@@ -340,7 +340,7 @@ parse_works <- function(zzz){
     out_tmp$author <- list(parse_todf(zzz$author)) %||% NULL
     out_tmp$funder <- list(parse_todf(zzz$funder)) %||% NULL
     out_tmp$link <- list(parse_todf(zzz$link)) %||% NULL
-    out_tmp$license <- list(tbl_df(bind_rows(lapply(zzz$license, parse_license)))) %||% NULL
+    out_tmp$license <- list(tibble::as_tibble(bind_rows(lapply(zzz$license, parse_license)))) %||% NULL
     out_tmp$`clinical-trial-number` <- list(parse_todf(zzz$`clinical-trial-number`)) %||% NULL
     out_tmp$reference <- list(parse_todf(zzz$reference)) %||% NULL
     out_tmp <- Filter(function(x) length(unlist(x)) > 0, out_tmp)
@@ -378,7 +378,7 @@ parse_todf <- function(x){
   if (is.null(x)) {
     NULL
   } else {
-    tbl_df(bind_rows(lapply(x, function(w) {
+    tibble::as_tibble(bind_rows(lapply(x, function(w) {
       if ("list" %in% vapply(w, class, "")) {
         w <- unlist(w, recursive = FALSE)
         if ("list" %in% vapply(w, class, "")) {

@@ -72,7 +72,7 @@ Requestor <- R6::R6Class("Requestor",
     meta <- parse_meta(x[[1]])
     meta$next_cursor <- x[[length(x)]]$message$`next-cursor`
     list(meta = meta,
-         data = tbl_df(bind_rows(lapply(x, function(z) {
+         data = tibble::as_tibble(bind_rows(lapply(x, function(z) {
            bind_rows(lapply(z$message$items, parse_works))
          }))),
          facets = cr_compact(

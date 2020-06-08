@@ -18,7 +18,7 @@ cr_async <- function(endpoint, args, parse = TRUE, ...) {
   txt <- cli$parse()
   if (!parse) return(txt)
   lapply(txt, function(z) {
-    dplyr::tbl_df(dplyr::bind_rows(
+    tibble::as_tibble(dplyr::bind_rows(
       lapply(jsonlite::fromJSON(z, simplifyVector = FALSE)$message$items,
         parse_works)
     ))

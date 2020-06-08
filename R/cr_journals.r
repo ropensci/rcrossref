@@ -105,7 +105,7 @@
                  .progress = .progress)
     if (!is.null(cursor)) {
       out <- lapply(res, "[[", "data")
-      df <- tbl_df(bind_rows(out))
+      df <- tibble::as_tibble(bind_rows(out))
       facets <- stats::setNames(lapply(res, function(x) parse_facets(x$facets)),
                                 issn)
       facets <- if (all(vapply(facets, is.null, logical(1)))) NULL else facets
@@ -117,10 +117,10 @@
 
       if (works) {
         tmp <- lapply(res2, function(z) bind_rows(lapply(z$items, parse_works)))
-        df <- tbl_df(bind_rows(tmp))
+        df <- tibble::as_tibble(bind_rows(tmp))
       } else {
         dat <- lapply(res2, function(z) if (is.null(z)) NULL else parse_journal(z))
-        df <- tbl_df(bind_rows(dat))
+        df <- tibble::as_tibble(bind_rows(dat))
       }
       
       #exclude rows with empty ISSN value until CrossRef API
@@ -152,7 +152,7 @@
       if (!is.null(issn)) {
         if (works) {
           meta <- parse_meta(tmp)
-          dat <- tbl_df(bind_rows(lapply(tmp$message$items, parse_works)))
+          dat <- tibble::as_tibble(bind_rows(lapply(tmp$message$items, parse_works)))
         } else {
           dat <- if (is.null(tmp$message)) NULL else parse_journal(tmp$message)
         }
@@ -162,7 +162,7 @@
         meta <- parse_meta(tmp)
         list(
           meta = meta,
-          data = tbl_df(bind_rows(lapply(tmp$message$items, fxn))),
+          data = tibble::as_tibble(bind_rows(lapply(tmp$message$items, fxn))),
           facets = parse_facets(tmp$message$facets)
         )
       }

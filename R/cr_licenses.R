@@ -44,7 +44,7 @@
                           sort = sort, order = order))
 
   tmp <- licenses_GET(args = args, parse = TRUE, ...)
-  df <- tbl_df(bind_rows(lapply(tmp$message$items, data.frame,
+  df <- tibble::as_tibble(bind_rows(lapply(tmp$message$items, data.frame,
                                 stringsAsFactors = FALSE)))
   meta <- parse_meta(tmp)
   list(meta = meta, data = df)
