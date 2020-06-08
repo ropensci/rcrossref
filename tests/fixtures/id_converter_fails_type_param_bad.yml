@@ -1,0 +1,47 @@
+http_interactions:
+- request:
+    method: get
+    uri: https://www.ncbi.nlm.nih.gov/pmc/utils/idconv/v1.0/?tool=rcrossref&email=myrmecocystus%40gmail.com&ids=28371833&idtype=doi&format=json
+    body:
+      encoding: ''
+      string: ''
+    headers:
+      Accept-Encoding: gzip, deflate
+      Accept: application/json, text/xml, application/xml, */*
+      User-Agent: r-curl/4.3 crul/0.9.0 rOpenSci(rcrossref/1.0.0.91) (mailto:<crossref_email>)
+      X-USER-AGENT: r-curl/4.3 crul/0.9.0 rOpenSci(rcrossref/1.0.0.91) (mailto:<crossref_email>)
+  response:
+    status:
+      status_code: '404'
+      message: Not Found
+      explanation: Nothing matches the given URI
+    headers:
+      status: HTTP/1.1 404 Not Found
+      date: Mon, 08 Jun 2020 17:31:52 GMT
+      server: Apache
+      strict-transport-security: max-age=31536000; includeSubDomains; preload
+      referrer-policy: origin-when-cross-origin
+      content-security-policy: upgrade-insecure-requests
+      allow: GET,OPTIONS
+      access-control-allow-origin: '*'
+      access-control-allow-methods: GET, OPTIONS
+      access-control-allow-headers: Content-Type, Access-Control-Allow-Headers, Authorization,
+        X-Requested-With
+      content-type: application/json; charset=ISO-8859-1
+      vary: Accept-Encoding
+      content-encoding: gzip
+      x-ua-compatible: IE=Edge
+      x-xss-protection: 1; mode=block
+      content-length: '191'
+    body:
+      encoding: UTF-8
+      file: no
+      string: |
+        {
+         "status": "error",
+         "message": "ID%20type%20%27doi%27%20mismatch%20for%20%2728371833%27",
+         "responseDate": "2020-06-08 13:31:52",
+         "request": "tool=rcrossref;email=myrmecocystus%40gmail.com;ids=28371833;idtype=doi;format=json"
+        }
+  recorded_at: 2020-06-08 17:31:52 GMT
+  recorded_with: vcr/0.5.4, webmockr/0.6.2

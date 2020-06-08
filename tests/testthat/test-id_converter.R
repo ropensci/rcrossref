@@ -27,4 +27,9 @@ test_that("id_converter fails correctly", {
   expect_error(id_converter(), "argument \"x\" is missing")
   expect_error(id_converter(matrix()), "x must be of class")
   expect_error(id_converter(rep("foobar", 201)), "200 ids or less please")
+
+  vcr::use_cassette("id_converter_fails_type_param_bad", {
+    expect_error(id_converter("28371833", "doi"),
+      "ID type 'doi' mismatch for '28371833'")
+  })
 })

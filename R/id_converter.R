@@ -47,7 +47,8 @@
   )
   res <- cli$get(query = args, ...)
   if (res$status_code > 201) {
-    stop(jsonlite::fromJSON(res$parse("UTF-8"))$message, call. = FALSE)
+    mssg <- jsonlite::fromJSON(res$parse("UTF-8"))$message
+    stop(URLdecode(mssg), call. = FALSE)
   }
   jsonlite::fromJSON(res$parse("UTF-8"))
 }
