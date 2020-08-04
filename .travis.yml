@@ -7,7 +7,7 @@ addons:
     packages:
       - poppler-utils
 
-r_binary_packages:
+r_packages:
   - covr
 
 jobs:
