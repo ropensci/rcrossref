@@ -5,9 +5,8 @@ rcrossref: R interface to CrossRef APIs
 
 [![cran checks](https://cranchecks.info/badges/worst/rcrossref)](https://cranchecks.info/pkgs/rcrossref)
 [![Project Status: Active - The project has reached a stable, usable state and is being actively developed.](https://www.repostatus.org/badges/latest/active.svg)](https://www.repostatus.org/#active)
-[![Build Status](https://api.travis-ci.org/ropensci/rcrossref.png)](https://travis-ci.org/ropensci/rcrossref)
-[![Build status](https://ci.appveyor.com/api/projects/status/jbo6y7dg4qiq7mol/branch/master)](https://ci.appveyor.com/project/sckott/rcrossref/branch/master)
-[![codecov.io](https://codecov.io/github/ropensci/rcrossref/coverage.svg?branch=master)](https://codecov.io/github/ropensci/rcrossref?branch=master)
+[![R-check](https://github.com/ropensci/rcrossref/workflows/R-check/badge.svg)](https://github.com/ropensci/rcrossref/actions/)
+[![codecov](https://codecov.io/gh/ropensci/rcrossref/branch/master/graph/badge.svg)](https://codecov.io/gh/ropensci/rcrossref)
 [![rstudio mirror downloads](https://cranlogs.r-pkg.org/badges/rcrossref)](https://github.com/metacran/cranlogs.app)
 [![cran version](https://www.r-pkg.org/badges/version/rcrossref)](https://cran.r-project.org/package=rcrossref)
 
@@ -451,7 +450,7 @@ for text mining.
 * Please report any issues or bugs: https://github.com/ropensci/rcrossref/issues
 * License: MIT
 * Get citation information for `rcrossref` in R doing `citation(package = 'rcrossref')`
-* Please note that this project is released with a [Contributor Code of Conduct][coc]. By participating in this project you agree to abide by its terms.
+* Please note that this package is released with a [Contributor Code of Conduct](https://ropensci.org/code-of-conduct/). By contributing to this project, you agree to abide by its terms.
 
 ---
 
