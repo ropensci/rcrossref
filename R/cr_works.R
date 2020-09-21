@@ -275,9 +275,10 @@ parse_works <- function(zzz){
             'deposited','published-print','published-online','DOI',
             'funder','indexed','ISBN',
             'ISSN','issue','issued','license', 'link','member','page',
-            'prefix','publisher','reference-count', 'score','source',
+            'prefix','publisher', 'score','source',
+            'reference-count', 'references-count', 'is-referenced-by-count',
             'subject','subtitle','title', 'type','update-policy','URL',
-            'volume','abstract')
+            'volume','abstract', 'language', 'short-container-title')
   manip <- function(which="issued", y) {
     res <- switch(
       which,
@@ -285,6 +286,8 @@ parse_works <- function(zzz){
                                      collapse = ",")),
       `archive` = list(y[[which]]),
       `container-title` = list(paste0(unlist(y[[which]]),
+                                      collapse = ",")),
+      `short-container-title` = list(paste0(unlist(y[[which]]),
                                       collapse = ",")),
       created = list(make_date(y[[which]]$`date-parts`)),
       deposited = list(make_date(y[[which]]$`date-parts`)),
@@ -305,6 +308,9 @@ parse_works <- function(zzz){
       prefix = list(y[[which]]),
       publisher = list(y[[which]]),
       `reference-count` = list(y[[which]]),
+      `references-count` = list(y[[which]]),
+      `is-referenced-by-count` = list(y[[which]]),
+      `language` = list(y[[which]]),
       score = list(y[[which]]),
       source = list(y[[which]]),
       subject = list(paste0(unlist(y[[which]]), collapse = ",")),
@@ -340,6 +346,12 @@ parse_works <- function(zzz){
     out_tmp$author <- list(parse_todf(zzz$author)) %||% NULL
     out_tmp$funder <- list(parse_todf(zzz$funder)) %||% NULL
     out_tmp$link <- list(parse_todf(zzz$link)) %||% NULL
+    if (!is.null(zzz$`content-domain`)) {
+      out_tmp$content_domain <- list(
+        data.frame(domain=paste0(unlist(zzz$`content-domain`$domain), collapse=","), 
+          crossmark_restriction=unlist(zzz$`content-domain`$`crossmark-restriction`))) %||% NULL
+    }
+    out_tmp$update_to <- list(tibble::as_tibble(bind_rows(lapply(zzz$`update-to`, parse_update_to)))) %||% NULL
     out_tmp$license <- list(tibble::as_tibble(bind_rows(lapply(zzz$license, parse_license)))) %||% NULL
     out_tmp$`clinical-trial-number` <- list(parse_todf(zzz$`clinical-trial-number`)) %||% NULL
     out_tmp$reference <- list(parse_todf(zzz$reference)) %||% NULL
@@ -362,6 +374,16 @@ parse_license <- function(x){
   } else {
     date <- make_date(x$start$`date-parts`)
     data.frame(date = date, x[!names(x) == "start"],
+               stringsAsFactors = FALSE)
+  }
+}
+
+parse_update_to <- function(x){
+  if (is.null(x)) {
+    NULL
+  } else {
+    date <- make_date(x$updated$`date-parts`)
+    data.frame(date = date, x[!names(x) == "updated"],
                stringsAsFactors = FALSE)
   }
 }
