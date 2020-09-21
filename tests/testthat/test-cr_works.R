@@ -205,16 +205,16 @@ test_that("cr_works - handles empty funder item", {
   })
 })
 
-test_that("cr_works - async", {
-  skip_on_cran() # async mocking/webmockr/vcr not supported yet
+# test_that("cr_works - async", {
+#   skip_on_cran() # async mocking/webmockr/vcr not supported yet
 
-  queries <- c("ecology", "science", "cellular", "birds", "European",
-    "bears", "beets", "laughter", "hapiness", "funding")
-  x <- cr_works(query = queries, async = TRUE)
-  expect_true(all(vapply(x, is.data.frame, logical(1))))
-  expect_equal(length(queries), length(x))
-  expect_is(x[[1]], "data.frame")
-})
+#   queries <- c("ecology", "science", "cellular", "birds", "European",
+#     "bears", "beets", "laughter", "hapiness", "funding")
+#   x <- cr_works(query = queries, async = TRUE, limit = 3)
+#   expect_true(all(vapply(x, is.data.frame, logical(1))))
+#   expect_equal(length(queries), length(x))
+#   expect_is(x[[1]], "data.frame")
+# })
 
 test_that("cr_works fails well: arguments that dont require http requests", {
   skip_on_cran()
