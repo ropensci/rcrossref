@@ -3,9 +3,9 @@
 #' @export
 #' @rdname cr_search_free-defunct
 #' @keywords internal
-`cr_search_free` <- function(...) {
+`cr_search_free` <- function(...) { # nocov start
   .Defunct(
     package = "rcrossref", 
     msg = "Removed - see cr_works(), cr_journals(), etc. for similar functionality"
   )
-}
+} # nocov end

@@ -3,6 +3,6 @@
 #' @keywords internal
 #' @note see `crminer::as_tdmurl`
 #' @rdname as.tdmurl-defunct 
-as.tdmurl <- function(...) {
+as.tdmurl <- function(...) { # nocov start
   .Defunct(package = "crminer", msg = "Removed - see crminer::as_tdmurl()")
-}
+} # nocov end

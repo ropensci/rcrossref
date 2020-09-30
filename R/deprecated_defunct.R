@@ -53,10 +53,10 @@ NULL
 #' @export
 #' @rdname cr_fundref-defunct
 #' @keywords internal
-`cr_fundref` <- function(...) {
+`cr_fundref` <- function(...) { # nocov start
   .Defunct(
     new = "cr_funders",
     package = "rcrossref",
     msg = "Removed - see cr_funders()"
   )
-}
+} # nocov end

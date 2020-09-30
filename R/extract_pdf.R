@@ -3,6 +3,6 @@
 #' @keywords internal
 #' @note see `crminer::crm_extract`
 #' @rdname extract_xpdf-defunct
-extract_xpdf <- function(...){
+extract_xpdf <- function(...){ # nocov start
   .Defunct(package = "crminer", msg = "Removed - see crminer::crm_extract()")
-}
+} # nocov end
