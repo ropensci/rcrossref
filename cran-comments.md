@@ -1,7 +1,7 @@
 ## Test environments
 
-* local OS X install, R 3.6.3 Patched
-* ubuntu 16.04 LTS (on Travis-CI), R 3.6.3
+* local OS X install, R 4.0.2 Patched
+* ubuntu 16.04 LTS (on Travis-CI), R 4.0.2
 * win-builder (devel and release)
 
 ## R CMD check results
@@ -10,11 +10,11 @@
 
 ## Reverse dependencies
 
-* I have run R CMD check on the 7 downstream dependencies. There were no problems. See the summary at <https://github.com/ropensci/rcrossref/tree/master/revdep>
+* I have run R CMD check on the 8 downstream dependencies. There were no problems. See the summary at <https://github.com/ropensci/rcrossref/tree/master/revdep>
 
 -------
 
-This submission includes documentation improvements, and a few bug fixes.
+This submission moves the bibtex package to Suggests as it has been orphaned, and a few minor improvements.
 
 Thanks!
 Scott Chamberlain

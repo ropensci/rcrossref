@@ -1,3 +1,13 @@
+rcrossref 1.1.0
+===============
+
+### MINOR IMPROVEMENTS
+
+* move `bibtex` package to Suggests as it has been orphaned, use it conditionally  (#209)
+* change all uses of `tibble::tbl_df` to `tibble::as_tibble` (#206)
+* additional fields now parsed in the `cr_works()` output: short-container-title, references-count, is-referenced-by-count, language, content-domain, and update-to (#208)
+
+
 rcrossref 1.0.0
 ===============
 

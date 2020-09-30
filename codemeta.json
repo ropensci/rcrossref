@@ -10,14 +10,13 @@
   "codeRepository": "https://github.com/ropensci/rcrossref",
   "issueTracker": "https://github.com/ropensci/rcrossref/issues",
   "license": "https://spdx.org/licenses/MIT",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "programmingLanguage": {
     "@type": "ComputerLanguage",
     "name": "R",
-    "version": "3.6.3",
     "url": "https://r-project.org"
   },
-  "runtimePlatform": "R version 3.6.3 Patched (2020-02-29 r77909)",
+  "runtimePlatform": "R version 4.0.2 Patched (2020-09-01 r79114)",
   "provider": {
     "@id": "https://cran.r-project.org",
     "@type": "Organization",
@@ -124,6 +123,18 @@
         "url": "https://cran.r-project.org"
       },
       "sameAs": "https://CRAN.R-project.org/package=vcr"
+    },
+    {
+      "@type": "SoftwareApplication",
+      "identifier": "bibtex",
+      "name": "bibtex",
+      "provider": {
+        "@id": "https://cran.r-project.org",
+        "@type": "Organization",
+        "name": "Comprehensive R Archive Network (CRAN)",
+        "url": "https://cran.r-project.org"
+      },
+      "sameAs": "https://CRAN.R-project.org/package=bibtex"
     }
   ],
   "softwareRequirements": [
@@ -190,18 +201,6 @@
     },
     {
       "@type": "SoftwareApplication",
-      "identifier": "bibtex",
-      "name": "bibtex",
-      "provider": {
-        "@id": "https://cran.r-project.org",
-        "@type": "Organization",
-        "name": "Comprehensive R Archive Network (CRAN)",
-        "url": "https://cran.r-project.org"
-      },
-      "sameAs": "https://CRAN.R-project.org/package=bibtex"
-    },
-    {
-      "@type": "SoftwareApplication",
       "identifier": "dplyr",
       "name": "dplyr",
       "version": ">= 0.7.4",
@@ -212,6 +211,18 @@
         "url": "https://cran.r-project.org"
       },
       "sameAs": "https://CRAN.R-project.org/package=dplyr"
+    },
+    {
+      "@type": "SoftwareApplication",
+      "identifier": "tibble",
+      "name": "tibble",
+      "provider": {
+        "@id": "https://cran.r-project.org",
+        "@type": "Organization",
+        "name": "Comprehensive R Archive Network (CRAN)",
+        "url": "https://cran.r-project.org"
+      },
+      "sameAs": "https://CRAN.R-project.org/package=tibble"
     },
     {
       "@type": "SoftwareApplication",
@@ -279,11 +290,11 @@
       "name": "stats"
     }
   ],
-  "contIntegration": ["https://travis-ci.org/ropensci/rcrossref", "https://ci.appveyor.com/project/sckott/rcrossref/branch/master", "https://codecov.io/github/ropensci/rcrossref?branch=master"],
+  "contIntegration": "https://codecov.io/gh/ropensci/rcrossref",
   "developmentStatus": "https://www.repostatus.org/#active",
   "releaseNotes": "https://github.com/ropensci/rcrossref/blob/master/NEWS.md",
   "readme": "https://github.com/ropensci/rcrossref/blob/master/README.md",
-  "fileSize": "3157.394KB",
+  "fileSize": "0KB",
   "applicationCategory": "Literature",
   "isPartOf": "https://ropensci.org",
   "keywords": ["text-ming", "literature", "pdf", "xml", "publications", "citations", "full-text", "TDM", "Crossref", "crossref-api", "doi", "metadata", "api", "r", "rstats", "api-wrapper", "r-package"],
