@@ -73,12 +73,6 @@ cr_cn(dois = "10.1126/science.169.3946.635", format = "text", style = "apa")
 cat(cr_cn(dois = "10.1126/science.169.3946.635", format = "bibtex"))
 ```
 
-`bibentry`
-
-```{r}
-cr_cn(dois = "10.6084/m9.figshare.97218", format = "bibentry")
-```
-
 ## Citation count
 
 Citation count, using OpenURL
