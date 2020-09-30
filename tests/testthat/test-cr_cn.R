@@ -1,18 +1,23 @@
 context("testing cr_cn")
 
-test_that("cr_cn returns", {
+test_that("cr_cn citeproc-json", {
   vcr::use_cassette("cr_cn_citeproc_json", {
     b <- cr_cn(dois = "10.1126/science.169.3946.635", format = "citeproc-json")
     expect_is(b, "list")
     expect_match(b$`container-title`, "Science")
   })
-
+})
+  
+test_that("cr_cn bibtex", {
+  skip_if_not_installed("bibtex")
   vcr::use_cassette("cr_cn_bibentry", {
     e <- cr_cn("10.1126/science.169.3946.635", "bibentry")
     expect_is(e, "list")
     expect_match(e$year, "1970")
   })
+})
 
+test_that("cr_cn xml types", {
   vcr::use_cassette("cr_cn_xml_types", {
     c <- cr_cn("10.1126/science.169.3946.635", "rdf-xml")
     expect_is(c, "xml_document")

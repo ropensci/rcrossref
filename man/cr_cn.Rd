@@ -21,7 +21,9 @@ cr_cn(
 \item{format}{Name of the format. One of "rdf-xml", "turtle",
 "citeproc-json", "citeproc-json-ish", "text", "ris", "bibtex" (default),
 "crossref-xml", "datacite-xml","bibentry", or "crossref-tdm". The format
-"citeproc-json-ish" is a format that is not quite proper citeproc-json}
+"citeproc-json-ish" is a format that is not quite proper citeproc-json.
+Note that the package bibtex is required when \code{format="bibtex"}; the
+package is in Suggests so is not required when installing rcrossref}
 
 \item{style}{a CSL style (for text format only). See \code{\link[=get_styles]{get_styles()}}
 for options. Default: 'apa'. If there's a style that CrossRef doesn't support

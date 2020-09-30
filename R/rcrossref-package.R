@@ -97,7 +97,6 @@
 #' @importFrom dplyr bind_rows tbl_df
 #' @importFrom R6 R6Class
 #' @importFrom xml2 read_xml xml_attr xml_find_all xml_find_first xml_text
-#' @importFrom bibtex read.bib
 #' @importFrom jsonlite toJSON fromJSON
 #' @importFrom plyr llply ldply
 #' @importFrom shiny h4 h5 fillRow htmlOutput renderUI textInput actionButton req

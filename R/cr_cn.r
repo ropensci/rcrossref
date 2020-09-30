@@ -6,7 +6,9 @@
 #' @param format Name of the format. One of "rdf-xml", "turtle",
 #' "citeproc-json", "citeproc-json-ish", "text", "ris", "bibtex" (default),
 #' "crossref-xml", "datacite-xml","bibentry", or "crossref-tdm". The format
-#' "citeproc-json-ish" is a format that is not quite proper citeproc-json
+#' "citeproc-json-ish" is a format that is not quite proper citeproc-json.
+#' Note that the package bibtex is required when `format="bibtex"`; the
+#' package is in Suggests so is not required when installing rcrossref
 #' @param style a CSL style (for text format only). See [get_styles()]
 #' for options. Default: 'apa'. If there's a style that CrossRef doesn't support
 #' you'll get a  `(500) Internal Server Error`
@@ -232,7 +234,8 @@
   }
 }
 
-parse_bibtex <- function(x){
+parse_bibtex <- function(x) {
+  chk4pk("bibtex")
   x <- gsub("@[Dd]ata", "@Misc", x)
   writeLines(x, "tmpscratch.bib")
   out <- bibtex::do_read_bib("tmpscratch.bib", 
