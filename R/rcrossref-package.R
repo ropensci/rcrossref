@@ -2,11 +2,11 @@
 #' @description R Client for Various CrossRef APIs.
 #' @section Crossref APIs:
 #' rcrossref interacts with the main Crossref metadata search API at
-#' <https://github.com/CrossRef/rest-api-doc/blob/master/rest_api.md>,
+#' https://github.com/CrossRef/rest-api-doc,
 #' the old metadata search API at http://search.labs.crossref.org/, their
 #' DOI Content Negotiation service at
-#' <http://citation.crosscite.org/docs.html>, and
-#' the \emph{Text and Data Mining} project <http://tdmsupport.crossref.org/>
+#' http://citation.crosscite.org/docs.html, and
+#' the \emph{Text and Data Mining} project http://tdmsupport.crossref.org/
 #' 
 #' Crossref's API issue tracker lives at https://gitlab.com/crossref/issues
 #' it's a good place to go ask them about things related to their API
@@ -19,7 +19,7 @@
 #' @section What am I actually searching?:
 #' When you use the `cr_*()` functions in this package, you are using
 #' the Crossref search API described at
-#' <https://github.com/CrossRef/rest-api-doc/blob/master/rest_api.md>.
+#' https://github.com/CrossRef/rest-api-doc
 #' When you search with query terms, on Crossref servers they are not searching
 #' full text, or even abstracts of articles, but only what is available in the
 #' data that is returned to you. That is, they search article titles, authors,
@@ -43,7 +43,7 @@
 #' The Crossref team encourage requests with appropriate contact information 
 #' and will forward you to a dedicated API cluster for improved performance when 
 #' you share your email address with them.
-#' <https://github.com/CrossRef/rest-api-doc#good-manners--more-reliable-service>
+#' https://github.com/CrossRef/rest-api-doc#good-manners--more-reliable-service
 #' 
 #' To pass your email address to Crossref via this client, simply store it 
 #' as environment variable in `.Renviron` like this:
@@ -90,7 +90,7 @@
 #' window pop up that you can put in DOIs for. If the DOI is found, the bibtex
 #' citations will be added to a file called `crossref.bib`. New citations
 #' will be appended to that file. Addin authored by Hao Zhu
-#' <https://github.com/haozhu233>
+#' https://github.com/haozhu233
 #'
 #' @importFrom methods as
 #' @importFrom utils modifyList packageVersion URLdecode

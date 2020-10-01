@@ -232,7 +232,7 @@ names(res$data)
 }
 }
 \references{
-\url{https://github.com/CrossRef/rest-api-doc/blob/master/rest_api.md}
+https://github.com/CrossRef/rest-api-doc
 }
 \seealso{
 Other crossref: 

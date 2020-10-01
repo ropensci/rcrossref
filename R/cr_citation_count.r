@@ -15,7 +15,7 @@
 #' has numeric values that are the citation count for that DOI, or `NA` if 
 #' not found or no count available
 #' 
-#' @details See <http://labs.crossref.org/openurl/> for more info on this
+#' @details See https://www.crossref.org/labs/openurl/ for more info on this
 #' Crossref API service.
 #'
 #' This number is also known as **cited-by**
@@ -37,7 +37,7 @@
 #'
 #' @seealso [cr_search()], [cr_r()]
 #' @author Carl Boettiger \email{cboettig@@gmail.com}, 
-#' Scott Chamberlain \email{myrmecocystus@@gmail.com}
+#' Scott Chamberlain
 #' @examples \dontrun{
 #' cr_citation_count(doi="10.1371/journal.pone.0042793")
 #' cr_citation_count(doi="10.1016/j.fbr.2012.01.001")

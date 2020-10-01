@@ -292,7 +292,7 @@ system.time(lapply(queries, function(z) cr_works(query = z)))
 }
 }
 \references{
-\url{https://github.com/CrossRef/rest-api-doc/blob/master/rest_api.md}
+https://github.com/CrossRef/rest-api-doc
 }
 \seealso{
 Other crossref: 

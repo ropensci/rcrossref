@@ -30,7 +30,7 @@
 #'  two years. 
 #' }
 #' @references
-#' <https://github.com/CrossRef/rest-api-doc/blob/master/rest_api.md>
+#' https://github.com/CrossRef/rest-api-doc
 #' @examples \dontrun{
 #' cr_journals(issn="2167-8359")
 #' cr_journals()

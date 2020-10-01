@@ -20,7 +20,7 @@
 #' @details BEWARE: The API will only work for CrossRef DOIs.
 #'
 #' @references
-#' <https://github.com/CrossRef/rest-api-doc/blob/master/rest_api.md>
+#' https://github.com/CrossRef/rest-api-doc
 #' @examples \dontrun{
 #' cr_types()
 #' cr_types("monograph")

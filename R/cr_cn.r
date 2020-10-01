@@ -19,7 +19,7 @@
 #' Default: "https://doi.org"
 #' 
 #' @template moreargs
-#' @details See <http://citation.crosscite.org/docs.html> for more info
+#' @details See http://citation.crosscite.org/docs.html for more info
 #' on the Crossref Content Negotiation API service.
 #'
 #'   DataCite DOIs: Some values of the `format` parameter won't work with

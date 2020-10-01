@@ -23,7 +23,7 @@
 #' both work for now
 #'
 #' @references
-#' <https://github.com/CrossRef/rest-api-doc/blob/master/rest_api.md>
+#' https://github.com/CrossRef/rest-api-doc
 #'
 #' @section NOTE:
 #' Funders without IDs don't show up on the /funders route, and in this

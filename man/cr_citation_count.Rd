@@ -35,7 +35,7 @@ not found or no count available
 Get a citation count via CrossRef OpenURL
 }
 \details{
-See \url{http://labs.crossref.org/openurl/} for more info on this
+See https://www.crossref.org/labs/openurl/ for more info on this
 Crossref API service.
 
 This number is also known as \strong{cited-by}
@@ -91,5 +91,5 @@ cr_citation_count(cr_r(50), async = TRUE)
 }
 \author{
 Carl Boettiger \email{cboettig@gmail.com},
-Scott Chamberlain \email{myrmecocystus@gmail.com}
+Scott Chamberlain
 }

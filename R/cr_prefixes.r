@@ -37,7 +37,7 @@
 #' IDs and the member routes should be used.
 #'
 #' @references
-#' <https://github.com/CrossRef/rest-api-doc/blob/master/rest_api.md>
+#' https://github.com/CrossRef/rest-api-doc
 #'
 #' @examples \dontrun{
 #' cr_prefixes(prefixes="10.1016")

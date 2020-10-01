@@ -50,7 +50,7 @@ Default: "https://doi.org"}
 Get citations in various formats from CrossRef.
 }
 \details{
-See \url{http://citation.crosscite.org/docs.html} for more info
+See http://citation.crosscite.org/docs.html for more info
 on the Crossref Content Negotiation API service.
 
 DataCite DOIs: Some values of the \code{format} parameter won't work with

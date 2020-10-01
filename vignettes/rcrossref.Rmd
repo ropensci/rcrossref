@@ -41,7 +41,7 @@ library("rcrossref")
 
 ## Citation search
 
-CrossRef's [DOI Content Negotiation](http://citation.crosscite.org/docs.html) service, where you can citations back in various formats, including `apa`
+CrossRef's DOI Content Negotiation (http://citation.crosscite.org/docs.html) service, where you can citations back in various formats, including `apa`
 
 ```{r}
 cr_cn(dois = "10.1371/journal.pone.0112608", format = "text", style = "apa")
@@ -75,7 +75,7 @@ cr_citation_count(doi="10.1371/journal.pone.0042793")
 
 ## Search Crossref metadata API
 
-The following functions all use the [CrossRef API](https://github.com/CrossRef/rest-api-doc/blob/master/rest_api.md).
+The following functions all use the CrossRef API (https://github.com/CrossRef/rest-api-doc).
 
 ### Look up funder information
 
