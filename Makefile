@@ -1,6 +1,11 @@
 PACKAGE := $(shell grep '^Package:' DESCRIPTION | sed -E 's/^Package:[[:space:]]+//')
 RSCRIPT = Rscript --no-init-file
 
+vign:
+	cd vignettes;\
+	${RSCRIPT} -e "Sys.setenv(NOT_CRAN='true'); knitr::knit('rcrossref.Rmd.og', output = 'rcrossref.Rmd')";\
+	cd ..
+
 install: doc build
 	R CMD INSTALL . && rm *.tar.gz
 

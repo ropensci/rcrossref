@@ -1,0 +1,131 @@
+---
+title: rcrossref introduction 
+author: Scott Chamberlain
+date: "`r Sys.Date()`"
+output: rmarkdown::html_vignette
+vignette: >
+    %\VignetteIndexEntry{rcrossref introduction}
+    %\VignetteEngine{knitr::rmarkdown}
+    %\VignetteEncoding{UTF-8}
+---
+
+```{r echo=FALSE}
+knitr::opts_chunk$set(
+  comment = "#>",
+  collapse = TRUE,
+  warning = FALSE,
+  message = FALSE
+)
+```
+
+## Installation
+
+Install stable version from CRAN
+
+```{r eval=FALSE}
+install.packages("rcrossref")
+```
+
+Or development version from GitHub
+
+```{r eval=FALSE}
+remotes::install_github("ropensci/rcrossref")
+```
+
+```{r}
+library("rcrossref")
+```
+
+## Citation search
+
+CrossRef's DOI Content Negotiation service, where you can citations back in various formats, including `apa`
+
+```{r}
+cr_cn(dois = "10.1371/journal.pone.0112608", format = "text", style = "apa")
+```
+
+There are a lot more styles. We include a dataset as a character vector within the package, accessible via the `get_styles()` function, e.g.,
+
+```{r}
+get_styles()[1:5]
+```
+
+`bibtex`
+
+```{r}
+cat(cr_cn(dois = "10.1126/science.169.3946.635", format = "bibtex"))
+```
+
+`bibentry`
+
+```{r}
+cr_cn(dois = "10.6084/m9.figshare.97218", format = "bibentry")
+```
+
+## Citation count
+
+Citation count, using OpenURL
+
+```{r}
+cr_citation_count(doi="10.1371/journal.pone.0042793")
+```
+
+## Search Crossref metadata API
+
+The following functions all use the CrossRef API.
+
+### Look up funder information
+
+```{r}
+cr_funders(query="NSF")
+```
+
+### Check the DOI minting agency
+
+```{r}
+cr_agency(dois = '10.13039/100000001')
+```
+
+### Search works (i.e., articles, books, etc.)
+
+```{r}
+cr_works(filter=c(has_orcid=TRUE, from_pub_date='2004-04-04'), limit=1)
+```
+
+### Search journals
+
+```{r}
+cr_journals(issn=c('1803-2427','2326-4225'))
+```
+
+### Search license information
+
+```{r}
+cr_licenses(query = 'elsevier')
+```
+
+### Search based on DOI prefixes
+
+```{r}
+cr_prefixes(prefixes=c('10.1016','10.1371','10.1023','10.4176','10.1093'))
+```
+
+### Search CrossRef members
+
+```{r}
+cr_members(query='ecology', limit = 5)
+```
+
+### Get N random DOIs
+
+`cr_r()` uses the function `cr_works()` internally.
+
+```{r}
+cr_r()
+```
+
+You can pass in the number of DOIs you want back (default is 10)
+
+```{r}
+cr_r(2)
+```
