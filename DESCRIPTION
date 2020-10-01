@@ -18,7 +18,6 @@ Authors@R: c(
     )
 URL: https://docs.ropensci.org/rcrossref/, https://github.com/ropensci/rcrossref
 BugReports: https://github.com/ropensci/rcrossref/issues
-VignetteBuilder: knitr
 Roxygen: list(markdown = TRUE)
 Encoding: UTF-8
 Language: en-US
