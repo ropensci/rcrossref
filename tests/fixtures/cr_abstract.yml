@@ -1,0 +1,118 @@
+http_interactions:
+- request:
+    method: get
+    uri: https://api.crossref.org/works/10.1175//2572.1.xml
+    body:
+      encoding: ''
+      string: ''
+    headers:
+      Accept-Encoding: gzip, deflate
+      Accept: application/json, text/xml, application/xml, */*
+      User-Agent: r-curl/4.3 crul/1.0.0 rOpenSci(rcrossref/1.1.0) (mailto:<crossref_email>)
+      X-USER-AGENT: r-curl/4.3 crul/1.0.0 rOpenSci(rcrossref/1.1.0) (mailto:<crossref_email>)
+  response:
+    status:
+      status_code: '200'
+      message: OK
+      explanation: Request fulfilled, document follows
+    headers:
+      status: HTTP/1.1 200 OK
+      link: <http://dx.doi.org/10.1175//2572.1>; rel="canonical", <http://journals.ametsoc.org/mwr/article-pdf/131/8/1895/4208740/_2572_1.pdf>;
+        version="vor"; type="application/pdf"; rel="item", <http://journals.ametsoc.org/mwr/article-pdf/131/8/1895/4208740/_2572_1.pdf>;
+        version="vor"; rel="item"
+      access-control-allow-origin: '*'
+      access-control-allow-headers: X-Requested-With
+      content-length: '7060'
+      server: http-kit
+      date: Fri, 02 Oct 2020 15:54:21 GMT
+      x-rate-limit-limit: '50'
+      x-rate-limit-interval: 1s
+      connection: close
+    body:
+      encoding: UTF-8
+      file: no
+      string: "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<crossref_result xmlns=\"http://www.crossref.org/qrschema/3.0\"
+        version=\"3.0\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:schemaLocation=\"http://www.crossref.org/qrschema/3.0
+        http://www.crossref.org/schemas/crossref_query_output3.0.xsd\">\r\n  <query_result>\r\n
+        \   <head>\r\n      <doi_batch_id>none</doi_batch_id>\r\n    </head>\r\n    <body>\r\n
+        \     <query status=\"resolved\">\r\n        <doi type=\"journal_article\">10.1175//2572.1</doi>\r\n
+        \       <crm-item name=\"publisher-name\" type=\"string\">American Meteorological
+        Society</crm-item>\r\n        <crm-item name=\"prefix-name\" type=\"string\">American
+        Meteorological Society</crm-item>\r\n        <crm-item name=\"member-id\"
+        type=\"number\">12</crm-item>\r\n        <crm-item name=\"citation-id\" type=\"number\">8407024</crm-item>\r\n
+        \       <crm-item name=\"journal-id\" type=\"number\">5839</crm-item>\r\n
+        \       <crm-item name=\"deposit-timestamp\" type=\"number\">2020061721302561500</crm-item>\r\n
+        \       <crm-item name=\"owner-prefix\" type=\"string\">10.1175</crm-item>\r\n
+        \       <crm-item name=\"last-update\" type=\"date\">2020-06-18T01:31:13Z</crm-item>\r\n
+        \       <crm-item name=\"created\" type=\"date\">2003-07-25T16:26:33Z</crm-item>\r\n
+        \       <crm-item name=\"citedby-count\" type=\"number\">19</crm-item>\r\n
+        \       <doi_record>\r\n          <crossref xmlns=\"http://www.crossref.org/xschema/1.1\"
+        xsi:schemaLocation=\"http://www.crossref.org/xschema/1.1 http://doi.crossref.org/schemas/unixref1.1.xsd\">\r\n
+        \           <journal>\r\n              <journal_metadata language=\"en\">\r\n
+        \               <full_title>Monthly Weather Review</full_title>\r\n                <issn
+        media_type=\"electronic\">1520-0493</issn>\r\n                <issn media_type=\"print\">0027-0644</issn>\r\n
+        \             </journal_metadata>\r\n              <journal_issue>\r\n                <publication_date
+        media_type=\"print\">\r\n                  <month>08</month>\r\n                  <day>01</day>\r\n
+        \                 <year>2003</year>\r\n                </publication_date>\r\n
+        \               <journal_volume>\r\n                  <volume>131</volume>\r\n
+        \               </journal_volume>\r\n                <issue>8</issue>\r\n
+        \             </journal_issue>\r\n              <journal_article publication_type=\"full_text\">\r\n
+        \               <titles>\r\n                  <title>A Numerical Study of
+        Early Summer Regional Climate and Weather over LSA-East. Part I: Model Implementation
+        and Verification</title>\r\n                </titles>\r\n                <contributors>\r\n
+        \                 <person_name sequence=\"first\" contributor_role=\"author\">\r\n
+        \                   <given_name>Da-Lin</given_name>\r\n                    <surname>Zhang</surname>\r\n
+        \                   <affiliation>Department of Meteorology, University of
+        Maryland, College Park, College Park, Maryland</affiliation>\r\n                  </person_name>\r\n
+        \                 <person_name sequence=\"first\" contributor_role=\"author\">\r\n
+        \                   <given_name>Wei-Zhong</given_name>\r\n                    <surname>Zheng</surname>\r\n
+        \                   <affiliation>Department of Meteorology, University of
+        Maryland, College Park, College Park, Maryland</affiliation>\r\n                  </person_name>\r\n
+        \                 <person_name sequence=\"additional\" contributor_role=\"author\">\r\n
+        \                   <given_name>Yong-Kang</given_name>\r\n                    <surname>Xue</surname>\r\n
+        \                   <affiliation>Department of Geography, University of California,
+        Los Angeles, Los Angeles, California</affiliation>\r\n                  </person_name>\r\n
+        \               </contributors>\r\n                <jats:abstract xmlns:jats=\"http://www.ncbi.nlm.nih.gov/JATS1\">\r\n
+        \                 <jats:title>Abstract</jats:title>\r\n                  <jats:p>The
+        Pennsylvania State University–NCAR Mesoscale Model (MM5) and a simplified
+        simple biosphere (SSiB) scheme are modified and then coupled to study various
+        regional climate and weather problems. These modifications include correcting
+        the moisture and cloud hydrometeor fields to ensure the mass conservation;
+        incorporating the effects of dissipative heating to ensure total energy conservation;
+        decoupling soil and vegetation types in specifying various surface parameters;
+        and eliminating the shortwave radiation reaching the surface at points where
+        deep convection occurs.</jats:p>\r\n                  <jats:p>A 30-day integration
+        of June 1998 over the Midwest states was used to examine the model's capability
+        in capturing the observed wet regional climate and the passage of several
+        mesoscale weather events. It is found that the coupled model reproduces the
+        distribution and magnitude of monthly accumulated precipitation, the time
+        series of area-integrated precipitation, surface pressures, and diurnal changes
+        in surface temperatures, low-level winds and precipitation, as well as the
+        evolution of precipitation systems across the central United States. In particular,
+        the model reproduces well many daily weather events, including the distribution
+        and intensity of low-level temperature and pressure perturbations and precipitation,
+        even up to a month. The results suggest that the daily temperature, clouds,
+        and precipitation events from the weekly to monthly scales, as well as their
+        associated regional climate phenomena, could be reasonably simulated if the
+        surface, boundary layer, radiation, and convective processes are realistically
+        parameterized, and the large-scale forcing could be reasonably provided by
+        general circulation models.</jats:p>\r\n                </jats:abstract>\r\n
+        \               <publication_date media_type=\"print\">\r\n                  <month>08</month>\r\n
+        \                 <day>01</day>\r\n                  <year>2003</year>\r\n
+        \               </publication_date>\r\n                <publication_date media_type=\"online\">\r\n
+        \                 <month>08</month>\r\n                  <day>01</day>\r\n
+        \                 <year>2003</year>\r\n                </publication_date>\r\n
+        \               <pages>\r\n                  <first_page>1895</first_page>\r\n
+        \                 <last_page>1909</last_page>\r\n                </pages>\r\n
+        \               <doi_data>\r\n                  <doi>10.1175//2572.1</doi>\r\n
+        \                 <resource>https://journals.ametsoc.org/mwr/article/131/8/1895/67449/A-Numerical-Study-of-Early-Summer-Regional-Climate</resource>\r\n
+        \                 <collection property=\"crawler-based\">\r\n                    <item
+        crawler=\"iParadigms\">\r\n                      <resource>http://journals.ametsoc.org/mwr/article-pdf/131/8/1895/4208740/_2572_1.pdf</resource>\r\n
+        \                   </item>\r\n                  </collection>\r\n                  <collection
+        property=\"syndication\">\r\n                    <item>\r\n                      <resource
+        content_version=\"vor\" mime_type=\"application/pdf\">http://journals.ametsoc.org/mwr/article-pdf/131/8/1895/4208740/_2572_1.pdf</resource>\r\n
+        \                   </item>\r\n                  </collection>\r\n                </doi_data>\r\n
+        \             </journal_article>\r\n            </journal>\r\n          </crossref>\r\n
+        \       </doi_record>\r\n      </query>\r\n    </body>\r\n  </query_result>\r\n</crossref_result>"
+  recorded_at: 2020-10-02 15:54:20 GMT
+  recorded_with: vcr/0.5.4, webmockr/0.7.0
