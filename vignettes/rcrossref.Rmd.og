@@ -129,3 +129,53 @@ You can pass in the number of DOIs you want back (default is 10)
 ```{r}
 cr_r(2)
 ```
+
+## Get full text
+
+Publishers can optionally provide links in the metadata they provide to Crossref for full text of the work, but that data is often missing. Find out more about it at https://support.crossref.org/hc/en-us/articles/215750183-Crossref-Text-and-Data-Mining-Services
+
+Get some DOIs for articles that provide full text, and that have `CC-BY 3.0` licenses (i.e., more likely to actually be open)
+
+```{r}
+out <-
+  cr_works(filter = list(has_full_text = TRUE,
+    license_url = "http://creativecommons.org/licenses/by/3.0/"))
+(dois <- out$data$doi)
+```
+
+From the output of `cr_works` we can get full text links if we know where to look:
+
+```{r}
+do.call("rbind", out$data$link)
+```
+
+From there, you can grab your full text, but because most links require
+authentication, enter another package: `crminer`.
+
+You'll need package `crminer` for the rest of the work.
+
+Onc we have DOIs, get URLs to full text content
+
+```{r eval=FALSE}
+if (!requireNamespace("crminer")) {
+  install.packages("crminer")
+}
+```
+
+```{r}
+library(crminer)
+(links <- crm_links("10.1155/2014/128505"))
+```
+
+Then use those URLs to get full text
+
+```{r eval=FALSE}
+crm_pdf(links)
+#> <document>/Users/sckott/Library/Caches/R/crminer/128505.pdf
+#>   Pages: 1
+#>   No. characters: 1565
+#>   Created: 2014-09-15
+```
+
+See also fulltext (https://github.com/ropensci/fulltext) for getting scholarly text 
+for text mining.

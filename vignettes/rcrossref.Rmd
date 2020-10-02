@@ -1,7 +1,7 @@
 ---
 title: rcrossref introduction 
 author: Scott Chamberlain
-date: "2020-10-01"
+date: "2020-10-02"
 output: rmarkdown::html_vignette
 vignette: >
     %\VignetteIndexEntry{rcrossref introduction}
@@ -186,7 +186,7 @@ cr_agency(dois = '10.13039/100000001')
 cr_works(filter=c(has_orcid=TRUE, from_pub_date='2004-04-04'), limit=1)
 #> $meta
 #>   total_results search_terms start_index items_per_page
-#> 1       4734523           NA           0              1
+#> 1       4738988           NA           0              1
 #> 
 #> $data
 #> # A tibble: 1 x 34
@@ -314,11 +314,11 @@ cr_members(query='ecology', limit = 5)
 #> # A tibble: 5 x 56
 #>      id primary_name location last_status_che… total.dois current.dois
 #>   <int> <chr>        <chr>    <date>           <chr>      <chr>       
-#> 1  1950 Journal of … Suite 8… 2020-10-01       0          0           
-#> 2  2899 Association… P.O. Bo… 2020-10-01       0          0           
-#> 3  4302 Immediate S… Dept. o… 2020-09-23       6          0           
-#> 4  7052 Chinese Jou… Flat C … 2020-09-25       1372       251         
-#> 5  2467 Ideas in Ec… Prins W… 2020-10-01       0          0           
+#> 1  1950 Journal of … Suite 8… 2020-10-02       0          0           
+#> 2  2899 Association… P.O. Bo… 2020-10-02       0          0           
+#> 3  4302 Immediate S… Dept. o… 2020-10-02       6          0           
+#> 4  7052 Chinese Jou… Flat C … 2020-10-02       1372       251         
+#> 5  2467 Ideas in Ec… Prins W… 2020-10-02       0          0           
 #> # … with 50 more variables: backfile.dois <chr>, prefixes <chr>,
 #> #   coverge.affiliations.current <chr>,
 #> #   coverge.similarity.checking.current <chr>, coverge.funders.backfile <chr>,
@@ -366,11 +366,11 @@ cr_members(query='ecology', limit = 5)
 
 ```r
 cr_r()
-#>  [1] "10.1523/jneurosci.4206-04.2005"    "10.1353/mln.0.0211"               
-#>  [3] "10.1017/s042482010010617x"         "10.1017/cbo9781139583817.010"     
-#>  [5] "10.4324/9781003014645"             "10.1371/journal.pcbi.1000711.s001"
-#>  [7] "10.1021/acs.analchem.5b02366"      "10.2307/1959816"                  
-#>  [9] "10.1109/tuffc.2018.2872727"        "10.3133/ofr7915"
+#>  [1] "10.1093/oseo/instance.00086433"    "10.1093/jaoac/49.5.915"           
+#>  [3] "10.14814/phy2.13993"               "10.2210/pdb5rnw/pdb"              
+#>  [5] "10.1002/ajp.1350150207"            "10.1111/j.1532-950x.2012.01075.x" 
+#>  [7] "10.1021/ma00060a006"               "10.1371/journal.pone.0045474.s001"
+#>  [9] "10.1086/447083"                    "10.17352/jbm.000021"
 ```
 
 You can pass in the number of DOIs you want back (default is 10)
@@ -378,5 +378,92 @@ You can pass in the number of DOIs you want back (default is 10)
 
 ```r
 cr_r(2)
-#> [1] "10.1108/medar-06-2015-0032"         "10.1111/j.1540-6288.1989.tb00341.x"
+#> [1] "10.1525/ncl.1983.38.2.99p0363h" "10.1177/1087057109350114"
 ```
+
+## Get full text
+
+Publishers can optionally provide links in the metadata they provide to Crossref for full text of the work, but that data is often missing. Find out more about it at https://support.crossref.org/hc/en-us/articles/215750183-Crossref-Text-and-Data-Mining-Services
+
+Get some DOIs for articles that provide full text, and that have `CC-BY 3.0` licenses (i.e., more likely to actually be open)
+
+
+```r
+out <-
+  cr_works(filter = list(has_full_text = TRUE,
+    license_url = "http://creativecommons.org/licenses/by/3.0/"))
+(dois <- out$data$doi)
+#>  [1] "10.1016/s0370-2693(01)01461-7" "10.1016/s0370-2693(01)01505-2"
+#>  [3] "10.1016/s0370-2693(01)01497-6" "10.1016/s0370-2693(01)01503-9"
+#>  [5] "10.1016/s0370-2693(01)01486-1" "10.1016/s0370-2693(02)01156-5"
+#>  [7] "10.1016/s0370-2693(02)01181-4" "10.1016/s0370-2693(01)01471-x"
+#>  [9] "10.1016/s0370-2693(01)01467-8" "10.1016/s0370-2693(02)01166-8"
+#> [11] "10.1016/s0370-2693(02)01174-7" "10.1016/s0370-2693(02)01179-6"
+#> [13] "10.1016/s0370-2693(01)01473-3" "10.1016/s0370-2693(01)01518-0"
+#> [15] "10.1016/s0370-2693(01)01512-x" "10.1016/s0370-2693(01)01500-3"
+#> [17] "10.1016/s0370-2693(01)01487-3" "10.1016/s0370-2693(01)01431-9"
+#> [19] "10.1016/s0370-2693(01)01469-1" "10.1016/s0370-2693(01)01450-2"
+```
+
+From the output of `cr_works` we can get full text links if we know where to look:
+
+
+```r
+do.call("rbind", out$data$link)
+#> # A tibble: 40 x 4
+#>    URL                            content.type content.version intended.applica…
+#>    <chr>                          <chr>        <chr>           <chr>            
+#>  1 https://api.elsevier.com/cont… text/xml     vor             text-mining      
+#>  2 https://api.elsevier.com/cont… text/plain   vor             text-mining      
+#>  3 https://api.elsevier.com/cont… text/xml     vor             text-mining      
+#>  4 https://api.elsevier.com/cont… text/plain   vor             text-mining      
+#>  5 https://api.elsevier.com/cont… text/xml     vor             text-mining      
+#>  6 https://api.elsevier.com/cont… text/plain   vor             text-mining      
+#>  7 https://api.elsevier.com/cont… text/xml     vor             text-mining      
+#>  8 https://api.elsevier.com/cont… text/plain   vor             text-mining      
+#>  9 https://api.elsevier.com/cont… text/xml     vor             text-mining      
+#> 10 https://api.elsevier.com/cont… text/plain   vor             text-mining      
+#> # … with 30 more rows
+```
+
+From there, you can grab your full text, but because most links require
+authentication, enter another package: `crminer`.
+
+You'll need package `crminer` for the rest of the work.
+
+Onc we have DOIs, get URLs to full text content
+
+
+```r
+if (!requireNamespace("crminer")) {
+  install.packages("crminer")
+}
+```
+
+
+```r
+library(crminer)
+(links <- crm_links("10.1155/2014/128505"))
+#> $pdf
+#> <url> http://downloads.hindawi.com/archive/2014/128505.pdf
+#> 
+#> $xml
+#> <url> http://downloads.hindawi.com/archive/2014/128505.xml
+#> 
+#> $unspecified
+#> <url> http://downloads.hindawi.com/archive/2014/128505.pdf
+```
+
+Then use those URLs to get full text
+
+
+```r
+crm_pdf(links)
+#> <document>/Users/sckott/Library/Caches/R/crminer/128505.pdf
+#>   Pages: 1
+#>   No. characters: 1565
+#>   Created: 2014-09-15
+```
+
+See also fulltext (https://github.com/ropensci/fulltext) for getting scholarly text 
+for text mining.

@@ -23,7 +23,7 @@ knitr::opts_chunk$set(
 * Crossref's API issue tracker: https://gitlab.com/crossref/issues
 * Crossref metadata search API: https://www.crossref.org/labs/crossref-metadata-search/
 * Crossref DOI Content Negotiation: https://citation.crosscite.org/docs.html
-* Crossref Text and Data Mining (TDM) Services: https://tdmsupport.crossref.org/
+* Crossref Text and Data Mining (TDM) Services: https://www.crossref.org/education/retrieve-metadata/rest-api/text-and-data-mining/
 
 ## Installation
 
@@ -45,7 +45,7 @@ Load `rcrossref`
 library('rcrossref')
 ```
 
-### Register for the Polite Pool
+## Register for the Polite Pool
 
 If you are intending to access Crossref regularly you will want to send your email address with your queries. This has the advantage that queries are placed in the polite pool of servers. Including your email address is good practice as described in the Crossref documentation under Good manners (https://github.com/CrossRef/rest-api-doc#good-manners--more-reliable-service). The second advantage is that Crossref can contact you if there is a problem with a query.
 
@@ -59,138 +59,9 @@ Save the file and restart your R session
 
 To stop sharing your email when using rcrossref simply delete it from your .Renviron file. 
 
-## Citation search
+## Documentation
 
-Use CrossRef's DOI Content Negotiation (https://citation.crosscite.org/docs.html) service, where you can get citations back in various formats, including `apa`
-
-```{r}
-cr_cn(dois = "10.1126/science.169.3946.635", format = "text", style = "apa")
-```
-
-`bibtex`
-
-```{r}
-cat(cr_cn(dois = "10.1126/science.169.3946.635", format = "bibtex"))
-```
-
-## Citation count
-
-Citation count, using OpenURL
-
-```{r}
-cr_citation_count(doi = "10.1371/journal.pone.0042793")
-```
-
-## Search Crossref metadata API
-
-The following functions all use the CrossRef API https://github.com/CrossRef/rest-api-doc#readme
-
-### Look up funder information
-
-```{r}
-cr_funders(query = "NSF")
-```
-
-### Check the DOI minting agency
-
-```{r}
-cr_agency(dois = '10.13039/100000001')
-```
-
-### Search works (i.e., articles)
-
-```{r}
-cr_works(filter = c(has_orcid = TRUE, from_pub_date = '2004-04-04'), limit = 1)
-```
-
-### Search journals
-
-```{r}
-cr_journals(issn = c('1803-2427','2326-4225'))
-```
-
-### Search license information
-
-```{r}
-cr_licenses(query = 'elsevier')
-```
-
-### Search based on DOI prefixes
-
-```{r}
-cr_prefixes(prefixes = c('10.1016','10.1371','10.1023','10.4176','10.1093'))
-```
-
-### Search CrossRef members
-
-```{r}
-cr_members(query = 'ecology', limit = 5)
-```
-
-### Get N random DOIs
-
-`cr_r()` uses the function `cr_works()` internally.
-
-```{r}
-cr_r()
-```
-
-You can pass in the number of DOIs you want back (default is 10)
-
-```{r}
-cr_r(2)
-```
-
-## Get full text
-
-Publishers can optionally provide links in the metadata they provide to Crossref for full text of the work, but that data is often missing. Find out more about it at https://support.crossref.org/hc/en-us/articles/215750183-Crossref-Text-and-Data-Mining-Services
-
-Get some DOIs for articles that provide full text, and that have `CC-BY 3.0` licenses (i.e., more likely to actually be open)
-
-```{r}
-out <-
-  cr_works(filter = list(has_full_text = TRUE,
-    license_url = "http://creativecommons.org/licenses/by/3.0/"))
-(dois <- out$data$doi)
-```
-
-From the output of `cr_works` we can get full text links if we know where to look:
-
-```{r}
-do.call("rbind", out$data$link)
-```
-
-From there, you can grab your full text, but because most links require
-authentication, enter another package: `crminer`.
-
-You'll need package `crminer` for the rest of the work.
-
-Onc we have DOIs, get URLs to full text content
-
-```{r eval=FALSE}
-if (!requireNamespace("crminer")) {
-  install.packages("crminer")
-}
-```
-
-```{r}
-library(crminer)
-(links <- crm_links("10.1155/2014/128505"))
-```
-
-Then use those URLs to get full text
-
-```{r eval=FALSE}
-crm_pdf(links)
-#> <document>/Users/sckott/Library/Caches/R/crminer/128505.pdf
-#>   Pages: 1
-#>   No. characters: 1565
-#>   Created: 2014-09-15
-```
-
-See also fulltext (https://github.com/ropensci/fulltext) for getting scholarly text 
-for text mining.
-
+See https://docs.ropensci.org/rcrossref/ to get started
 
 ## Meta
 
