@@ -17,20 +17,17 @@ Get abstract
 \examples{
 \dontrun{
 # abstract found
-cr_abstract(doi = '10.1109/TASC.2010.2088091')
+cr_abstract('10.1109/TASC.2010.2088091')
+cr_abstract("10.1175//2572.1")
+cr_abstract("10.1182/blood.v16.1.1039.1039")
 
 # doi not found
 # cr_abstract(doi = '10.5284/1011335')
 
-# abstract not found, throws warning
+# abstract not found, throws error
 # cr_abstract(doi = '10.1126/science.169.3946.635')
-# cr_abstract(doi = '10.1371/journal.pone.0033693')
-# cr_abstract(doi = '10.1007/12080.1874-1746')
 
+# a random DOI
 # cr_abstract(cr_r(1))
-
-# loop through many DOIs, allowing for failures
-dois <- cr_r(10, filter = c(has_abstract = TRUE))
-res <- lapply(dois, function(z) tryCatch(cr_abstract(z), error = function(e) e))
 }
 }
