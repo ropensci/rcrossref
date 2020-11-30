@@ -1,0 +1,37 @@
+http_interactions:
+- request:
+    method: get
+    uri: https://api.crossref.org/works/10.7287/peerj.3819v0.1/reviews/2
+    body:
+      encoding: ''
+      string: ''
+    headers:
+      Accept-Encoding: gzip, deflate
+      Accept: application/json, text/xml, application/xml, */*
+      User-Agent: r-curl/4.3 crul/1.0.0 rOpenSci(rcrossref/1.1.0.94)
+      X-USER-AGENT: r-curl/4.3 crul/1.0.0 rOpenSci(rcrossref/1.1.0.94)
+  response:
+    status:
+      status_code: '200'
+      message: OK
+      explanation: Request fulfilled, document follows
+    headers:
+      status: HTTP/1.1 200 OK
+      content-type: application/json;charset=UTF-8
+      vary: Accept
+      access-control-allow-origin: '*'
+      access-control-allow-headers: X-Requested-With
+      content-length: '1240'
+      server: http-kit
+      date: Mon, 30 Nov 2020 18:01:38 GMT
+      x-rate-limit-limit: '50'
+      x-rate-limit-interval: 1s
+      connection: close
+    body:
+      encoding: UTF-8
+      file: no
+      string: '{"status":"ok","message-type":"work","message-version":"1.0.0","message":{"indexed":{"date-parts":[[2020,3,29]],"date-time":"2020-03-29T17:29:15Z","timestamp":1585502955421},"reference-count":0,"publisher":"PeerJ","content-domain":{"domain":[]},"short-container-title":[],"published-print":{"date-parts":[[2017,9,20]]},"DOI":"10.7287\/peerj.3819v0.1\/reviews\/2","type":"peer-review","created":{"date-parts":[[2017,12,23]],"date-time":"2017-12-23T05:32:15Z","timestamp":1514007135000},"source":"Crossref","is-referenced-by-count":0,"title":["Peer
+        Review #2 of \"Human agency beliefs influence behaviour during virtual social
+        interactions (v0.1)\""],"prefix":"10.7287","author":[{"given":"A","family":"Georgescu","sequence":"additional","affiliation":[]}],"member":"4443","container-title":[],"review":{"revision-round":"2","stage":"pre-publication"},"original-title":[],"deposited":{"date-parts":[[2017,12,23]],"date-time":"2017-12-23T05:32:15Z","timestamp":1514007135000},"score":1.0,"subtitle":[],"short-title":[],"issued":{"date-parts":[[2017,9,20]]},"references-count":0,"URL":"http:\/\/dx.doi.org\/10.7287\/peerj.3819v0.1\/reviews\/2","relation":{"is-review-of":[{"id-type":"doi","id":"10.7717\/peerj.3819","asserted-by":"subject"}]}}}'
+  recorded_at: 2020-11-30 18:01:36 GMT
+  recorded_with: vcr/0.5.4, webmockr/0.7.0

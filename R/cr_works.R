@@ -347,9 +347,14 @@ parse_works <- function(zzz){
     out_tmp$funder <- list(parse_todf(zzz$funder)) %||% NULL
     out_tmp$link <- list(parse_todf(zzz$link)) %||% NULL
     if (!is.null(zzz$`content-domain`)) {
-      out_tmp$content_domain <- list(
-        data.frame(domain=paste0(unlist(zzz$`content-domain`$domain), collapse=","), 
-          crossmark_restriction=unlist(zzz$`content-domain`$`crossmark-restriction`))) %||% NULL
+      if (!length(zzz$content_domain$domain)) out_tmp$content_domain <- NULL
+      if (length(zzz$content_domain$domain)) {
+        out_tmp$content_domain <- list(
+        data.frame(
+          domain=paste0(unlist(zzz$`content-domain`$domain), collapse=","),
+          crossmark_restriction=
+            unlist(zzz$`content-domain`$`crossmark-restriction`))) %||% NULL
+      }
     }
     out_tmp$update_to <- list(tibble::as_tibble(bind_rows(lapply(zzz$`update-to`, parse_update_to)))) %||% NULL
     out_tmp$license <- list(tibble::as_tibble(bind_rows(lapply(zzz$license, parse_license)))) %||% NULL

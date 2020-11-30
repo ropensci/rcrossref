@@ -228,3 +228,11 @@ test_that("cr_works fails well: arguments that dont require http requests", {
   
   expect_error(cr_works(async = 5), "is not TRUE")
 })
+
+# see https://github.com/ropensci/rcrossref/issues/211
+test_that("content domain parsing fix", {
+  # this DOI caused a failure in parsing content domain
+  vcr::use_cassette("cr_works_no_content_domain_fail", {
+    expect_is(cr_works(dois = "10.7287/peerj.3819v0.1/reviews/2"), "list")
+  })
+})
