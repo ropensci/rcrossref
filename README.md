@@ -71,5 +71,3 @@ See https://docs.ropensci.org/rcrossref/ to get started
 This package is part of a richer suite called fulltext (https://github.com/ropensci/fulltext), along with several other packages, that provides the ability to search for and retrieve full text of open access scholarly articles.
 
 ---
-
-[![rofooter](https://ropensci.org/public_images/github_footer.png)](https://ropensci.org)
