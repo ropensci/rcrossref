@@ -20,3 +20,4 @@ tmpscratch*
 ^codemeta\.json$
 vignettes/crossref_filters*
 vignettes/rcrossref*
+^LICENSE\.md$
