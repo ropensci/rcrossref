@@ -28,7 +28,8 @@ cr_GET <- function(endpoint, args, todf = TRUE, on_error = warning, parse = TRUE
     url = url,
     headers = list(
       `User-Agent` = rcrossref_ua(),
-      `X-USER-AGENT` = rcrossref_ua()
+      `X-USER-AGENT` = rcrossref_ua(),
+      `Crossref-Plus-API-Token` = get_md_plus_token()
     )
   )
   if (length(args) == 0) {
@@ -208,6 +209,32 @@ prep_args <- function(query, filter, offset, limit, sample, sort,
 
 `%||%` <- function(x, y) if (is.null(x) || length(x) == 0) y else x
 
+#' Authorization token for Plus service
+#' 
+#' Crossref provides Metadata Plus subscribers an access token.
+#' 
+#' To pass your email address to Crossref, save it as an environment 
+#' variable in .Renviron like this:
+#' 
+#' Open file: `file.edit("~/.Renviron")`
+#' 
+#' Add token `crossref_plus = your_token`
+#' 
+#' Save the file and restart your R session.
+#' 
+#' Please be aware that without valid authentication token, 
+#' requests will cause 401 HTTP errors.
+#' 
+#' 
+#' @noRd
+get_md_plus_token <- function() {
+  md_token <- Sys.getenv("crossref_plus")
+  if (identical(md_token, "")) {
+    ""
+  } else {
+    paste("Bearer", md_token)
+  }
+} 
 
 #' Share email with Crossref in `.Renviron`
 #' 
