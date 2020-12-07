@@ -32,7 +32,8 @@ make_queries <- function(endpoint, qr, x, ...) {
     crul::HttpRequest$new(url = "https://api.crossref.org",
       headers = list(
         `User-Agent` = rcrossref_ua(),
-        `X-USER-AGENT` = rcrossref_ua()
+        `X-USER-AGENT` = rcrossref_ua(),
+        `Crossref-Plus-API-Token` = get_md_plus_token()
       ),
       opts = list(...)
     )$get(endpoint, query = qr)

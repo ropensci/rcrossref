@@ -25,7 +25,8 @@ cr_abstract <- function(doi, ...) {
     opts = list(followlocation = 1),
     headers = list(
       `User-Agent` = rcrossref_ua(),
-      `X-USER-AGENT` = rcrossref_ua()
+      `X-USER-AGENT` = rcrossref_ua(),
+      `Crossref-Plus-API-Token` = get_md_plus_token()
     )
   )
   res <- cli$get(...)

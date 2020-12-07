@@ -160,7 +160,9 @@
       cli <- crul::HttpClient$new(
         url = file.path("https://api.crossref.org/works", doi, type),
         headers = list(
-          `User-Agent` = rcrossref_ua(), `X-USER-AGENT` = rcrossref_ua()
+          `User-Agent` = rcrossref_ua(),
+          `X-USER-AGENT` = rcrossref_ua(),
+          `Crossref-Plus-API-Token` = get_md_plus_token()
         )
       )
       response <- cli$get(...)
@@ -173,7 +175,9 @@
         url = url,
         opts = list(followlocation = 1),
         headers = list(
-          `User-Agent` = rcrossref_ua(), `X-USER-AGENT` = rcrossref_ua(),
+          `User-Agent` = rcrossref_ua(),
+          `X-USER-AGENT` = rcrossref_ua(),
+          `Crossref-Plus-API-Token` = get_md_plus_token(),
           Accept = type
         )
       )

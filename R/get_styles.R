@@ -9,7 +9,9 @@ get_styles <- function(...) {
   cli <- crul::HttpClient$new(
     url = "https://api.github.com/repos/citation-style-language/styles/commits?per_page=1",
     headers = list(
-      `User-Agent` = rcrossref_ua(), `X-USER-AGENT` = rcrossref_ua()
+      `User-Agent` = rcrossref_ua(),
+      `X-USER-AGENT` = rcrossref_ua(),
+      `Crossref-Plus-API-Token` = get_md_plus_token()
     )
   )
   comm <- cli$get(...)
@@ -18,7 +20,9 @@ get_styles <- function(...) {
   cli2 <- crul::HttpClient$new(
     url = paste0("https://api.github.com/repos/citation-style-language/styles/git/trees/", sha),
     headers = list(
-      `User-Agent` = rcrossref_ua(), `X-USER-AGENT` = rcrossref_ua()
+      `User-Agent` = rcrossref_ua(),
+      `X-USER-AGENT` = rcrossref_ua(),
+      `Crossref-Plus-API-Token` = get_md_plus_token()
     )
   )
   sty <- cli2$get(...)

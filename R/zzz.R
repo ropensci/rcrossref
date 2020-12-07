@@ -209,24 +209,29 @@ prep_args <- function(query, filter, offset, limit, sample, sort,
 
 `%||%` <- function(x, y) if (is.null(x) || length(x) == 0) y else x
 
-#' Authorization token for Plus service
+#' Retrieve Optional [Metadata Plus](https://www.crossref.org/services/metadata-retrieval/metadata-plus/) Token
 #' 
-#' Crossref provides Metadata Plus subscribers an access token.
+#' Retrieves the secret token to authenticate against the paid-for Metadata Plus service.
 #' 
-#' To pass your email address to Crossref, save it as an environment 
-#' variable in .Renviron like this:
+#' To use your paid-for Metadata Plus API access, 
+#' save your secret token as an environment variable named `crossref_plus`.
 #' 
-#' Open file: `file.edit("~/.Renviron")`
+#' You can declare such R-specific environment variables in your (user) `.Renviron`.
+#' Open it with file.edit("~/.Renviron")`, add
 #' 
-#' Add token `crossref_plus = your_token`
+#' ```
+#' crossref_plus = YOUR_SECRET_TOKEN
+#' ```
 #' 
-#' Save the file and restart your R session.
+#' then save the file and restart your R session.
+#' 
+#' Remember never to commit or share your `.Renviron` file, customarily used 
+#' for storing secrets such as this.
 #' 
 #' Please be aware that without valid authentication token, 
 #' requests will cause 401 HTTP errors.
 #' 
-#' 
-#' @noRd
+#' @export
 get_md_plus_token <- function() {
   md_token <- Sys.getenv("crossref_plus")
   if (identical(md_token, "")) {

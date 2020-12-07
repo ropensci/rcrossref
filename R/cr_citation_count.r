@@ -83,7 +83,9 @@ cr_cc <- function(doi, url, key, ...) {
   cli <- crul::HttpClient$new(
     url = url,
     headers = list(
-      `User-Agent` = rcrossref_ua(), `X-USER-AGENT` = rcrossref_ua()
+      `User-Agent` = rcrossref_ua(),
+      `X-USER-AGENT` = rcrossref_ua(),
+      `Crossref-Plus-API-Token` = get_md_plus_token()
     )
   )
   cite_count <- cli$get(query = args, ...)

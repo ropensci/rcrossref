@@ -42,7 +42,9 @@
   cli <- crul::HttpClient$new(
     url = idcon_base(),
     headers = list(
-      `User-Agent` = rcrossref_ua(), `X-USER-AGENT` = rcrossref_ua()
+      `User-Agent` = rcrossref_ua(),
+      `X-USER-AGENT` = rcrossref_ua(),
+      `Crossref-Plus-API-Token` = get_md_plus_token()
     )
   )
   res <- cli$get(query = args, ...)

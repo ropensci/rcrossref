@@ -26,7 +26,8 @@ make_cc_queries <- function(url, key, doi, ...) {
     crul::HttpRequest$new(url = url,
       headers = list(
         `User-Agent` = rcrossref_ua(),
-        `X-USER-AGENT` = rcrossref_ua()
+        `X-USER-AGENT` = rcrossref_ua(),
+        `Crossref-Plus-API-Token` = get_md_plus_token()
       ),
       opts = list(...)
     )$get(query = args)
