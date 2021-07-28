@@ -42,7 +42,7 @@ cr_GET <- function(endpoint, args, todf = TRUE, on_error = warning, parse = TRUE
       get_route(res), get_err(res)), call. = FALSE)
     list(message = NULL)
   } else {
-    stopifnot(res$response_headers$`content-type` == "application/json;charset=UTF-8")
+    #stopifnot(res$response_headers$`content-type` == "application/json;charset=UTF-8")
     res <- res$parse("UTF-8")
     if (parse) jsonlite::fromJSON(res, todf) else res
   }
