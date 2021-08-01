@@ -118,13 +118,15 @@ test_that("cr_works - parses funders correctly", {
     dd <- cr_works(doi)
     expect_true(any(grepl("funder", names(dd$data))))
     expect_named(dd$data$funder[[1]],
-                 c("DOI", "name", "doi.asserted.by", "award"))
+                 c("DOI", "name", "doi.asserted.by", "award"),
+                 ignore.order = TRUE)
 
     doi <- "10.1145/2834800.2834802"
     dd <- cr_works(doi)
     expect_true(any(grepl("funder", names(dd$data))))
     expect_named(dd$data$funder[[1]],
-                 c("DOI", "name", "doi.asserted.by", "award"))
+                 c("DOI", "name", "doi.asserted.by", "award"),
+                 ignore.order = TRUE)
 
     doi <- "10.1145/2832099.2832103"
     ee <- cr_works(doi)
@@ -148,7 +150,8 @@ test_that("cr_works - parses funders correctly", {
     expect_true(any(grepl("funder", names(hh$data))))
     expect_named(
       hh$data$funder[[1]],
-      c("DOI", "name", "doi.asserted.by", "award1", "award2", "award3"))
+      c("DOI", "name", "doi.asserted.by", "award", "award1", "award2"),
+      ignore.order = TRUE)
   })
 })
 
