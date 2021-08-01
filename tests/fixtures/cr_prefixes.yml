@@ -17,7 +17,7 @@ http_interactions:
       explanation: Request fulfilled, document follows
     headers:
       status: HTTP/1.1 200 OK
-      date: Sun, 01 Aug 2021 11:38:07 GMT
+      date: Sun, 01 Aug 2021 15:48:18 GMT
       content-type: application/json;charset=utf-8
       content-length: '199'
       vary: Accept
@@ -35,5 +35,5 @@ http_interactions:
       file: no
       string: '{"status":"ok","message-type":"prefix","message-version":"1.0.0","message":{"member":"http:\/\/id.crossref.org\/member\/78","name":"Elsevier
         BV","prefix":"http:\/\/id.crossref.org\/prefix\/10.1016"}}'
-  recorded_at: 2021-08-01 11:38:08 GMT
+  recorded_at: 2021-08-01 15:48:18 GMT
   recorded_with: vcr/1.0.2, webmockr/0.8.0

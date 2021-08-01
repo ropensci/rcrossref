@@ -8,8 +8,8 @@ http_interactions:
     headers:
       Accept-Encoding: gzip, deflate
       Accept: application/json, text/xml, application/xml, */*
-      User-Agent: r-curl/3.2 crul/0.7.0.9100 rOpenSci(rcrossref/0.8.6.9100) (mailto:<crossref_email>)
-      X-USER-AGENT: r-curl/3.2 crul/0.7.0.9100 rOpenSci(rcrossref/0.8.6.9100) (mailto:<crossref_email>)
+      User-Agent: r-curl/4.3.2 crul/1.1.0 rOpenSci(rcrossref/1.1.0.94)
+      X-USER-AGENT: r-curl/4.3.2 crul/1.1.0 rOpenSci(rcrossref/1.1.0.94)
   response:
     status:
       status_code: '200'
@@ -17,32 +17,39 @@ http_interactions:
       explanation: Request fulfilled, document follows
     headers:
       status: HTTP/1.1 200 OK
-      content-type: application/json;charset=UTF-8
-      vary: Accept
+      date: Sun, 01 Aug 2021 15:51:46 GMT
+      content-type: application/json
+      content-length: '1208'
       access-control-allow-origin: '*'
       access-control-allow-headers: X-Requested-With
-      content-length: '3544'
-      server: http-kit
-      date: Wed, 09 Jan 2019 21:23:23 GMT
+      vary: Accept-Encoding
+      content-encoding: gzip
+      server: Jetty(9.4.40.v20210413)
+      x-ratelimit-limit: '50'
+      x-ratelimit-interval: 1s
       x-rate-limit-limit: '50'
       x-rate-limit-interval: 1s
+      permissions-policy: interest-cohort=()
       connection: close
     body:
       encoding: UTF-8
-      string: '{"status":"ok","message-type":"work-list","message-version":"1.0.0","message":{"facets":{},"total-results":30555115,"items":[{"indexed":{"date-parts":[[2018,4,13]],"date-time":"2018-04-13T01:45:10Z","timestamp":1523583910841},"publisher-location":"Cambridge","reference-count":0,"publisher":"Cambridge
-        University Press","content-domain":{"domain":[],"crossmark-restriction":false},"DOI":"10.1017\/cbo9781139923651.027","type":"book-chapter","created":{"date-parts":[[2015,6,6]],"date-time":"2015-06-06T05:27:57Z","timestamp":1433568477000},"source":"Crossref","is-referenced-by-count":0,"title":["Plate
-        Section"],"prefix":"10.1017","author":[{"given":"Samuel","family":"Sharpe","sequence":"first","affiliation":[]},{"given":"Joseph","family":"Bonomi","sequence":"additional","affiliation":[]}],"member":"56","container-title":["The
-        Alabaster Sarcophagus of Oimenepthah I., King of Egypt"],"deposited":{"date-parts":[[2018,4,13]],"date-time":"2018-04-13T01:18:49Z","timestamp":1523582329000},"score":1.0,"issued":{"date-parts":[[null]]},"ISBN":["9781139923651"],"references-count":0,"URL":"http:\/\/dx.doi.org\/10.1017\/cbo9781139923651.027"},{"indexed":{"date-parts":[[2018,4,13]],"date-time":"2018-04-13T01:44:53Z","timestamp":1523583893997},"publisher-location":"Cambridge","reference-count":0,"publisher":"Cambridge
-        University Press","content-domain":{"domain":[],"crossmark-restriction":false},"DOI":"10.1017\/cbo9781107252820.131","type":"book-chapter","created":{"date-parts":[[2014,11,6]],"date-time":"2014-11-06T06:04:57Z","timestamp":1415253897000},"source":"Crossref","is-referenced-by-count":0,"title":["Plate
-        Section"],"prefix":"10.1017","author":[{"given":"Henry John","family":"Elwes","sequence":"first","affiliation":[]},{"given":"Augustine","family":"Henry","sequence":"additional","affiliation":[]}],"member":"56","container-title":["The
-        Trees of Great Britain and Ireland"],"deposited":{"date-parts":[[2018,4,13]],"date-time":"2018-04-13T01:20:02Z","timestamp":1523582402000},"score":1.0,"issued":{"date-parts":[[null]]},"ISBN":["9781107252820"],"references-count":0,"URL":"http:\/\/dx.doi.org\/10.1017\/cbo9781107252820.131"},{"indexed":{"date-parts":[[2018,4,11]],"date-time":"2018-04-11T16:15:05Z","timestamp":1523463305338},"reference-count":0,"publisher":"Coquina
-        Press","content-domain":{"domain":[],"crossmark-restriction":false},"DOI":"10.26879\/327","type":"journal-article","created":{"date-parts":[[2017,10,20]],"date-time":"2017-10-20T14:52:55Z","timestamp":1508511175000},"source":"Crossref","is-referenced-by-count":0,"title":["X-ray
-        micro-CT reconstruction reveals eight antennomeres in a new fossil taxon that
-        constitutes a sister clade to Dundoxenos and Triozocera (Strepsiptera: Corioxenidae)"],"prefix":"10.26879","author":[{"given":"H","family":"Henderickx","sequence":"first","affiliation":[]},{"given":"J","family":"Bosselaers","sequence":"additional","affiliation":[]},{"given":"L","family":"Van
-        Hoorebeke","sequence":"additional","affiliation":[]},{"given":"M","family":"Boone","sequence":"additional","affiliation":[]}],"member":"11409","published-online":{"date-parts":[[2013]]},"container-title":["Palaeontologia
-        Electronica"],"language":"en","deposited":{"date-parts":[[2018,4,11]],"date-time":"2018-04-11T15:46:45Z","timestamp":1523461605000},"score":1.0,"issued":{"date-parts":[[2013]]},"references-count":0,"URL":"http:\/\/dx.doi.org\/10.26879\/327","ISSN":["1094-8074"],"issn-type":[{"value":"1094-8074","type":"electronic"}]}],"items-per-page":3,"query":{"start-index":0,"search-terms":null}}}'
-  recorded_at: 2019-01-09 21:24:00 GMT
-  recorded_with: vcr/0.2.0, webmockr/0.3.0
+      file: no
+      string: '{"status":"ok","message-type":"work-list","message-version":"1.0.0","message":{"facets":{},"total-results":35425949,"items":[{"indexed":{"date-parts":[[2021,5,6]],"date-time":"2021-05-06T20:07:48Z","timestamp":1620331668136},"reference-count":0,"publisher":"JSTOR","issue":"1","content-domain":{"domain":[],"crossmark-restriction":false},"short-container-title":["Proceedings
+        of the American Mathematical Society"],"published-print":{"date-parts":[[1993,9]]},"DOI":"10.2307\/2159849","type":"journal-article","created":{"date-parts":[[2006,4,23]],"date-time":"2006-04-23T05:33:13Z","timestamp":1145770393000},"page":"251","source":"Crossref","is-referenced-by-count":0,"title":["Some
+        Deformations of the Hopf Foliation are also Kahler"],"prefix":"10.2307","volume":"119","author":[{"given":"Paul
+        D.","family":"Scofield","sequence":"first","affiliation":[]}],"member":"1121","container-title":["Proceedings
+        of the American Mathematical Society"],"deposited":{"date-parts":[[2018,5,9]],"date-time":"2018-05-09T14:04:37Z","timestamp":1525874677000},"score":1.0,"issued":{"date-parts":[[1993,9]]},"references-count":0,"journal-issue":{"issue":"1","published-print":{"date-parts":[[1993,9]]}},"URL":"http:\/\/dx.doi.org\/10.2307\/2159849","ISSN":["0002-9939"],"issn-type":[{"value":"0002-9939","type":"print"}],"subject":["Applied
+        Mathematics","General Mathematics"],"published":{"date-parts":[[1993,9]]}},{"indexed":{"date-parts":[[2021,5,6]],"date-time":"2021-05-06T20:07:48Z","timestamp":1620331668598},"reference-count":0,"publisher":"JSTOR","issue":"2","content-domain":{"domain":[],"crossmark-restriction":false},"short-container-title":["Biometrika"],"published-print":{"date-parts":[[1986,8]]},"DOI":"10.2307\/2336230","type":"journal-article","created":{"date-parts":[[2006,4,23]],"date-time":"2006-04-23T06:06:02Z","timestamp":1145772362000},"page":"513","source":"Crossref","is-referenced-by-count":1,"title":["On
+        D. Schoenfeld''s Approach for Testing the Proportion Hazards Assumption"],"prefix":"10.2307","volume":"73","author":[{"given":"T.","family":"Moreau","sequence":"first","affiliation":[]},{"given":"J.","family":"O''Quigley","sequence":"additional","affiliation":[]},{"given":"J.","family":"Lellouch","sequence":"additional","affiliation":[]}],"member":"1121","container-title":["Biometrika"],"deposited":{"date-parts":[[2018,5,8]],"date-time":"2018-05-08T18:40:50Z","timestamp":1525804850000},"score":1.0,"issued":{"date-parts":[[1986,8]]},"references-count":0,"journal-issue":{"issue":"2","published-print":{"date-parts":[[1986,8]]}},"URL":"http:\/\/dx.doi.org\/10.2307\/2336230","ISSN":["0006-3444"],"issn-type":[{"value":"0006-3444","type":"print"}],"subject":["Applied
+        Mathematics","Statistics, Probability and Uncertainty","General Agricultural
+        and Biological Sciences","Agricultural and Biological Sciences (miscellaneous)","General
+        Mathematics","Statistics and Probability"],"published":{"date-parts":[[1986,8]]}},{"indexed":{"date-parts":[[2021,5,6]],"date-time":"2021-05-06T20:07:49Z","timestamp":1620331669757},"reference-count":0,"publisher":"JSTOR","issue":"3\/4","content-domain":{"domain":[],"crossmark-restriction":false},"short-container-title":["Biometrika"],"published-print":{"date-parts":[[1966,12]]},"DOI":"10.2307\/2333669","type":"journal-article","created":{"date-parts":[[2006,4,23]],"date-time":"2006-04-23T08:37:36Z","timestamp":1145781456000},"page":"603","source":"Crossref","is-referenced-by-count":1,"title":["On
+        Characterizing the Normal Distribution by Student''s Law"],"prefix":"10.2307","volume":"53","author":[{"given":"Ignacy","family":"Kotlarski","sequence":"first","affiliation":[]}],"member":"1121","container-title":["Biometrika"],"deposited":{"date-parts":[[2018,5,9]],"date-time":"2018-05-09T07:12:25Z","timestamp":1525849945000},"score":1.0,"issued":{"date-parts":[[1966,12]]},"references-count":0,"journal-issue":{"issue":"3\/4","published-print":{"date-parts":[[1966,12]]}},"URL":"http:\/\/dx.doi.org\/10.2307\/2333669","ISSN":["0006-3444"],"issn-type":[{"value":"0006-3444","type":"print"}],"subject":["Applied
+        Mathematics","Statistics, Probability and Uncertainty","General Agricultural
+        and Biological Sciences","Agricultural and Biological Sciences (miscellaneous)","General
+        Mathematics","Statistics and Probability"],"published":{"date-parts":[[1966,12]]}}],"items-per-page":3,"query":{"start-index":0,"search-terms":null}}}'
+  recorded_at: 2021-08-01 15:51:55 GMT
+  recorded_with: vcr/1.0.2, webmockr/0.8.0
 - request:
     method: get
     uri: https://api.crossref.org/works?filter=has-full-text%3Atrue&rows=3
@@ -52,8 +59,8 @@ http_interactions:
     headers:
       Accept-Encoding: gzip, deflate
       Accept: application/json, text/xml, application/xml, */*
-      User-Agent: r-curl/3.2 crul/0.7.0.9100 rOpenSci(rcrossref/0.8.6.9100) (mailto:<crossref_email>)
-      X-USER-AGENT: r-curl/3.2 crul/0.7.0.9100 rOpenSci(rcrossref/0.8.6.9100) (mailto:<crossref_email>)
+      User-Agent: r-curl/4.3.2 crul/1.1.0 rOpenSci(rcrossref/1.1.0.94)
+      X-USER-AGENT: r-curl/4.3.2 crul/1.1.0 rOpenSci(rcrossref/1.1.0.94)
   response:
     status:
       status_code: '200'
@@ -61,31 +68,103 @@ http_interactions:
       explanation: Request fulfilled, document follows
     headers:
       status: HTTP/1.1 200 OK
-      content-type: application/json;charset=UTF-8
-      vary: Accept
+      date: Sun, 01 Aug 2021 15:51:55 GMT
+      content-type: application/json
+      content-length: '4130'
       access-control-allow-origin: '*'
       access-control-allow-headers: X-Requested-With
-      content-length: '4853'
-      server: http-kit
-      date: Wed, 09 Jan 2019 21:24:00 GMT
+      vary: Accept-Encoding
+      content-encoding: gzip
+      server: Jetty(9.4.40.v20210413)
+      x-ratelimit-limit: '50'
+      x-ratelimit-interval: 1s
       x-rate-limit-limit: '50'
       x-rate-limit-interval: 1s
+      permissions-policy: interest-cohort=()
       connection: close
     body:
       encoding: UTF-8
-      string: '{"status":"ok","message-type":"work-list","message-version":"1.0.0","message":{"facets":{},"total-results":71737546,"items":[{"indexed":{"date-parts":[[2018,4,13]],"date-time":"2018-04-13T01:38:52Z","timestamp":1523583532754},"reference-count":0,"publisher":"Informa
-        UK Limited","issue":"12","content-domain":{"domain":[],"crossmark-restriction":false},"short-container-title":["Geologiska
-        F\u00f6reningen i Stockholm F\u00f6rhandlingar"],"published-print":{"date-parts":[[1875,5,5]]},"DOI":"10.1080\/11035897509448098","type":"journal-article","created":{"date-parts":[[2010,1,7]],"date-time":"2010-01-07T20:03:24Z","timestamp":1262894604000},"page":"501-506","source":"Crossref","is-referenced-by-count":0,"title":["Geologiska
-        notiser fr\u00e5n en resa i Norra Ryssland, sommaren 1874"],"prefix":"10.1080","volume":"2","author":[{"given":"Gust","family":"Nauckhoff","sequence":"first","affiliation":[]}],"member":"301","published-online":{"date-parts":[[2010,1,6]]},"container-title":["Geologiska
-        F\u00f6reningen i Stockholm F\u00f6rhandlingar"],"language":"en","link":[{"URL":"https:\/\/www.tandfonline.com\/doi\/pdf\/10.1080\/11035897509448098","content-type":"unspecified","content-version":"vor","intended-application":"similarity-checking"}],"deposited":{"date-parts":[[2017,10,12]],"date-time":"2017-10-12T12:47:30Z","timestamp":1507812450000},"score":1.0,"issued":{"date-parts":[[1875,5,5]]},"references-count":0,"journal-issue":{"published-online":{"date-parts":[[2010,1,6]]},"published-print":{"date-parts":[[1875,5,5]]},"issue":"12"},"alternative-id":["10.1080\/11035897509448098"],"URL":"http:\/\/dx.doi.org\/10.1080\/11035897509448098","ISSN":["0016-786X"],"issn-type":[{"value":"0016-786X","type":"print"}]},{"indexed":{"date-parts":[[2018,4,13]],"date-time":"2018-04-13T01:38:52Z","timestamp":1523583532754},"reference-count":0,"publisher":"Informa
-        UK Limited","issue":"4","content-domain":{"domain":[],"crossmark-restriction":false},"short-container-title":["Geologiska
-        F\u00f6reningen i Stockholm F\u00f6rhandlingar"],"published-print":{"date-parts":[[1876,4,6]]},"DOI":"10.1080\/11035897609446990","type":"journal-article","created":{"date-parts":[[2010,1,7]],"date-time":"2010-01-07T20:04:26Z","timestamp":1262894666000},"page":"123-133","source":"Crossref","is-referenced-by-count":1,"title":["Bidrag
-        till k\u00e4nnedomen af L\u00e5ngbansgrufvans mineralier"],"prefix":"10.1080","volume":"3","author":[{"given":"C.
-        W.","family":"Blomstrand","sequence":"first","affiliation":[]}],"member":"301","published-online":{"date-parts":[[2010,1,6]]},"container-title":["Geologiska
-        F\u00f6reningen i Stockholm F\u00f6rhandlingar"],"language":"en","link":[{"URL":"https:\/\/www.tandfonline.com\/doi\/pdf\/10.1080\/11035897609446990","content-type":"unspecified","content-version":"vor","intended-application":"similarity-checking"}],"deposited":{"date-parts":[[2017,10,12]],"date-time":"2017-10-12T12:47:26Z","timestamp":1507812446000},"score":1.0,"issued":{"date-parts":[[1876,4,6]]},"references-count":0,"journal-issue":{"published-online":{"date-parts":[[2010,1,6]]},"published-print":{"date-parts":[[1876,4,6]]},"issue":"4"},"alternative-id":["10.1080\/11035897609446990"],"URL":"http:\/\/dx.doi.org\/10.1080\/11035897609446990","ISSN":["0016-786X"],"issn-type":[{"value":"0016-786X","type":"print"}]},{"indexed":{"date-parts":[[2018,4,13]],"date-time":"2018-04-13T01:38:52Z","timestamp":1523583532761},"reference-count":0,"publisher":"Informa
-        UK Limited","issue":"4","content-domain":{"domain":[],"crossmark-restriction":false},"short-container-title":["Geologiska
-        F\u00f6reningen i Stockholm F\u00f6rhandlingar"],"published-print":{"date-parts":[[1876,4,6]]},"DOI":"10.1080\/11035897609446989","type":"journal-article","created":{"date-parts":[[2010,1,7]],"date-time":"2010-01-07T20:04:29Z","timestamp":1262894669000},"page":"119-123","source":"Crossref","is-referenced-by-count":0,"title":["M\u00f6tet
-        den 6 April 1876"],"prefix":"10.1080","volume":"3","member":"301","published-online":{"date-parts":[[2010,1,6]]},"container-title":["Geologiska
-        F\u00f6reningen i Stockholm F\u00f6rhandlingar"],"language":"en","link":[{"URL":"https:\/\/www.tandfonline.com\/doi\/pdf\/10.1080\/11035897609446989","content-type":"unspecified","content-version":"vor","intended-application":"similarity-checking"}],"deposited":{"date-parts":[[2017,10,12]],"date-time":"2017-10-12T12:47:27Z","timestamp":1507812447000},"score":1.0,"issued":{"date-parts":[[1876,4,6]]},"references-count":0,"journal-issue":{"published-online":{"date-parts":[[2010,1,6]]},"published-print":{"date-parts":[[1876,4,6]]},"issue":"4"},"alternative-id":["10.1080\/11035897609446989"],"URL":"http:\/\/dx.doi.org\/10.1080\/11035897609446989","ISSN":["0016-786X"],"issn-type":[{"value":"0016-786X","type":"print"}]}],"items-per-page":3,"query":{"start-index":0,"search-terms":null}}}'
-  recorded_at: 2019-01-09 21:24:00 GMT
-  recorded_with: vcr/0.2.0, webmockr/0.3.0
+      file: no
+      string: '{"status":"ok","message-type":"work-list","message-version":"1.0.0","message":{"facets":{},"total-results":90846973,"items":[{"indexed":{"date-parts":[[2021,5,6]],"date-time":"2021-05-06T20:07:48Z","timestamp":1620331668137},"reference-count":0,"publisher":"Elsevier
+        BV","issue":"2","license":[{"start":{"date-parts":[[1990,10,1]],"date-time":"1990-10-01T00:00:00Z","timestamp":654739200000},"content-version":"tdm","delay-in-days":0,"URL":"https:\/\/www.elsevier.com\/tdm\/userlicense\/1.0\/"}],"content-domain":{"domain":[],"crossmark-restriction":false},"short-container-title":["Carbohydrate
+        Research"],"published-print":{"date-parts":[[1990,10]]},"DOI":"10.1016\/0008-6215(90)84065-3","type":"journal-article","created":{"date-parts":[[2002,7,25]],"date-time":"2002-07-25T17:10:16Z","timestamp":1027617016000},"page":"C9-C10","source":"Crossref","is-referenced-by-count":0,"title":["Subject
+        index"],"prefix":"10.1016","volume":"207","member":"78","container-title":["Carbohydrate
+        Research"],"language":"en","link":[{"URL":"https:\/\/api.elsevier.com\/content\/article\/PII:0008621590840653?httpAccept=text\/xml","content-type":"text\/xml","content-version":"vor","intended-application":"text-mining"},{"URL":"https:\/\/api.elsevier.com\/content\/article\/PII:0008621590840653?httpAccept=text\/plain","content-type":"text\/plain","content-version":"vor","intended-application":"text-mining"}],"deposited":{"date-parts":[[2019,4,25]],"date-time":"2019-04-25T06:53:17Z","timestamp":1556175197000},"score":0.0,"issued":{"date-parts":[[1990,10]]},"references-count":0,"journal-issue":{"issue":"2","published-print":{"date-parts":[[1990,10]]}},"alternative-id":["0008621590840653"],"URL":"http:\/\/dx.doi.org\/10.1016\/0008-6215(90)84065-3","ISSN":["0008-6215"],"issn-type":[{"value":"0008-6215","type":"print"}],"subject":["Organic
+        Chemistry","Biochemistry","General Medicine","Analytical Chemistry"],"published":{"date-parts":[[1990,10]]}},{"indexed":{"date-parts":[[2021,5,6]],"date-time":"2021-05-06T20:07:49Z","timestamp":1620331669863},"reference-count":0,"publisher":"Elsevier
+        BV","license":[{"start":{"date-parts":[[1985,3,1]],"date-time":"1985-03-01T00:00:00Z","timestamp":478483200000},"content-version":"tdm","delay-in-days":0,"URL":"https:\/\/www.elsevier.com\/tdm\/userlicense\/1.0\/"}],"content-domain":{"domain":[],"crossmark-restriction":false},"short-container-title":["Carbohydrate
+        Research"],"published-print":{"date-parts":[[1985,3]]},"DOI":"10.1016\/0008-6215(85)85178-8","type":"journal-article","created":{"date-parts":[[2002,7,25]],"date-time":"2002-07-25T17:11:11Z","timestamp":1027617071000},"page":"C20-C21","source":"Crossref","is-referenced-by-count":0,"title":["Bacterial
+        Lipopolysaccharides: Structure, Synthesis, and Biological Activities"],"prefix":"10.1016","volume":"137","author":[{"given":"William","family":"Egan","sequence":"first","affiliation":[]}],"member":"78","container-title":["Carbohydrate
+        Research"],"language":"en","link":[{"URL":"https:\/\/api.elsevier.com\/content\/article\/PII:0008621585851788?httpAccept=text\/xml","content-type":"text\/xml","content-version":"vor","intended-application":"text-mining"},{"URL":"https:\/\/api.elsevier.com\/content\/article\/PII:0008621585851788?httpAccept=text\/plain","content-type":"text\/plain","content-version":"vor","intended-application":"text-mining"}],"deposited":{"date-parts":[[2019,4,25]],"date-time":"2019-04-25T06:27:21Z","timestamp":1556173641000},"score":0.0,"issued":{"date-parts":[[1985,3]]},"references-count":0,"alternative-id":["0008621585851788"],"URL":"http:\/\/dx.doi.org\/10.1016\/0008-6215(85)85178-8","ISSN":["0008-6215"],"issn-type":[{"value":"0008-6215","type":"print"}],"subject":["Organic
+        Chemistry","Biochemistry","General Medicine","Analytical Chemistry"],"published":{"date-parts":[[1985,3]]}},{"indexed":{"date-parts":[[2021,5,6]],"date-time":"2021-05-06T20:07:52Z","timestamp":1620331672187},"reference-count":30,"publisher":"Elsevier
+        BV","issue":"12","license":[{"start":{"date-parts":[[2001,6,1]],"date-time":"2001-06-01T00:00:00Z","timestamp":991353600000},"content-version":"tdm","delay-in-days":0,"URL":"https:\/\/www.elsevier.com\/tdm\/userlicense\/1.0\/"}],"content-domain":{"domain":[],"crossmark-restriction":false},"short-container-title":["Comptes
+        Rendus de l''Acad\u00e9mie des Sciences - Series IIA - Earth and Planetary
+        Science"],"published-print":{"date-parts":[[2001,6]]},"DOI":"10.1016\/s1251-8050(01)01603-2","type":"journal-article","created":{"date-parts":[[2002,7,25]],"date-time":"2002-07-25T13:05:15Z","timestamp":1027602315000},"page":"755-760","source":"Crossref","is-referenced-by-count":0,"title":["Le
+        \u03b413C des grains de pollen : int\u00e9r\u00eat pour l''\u00e9tude des
+        pal\u00e9ov\u00e9g\u00e9tations"],"prefix":"10.1016","volume":"332","author":[{"given":"Chantal","family":"Descolas-Gros","sequence":"first","affiliation":[]},{"given":"Michel","family":"Calleja","sequence":"additional","affiliation":[]},{"given":"Pierre","family":"Cour","sequence":"additional","affiliation":[]},{"given":"Paul","family":"Richard","sequence":"additional","affiliation":[]},{"given":"Christiane","family":"Perruchietti","sequence":"additional","affiliation":[]},{"given":"Patrick","family":"Jame","sequence":"additional","affiliation":[]}],"member":"78","reference":[{"key":"10.1016\/S1251-8050(01)01603-2_BIB001","doi-asserted-by":"crossref","first-page":"17","DOI":"10.1016\/S0034-6667(97)00031-6","article-title":"Stable
+        carbon isotope composition of Poaceae pollen and its potential in paleovegetational
+        reconstructions","volume":"99","author":"Amundson","year":"1997","journal-title":"Rev.
+        Paleobot. Palynol."},{"key":"10.1016\/S1251-8050(01)01603-2_BIB002","doi-asserted-by":"crossref","first-page":"131","DOI":"10.1016\/S0098-8472(97)00039-7","article-title":"Leaf
+        photosynthesis and carbon isotope discrimination of cotton in response to
+        potassium deficiency","volume":"39","author":"Bednatz","year":"1998","journal-title":"Environ.
+        Exp. Bot."},{"key":"10.1016\/S1251-8050(01)01603-2_BIB003","doi-asserted-by":"crossref","first-page":"499","DOI":"10.1007\/s004420050110","article-title":"Leaf
+        \u03b413C in Pinus resinosa trees and understory plants: variation associated
+        with light and CO2 gradients","volume":"109","author":"Berry","year":"1997","journal-title":"Oecologia"},{"key":"10.1016\/S1251-8050(01)01603-2_BIB004","doi-asserted-by":"crossref","first-page":"287","DOI":"10.1007\/BF00540195","article-title":"Distribution
+        of biomass of species differing in photosynthetic pathway along an altitudinal
+        transect in southeastern Wyoming grassland","volume":"45","author":"Boutton","year":"1980","journal-title":"Oecologia"},{"key":"10.1016\/S1251-8050(01)01603-2_BIB005","doi-asserted-by":"crossref","first-page":"441","DOI":"10.1007\/s004420050468","article-title":"Effects
+        of climate and atmospheric CO2 partial pressure on the global distribution
+        of C4 grasses: present, past, and future","volume":"114","author":"Collatz","year":"1998","journal-title":"Oecologia"},{"key":"10.1016\/S1251-8050(01)01603-2_BIB006","doi-asserted-by":"crossref","first-page":"237","DOI":"10.1006\/qres.1999.2065","article-title":"Physiological
+        significance of low atmospheric CO2 for plant-climate interactions","volume":"52","author":"Cowling","year":"1999","journal-title":"Quaternary
+        Res."},{"key":"10.1016\/S1251-8050(01)01603-2_BIB007","doi-asserted-by":"crossref","first-page":"95","DOI":"10.1016\/0169-5347(91)90183-X","article-title":"Climate
+        change and the evolution of C4 photosynthesis","volume":"6","author":"Ehleringer","year":"1991","journal-title":"Trends
+        in Ecology and Evolution"},{"key":"10.1016\/S1251-8050(01)01603-2_BIB008","doi-asserted-by":"crossref","first-page":"336","DOI":"10.1007\/s004420050867","article-title":"Transformation
+        of plant biochemicals to geological macromolecules during early diagenesis","volume":"120","author":"Fogel","year":"1999","journal-title":"Oecologia"},{"key":"10.1016\/S1251-8050(01)01603-2_BIB009","doi-asserted-by":"crossref","first-page":"316","DOI":"10.1007\/s004420050593","article-title":"Functional
+        diversity in an Amazonian rainforest of French guyana: a dual isotope approach
+        (\u03b415N and \u03b413C)","volume":"116","author":"Guehl","year":"1998","journal-title":"Oecologia"},{"key":"10.1016\/S1251-8050(01)01603-2_BIB010","doi-asserted-by":"crossref","first-page":"177","DOI":"10.1006\/bojl.1996.0031","article-title":"Experimental
+        modelling of exine self-assembly","volume":"121","author":"Hemsley","year":"1996","journal-title":"Bot.
+        J. Linn. Soc."},{"key":"10.1016\/S1251-8050(01)01603-2_BIB011","doi-asserted-by":"crossref","first-page":"222","DOI":"10.1016\/0033-5894(91)90069-H","article-title":"Stable
+        isotope ratios of carbon in phytoliths as a quantitative method of monitoring
+        vegetation and climate change","volume":"35","author":"Kelly","year":"1991","journal-title":"Quaternary
+        Res."},{"key":"10.1016\/S1251-8050(01)01603-2_BIB012","doi-asserted-by":"crossref","first-page":"509","DOI":"10.2307\/2261603","article-title":"Ecological
+        correlates of carbon isotope composition of leaves: a comparative analysis
+        testing for the effects of temperature, CO2 and O2 partial pressures and taxonomic
+        relatedness on \u03b413C","volume":"83","author":"Kelly","year":"1995","journal-title":"J.
+        Ecol."},{"key":"10.1016\/S1251-8050(01)01603-2_BIB013","doi-asserted-by":"crossref","first-page":"573","DOI":"10.1146\/annurev.earth.26.1.573","article-title":"Isotopic
+        reconstruction of past continental environments","volume":"26","author":"Koch","year":"1998","journal-title":"Annu.
+        Rev. Earth Planet. Sci."},{"key":"10.1016\/S1251-8050(01)01603-2_BIB014","doi-asserted-by":"crossref","first-page":"311","DOI":"10.1007\/s004420050791","article-title":"Variation
+        in carbon isotope composition among years in the Riparian tree Populus fremontii","volume":"119","author":"Leffler","year":"1999","journal-title":"Oecologia"},{"key":"10.1016\/S1251-8050(01)01603-2_BIB015","doi-asserted-by":"crossref","first-page":"831","DOI":"10.1093\/treephys\/19.12.831","article-title":"A
+        rapid and simple method for processing wood to crude cellulose for analysis
+        of stable carbon isotopes in tree rings","volume":"19","author":"MacFarlane","year":"1999","journal-title":"Tree
+        Physiol."},{"key":"10.1016\/S1251-8050(01)01603-2_BIB016","doi-asserted-by":"crossref","first-page":"91","DOI":"10.1007\/PL00008821","article-title":"Contributions
+        of C3 and C4 plants to higher trophic levels in an amazonian savanna","volume":"119","author":"Magnusson","year":"1999","journal-title":"Oecologia"},{"key":"10.1016\/S1251-8050(01)01603-2_BIB017","doi-asserted-by":"crossref","first-page":"675","DOI":"10.1191\/095968398675987498","article-title":"Stable
+        carbon isotope ratios of latewood cellulose in Pinus sylvestris from northern
+        Finland: variability and signal-strength","volume":"8","author":"McCarroll","year":"1998","journal-title":"The
+        Holocene"},{"key":"10.1016\/S1251-8050(01)01603-2_BIB018","doi-asserted-by":"crossref","first-page":"317","DOI":"10.1016\/S0034-6667(96)00058-9","article-title":"Pollen-vegetation
+        relationships on the subantarctic Auckland islands, New Zealand","volume":"96","author":"McGlone","year":"1997","journal-title":"Rev.
+        Paleobot. Palynol."},{"key":"10.1016\/S1251-8050(01)01603-2_BIB019","series-title":"Physics
+        and chemistry of lakes","first-page":"279","article-title":"Organic matter
+        accumulation records in lake sediments","author":"Meyers","year":"1995"},{"key":"10.1016\/S1251-8050(01)01603-2_BIB020","doi-asserted-by":"crossref","first-page":"553","DOI":"10.1016\/0031-9422(81)85134-5","article-title":"Carbon
+        isotope fractionation in plants","volume":"20","author":"O''Leary","year":"1981","journal-title":"Phytochemistry"},{"key":"10.1016\/S1251-8050(01)01603-2_BIB021","doi-asserted-by":"crossref","first-page":"328","DOI":"10.2307\/1310735","article-title":"Carbon
+        isotopes in photosynthesis","volume":"38","author":"O''Leary","year":"1981","journal-title":"Bioscience"},{"key":"10.1016\/S1251-8050(01)01603-2_BIB022","doi-asserted-by":"crossref","first-page":"1","DOI":"10.1111\/j.1365-3040.1984.tb01194.x","article-title":"Comparative
+        ecophysiology of C3 and C4 plants","volume":"7","author":"Pearcy","year":"1984","journal-title":"Plant
+        Cell Environ."},{"key":"10.1016\/S1251-8050(01)01603-2_BIB023","doi-asserted-by":"crossref","first-page":"69","DOI":"10.1023\/A:1006377708156","article-title":"Occurrence
+        of C3 and C4 photosynthesis in cotyledons and leaves of Salsola species (chenopodiaceae)","volume":"63","author":"Pyankov","year":"2000","journal-title":"Photosynthesis
+        Res."},{"key":"10.1016\/S1251-8050(01)01603-2_BIB024","doi-asserted-by":"crossref","first-page":"354","DOI":"10.1007\/BF00540205","article-title":"The
+        ecological distribution of C4 and C3 grasses in the Hawaiian islands","volume":"45","author":"Rundel","year":"1980","journal-title":"Oecologia"},{"key":"10.1016\/S1251-8050(01)01603-2_BIB025","doi-asserted-by":"crossref","first-page":"121","DOI":"10.1016\/S0009-2541(99)00024-8","article-title":"Carbon
+        isotope behaviour in wood and cellulose during artificial aging","volume":"158","author":"Schleser","year":"1999","journal-title":"Chem.
+        Geol."},{"key":"10.1016\/S1251-8050(01)01603-2_BIB026","doi-asserted-by":"crossref","first-page":"380","DOI":"10.1104\/pp.47.3.380","article-title":"Two
+        categories of 13C\/12C ratios for higher plants","volume":"47","author":"Smith","year":"1971","journal-title":"Plant
+        Physiol."},{"key":"10.1016\/S1251-8050(01)01603-2_BIB027","doi-asserted-by":"crossref","first-page":"51","DOI":"10.1071\/PP9950051","article-title":"13C
+        natural abundance in plant communities along a rainfall gradient: a biological
+        integrator of water availibility","volume":"22","author":"Stewart","year":"1995","journal-title":"Austr.
+        J. Plant Physiol."},{"key":"10.1016\/S1251-8050(01)01603-2_BIB028","doi-asserted-by":"crossref","first-page":"337","DOI":"10.1007\/BF00347910","article-title":"The
+        distribution of C3 and C4 grasses and carbon isotope discrimination along
+        an altitudinal and moisture gradient in Kenya","volume":"37","author":"Tieszen","year":"1979","journal-title":"Oecologia"},{"key":"10.1016\/S1251-8050(01)01603-2_BIB029","doi-asserted-by":"crossref","first-page":"319","DOI":"10.1111\/j.1438-8677.1995.tb00791.x","article-title":"Resistent
+        biomacromolecules in the fossil record","volume":"44","author":"van Bergen","year":"1995","journal-title":"Acta
+        Bot. Neerl."},{"key":"10.1016\/S1251-8050(01)01603-2_BIB030","series-title":"Fractionation
+        of the carbon isotopes during photosynthesis, Sitzungsberichte der Heidelberger
+        Akademie der Wissenschaften Mathematisch-naturwissenschaftliche Klasse, Springer","author":"Vogel","year":"1980"}],"container-title":["Comptes
+        Rendus de l''Acad\u00e9mie des Sciences - Series IIA - Earth and Planetary
+        Science"],"language":"fr","link":[{"URL":"https:\/\/api.elsevier.com\/content\/article\/PII:S1251805001016032?httpAccept=text\/xml","content-type":"text\/xml","content-version":"vor","intended-application":"text-mining"},{"URL":"https:\/\/api.elsevier.com\/content\/article\/PII:S1251805001016032?httpAccept=text\/plain","content-type":"text\/plain","content-version":"vor","intended-application":"text-mining"}],"deposited":{"date-parts":[[2019,4,25]],"date-time":"2019-04-25T05:24:20Z","timestamp":1556169860000},"score":0.0,"issued":{"date-parts":[[2001,6]]},"references-count":30,"journal-issue":{"issue":"12","published-print":{"date-parts":[[2001,6]]}},"alternative-id":["S1251805001016032"],"URL":"http:\/\/dx.doi.org\/10.1016\/s1251-8050(01)01603-2","ISSN":["1251-8050"],"issn-type":[{"value":"1251-8050","type":"print"}],"subject":["Ocean
+        Engineering","Ecology, Evolution, Behavior and Systematics"],"published":{"date-parts":[[2001,6]]}}],"items-per-page":3,"query":{"start-index":0,"search-terms":null}}}'
+  recorded_at: 2021-08-01 15:51:55 GMT
+  recorded_with: vcr/1.0.2, webmockr/0.8.0

@@ -1,15 +1,15 @@
 http_interactions:
 - request:
     method: get
-    uri: https://api.crossref.org/works/10.1175//2572.1.xml
+    uri: https://api.crossref.org/works/10.1175//2572.1/transform/application/vnd.crossref.unixsd+xml
     body:
       encoding: ''
       string: ''
     headers:
       Accept-Encoding: gzip, deflate
       Accept: application/json, text/xml, application/xml, */*
-      User-Agent: r-curl/4.3 crul/1.0.0 rOpenSci(rcrossref/1.1.0) (mailto:<crossref_email>)
-      X-USER-AGENT: r-curl/4.3 crul/1.0.0 rOpenSci(rcrossref/1.1.0) (mailto:<crossref_email>)
+      User-Agent: r-curl/4.3.2 crul/1.1.0 rOpenSci(rcrossref/1.1.0.94)
+      X-USER-AGENT: r-curl/4.3.2 crul/1.1.0 rOpenSci(rcrossref/1.1.0.94)
   response:
     status:
       status_code: '200'
@@ -17,16 +17,21 @@ http_interactions:
       explanation: Request fulfilled, document follows
     headers:
       status: HTTP/1.1 200 OK
+      date: Sun, 01 Aug 2021 15:42:58 GMT
+      content-length: '6586'
       link: <http://dx.doi.org/10.1175//2572.1>; rel="canonical", <http://journals.ametsoc.org/mwr/article-pdf/131/8/1895/4208740/_2572_1.pdf>;
         version="vor"; type="application/pdf"; rel="item", <http://journals.ametsoc.org/mwr/article-pdf/131/8/1895/4208740/_2572_1.pdf>;
         version="vor"; rel="item"
       access-control-allow-origin: '*'
       access-control-allow-headers: X-Requested-With
-      content-length: '7060'
-      server: http-kit
-      date: Fri, 02 Oct 2020 15:54:21 GMT
+      vary: Accept-Encoding
+      content-encoding: gzip
+      server: Jetty(9.4.40.v20210413)
+      x-ratelimit-limit: '50'
+      x-ratelimit-interval: 1s
       x-rate-limit-limit: '50'
       x-rate-limit-interval: 1s
+      permissions-policy: interest-cohort=()
       connection: close
     body:
       encoding: UTF-8
@@ -43,7 +48,7 @@ http_interactions:
         \       <crm-item name=\"journal-id\" type=\"number\">5839</crm-item>\r\n
         \       <crm-item name=\"deposit-timestamp\" type=\"number\">2020061721302561500</crm-item>\r\n
         \       <crm-item name=\"owner-prefix\" type=\"string\">10.1175</crm-item>\r\n
-        \       <crm-item name=\"last-update\" type=\"date\">2020-06-18T01:31:13Z</crm-item>\r\n
+        \       <crm-item name=\"last-update\" type=\"date\">2020-12-07T22:15:42Z</crm-item>\r\n
         \       <crm-item name=\"created\" type=\"date\">2003-07-25T16:26:33Z</crm-item>\r\n
         \       <crm-item name=\"citedby-count\" type=\"number\">19</crm-item>\r\n
         \       <doi_record>\r\n          <crossref xmlns=\"http://www.crossref.org/xschema/1.1\"
@@ -105,14 +110,346 @@ http_interactions:
         \               <pages>\r\n                  <first_page>1895</first_page>\r\n
         \                 <last_page>1909</last_page>\r\n                </pages>\r\n
         \               <doi_data>\r\n                  <doi>10.1175//2572.1</doi>\r\n
-        \                 <resource>https://journals.ametsoc.org/mwr/article/131/8/1895/67449/A-Numerical-Study-of-Early-Summer-Regional-Climate</resource>\r\n
+        \                 <resource>http://journals.ametsoc.org/doi/10.1175//2572.1</resource>\r\n
         \                 <collection property=\"crawler-based\">\r\n                    <item
         crawler=\"iParadigms\">\r\n                      <resource>http://journals.ametsoc.org/mwr/article-pdf/131/8/1895/4208740/_2572_1.pdf</resource>\r\n
         \                   </item>\r\n                  </collection>\r\n                  <collection
         property=\"syndication\">\r\n                    <item>\r\n                      <resource
         content_version=\"vor\" mime_type=\"application/pdf\">http://journals.ametsoc.org/mwr/article-pdf/131/8/1895/4208740/_2572_1.pdf</resource>\r\n
         \                   </item>\r\n                  </collection>\r\n                </doi_data>\r\n
-        \             </journal_article>\r\n            </journal>\r\n          </crossref>\r\n
-        \       </doi_record>\r\n      </query>\r\n    </body>\r\n  </query_result>\r\n</crossref_result>"
-  recorded_at: 2020-10-02 15:54:20 GMT
-  recorded_with: vcr/0.5.4, webmockr/0.7.0
+        \               <citation_list>\r\n                  <citation key=\"2020061721302561500_i1520-0493-131-8-1895-Alexander1\">\r\n
+        \                   <journal_title>J. Atmos. Sci.</journal_title>\r\n                    <author>Alexander</author>\r\n
+        \                   <volume>55</volume>\r\n                    <first_page>2137</first_page>\r\n
+        \                   <cYear>1998</cYear>\r\n                    <doi provider=\"crossref\">10.1175/1520-0469(1998)055&lt;2137:TUOCRS&gt;2.0.CO;2</doi>\r\n
+        \                   <article_title>The use of cloud-resolving simulations
+        of mesoscale convective systems to build a mesoscale parameterization scheme.</article_title>\r\n
+        \                 </citation>\r\n                  <citation key=\"2020061721302561500_i1520-0493-131-8-1895-Anthes1\">\r\n
+        \                   <journal_title>Bull. Amer. Meteor. Soc.</journal_title>\r\n
+        \                   <author>Anthes</author>\r\n                    <volume>71</volume>\r\n
+        \                   <first_page>1610</first_page>\r\n                    <cYear>1990</cYear>\r\n
+        \                   <doi provider=\"crossref\">10.1175/1520-0477(1990)071&lt;1610:RAOTPS&gt;2.0.CO;2</doi>\r\n
+        \                   <article_title>Recent applications of the Penn State/NCAR
+        mesoscale model to synoptic, mesoscale, and climate studies.</article_title>\r\n
+        \                 </citation>\r\n                  <citation key=\"2020061721302561500_i1520-0493-131-8-1895-Anthes2\">\r\n
+        \                   <author>Anthes</author>\r\n                    <cYear>1985</cYear>\r\n
+        \                   <doi provider=\"crossref\">10.1016/S0065-2687(08)60188-0</doi>\r\n
+        \                   <article_title>Predictability of mesoscale atmospheric
+        motions.</article_title>\r\n                  </citation>\r\n                  <citation
+        key=\"2020061721302561500_i1520-0493-131-8-1895-Bister1\">\r\n                    <journal_title>Meteor.
+        Atmos. Phys.</journal_title>\r\n                    <author>Bister</author>\r\n
+        \                   <volume>55</volume>\r\n                    <first_page>233</first_page>\r\n
+        \                   <cYear>1998</cYear>\r\n                    <doi provider=\"crossref\">10.1007/BF01030791</doi>\r\n
+        \                   <article_title>Dissipative heating and hurricane intensity.</article_title>\r\n
+        \                 </citation>\r\n                  <citation key=\"2020061721302561500_i1520-0493-131-8-1895-Braun1\">\r\n
+        \                   <journal_title>Mon. Wea. Rev.</journal_title>\r\n                    <author>Braun</author>\r\n
+        \                   <volume>128</volume>\r\n                    <first_page>3941</first_page>\r\n
+        \                   <cYear>2000</cYear>\r\n                    <doi provider=\"crossref\">10.1175/1520-0493(2000)129&lt;3941:SOHRSO&gt;2.0.CO;2</doi>\r\n
+        \                   <article_title>Sensitivity of high-resolution simulations
+        of Hurricane Bob (1991) to planetary boundary layer parameterizations.</article_title>\r\n
+        \                 </citation>\r\n                  <citation key=\"2020061721302561500_i1520-0493-131-8-1895-Browning1\">\r\n
+        \                   <journal_title>Quart. J. Roy. Meteor. Soc.</journal_title>\r\n
+        \                   <author>Browning</author>\r\n                    <volume>120</volume>\r\n
+        \                   <first_page>483</first_page>\r\n                    <cYear>1994</cYear>\r\n
+        \                   <article_title>Survey of the perceived priority issues
+        in the parameterization of cloud-related processes in GCMs.</article_title>\r\n
+        \                 </citation>\r\n                  <citation key=\"2020061721302561500_i1520-0493-131-8-1895-Carbone1\">\r\n
+        \                   <journal_title>J. Atmos. Sci.</journal_title>\r\n                    <author>Carbone</author>\r\n
+        \                   <volume>59</volume>\r\n                    <first_page>2033</first_page>\r\n
+        \                   <cYear>2002</cYear>\r\n                    <doi provider=\"crossref\">10.1175/1520-0469(2002)059&lt;2033:IOPAWW&gt;2.0.CO;2</doi>\r\n
+        \                   <article_title>Inferences of predictability associated
+        with warm season precipitation episodes.</article_title>\r\n                  </citation>\r\n
+        \                 <citation key=\"2020061721302561500_i1520-0493-131-8-1895-Carlson1\">\r\n
+        \                   <journal_title>Mon. Wea. Rev.</journal_title>\r\n                    <author>Carlson</author>\r\n
+        \                   <volume>111</volume>\r\n                    <first_page>1453</first_page>\r\n
+        \                   <cYear>1983</cYear>\r\n                    <doi provider=\"crossref\">10.1175/1520-0493(1983)111&lt;1453:EMLITR&gt;2.0.CO;2</doi>\r\n
+        \                   <article_title>Elevated mixed layers in the regional severe
+        storm environment: Conceptual model and case studies.</article_title>\r\n
+        \                 </citation>\r\n                  <citation key=\"2020061721302561500_i1520-0493-131-8-1895-Chen1\">\r\n
+        \                   <journal_title>Mon. Wea. Rev.</journal_title>\r\n                    <author>Chen</author>\r\n
+        \                   <volume>129</volume>\r\n                    <first_page>569</first_page>\r\n
+        \                   <cYear>2001</cYear>\r\n                    <doi provider=\"crossref\">10.1175/1520-0493(2001)129&lt;0569:CAALSH&gt;2.0.CO;2</doi>\r\n
+        \                   <article_title>Coupling an advanced land surface–hydrology
+        model with the Penn State–NCAR MM5 modeling system. Part I: Model implementation
+        and sensitivity.</article_title>\r\n                  </citation>\r\n                  <citation
+        key=\"2020061721302561500_i1520-0493-131-8-1895-Chen2\">\r\n                    <journal_title>J.
+        Geophys. Res.</journal_title>\r\n                    <author>Chen</author>\r\n
+        \                   <volume>101</volume>\r\n                    <issue>D3</issue>\r\n
+        \                   <first_page>7251</first_page>\r\n                    <cYear>1996</cYear>\r\n
+        \                   <doi provider=\"crossref\">10.1029/95JD02165</doi>\r\n
+        \                   <article_title>Modeling of land surface evaporation by
+        four schemes and comparison with FIFE observations (PILPS).</article_title>\r\n
+        \                 </citation>\r\n                  <citation key=\"2020061721302561500_i1520-0493-131-8-1895-Chen3\">\r\n
+        \                   <journal_title>J. Climate</journal_title>\r\n                    <author>Chen</author>\r\n
+        \                   <volume>10</volume>\r\n                    <first_page>1194</first_page>\r\n
+        \                   <cYear>1997</cYear>\r\n                    <doi provider=\"crossref\">10.1175/1520-0442(1997)010&lt;1194:CERFTP&gt;2.0.CO;2</doi>\r\n
+        \                   <article_title>Cabauw experimental results from the project
+        for intercomparison of land surface parameterization schemes.</article_title>\r\n
+        \                 </citation>\r\n                  <citation key=\"2020061721302561500_i1520-0493-131-8-1895-Deardorff1\">\r\n
+        \                   <journal_title>J. Geophys. Res.</journal_title>\r\n                    <author>Deardorff</author>\r\n
+        \                   <volume>83</volume>\r\n                    <first_page>1889</first_page>\r\n
+        \                   <cYear>1978</cYear>\r\n                    <doi provider=\"crossref\">10.1029/JC083iC04p01889</doi>\r\n
+        \                   <article_title>Efficient prediction of ground surface
+        temperature and moisture with inclusion of a layer of vegetation.</article_title>\r\n
+        \                 </citation>\r\n                  <citation key=\"2020061721302561500_i1520-0493-131-8-1895-Deng1\">\r\n
+        \                   <journal_title>J. Atmos. Sci.</journal_title>\r\n                    <author>Deng</author>\r\n
+        \                   <volume>60</volume>\r\n                    <first_page>34</first_page>\r\n
+        \                   <cYear>2003</cYear>\r\n                    <doi provider=\"crossref\">10.1175/1520-0469(2003)060&lt;0034:ASCPFM&gt;2.0.CO;2</doi>\r\n
+        \                   <article_title>A shallow-convective parameterization for
+        mesoscale models. Part I: Submodel description and preliminary application.</article_title>\r\n
+        \                 </citation>\r\n                  <citation key=\"2020061721302561500_i1520-0493-131-8-1895-Dudhia1\">\r\n
+        \                   <journal_title>J. Atmos. Sci.</journal_title>\r\n                    <author>Dudhia</author>\r\n
+        \                   <volume>46</volume>\r\n                    <first_page>3077</first_page>\r\n
+        \                   <cYear>1989</cYear>\r\n                    <doi provider=\"crossref\">10.1175/1520-0469(1989)046&lt;3077:NSOCOD&gt;2.0.CO;2</doi>\r\n
+        \                   <article_title>Numerical study of convection observed
+        during the winter monsoon experiment using a mesoscale two-dimensional model.</article_title>\r\n
+        \                 </citation>\r\n                  <citation key=\"2020061721302561500_i1520-0493-131-8-1895-GCIP1\">\r\n
+        \                   <author>GCIP</author>\r\n                    <cYear>1996</cYear>\r\n
+        \                   <article_title>GCIP coupled modeling workshop.</article_title>\r\n
+        \                 </citation>\r\n                  <citation key=\"2020061721302561500_i1520-0493-131-8-1895-Ghan1\">\r\n
+        \                   <journal_title>J. Climate</journal_title>\r\n                    <author>Ghan</author>\r\n
+        \                   <volume>10</volume>\r\n                    <first_page>3157</first_page>\r\n
+        \                   <cYear>1997</cYear>\r\n                    <doi provider=\"crossref\">10.1175/1520-0442(1997)010&lt;3157:IOSVOS&gt;2.0.CO;2</doi>\r\n
+        \                   <article_title>Influence of subgrid variability on surface
+        hydrology.</article_title>\r\n                  </citation>\r\n                  <citation
+        key=\"2020061721302561500_i1520-0493-131-8-1895-Giorgi1\">\r\n                    <journal_title>J.
+        Climate</journal_title>\r\n                    <author>Giorgi</author>\r\n
+        \                   <volume>3</volume>\r\n                    <first_page>941</first_page>\r\n
+        \                   <cYear>1990</cYear>\r\n                    <doi provider=\"crossref\">10.1175/1520-0442(1990)003&lt;0941:SORCUA&gt;2.0.CO;2</doi>\r\n
+        \                   <article_title>Simulation of regional climate using a
+        limited-area model nested in a general circulation model.</article_title>\r\n
+        \                 </citation>\r\n                  <citation key=\"2020061721302561500_i1520-0493-131-8-1895-Giorgi2\">\r\n
+        \                   <journal_title>Mon. Wea. Rev.</journal_title>\r\n                    <author>Giorgi</author>\r\n
+        \                   <volume>119</volume>\r\n                    <first_page>2870</first_page>\r\n
+        \                   <cYear>1991</cYear>\r\n                    <doi provider=\"crossref\">10.1175/1520-0493(1991)119&lt;2870:SOSSPO&gt;2.0.CO;2</doi>\r\n
+        \                   <article_title>Sensitivity of simulated summertime precipitation
+        over the United States to different physics parameterizations.</article_title>\r\n
+        \                 </citation>\r\n                  <citation key=\"2020061721302561500_i1520-0493-131-8-1895-Giorgi3\">\r\n
+        \                   <journal_title>Rev. Geophys.</journal_title>\r\n                    <author>Giorgi</author>\r\n
+        \                   <volume>35</volume>\r\n                    <first_page>413</first_page>\r\n
+        \                   <cYear>1997</cYear>\r\n                    <doi provider=\"crossref\">10.1029/97RG01754</doi>\r\n
+        \                   <article_title>Representation of heterogeneity effects
+        in earth system modeling: Experience from land surface modeling.</article_title>\r\n
+        \                 </citation>\r\n                  <citation key=\"2020061721302561500_i1520-0493-131-8-1895-Gong1\">\r\n
+        \                   <journal_title>J. Climate</journal_title>\r\n                    <author>Gong</author>\r\n
+        \                   <volume>13</volume>\r\n                    <first_page>74</first_page>\r\n
+        \                   <cYear>2000</cYear>\r\n                    <doi provider=\"crossref\">10.1175/1520-0442(2000)013&lt;0093:ARMSOT&gt;2.0.CO;2</doi>\r\n
+        \                   <article_title>A regional model simulation of the 1991
+        severe precipitation event over the Yangtze–Huai River Valley. Part I: Precipitation
+        and circulation statistics.</article_title>\r\n                  </citation>\r\n
+        \                 <citation key=\"2020061721302561500_i1520-0493-131-8-1895-Gutman1\">\r\n
+        \                   <journal_title>Int. J. Remote Sens.</journal_title>\r\n
+        \                   <author>Gutman</author>\r\n                    <volume>19</volume>\r\n
+        \                   <first_page>1533</first_page>\r\n                    <cYear>1998</cYear>\r\n
+        \                   <doi provider=\"crossref\">10.1080/014311698215333</doi>\r\n
+        \                   <article_title>The derivation of green vegetation fraction
+        from NOAA/AVHRR data for use in numerical weather prediction models.</article_title>\r\n
+        \                 </citation>\r\n                  <citation key=\"2020061721302561500_i1520-0493-131-8-1895-HendersonSellers1\">\r\n
+        \                   <journal_title>Bull. Amer. Meteor. Soc.</journal_title>\r\n
+        \                   <author>Henderson-Sellers</author>\r\n                    <volume>74</volume>\r\n
+        \                   <first_page>1335</first_page>\r\n                    <cYear>1993</cYear>\r\n
+        \                   <doi provider=\"crossref\">10.1175/1520-0477(1993)074&lt;1335:TPFIOL&gt;2.0.CO;2</doi>\r\n
+        \                   <article_title>The project for intercomparison of land-surface
+        parameterization schemes.</article_title>\r\n                  </citation>\r\n
+        \                 <citation key=\"2020061721302561500_i1520-0493-131-8-1895-Houghton1\">\r\n
+        \                   <author>Houghton</author>\r\n                    <cYear>1996</cYear>\r\n
+        \                   <article_title>The Science of Climate Change.</article_title>\r\n
+        \                 </citation>\r\n                  <citation key=\"2020061721302561500_i1520-0493-131-8-1895-Hsie1\">\r\n
+        \                   <journal_title>J. Atmos. Sci.</journal_title>\r\n                    <author>Hsie</author>\r\n
+        \                   <volume>41</volume>\r\n                    <first_page>2581</first_page>\r\n
+        \                   <cYear>1984</cYear>\r\n                    <doi provider=\"crossref\">10.1175/1520-0469(1984)041&lt;2581:NSOFIA&gt;2.0.CO;2</doi>\r\n
+        \                   <article_title>Numerical simulation of frontogenesis in
+        a moist atmosphere.</article_title>\r\n                  </citation>\r\n                  <citation
+        key=\"2020061721302561500_i1520-0493-131-8-1895-Kain1\">\r\n                    <author>Kain</author>\r\n
+        \                   <cYear>1993</cYear>\r\n                    <doi provider=\"crossref\">10.1007/978-1-935704-13-3_16</doi>\r\n
+        \                   <article_title>Convective parameterization for mesoscale
+        models: The Kain–Fritsch scheme.</article_title>\r\n                  </citation>\r\n
+        \                 <citation key=\"2020061721302561500_i1520-0493-131-8-1895-Kiehl1\">\r\n
+        \                   <author>Kiehl</author>\r\n                    <cYear>1996</cYear>\r\n
+        \                   <article_title>Description of the NCAR Community Climate
+        Model (CCM3).</article_title>\r\n                  </citation>\r\n                  <citation
+        key=\"2020061721302561500_i1520-0493-131-8-1895-Lee1\">\r\n                    <journal_title>J.
+        Geophys. Res.</journal_title>\r\n                    <author>Lee</author>\r\n
+        \                   <volume>100</volume>\r\n                    <first_page>25585</first_page>\r\n
+        \                   <cYear>1995</cYear>\r\n                    <doi provider=\"crossref\">10.1029/95JD00725</doi>\r\n
+        \                   <article_title>Modeling the clear-sky surface energy budget
+        during FIFE87.</article_title>\r\n                  </citation>\r\n                  <citation
+        key=\"2020061721302561500_i1520-0493-131-8-1895-Loveland1\">\r\n                    <journal_title>Eng.
+        Remote Sens.</journal_title>\r\n                    <author>Loveland</author>\r\n
+        \                   <volume>57</volume>\r\n                    <first_page>1453</first_page>\r\n
+        \                   <cYear>1991</cYear>\r\n                    <article_title>Development
+        of a land-cover characteristics database for the conterminous U.S. Photogramm.</article_title>\r\n
+        \                 </citation>\r\n                  <citation key=\"2020061721302561500_i1520-0493-131-8-1895-Miller1\">\r\n
+        \                   <author>Miller</author>\r\n                    <cYear>1998</cYear>\r\n
+        \                   <article_title>A conterminous United States multilayer
+        soil characteristics data set for regional climate and hydrology modeling.</article_title>\r\n
+        \                 </citation>\r\n                  <citation key=\"2020061721302561500_i1520-0493-131-8-1895-Molinari1\">\r\n
+        \                   <journal_title>Mon. Wea. Rev.</journal_title>\r\n                    <author>Molinari</author>\r\n
+        \                   <volume>120</volume>\r\n                    <first_page>326</first_page>\r\n
+        \                   <cYear>1992</cYear>\r\n                    <doi provider=\"crossref\">10.1175/1520-0493(1992)120&lt;0326:POCPIM&gt;2.0.CO;2</doi>\r\n
+        \                   <article_title>Parameterization of convective precipitation
+        in mesoscale numerical models: A critical review.</article_title>\r\n                  </citation>\r\n
+        \                 <citation key=\"2020061721302561500_i1520-0493-131-8-1895-NCEP1\">\r\n
+        \                   <author>NCEP</author>\r\n                    <cYear>1998</cYear>\r\n
+        \                   <article_title>Daily Weather Maps.</article_title>\r\n
+        \                 </citation>\r\n                  <citation key=\"2020061721302561500_i1520-0493-131-8-1895-Paegle1\">\r\n
+        \                   <journal_title>Mon. Wea. Rev.</journal_title>\r\n                    <author>Paegle</author>\r\n
+        \                   <volume>124</volume>\r\n                    <first_page>345</first_page>\r\n
+        \                   <cYear>1996</cYear>\r\n                    <doi provider=\"crossref\">10.1175/1520-0493(1996)124&lt;0345:DOSPOS&gt;2.0.CO;2</doi>\r\n
+        \                   <article_title>Dependence of simulated precipitation on
+        surface evaporation during the 1993 United States summer floods.</article_title>\r\n
+        \                 </citation>\r\n                  <citation key=\"2020061721302561500_i1520-0493-131-8-1895-Pan1\">\r\n
+        \                   <journal_title>Mon. Wea. Rev.</journal_title>\r\n                    <author>Pan</author>\r\n
+        \                   <volume>127</volume>\r\n                    <first_page>308</first_page>\r\n
+        \                   <cYear>1999</cYear>\r\n                    <doi provider=\"crossref\">10.1175/1520-0493(1999)127&lt;0308:LSORCA&gt;2.0.CO;2</doi>\r\n
+        \                   <article_title>Long simulation of regional climate as
+        a sequence of short segments.</article_title>\r\n                  </citation>\r\n
+        \                 <citation key=\"2020061721302561500_i1520-0493-131-8-1895-Perkey1\">\r\n
+        \                   <journal_title>Mon. Wea. Rev.</journal_title>\r\n                    <author>Perkey</author>\r\n
+        \                   <volume>104</volume>\r\n                    <first_page>744</first_page>\r\n
+        \                   <cYear>1976</cYear>\r\n                    <doi provider=\"crossref\">10.1175/1520-0493(1976)104&lt;0744:ATDLBS&gt;2.0.CO;2</doi>\r\n
+        \                   <article_title>A time-dependent lateral boundary scheme
+        for limited area primitive equation models.</article_title>\r\n                  </citation>\r\n
+        \                 <citation key=\"2020061721302561500_i1520-0493-131-8-1895-Sellers1\">\r\n
+        \                   <journal_title>J. Atmos. Sci.</journal_title>\r\n                    <author>Sellers</author>\r\n
+        \                   <volume>43</volume>\r\n                    <first_page>505</first_page>\r\n
+        \                   <cYear>1986</cYear>\r\n                    <doi provider=\"crossref\">10.1175/1520-0469(1986)043&lt;0505:ASBMFU&gt;2.0.CO;2</doi>\r\n
+        \                   <article_title>A simple biosphere model (SiB) for use
+        within general circulation models.</article_title>\r\n                  </citation>\r\n
+        \                 <citation key=\"2020061721302561500_i1520-0493-131-8-1895-Shao1\">\r\n
+        \                   <journal_title>Global Planet. Change</journal_title>\r\n
+        \                   <author>Shao</author>\r\n                    <volume>12</volume>\r\n
+        \                   <first_page>54</first_page>\r\n                    <cYear>1996</cYear>\r\n
+        \                   <article_title>Soil moisture simulation workshop review.</article_title>\r\n
+        \                 </citation>\r\n                  <citation key=\"2020061721302561500_i1520-0493-131-8-1895-Small1\">\r\n
+        \                   <journal_title>J. Climate</journal_title>\r\n                    <author>Small</author>\r\n
+        \                   <volume>14</volume>\r\n                    <first_page>300</first_page>\r\n
+        \                   <cYear>2001</cYear>\r\n                    <doi provider=\"crossref\">10.1175/1520-0442(2001)013&lt;0300:TEODAC&gt;2.0.CO;2</doi>\r\n
+        \                   <article_title>The effects of desiccation and climatic
+        change on the hydrology of the Aral Sea.</article_title>\r\n                  </citation>\r\n
+        \                 <citation key=\"2020061721302561500_i1520-0493-131-8-1895-Stensrud1\">\r\n
+        \                   <journal_title>Mon. Wea. Rev.</journal_title>\r\n                    <author>Stensrud</author>\r\n
+        \                   <volume>122</volume>\r\n                    <first_page>2084</first_page>\r\n
+        \                   <cYear>1994</cYear>\r\n                    <doi provider=\"crossref\">10.1175/1520-0493(1994)122&lt;2084:MCSIWF&gt;2.0.CO;2</doi>\r\n
+        \                   <article_title>Mesoscale convective systems in weakly
+        forced large-scale environments. Part III: Numerical simulations and implications
+        for operational forecasting.</article_title>\r\n                  </citation>\r\n
+        \                 <citation key=\"2020061721302561500_i1520-0493-131-8-1895-Tsvetsinskaya1\">\r\n
+        \                   <journal_title>J. Climate</journal_title>\r\n                    <author>Tsvetsinskaya</author>\r\n
+        \                   <volume>14</volume>\r\n                    <first_page>711</first_page>\r\n
+        \                   <cYear>2001</cYear>\r\n                    <doi provider=\"crossref\">10.1175/1520-0442(2001)014&lt;0711:ITEOSP&gt;2.0.CO;2</doi>\r\n
+        \                   <article_title>Investigating the effect of seasonal plant
+        growth and development in three-dimensional atmospheric simulations. Part
+        II: Atmospheric response to crop growth and development.</article_title>\r\n
+        \                 </citation>\r\n                  <citation key=\"2020061721302561500_i1520-0493-131-8-1895-Walko1\">\r\n
+        \                   <journal_title>J. Appl. Meteor.</journal_title>\r\n                    <author>Walko</author>\r\n
+        \                   <volume>39</volume>\r\n                    <first_page>931</first_page>\r\n
+        \                   <cYear>2000</cYear>\r\n                    <doi provider=\"crossref\">10.1175/1520-0450(2000)039&lt;0931:CABHMF&gt;2.0.CO;2</doi>\r\n
+        \                   <article_title>Coupled atmosphere–biophysics–hydrology
+        models for environment modeling.</article_title>\r\n                  </citation>\r\n
+        \                 <citation key=\"2020061721302561500_i1520-0493-131-8-1895-Wallace1\">\r\n
+        \                   <journal_title>Mon. Wea. Rev.</journal_title>\r\n                    <author>Wallace</author>\r\n
+        \                   <volume>103</volume>\r\n                    <first_page>406</first_page>\r\n
+        \                   <cYear>1975</cYear>\r\n                    <doi provider=\"crossref\">10.1175/1520-0493(1975)103&lt;0406:DVIPAT&gt;2.0.CO;2</doi>\r\n
+        \                   <article_title>Diurnal variations in precipitation and
+        thunderstorm frequency over the conterminous United States.</article_title>\r\n
+        \                 </citation>\r\n                  <citation key=\"2020061721302561500_i1520-0493-131-8-1895-Warner1\">\r\n
+        \                   <journal_title>Bull. Amer. Meteor. Soc.</journal_title>\r\n
+        \                   <author>Warner</author>\r\n                    <volume>78</volume>\r\n
+        \                   <first_page>2599</first_page>\r\n                    <cYear>1997</cYear>\r\n
+        \                   <doi provider=\"crossref\">10.1175/1520-0477(1997)078&lt;2599:ATOLBC&gt;2.0.CO;2</doi>\r\n
+        \                   <article_title>A tutorial on lateral boundary conditions
+        as basic and potentially serious limitations to regional numerical weather
+        prediction.</article_title>\r\n                  </citation>\r\n                  <citation
+        key=\"2020061721302561500_i1520-0493-131-8-1895-Wen1\">\r\n                    <journal_title>Mon.
+        Wea. Rev.</journal_title>\r\n                    <author>Wen</author>\r\n
+        \                   <volume>128</volume>\r\n                    <first_page>3605</first_page>\r\n
+        \                   <cYear>2000</cYear>\r\n                    <doi provider=\"crossref\">10.1175/1520-0493(2001)129&lt;3605:TROLSS&gt;2.0.CO;2</doi>\r\n
+        \                   <article_title>The role of land surface schemes in short-range,
+        high spatial resolution forecasts.</article_title>\r\n                  </citation>\r\n
+        \                 <citation key=\"2020061721302561500_i1520-0493-131-8-1895-Wetzel1\">\r\n
+        \                   <journal_title>J. Geophys. Res.</journal_title>\r\n                    <author>Wetzel</author>\r\n
+        \                   <volume>101</volume>\r\n                    <first_page>7359</first_page>\r\n
+        \                   <cYear>1996</cYear>\r\n                    <doi provider=\"crossref\">10.1029/95JD02134</doi>\r\n
+        \                   <article_title>The role of the land surface in controlling
+        daytime cloud amount: Two case studies in the GCIP-SW area.</article_title>\r\n
+        \                 </citation>\r\n                  <citation key=\"2020061721302561500_i1520-0493-131-8-1895-Xue1\">\r\n
+        \                   <journal_title>J. Climate</journal_title>\r\n                    <author>Xue</author>\r\n
+        \                   <volume>4</volume>\r\n                    <first_page>345</first_page>\r\n
+        \                   <cYear>1991</cYear>\r\n                    <doi provider=\"crossref\">10.1175/1520-0442(1991)004&lt;0345:ASBMFG&gt;2.0.CO;2</doi>\r\n
+        \                   <article_title>A simplified biosphere model for global
+        climate studies.</article_title>\r\n                  </citation>\r\n                  <citation
+        key=\"2020061721302561500_i1520-0493-131-8-1895-Xue2\">\r\n                    <journal_title>J.
+        Appl. Meteor.</journal_title>\r\n                    <author>Xue</author>\r\n
+        \                   <volume>35</volume>\r\n                    <first_page>386</first_page>\r\n
+        \                   <cYear>1996</cYear>\r\n                    <doi provider=\"crossref\">10.1175/1520-0450(1996)035&lt;0386:SOSSFT&gt;2.0.CO;2</doi>\r\n
+        \                   <article_title>Sensitivity of simulated surface fluxes
+        to changes in land surface parameterization—A study using ABRACOS data.</article_title>\r\n
+        \                 </citation>\r\n                  <citation key=\"2020061721302561500_i1520-0493-131-8-1895-Xue3\">\r\n
+        \                   <journal_title>J. Geophys. Res.</journal_title>\r\n                    <author>Xue</author>\r\n
+        \                   <volume>101</volume>\r\n                    <first_page>7419</first_page>\r\n
+        \                   <cYear>1996</cYear>\r\n                    <doi provider=\"crossref\">10.1029/95JD02169</doi>\r\n
+        \                   <article_title>Impact of vegetation properties on U.S.
+        weather prediction.</article_title>\r\n                  </citation>\r\n                  <citation
+        key=\"2020061721302561500_i1520-0493-131-8-1895-Xue4\">\r\n                    <journal_title>Mon.
+        Wea. Rev.</journal_title>\r\n                    <author>Xue</author>\r\n
+        \                   <volume>129</volume>\r\n                    <first_page>2833</first_page>\r\n
+        \                   <cYear>2001</cYear>\r\n                    <doi provider=\"crossref\">10.1175/1520-0493(2001)129&lt;2833:TIOLSP&gt;2.0.CO;2</doi>\r\n
+        \                   <article_title>The impact of land surface processes on
+        simulations of the U.S. hydrological cycle: A case study of the 1993 flood
+        using the SSiB land surface model in the NCEP Eta regional model.</article_title>\r\n
+        \                 </citation>\r\n                  <citation key=\"2020061721302561500_i1520-0493-131-8-1895-Yang1\">\r\n
+        \                   <journal_title>J. Geophys. Res.</journal_title>\r\n                    <author>Yang</author>\r\n
+        \                   <volume>100</volume>\r\n                    <first_page>16553</first_page>\r\n
+        \                   <cYear>1995</cYear>\r\n                    <doi provider=\"crossref\">10.1029/95JD01076</doi>\r\n
+        \                   <article_title>Preliminary study of spin-up processes
+        in land surface models with the first stage data of Project for Intercomparison
+        of Land Surface Parameterization Schemes phase 1(a).</article_title>\r\n                  </citation>\r\n
+        \                 <citation key=\"2020061721302561500_i1520-0493-131-8-1895-Zhang1\">\r\n
+        \                   <journal_title>Tellus</journal_title>\r\n                    <author>Zhang</author>\r\n
+        \                   <volume>41A</volume>\r\n                    <first_page>132</first_page>\r\n
+        \                   <cYear>1989</cYear>\r\n                    <doi provider=\"crossref\">10.1111/j.1600-0870.1989.tb00371.x</doi>\r\n
+        \                   <article_title>The effect of parameterized ice microphysics
+        on the simulation of vortex circulation with a mesoscale hydrostatic model.</article_title>\r\n
+        \                 </citation>\r\n                  <citation key=\"2020061721302561500_i1520-0493-131-8-1895-Zhang2\">\r\n
+        \                   <journal_title>J. Appl. Meteor.</journal_title>\r\n                    <author>Zhang</author>\r\n
+        \                   <volume>21</volume>\r\n                    <first_page>1594</first_page>\r\n
+        \                   <cYear>1982</cYear>\r\n                    <doi provider=\"crossref\">10.1175/1520-0450(1982)021&lt;1594:AHRMOT&gt;2.0.CO;2</doi>\r\n
+        \                   <article_title>A high-resolution model of the planetary
+        boundary layer—Sensitivity tests and comparisons with SESAME-79 data.</article_title>\r\n
+        \                 </citation>\r\n                  <citation key=\"2020061721302561500_i1520-0493-131-8-1895-Zhang3\">\r\n
+        \                   <journal_title>J. Atmos. Sci.</journal_title>\r\n                    <author>Zhang</author>\r\n
+        \                   <volume>45</volume>\r\n                    <first_page>261</first_page>\r\n
+        \                   <cYear>1988</cYear>\r\n                    <doi provider=\"crossref\">10.1175/1520-0469(1988)045&lt;0261:NSEOVM&gt;2.0.CO;2</doi>\r\n
+        \                   <article_title>Numerical sensitivity experiments of varying
+        physics on the structure, evolution, and dynamics of two mesoscale convective
+        systems.</article_title>\r\n                  </citation>\r\n                  <citation
+        key=\"2020061721302561500_i1520-0493-131-8-1895-Zhang4\">\r\n                    <journal_title>Mon.
+        Wea. Rev.</journal_title>\r\n                    <author>Zhang</author>\r\n
+        \                   <volume>117</volume>\r\n                    <first_page>2067</first_page>\r\n
+        \                   <cYear>1989</cYear>\r\n                    <doi provider=\"crossref\">10.1175/1520-0493(1989)117&lt;2067:NSOAIS&gt;2.0.CO;2</doi>\r\n
+        \                   <article_title>Numerical simulation of an intense squall
+        line during 10–11 June 1985 PRE-STORM. Part II: Rear inflow, surface pressure
+        perturbations, and stratiform precipitation.</article_title>\r\n                  </citation>\r\n
+        \                 <citation key=\"2020061721302561500_i1520-0493-131-8-1895-Zhang5\">\r\n
+        \                   <journal_title>Mon. Wea. Rev.</journal_title>\r\n                    <author>Zhang</author>\r\n
+        \                   <volume>127</volume>\r\n                    <first_page>3032</first_page>\r\n
+        \                   <cYear>1999</cYear>\r\n                    <doi provider=\"crossref\">10.1175/1520-0493(1999)127&lt;3032:TEODHO&gt;2.0.CO;2</doi>\r\n
+        \                   <article_title>The effects of dissipative heating on hurricane
+        intensity.</article_title>\r\n                  </citation>\r\n                  <citation
+        key=\"2020061721302561500_i1520-0493-131-8-1895-Zhang6\">\r\n                    <journal_title>Quart.
+        J. Roy. Meteor. Soc.</journal_title>\r\n                    <author>Zhang</author>\r\n
+        \                   <volume>114</volume>\r\n                    <first_page>31</first_page>\r\n
+        \                   <cYear>1988</cYear>\r\n                    <article_title>A
+        comparison of explicit and implicit predictions of convective and stratiform
+        precipitating weather systems with a meso-β scale numerical model.</article_title>\r\n
+        \                 </citation>\r\n                  <citation key=\"2020061721302561500_i1520-0493-131-8-1895-Zhang7\">\r\n
+        \                   <journal_title>Mon. Wea. Rev.</journal_title>\r\n                    <author>Zhang</author>\r\n
+        \                   <volume>122</volume>\r\n                    <first_page>2222</first_page>\r\n
+        \                   <cYear>1994</cYear>\r\n                    <doi provider=\"crossref\">10.1175/1520-0493(1994)122&lt;2222:COOCPI&gt;2.0.CO;2</doi>\r\n
+        \                   <article_title>Comments on “Parameterization of convective
+        precipitation in mesoscale numerical models: A critical review.”.</article_title>\r\n
+        \                 </citation>\r\n                </citation_list>\r\n              </journal_article>\r\n
+        \           </journal>\r\n          </crossref>\r\n        </doi_record>\r\n
+        \     </query>\r\n    </body>\r\n  </query_result>\r\n</crossref_result>"
+  recorded_at: 2021-08-01 15:42:58 GMT
+  recorded_with: vcr/1.0.2, webmockr/0.8.0

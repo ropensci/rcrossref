@@ -8,8 +8,8 @@ http_interactions:
     headers:
       Accept-Encoding: gzip, deflate
       Accept: application/json, text/xml, application/xml, */*
-      User-Agent: r-curl/3.2 crul/0.6.1.9100 rOpenSci(rcrossref/0.8.5.9110) (mailto:<crossref_email>)
-      X-USER-AGENT: r-curl/3.2 crul/0.6.1.9100 rOpenSci(rcrossref/0.8.5.9110) (mailto:<crossref_email>)
+      User-Agent: r-curl/4.3.2 crul/1.1.0 rOpenSci(rcrossref/1.1.0.94)
+      X-USER-AGENT: r-curl/4.3.2 crul/1.1.0 rOpenSci(rcrossref/1.1.0.94)
   response:
     status:
       status_code: '200'
@@ -17,31 +17,41 @@ http_interactions:
       explanation: Request fulfilled, document follows
     headers:
       status: HTTP/1.1 200 OK
-      content-type: application/json;charset=UTF-8
-      vary: Accept
+      date: Sun, 01 Aug 2021 15:44:11 GMT
+      content-type: application/json
+      content-length: '977'
       access-control-allow-origin: '*'
       access-control-allow-headers: X-Requested-With
-      content-length: '2254'
-      server: http-kit
-      date: Fri, 07 Dec 2018 22:36:14 GMT
+      vary: Accept-Encoding
+      content-encoding: gzip
+      server: Jetty(9.4.40.v20210413)
+      x-ratelimit-limit: '50'
+      x-ratelimit-interval: 1s
       x-rate-limit-limit: '50'
       x-rate-limit-interval: 1s
+      permissions-policy: interest-cohort=()
       connection: close
     body:
       encoding: UTF-8
-      string: '{"status":"ok","message-type":"funder","message-version":"1.0.0","message":{"hierarchy-names":{"100010608":"Office
-        of Inspector General","100000179":"Office of the Director","100005716":"National
-        Science Board","100000081":"Directorate for Education and Human Resources","100000083":"Directorate
-        for Computer and Information Science and Engineering","100005441":"Office
-        of Budget, Finance and Award Management","100000001":"National Science Foundation","100000076":"Directorate
-        for Biological Sciences","100000084":"Directorate for Engineering","more":null,"100000088":"Directorate
-        for Social, Behavioral and Economic Sciences","100005447":"Office of Information
-        and Resource Management","100000086":"Directorate for Mathematical and Physical
-        Sciences","100000085":"Directorate for Geosciences"},"replaced-by":[],"work-count":146634,"name":"National
-        Science Foundation","descendants":["100000076","100010608","100005716","100000179","100005447","100000086","100000085","100000088","100005441","100000081","100000084","100000083","100000152","100000155","100000154","100000156","100000153","100000089","100006603","100000178","100000177","100007522","100000176","100000106","100005714","100005450","100005448","100005449","100000165","100000164","100000121","100006091","100000078","100000166","100000159","100000087","100000160","100000141","100007352","100000163","100000162","100000175","100000174","100007521","100005717","100000077","100000170","100000169","100005446","100005445","100005442","100005444","100005443","100005554","100005553","100000082","100000171","100000173","100000172","100000149","100000148","100000151","100000150","100000147","100000146","100000105","100000143","100000145","100000144","100007523"],"descendant-work-count":183048,"id":"100000001","tokens":["national","science","foundation","nsf"],"replaces":[],"uri":"http:\/\/dx.doi.org\/10.13039\/100000001","hierarchy":{"100000001":{"100010608":{},"100000179":{"more":true},"100005716":{},"100000081":{"more":true},"100000083":{"more":true},"100005441":{"more":true},"100000076":{"more":true},"100000084":{"more":true},"100000088":{"more":true},"100005447":{"more":true},"100000086":{"more":true},"100000085":{"more":true}}},"alt-names":["NSF"],"location":"United
-        States"}}'
-  recorded_at: 2018-12-07 22:36:17 GMT
-  recorded_with: vcr/0.2.0.9101, webmockr/0.2.9.9311
+      file: no
+      string: '{"status":"ok","message-type":"funder","message-version":"1.0.0","message":{"hierarchy-names":{"100014074":"Integrative
+        and Collaborative Education and Research","100010608":"Office of Inspector
+        General","100000179":"Office of the Director","100014411":"Center for Unmanned
+        Aircraft Systems","100005716":"National Science Board","100000081":"Directorate
+        for Education and Human Resources","100000083":"Directorate for Computer and
+        Information Science and Engineering","100015815":"Power Systems Engineering
+        Research Center","100005441":"Office of Budget, Finance and Award Management","100000001":"National
+        Science Foundation","100000076":"Directorate for Biological Sciences","100000084":"Directorate
+        for Engineering","100014073":"National Nanotechnology Coordinating Office","100014591":"BioXFEL
+        Science and Technology Center","100000088":"Directorate for Social, Behavioral
+        and Economic Sciences","100005447":"Office of Information and Resource Management","100014071":"Large
+        Facilities Office","100000086":"Directorate for Mathematical and Physical
+        Sciences","100000085":"Directorate for Geosciences","100014072":"National
+        Coordination Office"},"replaced-by":[],"work-count":244932,"name":"National
+        Science Foundation","descendants":["100000076","100000077","100000078","100000081","100000082","100000083","100000084","100000085","100000086","100000087","100000088","100000089","100000105","100000106","100000121","100000141","100000143","100000144","100000145","100000146","100000147","100000148","100000149","100000150","100000151","100000152","100000153","100000154","100000155","100000156","100000159","100000160","100000162","100000163","100000164","100000165","100000166","100000169","100000170","100000171","100000172","100000173","100000174","100000175","100000176","100000177","100000178","100000179","100005441","100005442","100005443","100005444","100005445","100005446","100005447","100005448","100005449","100005450","100005553","100005554","100005714","100005716","100005717","100006091","100006603","100007352","100007521","100007522","100007523","100010608","100014071","100014072","100014073","100014074","100014411","100014591","100015815"],"descendant-work-count":307265,"id":"100000001","tokens":["national","science","foundation","usa","nsf","nsf","us","nsf"],"replaces":[],"uri":"http:\/\/dx.doi.org\/10.13039\/100000001","hierarchy":{"100000001":{"100014074":{},"100010608":{},"100000179":{"more":true},"100014411":{},"100005716":{},"100000081":{"more":true},"100000083":{"more":true},"100015815":{},"100005441":{"more":true},"100000076":{"more":true},"100000084":{"more":true},"100014073":{},"100014591":{},"100000088":{"more":true},"100005447":{"more":true},"100014071":{},"100000086":{"more":true},"100000085":{"more":true},"100014072":{}}},"alt-names":["USA
+        NSF","NSF","US NSF"],"location":"United States"}}'
+  recorded_at: 2021-08-01 15:44:18 GMT
+  recorded_with: vcr/1.0.2, webmockr/0.8.0
 - request:
     method: get
     uri: https://api.crossref.org/funders/10.13039/100000015
@@ -51,8 +61,8 @@ http_interactions:
     headers:
       Accept-Encoding: gzip, deflate
       Accept: application/json, text/xml, application/xml, */*
-      User-Agent: r-curl/3.2 crul/0.6.1.9100 rOpenSci(rcrossref/0.8.5.9110) (mailto:<crossref_email>)
-      X-USER-AGENT: r-curl/3.2 crul/0.6.1.9100 rOpenSci(rcrossref/0.8.5.9110) (mailto:<crossref_email>)
+      User-Agent: r-curl/4.3.2 crul/1.1.0 rOpenSci(rcrossref/1.1.0.94)
+      X-USER-AGENT: r-curl/4.3.2 crul/1.1.0 rOpenSci(rcrossref/1.1.0.94)
   response:
     status:
       status_code: '200'
@@ -60,40 +70,53 @@ http_interactions:
       explanation: Request fulfilled, document follows
     headers:
       status: HTTP/1.1 200 OK
-      content-type: application/json;charset=UTF-8
-      vary: Accept
+      date: Sun, 01 Aug 2021 15:44:14 GMT
+      content-type: application/json
+      content-length: '1568'
       access-control-allow-origin: '*'
       access-control-allow-headers: X-Requested-With
-      content-length: '3847'
-      server: http-kit
-      date: Fri, 07 Dec 2018 22:36:15 GMT
+      vary: Accept-Encoding
+      content-encoding: gzip
+      server: Jetty(9.4.40.v20210413)
+      x-ratelimit-limit: '50'
+      x-ratelimit-interval: 1s
       x-rate-limit-limit: '50'
       x-rate-limit-interval: 1s
+      permissions-policy: interest-cohort=()
       connection: close
     body:
       encoding: UTF-8
-      string: '{"status":"ok","message-type":"funder","message-version":"1.0.0","message":{"hierarchy-names":{"100006130":"Office
-        of Electricity Delivery and Energy Reliability","100000015":"U.S. Department
-        of Energy","100013165":"National Energy Technology Laboratory","100006138":"Office
-        of Environmental Management","100006133":"Advanced Research Projects Agency
-        - Energy","100007783":"Office of International Affairs","100006174":"Office
-        of Under Secretary for Science","100006132":"Office of Science","100006113":"Office
-        of Under Secretary","100006131":"Office of Public Affairs","100006124":"Office
-        of Chief Information Officer","100006147":"Office of Nuclear Energy","100006122":"Office
-        of Health, Safety, and Security","100006150":"Office of Policy and International
-        Affairs","100007002":"Small Business Innovative Research and Small Business
-        Technology Transfer","100006120":"Office of Fossil Energy","100006162":"Energy
-        Information Administration","100006157":"Office of Secretary of Energy","100013178":"Environmental
-        Management Consolidated Business Center","100006144":"Office of Intelligence
-        and Counterintelligence","100006186":"Office of Legacy Management","100006143":"Office
-        of Inspector General","more":null,"100006121":"Office of General Counsel","100007000":"Laboratory
-        Directed Research and Development","100006158":"Office of Congressional and
+      file: no
+      string: '{"status":"ok","message-type":"funder","message-version":"1.0.0","message":{"hierarchy-names":{"100017865":"Office
+        of Cybersecurity, Energy Security, and Emergency Response","100006130":"Office
+        of Electricity Delivery and Energy Reliability","100017267":"Office of Enterprise
+        Assessments","100016186":"Idaho Operations Office, U.S. Department of Energy","100017268":"Office
+        of Technology Transitions","100006229":"Oak Ridge Institute for Science and
+        Education","100000015":"U.S. Department of Energy","100017271":"Office of
+        Indian Energy Policy and Programs","100013165":"National Energy Technology
+        Laboratory","100006138":"Office of Environmental Management","100006133":"Advanced
+        Research Projects Agency - Energy","100007783":"Office of International Affairs","100006174":"Office
+        of Under Secretary for Science","100015704":"Bonneville Power Administration","100006132":"Office
+        of Science","100006113":"Office of Under Secretary","100006131":"Office of
+        Public Affairs","100006124":"Office of the Chief Information Officer","100006147":"Office
+        of Nuclear Energy","100006122":"Office of Health, Safety, and Security","100006150":"Office
+        of Policy and International Affairs","100007002":"Small Business Innovative
+        Research and Small Business Technology Transfer","100006120":"Office of Fossil
+        Energy","100016153":"Office of Electricity","100015814":"Great Lakes Bioenergy
+        Research Center","100006162":"Energy Information Administration","100006157":"Office
+        of Secretary of Energy","100013178":"Environmental Management Consolidated
+        Business Center","100006144":"Office of Intelligence and Counterintelligence","100017269":"Office
+        of Policy","100006186":"Office of Legacy Management","100006143":"Office of
+        Inspector General","100006121":"Office of the General Counsel","100017266":"Artificial
+        Intelligence and Technology Office","100006158":"Office of Congressional and
         Intergovernmental Affairs","100006168":"National Nuclear Security Administration","100006134":"Office
-        of Energy Efficiency and Renewable Energy"},"replaced-by":[],"work-count":48535,"name":"U.S.
-        Department of Energy","descendants":["100006122","100006144","100006157","100013165","100006124","100006174","100006121","100007002","100006120","100006150","100006134","100013178","100006168","100006186","100006131","100006130","100006133","100006147","100006132","100006113","100007783","100006138","100006162","100006158","100007000","100006143","100006184","100006165","100006183","100006142","100006123","100006167","100006126","100006185","100006200","100006141","100006182","100006140","100006181","100006164","100010268","100011681","100006160","100011680","100006117","100006116","100006177","100006176","100011883","100006135","100006137","100006136","100011682","100011884","100011735","100006335","100006178","100006159","100006161","100011031","100011030","100006115","100006127","100006169","100006187","100006128","100006188","100006146","100006145","100006191","100006172","100006190","100006149","100007001","100006170","100006999","100006998","100006129","100006171","100006189","100006148","100006210","100013145","100006151","100006208","100006207","100006209","100006192","100006206","100006173","100006201","100006180","100006139","100006163","100006119","100006179","100006118","100006114","100006175","100006230","100008902","100006235","100011659","100011663","100006228","100011662","100006227","100011665","100011664","100006229","100006224","100006231","100011661","100006226","100006234","100011660","100006233","100013055","100006166"],"descendant-work-count":75884,"id":"100000015","tokens":["us","department","of","energy","doe"],"replaces":[],"uri":"http:\/\/dx.doi.org\/10.13039\/100000015","hierarchy":{"100000015":{"100006130":{"more":true},"100013165":{},"100006138":{"more":true},"100006133":{"more":true},"100007783":{"more":true},"100006174":{},"100006132":{"more":true},"100006113":{},"100006131":{"more":true},"100006124":{"more":true},"100006147":{"more":true},"100006122":{"more":true},"100006150":{},"100007002":{},"100006120":{"more":true},"100006162":{"more":true},"100006157":{},"100013178":{},"100006144":{"more":true},"100006186":{"more":true},"100006143":{"more":true},"100006121":{"more":true},"100007000":{"more":true},"100006158":{"more":true},"100006168":{"more":true},"100006134":{"more":true}}},"alt-names":["DOE"],"location":"United
-        States"}}'
-  recorded_at: 2018-12-07 22:36:17 GMT
-  recorded_with: vcr/0.2.0.9101, webmockr/0.2.9.9311
+        of Energy Efficiency and Renewable Energy","100017270":"Office of Under Secretary
+        for Science and Energy"},"replaced-by":[],"work-count":81530,"name":"U.S.
+        Department of Energy","descendants":["100006113","100006114","100006115","100006116","100006117","100006118","100006119","100006120","100006121","100006122","100006123","100006124","100006126","100006127","100006129","100006130","100006131","100006132","100006133","100006134","100006135","100006136","100006137","100006138","100006139","100006140","100006141","100006142","100006143","100006144","100006145","100006146","100006147","100006148","100006149","100006150","100006151","100006157","100006158","100006159","100006160","100006161","100006162","100006163","100006164","100006165","100006166","100006167","100006168","100006169","100006170","100006171","100006172","100006173","100006174","100006175","100006176","100006177","100006178","100006179","100006180","100006181","100006182","100006183","100006184","100006185","100006186","100006187","100006188","100006189","100006190","100006191","100006192","100006200","100006201","100006206","100006207","100006208","100006209","100006210","100006224","100006226","100006227","100006228","100006229","100006230","100006231","100006233","100006234","100006235","100006335","100006998","100006999","100007000","100007001","100007002","100007783","100008902","100010268","100011030","100011031","100011659","100011660","100011661","100011662","100011663","100011664","100011665","100011680","100011681","100011682","100011735","100011883","100011884","100013055","100013145","100013165","100013178","100014456","100015417","100015704","100015814","100016153","100016186","100017258","100017259","100017260","100017261","100017262","100017263","100017264","100017265","100017266","100017267","100017268","100017269","100017270","100017271","100017272","100017273","100017274","100017275","100017276","100017280","100017281","100017282","100017283","100017284","100017285","100017286","100017535","100017613","100017865"],"descendant-work-count":129764,"id":"100000015","tokens":["us","department","of","energy","doe","united","states","department","of","energy","department","of","energy","usdoe","energy","department","usadoe","us","doe"],"replaces":[],"uri":"http:\/\/dx.doi.org\/10.13039\/100000015","hierarchy":{"100000015":{"100017865":{},"100006130":{"more":true},"100017267":{},"100016186":{},"100017268":{},"100006229":{},"100017271":{},"100013165":{},"100006138":{"more":true},"100006133":{"more":true},"100007783":{"more":true},"100006174":{},"100015704":{},"100006132":{"more":true},"100006113":{},"100006131":{"more":true},"100006124":{"more":true},"100006147":{"more":true},"100006122":{"more":true},"100006150":{},"100007002":{},"100006120":{"more":true},"100016153":{"more":true},"100015814":{},"100006162":{"more":true},"100006157":{},"100013178":{},"100006144":{"more":true},"100017269":{},"100006186":{"more":true},"100006143":{"more":true},"100006121":{"more":true},"100017266":{},"100006158":{"more":true},"100006168":{"more":true},"100006134":{"more":true},"100017270":{}}},"alt-names":["DOE","United
+        States Department of Energy","Department of Energy","USDOE","Energy Department","USADOE","US
+        DOE"],"location":"United States"}}'
+  recorded_at: 2021-08-01 15:44:18 GMT
+  recorded_with: vcr/1.0.2, webmockr/0.8.0
 - request:
     method: get
     uri: https://api.crossref.org/funders/10.13039/100000001/works?rows=5
@@ -103,8 +126,8 @@ http_interactions:
     headers:
       Accept-Encoding: gzip, deflate
       Accept: application/json, text/xml, application/xml, */*
-      User-Agent: r-curl/3.2 crul/0.6.1.9100 rOpenSci(rcrossref/0.8.5.9110) (mailto:<crossref_email>)
-      X-USER-AGENT: r-curl/3.2 crul/0.6.1.9100 rOpenSci(rcrossref/0.8.5.9110) (mailto:<crossref_email>)
+      User-Agent: r-curl/4.3.2 crul/1.1.0 rOpenSci(rcrossref/1.1.0.94)
+      X-USER-AGENT: r-curl/4.3.2 crul/1.1.0 rOpenSci(rcrossref/1.1.0.94)
   response:
     status:
       status_code: '200'
@@ -112,120 +135,263 @@ http_interactions:
       explanation: Request fulfilled, document follows
     headers:
       status: HTTP/1.1 200 OK
-      content-type: application/json;charset=UTF-8
-      vary: Accept
+      date: Sun, 01 Aug 2021 15:44:17 GMT
+      content-type: application/json
+      content-length: '11516'
       access-control-allow-origin: '*'
       access-control-allow-headers: X-Requested-With
-      content-length: '22289'
-      server: http-kit
-      date: Fri, 07 Dec 2018 22:36:16 GMT
+      vary: Accept-Encoding
+      content-encoding: gzip
+      server: Jetty(9.4.40.v20210413)
+      x-ratelimit-limit: '50'
+      x-ratelimit-interval: 1s
       x-rate-limit-limit: '50'
       x-rate-limit-interval: 1s
+      permissions-policy: interest-cohort=()
       connection: close
     body:
       encoding: UTF-8
-      string: '{"status":"ok","message-type":"work-list","message-version":"1.0.0","message":{"facets":{},"total-results":183048,"items":[{"indexed":{"date-parts":[[2018,4,14]],"date-time":"2018-04-14T03:16:43Z","timestamp":1523675803325},"reference-count":30,"publisher":"Institute
-        of Electrical and Electronics Engineers (IEEE)","issue":"11","funder":[{"DOI":"10.13039\/100000001","name":"National
-        Science Foundation","doi-asserted-by":"publisher","award":["ECCS-1408604","IIP
-        1414250"]}],"content-domain":{"domain":[],"crossmark-restriction":false},"short-container-title":["IEEE
-        Trans. Wireless Commun."],"published-print":{"date-parts":[[2014,11]]},"DOI":"10.1109\/twc.2014.2358558","type":"journal-article","created":{"date-parts":[[2014,9,17]],"date-time":"2014-09-17T01:15:53Z","timestamp":1410916553000},"page":"6207-6218","source":"Crossref","is-referenced-by-count":3,"title":["On
-        Primary User Coverage Probabilities and Faulty Cognitive Radios"],"prefix":"10.1109","volume":"13","author":[{"given":"Prasanna","family":"Madhusudhanan","sequence":"first","affiliation":[]},{"given":"Youjian","family":"Liu","sequence":"additional","affiliation":[]},{"given":"Timothy
-        X","family":"Brown","sequence":"additional","affiliation":[]}],"member":"263","container-title":["IEEE
-        Transactions on Wireless Communications"],"link":[{"URL":"http:\/\/xplorestaging.ieee.org\/ielx7\/7693\/6949704\/06899680.pdf?arnumber=6899680","content-type":"unspecified","content-version":"vor","intended-application":"similarity-checking"}],"deposited":{"date-parts":[[2017,6,22]],"date-time":"2017-06-22T20:33:05Z","timestamp":1498163585000},"score":1.0,"issued":{"date-parts":[[2014,11]]},"references-count":30,"journal-issue":{"issue":"11"},"URL":"http:\/\/dx.doi.org\/10.1109\/twc.2014.2358558","ISSN":["1536-1276"],"issn-type":[{"value":"1536-1276","type":"print"}]},{"indexed":{"date-parts":[[2018,4,14]],"date-time":"2018-04-14T03:19:29Z","timestamp":1523675969001},"reference-count":0,"publisher":"Copernicus
-        GmbH","issue":"9","license":[{"URL":"http:\/\/creativecommons.org\/licenses\/by\/3.0\/","start":{"date-parts":[[2014,9,17]],"date-time":"2014-09-17T00:00:00Z","timestamp":1410912000000},"delay-in-days":0,"content-version":"unspecified"}],"funder":[{"DOI":"10.13039\/100000159","name":"Division
-        of Atmospheric and Geospace Sciences","doi-asserted-by":"publisher","award":["AGS-1033112"]},{"DOI":"10.13039\/100000104","name":"National
-        Aeronautics and Space Administration","doi-asserted-by":"publisher","award":["NNX12AP89G"]}],"content-domain":{"domain":[],"crossmark-restriction":false},"short-container-title":["Atmos.
-        Meas. Tech. Discuss."],"abstract":"<jats:p>Radio Occultation (RO) is a promising
-        source of observation for weather and climate applications. However, the uncertainties
-        in processing and retrieving RO data may weaken the overall confidence in
-        the data and discourage their use. This study assesses the fundamental quality
-        of RO data, by modeling the \"raw\" measurement, phase path, through a ray
-        tracing method without the nuisance of retrieval errors. The comparison of
-        phase measurements with the European Center for Medium-Range Weather Forecasts
-        (ECMWF) data made in the observation space shows that the RO measurement is
-        of sufficient accuracy to uncover regional-scale systematic errors in ECMWF''s
-        operational analysis and the 45 year reanalysis (ERA40), and to clearly depict
-        the error growth of short-term ERA40 forecasts. In the southern hemispheric
-        stratosphere, in particular, the RO measurement served as a robust reference
-        against which both of the two analyses were significantly biased in opposite
-        directions even though they were produced by the same center using virtually
-        the same set of data. The measurement and ECMWF analyses showed a close agreement
-        in the standard deviation. This confirms the high accuracy of the RO measurement
-        and also indicates that the main problem of the ECMWF analyses lies in their
-        systematic error.<\/jats:p>","DOI":"10.5194\/amtd-7-9481-2014","type":"journal-article","created":{"date-parts":[[2014,9,17]],"date-time":"2014-09-17T09:28:48Z","timestamp":1410946128000},"page":"9481-9508","source":"Crossref","is-referenced-by-count":0,"title":["A
-        perspective on the fundamental quality of GPS radio occultation data"],"prefix":"10.5194","volume":"7","author":[{"given":"T.-K.","family":"Wee","sequence":"first","affiliation":[]},{"given":"Y.-H.","family":"Kuo","sequence":"additional","affiliation":[]}],"member":"3145","published-online":{"date-parts":[[2014,9,17]]},"container-title":["Atmospheric
-        Measurement Techniques Discussions"],"language":"en","link":[{"URL":"http:\/\/www.atmos-meas-tech-discuss.net\/7\/9481\/2014\/amtd-7-9481-2014.pdf","content-type":"unspecified","content-version":"vor","intended-application":"similarity-checking"}],"deposited":{"date-parts":[[2014,9,17]],"date-time":"2014-09-17T09:28:50Z","timestamp":1410946130000},"score":1.0,"issued":{"date-parts":[[2014,9,17]]},"references-count":0,"journal-issue":{"published-online":{"date-parts":[[2014]]},"issue":"9"},"URL":"http:\/\/dx.doi.org\/10.5194\/amtd-7-9481-2014","ISSN":["1867-8610"],"issn-type":[{"value":"1867-8610","type":"electronic"}]},{"indexed":{"date-parts":[[2018,4,13]],"date-time":"2018-04-13T01:24:22Z","timestamp":1523582662477},"reference-count":16,"publisher":"Hindawi
-        Limited","license":[{"URL":"http:\/\/creativecommons.org\/licenses\/by\/3.0\/","start":{"date-parts":[[2009,1,1]],"date-time":"2009-01-01T00:00:00Z","timestamp":1230768000000},"delay-in-days":0,"content-version":"unspecified"}],"funder":[{"DOI":"10.13039\/100000001","name":"National
-        Science Foundation","doi-asserted-by":"publisher","award":["DMS-0234078","DMS-0501174"]}],"content-domain":{"domain":[],"crossmark-restriction":false},"short-container-title":["Journal
-        of Probability and Statistics"],"published-print":{"date-parts":[[2009]]},"abstract":"<jats:p>The
-        classical<mml:math xmlns:mml=\"http:\/\/www.w3.org\/1998\/Math\/MathML\"><mml:mi>t<\/mml:mi><\/mml:math>(or<mml:math
-        xmlns:mml=\"http:\/\/www.w3.org\/1998\/Math\/MathML\"><mml:msup><mml:mi>T<\/mml:mi><mml:mn>2<\/mml:mn><\/mml:msup><\/mml:math>in
-        high dimensions) inference procedure for unknown mean<mml:math xmlns:mml=\"http:\/\/www.w3.org\/1998\/Math\/MathML\"><mml:mi>\u03bc<\/mml:mi><mml:mo>:<\/mml:mo><mml:mover
-        accent=\"true\"><mml:mi>X<\/mml:mi><mml:mo>\u00af<\/mml:mo><\/mml:mover><mml:mo>\u00b1<\/mml:mo><mml:msub><mml:mi>t<\/mml:mi><mml:mi>\u03b1<\/mml:mi><\/mml:msub><mml:mrow><mml:mrow><mml:mo>(<\/mml:mo><mml:mrow><mml:mi>n<\/mml:mi><mml:mo>\u2212<\/mml:mo><mml:mn>1<\/mml:mn><mml:mo>)<\/mml:mo><\/mml:mrow><\/mml:mrow><\/mml:mrow><mml:mrow><mml:mrow><mml:mrow><mml:mrow><mml:msub><mml:mi>S<\/mml:mi><mml:mi>n<\/mml:mi><\/mml:msub><\/mml:mrow><mml:mo>\/<\/mml:mo><mml:mrow><mml:msqrt><mml:mi>n<\/mml:mi><\/mml:msqrt><\/mml:mrow><\/mml:mrow><\/mml:mrow><\/mml:mrow><mml:mrow><mml:mo>\u2009\u2009(<\/mml:mo><mml:mrow><mml:mtext>or\u2009\u2009<\/mml:mtext><mml:mrow><mml:mo>{<\/mml:mo><mml:mrow><mml:mi>\u03bc<\/mml:mi><mml:mo>:<\/mml:mo><mml:mi>n<\/mml:mi><mml:msup><mml:mrow><mml:mrow><mml:mo>(<\/mml:mo><mml:mrow><mml:mover
-        accent=\"true\"><mml:mi>x<\/mml:mi><mml:mo>\u00af<\/mml:mo><\/mml:mover><mml:mo>\u2212<\/mml:mo><mml:mi>\u03bc<\/mml:mi><\/mml:mrow><mml:mo>)<\/mml:mo><\/mml:mrow><\/mml:mrow><mml:mo>\u2032<\/mml:mo><\/mml:msup><mml:msup><mml:mi>S<\/mml:mi><mml:mrow><mml:mo>\u2212<\/mml:mo><mml:mn>1<\/mml:mn><\/mml:mrow><\/mml:msup><mml:mrow><mml:mo>(<\/mml:mo><mml:mrow><mml:mover
-        accent=\"true\"><mml:mi>x<\/mml:mi><mml:mo>\u00af<\/mml:mo><\/mml:mover><mml:mo>\u2212<\/mml:mo><mml:mi>\u03bc<\/mml:mi><\/mml:mrow><mml:mo>)<\/mml:mo><\/mml:mrow><mml:mo>\u2264<\/mml:mo><mml:msubsup><mml:mi>\u03c7<\/mml:mi><mml:mrow><mml:mrow><mml:mo>(<\/mml:mo><mml:mrow><mml:mn>1<\/mml:mn><mml:mo>\u2212<\/mml:mo><mml:mi>\u03b1<\/mml:mi><\/mml:mrow><mml:mo>)<\/mml:mo><\/mml:mrow><\/mml:mrow><mml:mn>2<\/mml:mn><\/mml:msubsup><mml:mrow><mml:mo>(<\/mml:mo><mml:mi>p<\/mml:mi><mml:mo>)<\/mml:mo><\/mml:mrow><\/mml:mrow><mml:mo>}<\/mml:mo><\/mml:mrow><\/mml:mrow><\/mml:mrow><\/mml:math>)
-        is so fundamental in statistics and so prevailing in practices; it is regarded
-        as an optimal procedure in the mind of many practitioners. It this manuscript
-        we present a new procedure based on data depth trimming and bootstrapping
-        that can outperform the classical<mml:math xmlns:mml=\"http:\/\/www.w3.org\/1998\/Math\/MathML\"><mml:mi>t<\/mml:mi><\/mml:math>(or<mml:math
-        xmlns:mml=\"http:\/\/www.w3.org\/1998\/Math\/MathML\"><mml:msup><mml:mi>T<\/mml:mi><mml:mn>2<\/mml:mn><\/mml:msup><\/mml:math>in
-        high dimensions) confidence interval (or region) procedure.<\/jats:p>","DOI":"10.1155\/2009\/373572","type":"journal-article","created":{"date-parts":[[2009,12,31]],"date-time":"2009-12-31T15:30:28Z","timestamp":1262273428000},"page":"1-9","source":"Crossref","is-referenced-by-count":0,"title":["Data
-        Depth Trimming Counterpart of the Classicalt(orT2) Procedure"],"prefix":"10.1155","volume":"2009","author":[{"given":"Yijun","family":"Zuo","sequence":"first","affiliation":[{"name":"Department
-        of Statistics and Probability, Michigan State University, East Lansing, MI
-        48824, USA"}]}],"member":"98","reference":[{"key":"11","DOI":"10.1016\/j.jspi.2008.03.039","doi-asserted-by":"publisher"},{"key":"16","volume":"34","issue":"5","first-page":"2211","year":"2006","journal-title":"The
-        Annals of Statistics","DOI":"10.1214\/009053606000000713","doi-asserted-by":"crossref"},{"key":"17","DOI":"10.1214\/aos\/1016218226","doi-asserted-by":"publisher"},{"key":"12","DOI":"10.1214\/aos\/1065705115","doi-asserted-by":"publisher"},{"key":"15"},{"key":"3","DOI":"10.1080\/1048525042000267798","doi-asserted-by":"publisher"},{"key":"14"},{"key":"6","DOI":"10.1214\/aos\/1176350933","doi-asserted-by":"publisher"},{"key":"5","DOI":"10.1214\/aos\/1176347995","doi-asserted-by":"publisher"},{"key":"8","first-page":"xiv+215","year":"1984","series-title":"Springer
-        Series in Statistics","DOI":"10.1007\/978-1-4612-5256-6_6","doi-asserted-by":"crossref"},{"key":"10","first-page":"xvi+508","year":"1996","series-title":"Springer
-        Series in Statistics"},{"key":"7","DOI":"10.1214\/aos\/1176347507","doi-asserted-by":"publisher"},{"key":"1","DOI":"10.1214\/aos\/1017939144","doi-asserted-by":"publisher"},{"key":"13","DOI":"10.1007\/s101820400169","doi-asserted-by":"publisher"},{"key":"2","volume":"6","issue":"2","first-page":"311","year":"1996","journal-title":"Statistica
-        Sinica"},{"key":"4","volume":"29","first-page":"995","year":"1958","journal-title":"Annals
-        of Mathematical Statistics","DOI":"10.1214\/aoms\/1177706437","doi-asserted-by":"crossref"}],"container-title":["Journal
-        of Probability and Statistics"],"language":"en","link":[{"URL":"http:\/\/downloads.hindawi.com\/journals\/jps\/2009\/373572.pdf","content-type":"application\/pdf","content-version":"vor","intended-application":"text-mining"},{"URL":"http:\/\/downloads.hindawi.com\/journals\/jps\/2009\/373572.xml","content-type":"application\/xml","content-version":"vor","intended-application":"text-mining"},{"URL":"http:\/\/downloads.hindawi.com\/journals\/jps\/2009\/373572.pdf","content-type":"unspecified","content-version":"vor","intended-application":"similarity-checking"}],"deposited":{"date-parts":[[2017,6,19]],"date-time":"2017-06-19T03:20:25Z","timestamp":1497842425000},"score":1.0,"issued":{"date-parts":[[2009]]},"references-count":16,"alternative-id":["373572","373572"],"URL":"http:\/\/dx.doi.org\/10.1155\/2009\/373572","relation":{"cites":[]},"ISSN":["1687-952X","1687-9538"],"issn-type":[{"value":"1687-952X","type":"print"},{"value":"1687-9538","type":"electronic"}]},{"indexed":{"date-parts":[[2018,5,2]],"date-time":"2018-05-02T18:47:19Z","timestamp":1525286839198},"reference-count":30,"publisher":"The
-        Optical Society","issue":"12","funder":[{"DOI":"10.13039\/100000001","name":"National
-        Science Foundation","doi-asserted-by":"crossref","award":[]},{"name":"German
-        Federal Ministry of Education and Research (Metamat)","award":[]},{"name":"Thuringian
-        State Government (MeMa)","award":[]}],"content-domain":{"domain":[],"crossmark-restriction":false},"short-container-title":["J.
-        Opt. Soc. Am. B"],"published-print":{"date-parts":[[2009,12,1]]},"DOI":"10.1364\/josab.26.00b143","type":"journal-article","created":{"date-parts":[[2009,11,23]],"date-time":"2009-11-23T15:46:19Z","timestamp":1258991179000},"page":"B143","source":"Crossref","is-referenced-by-count":15,"title":["Effective
-        properties of terahertz double split-ring resonators at oblique incidence"],"prefix":"10.1364","volume":"26","author":[{"given":"Christoph","family":"Menzel","sequence":"first","affiliation":[]},{"given":"Ranjan","family":"Singh","sequence":"additional","affiliation":[]},{"given":"Carsten","family":"Rockstuhl","sequence":"additional","affiliation":[]},{"given":"Weili","family":"Zhang","sequence":"additional","affiliation":[]},{"given":"Falk","family":"Lederer","sequence":"additional","affiliation":[]}],"member":"285","published-online":{"date-parts":[[2009,11,20]]},"reference":[{"key":"josab-26-12-B143-R1","author":"Soukoulis","volume":"315","first-page":"47","year":"2007","journal-title":"Science","DOI":"10.1126\/science.1136481","doi-asserted-by":"crossref"},{"key":"josab-26-12-B143-R2","author":"Shalaev","volume":"1","first-page":"41","year":"2007","journal-title":"Nature
-        Photon.","DOI":"10.1038\/nphoton.2006.49","doi-asserted-by":"crossref"},{"key":"josab-26-12-B143-R3","author":"Shelby","volume":"292","first-page":"77","year":"2001","journal-title":"Science","DOI":"10.1126\/science.1058847","doi-asserted-by":"crossref"},{"key":"josab-26-12-B143-R4","author":"Pendry","volume":"85","first-page":"3966","year":"2000","journal-title":"Phys.
-        Rev. Lett.","DOI":"10.1103\/PhysRevLett.85.3966","doi-asserted-by":"crossref"},{"key":"josab-26-12-B143-R5","author":"Yen","volume":"303","first-page":"1494","year":"2004","journal-title":"Science","DOI":"10.1126\/science.1094025","doi-asserted-by":"crossref"},{"key":"josab-26-12-B143-R6","author":"Enkrich","volume":"95","first-page":"203901","year":"2005","journal-title":"Phys.
-        Rev. Lett.","DOI":"10.1103\/PhysRevLett.95.203901","doi-asserted-by":"crossref"},{"key":"josab-26-12-B143-R7","author":"Kant\u00e9","volume":"16","first-page":"6774","year":"2008","journal-title":"Opt.
-        Express","DOI":"10.1364\/OE.16.006774","doi-asserted-by":"crossref"},{"key":"josab-26-12-B143-R8","author":"Zhou","volume":"15","first-page":"17881","year":"2007","journal-title":"Opt.
-        Express","DOI":"10.1364\/OE.15.017881","doi-asserted-by":"crossref"},{"key":"josab-26-12-B143-R9","author":"Clark","volume":"91","first-page":"093109","year":"2007","journal-title":"Appl.
-        Phys. Lett.","DOI":"10.1063\/1.2772180","doi-asserted-by":"crossref"},{"key":"josab-26-12-B143-R10","author":"Dolling","volume":"30","first-page":"3198","year":"2005","journal-title":"Opt.
-        Lett.","DOI":"10.1364\/OL.30.003198","doi-asserted-by":"crossref"},{"key":"josab-26-12-B143-R11","author":"Shalaev","volume":"30","first-page":"3356","year":"2005","journal-title":"Opt.
-        Lett.","DOI":"10.1364\/OL.30.003356","doi-asserted-by":"crossref"},{"key":"josab-26-12-B143-R12","author":"O''Hara","volume":"16","first-page":"1786","year":"2008","journal-title":"Opt.
-        Express","DOI":"10.1364\/OE.16.001786","doi-asserted-by":"crossref"},{"key":"josab-26-12-B143-R13","author":"Lahiri","volume":"17","first-page":"1107","year":"2009","journal-title":"Opt.
-        Express","DOI":"10.1364\/OE.17.001107","doi-asserted-by":"crossref"},{"key":"josab-26-12-B143-R14","author":"Boltasseva","volume":"1","first-page":"1","year":"2008","journal-title":"Metamaterials","DOI":"10.1016\/j.metmat.2008.03.004","doi-asserted-by":"crossref"},{"key":"josab-26-12-B143-R15","author":"Gwinner","volume":"5","first-page":"400","year":"2009","journal-title":"Small","DOI":"10.1002\/smll.200800923","doi-asserted-by":"crossref"},{"key":"josab-26-12-B143-R16","author":"Rockstuhl","volume":"15","first-page":"8871","year":"2007","journal-title":"Opt.
-        Express","DOI":"10.1364\/OE.15.008871","doi-asserted-by":"crossref"},{"key":"josab-26-12-B143-R17","author":"Driscoll","volume":"75","first-page":"115114","year":"2007","journal-title":"Phys.
-        Rev. B","DOI":"10.1103\/PhysRevB.75.115114","doi-asserted-by":"crossref"},{"key":"josab-26-12-B143-R18","author":"Smith","volume":"65","first-page":"195104","year":"2002","journal-title":"Phys.
-        Rev. B","DOI":"10.1103\/PhysRevB.65.195104","doi-asserted-by":"crossref"},{"key":"josab-26-12-B143-R19","author":"Grischkowsky","volume":"7","first-page":"2006","year":"1990","journal-title":"J.
-        Opt. Soc. Am. B","DOI":"10.1364\/JOSAB.7.002006","doi-asserted-by":"crossref"},{"key":"josab-26-12-B143-R20","author":"Singh","volume":"16","first-page":"6537","year":"2008","journal-title":"Opt.
-        Express","DOI":"10.1364\/OE.16.006537","doi-asserted-by":"crossref"},{"key":"josab-26-12-B143-R21","author":"Pendry","volume":"47","first-page":"2075","year":"1999","journal-title":"IEEE
-        Trans. Microwave Theory Tech.","DOI":"10.1109\/22.798002","doi-asserted-by":"crossref"},{"key":"josab-26-12-B143-R22","author":"Chen","volume":"71","first-page":"046610","year":"2005","journal-title":"Phys.
-        Rev. E","DOI":"10.1103\/PhysRevE.71.046610","doi-asserted-by":"crossref"},{"key":"josab-26-12-B143-R23","author":"Li","volume":"79","first-page":"026610","year":"2009","journal-title":"Phys.
-        Rev. E","DOI":"10.1103\/PhysRevE.79.026610","doi-asserted-by":"crossref"},{"key":"josab-26-12-B143-R24","author":"Menzel","volume":"77","first-page":"195328","year":"2008","journal-title":"Phys.
-        Rev. B","DOI":"10.1103\/PhysRevB.77.195328","doi-asserted-by":"crossref"},{"key":"josab-26-12-B143-R25","author":"Azad","volume":"31","first-page":"634","year":"2006","journal-title":"Opt.
-        Lett.","DOI":"10.1364\/OL.31.000634","doi-asserted-by":"crossref"},{"key":"josab-26-12-B143-R26","author":"Li","volume":"14","first-page":"2758","year":"1997","journal-title":"J.
-        Opt. Soc. Am. A","DOI":"10.1364\/JOSAA.14.002758","doi-asserted-by":"crossref"},{"key":"josab-26-12-B143-R27","author":"Katsarakis","volume":"84","first-page":"2943","year":"2004","journal-title":"Appl.
-        Phys. Lett.","DOI":"10.1063\/1.1695439","doi-asserted-by":"crossref"},{"key":"josab-26-12-B143-R28","author":"Rockstuhl","volume":"16","first-page":"2080","year":"2008","journal-title":"Opt.
-        Express","DOI":"10.1364\/OE.16.002080","doi-asserted-by":"crossref"},{"key":"josab-26-12-B143-R29","author":"Rodriguez-Fortuno","volume":"79","first-page":"075103","year":"2009","journal-title":"Phys.
-        Rev. B","DOI":"10.1103\/PhysRevB.79.075103","doi-asserted-by":"crossref"},{"key":"josab-26-12-B143-R30","author":"Zentgraf","volume":"33","first-page":"848","year":"2008","journal-title":"Opt.
-        Lett.","DOI":"10.1364\/OL.33.000848","doi-asserted-by":"crossref"}],"container-title":["Journal
-        of the Optical Society of America B"],"language":"en","link":[{"URL":"https:\/\/www.osapublishing.org\/viewmedia.cfm?URI=josab-26-12-B143&seq=0","content-type":"unspecified","content-version":"vor","intended-application":"similarity-checking"}],"deposited":{"date-parts":[[2017,6,19]],"date-time":"2017-06-19T02:01:59Z","timestamp":1497837719000},"score":1.0,"issued":{"date-parts":[[2009,11,20]]},"references-count":30,"journal-issue":{"published-online":{"date-parts":[[2009]]},"published-print":{"date-parts":[[2009]]},"issue":"12"},"URL":"http:\/\/dx.doi.org\/10.1364\/josab.26.00b143","relation":{"cites":[]},"ISSN":["0740-3224","1520-8540"],"issn-type":[{"value":"0740-3224","type":"print"},{"value":"1520-8540","type":"electronic"}]},{"indexed":{"date-parts":[[2018,5,2]],"date-time":"2018-05-02T19:59:42Z","timestamp":1525291182707},"reference-count":42,"publisher":"Elsevier
-        BV","issue":"2","license":[{"URL":"http:\/\/www.elsevier.com\/tdm\/userlicense\/1.0\/","start":{"date-parts":[[2010,3,1]],"date-time":"2010-03-01T00:00:00Z","timestamp":1267401600000},"delay-in-days":0,"content-version":"tdm"}],"funder":[{"DOI":"10.13039\/100000001","name":"National
-        Science Foundation","doi-asserted-by":"crossref","award":["MCB-0728833"]},{"DOI":"10.13039\/100000002","name":"National
-        Institutes of Health","doi-asserted-by":"crossref","award":["1U54MH084690"]},{"name":"University
-        of New Mexico Cancer Center","award":["CA118100"]}],"content-domain":{"domain":[],"crossmark-restriction":false},"short-container-title":["Analytical
-        Biochemistry"],"published-print":{"date-parts":[[2010,3]]},"DOI":"10.1016\/j.ab.2009.12.020","type":"journal-article","created":{"date-parts":[[2009,12,17]],"date-time":"2009-12-17T13:40:44Z","timestamp":1261057244000},"page":"203-211","source":"Crossref","is-referenced-by-count":13,"title":["Identification
-        of inhibitors of vacuolar proton-translocating ATPase pumps in yeast by high-throughput
-        screening flow cytometry"],"prefix":"10.1016","volume":"398","author":[{"given":"Rebecca
-        M.","family":"Johnson","sequence":"first","affiliation":[]},{"given":"Chris","family":"Allen","sequence":"additional","affiliation":[]},{"given":"Sandra
-        D.","family":"Melman","sequence":"additional","affiliation":[]},{"given":"Anna","family":"Waller","sequence":"additional","affiliation":[]},{"given":"Susan
-        M.","family":"Young","sequence":"additional","affiliation":[]},{"given":"Larry
-        A.","family":"Sklar","sequence":"additional","affiliation":[]},{"given":"Karlett
-        J.","family":"Parra","sequence":"additional","affiliation":[]}],"member":"78","container-title":["Analytical
-        Biochemistry"],"language":"en","link":[{"URL":"http:\/\/api.elsevier.com\/content\/article\/PII:S0003269709008665?httpAccept=text\/xml","content-type":"text\/xml","content-version":"vor","intended-application":"text-mining"},{"URL":"http:\/\/api.elsevier.com\/content\/article\/PII:S0003269709008665?httpAccept=text\/plain","content-type":"text\/plain","content-version":"vor","intended-application":"text-mining"}],"deposited":{"date-parts":[[2017,6,19]],"date-time":"2017-06-19T02:51:52Z","timestamp":1497840712000},"score":1.0,"issued":{"date-parts":[[2010,3]]},"references-count":42,"journal-issue":{"published-print":{"date-parts":[[2010,3]]},"issue":"2"},"alternative-id":["S0003269709008665"],"URL":"http:\/\/dx.doi.org\/10.1016\/j.ab.2009.12.020","ISSN":["0003-2697"],"issn-type":[{"value":"0003-2697","type":"print"}]}],"items-per-page":5,"query":{"start-index":0,"search-terms":null}}}'
-  recorded_at: 2018-12-07 22:36:17 GMT
-  recorded_with: vcr/0.2.0.9101, webmockr/0.2.9.9311
+      file: no
+      string: '{"status":"ok","message-type":"work-list","message-version":"1.0.0","message":{"facets":{},"total-results":307265,"items":[{"indexed":{"date-parts":[[2021,4,29]],"date-time":"2021-04-29T18:10:43Z","timestamp":1619719843065},"reference-count":51,"publisher":"Elsevier
+        BV","issue":"5","funder":[{"DOI":"10.13039\/100000001","name":"National Science
+        Foundation","doi-asserted-by":"publisher","award":["MCB-1715840"]}],"content-domain":{"domain":["jbc.org"],"crossmark-restriction":true},"short-container-title":["J.
+        Biol. Chem."],"published-print":{"date-parts":[[2020,1,31]]},"abstract":"<jats:p>\u03b2-<jats:italic>N<\/jats:italic>-methylamino-<jats:sc>l<\/jats:sc>-alanine
+        (BMAA) is a nonproteinogenic amino acid that has been associated with neurodegenerative
+        diseases, including amyotrophic lateral sclerosis (ALS) and Alzheimer''s disease
+        (AD). BMAA has been found in human protein extracts; however, the mechanism
+        by which it enters the proteome is still unclear. It has been suggested that
+        BMAA is misincorporated at serine codons during protein synthesis, but direct
+        evidence of its cotranslational incorporation is currently lacking. Here,
+        using LC-MS\u2013purified BMAA and several biochemical assays, we sought to
+        determine whether any aminoacyl-tRNA synthetase (aaRS) utilizes BMAA as a
+        substrate for aminoacylation. Despite BMAA''s previously predicted misincorporation
+        at serine codons, following a screen for amino acid activation in ATP\/PP<jats:sub>i<\/jats:sub>
+        exchange assays, we observed that BMAA is not a substrate for human seryl-tRNA
+        synthetase (SerRS). Instead, we observed that BMAA is a substrate for human
+        alanyl-tRNA synthetase (AlaRS) and can form BMAA-tRNA<jats:sup>Ala<\/jats:sup>
+        by escaping from the intrinsic AlaRS proofreading activity. Furthermore, we
+        found that BMAA inhibits both the cognate amino acid activation and the editing
+        functions of AlaRS. Our results reveal that, in addition to being misincorporated
+        during translation, BMAA may be able to disrupt the integrity of protein synthesis
+        through multiple different mechanisms.<\/jats:p>","DOI":"10.1074\/jbc.ra119.011714","type":"journal-article","created":{"date-parts":[[2019,12,20]],"date-time":"2019-12-20T19:24:20Z","timestamp":1576869860000},"page":"1402-1410","update-policy":"http:\/\/dx.doi.org\/10.1074\/jbc.f110.005975","source":"Crossref","is-referenced-by-count":5,"title":["The
+        mechanism of \u03b2-N-methylamino-l-alanine inhibition of tRNA aminoacylation
+        and its impact on misincorporation"],"prefix":"10.1016","volume":"295","author":[{"given":"Nien-Ching","family":"Han","sequence":"first","affiliation":[]},{"given":"Tammy
+        J.","family":"Bullwinkle","sequence":"additional","affiliation":[]},{"given":"Kaeli
+        F.","family":"Loeb","sequence":"additional","affiliation":[]},{"given":"Kym
+        F.","family":"Faull","sequence":"additional","affiliation":[]},{"given":"Kyle","family":"Mohler","sequence":"additional","affiliation":[]},{"ORCID":"http:\/\/orcid.org\/0000-0003-4839-4005","authenticated-orcid":false,"given":"Jesse","family":"Rinehart","sequence":"additional","affiliation":[]},{"given":"Michael","family":"Ibba","sequence":"additional","affiliation":[]}],"member":"78","published-online":{"date-parts":[[2019,12,20]]},"reference":[{"key":"2020013105250749000_295.5.1402.1","doi-asserted-by":"publisher","DOI":"10.1016\/S0031-9422(00)86018-5"},{"key":"2020013105250749000_295.5.1402.2","doi-asserted-by":"publisher","DOI":"10.1016\/0896-6273(89)90256-0"},{"key":"2020013105250749000_295.5.1402.3","first-page":"1724","article-title":"Neurologic
+        diseases on the island of Guam","volume":"5","author":"Mulder","year":"1954","journal-title":"U.
+        S. Armed Forces Med. J"},{"key":"2020013105250749000_295.5.1402.4","doi-asserted-by":"publisher","DOI":"10.1126\/science.3603037"},{"key":"2020013105250749000_295.5.1402.5","doi-asserted-by":"publisher","DOI":"10.1212\/WNL.40.5.767"},{"key":"2020013105250749000_295.5.1402.6","doi-asserted-by":"publisher","DOI":"10.1073\/pnas.2235808100"},{"key":"2020013105250749000_295.5.1402.7","doi-asserted-by":"publisher","DOI":"10.1073\/pnas.0404926101"},{"key":"2020013105250749000_295.5.1402.8","doi-asserted-by":"publisher","DOI":"10.1371\/journal.pone.0075376"},{"key":"2020013105250749000_295.5.1402.9","doi-asserted-by":"publisher","DOI":"10.3109\/17482968.2011.621436"},{"key":"2020013105250749000_295.5.1402.10","doi-asserted-by":"publisher","DOI":"10.1371\/journal.pone.0083406"},{"key":"2020013105250749000_295.5.1402.11","doi-asserted-by":"publisher","DOI":"10.1007\/s12640-017-9740-y"},{"key":"2020013105250749000_295.5.1402.12","doi-asserted-by":"publisher","DOI":"10.1073\/pnas.0501526102"},{"key":"2020013105250749000_295.5.1402.13","doi-asserted-by":"publisher","DOI":"10.3390\/toxins6020488"},{"key":"2020013105250749000_295.5.1402.14","doi-asserted-by":"publisher","DOI":"10.1016\/j.ecoenv.2008.04.010"},{"key":"2020013105250749000_295.5.1402.15","doi-asserted-by":"publisher","DOI":"10.1371\/journal.pone.0213346"},{"key":"2020013105250749000_295.5.1402.16","doi-asserted-by":"publisher","DOI":"10.1038\/srep06931"},{"key":"2020013105250749000_295.5.1402.17","doi-asserted-by":"publisher","DOI":"10.1038\/nmicrobiol.2017.117"},{"key":"2020013105250749000_295.5.1402.18","doi-asserted-by":"publisher","DOI":"10.1038\/nature08612"},{"key":"2020013105250749000_295.5.1402.19","doi-asserted-by":"publisher","DOI":"10.1038\/nature05096"},{"key":"2020013105250749000_295.5.1402.20","doi-asserted-by":"publisher","DOI":"10.1093\/emboj\/cdg065"},{"key":"2020013105250749000_295.5.1402.21","doi-asserted-by":"publisher","DOI":"10.1021\/bi012178j"},{"key":"2020013105250749000_295.5.1402.22","doi-asserted-by":"publisher","DOI":"10.1016\/j.bbagen.2017.01.025"},{"key":"2020013105250749000_295.5.1402.23","doi-asserted-by":"publisher","DOI":"10.1074\/jbc.M805943200"},{"key":"2020013105250749000_295.5.1402.24","doi-asserted-by":"publisher","DOI":"10.1073\/pnas.1420196111"},{"key":"2020013105250749000_295.5.1402.25","doi-asserted-by":"publisher","DOI":"10.1038\/sj.emboj.7600474"},{"key":"2020013105250749000_295.5.1402.26","doi-asserted-by":"publisher","DOI":"10.1038\/s41467-017-02201-z"},{"key":"2020013105250749000_295.5.1402.27","unstructured":"Dixon,
+        M. , and Webb, E. C. (1979) Enzymes, 3rd Ed., 332\u2013352, Academic Press,
+        New York"},{"key":"2020013105250749000_295.5.1402.28","doi-asserted-by":"publisher","DOI":"10.1016\/j.toxicon.2018.01.011"},{"key":"2020013105250749000_295.5.1402.29","doi-asserted-by":"publisher","DOI":"10.7554\/eLife.24001"},{"key":"2020013105250749000_295.5.1402.30","doi-asserted-by":"publisher","DOI":"10.1038\/ncb1104-1054"},{"key":"2020013105250749000_295.5.1402.31","doi-asserted-by":"publisher","DOI":"10.1016\/j.tig.2017.12.007"},{"key":"2020013105250749000_295.5.1402.32","doi-asserted-by":"publisher","DOI":"10.3390\/toxins9120400"},{"key":"2020013105250749000_295.5.1402.33","doi-asserted-by":"publisher","DOI":"10.2174\/138920291501140306113344"},{"key":"2020013105250749000_295.5.1402.34","doi-asserted-by":"publisher","DOI":"10.1007\/s00726-014-1812-1"},{"key":"2020013105250749000_295.5.1402.35","doi-asserted-by":"publisher","DOI":"10.1002\/pmic.201700161"},{"key":"2020013105250749000_295.5.1402.36","doi-asserted-by":"publisher","DOI":"10.1016\/j.toxicon.2011.05.017"},{"key":"2020013105250749000_295.5.1402.37","doi-asserted-by":"publisher","DOI":"10.3390\/md11083091"},{"key":"2020013105250749000_295.5.1402.38","doi-asserted-by":"publisher","DOI":"10.1111\/1758-2229.12647"},{"key":"2020013105250749000_295.5.1402.39","doi-asserted-by":"publisher","DOI":"10.1146\/annurev-genet-120213-092101"},{"key":"2020013105250749000_295.5.1402.40","doi-asserted-by":"publisher","DOI":"10.1038\/nchembio.790"},{"key":"2020013105250749000_295.5.1402.41","doi-asserted-by":"publisher","DOI":"10.1073\/pnas.2136934100"},{"key":"2020013105250749000_295.5.1402.42","doi-asserted-by":"publisher","DOI":"10.1038\/s41586-018-0137-8"},{"key":"2020013105250749000_295.5.1402.43","doi-asserted-by":"publisher","DOI":"10.1038\/ncomms6650"},{"key":"2020013105250749000_295.5.1402.44","doi-asserted-by":"publisher","DOI":"10.1016\/j.chembiol.2006.08.011"},{"key":"2020013105250749000_295.5.1402.45","doi-asserted-by":"publisher","DOI":"10.1007\/s11274-010-0571-8"},{"key":"2020013105250749000_295.5.1402.46","doi-asserted-by":"publisher","DOI":"10.1261\/rna.061069.117"},{"key":"2020013105250749000_295.5.1402.47","doi-asserted-by":"publisher","DOI":"10.1021\/bi00284a007"},{"key":"2020013105250749000_295.5.1402.48","doi-asserted-by":"publisher","DOI":"10.1016\/j.ymeth.2007.08.001"},{"key":"2020013105250749000_295.5.1402.49","doi-asserted-by":"publisher","DOI":"10.1073\/pnas.092152799"},{"key":"2020013105250749000_295.5.1402.50","doi-asserted-by":"publisher","DOI":"10.1074\/jbc.M508281200"},{"key":"2020013105250749000_295.5.1402.51","doi-asserted-by":"publisher","DOI":"10.1093\/nar\/gkx077"}],"container-title":["Journal
+        of Biological Chemistry"],"language":"en","link":[{"URL":"https:\/\/syndication.highwire.org\/content\/doi\/10.1074\/jbc.RA119.011714","content-type":"unspecified","content-version":"vor","intended-application":"similarity-checking"}],"deposited":{"date-parts":[[2021,4,29]],"date-time":"2021-04-29T17:46:20Z","timestamp":1619718380000},"score":0.0,"issued":{"date-parts":[[2019,12,20]]},"references-count":51,"journal-issue":{"issue":"5","published-online":{"date-parts":[[2020,1,31]]},"published-print":{"date-parts":[[2020,1,31]]}},"alternative-id":["10.1074\/jbc.RA119.011714"],"URL":"http:\/\/dx.doi.org\/10.1074\/jbc.ra119.011714","ISSN":["0021-9258","1083-351X"],"issn-type":[{"value":"0021-9258","type":"print"},{"value":"1083-351X","type":"electronic"}],"subject":["Cell
+        Biology","Molecular Biology","Biochemistry"],"published":{"date-parts":[[2019,12,20]]}},{"indexed":{"date-parts":[[2021,5,8]],"date-time":"2021-05-08T03:10:15Z","timestamp":1620443415730},"reference-count":30,"publisher":"Elsevier
+        BV","license":[{"start":{"date-parts":[[2016,7,1]],"date-time":"2016-07-01T00:00:00Z","timestamp":1467331200000},"content-version":"tdm","delay-in-days":0,"URL":"https:\/\/www.elsevier.com\/tdm\/userlicense\/1.0\/"},{"start":{"date-parts":[[2017,3,24]],"date-time":"2017-03-24T00:00:00Z","timestamp":1490313600000},"content-version":"am","delay-in-days":266,"URL":"http:\/\/www.elsevier.com\/open-access\/userlicense\/1.0\/"}],"funder":[{"DOI":"10.13039\/100000001","name":"NSF","doi-asserted-by":"publisher","award":["DMS-1150435","AST-1107373"]},{"DOI":"10.13039\/100000001","name":"NSF","doi-asserted-by":"publisher","award":["DMS-1007751"]},{"DOI":"10.13039\/100009226","name":"NSA","doi-asserted-by":"publisher","award":["H98230-11-1-0166"]}],"content-domain":{"domain":["elsevier.com","sciencedirect.com"],"crossmark-restriction":true},"short-container-title":["Journal
+        of Statistical Planning and Inference"],"published-print":{"date-parts":[[2016,7]]},"DOI":"10.1016\/j.jspi.2016.01.009","type":"journal-article","created":{"date-parts":[[2016,2,4]],"date-time":"2016-02-04T19:31:38Z","timestamp":1454614298000},"page":"85-103","update-policy":"http:\/\/dx.doi.org\/10.1016\/elsevier_cm_policy","source":"Crossref","is-referenced-by-count":0,"title":["Asymptotics
+        for p-value based threshold estimation under repeated measurements"],"prefix":"10.1016","volume":"174","author":[{"given":"Atul","family":"Mallik","sequence":"first","affiliation":[]},{"given":"Bodhisattva","family":"Sen","sequence":"additional","affiliation":[]},{"given":"Moulinath","family":"Banerjee","sequence":"additional","affiliation":[]},{"given":"George","family":"Michailidis","sequence":"additional","affiliation":[]}],"member":"78","reference":[{"issue":"1","key":"10.1016\/j.jspi.2016.01.009_br000005","doi-asserted-by":"crossref","first-page":"293","DOI":"10.1017\/S0001867800012970","article-title":"Queueing
+        and scheduling in random environments","volume":"36","author":"Bambos","year":"2004","journal-title":"Adv.
+        Appl. Probab."},{"issue":"2","key":"10.1016\/j.jspi.2016.01.009_br000010","doi-asserted-by":"crossref","first-page":"543","DOI":"10.1214\/009053606000001415","article-title":"Confidence
+        sets for split points in decision trees","volume":"35","author":"Banerjee","year":"2007","journal-title":"Ann.
+        Statist."},{"key":"10.1016\/j.jspi.2016.01.009_br000015","series-title":"Convergence
+        of Probability Measures","author":"Billingsley","year":"1968"},{"issue":"6","key":"10.1016\/j.jspi.2016.01.009_br000020","doi-asserted-by":"crossref","first-page":"3213","DOI":"10.1016\/j.csda.2006.11.017","article-title":"Identification
+        of the minimum effective dose for right-censored survival data","volume":"51","author":"Chen","year":"2007","journal-title":"Comput.
+        Statist. Data Anal."},{"issue":"1","key":"10.1016\/j.jspi.2016.01.009_br000025","doi-asserted-by":"crossref","first-page":"56","DOI":"10.1198\/106186008X289164","article-title":"Kernel
+        methods for optimal change-points estimation in derivatives","volume":"17","author":"Cheng","year":"2008","journal-title":"J.
+        Comput. Graph. Statist."},{"issue":"3","key":"10.1016\/j.jspi.2016.01.009_br000030","doi-asserted-by":"crossref","first-page":"511","DOI":"10.2307\/2531991","article-title":"Threshold
+        dose\u2013response models in toxicology","volume":"43","author":"Cox","year":"1987","journal-title":"Biometrics"},{"issue":"3","key":"10.1016\/j.jspi.2016.01.009_br000035","doi-asserted-by":"crossref","first-page":"1471","DOI":"10.1214\/aos\/1176348257","article-title":"The
+        asymptotic behavior of some nonparametric change-point estimators","volume":"19","author":"D\u00fcmbgen","year":"1991","journal-title":"Ann.
+        Statist."},{"issue":"3","key":"10.1016\/j.jspi.2016.01.009_br000040","doi-asserted-by":"crossref","first-page":"495","DOI":"10.1111\/rssb.12047","article-title":"Multiscale
+        change point inference","volume":"76","author":"Frick","year":"2014","journal-title":"J.
+        R. Stat. Soc. Ser. B Stat. Methodol."},{"issue":"3","key":"10.1016\/j.jspi.2016.01.009_br000045","first-page":"171","article-title":"Estimating
+        regression functions and their derivatives by the kernel method","volume":"11","author":"Gasser","year":"1984","journal-title":"Scand.
+        J. Stat."},{"issue":"5","key":"10.1016\/j.jspi.2016.01.009_br000050","first-page":"819","article-title":"Change-point
+        estimation from indirect observations. II. Adaptation","volume":"44","author":"Goldenshluger","year":"2008","journal-title":"Ann.
+        Inst. H. Poincar\u00e9 Probab. Statist."},{"issue":"1","key":"10.1016\/j.jspi.2016.01.009_br000055","doi-asserted-by":"crossref","first-page":"350","DOI":"10.1214\/009053605000000750","article-title":"Optimal
+        change-point estimation from indirect observations","volume":"34","author":"Goldenshluger","year":"2006","journal-title":"Ann.
+        Statist."},{"issue":"3","key":"10.1016\/j.jspi.2016.01.009_br000060","first-page":"233","article-title":"On
+        robust kernel estimation of derivatives of regression functions","volume":"12","author":"H\u00e4rdle","year":"1985","journal-title":"Scand.
+        J. Stat."},{"key":"10.1016\/j.jspi.2016.01.009_br000065","doi-asserted-by":"crossref","first-page":"1","DOI":"10.1093\/biomet\/57.1.1","article-title":"Inference
+        about the change-point in a sequence of random variables","volume":"57","author":"Hinkley","year":"1970","journal-title":"Biometrika"},{"key":"10.1016\/j.jspi.2016.01.009_br000070","doi-asserted-by":"crossref","first-page":"1167","DOI":"10.1214\/13-EJS799","article-title":"A
+        wavelet-based approach for detecting changes in second order structure within
+        nonstationary time series","volume":"7","author":"Killick","year":"2013","journal-title":"Electron.
+        J. Stat."},{"issue":"1","key":"10.1016\/j.jspi.2016.01.009_br000075","doi-asserted-by":"crossref","first-page":"191","DOI":"10.1214\/aos\/1176347498","article-title":"Cube
+        root asymptotics","volume":"18","author":"Kim","year":"1990","journal-title":"Ann.
+        Statist."},{"issue":"4","key":"10.1016\/j.jspi.2016.01.009_br000080","first-page":"796","article-title":"Minimax
+        estimation of a discontinuous signal","volume":"32","author":"Korostel\u00ebv","year":"1987","journal-title":"Teor.
+        Veroyatn. Primen."},{"key":"10.1016\/j.jspi.2016.01.009_br000085","series-title":"Minimax
+        Theory of Image Reconstruction","volume":"vol. 82","author":"Korostel\u00ebv","year":"1993"},{"key":"10.1016\/j.jspi.2016.01.009_br000090","series-title":"Introduction
+        to Empirical Processes and Semiparametric Inference","author":"Kosorok","year":"2008"},{"key":"10.1016\/j.jspi.2016.01.009_br000095","series-title":"Change-point
+        estimation under adaptive sampling. Technical report","author":"Lan","year":"2007"},{"issue":"4","key":"10.1016\/j.jspi.2016.01.009_br000100","doi-asserted-by":"crossref","first-page":"1752","DOI":"10.1214\/08-AOS602","article-title":"Change-point
+        estimation under adaptive sampling","volume":"37","author":"Lan","year":"2009","journal-title":"Ann.
+        Statist."},{"key":"10.1016\/j.jspi.2016.01.009_br000105","series-title":"Testing
+        Statistical Hypotheses","author":"Lehmann","year":"2005"},{"key":"10.1016\/j.jspi.2016.01.009_br000110","doi-asserted-by":"crossref","first-page":"109","DOI":"10.2307\/3212499","article-title":"Weak
+        convergence of probability measures and random functions in the function space
+        D(0,\u221e)","volume":"10","author":"Lindvall","year":"1973","journal-title":"J.
+        Appl. Probab."},{"issue":"4","key":"10.1016\/j.jspi.2016.01.009_br000115","doi-asserted-by":"crossref","first-page":"1667","DOI":"10.1214\/aos\/1032298290","article-title":"Change
+        point estimation using nonparametric regression","volume":"24","author":"Loader","year":"1996","journal-title":"Ann.
+        Statist."},{"key":"10.1016\/j.jspi.2016.01.009_br000120","doi-asserted-by":"crossref","first-page":"2477","DOI":"10.1214\/13-EJS845","article-title":"Asymptotics
+        for p-value based threshold estimation in regression settings","volume":"7","author":"Mallik","year":"2013","journal-title":"Electron.
+        J. Stat."},{"issue":"4","key":"10.1016\/j.jspi.2016.01.009_br000125","doi-asserted-by":"crossref","first-page":"887","DOI":"10.1093\/biomet\/asr051","article-title":"Threshold
+        estimation based on a p-value framework in dose\u2013response and regression
+        settings","volume":"98","author":"Mallik","year":"2011","journal-title":"Biometrika"},{"issue":"2","key":"10.1016\/j.jspi.2016.01.009_br000130","doi-asserted-by":"crossref","first-page":"737","DOI":"10.1214\/aos\/1176348654","article-title":"Change-points
+        in nonparametric regression analysis","volume":"20","author":"M\u00fcller","year":"1992","journal-title":"Ann.
+        Statist."},{"issue":"4","key":"10.1016\/j.jspi.2016.01.009_br000135","doi-asserted-by":"crossref","first-page":"323","DOI":"10.1016\/S0167-7152(96)00197-6","article-title":"Two-stage
+        change-point estimators in smooth regression models","volume":"34","author":"M\u00fcller","year":"1997","journal-title":"Statist.
+        Probab. Lett."},{"issue":"4","key":"10.1016\/j.jspi.2016.01.009_br000140","doi-asserted-by":"crossref","first-page":"503","DOI":"10.1111\/1467-9469.00077","article-title":"Optimal
+        change-point estimation in inverse problems","volume":"24","author":"Neumann","year":"1997","journal-title":"Scand.
+        J. Stat."},{"issue":"457","key":"10.1016\/j.jspi.2016.01.009_br000145","doi-asserted-by":"crossref","first-page":"293","DOI":"10.1198\/016214502753479428","article-title":"Multiple
+        test procedures for identifying the minimum effective and maximum safe doses
+        of a drug","volume":"97","author":"Tamhane","year":"2002","journal-title":"J.
+        Amer. Statist. Assoc."},{"key":"10.1016\/j.jspi.2016.01.009_br000150","series-title":"Weak
+        Convergence and Empirical Processes: with Applications to Statistics","author":"van
+        der Vaart","year":"1996"}],"container-title":["Journal of Statistical Planning
+        and Inference"],"language":"en","link":[{"URL":"https:\/\/api.elsevier.com\/content\/article\/PII:S0378375816000197?httpAccept=text\/xml","content-type":"text\/xml","content-version":"vor","intended-application":"text-mining"},{"URL":"https:\/\/api.elsevier.com\/content\/article\/PII:S0378375816000197?httpAccept=text\/plain","content-type":"text\/plain","content-version":"vor","intended-application":"text-mining"}],"deposited":{"date-parts":[[2021,4,18]],"date-time":"2021-04-18T04:52:36Z","timestamp":1618721556000},"score":0.0,"issued":{"date-parts":[[2016,7]]},"references-count":30,"alternative-id":["S0378375816000197"],"URL":"http:\/\/dx.doi.org\/10.1016\/j.jspi.2016.01.009","ISSN":["0378-3758"],"issn-type":[{"value":"0378-3758","type":"print"}],"subject":["Applied
+        Mathematics","Statistics, Probability and Uncertainty","Statistics and Probability"],"published":{"date-parts":[[2016,7]]},"assertion":[{"value":"Elsevier","name":"publisher","label":"This
+        article is maintained by"},{"value":"Asymptotics for -value based threshold
+        estimation under repeated measurements","name":"articletitle","label":"Article
+        Title"},{"value":"Journal of Statistical Planning and Inference","name":"journaltitle","label":"Journal
+        Title"},{"value":"https:\/\/doi.org\/10.1016\/j.jspi.2016.01.009","name":"articlelink","label":"CrossRef
+        DOI link to publisher maintained version"},{"value":"article","name":"content_type","label":"Content
+        Type"},{"value":"Copyright \u00a9 2016 Elsevier B.V. All rights reserved.","name":"copyright","label":"Copyright"}]},{"indexed":{"date-parts":[[2021,5,8]],"date-time":"2021-05-08T03:22:50Z","timestamp":1620444170622},"reference-count":32,"publisher":"Frontiers
+        Media SA","funder":[{"DOI":"10.13039\/100000001","name":"National Science
+        Foundation","doi-asserted-by":"publisher","award":["DGE-1342536"]},{"DOI":"10.13039\/100000002","name":"National
+        Institutes of Health","doi-asserted-by":"publisher","award":["2R01DC05660"]}],"content-domain":{"domain":["frontiersin.org"],"crossmark-restriction":true},"short-container-title":["Front.
+        Psychol."],"DOI":"10.3389\/fpsyg.2016.00147","type":"journal-article","created":{"date-parts":[[2016,2,17]],"date-time":"2016-02-17T05:29:35Z","timestamp":1455686975000},"update-policy":"http:\/\/dx.doi.org\/10.3389\/crossmark-policy","source":"Crossref","is-referenced-by-count":0,"title":["Effects
+        of Part- and Whole-Object Primes on Early MEG Responses to Mooney Faces and
+        Houses"],"prefix":"10.3389","volume":"7","author":[{"given":"Mara","family":"Steinberg
+        Lowe","sequence":"first","affiliation":[]},{"given":"Gwyneth A.","family":"Lewis","sequence":"additional","affiliation":[]},{"given":"David","family":"Poeppel","sequence":"additional","affiliation":[]}],"member":"1965","published-online":{"date-parts":[[2016,2,16]]},"reference":[{"key":"B1","doi-asserted-by":"publisher","first-page":"669","DOI":"10.1109\/77.919433","article-title":"Reduction
+        of non-periodic environmental magnetic noise in MEG measurement by continuously
+        adjusted least squares method","volume":"11","author":"Adachi","year":"2001","journal-title":"EEE
+        Trans. Appl. Supercond"},{"key":"B2","doi-asserted-by":"crossref","volume-title":"Analyzing
+        Linguistic Data: A Practical Introduction to Statistics","author":"Baayen","year":"2008","DOI":"10.1017\/CBO9780511801686"},{"key":"B3","doi-asserted-by":"publisher","first-page":"390","DOI":"10.1016\/j.jml.2007.12.005","article-title":"Mixed-effects
+        modeling with crossed random effects for subjects and items","volume":"59","author":"Baayen","year":"2008","journal-title":"J.
+        Mem. Lang."},{"key":"B4","volume-title":"Statistical Power Analysis for the
+        Behavioral Sciences, 2nd Edn","author":"Cohen","year":"1988"},{"issue":"342","key":"B5","doi-asserted-by":"publisher","DOI":"10.3389\/fpsyg.2011.00342","article-title":"Low-level
+        cues and ultra-fast face detection","volume":"2","author":"Crouzet","year":"2011","journal-title":"Front.
+        Psychol."},{"key":"B6","doi-asserted-by":"publisher","first-page":"181","DOI":"10.1016\/0166-4328(95)00198-0","article-title":"Is
+        face recognition \u2018special\u2019? Evidence from neuropsychology","volume":"76","author":"Farah","year":"1996","journal-title":"Behav.
+        Brain Res."},{"key":"B7","doi-asserted-by":"publisher","first-page":"663","DOI":"10.1016\/j.cogbrainres.2005.03.017","article-title":"Electrophysiological
+        correlates of facial decision: insights from upright and upside-down Mooney-face
+        perception","volume":"24","author":"George","year":"2005","journal-title":"Brain
+        Res. Cogn. Brain Res."},{"key":"B8","doi-asserted-by":"publisher","first-page":"427","DOI":"10.1177\/0956797611427407","article-title":"The
+        perception of a face is no more than the sum of its parts","volume":"23","author":"Gold","year":"2012","journal-title":"Psychol.
+        Sci."},{"key":"B9","doi-asserted-by":"publisher","first-page":"69","DOI":"10.1093\/cercor\/10.1.69","article-title":"Cognitive
+        response profile of the human fusiform face area as determined by MEG","volume":"10","author":"Halgren","year":"2000","journal-title":"Cereb.
+        Cortex"},{"key":"B10","doi-asserted-by":"publisher","first-page":"63","DOI":"10.1093\/cercor\/bhj124","article-title":"Rapid
+        face-selective adaptation of an early extrastriate component in MEG","volume":"17","author":"Harris","year":"2007","journal-title":"Cereb.
+        Cortex"},{"key":"B11","doi-asserted-by":"publisher","first-page":"467","DOI":"10.1093\/cercor\/bhm078","article-title":"Rapid
+        adaptation of the M170 response: importance of face parts","volume":"18","author":"Harris","year":"2008","journal-title":"Cereb.
+        Cortex"},{"key":"B12","doi-asserted-by":"publisher","first-page":"65","DOI":"10.1068\/p230065","article-title":"Configurational
+        factors in the perception of unfamiliar faces","volume":"23","author":"Hole","year":"1994","journal-title":"Perception"},{"key":"B13","doi-asserted-by":"publisher","first-page":"132","DOI":"10.1093\/cercor\/bhg111","article-title":"N170
+        or N1? Spatiotemporal differences between object and face processing using
+        ERPs","volume":"14","author":"Itier","year":"2004","journal-title":"Cereb.
+        Cortex"},{"key":"B14","doi-asserted-by":"publisher","first-page":"431","DOI":"10.1016\/S0926-6410(03)00145-9","article-title":"Is
+        the N170 for faces cognitively penetrable? Evidence from repetition priming
+        of Mooney faces of familiar and unfamiliar persons","volume":"17","author":"Jemel","year":"2003","journal-title":"Brain
+        Res. Cogn. Brain Res."},{"key":"B15","doi-asserted-by":"publisher","first-page":"2024","DOI":"10.1016\/j.neuropsychologia.2005.03.016","article-title":"Exploring
+        the functional architecture of person recognition system with event-related
+        potentials in a within-and cross-domain self-priming of faces","volume":"43","author":"Jemel","year":"2005","journal-title":"Neuropsychologia"},{"key":"B16","doi-asserted-by":"publisher","first-page":"38","DOI":"10.1177\/0956797609356508","article-title":"Holistic
+        processing is not correlated with face-identification accuracy","volume":"21","author":"Konar","year":"2010","journal-title":"Psychol.
+        Sci."},{"key":"B17","doi-asserted-by":"publisher","first-page":"1316","DOI":"10.1162\/0898929055002490","article-title":"Holistic
+        processing of faces: learning effects with Mooney faces","volume":"17","author":"Latinus","year":"2005","journal-title":"J.
+        Cogn. Neurosci."},{"key":"B18","doi-asserted-by":"publisher","first-page":"179","DOI":"10.1016\/j.brainres.2006.09.031","article-title":"Face
+        processing stages: impact of difficulty and separation of effects","volume":"1123","author":"Latinus","year":"2006","journal-title":"Brain
+        Res."},{"key":"B19","author":"Lenth","year":"2015","journal-title":"lsmeans:
+        Least-Squares Means (Version 2.18)."},{"key":"B20","doi-asserted-by":"publisher","first-page":"910","DOI":"10.1038\/nn909","article-title":"Stages
+        of processing in face perception: an MEG study","volume":"5","author":"Liu","year":"2002","journal-title":"Nat.
+        Neurosci."},{"key":"B21","doi-asserted-by":"publisher","first-page":"337","DOI":"10.1097\/00001756-200002070-00023","article-title":"The
+        selectivity of the occipitotemporal M170 for faces","volume":"11","author":"Liu","year":"2000","journal-title":"Neuroreport"},{"key":"B22","doi-asserted-by":"publisher","first-page":"255","DOI":"10.1016\/S1364-6613(02)01903-4","article-title":"The
+        many faces of configural processing","volume":"6","author":"Maurer","year":"2002","journal-title":"Trends
+        Cogn. Sci."},{"key":"B23","doi-asserted-by":"publisher","first-page":"464","DOI":"10.1177\/0956797611401753","article-title":"Holistic
+        processing predicts face recognition","volume":"22","author":"Richler","year":"2011a","journal-title":"Psychol.
+        Sci."},{"key":"B24","doi-asserted-by":"publisher","first-page":"333","DOI":"10.1016\/j.visres.2010.11.014","article-title":"Inverted
+        faces are (eventually) processed holistically","volume":"51","author":"Richler","year":"2011b","journal-title":"Vision
+        Res."},{"key":"B25","doi-asserted-by":"publisher","first-page":"173","DOI":"10.1016\/S0301-0511(99)00013-7","article-title":"Spatio-temporal
+        localization of the face inversion effect: an event-related potentials study","volume":"50","author":"Rossion","year":"1999","journal-title":"Biol.
+        Psychol."},{"key":"B26","doi-asserted-by":"publisher","first-page":"1","DOI":"10.1167\/8.12.3","article-title":"Time
+        course and robustness of ERP object and face differences","volume":"8","author":"Rousselet","year":"2008","journal-title":"J.
+        Vis."},{"key":"B27","doi-asserted-by":"publisher","first-page":"937","DOI":"10.1162\/089892901753165854","article-title":"Structural
+        encoding of human and schematic faces: holistic and part-based processes","volume":"13","author":"Sagiv","year":"2001","journal-title":"J.
+        Cogn. Neurosci."},{"key":"B28","doi-asserted-by":"publisher","first-page":"391","DOI":"10.1016\/j.cub.2004.02.028","article-title":"Inversion
+        leads to quantitative, not qualitative, changes in face processing","volume":"14","author":"Sekuler","year":"2004","journal-title":"Curr.
+        Biol."},{"key":"B29","doi-asserted-by":"publisher","first-page":"225","DOI":"10.1080\/14640749308401045","article-title":"Parts
+        and wholes in face recognition","volume":"46","author":"Tanaka","year":"1993","journal-title":"Q.
+        J. Exp. Psychol."},{"key":"B30","doi-asserted-by":"publisher","first-page":"391","DOI":"10.1088\/0954-898X_14_3_302","article-title":"Statistics
+        of natural image categories","volume":"14","author":"Torralba","year":"2003","journal-title":"Network"},{"issue":"667","key":"B31","doi-asserted-by":"publisher","DOI":"10.3389\/fpsyg.2015.00667","article-title":"Segmentation
+        precedes face categorization under suboptimal conditions","volume":"6","author":"Van
+        Den Boomen","year":"2015","journal-title":"Front. Psychol"},{"key":"B32","doi-asserted-by":"publisher","first-page":"747","DOI":"10.1068\/p160747","article-title":"Configurational
+        information in face perception","volume":"16","author":"Young","year":"1987","journal-title":"Perception"}],"container-title":["Frontiers
+        in Psychology"],"deposited":{"date-parts":[[2017,6,24]],"date-time":"2017-06-24T06:05:54Z","timestamp":1498284354000},"score":0.0,"issued":{"date-parts":[[2016,2,16]]},"references-count":32,"URL":"http:\/\/dx.doi.org\/10.3389\/fpsyg.2016.00147","ISSN":["1664-1078"],"issn-type":[{"value":"1664-1078","type":"electronic"}],"subject":["General
+        Psychology"],"published":{"date-parts":[[2016,2,16]]}},{"indexed":{"date-parts":[[2021,5,8]],"date-time":"2021-05-08T03:23:51Z","timestamp":1620444231745},"reference-count":16,"publisher":"Springer
+        Science and Business Media LLC","issue":"3","license":[{"start":{"date-parts":[[2016,2,10]],"date-time":"2016-02-10T00:00:00Z","timestamp":1455062400000},"content-version":"tdm","delay-in-days":0,"URL":"http:\/\/www.springer.com\/tdm"},{"start":{"date-parts":[[2016,2,10]],"date-time":"2016-02-10T00:00:00Z","timestamp":1455062400000},"content-version":"vor","delay-in-days":0,"URL":"http:\/\/www.springer.com\/tdm"}],"funder":[{"DOI":"10.13039\/100000001","name":"National
+        Science Foundation","doi-asserted-by":"publisher","award":["DMS-1005745"]}],"content-domain":{"domain":["link.springer.com"],"crossmark-restriction":false},"short-container-title":["Boll
+        Unione Mat Ital"],"published-print":{"date-parts":[[2016,9]]},"DOI":"10.1007\/s40574-016-0055-3","type":"journal-article","created":{"date-parts":[[2016,2,10]],"date-time":"2016-02-10T18:33:11Z","timestamp":1455129191000},"page":"411-420","update-policy":"http:\/\/dx.doi.org\/10.1007\/springer_crossmark_policy","source":"Crossref","is-referenced-by-count":0,"title":["The
+        blowup along the diagonal of the spectral function of the Laplacian"],"prefix":"10.1007","volume":"9","author":[{"given":"Liviu
+        I.","family":"Nicolaescu","sequence":"first","affiliation":[]}],"member":"297","published-online":{"date-parts":[[2016,2,10]]},"reference":[{"key":"55_CR1","doi-asserted-by":"publisher","first-page":"231","DOI":"10.1023\/B:AGAG.0000042902.46202.69","volume":"26","author":"X
+        Bin","year":"2004","unstructured":"Bin, X.: Derivatives of the spectral function
+        and Sobolev norms of eigenfunctions on a closed Riemannian manifold. Ann.
+        Glob. Anal. Geom. 26, 231\u2013252 (2004)","journal-title":"Ann. Glob. Anal.
+        Geom."},{"key":"55_CR2","unstructured":"Canzani, Y., Hanin, B.: Scaling limit
+        for the kernel of the spectral projector and remainder estimate in the pointwise
+        Weyl law. Anal. PDE 8(7), 1707\u20131731 (2015). \n                    arXiv:1411.0658"},{"key":"55_CR3","doi-asserted-by":"publisher","first-page":"161","DOI":"10.1007\/BF01393691","volume":"93","author":"H
+        Donnely","year":"1988","unstructured":"Donnely, H., Fefferman, C.: Nodal sets
+        of eigenfunctions on Riemannian manifolds. Invent. Math. 93, 161\u2013183
+        (1988)","journal-title":"Invent. Math."},{"key":"55_CR4","doi-asserted-by":"publisher","first-page":"193","DOI":"10.1007\/BF02391913","volume":"121","author":"L
+        H\u00f6rmander","year":"1968","unstructured":"H\u00f6rmander, L.: The spectral
+        function of an elliptic operator. Acta Math. 121, 193\u2013218 (1968)","journal-title":"Acta
+        Math."},{"key":"55_CR5","volume-title":"The Analysis of Partial Differential
+        Operators III","author":"L H\u00f6rmander","year":"1994","unstructured":"H\u00f6rmander,
+        L.: The Analysis of Partial Differential Operators III. Springer, Berlin (1994)"},{"key":"55_CR6","doi-asserted-by":"publisher","DOI":"10.1007\/978-0-8176-8134-0","volume-title":"A
+        Primer of Real Analytic Functions","author":"SG Krantz","year":"2002","unstructured":"Krantz,
+        S.G., Parks, H.R.: A Primer of Real Analytic Functions, 2nd edn. Birkh\u00e4user,
+        Boston (2002)","edition":"2"},{"key":"55_CR7","doi-asserted-by":"crossref","first-page":"5","DOI":"10.7146\/math.scand.a-11895","volume":"48","author":"PT
+        Lai","year":"1981","unstructured":"Lai, P.T.: Meilleures estimations asymptotiques
+        des restes de la fonction spectrale et des valeurs propres relatif au Laplacien.
+        Math. Scand. 48, 5\u201338 (1981)","journal-title":"Math. Scand."},{"key":"55_CR8","doi-asserted-by":"publisher","first-page":"581","DOI":"10.1080\/03605300802537453","volume":"34","author":"H
+        Lapointe","year":"2009","unstructured":"Lapointe, H., Polterovich, I., Safarov,
+        Yu.: Average growth of the spectral function on a Riemannian manifold. Commun.
+        Partial Differ. Equ. 34, 581\u2013615 (2009)","journal-title":"Commun. Partial
+        Differ. Equ."},{"key":"55_CR9","doi-asserted-by":"publisher","volume-title":"Non-Homogeneous
+        Boundary Value Problems and Applications","author":"JL Lions","year":"1973","unstructured":"Lions,
+        J.L., Magenes, E.: Non-Homogeneous Boundary Value Problems and Applications,
+        vol. III. Springer, Berlin (1973)","DOI":"10.1007\/978-3-642-65393-3"},{"key":"55_CR10","doi-asserted-by":"crossref","volume-title":"Multiple
+        Integrals in the Calculus of Variations","author":"CB Morrey","year":"1966","unstructured":"Morrey,
+        C.B.: Multiple Integrals in the Calculus of Variations. Springer, Berlin (1966)","DOI":"10.1007\/978-3-540-69952-1"},{"key":"55_CR11","doi-asserted-by":"crossref","first-page":"83","DOI":"10.7146\/math.scand.a-10731","volume":"15","author":"J
+        Peetre","year":"1964","unstructured":"Peetre, J.: Remark on eigenfunction
+        expansions for elliptic operators with constant coefficients. Math. Scand.
+        15, 83\u201392 (1964)","journal-title":"Math. Scand."},{"key":"55_CR12","unstructured":"Safarov,
+        Y.: Asymptotics of the spectral function of a positive elliptic operator without
+        a nontrapping condition. Funktsional. Anal. i Prilozhen. 22(3), 53\u201365,
+        96 (1988) (Russian) [English translation in Funct. Anal. Appl. 22(3), 213\u2013223
+        (1988)]"},{"key":"55_CR13","volume-title":"The Asymptotic Distribution of
+        Eigenvalues of Partial Differential Operators, Translations of Mathematical
+        Monographs","author":"Y Safarov","year":"1997","unstructured":"Safarov, Y.,
+        Vassiliev, D.: The Asymptotic Distribution of Eigenvalues of Partial Differential
+        Operators, Translations of Mathematical Monographs, vol. 155. American Mathematical
+        Society, Providence (1997)"},{"key":"55_CR14","unstructured":"Sodin, M.: Lectures
+        on random nodal portraits. \n                    http:\/\/www.math.tau.ac.il\/~sodin\/SPB-Lecture-Notes"},{"key":"55_CR15","doi-asserted-by":"publisher","first-page":"387","DOI":"10.1215\/S0012-7094-02-11431-8","volume":"114","author":"C
+        Sogge","year":"2002","unstructured":"Sogge, C., Zelditch, S.: Riemannian manifolds
+        with maximal eigenfunction growth. Duke Math. J. 114, 387\u2013437 (2002)","journal-title":"Duke
+        Math. J."},{"key":"55_CR16","unstructured":"Zelditch, S.: Local and global
+        analysis of eigenfunctions, Handbook of geometric analysis. In: No. 1, 545658,
+        Advanced Lectures in Mathematics (ALM), vol. 7. Int. Press, Somerville (2008).
+        \n                    arXiv:0903.3420"}],"container-title":["Bollettino dell''Unione
+        Matematica Italiana"],"language":"en","link":[{"URL":"http:\/\/link.springer.com\/content\/pdf\/10.1007\/s40574-016-0055-3.pdf","content-type":"application\/pdf","content-version":"vor","intended-application":"text-mining"},{"URL":"http:\/\/link.springer.com\/article\/10.1007\/s40574-016-0055-3\/fulltext.html","content-type":"text\/html","content-version":"vor","intended-application":"text-mining"},{"URL":"http:\/\/link.springer.com\/content\/pdf\/10.1007\/s40574-016-0055-3","content-type":"unspecified","content-version":"vor","intended-application":"similarity-checking"},{"URL":"http:\/\/link.springer.com\/content\/pdf\/10.1007\/s40574-016-0055-3.pdf","content-type":"application\/pdf","content-version":"vor","intended-application":"similarity-checking"}],"deposited":{"date-parts":[[2020,5,16]],"date-time":"2020-05-16T23:29:32Z","timestamp":1589671772000},"score":0.0,"issued":{"date-parts":[[2016,2,10]]},"references-count":16,"journal-issue":{"issue":"3","published-print":{"date-parts":[[2016,9]]}},"alternative-id":["55"],"URL":"http:\/\/dx.doi.org\/10.1007\/s40574-016-0055-3","ISSN":["1972-6724","2198-2759"],"issn-type":[{"value":"1972-6724","type":"print"},{"value":"2198-2759","type":"electronic"}],"subject":["General
+        Mathematics"],"published":{"date-parts":[[2016,2,10]]},"assertion":[{"value":"20
+        October 2015","order":1,"name":"received","label":"Received","group":{"name":"ArticleHistory","label":"Article
+        History"}},{"value":"25 January 2016","order":2,"name":"accepted","label":"Accepted","group":{"name":"ArticleHistory","label":"Article
+        History"}},{"value":"10 February 2016","order":3,"name":"first_online","label":"First
+        Online","group":{"name":"ArticleHistory","label":"Article History"}}]},{"indexed":{"date-parts":[[2021,5,8]],"date-time":"2021-05-08T03:23:56Z","timestamp":1620444236491},"reference-count":37,"publisher":"American
+        Physical Society (APS)","issue":"4","license":[{"start":{"date-parts":[[2013,2,13]],"date-time":"2013-02-13T00:00:00Z","timestamp":1360713600000},"content-version":"vor","delay-in-days":0,"URL":"http:\/\/link.aps.org\/licenses\/aps-default-license"},{"start":{"date-parts":[[2014,2,13]],"date-time":"2014-02-13T00:00:00Z","timestamp":1392249600000},"content-version":"am","delay-in-days":365,"URL":"http:\/\/link.aps.org\/licenses\/aps-default-accepted-manuscript-license"}],"funder":[{"DOI":"10.13039\/100000001","name":"National
+        Science Foundation","doi-asserted-by":"publisher"}],"content-domain":{"domain":[],"crossmark-restriction":false},"short-container-title":["Phys.
+        Rev. D"],"DOI":"10.1103\/physrevd.87.046006","type":"journal-article","created":{"date-parts":[[2013,2,13]],"date-time":"2013-02-13T22:40:33Z","timestamp":1360795233000},"source":"Crossref","is-referenced-by-count":0,"title":["Stability
+        of non-extremal conifold backgrounds with sources"],"prefix":"10.1103","volume":"87","author":[{"given":"Elena","family":"C\u00e1ceres","sequence":"first","affiliation":[]},{"given":"Steve","family":"Young","sequence":"additional","affiliation":[]}],"member":"16","published-online":{"date-parts":[[2013,2,13]]},"reference":[{"key":"PhysRevD.87.046006Cc1R1","doi-asserted-by":"crossref","first-page":"231","DOI":"10.4310\/ATMP.1998.v2.n2.a1","volume":"2","author":"J.\u2009M.
+        Maldacena","year":"1998","journal-title":"Adv. Theor. Math. Phys.","ISSN":"http:\/\/id.crossref.org\/issn\/1095-0761","issn-type":"print"},{"key":"PhysRevD.87.046006Cc2R1","doi-asserted-by":"publisher","DOI":"10.1016\/S0370-2693(98)00377-3"},{"key":"PhysRevD.87.046006Cc3R1","doi-asserted-by":"crossref","first-page":"253","DOI":"10.4310\/ATMP.1998.v2.n2.a2","volume":"2","author":"E.
+        Witten","year":"1998","journal-title":"Adv. Theor. Math. Phys.","ISSN":"http:\/\/id.crossref.org\/issn\/1095-0761","issn-type":"print"},{"key":"PhysRevD.87.046006Cc4R1","doi-asserted-by":"publisher","DOI":"10.1088\/1126-6708\/2000\/08\/052"},{"key":"PhysRevD.87.046006Cc5R1","doi-asserted-by":"publisher","DOI":"10.1103\/PhysRevLett.86.588"},{"key":"PhysRevD.87.046006Cc6R1","doi-asserted-by":"publisher","DOI":"10.1088\/0264-9381\/18\/7\/315"},{"key":"PhysRevD.87.046006Cc7R1","doi-asserted-by":"publisher","DOI":"10.1088\/1126-6708\/2005\/03\/069"},{"key":"PhysRevD.87.046006Cc8R1","doi-asserted-by":"publisher","DOI":"10.1103\/PhysRevD.73.086005"},{"key":"PhysRevD.87.046006Cc9R1","doi-asserted-by":"publisher","DOI":"10.1088\/1126-6708\/2007\/02\/090"},{"key":"PhysRevD.87.046006Cc10R1","doi-asserted-by":"publisher","DOI":"10.1088\/1126-6708\/2008\/03\/020"},{"key":"PhysRevD.87.046006Cc11R1","doi-asserted-by":"publisher","DOI":"10.1088\/1126-6708\/2008\/09\/048"},{"key":"PhysRevD.87.046006Cc12R1","doi-asserted-by":"crossref","first-page":"196714","DOI":"10.1155\/2010\/196714","volume":"2010","author":"C.
+        Nunez","year":"2010","journal-title":"Adv. High Energy Phys.","ISSN":"http:\/\/id.crossref.org\/issn\/1687-7357","issn-type":"print"},{"key":"PhysRevD.87.046006Cc13R1","doi-asserted-by":"publisher","DOI":"10.1088\/1126-6708\/2007\/09\/109"},{"key":"PhysRevD.87.046006Cc14R1","doi-asserted-by":"publisher","DOI":"10.1088\/1126-6708\/2009\/03\/153"},{"key":"PhysRevD.87.046006Cc15R1","doi-asserted-by":"publisher","DOI":"10.1007\/JHEP01(2010)104"},{"key":"PhysRevD.87.046006Cc16R1","doi-asserted-by":"publisher","DOI":"10.1016\/j.nuclphysb.2010.09.011"},{"key":"PhysRevD.87.046006Cc17R1","doi-asserted-by":"publisher","DOI":"10.1007\/JHEP02(2012)145"},{"key":"PhysRevD.87.046006Cc18R1","doi-asserted-by":"publisher","DOI":"10.1016\/j.physletb.2012.02.037"},{"key":"PhysRevD.87.046006Cc19R1","doi-asserted-by":"publisher","DOI":"10.1007\/JHEP07(2011)056"},{"key":"PhysRevD.87.046006Cc20R1","doi-asserted-by":"publisher","DOI":"10.1007\/JHEP05(2012)031"},{"key":"PhysRevD.87.046006Cc21R1","doi-asserted-by":"publisher","DOI":"10.1007\/JHEP03(2011)054"},{"key":"PhysRevD.87.046006Cc22R1","doi-asserted-by":"publisher","DOI":"10.1016\/j.nuclphysb.2011.01.031"},{"key":"PhysRevD.87.046006Cc23R1","doi-asserted-by":"publisher","DOI":"10.1103\/PhysRevD.76.086005"},{"key":"PhysRevD.87.046006Cc24R1","doi-asserted-by":"publisher","DOI":"10.1088\/1126-6708\/2007\/09\/083"},{"key":"PhysRevD.87.046006Cc25R1","doi-asserted-by":"publisher","DOI":"10.1088\/1126-6708\/2001\/09\/017"},{"key":"PhysRevD.87.046006Cc26R1","doi-asserted-by":"publisher","DOI":"10.1016\/j.nuclphysb.2009.06.001"},{"key":"PhysRevD.87.046006Cc27R1","doi-asserted-by":"publisher","DOI":"10.1088\/1126-6708\/2001\/05\/028"},{"key":"PhysRevD.87.046006Cc28R1","doi-asserted-by":"publisher","DOI":"10.1103\/PhysRevD.78.086005"},{"key":"PhysRevD.87.046006Cc29R1","doi-asserted-by":"publisher","DOI":"10.1142\/S0217751X01003937"},{"key":"PhysRevD.87.046006Cc30R1","doi-asserted-by":"publisher","DOI":"10.1088\/1126-6708\/2003\/12\/024"},{"key":"PhysRevD.87.046006Cc31R1","doi-asserted-by":"publisher","DOI":"10.1103\/PhysRevD.77.046003"},{"key":"PhysRevD.87.046006Cc32R1","doi-asserted-by":"publisher","DOI":"10.1088\/1126-6708\/2006\/09\/051"},{"key":"PhysRevD.87.046006Cc33R1","doi-asserted-by":"publisher","DOI":"10.1007\/JHEP02(2010)032"},{"key":"PhysRevD.87.046006Cc34R1","doi-asserted-by":"publisher","DOI":"10.1088\/0264-9381\/13\/6\/017"},{"key":"PhysRevD.87.046006Cc35R1","doi-asserted-by":"publisher","DOI":"10.1088\/1126-6708\/2007\/11\/034"},{"key":"PhysRevD.87.046006Cc36R1","doi-asserted-by":"publisher","DOI":"10.1016\/S0550-3213(02)00237-7"},{"key":"PhysRevD.87.046006Cc37R1","doi-asserted-by":"publisher","DOI":"10.1016\/j.nuclphysb.2005.10.014"}],"container-title":["Physical
+        Review D"],"language":"en","link":[{"URL":"http:\/\/link.aps.org\/accepted\/10.1103\/PhysRevD.87.046006","content-type":"application\/pdf","content-version":"am","intended-application":"unspecified"},{"URL":"http:\/\/link.aps.org\/article\/10.1103\/PhysRevD.87.046006","content-type":"unspecified","content-version":"vor","intended-application":"syndication"},{"URL":"http:\/\/harvest.aps.org\/v2\/journals\/articles\/10.1103\/PhysRevD.87.046006\/fulltext","content-type":"unspecified","content-version":"vor","intended-application":"similarity-checking"}],"deposited":{"date-parts":[[2019,7,9]],"date-time":"2019-07-09T18:23:44Z","timestamp":1562696624000},"score":0.0,"issued":{"date-parts":[[2013,2,13]]},"references-count":37,"journal-issue":{"issue":"4","published-print":{"date-parts":[[2013,2]]}},"URL":"http:\/\/dx.doi.org\/10.1103\/physrevd.87.046006","ISSN":["1550-7998","1550-2368"],"issn-type":[{"value":"1550-7998","type":"print"},{"value":"1550-2368","type":"electronic"}],"subject":["Nuclear
+        and High Energy Physics"],"published":{"date-parts":[[2013,2,13]]},"article-number":"046006"}],"items-per-page":5,"query":{"start-index":0,"search-terms":null}}}'
+  recorded_at: 2021-08-01 15:44:18 GMT
+  recorded_with: vcr/1.0.2, webmockr/0.8.0
 - request:
     method: get
     uri: https://api.crossref.org/funders?query=NSF&rows=1
@@ -235,8 +401,8 @@ http_interactions:
     headers:
       Accept-Encoding: gzip, deflate
       Accept: application/json, text/xml, application/xml, */*
-      User-Agent: r-curl/3.2 crul/0.6.1.9100 rOpenSci(rcrossref/0.8.5.9110) (mailto:<crossref_email>)
-      X-USER-AGENT: r-curl/3.2 crul/0.6.1.9100 rOpenSci(rcrossref/0.8.5.9110) (mailto:<crossref_email>)
+      User-Agent: r-curl/4.3.2 crul/1.1.0 rOpenSci(rcrossref/1.1.0.94)
+      X-USER-AGENT: r-curl/4.3.2 crul/1.1.0 rOpenSci(rcrossref/1.1.0.94)
   response:
     status:
       status_code: '200'
@@ -244,19 +410,23 @@ http_interactions:
       explanation: Request fulfilled, document follows
     headers:
       status: HTTP/1.1 200 OK
-      content-type: application/json;charset=UTF-8
-      vary: Accept
+      date: Sun, 01 Aug 2021 15:44:18 GMT
+      content-type: application/json
+      content-length: '453'
       access-control-allow-origin: '*'
       access-control-allow-headers: X-Requested-With
-      content-length: '468'
-      server: http-kit
-      date: Fri, 07 Dec 2018 22:36:17 GMT
+      server: Jetty(9.4.40.v20210413)
+      x-ratelimit-limit: '50'
+      x-ratelimit-interval: 1s
       x-rate-limit-limit: '50'
       x-rate-limit-interval: 1s
+      permissions-policy: interest-cohort=()
       connection: close
     body:
       encoding: UTF-8
-      string: '{"status":"ok","message-type":"funder-list","message-version":"1.0.0","message":{"items-per-page":1,"query":{"start-index":0,"search-terms":"NSF"},"total-results":10,"items":[{"id":"501100004190","location":"Norway","name":"Norsk
-        Sykepleierforbund","alt-names":["NSF","Norwegian Nurses Organisation"],"uri":"http:\/\/dx.doi.org\/10.13039\/501100004190","replaces":[],"replaced-by":[],"tokens":["norsk","sykepleierforbund","nsf","norwegian","nurses","organisation"]}]}}'
-  recorded_at: 2018-12-07 22:36:17 GMT
-  recorded_with: vcr/0.2.0.9101, webmockr/0.2.9.9311
+      file: no
+      string: '{"status":"ok","message-type":"funder-list","message-version":"1.0.0","message":{"items-per-page":1,"query":{"start-index":0,"search-terms":"NSF"},"total-results":36,"items":[{"id":"100000001","location":"United
+        States","name":"National Science Foundation","alt-names":["USA NSF","NSF","US
+        NSF"],"uri":"http:\/\/dx.doi.org\/10.13039\/100000001","replaces":[],"replaced-by":[],"tokens":["national","science","foundation","usa","nsf","nsf","us","nsf"]}]}}'
+  recorded_at: 2021-08-01 15:44:18 GMT
+  recorded_with: vcr/1.0.2, webmockr/0.8.0

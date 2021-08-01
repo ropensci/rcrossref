@@ -8,8 +8,8 @@ http_interactions:
     headers:
       Accept-Encoding: gzip, deflate
       Accept: application/json, text/xml, application/xml, */*
-      User-Agent: r-curl/3.2 crul/0.7.0.9100 rOpenSci(rcrossref/0.8.6.9100) (mailto:<crossref_email>)
-      X-USER-AGENT: r-curl/3.2 crul/0.7.0.9100 rOpenSci(rcrossref/0.8.6.9100) (mailto:<crossref_email>)
+      User-Agent: r-curl/4.3.2 crul/1.1.0 rOpenSci(rcrossref/1.1.0.94)
+      X-USER-AGENT: r-curl/4.3.2 crul/1.1.0 rOpenSci(rcrossref/1.1.0.94)
   response:
     status:
       status_code: '200'
@@ -17,21 +17,24 @@ http_interactions:
       explanation: Request fulfilled, document follows
     headers:
       status: HTTP/1.1 200 OK
-      content-type: application/json;charset=UTF-8
-      vary: Accept
+      date: Sun, 01 Aug 2021 15:54:28 GMT
+      content-type: application/json
+      content-length: '191'
       access-control-allow-origin: '*'
       access-control-allow-headers: X-Requested-With
-      content-length: '191'
-      server: http-kit
-      date: Wed, 09 Jan 2019 21:45:41 GMT
+      server: Jetty(9.4.40.v20210413)
+      x-ratelimit-limit: '50'
+      x-ratelimit-interval: 1s
       x-rate-limit-limit: '50'
       x-rate-limit-interval: 1s
+      permissions-policy: interest-cohort=()
       connection: close
     body:
       encoding: UTF-8
+      file: no
       string: '{"status":"ok","message-type":"work-list","message-version":"1.0.0","message":{"facets":{},"total-results":0,"items":[],"items-per-page":20,"query":{"start-index":0,"search-terms":"adfaaf"}}}'
-  recorded_at: 2019-01-09 21:45:42 GMT
-  recorded_with: vcr/0.2.0, webmockr/0.3.0
+  recorded_at: 2021-08-01 15:54:28 GMT
+  recorded_with: vcr/1.0.2, webmockr/0.8.0
 - request:
     method: get
     uri: https://api.crossref.org/works?sample=200
@@ -41,8 +44,8 @@ http_interactions:
     headers:
       Accept-Encoding: gzip, deflate
       Accept: application/json, text/xml, application/xml, */*
-      User-Agent: r-curl/3.2 crul/0.7.0.9100 rOpenSci(rcrossref/0.8.6.9100) (mailto:<crossref_email>)
-      X-USER-AGENT: r-curl/3.2 crul/0.7.0.9100 rOpenSci(rcrossref/0.8.6.9100) (mailto:<crossref_email>)
+      User-Agent: r-curl/4.3.2 crul/1.1.0 rOpenSci(rcrossref/1.1.0.94)
+      X-USER-AGENT: r-curl/4.3.2 crul/1.1.0 rOpenSci(rcrossref/1.1.0.94)
   response:
     status:
       status_code: '400'
@@ -50,20 +53,24 @@ http_interactions:
       explanation: Bad request syntax or unsupported method
     headers:
       status: HTTP/1.1 400 Bad Request
-      content-type: application/json;charset=UTF-8
+      date: Sun, 01 Aug 2021 15:54:28 GMT
+      content-type: application/json;charset=utf-8
+      content-length: '206'
       vary: Accept
       access-control-allow-origin: '*'
       access-control-allow-headers: X-Requested-With
-      content-length: '206'
-      server: http-kit
-      date: Wed, 09 Jan 2019 21:45:42 GMT
+      server: Jetty(9.4.40.v20210413)
+      x-ratelimit-limit: '50'
+      x-ratelimit-interval: 1s
       x-rate-limit-limit: '50'
       x-rate-limit-interval: 1s
+      permissions-policy: interest-cohort=()
       connection: close
     body:
       encoding: UTF-8
+      file: no
       string: '{"status":"failed","message-type":"validation-failure","message":[{"type":"integer-not-valid","value":"200","message":"Integer
         specified as 200 but must be a positive integer less than or equal to 100.
         "}]}'
-  recorded_at: 2019-01-09 21:45:42 GMT
-  recorded_with: vcr/0.2.0, webmockr/0.3.0
+  recorded_at: 2021-08-01 15:54:28 GMT
+  recorded_with: vcr/1.0.2, webmockr/0.8.0

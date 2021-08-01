@@ -8,8 +8,8 @@ http_interactions:
     headers:
       Accept-Encoding: gzip, deflate
       Accept: application/json, text/xml, application/xml, */*
-      User-Agent: r-curl/3.2 crul/0.6.1.9100 rOpenSci(rcrossref/0.8.5.9110) (mailto:<crossref_email>)
-      X-USER-AGENT: r-curl/3.2 crul/0.6.1.9100 rOpenSci(rcrossref/0.8.5.9110) (mailto:<crossref_email>)
+      User-Agent: r-curl/4.3.2 crul/1.1.0 rOpenSci(rcrossref/1.1.0.94)
+      X-USER-AGENT: r-curl/4.3.2 crul/1.1.0 rOpenSci(rcrossref/1.1.0.94)
   response:
     status:
       status_code: '200'
@@ -17,21 +17,25 @@ http_interactions:
       explanation: Request fulfilled, document follows
     headers:
       status: HTTP/1.1 200 OK
-      content-type: application/json;charset=UTF-8
+      date: Sun, 01 Aug 2021 15:43:25 GMT
+      content-type: application/json;charset=utf-8
+      content-length: '166'
       vary: Accept
       access-control-allow-origin: '*'
       access-control-allow-headers: X-Requested-With
-      content-length: '166'
-      server: http-kit
-      date: Fri, 07 Dec 2018 22:43:17 GMT
+      server: Jetty(9.4.40.v20210413)
+      x-ratelimit-limit: '50'
+      x-ratelimit-interval: 1s
       x-rate-limit-limit: '50'
       x-rate-limit-interval: 1s
+      permissions-policy: interest-cohort=()
       connection: close
     body:
       encoding: UTF-8
+      file: no
       string: '{"status":"ok","message-type":"work-agency","message-version":"1.0.0","message":{"DOI":"10.1126\/science.169.3946.635","agency":{"id":"crossref","label":"Crossref"}}}'
-  recorded_at: 2018-12-07 22:43:18 GMT
-  recorded_with: vcr/0.2.0.9101, webmockr/0.2.9.9311
+  recorded_at: 2021-08-01 15:43:25 GMT
+  recorded_with: vcr/1.0.2, webmockr/0.8.0
 - request:
     method: get
     uri: https://api.crossref.org/works/10.1126/science.169.3946.635/transform/application/vnd.citationstyles.csl+json
@@ -41,8 +45,8 @@ http_interactions:
     headers:
       Accept-Encoding: gzip, deflate
       Accept: application/json, text/xml, application/xml, */*
-      User-Agent: r-curl/3.2 crul/0.6.1.9100 rOpenSci(rcrossref/0.8.5.9110) (mailto:<crossref_email>)
-      X-USER-AGENT: r-curl/3.2 crul/0.6.1.9100 rOpenSci(rcrossref/0.8.5.9110) (mailto:<crossref_email>)
+      User-Agent: r-curl/4.3.2 crul/1.1.0 rOpenSci(rcrossref/1.1.0.94)
+      X-USER-AGENT: r-curl/4.3.2 crul/1.1.0 rOpenSci(rcrossref/1.1.0.94)
   response:
     status:
       status_code: '200'
@@ -50,22 +54,28 @@ http_interactions:
       explanation: Request fulfilled, document follows
     headers:
       status: HTTP/1.1 200 OK
+      date: Sun, 01 Aug 2021 15:43:25 GMT
+      content-length: '799'
       link: <http://dx.doi.org/10.1126/science.169.3946.635>; rel="canonical", <https://syndication.highwire.org/content/doi/10.1126/science.169.3946.635>;
         version="vor"; rel="item"
       access-control-allow-origin: '*'
       access-control-allow-headers: X-Requested-With
-      content-length: '1493'
-      server: http-kit
-      date: Fri, 07 Dec 2018 22:43:18 GMT
+      vary: Accept-Encoding
+      content-encoding: gzip
+      server: Jetty(9.4.40.v20210413)
+      x-ratelimit-limit: '50'
+      x-ratelimit-interval: 1s
       x-rate-limit-limit: '50'
       x-rate-limit-interval: 1s
+      permissions-policy: interest-cohort=()
       connection: close
     body:
       encoding: UTF-8
-      string: '{"indexed":{"date-parts":[[2018,10,12]],"date-time":"2018-10-12T20:02:40Z","timestamp":1539374560300},"reference-count":0,"publisher":"American
-        Association for the Advancement of Science (AAAS)","issue":"3946","content-domain":{"domain":[],"crossmark-restriction":false},"published-print":{"date-parts":[[1970,8,14]]},"DOI":"10.1126\/science.169.3946.635","type":"article-journal","created":{"date-parts":[[2006,10,5]],"date-time":"2006-10-05T12:56:56Z","timestamp":1160053016000},"page":"635-641","source":"Crossref","is-referenced-by-count":57,"title":"The
+      file: no
+      string: '{"indexed":{"date-parts":[[2021,5,11]],"date-time":"2021-05-11T22:51:55Z","timestamp":1620773515638},"reference-count":0,"publisher":"American
+        Association for the Advancement of Science (AAAS)","issue":"3946","content-domain":{"domain":[],"crossmark-restriction":false},"published-print":{"date-parts":[[1970,8,14]]},"DOI":"10.1126\/science.169.3946.635","type":"journal-article","created":{"date-parts":[[2006,10,5]],"date-time":"2006-10-05T12:56:56Z","timestamp":1160053016000},"page":"635-641","source":"Crossref","is-referenced-by-count":76,"title":"The
         Structure of Ordinary Water: New data and interpretations are yielding new
         insights into this fascinating substance","prefix":"10.1126","volume":"169","author":[{"given":"H.
-        S.","family":"Frank","sequence":"first","affiliation":[]}],"member":"221","container-title":"Science","original-title":[],"language":"en","link":[{"URL":"https:\/\/syndication.highwire.org\/content\/doi\/10.1126\/science.169.3946.635","content-type":"unspecified","content-version":"vor","intended-application":"similarity-checking"}],"deposited":{"date-parts":[[2016,12,23]],"date-time":"2016-12-23T19:54:07Z","timestamp":1482522847000},"score":1.0,"subtitle":[],"short-title":[],"issued":{"date-parts":[[1970,8,14]]},"references-count":0,"journal-issue":{"published-print":{"date-parts":[[1970,8,14]]},"issue":"3946"},"URL":"http:\/\/dx.doi.org\/10.1126\/science.169.3946.635","relation":{},"ISSN":["0036-8075","1095-9203"],"container-title-short":"Science"}'
-  recorded_at: 2018-12-07 22:43:18 GMT
-  recorded_with: vcr/0.2.0.9101, webmockr/0.2.9.9311
+        S.","family":"Frank","sequence":"first","affiliation":[]}],"member":"221","container-title":"Science","original-title":[],"language":"en","link":[{"URL":"https:\/\/syndication.highwire.org\/content\/doi\/10.1126\/science.169.3946.635","content-type":"unspecified","content-version":"vor","intended-application":"similarity-checking"}],"deposited":{"date-parts":[[2020,2,5]],"date-time":"2020-02-05T16:15:06Z","timestamp":1580919306000},"score":1,"subtitle":[],"short-title":[],"issued":{"date-parts":[[1970,8,14]]},"references-count":0,"journal-issue":{"issue":"3946","published-print":{"date-parts":[[1970,8,14]]}},"URL":"http:\/\/dx.doi.org\/10.1126\/science.169.3946.635","relation":{},"ISSN":["0036-8075","1095-9203"],"subject":["Multidisciplinary"],"container-title-short":"Science","published":{"date-parts":[[1970,8,14]]}}'
+  recorded_at: 2021-08-01 15:43:25 GMT
+  recorded_with: vcr/1.0.2, webmockr/0.8.0

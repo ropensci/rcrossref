@@ -17,7 +17,7 @@ http_interactions:
       explanation: Request fulfilled, document follows
     headers:
       status: HTTP/1.1 200 OK
-      date: Sun, 01 Aug 2021 11:38:43 GMT
+      date: Sun, 01 Aug 2021 15:49:20 GMT
       content-type: application/json;charset=utf-8
       content-length: '228'
       vary: Accept
@@ -35,7 +35,7 @@ http_interactions:
       file: no
       string: '{"status":"ok","message-type":"prefix","message-version":"1.0.0","message":{"member":"http:\/\/id.crossref.org\/member\/297","name":"Springer
         Science and Business Media LLC","prefix":"http:\/\/id.crossref.org\/prefix\/10.1038"}}'
-  recorded_at: 2021-08-01 11:38:44 GMT
+  recorded_at: 2021-08-01 15:49:22 GMT
   recorded_with: vcr/1.0.2, webmockr/0.8.0
 - request:
     method: get
@@ -55,7 +55,7 @@ http_interactions:
       explanation: Request fulfilled, document follows
     headers:
       status: HTTP/1.1 200 OK
-      date: Sun, 01 Aug 2021 11:38:44 GMT
+      date: Sun, 01 Aug 2021 15:49:21 GMT
       content-type: application/json;charset=utf-8
       content-length: '211'
       vary: Accept
@@ -73,7 +73,7 @@ http_interactions:
       file: no
       string: '{"status":"ok","message-type":"prefix","message-version":"1.0.0","message":{"member":"http:\/\/id.crossref.org\/member\/18929","name":"John
         Libbey Eurotext","prefix":"http:\/\/id.crossref.org\/prefix\/10.1684"}}'
-  recorded_at: 2021-08-01 11:38:44 GMT
+  recorded_at: 2021-08-01 15:49:22 GMT
   recorded_with: vcr/1.0.2, webmockr/0.8.0
 - request:
     method: get
@@ -93,7 +93,7 @@ http_interactions:
       explanation: Nothing matches the given URI
     headers:
       status: HTTP/1.1 404 Not Found
-      date: Sun, 01 Aug 2021 11:38:44 GMT
+      date: Sun, 01 Aug 2021 15:49:22 GMT
       content-type: application/json;charset=utf-8
       content-length: '19'
       vary: Accept
@@ -110,5 +110,5 @@ http_interactions:
       encoding: UTF-8
       file: no
       string: Resource not found.
-  recorded_at: 2021-08-01 11:38:44 GMT
+  recorded_at: 2021-08-01 15:49:22 GMT
   recorded_with: vcr/1.0.2, webmockr/0.8.0
