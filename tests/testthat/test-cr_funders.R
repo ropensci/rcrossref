@@ -4,13 +4,13 @@ context("testing cr_funders")
 vcr::use_cassette("cr_funders", {
   test_that("cr_funders returns", {
 
-    a <- suppressWarnings(cr_funders(dois=c('10.13039/100000001',
+    a <- suppressWarnings(cr_funders(dois = c('10.13039/100000001',
                                             '10.13039/100000015')))
-    b <- suppressWarnings(cr_funders(dois='10.13039/100000001', 
-                                     works=TRUE, limit=5))
+    b <- suppressWarnings(cr_funders(dois = '10.13039/100000001',
+                                     works = TRUE, limit = 5))
 
     # correct clases
-    expect_is(suppressWarnings(cr_funders(query="NSF", limit=1)), "list")
+    expect_is(suppressWarnings(cr_funders(query = "NSF", limit = 1)), "list")
     expect_is(a, "list")
     expect_is(a[[1]]$data, "data.frame")
     expect_is(a[[1]]$descendants, "character")
@@ -26,9 +26,7 @@ vcr::use_cassette("cr_funders", {
 
 vcr::use_cassette("cr_funders_faceting", {
   test_that("cr_funders facet works", {
-  
-    a <- cr_funders("10.13039/100000001", works=TRUE, facet=TRUE, limit = 0)
-    
+    a <- cr_funders("10.13039/100000001", works = TRUE, facet = TRUE, limit = 0)
     expect_is(a, "list")
     expect_is(a$data, "data.frame")
     expect_is(a$meta, "data.frame")
@@ -47,21 +45,15 @@ vcr::use_cassette("cr_funders_fails_well", {
   })
 })
 
-vcr::use_cassette("cr_funders_email_works", {
-  test_that("cr_works - email works", {
-  
-    Sys.setenv("crossref_email" = "name@example.com")
-    expect_is(cr_funders(dois=c('10.13039/100000001')), "list")
-  })
-})
+ # test_that("cr_funders - email works", {
+ #   Sys.setenv("crossref_email" = "name@example.com")
+ #   expect_is(cr_funders(dois = c("10.13039/100000001")), "list")
+ # })
 
-
-vcr::use_cassette("cr_funders_email_is_validated", {
   test_that("cr_funders - email is validated", {
-  
+
     Sys.setenv("crossref_email" = "name@example")
     expect_error(cr_funders(dois=c('10.13039/100000001')))
-  })
 })
 
 vcr::use_cassette("cr_funders_email_null_works", {
