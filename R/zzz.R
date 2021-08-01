@@ -63,7 +63,7 @@ get_err <- function(x) {
     html <- xml2::read_html(xx)
     tmp <- xml2::xml_text(xml2::xml_find_first(html, '//h3[@class="info"]'))
   } else if (
-    (x$response_headers$`content-type` == "application/json;charset=UTF-8" ||
+    (x$response_headers$`content-type` == "application/json;charset=utf-8" ||
     x$response_headers$`content-type` == "application/json") && jsonlite::validate(xx) == TRUE
   ) {
     tmp <- jsonlite::fromJSON(xx, FALSE)
