@@ -15,13 +15,13 @@ asl <- function(z) {
 rcrossref_ua <- function() {
   versions <- c(paste0("r-curl/", utils::packageVersion("curl")),
                 paste0("crul/", utils::packageVersion("crul")),
-                sprintf("rOpenSci(rcrossref/%s)", 
+                sprintf("rOpenSci(rcrossref/%s)",
                         utils::packageVersion("rcrossref")),
                 get_email())
   paste0(versions, collapse = " ")
 }
 
-cr_GET <- function(endpoint, args, todf = TRUE, on_error = warning, parse = TRUE, 
+cr_GET <- function(endpoint, args, todf = TRUE, on_error = warning, parse = TRUE,
                    ...) {
   url <- sprintf("https://api.crossref.org/%s", endpoint)
   cli <- crul::HttpClient$new(
@@ -38,7 +38,7 @@ cr_GET <- function(endpoint, args, todf = TRUE, on_error = warning, parse = TRUE
   }
   doi <- gsub("works/|/agency|funders/", "", endpoint)
   if (!res$status_code < 300) {
-    on_error(sprintf("%s (%s): %s - %s", res$status_code, err_type(res), 
+    on_error(sprintf("%s (%s): %s - %s", res$status_code, err_type(res),
       get_route(res), get_err(res)), call. = FALSE)
     list(message = NULL)
   } else {
@@ -75,7 +75,7 @@ get_err <- function(x) {
       mssg <- tryCatch(tmp$message$description, error = function(e) e)
       if (inherits(mssg, "error")) tmp$message$message else mssg
     } else {
-      tmp$message[[1]]$message 
+      tmp$message[[1]]$message
     }
   } else {
     if (any(class(tmp) %in% c("HTMLInternalDocument", "xml_document"))) {
@@ -180,7 +180,7 @@ field_query_handler <- function(x) {
   }
 }
 
-prep_args <- function(query, filter, offset, limit, sample, sort, 
+prep_args <- function(query, filter, offset, limit, sample, sort,
                       order, facet, cursor, flq, select) {
   check_number(limit)
   check_limit(limit)
@@ -190,7 +190,7 @@ prep_args <- function(query, filter, offset, limit, sample, sort,
   flq <- field_query_handler(flq)
   assert(facet, c('logical', 'character'))
   if (inherits(facet, "logical")) {
-    facet <- if (facet) "t" else NULL
+    facet <- if (facet) star_facet() else NULL
   }
   if (!is.null(select)) {
     stopifnot(inherits(select, "character"))
@@ -210,7 +210,7 @@ prep_args <- function(query, filter, offset, limit, sample, sort,
 
 
 #' Share email with Crossref in `.Renviron`
-#' 
+#'
 #' @noRd
 get_email <- function() {
   email <- Sys.getenv("crossref_email")
@@ -252,3 +252,10 @@ chk4pk <- function(x) {
     invisible(TRUE)
   }
 }
+
+#' Star facet
+#'
+#' Listing all facets no longer works in new API. Here's the string to request
+#' all valid facets.
+#' @noRd
+star_facet <- function() "issn:*,container-title:*,journal-issue:*,link-application:*,affiliation:*,assertion:*,assertion-group:*,orcid:*,update-type:*,funder-name:*,archive:*,category-name:*,relation-type:*,published:*,source:*,type-name:*,publisher-name:*,journal-volume:*,license:*,funder-doi:*"
