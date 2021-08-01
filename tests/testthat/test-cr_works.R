@@ -182,10 +182,8 @@ test_that("cr_works - email works", {
 })
 
 test_that("cr_works - email is validated", {
-  vcr::use_cassette("cr_works_email_is_validated", {  
     Sys.setenv("crossref_email" = "name@example")
     expect_error(cr_works(query="NSF"))
-  })
 })
 
 test_that("cr_works - email NULL works", {

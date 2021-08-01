@@ -32,11 +32,8 @@ test_that("cr_agency - email works", {
 
 
 test_that("cr_agency - email is validated", {
-  vcr::use_cassette("cr_agency_email_is_validated", {
-  
     Sys.setenv("crossref_email" = "name@example")
     expect_error(cr_agency(dois = '10.1038/jid.2009.428'))
-  })
 })
 
 test_that("cr_agency - email NULL works", {
