@@ -18,11 +18,11 @@ http_interactions:
     headers:
       status: HTTP/1.1 200 OK
       server: Apache-Coyote/1.1
-      crossref-deployment-name: qs5-1
+      crossref-deployment-name: qs3-1
       content-type: text/xml;charset=UTF-8
       content-language: en-US
       transfer-encoding: chunked
-      date: Sun, 01 Aug 2021 15:43:23 GMT
+      date: Fri, 13 Aug 2021 12:53:15 GMT
       permissions-policy: interest-cohort=()
       connection: close
     body:
@@ -31,5 +31,5 @@ http_interactions:
       string: |-
         <?xml version="1.0" encoding="UTF-8"?>
         <crossref_result xmlns="http://www.crossref.org/qrschema/2.0" version="2.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.crossref.org/qrschema/2.0 https://www.crossref.org/schema/crossref_query_output2.0.xsd"><query_result><head><doi_batch_id>none</doi_batch_id></head><body><query status="unresolved" fl_count="0"><doi>10.1371/journal.pone.004</doi></query></body></query_result></crossref_result>
-  recorded_at: 2021-08-01 15:43:24 GMT
+  recorded_at: 2021-08-13 12:53:15 GMT
   recorded_with: vcr/1.0.2, webmockr/0.8.0

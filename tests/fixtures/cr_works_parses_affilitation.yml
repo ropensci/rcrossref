@@ -17,7 +17,7 @@ http_interactions:
       explanation: Request fulfilled, document follows
     headers:
       status: HTTP/1.1 200 OK
-      date: Sun, 01 Aug 2021 15:54:53 GMT
+      date: Fri, 13 Aug 2021 13:04:21 GMT
       content-type: application/json
       content-length: '591'
       access-control-allow-origin: '*'
@@ -27,6 +27,7 @@ http_interactions:
       server: Jetty(9.4.40.v20210413)
       x-ratelimit-limit: '50'
       x-ratelimit-interval: 1s
+      x-api-pool: public
       x-rate-limit-limit: '50'
       x-rate-limit-interval: 1s
       permissions-policy: interest-cohort=()
@@ -39,5 +40,5 @@ http_interactions:
         Epithet\""],"prefix":"10.4018","author":[{"given":"Nicholas D.","family":"Hartlep","sequence":"first","affiliation":[{"name":"Illinois
         State University, USA"}]}],"member":"2432","container-title":["Impact of the
         Model Minority Stereotype on Modern Society"],"original-title":[],"deposited":{"date-parts":[[2015,11,10]],"date-time":"2015-11-10T19:02:33Z","timestamp":1447182153000},"score":1,"subtitle":[""],"short-title":[],"issued":{"date-parts":[[null]]},"references-count":0,"URL":"http:\/\/dx.doi.org\/10.4018\/978-1-4666-9588-7.les2","relation":{}}}'
-  recorded_at: 2021-08-01 15:54:53 GMT
+  recorded_at: 2021-08-13 13:04:21 GMT
   recorded_with: vcr/1.0.2, webmockr/0.8.0

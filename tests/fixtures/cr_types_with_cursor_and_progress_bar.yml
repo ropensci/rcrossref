@@ -17,9 +17,9 @@ http_interactions:
       explanation: Request fulfilled, document follows
     headers:
       status: HTTP/1.1 200 OK
-      date: Sun, 01 Aug 2021 15:51:18 GMT
+      date: Fri, 13 Aug 2021 13:02:03 GMT
       content-type: application/json
-      content-length: '10567'
+      content-length: '10563'
       access-control-allow-origin: '*'
       access-control-allow-headers: X-Requested-With
       vary: Accept-Encoding
@@ -27,6 +27,7 @@ http_interactions:
       server: Jetty(9.4.40.v20210413)
       x-ratelimit-limit: '50'
       x-ratelimit-interval: 1s
+      x-api-pool: public
       x-rate-limit-limit: '50'
       x-rate-limit-interval: 1s
       permissions-policy: interest-cohort=()
@@ -34,7 +35,7 @@ http_interactions:
     body:
       encoding: UTF-8
       file: no
-      string: '{"status":"ok","message-type":"work-list","message-version":"1.0.0","message":{"facets":{},"next-cursor":"DnF1ZXJ5VGhlbkZldGNoBgAAAAADIeobFmJsa3E5SWZHUmhTeDhLTW5sdDFCdVEAAAAAAbvf1hZfeW9KekNGcFJLbVZoTE5jSTBhazR3AAAAAAGh1doWWDloMXdoTzlRT3VIaEI5MmZPUkU4UQAAAAABptgRFlBnamVIM014UUpHOUxqRjdNQXFUYXcAAAAAAeEr5RZ5X1NoUkRTR1FqV2wwTF9JS0pCc0xBAAAAAAGxXMkWLXJtMFhXSEdUZ1NVTHVkd2VWb3QyUQ==","total-results":88943487,"items":[{"indexed":{"date-parts":[[2021,5,6]],"date-time":"2021-05-06T20:07:48Z","timestamp":1620331668137},"reference-count":0,"publisher":"Elsevier
+      string: '{"status":"ok","message-type":"work-list","message-version":"1.0.0","message":{"facets":{},"next-cursor":"DnF1ZXJ5VGhlbkZldGNoBgAAAAAD7bjiFmJsa3E5SWZHUmhTeDhLTW5sdDFCdVEAAAAAAiu6XBZfeW9KekNGcFJLbVZoTE5jSTBhazR3AAAAAAIHvpcWWDloMXdoTzlRT3VIaEI5MmZPUkU4UQAAAAACufD7FnlfU2hSRFNHUWpXbDBMX0lLSkJzTEEAAAAAA-244xZibGtxOUlmR1JoU3g4S01ubHQxQnVRAAAAAAIchvkWLXJtMFhXSEdUZ1NVTHVkd2VWb3QyUQ==","total-results":89086533,"items":[{"indexed":{"date-parts":[[2021,5,6]],"date-time":"2021-05-06T20:07:48Z","timestamp":1620331668137},"reference-count":0,"publisher":"Elsevier
         BV","issue":"2","license":[{"start":{"date-parts":[[1990,10,1]],"date-time":"1990-10-01T00:00:00Z","timestamp":654739200000},"content-version":"tdm","delay-in-days":0,"URL":"https:\/\/www.elsevier.com\/tdm\/userlicense\/1.0\/"}],"content-domain":{"domain":[],"crossmark-restriction":false},"short-container-title":["Carbohydrate
         Research"],"published-print":{"date-parts":[[1990,10]]},"DOI":"10.1016\/0008-6215(90)84065-3","type":"journal-article","created":{"date-parts":[[2002,7,25]],"date-time":"2002-07-25T17:10:16Z","timestamp":1027617016000},"page":"C9-C10","source":"Crossref","is-referenced-by-count":0,"title":["Subject
         index"],"prefix":"10.1016","volume":"207","member":"78","container-title":["Carbohydrate
@@ -265,11 +266,11 @@ http_interactions:
         S.","family":"Klamkin","sequence":"first","affiliation":[]}],"member":"1121","container-title":["The
         American Mathematical Monthly"],"deposited":{"date-parts":[[2018,4,17]],"date-time":"2018-04-17T22:29:48Z","timestamp":1524004188000},"score":0.0,"issued":{"date-parts":[[1959,2]]},"references-count":0,"journal-issue":{"issue":"2","published-print":{"date-parts":[[1959,2]]}},"URL":"http:\/\/dx.doi.org\/10.2307\/2310037","ISSN":["0002-9890"],"issn-type":[{"value":"0002-9890","type":"print"}],"subject":["General
         Mathematics"],"published":{"date-parts":[[1959,2]]}}],"items-per-page":30,"query":{"start-index":0,"search-terms":null}}}'
-  recorded_at: 2021-08-01 15:51:29 GMT
+  recorded_at: 2021-08-13 13:02:11 GMT
   recorded_with: vcr/1.0.2, webmockr/0.8.0
 - request:
     method: get
-    uri: https://api.crossref.org/types/journal-article/works?rows=30&cursor=DnF1ZXJ5VGhlbkZldGNoBgAAAAADIeobFmJsa3E5SWZHUmhTeDhLTW5sdDFCdVEAAAAAAbvf1hZfeW9KekNGcFJLbVZoTE5jSTBhazR3AAAAAAGh1doWWDloMXdoTzlRT3VIaEI5MmZPUkU4UQAAAAABptgRFlBnamVIM014UUpHOUxqRjdNQXFUYXcAAAAAAeEr5RZ5X1NoUkRTR1FqV2wwTF9JS0pCc0xBAAAAAAGxXMkWLXJtMFhXSEdUZ1NVTHVkd2VWb3QyUQ%3D%3D
+    uri: https://api.crossref.org/types/journal-article/works?rows=30&cursor=DnF1ZXJ5VGhlbkZldGNoBgAAAAAD7bjiFmJsa3E5SWZHUmhTeDhLTW5sdDFCdVEAAAAAAiu6XBZfeW9KekNGcFJLbVZoTE5jSTBhazR3AAAAAAIHvpcWWDloMXdoTzlRT3VIaEI5MmZPUkU4UQAAAAACufD7FnlfU2hSRFNHUWpXbDBMX0lLSkJzTEEAAAAAA-244xZibGtxOUlmR1JoU3g4S01ubHQxQnVRAAAAAAIchvkWLXJtMFhXSEdUZ1NVTHVkd2VWb3QyUQ%3D%3D
     body:
       encoding: ''
       string: ''
@@ -285,9 +286,9 @@ http_interactions:
       explanation: Request fulfilled, document follows
     headers:
       status: HTTP/1.1 200 OK
-      date: Sun, 01 Aug 2021 15:51:23 GMT
+      date: Fri, 13 Aug 2021 13:02:08 GMT
       content-type: application/json
-      content-length: '7761'
+      content-length: '7760'
       access-control-allow-origin: '*'
       access-control-allow-headers: X-Requested-With
       vary: Accept-Encoding
@@ -295,6 +296,7 @@ http_interactions:
       server: Jetty(9.4.40.v20210413)
       x-ratelimit-limit: '50'
       x-ratelimit-interval: 1s
+      x-api-pool: public
       x-rate-limit-limit: '50'
       x-rate-limit-interval: 1s
       permissions-policy: interest-cohort=()
@@ -302,7 +304,7 @@ http_interactions:
     body:
       encoding: UTF-8
       file: no
-      string: '{"status":"ok","message-type":"work-list","message-version":"1.0.0","message":{"facets":{},"next-cursor":"DnF1ZXJ5VGhlbkZldGNoBgAAAAADIeobFmJsa3E5SWZHUmhTeDhLTW5sdDFCdVEAAAAAAbvf1hZfeW9KekNGcFJLbVZoTE5jSTBhazR3AAAAAAGh1doWWDloMXdoTzlRT3VIaEI5MmZPUkU4UQAAAAABptgRFlBnamVIM014UUpHOUxqRjdNQXFUYXcAAAAAAeEr5RZ5X1NoUkRTR1FqV2wwTF9JS0pCc0xBAAAAAAGxXMkWLXJtMFhXSEdUZ1NVTHVkd2VWb3QyUQ==","total-results":88943487,"items":[{"indexed":{"date-parts":[[2021,5,6]],"date-time":"2021-05-06T20:07:52Z","timestamp":1620331672632},"reference-count":0,"publisher":"JSTOR","issue":"4","content-domain":{"domain":[],"crossmark-restriction":false},"short-container-title":["The
+      string: '{"status":"ok","message-type":"work-list","message-version":"1.0.0","message":{"facets":{},"next-cursor":"DnF1ZXJ5VGhlbkZldGNoBgAAAAAD7bjiFmJsa3E5SWZHUmhTeDhLTW5sdDFCdVEAAAAAAiu6XBZfeW9KekNGcFJLbVZoTE5jSTBhazR3AAAAAAIHvpcWWDloMXdoTzlRT3VIaEI5MmZPUkU4UQAAAAACufD7FnlfU2hSRFNHUWpXbDBMX0lLSkJzTEEAAAAAA-244xZibGtxOUlmR1JoU3g4S01ubHQxQnVRAAAAAAIchvkWLXJtMFhXSEdUZ1NVTHVkd2VWb3QyUQ==","total-results":89086533,"items":[{"indexed":{"date-parts":[[2021,5,6]],"date-time":"2021-05-06T20:07:52Z","timestamp":1620331672632},"reference-count":0,"publisher":"JSTOR","issue":"4","content-domain":{"domain":[],"crossmark-restriction":false},"short-container-title":["The
         American Mathematical Monthly"],"published-print":{"date-parts":[[1978,4]]},"DOI":"10.2307\/2321183","type":"journal-article","created":{"date-parts":[[2006,4,23]],"date-time":"2006-04-23T11:00:00Z","timestamp":1145790000000},"page":"282","source":"Crossref","is-referenced-by-count":0,"title":["Advanced
         Problems: 6204-6209"],"prefix":"10.2307","volume":"85","author":[{"given":"F.
         David","family":"Hammer","sequence":"first","affiliation":[]},{"given":"Alan","family":"McConnell","sequence":"additional","affiliation":[]},{"given":"Gerard","family":"Letac","sequence":"additional","affiliation":[]},{"given":"Igancy","family":"Kotlarski","sequence":"additional","affiliation":[]},{"given":"Gary","family":"Gunderson","sequence":"additional","affiliation":[]},{"given":"Marcel
@@ -462,11 +464,11 @@ http_interactions:
         Evan","family":"Davies","sequence":"first","affiliation":[]}],"member":"1121","container-title":["The
         William and Mary Quarterly"],"deposited":{"date-parts":[[2018,4,18]],"date-time":"2018-04-18T04:26:39Z","timestamp":1524025599000},"score":0.0,"issued":{"date-parts":[[1948,1]]},"references-count":0,"journal-issue":{"issue":"1","published-print":{"date-parts":[[1948,1]]}},"URL":"http:\/\/dx.doi.org\/10.2307\/1920944","ISSN":["0043-5597"],"issn-type":[{"value":"0043-5597","type":"print"}],"subject":["History","Cultural
         Studies"],"published":{"date-parts":[[1948,1]]}}],"items-per-page":30,"query":{"start-index":0,"search-terms":null}}}'
-  recorded_at: 2021-08-01 15:51:29 GMT
+  recorded_at: 2021-08-13 13:02:11 GMT
   recorded_with: vcr/1.0.2, webmockr/0.8.0
 - request:
     method: get
-    uri: https://api.crossref.org/types/journal-article/works?rows=30&cursor=DnF1ZXJ5VGhlbkZldGNoBgAAAAADIeobFmJsa3E5SWZHUmhTeDhLTW5sdDFCdVEAAAAAAbvf1hZfeW9KekNGcFJLbVZoTE5jSTBhazR3AAAAAAGh1doWWDloMXdoTzlRT3VIaEI5MmZPUkU4UQAAAAABptgRFlBnamVIM014UUpHOUxqRjdNQXFUYXcAAAAAAeEr5RZ5X1NoUkRTR1FqV2wwTF9JS0pCc0xBAAAAAAGxXMkWLXJtMFhXSEdUZ1NVTHVkd2VWb3QyUQ%3D%3D
+    uri: https://api.crossref.org/types/journal-article/works?rows=30&cursor=DnF1ZXJ5VGhlbkZldGNoBgAAAAAD7bjiFmJsa3E5SWZHUmhTeDhLTW5sdDFCdVEAAAAAAiu6XBZfeW9KekNGcFJLbVZoTE5jSTBhazR3AAAAAAIHvpcWWDloMXdoTzlRT3VIaEI5MmZPUkU4UQAAAAACufD7FnlfU2hSRFNHUWpXbDBMX0lLSkJzTEEAAAAAA-244xZibGtxOUlmR1JoU3g4S01ubHQxQnVRAAAAAAIchvkWLXJtMFhXSEdUZ1NVTHVkd2VWb3QyUQ%3D%3D
     body:
       encoding: ''
       string: ''
@@ -482,9 +484,9 @@ http_interactions:
       explanation: Request fulfilled, document follows
     headers:
       status: HTTP/1.1 200 OK
-      date: Sun, 01 Aug 2021 15:51:28 GMT
+      date: Fri, 13 Aug 2021 13:02:11 GMT
       content-type: application/json
-      content-length: '9165'
+      content-length: '9164'
       access-control-allow-origin: '*'
       access-control-allow-headers: X-Requested-With
       vary: Accept-Encoding
@@ -492,6 +494,7 @@ http_interactions:
       server: Jetty(9.4.40.v20210413)
       x-ratelimit-limit: '50'
       x-ratelimit-interval: 1s
+      x-api-pool: public
       x-rate-limit-limit: '50'
       x-rate-limit-interval: 1s
       permissions-policy: interest-cohort=()
@@ -499,7 +502,7 @@ http_interactions:
     body:
       encoding: UTF-8
       file: no
-      string: '{"status":"ok","message-type":"work-list","message-version":"1.0.0","message":{"facets":{},"next-cursor":"DnF1ZXJ5VGhlbkZldGNoBgAAAAADIeobFmJsa3E5SWZHUmhTeDhLTW5sdDFCdVEAAAAAAbvf1hZfeW9KekNGcFJLbVZoTE5jSTBhazR3AAAAAAGh1doWWDloMXdoTzlRT3VIaEI5MmZPUkU4UQAAAAABptgRFlBnamVIM014UUpHOUxqRjdNQXFUYXcAAAAAAeEr5RZ5X1NoUkRTR1FqV2wwTF9JS0pCc0xBAAAAAAGxXMkWLXJtMFhXSEdUZ1NVTHVkd2VWb3QyUQ==","total-results":88943487,"items":[{"indexed":{"date-parts":[[2021,5,6]],"date-time":"2021-05-06T20:07:50Z","timestamp":1620331670915},"reference-count":0,"publisher":"JSTOR","issue":"1","content-domain":{"domain":[],"crossmark-restriction":false},"short-container-title":["The
+      string: '{"status":"ok","message-type":"work-list","message-version":"1.0.0","message":{"facets":{},"next-cursor":"DnF1ZXJ5VGhlbkZldGNoBgAAAAAD7bjiFmJsa3E5SWZHUmhTeDhLTW5sdDFCdVEAAAAAAiu6XBZfeW9KekNGcFJLbVZoTE5jSTBhazR3AAAAAAIHvpcWWDloMXdoTzlRT3VIaEI5MmZPUkU4UQAAAAACufD7FnlfU2hSRFNHUWpXbDBMX0lLSkJzTEEAAAAAA-244xZibGtxOUlmR1JoU3g4S01ubHQxQnVRAAAAAAIchvkWLXJtMFhXSEdUZ1NVTHVkd2VWb3QyUQ==","total-results":89086533,"items":[{"indexed":{"date-parts":[[2021,5,6]],"date-time":"2021-05-06T20:07:50Z","timestamp":1620331670915},"reference-count":0,"publisher":"JSTOR","issue":"1","content-domain":{"domain":[],"crossmark-restriction":false},"short-container-title":["The
         William and Mary Quarterly"],"published-print":{"date-parts":[[1970,1]]},"DOI":"10.2307\/1923857","type":"journal-article","created":{"date-parts":[[2006,4,24]],"date-time":"2006-04-24T11:27:58Z","timestamp":1145878078000},"page":"170","source":"Crossref","is-referenced-by-count":0,"title":["Les
         La Verendrye et le Poste de l''Ouest"],"prefix":"10.2307","volume":"27","author":[{"given":"W.
         J.","family":"Eccles","sequence":"first","affiliation":[]},{"given":"Antoine","family":"Champagne","sequence":"additional","affiliation":[]}],"member":"1121","container-title":["The
@@ -679,5 +682,5 @@ http_interactions:
         density at infinity of a discrete group of hyperbolic motions","volume":"50","author":"Sullivan","year":"1979","journal-title":"Publ.
         Math. Inst. Hautes \u00c9tudes Sci."}],"container-title":["Comptes Rendus
         de l''Acad\u00e9mie des Sciences - Series I - Mathematics"],"language":"fr","link":[{"URL":"https:\/\/api.elsevier.com\/content\/article\/PII:S0764444201020250?httpAccept=text\/xml","content-type":"text\/xml","content-version":"vor","intended-application":"text-mining"},{"URL":"https:\/\/api.elsevier.com\/content\/article\/PII:S0764444201020250?httpAccept=text\/plain","content-type":"text\/plain","content-version":"vor","intended-application":"text-mining"}],"deposited":{"date-parts":[[2019,4,25]],"date-time":"2019-04-25T04:57:23Z","timestamp":1556168243000},"score":0.0,"issued":{"date-parts":[[2001,7]]},"references-count":5,"journal-issue":{"issue":"2","published-print":{"date-parts":[[2001,7]]}},"alternative-id":["S0764444201020250"],"URL":"http:\/\/dx.doi.org\/10.1016\/s0764-4442(01)02025-0","ISSN":["0764-4442"],"issn-type":[{"value":"0764-4442","type":"print"}],"published":{"date-parts":[[2001,7]]}}],"items-per-page":30,"query":{"start-index":0,"search-terms":null}}}'
-  recorded_at: 2021-08-01 15:51:29 GMT
+  recorded_at: 2021-08-13 13:02:11 GMT
   recorded_with: vcr/1.0.2, webmockr/0.8.0

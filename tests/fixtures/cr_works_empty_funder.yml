@@ -17,7 +17,7 @@ http_interactions:
       explanation: Request fulfilled, document follows
     headers:
       status: HTTP/1.1 200 OK
-      date: Sun, 01 Aug 2021 15:55:05 GMT
+      date: Fri, 13 Aug 2021 13:04:26 GMT
       content-type: application/json
       content-length: '2669'
       access-control-allow-origin: '*'
@@ -27,6 +27,7 @@ http_interactions:
       server: Jetty(9.4.40.v20210413)
       x-ratelimit-limit: '50'
       x-ratelimit-interval: 1s
+      x-api-pool: public
       x-rate-limit-limit: '50'
       x-rate-limit-interval: 1s
       permissions-policy: interest-cohort=()
@@ -82,5 +83,5 @@ http_interactions:
         transcriptome-wide RNA structure probing using high-throughput sequencing","volume":"7","author":"Underwood","year":"2010","journal-title":"Nat.
         Methods"}],"container-title":["Frontiers in Genetics"],"original-title":[],"link":[{"URL":"http:\/\/journal.frontiersin.org\/article\/10.3389\/fgene.2017.00147\/full","content-type":"unspecified","content-version":"vor","intended-application":"similarity-checking"}],"deposited":{"date-parts":[[2017,10,10]],"date-time":"2017-10-10T04:14:22Z","timestamp":1507608862000},"score":1,"subtitle":[],"short-title":[],"issued":{"date-parts":[[2017,10,10]]},"references-count":22,"alternative-id":["10.3389\/fgene.2017.00147"],"URL":"http:\/\/dx.doi.org\/10.3389\/fgene.2017.00147","relation":{"has-preprint":[{"id-type":"doi","id":"10.1101\/171108","asserted-by":"object"}]},"ISSN":["1664-8021"],"issn-type":[{"value":"1664-8021","type":"electronic"}],"subject":["Genetics(clinical)","Genetics","Molecular
         Medicine"],"published":{"date-parts":[[2017,10,10]]}}}'
-  recorded_at: 2021-08-01 15:55:05 GMT
+  recorded_at: 2021-08-13 13:04:26 GMT
   recorded_with: vcr/1.0.2, webmockr/0.8.0

@@ -17,7 +17,7 @@ http_interactions:
       explanation: Request fulfilled, document follows
     headers:
       status: HTTP/1.1 200 OK
-      date: Sun, 01 Aug 2021 15:43:00 GMT
+      date: Fri, 13 Aug 2021 12:52:46 GMT
       content-type: application/json;charset=utf-8
       content-length: '158'
       vary: Accept
@@ -26,6 +26,7 @@ http_interactions:
       server: Jetty(9.4.40.v20210413)
       x-ratelimit-limit: '50'
       x-ratelimit-interval: 1s
+      x-api-pool: public
       x-rate-limit-limit: '50'
       x-rate-limit-interval: 1s
       permissions-policy: interest-cohort=()
@@ -34,7 +35,7 @@ http_interactions:
       encoding: UTF-8
       file: no
       string: '{"status":"ok","message-type":"work-agency","message-version":"1.0.0","message":{"DOI":"10.1038\/jid.2009.428","agency":{"id":"crossref","label":"Crossref"}}}'
-  recorded_at: 2021-08-01 15:43:01 GMT
+  recorded_at: 2021-08-13 12:52:48 GMT
   recorded_with: vcr/1.0.2, webmockr/0.8.0
 - request:
     method: get
@@ -54,7 +55,7 @@ http_interactions:
       explanation: Request fulfilled, document follows
     headers:
       status: HTTP/1.1 200 OK
-      date: Sun, 01 Aug 2021 15:43:00 GMT
+      date: Fri, 13 Aug 2021 12:52:47 GMT
       content-type: application/json;charset=utf-8
       content-length: '156'
       vary: Accept
@@ -63,6 +64,7 @@ http_interactions:
       server: Jetty(9.4.40.v20210413)
       x-ratelimit-limit: '50'
       x-ratelimit-interval: 1s
+      x-api-pool: public
       x-rate-limit-limit: '50'
       x-rate-limit-interval: 1s
       permissions-policy: interest-cohort=()
@@ -71,7 +73,7 @@ http_interactions:
       encoding: UTF-8
       file: no
       string: '{"status":"ok","message-type":"work-agency","message-version":"1.0.0","message":{"DOI":"10.13039\/100000001","agency":{"id":"crossref","label":"Crossref"}}}'
-  recorded_at: 2021-08-01 15:43:01 GMT
+  recorded_at: 2021-08-13 12:52:48 GMT
   recorded_with: vcr/1.0.2, webmockr/0.8.0
 - request:
     method: get
@@ -91,7 +93,7 @@ http_interactions:
       explanation: Request fulfilled, document follows
     headers:
       status: HTTP/1.1 200 OK
-      date: Sun, 01 Aug 2021 15:43:01 GMT
+      date: Fri, 13 Aug 2021 12:52:48 GMT
       content-type: application/json;charset=utf-8
       content-length: '156'
       vary: Accept
@@ -100,6 +102,7 @@ http_interactions:
       server: Jetty(9.4.40.v20210413)
       x-ratelimit-limit: '50'
       x-ratelimit-interval: 1s
+      x-api-pool: public
       x-rate-limit-limit: '50'
       x-rate-limit-interval: 1s
       permissions-policy: interest-cohort=()
@@ -108,5 +111,5 @@ http_interactions:
       encoding: UTF-8
       file: no
       string: '{"status":"ok","message-type":"work-agency","message-version":"1.0.0","message":{"DOI":"10.13039\/100000015","agency":{"id":"crossref","label":"Crossref"}}}'
-  recorded_at: 2021-08-01 15:43:01 GMT
+  recorded_at: 2021-08-13 12:52:48 GMT
   recorded_with: vcr/1.0.2, webmockr/0.8.0

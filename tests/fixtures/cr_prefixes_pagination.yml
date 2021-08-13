@@ -17,7 +17,7 @@ http_interactions:
       explanation: Request fulfilled, document follows
     headers:
       status: HTTP/1.1 200 OK
-      date: Sun, 01 Aug 2021 15:48:20 GMT
+      date: Fri, 13 Aug 2021 13:47:10 GMT
       content-type: application/json
       content-length: '4668'
       access-control-allow-origin: '*'
@@ -27,6 +27,7 @@ http_interactions:
       server: Jetty(9.4.40.v20210413)
       x-ratelimit-limit: '50'
       x-ratelimit-interval: 1s
+      x-api-pool: public
       x-rate-limit-limit: '50'
       x-rate-limit-interval: 1s
       permissions-policy: interest-cohort=()
@@ -34,7 +35,7 @@ http_interactions:
     body:
       encoding: UTF-8
       file: no
-      string: '{"status":"ok","message-type":"work-list","message-version":"1.0.0","message":{"facets":{},"total-results":17438328,"items":[{"indexed":{"date-parts":[[2021,5,6]],"date-time":"2021-05-06T20:07:48Z","timestamp":1620331668137},"reference-count":0,"publisher":"Elsevier
+      string: '{"status":"ok","message-type":"work-list","message-version":"1.0.0","message":{"facets":{},"total-results":17459039,"items":[{"indexed":{"date-parts":[[2021,5,6]],"date-time":"2021-05-06T20:07:48Z","timestamp":1620331668137},"reference-count":0,"publisher":"Elsevier
         BV","issue":"2","license":[{"start":{"date-parts":[[1990,10,1]],"date-time":"1990-10-01T00:00:00Z","timestamp":654739200000},"content-version":"tdm","delay-in-days":0,"URL":"https:\/\/www.elsevier.com\/tdm\/userlicense\/1.0\/"}],"content-domain":{"domain":[],"crossmark-restriction":false},"short-container-title":["Carbohydrate
         Research"],"published-print":{"date-parts":[[1990,10]]},"DOI":"10.1016\/0008-6215(90)84065-3","type":"journal-article","created":{"date-parts":[[2002,7,25]],"date-time":"2002-07-25T17:10:16Z","timestamp":1027617016000},"page":"C9-C10","source":"Crossref","is-referenced-by-count":0,"title":["Subject
         index"],"prefix":"10.1016","volume":"207","member":"78","container-title":["Carbohydrate
@@ -124,7 +125,7 @@ http_interactions:
         ablation in the large uterus"],"prefix":"10.1016","volume":"2","author":[{"given":"T","family":"Whalen","sequence":"first","affiliation":[]},{"given":"RJ","family":"Gimpelson","sequence":"additional","affiliation":[]}],"member":"78","container-title":["The
         Journal of the American Association of Gynecologic Laparoscopists"],"language":"en","link":[{"URL":"https:\/\/api.elsevier.com\/content\/article\/PII:S1074380405806607?httpAccept=text\/xml","content-type":"text\/xml","content-version":"vor","intended-application":"text-mining"},{"URL":"https:\/\/api.elsevier.com\/content\/article\/PII:S1074380405806607?httpAccept=text\/plain","content-type":"text\/plain","content-version":"vor","intended-application":"text-mining"}],"deposited":{"date-parts":[[2020,3,12]],"date-time":"2020-03-12T15:12:41Z","timestamp":1584025961000},"score":0.0,"issued":{"date-parts":[[1995,8]]},"references-count":0,"journal-issue":{"issue":"4","published-print":{"date-parts":[[1995,8]]}},"alternative-id":["S1074380405806607"],"URL":"http:\/\/dx.doi.org\/10.1016\/s1074-3804(05)80660-7","ISSN":["1074-3804"],"issn-type":[{"value":"1074-3804","type":"print"}],"subject":["Obstetrics
         and Gynaecology"],"published":{"date-parts":[[1995,8]]}}],"items-per-page":5,"query":{"start-index":0,"search-terms":null}}}'
-  recorded_at: 2021-08-01 15:48:22 GMT
+  recorded_at: 2021-08-13 13:47:11 GMT
   recorded_with: vcr/1.0.2, webmockr/0.8.0
 - request:
     method: get
@@ -144,9 +145,9 @@ http_interactions:
       explanation: Request fulfilled, document follows
     headers:
       status: HTTP/1.1 200 OK
-      date: Sun, 01 Aug 2021 15:48:22 GMT
+      date: Fri, 13 Aug 2021 13:47:11 GMT
       content-type: application/json
-      content-length: '4815'
+      content-length: '4847'
       access-control-allow-origin: '*'
       access-control-allow-headers: X-Requested-With
       vary: Accept-Encoding
@@ -154,6 +155,7 @@ http_interactions:
       server: Jetty(9.4.40.v20210413)
       x-ratelimit-limit: '50'
       x-ratelimit-interval: 1s
+      x-api-pool: public
       x-rate-limit-limit: '50'
       x-rate-limit-interval: 1s
       permissions-policy: interest-cohort=()
@@ -161,18 +163,13 @@ http_interactions:
     body:
       encoding: UTF-8
       file: no
-      string: '{"status":"ok","message-type":"work-list","message-version":"1.0.0","message":{"facets":{},"total-results":67550,"items":[{"indexed":{"date-parts":[[2021,5,11]],"date-time":"2021-05-11T17:51:27Z","timestamp":1620755487881},"reference-count":2,"publisher":"Elsevier
+      string: '{"status":"ok","message-type":"work-list","message-version":"1.0.0","message":{"facets":{},"total-results":67644,"items":[{"indexed":{"date-parts":[[2021,5,11]],"date-time":"2021-05-11T17:51:27Z","timestamp":1620755487881},"reference-count":2,"publisher":"Elsevier
         BV","issue":"8","license":[{"start":{"date-parts":[[1997,8,1]],"date-time":"1997-08-01T00:00:00Z","timestamp":870393600000},"content-version":"tdm","delay-in-days":0,"URL":"https:\/\/www.elsevier.com\/tdm\/userlicense\/1.0\/"}],"content-domain":{"domain":[],"crossmark-restriction":false},"short-container-title":["Trends
         in Ecology & Evolution"],"published-print":{"date-parts":[[1997,8]]},"DOI":"10.1016\/s0169-5347(97)89918-1","type":"journal-article","created":{"date-parts":[[2002,7,25]],"date-time":"2002-07-25T13:41:10Z","timestamp":1027604470000},"page":"319-320","source":"Crossref","is-referenced-by-count":1,"title":["Is
         the ecology of molecules really ecology?"],"prefix":"10.1016","volume":"12","author":[{"given":"Ferdinando","family":"Boero","sequence":"first","affiliation":[]}],"member":"78","reference":[{"key":"10.1016\/S0169-5347(97)89918-1_bib1","doi-asserted-by":"crossref","first-page":"220","DOI":"10.1016\/S0169-5347(00)89066-7","volume":"10","author":"Statzner","year":"1995","journal-title":"Trends
         Ecol. Evol."},{"key":"10.1016\/S0169-5347(97)89918-1_bib2","doi-asserted-by":"crossref","first-page":"461","DOI":"10.1016\/S0169-5347(00)89182-X","volume":"10","author":"Metcalfe","year":"1995","journal-title":"Trends
-        Ecol. Evol."}],"container-title":["Trends in Ecology & Evolution"],"language":"en","link":[{"URL":"https:\/\/api.elsevier.com\/content\/article\/PII:S0169534797899181?httpAccept=text\/xml","content-type":"text\/xml","content-version":"vor","intended-application":"text-mining"},{"URL":"https:\/\/api.elsevier.com\/content\/article\/PII:S0169534797899181?httpAccept=text\/plain","content-type":"text\/plain","content-version":"vor","intended-application":"text-mining"}],"deposited":{"date-parts":[[2019,4,29]],"date-time":"2019-04-29T05:59:56Z","timestamp":1556517596000},"score":9.8327265,"issued":{"date-parts":[[1997,8]]},"references-count":2,"journal-issue":{"issue":"8","published-print":{"date-parts":[[1997,8]]}},"alternative-id":["S0169534797899181"],"URL":"http:\/\/dx.doi.org\/10.1016\/s0169-5347(97)89918-1","ISSN":["0169-5347"],"issn-type":[{"value":"0169-5347","type":"print"}],"subject":["Ecology,
-        Evolution, Behavior and Systematics"],"published":{"date-parts":[[1997,8]]}},{"indexed":{"date-parts":[[2021,5,7]],"date-time":"2021-05-07T02:02:29Z","timestamp":1620352949691},"reference-count":0,"publisher":"Elsevier
-        BV","issue":"1","license":[{"start":{"date-parts":[[1976,5,1]],"date-time":"1976-05-01T00:00:00Z","timestamp":199756800000},"content-version":"tdm","delay-in-days":0,"URL":"https:\/\/www.elsevier.com\/tdm\/userlicense\/1.0\/"}],"content-domain":{"domain":[],"crossmark-restriction":false},"short-container-title":["Urban
-        Ecology"],"published-print":{"date-parts":[[1976,5]]},"DOI":"10.1016\/0304-4009(76)90011-5","type":"journal-article","created":{"date-parts":[[2002,10,11]],"date-time":"2002-10-11T01:05:50Z","timestamp":1034298350000},"page":"89-90","source":"Crossref","is-referenced-by-count":0,"title":["Human
-        ecology"],"prefix":"10.1016","volume":"2","author":[{"given":"G.Ainsworth","family":"Harrison","sequence":"first","affiliation":[]}],"member":"78","container-title":["Urban
-        Ecology"],"language":"en","link":[{"URL":"https:\/\/api.elsevier.com\/content\/article\/PII:0304400976900115?httpAccept=text\/xml","content-type":"text\/xml","content-version":"vor","intended-application":"text-mining"},{"URL":"https:\/\/api.elsevier.com\/content\/article\/PII:0304400976900115?httpAccept=text\/plain","content-type":"text\/plain","content-version":"vor","intended-application":"text-mining"}],"deposited":{"date-parts":[[2019,4,9]],"date-time":"2019-04-09T21:26:45Z","timestamp":1554845205000},"score":9.802846,"issued":{"date-parts":[[1976,5]]},"references-count":0,"journal-issue":{"issue":"1","published-print":{"date-parts":[[1976,5]]}},"alternative-id":["0304400976900115"],"URL":"http:\/\/dx.doi.org\/10.1016\/0304-4009(76)90011-5","ISSN":["0304-4009"],"issn-type":[{"value":"0304-4009","type":"print"}],"subject":["Geography,
-        Planning and Development"],"published":{"date-parts":[[1976,5]]}},{"indexed":{"date-parts":[[2021,5,12]],"date-time":"2021-05-12T07:04:13Z","timestamp":1620803053182},"reference-count":50,"publisher":"Elsevier
+        Ecol. Evol."}],"container-title":["Trends in Ecology & Evolution"],"language":"en","link":[{"URL":"https:\/\/api.elsevier.com\/content\/article\/PII:S0169534797899181?httpAccept=text\/xml","content-type":"text\/xml","content-version":"vor","intended-application":"text-mining"},{"URL":"https:\/\/api.elsevier.com\/content\/article\/PII:S0169534797899181?httpAccept=text\/plain","content-type":"text\/plain","content-version":"vor","intended-application":"text-mining"}],"deposited":{"date-parts":[[2019,4,29]],"date-time":"2019-04-29T05:59:56Z","timestamp":1556517596000},"score":9.823175,"issued":{"date-parts":[[1997,8]]},"references-count":2,"journal-issue":{"issue":"8","published-print":{"date-parts":[[1997,8]]}},"alternative-id":["S0169534797899181"],"URL":"http:\/\/dx.doi.org\/10.1016\/s0169-5347(97)89918-1","ISSN":["0169-5347"],"issn-type":[{"value":"0169-5347","type":"print"}],"subject":["Ecology,
+        Evolution, Behavior and Systematics"],"published":{"date-parts":[[1997,8]]}},{"indexed":{"date-parts":[[2021,5,12]],"date-time":"2021-05-12T07:04:13Z","timestamp":1620803053182},"reference-count":50,"publisher":"Elsevier
         BV","license":[{"start":{"date-parts":[[2016,2,1]],"date-time":"2016-02-01T00:00:00Z","timestamp":1454284800000},"content-version":"tdm","delay-in-days":0,"URL":"https:\/\/www.elsevier.com\/tdm\/userlicense\/1.0\/"}],"content-domain":{"domain":["elsevier.com","sciencedirect.com"],"crossmark-restriction":true},"short-container-title":["Fungal
         Ecology"],"published-print":{"date-parts":[[2016,2]]},"DOI":"10.1016\/j.funeco.2015.10.002","type":"journal-article","created":{"date-parts":[[2015,11,14]],"date-time":"2015-11-14T21:46:49Z","timestamp":1447537609000},"page":"1-4","update-policy":"http:\/\/dx.doi.org\/10.1016\/elsevier_cm_policy","source":"Crossref","is-referenced-by-count":5,"title":["Aquatic
         fungal ecology"],"prefix":"10.1016","volume":"19","author":[{"given":"Felix","family":"B\u00e4rlocher","sequence":"first","affiliation":[]}],"member":"78","reference":[{"key":"10.1016\/j.funeco.2015.10.002_bib1","first-page":"395","article-title":"Marine
@@ -266,15 +263,19 @@ http_interactions:
         Ecology"},{"key":"10.1016\/j.funeco.2015.10.002_bib47","volume":"10","year":"2003"},{"key":"10.1016\/j.funeco.2015.10.002_bib48","series-title":"The
         Fungal Community. Its Organization and Role in the Ecosystem","year":"1981"},{"key":"10.1016\/j.funeco.2015.10.002_bib49","doi-asserted-by":"crossref","first-page":"125","DOI":"10.3354\/ame01385","article-title":"Fungi
         in lake ecosystems","volume":"59","author":"Wurzbacher","year":"2010","journal-title":"Aquat.
-        Microb. Ecol."}],"container-title":["Fungal Ecology"],"language":"en","link":[{"URL":"https:\/\/api.elsevier.com\/content\/article\/PII:S1754504815001312?httpAccept=text\/xml","content-type":"text\/xml","content-version":"vor","intended-application":"text-mining"},{"URL":"https:\/\/api.elsevier.com\/content\/article\/PII:S1754504815001312?httpAccept=text\/plain","content-type":"text\/plain","content-version":"vor","intended-application":"text-mining"}],"deposited":{"date-parts":[[2019,11,3]],"date-time":"2019-11-03T12:36:05Z","timestamp":1572784565000},"score":9.786104,"issued":{"date-parts":[[2016,2]]},"references-count":50,"alternative-id":["S1754504815001312"],"URL":"http:\/\/dx.doi.org\/10.1016\/j.funeco.2015.10.002","ISSN":["1754-5048"],"issn-type":[{"value":"1754-5048","type":"print"}],"subject":["Plant
+        Microb. Ecol."}],"container-title":["Fungal Ecology"],"language":"en","link":[{"URL":"https:\/\/api.elsevier.com\/content\/article\/PII:S1754504815001312?httpAccept=text\/xml","content-type":"text\/xml","content-version":"vor","intended-application":"text-mining"},{"URL":"https:\/\/api.elsevier.com\/content\/article\/PII:S1754504815001312?httpAccept=text\/plain","content-type":"text\/plain","content-version":"vor","intended-application":"text-mining"}],"deposited":{"date-parts":[[2019,11,3]],"date-time":"2019-11-03T12:36:05Z","timestamp":1572784565000},"score":9.801665,"issued":{"date-parts":[[2016,2]]},"references-count":50,"alternative-id":["S1754504815001312"],"URL":"http:\/\/dx.doi.org\/10.1016\/j.funeco.2015.10.002","ISSN":["1754-5048"],"issn-type":[{"value":"1754-5048","type":"print"}],"subject":["Plant
         Science","Ecological Modelling","Ecology","Ecology, Evolution, Behavior and
         Systematics"],"published":{"date-parts":[[2016,2]]},"assertion":[{"value":"Elsevier","name":"publisher","label":"This
         article is maintained by"},{"value":"Aquatic fungal ecology","name":"articletitle","label":"Article
         Title"},{"value":"Fungal Ecology","name":"journaltitle","label":"Journal Title"},{"value":"https:\/\/doi.org\/10.1016\/j.funeco.2015.10.002","name":"articlelink","label":"CrossRef
         DOI link to publisher maintained version"},{"value":"simple-article","name":"content_type","label":"Content
         Type"},{"value":"Copyright \u00a9 2015 Elsevier Ltd and The British Mycological
-        Society. All rights reserved.","name":"copyright","label":"Copyright"}]},{"indexed":{"date-parts":[[2021,5,8]],"date-time":"2021-05-08T15:11:23Z","timestamp":1620486683703},"reference-count":0,"publisher":"Elsevier","content-domain":{"domain":[],"crossmark-restriction":false},"published-print":{"date-parts":[[2002]]},"DOI":"10.1016\/b978-0-12-219135-0.50029-5","type":"book-chapter","created":{"date-parts":[[2013,9,6]],"date-time":"2013-09-06T01:00:21Z","timestamp":1378429221000},"page":"ii","source":"Crossref","is-referenced-by-count":0,"title":["AQUATIC
-        ECOLOGY Series"],"prefix":"10.1016","member":"78","container-title":["Freshwater
-        Ecology"],"deposited":{"date-parts":[[2018,10,13]],"date-time":"2018-10-13T10:51:46Z","timestamp":1539427906000},"score":9.745143,"issued":{"date-parts":[[2002]]},"references-count":0,"URL":"http:\/\/dx.doi.org\/10.1016\/b978-0-12-219135-0.50029-5","published":{"date-parts":[[2002]]}}],"items-per-page":4,"query":{"start-index":0,"search-terms":"ecology"}}}'
-  recorded_at: 2021-08-01 15:48:22 GMT
+        Society. All rights reserved.","name":"copyright","label":"Copyright"}]},{"indexed":{"date-parts":[[2021,5,7]],"date-time":"2021-05-07T02:02:29Z","timestamp":1620352949691},"reference-count":0,"publisher":"Elsevier
+        BV","issue":"1","license":[{"start":{"date-parts":[[1976,5,1]],"date-time":"1976-05-01T00:00:00Z","timestamp":199756800000},"content-version":"tdm","delay-in-days":0,"URL":"https:\/\/www.elsevier.com\/tdm\/userlicense\/1.0\/"}],"content-domain":{"domain":[],"crossmark-restriction":false},"short-container-title":["Urban
+        Ecology"],"published-print":{"date-parts":[[1976,5]]},"DOI":"10.1016\/0304-4009(76)90011-5","type":"journal-article","created":{"date-parts":[[2002,10,11]],"date-time":"2002-10-11T01:05:50Z","timestamp":1034298350000},"page":"89-90","source":"Crossref","is-referenced-by-count":0,"title":["Human
+        ecology"],"prefix":"10.1016","volume":"2","author":[{"given":"G.Ainsworth","family":"Harrison","sequence":"first","affiliation":[]}],"member":"78","container-title":["Urban
+        Ecology"],"language":"en","link":[{"URL":"https:\/\/api.elsevier.com\/content\/article\/PII:0304400976900115?httpAccept=text\/xml","content-type":"text\/xml","content-version":"vor","intended-application":"text-mining"},{"URL":"https:\/\/api.elsevier.com\/content\/article\/PII:0304400976900115?httpAccept=text\/plain","content-type":"text\/plain","content-version":"vor","intended-application":"text-mining"}],"deposited":{"date-parts":[[2019,4,9]],"date-time":"2019-04-09T21:26:45Z","timestamp":1554845205000},"score":9.79174,"issued":{"date-parts":[[1976,5]]},"references-count":0,"journal-issue":{"issue":"1","published-print":{"date-parts":[[1976,5]]}},"alternative-id":["0304400976900115"],"URL":"http:\/\/dx.doi.org\/10.1016\/0304-4009(76)90011-5","ISSN":["0304-4009"],"issn-type":[{"value":"0304-4009","type":"print"}],"subject":["Geography,
+        Planning and Development"],"published":{"date-parts":[[1976,5]]}},{"indexed":{"date-parts":[[2021,5,7]],"date-time":"2021-05-07T07:11:39Z","timestamp":1620371499769},"reference-count":0,"publisher":"Elsevier","license":[{"start":{"date-parts":[[2006,1,1]],"date-time":"2006-01-01T00:00:00Z","timestamp":1136073600000},"content-version":"tdm","delay-in-days":0,"URL":"https:\/\/www.elsevier.com\/tdm\/userlicense\/1.0\/"}],"content-domain":{"domain":[],"crossmark-restriction":false},"published-print":{"date-parts":[[2006]]},"DOI":"10.1016\/b978-012088772-9\/50028-5","type":"book-chapter","created":{"date-parts":[[2007,5,16]],"date-time":"2007-05-16T14:26:25Z","timestamp":1179325585000},"page":"123-124","source":"Crossref","is-referenced-by-count":0,"title":["Population
+        Ecology"],"prefix":"10.1016","member":"78","container-title":["Insect Ecology"],"link":[{"URL":"https:\/\/api.elsevier.com\/content\/article\/PII:B9780120887729500285?httpAccept=text\/xml","content-type":"text\/xml","content-version":"vor","intended-application":"text-mining"},{"URL":"https:\/\/api.elsevier.com\/content\/article\/PII:B9780120887729500285?httpAccept=text\/plain","content-type":"text\/plain","content-version":"vor","intended-application":"text-mining"}],"deposited":{"date-parts":[[2019,1,7]],"date-time":"2019-01-07T13:23:14Z","timestamp":1546867394000},"score":9.73936,"issued":{"date-parts":[[2006]]},"references-count":0,"URL":"http:\/\/dx.doi.org\/10.1016\/b978-012088772-9\/50028-5","published":{"date-parts":[[2006]]}}],"items-per-page":4,"query":{"start-index":0,"search-terms":"ecology"}}}'
+  recorded_at: 2021-08-13 13:47:11 GMT
   recorded_with: vcr/1.0.2, webmockr/0.8.0

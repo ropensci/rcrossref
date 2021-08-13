@@ -17,9 +17,9 @@ http_interactions:
       explanation: Request fulfilled, document follows
     headers:
       status: HTTP/1.1 200 OK
-      date: Sun, 01 Aug 2021 15:44:11 GMT
+      date: Fri, 13 Aug 2021 13:46:24 GMT
       content-type: application/json
-      content-length: '977'
+      content-length: '928'
       access-control-allow-origin: '*'
       access-control-allow-headers: X-Requested-With
       vary: Accept-Encoding
@@ -27,6 +27,7 @@ http_interactions:
       server: Jetty(9.4.40.v20210413)
       x-ratelimit-limit: '50'
       x-ratelimit-interval: 1s
+      x-api-pool: public
       x-rate-limit-limit: '50'
       x-rate-limit-interval: 1s
       permissions-policy: interest-cohort=()
@@ -34,23 +35,21 @@ http_interactions:
     body:
       encoding: UTF-8
       file: no
-      string: '{"status":"ok","message-type":"funder","message-version":"1.0.0","message":{"hierarchy-names":{"100014074":"Integrative
-        and Collaborative Education and Research","100010608":"Office of Inspector
-        General","100000179":"Office of the Director","100014411":"Center for Unmanned
-        Aircraft Systems","100005716":"National Science Board","100000081":"Directorate
+      string: '{"status":"ok","message-type":"funder","message-version":"1.0.0","message":{"hierarchy-names":{"100010608":"Office
+        of Inspector General","100000179":"Office of the Director","100014411":"Center
+        for Unmanned Aircraft Systems","100005716":"National Science Board","100000081":"Directorate
         for Education and Human Resources","100000083":"Directorate for Computer and
         Information Science and Engineering","100015815":"Power Systems Engineering
         Research Center","100005441":"Office of Budget, Finance and Award Management","100000001":"National
         Science Foundation","100000076":"Directorate for Biological Sciences","100000084":"Directorate
         for Engineering","100014073":"National Nanotechnology Coordinating Office","100014591":"BioXFEL
         Science and Technology Center","100000088":"Directorate for Social, Behavioral
-        and Economic Sciences","100005447":"Office of Information and Resource Management","100014071":"Large
-        Facilities Office","100000086":"Directorate for Mathematical and Physical
-        Sciences","100000085":"Directorate for Geosciences","100014072":"National
-        Coordination Office"},"replaced-by":[],"work-count":244932,"name":"National
-        Science Foundation","descendants":["100000076","100000077","100000078","100000081","100000082","100000083","100000084","100000085","100000086","100000087","100000088","100000089","100000105","100000106","100000121","100000141","100000143","100000144","100000145","100000146","100000147","100000148","100000149","100000150","100000151","100000152","100000153","100000154","100000155","100000156","100000159","100000160","100000162","100000163","100000164","100000165","100000166","100000169","100000170","100000171","100000172","100000173","100000174","100000175","100000176","100000177","100000178","100000179","100005441","100005442","100005443","100005444","100005445","100005446","100005447","100005448","100005449","100005450","100005553","100005554","100005714","100005716","100005717","100006091","100006603","100007352","100007521","100007522","100007523","100010608","100014071","100014072","100014073","100014074","100014411","100014591","100015815"],"descendant-work-count":307265,"id":"100000001","tokens":["national","science","foundation","usa","nsf","nsf","us","nsf"],"replaces":[],"uri":"http:\/\/dx.doi.org\/10.13039\/100000001","hierarchy":{"100000001":{"100014074":{},"100010608":{},"100000179":{"more":true},"100014411":{},"100005716":{},"100000081":{"more":true},"100000083":{"more":true},"100015815":{},"100005441":{"more":true},"100000076":{"more":true},"100000084":{"more":true},"100014073":{},"100014591":{},"100000088":{"more":true},"100005447":{"more":true},"100014071":{},"100000086":{"more":true},"100000085":{"more":true},"100014072":{}}},"alt-names":["USA
+        and Economic Sciences","100005447":"Office of Information and Resource Management","100000086":"Directorate
+        for Mathematical and Physical Sciences","100000085":"Directorate for Geosciences","100014072":"National
+        Coordination Office"},"replaced-by":[],"work-count":246287,"name":"National
+        Science Foundation","descendants":["100000076","100000077","100000078","100000081","100000082","100000083","100000084","100000085","100000086","100000087","100000088","100000089","100000105","100000106","100000121","100000141","100000143","100000144","100000145","100000146","100000147","100000148","100000149","100000150","100000151","100000152","100000153","100000154","100000155","100000156","100000159","100000160","100000162","100000163","100000164","100000165","100000166","100000169","100000170","100000171","100000172","100000173","100000174","100000175","100000176","100000177","100000178","100000179","100005441","100005442","100005443","100005444","100005445","100005446","100005447","100005448","100005449","100005450","100005553","100005554","100005714","100005716","100005717","100006091","100006603","100007352","100007521","100007522","100007523","100010608","100014071","100014072","100014073","100014074","100014411","100014591","100015815"],"descendant-work-count":308851,"id":"100000001","tokens":["national","science","foundation","usa","nsf","nsf","us","nsf"],"replaces":[],"uri":"http:\/\/dx.doi.org\/10.13039\/100000001","hierarchy":{"100000001":{"100010608":{},"100000179":{"more":true},"100014411":{},"100005716":{},"100000081":{"more":true},"100000083":{"more":true},"100015815":{},"100005441":{"more":true},"100000076":{"more":true},"100000084":{"more":true},"100014073":{},"100014591":{},"100000088":{"more":true},"100005447":{"more":true},"100000086":{"more":true},"100000085":{"more":true},"100014072":{}}},"alt-names":["USA
         NSF","NSF","US NSF"],"location":"United States"}}'
-  recorded_at: 2021-08-01 15:44:18 GMT
+  recorded_at: 2021-08-13 13:46:29 GMT
   recorded_with: vcr/1.0.2, webmockr/0.8.0
 - request:
     method: get
@@ -70,9 +69,9 @@ http_interactions:
       explanation: Request fulfilled, document follows
     headers:
       status: HTTP/1.1 200 OK
-      date: Sun, 01 Aug 2021 15:44:14 GMT
+      date: Fri, 13 Aug 2021 13:46:25 GMT
       content-type: application/json
-      content-length: '1568'
+      content-length: '1596'
       access-control-allow-origin: '*'
       access-control-allow-headers: X-Requested-With
       vary: Accept-Encoding
@@ -80,6 +79,7 @@ http_interactions:
       server: Jetty(9.4.40.v20210413)
       x-ratelimit-limit: '50'
       x-ratelimit-interval: 1s
+      x-api-pool: public
       x-rate-limit-limit: '50'
       x-rate-limit-interval: 1s
       permissions-policy: interest-cohort=()
@@ -99,11 +99,11 @@ http_interactions:
         of Under Secretary for Science","100015704":"Bonneville Power Administration","100006132":"Office
         of Science","100006113":"Office of Under Secretary","100006131":"Office of
         Public Affairs","100006124":"Office of the Chief Information Officer","100006147":"Office
-        of Nuclear Energy","100006122":"Office of Health, Safety, and Security","100006150":"Office
-        of Policy and International Affairs","100007002":"Small Business Innovative
-        Research and Small Business Technology Transfer","100006120":"Office of Fossil
-        Energy","100016153":"Office of Electricity","100015814":"Great Lakes Bioenergy
-        Research Center","100006162":"Energy Information Administration","100006157":"Office
+        of Nuclear Energy","100006122":"Office of Environment, Health, Safety, and
+        Security","100006150":"Office of Policy and International Affairs","100007002":"Small
+        Business Innovative Research and Small Business Technology Transfer","100006120":"Office
+        of Fossil Energy","100016153":"Office of Electricity","100015814":"Great Lakes
+        Bioenergy Research Center","100006162":"Energy Information Administration","100006157":"Office
         of Secretary of Energy","100013178":"Environmental Management Consolidated
         Business Center","100006144":"Office of Intelligence and Counterintelligence","100017269":"Office
         of Policy","100006186":"Office of Legacy Management","100006143":"Office of
@@ -111,11 +111,11 @@ http_interactions:
         Intelligence and Technology Office","100006158":"Office of Congressional and
         Intergovernmental Affairs","100006168":"National Nuclear Security Administration","100006134":"Office
         of Energy Efficiency and Renewable Energy","100017270":"Office of Under Secretary
-        for Science and Energy"},"replaced-by":[],"work-count":81530,"name":"U.S.
-        Department of Energy","descendants":["100006113","100006114","100006115","100006116","100006117","100006118","100006119","100006120","100006121","100006122","100006123","100006124","100006126","100006127","100006129","100006130","100006131","100006132","100006133","100006134","100006135","100006136","100006137","100006138","100006139","100006140","100006141","100006142","100006143","100006144","100006145","100006146","100006147","100006148","100006149","100006150","100006151","100006157","100006158","100006159","100006160","100006161","100006162","100006163","100006164","100006165","100006166","100006167","100006168","100006169","100006170","100006171","100006172","100006173","100006174","100006175","100006176","100006177","100006178","100006179","100006180","100006181","100006182","100006183","100006184","100006185","100006186","100006187","100006188","100006189","100006190","100006191","100006192","100006200","100006201","100006206","100006207","100006208","100006209","100006210","100006224","100006226","100006227","100006228","100006229","100006230","100006231","100006233","100006234","100006235","100006335","100006998","100006999","100007000","100007001","100007002","100007783","100008902","100010268","100011030","100011031","100011659","100011660","100011661","100011662","100011663","100011664","100011665","100011680","100011681","100011682","100011735","100011883","100011884","100013055","100013145","100013165","100013178","100014456","100015417","100015704","100015814","100016153","100016186","100017258","100017259","100017260","100017261","100017262","100017263","100017264","100017265","100017266","100017267","100017268","100017269","100017270","100017271","100017272","100017273","100017274","100017275","100017276","100017280","100017281","100017282","100017283","100017284","100017285","100017286","100017535","100017613","100017865"],"descendant-work-count":129764,"id":"100000015","tokens":["us","department","of","energy","doe","united","states","department","of","energy","department","of","energy","usdoe","energy","department","usadoe","us","doe"],"replaces":[],"uri":"http:\/\/dx.doi.org\/10.13039\/100000015","hierarchy":{"100000015":{"100017865":{},"100006130":{"more":true},"100017267":{},"100016186":{},"100017268":{},"100006229":{},"100017271":{},"100013165":{},"100006138":{"more":true},"100006133":{"more":true},"100007783":{"more":true},"100006174":{},"100015704":{},"100006132":{"more":true},"100006113":{},"100006131":{"more":true},"100006124":{"more":true},"100006147":{"more":true},"100006122":{"more":true},"100006150":{},"100007002":{},"100006120":{"more":true},"100016153":{"more":true},"100015814":{},"100006162":{"more":true},"100006157":{},"100013178":{},"100006144":{"more":true},"100017269":{},"100006186":{"more":true},"100006143":{"more":true},"100006121":{"more":true},"100017266":{},"100006158":{"more":true},"100006168":{"more":true},"100006134":{"more":true},"100017270":{}}},"alt-names":["DOE","United
-        States Department of Energy","Department of Energy","USDOE","Energy Department","USADOE","US
+        for Science and Energy"},"replaced-by":[],"work-count":81941,"name":"U.S.
+        Department of Energy","descendants":["100006113","100006114","100006115","100006116","100006117","100006118","100006119","100006120","100006121","100006122","100006123","100006124","100006126","100006127","100006129","100006130","100006131","100006132","100006133","100006134","100006135","100006136","100006137","100006138","100006139","100006140","100006141","100006142","100006143","100006144","100006145","100006146","100006147","100006148","100006149","100006150","100006151","100006157","100006158","100006159","100006160","100006161","100006162","100006163","100006164","100006165","100006166","100006167","100006168","100006169","100006170","100006171","100006172","100006173","100006174","100006175","100006176","100006177","100006178","100006179","100006180","100006181","100006182","100006183","100006184","100006185","100006186","100006187","100006188","100006189","100006190","100006191","100006192","100006200","100006201","100006206","100006207","100006208","100006209","100006210","100006224","100006226","100006227","100006228","100006229","100006230","100006231","100006233","100006234","100006235","100006335","100006998","100006999","100007000","100007001","100007002","100007783","100008902","100010268","100011030","100011031","100011659","100011660","100011661","100011662","100011663","100011664","100011665","100011680","100011681","100011682","100011735","100011883","100011884","100013055","100013145","100013165","100013178","100014456","100014492","100015417","100015704","100015814","100016153","100016186","100017258","100017259","100017260","100017261","100017262","100017263","100017264","100017265","100017266","100017267","100017268","100017269","100017270","100017271","100017272","100017273","100017274","100017275","100017276","100017280","100017281","100017282","100017283","100017284","100017285","100017286","100017535","100017613","100017865","100018075"],"descendant-work-count":130494,"id":"100000015","tokens":["us","department","of","energy","doe","united","states","department","of","energy","department","of","energy","usdoe","energy","department","energygov","usadoe","us","doe"],"replaces":[],"uri":"http:\/\/dx.doi.org\/10.13039\/100000015","hierarchy":{"100000015":{"100017865":{},"100006130":{"more":true},"100017267":{},"100016186":{},"100017268":{},"100006229":{},"100017271":{},"100013165":{},"100006138":{"more":true},"100006133":{"more":true},"100007783":{"more":true},"100006174":{},"100015704":{},"100006132":{"more":true},"100006113":{},"100006131":{"more":true},"100006124":{"more":true},"100006147":{"more":true},"100006122":{"more":true},"100006150":{},"100007002":{},"100006120":{"more":true},"100016153":{"more":true},"100015814":{},"100006162":{"more":true},"100006157":{},"100013178":{},"100006144":{"more":true},"100017269":{},"100006186":{"more":true},"100006143":{"more":true},"100006121":{"more":true},"100017266":{},"100006158":{"more":true},"100006168":{"more":true},"100006134":{"more":true},"100017270":{}}},"alt-names":["DOE","United
+        States Department of Energy","Department of Energy","USDOE","Energy Department","ENERGY.GOV","USADOE","US
         DOE"],"location":"United States"}}'
-  recorded_at: 2021-08-01 15:44:18 GMT
+  recorded_at: 2021-08-13 13:46:29 GMT
   recorded_with: vcr/1.0.2, webmockr/0.8.0
 - request:
     method: get
@@ -135,9 +135,9 @@ http_interactions:
       explanation: Request fulfilled, document follows
     headers:
       status: HTTP/1.1 200 OK
-      date: Sun, 01 Aug 2021 15:44:17 GMT
+      date: Fri, 13 Aug 2021 13:46:28 GMT
       content-type: application/json
-      content-length: '11516'
+      content-length: '11515'
       access-control-allow-origin: '*'
       access-control-allow-headers: X-Requested-With
       vary: Accept-Encoding
@@ -145,6 +145,7 @@ http_interactions:
       server: Jetty(9.4.40.v20210413)
       x-ratelimit-limit: '50'
       x-ratelimit-interval: 1s
+      x-api-pool: public
       x-rate-limit-limit: '50'
       x-rate-limit-interval: 1s
       permissions-policy: interest-cohort=()
@@ -152,7 +153,7 @@ http_interactions:
     body:
       encoding: UTF-8
       file: no
-      string: '{"status":"ok","message-type":"work-list","message-version":"1.0.0","message":{"facets":{},"total-results":307265,"items":[{"indexed":{"date-parts":[[2021,4,29]],"date-time":"2021-04-29T18:10:43Z","timestamp":1619719843065},"reference-count":51,"publisher":"Elsevier
+      string: '{"status":"ok","message-type":"work-list","message-version":"1.0.0","message":{"facets":{},"total-results":308851,"items":[{"indexed":{"date-parts":[[2021,4,29]],"date-time":"2021-04-29T18:10:43Z","timestamp":1619719843065},"reference-count":51,"publisher":"Elsevier
         BV","issue":"5","funder":[{"DOI":"10.13039\/100000001","name":"National Science
         Foundation","doi-asserted-by":"publisher","award":["MCB-1715840"]}],"content-domain":{"domain":["jbc.org"],"crossmark-restriction":true},"short-container-title":["J.
         Biol. Chem."],"published-print":{"date-parts":[[2020,1,31]]},"abstract":"<jats:p>\u03b2-<jats:italic>N<\/jats:italic>-methylamino-<jats:sc>l<\/jats:sc>-alanine
@@ -390,7 +391,7 @@ http_interactions:
         Nunez","year":"2010","journal-title":"Adv. High Energy Phys.","ISSN":"http:\/\/id.crossref.org\/issn\/1687-7357","issn-type":"print"},{"key":"PhysRevD.87.046006Cc13R1","doi-asserted-by":"publisher","DOI":"10.1088\/1126-6708\/2007\/09\/109"},{"key":"PhysRevD.87.046006Cc14R1","doi-asserted-by":"publisher","DOI":"10.1088\/1126-6708\/2009\/03\/153"},{"key":"PhysRevD.87.046006Cc15R1","doi-asserted-by":"publisher","DOI":"10.1007\/JHEP01(2010)104"},{"key":"PhysRevD.87.046006Cc16R1","doi-asserted-by":"publisher","DOI":"10.1016\/j.nuclphysb.2010.09.011"},{"key":"PhysRevD.87.046006Cc17R1","doi-asserted-by":"publisher","DOI":"10.1007\/JHEP02(2012)145"},{"key":"PhysRevD.87.046006Cc18R1","doi-asserted-by":"publisher","DOI":"10.1016\/j.physletb.2012.02.037"},{"key":"PhysRevD.87.046006Cc19R1","doi-asserted-by":"publisher","DOI":"10.1007\/JHEP07(2011)056"},{"key":"PhysRevD.87.046006Cc20R1","doi-asserted-by":"publisher","DOI":"10.1007\/JHEP05(2012)031"},{"key":"PhysRevD.87.046006Cc21R1","doi-asserted-by":"publisher","DOI":"10.1007\/JHEP03(2011)054"},{"key":"PhysRevD.87.046006Cc22R1","doi-asserted-by":"publisher","DOI":"10.1016\/j.nuclphysb.2011.01.031"},{"key":"PhysRevD.87.046006Cc23R1","doi-asserted-by":"publisher","DOI":"10.1103\/PhysRevD.76.086005"},{"key":"PhysRevD.87.046006Cc24R1","doi-asserted-by":"publisher","DOI":"10.1088\/1126-6708\/2007\/09\/083"},{"key":"PhysRevD.87.046006Cc25R1","doi-asserted-by":"publisher","DOI":"10.1088\/1126-6708\/2001\/09\/017"},{"key":"PhysRevD.87.046006Cc26R1","doi-asserted-by":"publisher","DOI":"10.1016\/j.nuclphysb.2009.06.001"},{"key":"PhysRevD.87.046006Cc27R1","doi-asserted-by":"publisher","DOI":"10.1088\/1126-6708\/2001\/05\/028"},{"key":"PhysRevD.87.046006Cc28R1","doi-asserted-by":"publisher","DOI":"10.1103\/PhysRevD.78.086005"},{"key":"PhysRevD.87.046006Cc29R1","doi-asserted-by":"publisher","DOI":"10.1142\/S0217751X01003937"},{"key":"PhysRevD.87.046006Cc30R1","doi-asserted-by":"publisher","DOI":"10.1088\/1126-6708\/2003\/12\/024"},{"key":"PhysRevD.87.046006Cc31R1","doi-asserted-by":"publisher","DOI":"10.1103\/PhysRevD.77.046003"},{"key":"PhysRevD.87.046006Cc32R1","doi-asserted-by":"publisher","DOI":"10.1088\/1126-6708\/2006\/09\/051"},{"key":"PhysRevD.87.046006Cc33R1","doi-asserted-by":"publisher","DOI":"10.1007\/JHEP02(2010)032"},{"key":"PhysRevD.87.046006Cc34R1","doi-asserted-by":"publisher","DOI":"10.1088\/0264-9381\/13\/6\/017"},{"key":"PhysRevD.87.046006Cc35R1","doi-asserted-by":"publisher","DOI":"10.1088\/1126-6708\/2007\/11\/034"},{"key":"PhysRevD.87.046006Cc36R1","doi-asserted-by":"publisher","DOI":"10.1016\/S0550-3213(02)00237-7"},{"key":"PhysRevD.87.046006Cc37R1","doi-asserted-by":"publisher","DOI":"10.1016\/j.nuclphysb.2005.10.014"}],"container-title":["Physical
         Review D"],"language":"en","link":[{"URL":"http:\/\/link.aps.org\/accepted\/10.1103\/PhysRevD.87.046006","content-type":"application\/pdf","content-version":"am","intended-application":"unspecified"},{"URL":"http:\/\/link.aps.org\/article\/10.1103\/PhysRevD.87.046006","content-type":"unspecified","content-version":"vor","intended-application":"syndication"},{"URL":"http:\/\/harvest.aps.org\/v2\/journals\/articles\/10.1103\/PhysRevD.87.046006\/fulltext","content-type":"unspecified","content-version":"vor","intended-application":"similarity-checking"}],"deposited":{"date-parts":[[2019,7,9]],"date-time":"2019-07-09T18:23:44Z","timestamp":1562696624000},"score":0.0,"issued":{"date-parts":[[2013,2,13]]},"references-count":37,"journal-issue":{"issue":"4","published-print":{"date-parts":[[2013,2]]}},"URL":"http:\/\/dx.doi.org\/10.1103\/physrevd.87.046006","ISSN":["1550-7998","1550-2368"],"issn-type":[{"value":"1550-7998","type":"print"},{"value":"1550-2368","type":"electronic"}],"subject":["Nuclear
         and High Energy Physics"],"published":{"date-parts":[[2013,2,13]]},"article-number":"046006"}],"items-per-page":5,"query":{"start-index":0,"search-terms":null}}}'
-  recorded_at: 2021-08-01 15:44:18 GMT
+  recorded_at: 2021-08-13 13:46:29 GMT
   recorded_with: vcr/1.0.2, webmockr/0.8.0
 - request:
     method: get
@@ -410,7 +411,7 @@ http_interactions:
       explanation: Request fulfilled, document follows
     headers:
       status: HTTP/1.1 200 OK
-      date: Sun, 01 Aug 2021 15:44:18 GMT
+      date: Fri, 13 Aug 2021 13:46:29 GMT
       content-type: application/json
       content-length: '453'
       access-control-allow-origin: '*'
@@ -418,6 +419,7 @@ http_interactions:
       server: Jetty(9.4.40.v20210413)
       x-ratelimit-limit: '50'
       x-ratelimit-interval: 1s
+      x-api-pool: public
       x-rate-limit-limit: '50'
       x-rate-limit-interval: 1s
       permissions-policy: interest-cohort=()
@@ -425,8 +427,8 @@ http_interactions:
     body:
       encoding: UTF-8
       file: no
-      string: '{"status":"ok","message-type":"funder-list","message-version":"1.0.0","message":{"items-per-page":1,"query":{"start-index":0,"search-terms":"NSF"},"total-results":36,"items":[{"id":"100000001","location":"United
+      string: '{"status":"ok","message-type":"funder-list","message-version":"1.0.0","message":{"items-per-page":1,"query":{"start-index":0,"search-terms":"NSF"},"total-results":39,"items":[{"id":"100000001","location":"United
         States","name":"National Science Foundation","alt-names":["USA NSF","NSF","US
         NSF"],"uri":"http:\/\/dx.doi.org\/10.13039\/100000001","replaces":[],"replaced-by":[],"tokens":["national","science","foundation","usa","nsf","nsf","us","nsf"]}]}}'
-  recorded_at: 2021-08-01 15:44:18 GMT
+  recorded_at: 2021-08-13 13:46:29 GMT
   recorded_with: vcr/1.0.2, webmockr/0.8.0

@@ -17,7 +17,7 @@ http_interactions:
       explanation: Request fulfilled, document follows
     headers:
       status: HTTP/1.1 200 OK
-      date: Sun, 01 Aug 2021 15:46:33 GMT
+      date: Fri, 13 Aug 2021 12:57:00 GMT
       content-type: application/json
       transfer-encoding: chunked
       access-control-allow-origin: '*'
@@ -27,6 +27,7 @@ http_interactions:
       server: Jetty(9.4.40.v20210413)
       x-ratelimit-limit: '50'
       x-ratelimit-interval: 1s
+      x-api-pool: public
       x-rate-limit-limit: '50'
       x-rate-limit-interval: 1s
       permissions-policy: interest-cohort=()
@@ -34,7 +35,7 @@ http_interactions:
     body:
       encoding: UTF-8
       file: no
-      string: '{"status":"ok","message-type":"work-list","message-version":"1.0.0","message":{"facets":{},"next-cursor":"DnF1ZXJ5VGhlbkZldGNoBgAAAAADId5FFmJsa3E5SWZHUmhTeDhLTW5sdDFCdVEAAAAAAcTmTxY3Q0NNek5lOFEzRzJTVmdBekhld21RAAAAAAHrrM4WdGtxZFdlbXRRbDIxQkszOHAyVGQ0dwAAAAABptIRFlBnamVIM014UUpHOUxqRjdNQXFUYXcAAAAAAyHeRhZibGtxOUlmR1JoU3g4S01ubHQxQnVRAAAAAAGxVq8WLXJtMFhXSEdUZ1NVTHVkd2VWb3QyUQ==","total-results":286581,"items":[{"indexed":{"date-parts":[[2021,5,6]],"date-time":"2021-05-06T20:41:20Z","timestamp":1620333680846},"reference-count":13,"publisher":"Hindawi
+      string: '{"status":"ok","message-type":"work-list","message-version":"1.0.0","message":{"facets":{},"next-cursor":"DnF1ZXJ5VGhlbkZldGNoBgAAAAACB-fuFm5mUEZvZ2pvUXZDeEI3UDFkZUg0RncAAAAAAjS7pBY3Q0NNek5lOFEzRzJTVmdBekhld21RAAAAAAJjtqUWdGtxZFdlbXRRbDIxQkszOHAyVGQ0dwAAAAACud4AFnlfU2hSRFNHUWpXbDBMX0lLSkJzTEEAAAAAA-2mfBZibGtxOUlmR1JoU3g4S01ubHQxQnVRAAAAAAIcfYsWLXJtMFhXSEdUZ1NVTHVkd2VWb3QyUQ==","total-results":287193,"items":[{"indexed":{"date-parts":[[2021,5,6]],"date-time":"2021-05-06T20:41:20Z","timestamp":1620333680846},"reference-count":13,"publisher":"Hindawi
         Limited","license":[{"start":{"date-parts":[[2006,5,2]],"date-time":"2006-05-02T00:00:00Z","timestamp":1146528000000},"content-version":"unspecified","delay-in-days":0,"URL":"http:\/\/creativecommons.org\/licenses\/by\/3.0\/"}],"funder":[{"DOI":"10.13039\/501100000923","name":"Australian
         Research Council","doi-asserted-by":"publisher","award":["C 0010 6980"]}],"content-domain":{"domain":[],"crossmark-restriction":false},"short-container-title":["Journal
         of Applied Mathematics and Stochastic Analysis"],"published-print":{"date-parts":[[2006,5,2]]},"abstract":"<jats:p>We
@@ -1246,26 +1247,7 @@ http_interactions:
         University, Chiang Mai 50200, Thailand"}]}],"member":"98","reference":[{"issue":"2","key":"1","first-page":"109","volume":"2","year":"1982","journal-title":"Morphologia
         Medica"},{"key":"2","doi-asserted-by":"publisher","DOI":"10.1055\/s-0030-1247252"},{"key":"3","doi-asserted-by":"publisher","DOI":"10.1186\/1757-1626-1-320"},{"issue":"5","key":"4","first-page":"224","volume":"25","year":"1985","journal-title":"Radiologe"},{"key":"5","doi-asserted-by":"publisher","DOI":"10.1023\/a:1017502404191"},{"key":"6","doi-asserted-by":"publisher","DOI":"10.1007\/s00270-004-0006-8"},{"key":"7","doi-asserted-by":"publisher","DOI":"10.1097\/00005373-199307000-00003"},{"key":"8","first-page":"361","volume":"56","year":"1989","journal-title":"Helvetica
         Chirurgica Acta"},{"key":"9","doi-asserted-by":"publisher","DOI":"10.1007\/s00404-008-0817-y"},{"key":"10","doi-asserted-by":"publisher","DOI":"10.1016\/j.jvs.2008.05.067"}],"container-title":["Case
-        Reports in Urology"],"language":"en","link":[{"URL":"http:\/\/downloads.hindawi.com\/journals\/criu\/2016\/5042456.pdf","content-type":"application\/pdf","content-version":"vor","intended-application":"text-mining"},{"URL":"http:\/\/downloads.hindawi.com\/journals\/criu\/2016\/5042456.xml","content-type":"application\/xml","content-version":"vor","intended-application":"text-mining"},{"URL":"http:\/\/downloads.hindawi.com\/journals\/criu\/2016\/5042456.pdf","content-type":"unspecified","content-version":"vor","intended-application":"similarity-checking"}],"deposited":{"date-parts":[[2016,7,26]],"date-time":"2016-07-26T15:38:41Z","timestamp":1469547521000},"score":0.0,"issued":{"date-parts":[[2016]]},"references-count":10,"alternative-id":["5042456","5042456"],"URL":"http:\/\/dx.doi.org\/10.1155\/2016\/5042456","ISSN":["2090-696X","2090-6978"],"issn-type":[{"value":"2090-696X","type":"print"},{"value":"2090-6978","type":"electronic"}],"published":{"date-parts":[[2016]]}},{"indexed":{"date-parts":[[2021,5,8]],"date-time":"2021-05-08T03:40:31Z","timestamp":1620445231033},"reference-count":15,"publisher":"Hindawi
-        Limited","license":[{"start":{"date-parts":[[2016,1,1]],"date-time":"2016-01-01T00:00:00Z","timestamp":1451606400000},"content-version":"unspecified","delay-in-days":0,"URL":"http:\/\/creativecommons.org\/licenses\/by\/4.0\/"}],"content-domain":{"domain":[],"crossmark-restriction":false},"short-container-title":["Case
-        Reports in Surgery"],"published-print":{"date-parts":[[2016]]},"abstract":"<jats:p>Diverticulum
-        of the cecum is a rarely seen reason of acute abdomen and it is difficult
-        to be distinguished from appendicitis. The diagnosis is generally made during
-        operation. We have presented this case in order to remember that it is a disease
-        which should be kept in mind in cases of right lower quadrant pain.<\/jats:p>","DOI":"10.1155\/2016\/5427980","type":"journal-article","created":{"date-parts":[[2016,2,18]],"date-time":"2016-02-18T23:09:21Z","timestamp":1455836961000},"page":"1-3","source":"Crossref","is-referenced-by-count":0,"title":["Uncommon
-        Caecum Diverticulitis Mimicking Acute Appendicitis"],"prefix":"10.1155","volume":"2016","author":[{"given":"\u00d6zkan","family":"Yilmaz","sequence":"first","affiliation":[{"name":"General
-        Surgery Department, Y\u00fcz\u00fcnc\u00fc Y\u0131l University Faculty of
-        Medicine, 65090 Van, Turkey"}]},{"given":"Remzi","family":"Kiziltan","sequence":"additional","affiliation":[{"name":"General
-        Surgery Department, Y\u00fcz\u00fcnc\u00fc Y\u0131l University Faculty of
-        Medicine, 65090 Van, Turkey"}]},{"given":"Vedat","family":"Bayrak","sequence":"additional","affiliation":[{"name":"Ceyhan
-        Government Hospital, Department of General Surgery, Adana, Turkey"}]},{"given":"Sebahattin","family":"\u00c7elik","sequence":"additional","affiliation":[{"name":"General
-        Surgery Department, Y\u00fcz\u00fcnc\u00fc Y\u0131l University Faculty of
-        Medicine, 65090 Van, Turkey"}]},{"given":"Iskan","family":"\u00c7alli","sequence":"additional","affiliation":[{"name":"Van
-        Training and Research Hospital, Department of General Surgery, Van, Turkey"}]}],"member":"98","reference":[{"key":"1","first-page":"29","volume":"37","year":"1912","journal-title":"Bulletins
-        et M\u00e9moires de la Soci\u00e9t\u00e9 Anatomique de Paris"},{"key":"2","doi-asserted-by":"publisher","DOI":"10.1308\/003588406x149336"},{"key":"3","doi-asserted-by":"publisher","DOI":"10.1016\/s1072-7515(99)00043-5"},{"key":"4","doi-asserted-by":"publisher","DOI":"10.3748\/wjg.v9.i3.606"},{"key":"5","doi-asserted-by":"publisher","DOI":"10.1046\/j.1463-1318.2003.00430.x"},{"issue":"2","key":"6","first-page":"132","volume":"74","year":"2005","journal-title":"Ulster
-        Medical Journal"},{"key":"7","doi-asserted-by":"publisher","DOI":"10.1186\/1752-1947-1-132"},{"key":"8","doi-asserted-by":"publisher","DOI":"10.1007\/s004649901007"},{"key":"9","doi-asserted-by":"publisher","DOI":"10.1007\/bf02236631"},{"key":"10","doi-asserted-by":"publisher","DOI":"10.3748\/wjg.14.1981"},{"key":"11","doi-asserted-by":"publisher","DOI":"10.1007\/s00384-012-1595-3"},{"key":"12","doi-asserted-by":"publisher","DOI":"10.1016\/s0002-9610(02)01209-6"},{"issue":"11","key":"13","first-page":"875","volume":"98","year":"2006","journal-title":"Revista
-        Espanola de Enfermedades Digestivas"},{"key":"14","doi-asserted-by":"publisher","DOI":"10.1148\/radiology.208.3.9722836"},{"issue":"1","key":"15","first-page":"55","volume":"58","year":"2006","journal-title":"Chirurgia
-        Italiana"}],"container-title":["Case Reports in Surgery"],"language":"en","link":[{"URL":"http:\/\/downloads.hindawi.com\/journals\/cris\/2016\/5427980.pdf","content-type":"application\/pdf","content-version":"vor","intended-application":"text-mining"},{"URL":"http:\/\/downloads.hindawi.com\/journals\/cris\/2016\/5427980.xml","content-type":"application\/xml","content-version":"vor","intended-application":"text-mining"},{"URL":"http:\/\/downloads.hindawi.com\/journals\/cris\/2016\/5427980.pdf","content-type":"unspecified","content-version":"vor","intended-application":"similarity-checking"}],"deposited":{"date-parts":[[2016,8,18]],"date-time":"2016-08-18T21:00:11Z","timestamp":1471554011000},"score":0.0,"issued":{"date-parts":[[2016]]},"references-count":15,"alternative-id":["5427980","5427980"],"URL":"http:\/\/dx.doi.org\/10.1155\/2016\/5427980","ISSN":["2090-6900","2090-6919"],"issn-type":[{"value":"2090-6900","type":"print"},{"value":"2090-6919","type":"electronic"}],"published":{"date-parts":[[2016]]}},{"indexed":{"date-parts":[[2021,5,8]],"date-time":"2021-05-08T03:41:19Z","timestamp":1620445279578},"reference-count":18,"publisher":"Hindawi
+        Reports in Urology"],"language":"en","link":[{"URL":"http:\/\/downloads.hindawi.com\/journals\/criu\/2016\/5042456.pdf","content-type":"application\/pdf","content-version":"vor","intended-application":"text-mining"},{"URL":"http:\/\/downloads.hindawi.com\/journals\/criu\/2016\/5042456.xml","content-type":"application\/xml","content-version":"vor","intended-application":"text-mining"},{"URL":"http:\/\/downloads.hindawi.com\/journals\/criu\/2016\/5042456.pdf","content-type":"unspecified","content-version":"vor","intended-application":"similarity-checking"}],"deposited":{"date-parts":[[2016,7,26]],"date-time":"2016-07-26T15:38:41Z","timestamp":1469547521000},"score":0.0,"issued":{"date-parts":[[2016]]},"references-count":10,"alternative-id":["5042456","5042456"],"URL":"http:\/\/dx.doi.org\/10.1155\/2016\/5042456","ISSN":["2090-696X","2090-6978"],"issn-type":[{"value":"2090-696X","type":"print"},{"value":"2090-6978","type":"electronic"}],"published":{"date-parts":[[2016]]}},{"indexed":{"date-parts":[[2021,5,8]],"date-time":"2021-05-08T03:41:19Z","timestamp":1620445279578},"reference-count":18,"publisher":"Hindawi
         Limited","license":[{"start":{"date-parts":[[2016,1,1]],"date-time":"2016-01-01T00:00:00Z","timestamp":1451606400000},"content-version":"unspecified","delay-in-days":0,"URL":"http:\/\/creativecommons.org\/licenses\/by\/4.0\/"}],"funder":[{"DOI":"10.13039\/501100003329","name":"Ministerio
         de Econom\u00eda y Competitividad","doi-asserted-by":"publisher","award":["TEC2011-28302"]}],"content-domain":{"domain":[],"crossmark-restriction":false},"short-container-title":["Active
         and Passive Electronic Components"],"published-print":{"date-parts":[[2016]]},"abstract":"<jats:p>A
@@ -2869,45 +2851,7 @@ http_interactions:
         and Cellular Biology"},{"key":"23","doi-asserted-by":"publisher","DOI":"10.1242\/dev.00593"},{"key":"24","doi-asserted-by":"crossref","first-page":"179","volume":"58","year":"1993","journal-title":"Cold
         Spring Harbor Symposia on Quantitative Biology","DOI":"10.1101\/SQB.1993.058.01.022"},{"key":"25","doi-asserted-by":"publisher","DOI":"10.1038\/35012645"},{"key":"26","doi-asserted-by":"publisher","DOI":"10.1146\/annurev.neuro.23.1.217"},{"key":"27","doi-asserted-by":"publisher","DOI":"10.1126\/science.1073845"},{"issue":"5","key":"28","first-page":"767","volume":"128","year":"2001","journal-title":"Development"},{"key":"29","doi-asserted-by":"publisher","DOI":"10.1006\/mpev.2001.1021"},{"issue":"5","key":"30","doi-asserted-by":"crossref","first-page":"887","DOI":"10.1016\/0092-8674(88)90144-4","volume":"55","year":"1988","journal-title":"Cell"}],"container-title":["Stem
         Cells International"],"language":"en","link":[{"URL":"http:\/\/downloads.hindawi.com\/journals\/sci\/2010\/145183.pdf","content-type":"application\/pdf","content-version":"vor","intended-application":"text-mining"},{"URL":"http:\/\/downloads.hindawi.com\/journals\/sci\/2010\/145183.xml","content-type":"application\/xml","content-version":"vor","intended-application":"text-mining"},{"URL":"http:\/\/downloads.hindawi.com\/journals\/sci\/2010\/145183.pdf","content-type":"unspecified","content-version":"vor","intended-application":"similarity-checking"}],"deposited":{"date-parts":[[2017,6,19]],"date-time":"2017-06-19T01:47:14Z","timestamp":1497836834000},"score":0.0,"issued":{"date-parts":[[2010]]},"references-count":29,"alternative-id":["145183","145183"],"URL":"http:\/\/dx.doi.org\/10.4061\/2010\/145183","ISSN":["1687-9678"],"issn-type":[{"value":"1687-9678","type":"electronic"}],"subject":["Cell
-        Biology","Molecular Biology"],"published":{"date-parts":[[2010]]}}],"items-per-page":100,"query":{"start-index":0,"search-terms":null}}}'
-  recorded_at: 2021-08-01 15:46:54 GMT
-  recorded_with: vcr/1.0.2, webmockr/0.8.0
-- request:
-    method: get
-    uri: https://api.crossref.org/members/98/works?rows=100&cursor=DnF1ZXJ5VGhlbkZldGNoBgAAAAADId5FFmJsa3E5SWZHUmhTeDhLTW5sdDFCdVEAAAAAAcTmTxY3Q0NNek5lOFEzRzJTVmdBekhld21RAAAAAAHrrM4WdGtxZFdlbXRRbDIxQkszOHAyVGQ0dwAAAAABptIRFlBnamVIM014UUpHOUxqRjdNQXFUYXcAAAAAAyHeRhZibGtxOUlmR1JoU3g4S01ubHQxQnVRAAAAAAGxVq8WLXJtMFhXSEdUZ1NVTHVkd2VWb3QyUQ%3D%3D
-    body:
-      encoding: ''
-      string: ''
-    headers:
-      Accept-Encoding: gzip, deflate
-      Accept: application/json, text/xml, application/xml, */*
-      User-Agent: r-curl/4.3.2 crul/1.1.0 rOpenSci(rcrossref/1.1.0.94)
-      X-USER-AGENT: r-curl/4.3.2 crul/1.1.0 rOpenSci(rcrossref/1.1.0.94)
-  response:
-    status:
-      status_code: '200'
-      message: OK
-      explanation: Request fulfilled, document follows
-    headers:
-      status: HTTP/1.1 200 OK
-      date: Sun, 01 Aug 2021 15:46:38 GMT
-      content-type: application/json
-      transfer-encoding: chunked
-      access-control-allow-origin: '*'
-      access-control-allow-headers: X-Requested-With
-      vary: Accept-Encoding
-      content-encoding: gzip
-      server: Jetty(9.4.40.v20210413)
-      x-ratelimit-limit: '50'
-      x-ratelimit-interval: 1s
-      x-rate-limit-limit: '50'
-      x-rate-limit-interval: 1s
-      permissions-policy: interest-cohort=()
-      connection: close
-    body:
-      encoding: UTF-8
-      file: no
-      string: '{"status":"ok","message-type":"work-list","message-version":"1.0.0","message":{"facets":{},"next-cursor":"DnF1ZXJ5VGhlbkZldGNoBgAAAAADId5FFmJsa3E5SWZHUmhTeDhLTW5sdDFCdVEAAAAAAcTmTxY3Q0NNek5lOFEzRzJTVmdBekhld21RAAAAAAHrrM4WdGtxZFdlbXRRbDIxQkszOHAyVGQ0dwAAAAABptIRFlBnamVIM014UUpHOUxqRjdNQXFUYXcAAAAAAyHeRhZibGtxOUlmR1JoU3g4S01ubHQxQnVRAAAAAAGxVq8WLXJtMFhXSEdUZ1NVTHVkd2VWb3QyUQ==","total-results":286581,"items":[{"indexed":{"date-parts":[[2021,5,8]],"date-time":"2021-05-08T02:05:06Z","timestamp":1620439506037},"reference-count":5,"publisher":"Hindawi
+        Biology","Molecular Biology"],"published":{"date-parts":[[2010]]}},{"indexed":{"date-parts":[[2021,5,8]],"date-time":"2021-05-08T02:05:06Z","timestamp":1620439506037},"reference-count":5,"publisher":"Hindawi
         Limited","license":[{"start":{"date-parts":[[2009,1,1]],"date-time":"2009-01-01T00:00:00Z","timestamp":1230768000000},"content-version":"unspecified","delay-in-days":0,"URL":"http:\/\/creativecommons.org\/licenses\/by\/3.0\/"}],"content-domain":{"domain":[],"crossmark-restriction":false},"short-container-title":["Case
         Reports in Medicine"],"published-print":{"date-parts":[[2009]]},"abstract":"<jats:p>Polyarticular
         psoriatic arthritis is a chronic, progressive and disabling auto-immune disease
@@ -2933,7 +2877,46 @@ http_interactions:
         Department, Southport and Ormskirk Hospital NHS Trust, Liverpool University,
         PR8 6PN, UK"}]}],"member":"98","reference":[{"key":"1","doi-asserted-by":"publisher","DOI":"10.1136\/ard.2003.012500"},{"key":"2","doi-asserted-by":"publisher","DOI":"10.1136\/ard.21.4.370"},{"key":"3","doi-asserted-by":"publisher","DOI":"10.1136\/ard.54.6.532"},{"key":"4","doi-asserted-by":"publisher","DOI":"10.1126\/science.92.2378.77"},{"key":"5","doi-asserted-by":"publisher","DOI":"10.1136\/ard.56.8.497"}],"container-title":["Case
         Reports in Medicine"],"language":"en","link":[{"URL":"http:\/\/downloads.hindawi.com\/journals\/crim\/2009\/518976.pdf","content-type":"application\/pdf","content-version":"vor","intended-application":"text-mining"},{"URL":"http:\/\/downloads.hindawi.com\/journals\/crim\/2009\/518976.xml","content-type":"application\/xml","content-version":"vor","intended-application":"text-mining"},{"URL":"http:\/\/downloads.hindawi.com\/journals\/crim\/2009\/518976.pdf","content-type":"unspecified","content-version":"vor","intended-application":"similarity-checking"}],"deposited":{"date-parts":[[2016,8,11]],"date-time":"2016-08-11T13:57:15Z","timestamp":1470923835000},"score":0.0,"issued":{"date-parts":[[2009]]},"references-count":5,"alternative-id":["518976","518976"],"URL":"http:\/\/dx.doi.org\/10.1155\/2009\/518976","ISSN":["1687-9627","1687-9635"],"issn-type":[{"value":"1687-9627","type":"print"},{"value":"1687-9635","type":"electronic"}],"subject":["General
-        Medicine"],"published":{"date-parts":[[2009]]}},{"indexed":{"date-parts":[[2021,5,8]],"date-time":"2021-05-08T02:05:21Z","timestamp":1620439521048},"reference-count":17,"publisher":"Hindawi
+        Medicine"],"published":{"date-parts":[[2009]]}}],"items-per-page":100,"query":{"start-index":0,"search-terms":null}}}'
+  recorded_at: 2021-08-13 12:57:15 GMT
+  recorded_with: vcr/1.0.2, webmockr/0.8.0
+- request:
+    method: get
+    uri: https://api.crossref.org/members/98/works?rows=100&cursor=DnF1ZXJ5VGhlbkZldGNoBgAAAAACB-fuFm5mUEZvZ2pvUXZDeEI3UDFkZUg0RncAAAAAAjS7pBY3Q0NNek5lOFEzRzJTVmdBekhld21RAAAAAAJjtqUWdGtxZFdlbXRRbDIxQkszOHAyVGQ0dwAAAAACud4AFnlfU2hSRFNHUWpXbDBMX0lLSkJzTEEAAAAAA-2mfBZibGtxOUlmR1JoU3g4S01ubHQxQnVRAAAAAAIcfYsWLXJtMFhXSEdUZ1NVTHVkd2VWb3QyUQ%3D%3D
+    body:
+      encoding: ''
+      string: ''
+    headers:
+      Accept-Encoding: gzip, deflate
+      Accept: application/json, text/xml, application/xml, */*
+      User-Agent: r-curl/4.3.2 crul/1.1.0 rOpenSci(rcrossref/1.1.0.94)
+      X-USER-AGENT: r-curl/4.3.2 crul/1.1.0 rOpenSci(rcrossref/1.1.0.94)
+  response:
+    status:
+      status_code: '200'
+      message: OK
+      explanation: Request fulfilled, document follows
+    headers:
+      status: HTTP/1.1 200 OK
+      date: Fri, 13 Aug 2021 12:57:02 GMT
+      content-type: application/json
+      transfer-encoding: chunked
+      access-control-allow-origin: '*'
+      access-control-allow-headers: X-Requested-With
+      vary: Accept-Encoding
+      content-encoding: gzip
+      server: Jetty(9.4.40.v20210413)
+      x-ratelimit-limit: '50'
+      x-ratelimit-interval: 1s
+      x-api-pool: public
+      x-rate-limit-limit: '50'
+      x-rate-limit-interval: 1s
+      permissions-policy: interest-cohort=()
+      connection: close
+    body:
+      encoding: UTF-8
+      file: no
+      string: '{"status":"ok","message-type":"work-list","message-version":"1.0.0","message":{"facets":{},"next-cursor":"DnF1ZXJ5VGhlbkZldGNoBgAAAAACB-fuFm5mUEZvZ2pvUXZDeEI3UDFkZUg0RncAAAAAAjS7pBY3Q0NNek5lOFEzRzJTVmdBekhld21RAAAAAAJjtqUWdGtxZFdlbXRRbDIxQkszOHAyVGQ0dwAAAAACud4AFnlfU2hSRFNHUWpXbDBMX0lLSkJzTEEAAAAAA-2mfBZibGtxOUlmR1JoU3g4S01ubHQxQnVRAAAAAAIcfYsWLXJtMFhXSEdUZ1NVTHVkd2VWb3QyUQ==","total-results":287193,"items":[{"indexed":{"date-parts":[[2021,5,8]],"date-time":"2021-05-08T02:05:21Z","timestamp":1620439521048},"reference-count":17,"publisher":"Hindawi
         Limited","license":[{"start":{"date-parts":[[2009,1,1]],"date-time":"2009-01-01T00:00:00Z","timestamp":1230768000000},"content-version":"unspecified","delay-in-days":0,"URL":"http:\/\/creativecommons.org\/licenses\/by\/3.0\/"}],"funder":[{"DOI":"10.13039\/501100001809","name":"National
         Natural Science Foundation of China","doi-asserted-by":"publisher","award":["10701061"]}],"content-domain":{"domain":[],"crossmark-restriction":false},"short-container-title":["Discrete
         Dynamics in Nature and Society"],"published-print":{"date-parts":[[2009]]},"abstract":"<jats:p>Nonexistence
@@ -3994,12 +3977,18 @@ http_interactions:
         Molecular Genetics: A Case Study Course with Problems & Scenarios. By Jeffrey
         H. Miller. Cold Spring Harbor. 1995. 700 pages. Price $59.00cloth. ISBN 0-87969-475-0."],"prefix":"10.1155","volume":"68","author":[{"given":"Noreen","family":"Murray","sequence":"first","affiliation":[]}],"member":"98","published-online":{"date-parts":[[2009,4,14]]},"container-title":["Genetical
         Research"],"language":"en","link":[{"URL":"https:\/\/www.cambridge.org\/core\/services\/aop-cambridge-core\/content\/view\/S0016672300034091","content-type":"unspecified","content-version":"vor","intended-application":"similarity-checking"}],"deposited":{"date-parts":[[2020,12,31]],"date-time":"2020-12-31T22:44:18Z","timestamp":1609454658000},"score":0.0,"issued":{"date-parts":[[1996,10]]},"references-count":0,"journal-issue":{"issue":"2","published-print":{"date-parts":[[1996,10]]}},"alternative-id":["S0016672300034091"],"URL":"http:\/\/dx.doi.org\/10.1017\/s0016672300034091","ISSN":["0016-6723","1469-5073"],"issn-type":[{"value":"0016-6723","type":"print"},{"value":"1469-5073","type":"electronic"}],"subject":["Genetics","General
-        Medicine"],"published":{"date-parts":[[1996,10]]}}],"items-per-page":100,"query":{"start-index":0,"search-terms":null}}}'
-  recorded_at: 2021-08-01 15:46:54 GMT
+        Medicine"],"published":{"date-parts":[[1996,10]]}},{"indexed":{"date-parts":[[2021,5,8]],"date-time":"2021-05-08T01:53:46Z","timestamp":1620438826609},"reference-count":0,"publisher":"Hindawi
+        Limited","issue":"1","license":[{"start":{"date-parts":[[2009,4,14]],"date-time":"2009-04-14T00:00:00Z","timestamp":1239667200000},"content-version":"unspecified","delay-in-days":8108,"URL":"https:\/\/www.cambridge.org\/core\/terms"}],"content-domain":{"domain":[],"crossmark-restriction":false},"short-container-title":["Genet.
+        Res."],"published-print":{"date-parts":[[1987,2]]},"DOI":"10.1017\/s0016672300026781","type":"journal-article","created":{"date-parts":[[2009,9,17]],"date-time":"2009-09-17T07:37:16Z","timestamp":1253173036000},"page":"83-84","source":"Crossref","is-referenced-by-count":0,"title":["Essentials
+        of Behaviour Genetics. By David A. Hay. Blackwell Scientific Publications.
+        1985. 359 pages. \u00a315.80. ISBN 0 86793 0640"],"prefix":"10.1155","volume":"49","author":[{"given":"Aubrey","family":"Manning","sequence":"first","affiliation":[]}],"member":"98","published-online":{"date-parts":[[2009,4,14]]},"container-title":["Genetical
+        Research"],"language":"en","link":[{"URL":"https:\/\/www.cambridge.org\/core\/services\/aop-cambridge-core\/content\/view\/S0016672300026781","content-type":"unspecified","content-version":"vor","intended-application":"similarity-checking"}],"deposited":{"date-parts":[[2020,12,31]],"date-time":"2020-12-31T22:44:10Z","timestamp":1609454650000},"score":0.0,"issued":{"date-parts":[[1987,2]]},"references-count":0,"journal-issue":{"issue":"1","published-print":{"date-parts":[[1987,2]]}},"alternative-id":["S0016672300026781"],"URL":"http:\/\/dx.doi.org\/10.1017\/s0016672300026781","ISSN":["0016-6723","1469-5073"],"issn-type":[{"value":"0016-6723","type":"print"},{"value":"1469-5073","type":"electronic"}],"subject":["Genetics","General
+        Medicine"],"published":{"date-parts":[[1987,2]]}}],"items-per-page":100,"query":{"start-index":0,"search-terms":null}}}'
+  recorded_at: 2021-08-13 12:57:15 GMT
   recorded_with: vcr/1.0.2, webmockr/0.8.0
 - request:
     method: get
-    uri: https://api.crossref.org/members/98/works?rows=100&cursor=DnF1ZXJ5VGhlbkZldGNoBgAAAAADId5FFmJsa3E5SWZHUmhTeDhLTW5sdDFCdVEAAAAAAcTmTxY3Q0NNek5lOFEzRzJTVmdBekhld21RAAAAAAHrrM4WdGtxZFdlbXRRbDIxQkszOHAyVGQ0dwAAAAABptIRFlBnamVIM014UUpHOUxqRjdNQXFUYXcAAAAAAyHeRhZibGtxOUlmR1JoU3g4S01ubHQxQnVRAAAAAAGxVq8WLXJtMFhXSEdUZ1NVTHVkd2VWb3QyUQ%3D%3D
+    uri: https://api.crossref.org/members/98/works?rows=100&cursor=DnF1ZXJ5VGhlbkZldGNoBgAAAAACB-fuFm5mUEZvZ2pvUXZDeEI3UDFkZUg0RncAAAAAAjS7pBY3Q0NNek5lOFEzRzJTVmdBekhld21RAAAAAAJjtqUWdGtxZFdlbXRRbDIxQkszOHAyVGQ0dwAAAAACud4AFnlfU2hSRFNHUWpXbDBMX0lLSkJzTEEAAAAAA-2mfBZibGtxOUlmR1JoU3g4S01ubHQxQnVRAAAAAAIcfYsWLXJtMFhXSEdUZ1NVTHVkd2VWb3QyUQ%3D%3D
     body:
       encoding: ''
       string: ''
@@ -4015,7 +4004,7 @@ http_interactions:
       explanation: Request fulfilled, document follows
     headers:
       status: HTTP/1.1 200 OK
-      date: Sun, 01 Aug 2021 15:46:43 GMT
+      date: Fri, 13 Aug 2021 12:57:03 GMT
       content-type: application/json
       transfer-encoding: chunked
       access-control-allow-origin: '*'
@@ -4025,6 +4014,7 @@ http_interactions:
       server: Jetty(9.4.40.v20210413)
       x-ratelimit-limit: '50'
       x-ratelimit-interval: 1s
+      x-api-pool: public
       x-rate-limit-limit: '50'
       x-rate-limit-interval: 1s
       permissions-policy: interest-cohort=()
@@ -4032,13 +4022,7 @@ http_interactions:
     body:
       encoding: UTF-8
       file: no
-      string: '{"status":"ok","message-type":"work-list","message-version":"1.0.0","message":{"facets":{},"next-cursor":"DnF1ZXJ5VGhlbkZldGNoBgAAAAADId5FFmJsa3E5SWZHUmhTeDhLTW5sdDFCdVEAAAAAAcTmTxY3Q0NNek5lOFEzRzJTVmdBekhld21RAAAAAAHrrM4WdGtxZFdlbXRRbDIxQkszOHAyVGQ0dwAAAAABptIRFlBnamVIM014UUpHOUxqRjdNQXFUYXcAAAAAAyHeRhZibGtxOUlmR1JoU3g4S01ubHQxQnVRAAAAAAGxVq8WLXJtMFhXSEdUZ1NVTHVkd2VWb3QyUQ==","total-results":286581,"items":[{"indexed":{"date-parts":[[2021,5,8]],"date-time":"2021-05-08T01:53:46Z","timestamp":1620438826609},"reference-count":0,"publisher":"Hindawi
-        Limited","issue":"1","license":[{"start":{"date-parts":[[2009,4,14]],"date-time":"2009-04-14T00:00:00Z","timestamp":1239667200000},"content-version":"unspecified","delay-in-days":8108,"URL":"https:\/\/www.cambridge.org\/core\/terms"}],"content-domain":{"domain":[],"crossmark-restriction":false},"short-container-title":["Genet.
-        Res."],"published-print":{"date-parts":[[1987,2]]},"DOI":"10.1017\/s0016672300026781","type":"journal-article","created":{"date-parts":[[2009,9,17]],"date-time":"2009-09-17T07:37:16Z","timestamp":1253173036000},"page":"83-84","source":"Crossref","is-referenced-by-count":0,"title":["Essentials
-        of Behaviour Genetics. By David A. Hay. Blackwell Scientific Publications.
-        1985. 359 pages. \u00a315.80. ISBN 0 86793 0640"],"prefix":"10.1155","volume":"49","author":[{"given":"Aubrey","family":"Manning","sequence":"first","affiliation":[]}],"member":"98","published-online":{"date-parts":[[2009,4,14]]},"container-title":["Genetical
-        Research"],"language":"en","link":[{"URL":"https:\/\/www.cambridge.org\/core\/services\/aop-cambridge-core\/content\/view\/S0016672300026781","content-type":"unspecified","content-version":"vor","intended-application":"similarity-checking"}],"deposited":{"date-parts":[[2020,12,31]],"date-time":"2020-12-31T22:44:10Z","timestamp":1609454650000},"score":0.0,"issued":{"date-parts":[[1987,2]]},"references-count":0,"journal-issue":{"issue":"1","published-print":{"date-parts":[[1987,2]]}},"alternative-id":["S0016672300026781"],"URL":"http:\/\/dx.doi.org\/10.1017\/s0016672300026781","ISSN":["0016-6723","1469-5073"],"issn-type":[{"value":"0016-6723","type":"print"},{"value":"1469-5073","type":"electronic"}],"subject":["Genetics","General
-        Medicine"],"published":{"date-parts":[[1987,2]]}},{"indexed":{"date-parts":[[2021,5,8]],"date-time":"2021-05-08T01:53:48Z","timestamp":1620438828768},"reference-count":0,"publisher":"Hindawi
+      string: '{"status":"ok","message-type":"work-list","message-version":"1.0.0","message":{"facets":{},"next-cursor":"DnF1ZXJ5VGhlbkZldGNoBgAAAAACB-fuFm5mUEZvZ2pvUXZDeEI3UDFkZUg0RncAAAAAAjS7pBY3Q0NNek5lOFEzRzJTVmdBekhld21RAAAAAAJjtqUWdGtxZFdlbXRRbDIxQkszOHAyVGQ0dwAAAAACud4AFnlfU2hSRFNHUWpXbDBMX0lLSkJzTEEAAAAAA-2mfBZibGtxOUlmR1JoU3g4S01ubHQxQnVRAAAAAAIcfYsWLXJtMFhXSEdUZ1NVTHVkd2VWb3QyUQ==","total-results":287193,"items":[{"indexed":{"date-parts":[[2021,5,8]],"date-time":"2021-05-08T01:53:48Z","timestamp":1620438828768},"reference-count":0,"publisher":"Hindawi
         Limited","issue":"1","license":[{"start":{"date-parts":[[2009,4,14]],"date-time":"2009-04-14T00:00:00Z","timestamp":1239667200000},"content-version":"unspecified","delay-in-days":5186,"URL":"https:\/\/www.cambridge.org\/core\/terms"}],"content-domain":{"domain":[],"crossmark-restriction":false},"short-container-title":["Genet.
         Res."],"published-print":{"date-parts":[[1995,2]]},"DOI":"10.1017\/s0016672300032936","type":"journal-article","created":{"date-parts":[[2009,9,17]],"date-time":"2009-09-17T07:25:09Z","timestamp":1253172309000},"page":"f1-f2","source":"Crossref","is-referenced-by-count":0,"title":["GRH
         volume 65 issue 1 Cover and Front matter"],"prefix":"10.1155","volume":"65","member":"98","published-online":{"date-parts":[[2009,4,14]]},"container-title":["Genetical
@@ -5413,8 +5397,24 @@ http_interactions:
         UniwersytetMarii Curie-Sk\u0142odowskiej (UMCS), Lublin 20-031, Poland"}]},{"given":"Simeon","family":"Reich","sequence":"additional","affiliation":[{"name":"Department
         of Mathematics, Technion \u2013 Israel Institute of Technology, Haifa 32000,
         Israel"}]}],"member":"98","container-title":["Abstract and Applied Analysis"],"language":"en","link":[{"URL":"http:\/\/downloads.hindawi.com\/journals\/aaa\/2005\/740363.pdf","content-type":"application\/pdf","content-version":"vor","intended-application":"text-mining"},{"URL":"http:\/\/downloads.hindawi.com\/journals\/aaa\/2005\/740363.pdf","content-type":"unspecified","content-version":"vor","intended-application":"similarity-checking"}],"deposited":{"date-parts":[[2016,8,23]],"date-time":"2016-08-23T10:18:25Z","timestamp":1471947505000},"score":0.0,"issued":{"date-parts":[[2005]]},"references-count":0,"journal-issue":{"issue":"4","published-print":{"date-parts":[[2005]]}},"alternative-id":["740363"],"URL":"http:\/\/dx.doi.org\/10.1155\/aaa.2005.327","ISSN":["1085-3375","1687-0409"],"issn-type":[{"value":"1085-3375","type":"print"},{"value":"1687-0409","type":"electronic"}],"subject":["Applied
-        Mathematics","Analysis"],"published":{"date-parts":[[2005]]}}],"items-per-page":100,"query":{"start-index":0,"search-terms":null}}}'
-  recorded_at: 2021-08-01 15:46:54 GMT
+        Mathematics","Analysis"],"published":{"date-parts":[[2005]]}},{"indexed":{"date-parts":[[2021,5,11]],"date-time":"2021-05-11T21:47:05Z","timestamp":1620769625016},"reference-count":0,"publisher":"Hindawi
+        Limited","issue":"3","license":[{"start":{"date-parts":[[2005,1,1]],"date-time":"2005-01-01T00:00:00Z","timestamp":1104537600000},"content-version":"unspecified","delay-in-days":0,"URL":"http:\/\/creativecommons.org\/licenses\/by\/3.0\/"}],"content-domain":{"domain":[],"crossmark-restriction":false},"short-container-title":["Journal
+        of Applied Mathematics"],"published-print":{"date-parts":[[2005]]},"abstract":"<jats:p>The
+        plane strain problem of determining strain energy release rate, crack energy,
+        and crack-opening displacement (COD) for a moving Griffith crack at the interface
+        of two dissimilar orthotropic half-planes is considered. The problem is reduced
+        to a pair of singular integral equations of second kind which have finally
+        been solved by using Jacobi polynomials. Graphical plots of the strain energy
+        release rate, crack energy, and crack-opening displacement for the problem
+        in different particular cases are presented.<\/jats:p>","DOI":"10.1155\/jam.2005.289","type":"journal-article","created":{"date-parts":[[2005,6,30]],"date-time":"2005-06-30T16:37:50Z","timestamp":1120149470000},"page":"289-299","source":"Crossref","is-referenced-by-count":3,"title":["Moving
+        interfacial Griffith crack between bonded dissimilar media"],"prefix":"10.1155","volume":"2005","author":[{"given":"S.","family":"Mukherjee","sequence":"first","affiliation":[{"name":"Department
+        of Mathematics, B. P. Poddar Institute of Management and Technology, Poddar
+        Vihar, 137 V. I. P. Road, Calcutta 700052, West Bengal, India"}]},{"given":"S.","family":"Das","sequence":"additional","affiliation":[{"name":"Department
+        of Mathematics, B. P. Poddar Institute of Management and Technology, Poddar
+        Vihar, 137 V. I. P. Road, Calcutta 700052, West Bengal, India"}]}],"member":"98","container-title":["Journal
+        of Applied Mathematics"],"language":"en","link":[{"URL":"http:\/\/downloads.hindawi.com\/journals\/jam\/2005\/821219.pdf","content-type":"application\/pdf","content-version":"vor","intended-application":"text-mining"},{"URL":"http:\/\/downloads.hindawi.com\/journals\/jam\/2005\/821219.pdf","content-type":"unspecified","content-version":"vor","intended-application":"similarity-checking"}],"deposited":{"date-parts":[[2016,8,23]],"date-time":"2016-08-23T15:01:26Z","timestamp":1471964486000},"score":0.0,"issued":{"date-parts":[[2005]]},"references-count":0,"journal-issue":{"issue":"3","published-print":{"date-parts":[[2005]]}},"alternative-id":["821219"],"URL":"http:\/\/dx.doi.org\/10.1155\/jam.2005.289","ISSN":["1110-757X","1687-0042"],"issn-type":[{"value":"1110-757X","type":"print"},{"value":"1687-0042","type":"electronic"}],"subject":["Applied
+        Mathematics"],"published":{"date-parts":[[2005]]}}],"items-per-page":100,"query":{"start-index":0,"search-terms":null}}}'
+  recorded_at: 2021-08-13 12:57:15 GMT
   recorded_with: vcr/1.0.2, webmockr/0.8.0
 - request:
     method: get
@@ -5434,9 +5434,9 @@ http_interactions:
       explanation: Request fulfilled, document follows
     headers:
       status: HTTP/1.1 200 OK
-      date: Sun, 01 Aug 2021 15:46:45 GMT
+      date: Fri, 13 Aug 2021 12:57:09 GMT
       content-type: application/json
-      content-length: '15259'
+      content-length: '15246'
       access-control-allow-origin: '*'
       access-control-allow-headers: X-Requested-With
       vary: Accept-Encoding
@@ -5444,6 +5444,7 @@ http_interactions:
       server: Jetty(9.4.40.v20210413)
       x-ratelimit-limit: '50'
       x-ratelimit-interval: 1s
+      x-api-pool: public
       x-rate-limit-limit: '50'
       x-rate-limit-interval: 1s
       permissions-policy: interest-cohort=()
@@ -5451,7 +5452,7 @@ http_interactions:
     body:
       encoding: UTF-8
       file: no
-      string: '{"status":"ok","message-type":"work-list","message-version":"1.0.0","message":{"facets":{},"next-cursor":"DnF1ZXJ5VGhlbkZldGNoBgAAAAABogSEFm5mUEZvZ2pvUXZDeEI3UDFkZUg0RncAAAAAAbvZ6xZfeW9KekNGcFJLbVZoTE5jSTBhazR3AAAAAAHrrTUWdGtxZFdlbXRRbDIxQkszOHAyVGQ0dwAAAAABptJqFlBnamVIM014UUpHOUxqRjdNQXFUYXcAAAAAAeEf4RZ5X1NoUkRTR1FqV2wwTF9JS0pCc0xBAAAAAAGxVwgWLXJtMFhXSEdUZ1NVTHVkd2VWb3QyUQ==","total-results":616012,"items":[{"indexed":{"date-parts":[[2021,5,6]],"date-time":"2021-05-06T20:31:12Z","timestamp":1620333072340},"reference-count":0,"publisher":"American
+      string: '{"status":"ok","message-type":"work-list","message-version":"1.0.0","message":{"facets":{},"next-cursor":"DnF1ZXJ5VGhlbkZldGNoBgAAAAAD7abUFmJsa3E5SWZHUmhTeDhLTW5sdDFCdVEAAAAAAjS70xY3Q0NNek5lOFEzRzJTVmdBekhld21RAAAAAAIHtZMWWDloMXdoTzlRT3VIaEI5MmZPUkU4UQAAAAACDbv8FlBnamVIM014UUpHOUxqRjdNQXFUYXcAAAAAA-2m1RZibGtxOUlmR1JoU3g4S01ubHQxQnVRAAAAAAIcfbkWLXJtMFhXSEdUZ1NVTHVkd2VWb3QyUQ==","total-results":616235,"items":[{"indexed":{"date-parts":[[2021,5,6]],"date-time":"2021-05-06T20:31:12Z","timestamp":1620333072340},"reference-count":0,"publisher":"American
         Medical Association (AMA)","issue":"16","content-domain":{"domain":[],"crossmark-restriction":false},"short-container-title":["JAMA"],"published-print":{"date-parts":[[2006,4,26]]},"DOI":"10.1001\/jama.295.16.1889-e","type":"journal-article","created":{"date-parts":[[2006,4,25]],"date-time":"2006-04-25T16:48:24Z","timestamp":1145983704000},"page":"1889","source":"Crossref","is-referenced-by-count":0,"title":["New
         FDA Head"],"prefix":"10.1001","volume":"295","author":[{"given":"Tracy","family":"Hampton","sequence":"first","affiliation":[]}],"member":"10","container-title":["JAMA"],"language":"en","link":[{"URL":"http:\/\/jamanetwork.com\/journals\/jama\/fullarticle\/202737","content-type":"unspecified","content-version":"vor","intended-application":"similarity-checking"}],"deposited":{"date-parts":[[2016,12,15]],"date-time":"2016-12-15T13:22:14Z","timestamp":1481808134000},"score":0.0,"issued":{"date-parts":[[2006,4,26]]},"references-count":0,"journal-issue":{"issue":"16","published-print":{"date-parts":[[2006,4,26]]}},"URL":"http:\/\/dx.doi.org\/10.1001\/jama.295.16.1889-e","ISSN":["0098-7484"],"issn-type":[{"value":"0098-7484","type":"print"}],"subject":["General
         Medicine"],"published":{"date-parts":[[2006,4,26]]}},{"indexed":{"date-parts":[[2021,5,6]],"date-time":"2021-05-06T20:46:47Z","timestamp":1620334007866},"reference-count":0,"publisher":"American
@@ -5757,10 +5758,7 @@ http_interactions:
         Medicine"],"published":{"date-parts":[[2006,2,8]]}},{"indexed":{"date-parts":[[2021,5,8]],"date-time":"2021-05-08T00:37:51Z","timestamp":1620434271328},"reference-count":0,"publisher":"American
         Medical Association (AMA)","issue":"8","content-domain":{"domain":[],"crossmark-restriction":false},"short-container-title":["JAMA"],"published-print":{"date-parts":[[2006,2,22]]},"DOI":"10.1001\/jama.295.8.887-a","type":"journal-article","created":{"date-parts":[[2006,2,21]],"date-time":"2006-02-21T21:18:47Z","timestamp":1140556727000},"page":"886","source":"Crossref","is-referenced-by-count":0,"title":["Detoxification
         and Treating Opioid Dependence"],"prefix":"10.1001","volume":"295","member":"10","container-title":["JAMA"],"language":"en","link":[{"URL":"http:\/\/jamanetwork.com\/journals\/jama\/fullarticle\/202409","content-type":"unspecified","content-version":"vor","intended-application":"similarity-checking"}],"deposited":{"date-parts":[[2016,12,15]],"date-time":"2016-12-15T18:24:59Z","timestamp":1481826299000},"score":0.0,"issued":{"date-parts":[[2006,2,22]]},"references-count":0,"journal-issue":{"issue":"8","published-print":{"date-parts":[[2006,2,22]]}},"URL":"http:\/\/dx.doi.org\/10.1001\/jama.295.8.887-a","ISSN":["0098-7484"],"issn-type":[{"value":"0098-7484","type":"print"}],"subject":["General
-        Medicine"],"published":{"date-parts":[[2006,2,22]]}},{"indexed":{"date-parts":[[2021,5,8]],"date-time":"2021-05-08T00:39:18Z","timestamp":1620434358756},"reference-count":0,"publisher":"American
-        Medical Association (AMA)","issue":"7","content-domain":{"domain":[],"crossmark-restriction":false},"short-container-title":["JAMA"],"published-print":{"date-parts":[[2006,2,15]]},"DOI":"10.1001\/jama.295.7.748-c","type":"journal-article","created":{"date-parts":[[2006,2,14]],"date-time":"2006-02-14T16:23:28Z","timestamp":1139934208000},"page":"748","source":"Crossref","is-referenced-by-count":0,"title":["Vitamin
-        D and Pregnancy"],"prefix":"10.1001","volume":"295","member":"10","container-title":["JAMA"],"language":"en","link":[{"URL":"http:\/\/jamanetwork.com\/journals\/jama\/fullarticle\/202386","content-type":"unspecified","content-version":"vor","intended-application":"similarity-checking"}],"deposited":{"date-parts":[[2016,12,15]],"date-time":"2016-12-15T13:25:29Z","timestamp":1481808329000},"score":0.0,"issued":{"date-parts":[[2006,2,15]]},"references-count":0,"journal-issue":{"issue":"7","published-print":{"date-parts":[[2006,2,15]]}},"URL":"http:\/\/dx.doi.org\/10.1001\/jama.295.7.748-c","ISSN":["0098-7484"],"issn-type":[{"value":"0098-7484","type":"print"}],"subject":["General
-        Medicine"],"published":{"date-parts":[[2006,2,15]]}},{"indexed":{"date-parts":[[2021,5,8]],"date-time":"2021-05-08T00:35:47Z","timestamp":1620434147073},"reference-count":0,"publisher":"American
+        Medicine"],"published":{"date-parts":[[2006,2,22]]}},{"indexed":{"date-parts":[[2021,5,8]],"date-time":"2021-05-08T00:35:47Z","timestamp":1620434147073},"reference-count":0,"publisher":"American
         Medical Association (AMA)","issue":"1","content-domain":{"domain":[],"crossmark-restriction":false},"short-container-title":["JAMA"],"published-print":{"date-parts":[[2009,7,1]]},"DOI":"10.1001\/jama.2009.952","type":"journal-article","created":{"date-parts":[[2009,6,30]],"date-time":"2009-06-30T20:32:50Z","timestamp":1246393970000},"page":"13","source":"Crossref","is-referenced-by-count":0,"title":["The
         Quiet Storm"],"prefix":"10.1001","volume":"302","author":[{"given":"Scott
         K.","family":"Heysell","sequence":"first","affiliation":[]}],"member":"10","container-title":["JAMA"],"language":"en","deposited":{"date-parts":[[2013,8,14]],"date-time":"2013-08-14T17:11:13Z","timestamp":1376500273000},"score":0.0,"issued":{"date-parts":[[2009,7,1]]},"references-count":0,"journal-issue":{"issue":"1","published-print":{"date-parts":[[2009,7,1]]}},"URL":"http:\/\/dx.doi.org\/10.1001\/jama.2009.952","ISSN":["0098-7484"],"issn-type":[{"value":"0098-7484","type":"print"}],"subject":["General
@@ -5891,12 +5889,15 @@ http_interactions:
         Dermatol"],"published-print":{"date-parts":[[2009,7,1]]},"DOI":"10.1001\/archdermatol.2009.143-b","type":"journal-article","created":{"date-parts":[[2009,7,20]],"date-time":"2009-07-20T20:23:17Z","timestamp":1248121397000},"page":"829","source":"Crossref","is-referenced-by-count":0,"title":["Multiple
         Tender Papules in a 48-Year-Old Man\u2014Diagnosis"],"prefix":"10.1001","volume":"145","member":"10","container-title":["Archives
         of Dermatology"],"language":"en","link":[{"URL":"http:\/\/jamanetwork.com\/journals\/jamadermatology\/fullarticle\/712111","content-type":"unspecified","content-version":"vor","intended-application":"similarity-checking"}],"deposited":{"date-parts":[[2016,12,17]],"date-time":"2016-12-17T03:38:18Z","timestamp":1481945898000},"score":0.0,"issued":{"date-parts":[[2009,7,1]]},"references-count":0,"journal-issue":{"issue":"7","published-print":{"date-parts":[[2009,7,1]]}},"URL":"http:\/\/dx.doi.org\/10.1001\/archdermatol.2009.143-b","ISSN":["0003-987X"],"issn-type":[{"value":"0003-987X","type":"print"}],"subject":["Dermatology","General
-        Medicine"],"published":{"date-parts":[[2009,7,1]]}}],"items-per-page":100,"query":{"start-index":0,"search-terms":null}}}'
-  recorded_at: 2021-08-01 15:46:54 GMT
+        Medicine"],"published":{"date-parts":[[2009,7,1]]}},{"indexed":{"date-parts":[[2021,5,8]],"date-time":"2021-05-08T01:10:03Z","timestamp":1620436203190},"reference-count":0,"publisher":"American
+        Medical Association (AMA)","issue":"12","content-domain":{"domain":[],"crossmark-restriction":false},"short-container-title":["JAMA"],"published-print":{"date-parts":[[2006,3,22]]},"DOI":"10.1001\/jama.295.12.1364-c","type":"journal-article","created":{"date-parts":[[2006,3,21]],"date-time":"2006-03-21T15:29:01Z","timestamp":1142954941000},"page":"1364","source":"Crossref","is-referenced-by-count":0,"title":["Isotretinoin
+        Regulations"],"prefix":"10.1001","volume":"295","author":[{"given":"Tracy","family":"Hampton","sequence":"first","affiliation":[]}],"member":"10","container-title":["JAMA"],"language":"en","link":[{"URL":"http:\/\/jamanetwork.com\/journals\/jama\/fullarticle\/202574","content-type":"unspecified","content-version":"vor","intended-application":"similarity-checking"}],"deposited":{"date-parts":[[2016,12,15]],"date-time":"2016-12-15T18:23:33Z","timestamp":1481826213000},"score":0.0,"issued":{"date-parts":[[2006,3,22]]},"references-count":0,"journal-issue":{"issue":"12","published-print":{"date-parts":[[2006,3,22]]}},"URL":"http:\/\/dx.doi.org\/10.1001\/jama.295.12.1364-c","ISSN":["0098-7484"],"issn-type":[{"value":"0098-7484","type":"print"}],"subject":["General
+        Medicine"],"published":{"date-parts":[[2006,3,22]]}}],"items-per-page":100,"query":{"start-index":0,"search-terms":null}}}'
+  recorded_at: 2021-08-13 12:57:15 GMT
   recorded_with: vcr/1.0.2, webmockr/0.8.0
 - request:
     method: get
-    uri: https://api.crossref.org/members/10/works?rows=100&cursor=DnF1ZXJ5VGhlbkZldGNoBgAAAAABogSEFm5mUEZvZ2pvUXZDeEI3UDFkZUg0RncAAAAAAbvZ6xZfeW9KekNGcFJLbVZoTE5jSTBhazR3AAAAAAHrrTUWdGtxZFdlbXRRbDIxQkszOHAyVGQ0dwAAAAABptJqFlBnamVIM014UUpHOUxqRjdNQXFUYXcAAAAAAeEf4RZ5X1NoUkRTR1FqV2wwTF9JS0pCc0xBAAAAAAGxVwgWLXJtMFhXSEdUZ1NVTHVkd2VWb3QyUQ%3D%3D
+    uri: https://api.crossref.org/members/10/works?rows=100&cursor=DnF1ZXJ5VGhlbkZldGNoBgAAAAAD7abUFmJsa3E5SWZHUmhTeDhLTW5sdDFCdVEAAAAAAjS70xY3Q0NNek5lOFEzRzJTVmdBekhld21RAAAAAAIHtZMWWDloMXdoTzlRT3VIaEI5MmZPUkU4UQAAAAACDbv8FlBnamVIM014UUpHOUxqRjdNQXFUYXcAAAAAA-2m1RZibGtxOUlmR1JoU3g4S01ubHQxQnVRAAAAAAIcfbkWLXJtMFhXSEdUZ1NVTHVkd2VWb3QyUQ%3D%3D
     body:
       encoding: ''
       string: ''
@@ -5912,9 +5913,9 @@ http_interactions:
       explanation: Request fulfilled, document follows
     headers:
       status: HTTP/1.1 200 OK
-      date: Sun, 01 Aug 2021 15:46:46 GMT
+      date: Fri, 13 Aug 2021 12:57:10 GMT
       content-type: application/json
-      content-length: '14027'
+      content-length: '14070'
       access-control-allow-origin: '*'
       access-control-allow-headers: X-Requested-With
       vary: Accept-Encoding
@@ -5922,6 +5923,7 @@ http_interactions:
       server: Jetty(9.4.40.v20210413)
       x-ratelimit-limit: '50'
       x-ratelimit-interval: 1s
+      x-api-pool: public
       x-rate-limit-limit: '50'
       x-rate-limit-interval: 1s
       permissions-policy: interest-cohort=()
@@ -5929,10 +5931,7 @@ http_interactions:
     body:
       encoding: UTF-8
       file: no
-      string: '{"status":"ok","message-type":"work-list","message-version":"1.0.0","message":{"facets":{},"next-cursor":"DnF1ZXJ5VGhlbkZldGNoBgAAAAABogSEFm5mUEZvZ2pvUXZDeEI3UDFkZUg0RncAAAAAAbvZ6xZfeW9KekNGcFJLbVZoTE5jSTBhazR3AAAAAAHrrTUWdGtxZFdlbXRRbDIxQkszOHAyVGQ0dwAAAAABptJqFlBnamVIM014UUpHOUxqRjdNQXFUYXcAAAAAAeEf4RZ5X1NoUkRTR1FqV2wwTF9JS0pCc0xBAAAAAAGxVwgWLXJtMFhXSEdUZ1NVTHVkd2VWb3QyUQ==","total-results":616012,"items":[{"indexed":{"date-parts":[[2021,5,8]],"date-time":"2021-05-08T01:10:03Z","timestamp":1620436203190},"reference-count":0,"publisher":"American
-        Medical Association (AMA)","issue":"12","content-domain":{"domain":[],"crossmark-restriction":false},"short-container-title":["JAMA"],"published-print":{"date-parts":[[2006,3,22]]},"DOI":"10.1001\/jama.295.12.1364-c","type":"journal-article","created":{"date-parts":[[2006,3,21]],"date-time":"2006-03-21T15:29:01Z","timestamp":1142954941000},"page":"1364","source":"Crossref","is-referenced-by-count":0,"title":["Isotretinoin
-        Regulations"],"prefix":"10.1001","volume":"295","author":[{"given":"Tracy","family":"Hampton","sequence":"first","affiliation":[]}],"member":"10","container-title":["JAMA"],"language":"en","link":[{"URL":"http:\/\/jamanetwork.com\/journals\/jama\/fullarticle\/202574","content-type":"unspecified","content-version":"vor","intended-application":"similarity-checking"}],"deposited":{"date-parts":[[2016,12,15]],"date-time":"2016-12-15T18:23:33Z","timestamp":1481826213000},"score":0.0,"issued":{"date-parts":[[2006,3,22]]},"references-count":0,"journal-issue":{"issue":"12","published-print":{"date-parts":[[2006,3,22]]}},"URL":"http:\/\/dx.doi.org\/10.1001\/jama.295.12.1364-c","ISSN":["0098-7484"],"issn-type":[{"value":"0098-7484","type":"print"}],"subject":["General
-        Medicine"],"published":{"date-parts":[[2006,3,22]]}},{"indexed":{"date-parts":[[2021,5,8]],"date-time":"2021-05-08T01:10:02Z","timestamp":1620436202848},"reference-count":0,"publisher":"American
+      string: '{"status":"ok","message-type":"work-list","message-version":"1.0.0","message":{"facets":{},"next-cursor":"DnF1ZXJ5VGhlbkZldGNoBgAAAAAD7abUFmJsa3E5SWZHUmhTeDhLTW5sdDFCdVEAAAAAAjS70xY3Q0NNek5lOFEzRzJTVmdBekhld21RAAAAAAIHtZMWWDloMXdoTzlRT3VIaEI5MmZPUkU4UQAAAAACDbv8FlBnamVIM014UUpHOUxqRjdNQXFUYXcAAAAAA-2m1RZibGtxOUlmR1JoU3g4S01ubHQxQnVRAAAAAAIcfbkWLXJtMFhXSEdUZ1NVTHVkd2VWb3QyUQ==","total-results":616235,"items":[{"indexed":{"date-parts":[[2021,5,8]],"date-time":"2021-05-08T01:10:02Z","timestamp":1620436202848},"reference-count":0,"publisher":"American
         Medical Association (AMA)","issue":"7","content-domain":{"domain":[],"crossmark-restriction":false},"short-container-title":["Arch
         Dermatol"],"published-print":{"date-parts":[[2009,7,1]]},"DOI":"10.1001\/archdermatol.2009.145.780","type":"journal-article","created":{"date-parts":[[2009,7,20]],"date-time":"2009-07-20T20:23:17Z","timestamp":1248121397000},"source":"Crossref","is-referenced-by-count":0,"title":["Notable
         Notes"],"prefix":"10.1001","volume":"145","author":[{"given":"June","family":"K.
@@ -6368,8 +6367,11 @@ http_interactions:
         Medicine"],"published":{"date-parts":[[2009,8,12]]}},{"indexed":{"date-parts":[[2021,5,8]],"date-time":"2021-05-08T01:23:34Z","timestamp":1620437014708},"reference-count":0,"publisher":"American
         Medical Association (AMA)","issue":"6","content-domain":{"domain":[],"crossmark-restriction":false},"short-container-title":["JAMA"],"published-print":{"date-parts":[[2009,8,12]]},"DOI":"10.1001\/jama.2009.1055","type":"journal-article","created":{"date-parts":[[2009,8,11]],"date-time":"2009-08-11T16:22:46Z","timestamp":1250007766000},"page":"607","source":"Crossref","is-referenced-by-count":0,"title":["Heat
         of the Night"],"prefix":"10.1001","volume":"302","author":[{"given":"John","family":"Savoie","sequence":"first","affiliation":[]}],"member":"10","container-title":["JAMA"],"language":"en","deposited":{"date-parts":[[2013,8,14]],"date-time":"2013-08-14T13:12:30Z","timestamp":1376485950000},"score":0.0,"issued":{"date-parts":[[2009,8,12]]},"references-count":0,"journal-issue":{"issue":"6","published-print":{"date-parts":[[2009,8,12]]}},"URL":"http:\/\/dx.doi.org\/10.1001\/jama.2009.1055","ISSN":["0098-7484"],"issn-type":[{"value":"0098-7484","type":"print"}],"subject":["General
-        Medicine"],"published":{"date-parts":[[2009,8,12]]}}],"items-per-page":100,"query":{"start-index":0,"search-terms":null}}}'
-  recorded_at: 2021-08-01 15:46:55 GMT
+        Medicine"],"published":{"date-parts":[[2009,8,12]]}},{"indexed":{"date-parts":[[2021,5,8]],"date-time":"2021-05-08T01:24:04Z","timestamp":1620437044882},"reference-count":0,"publisher":"American
+        Medical Association (AMA)","issue":"11","content-domain":{"domain":[],"crossmark-restriction":false},"short-container-title":["JAMA"],"published-print":{"date-parts":[[1966,12,12]]},"DOI":"10.1001\/jama.1966.03110240136063","type":"journal-article","created":{"date-parts":[[2009,8,11]],"date-time":"2009-08-11T04:48:01Z","timestamp":1249966081000},"page":"1228","source":"Crossref","is-referenced-by-count":0,"title":["Commentary"],"prefix":"10.1001","volume":"198","member":"10","container-title":["JAMA:
+        The Journal of the American Medical Association"],"language":"en","link":[{"URL":"http:\/\/jamanetwork.com\/journals\/jama\/fullarticle\/662686","content-type":"unspecified","content-version":"vor","intended-application":"similarity-checking"}],"deposited":{"date-parts":[[2016,12,15]],"date-time":"2016-12-15T22:45:51Z","timestamp":1481841951000},"score":0.0,"issued":{"date-parts":[[1966,12,12]]},"references-count":0,"journal-issue":{"issue":"11","published-print":{"date-parts":[[1966,12,12]]}},"URL":"http:\/\/dx.doi.org\/10.1001\/jama.1966.03110240136063","ISSN":["0098-7484"],"issn-type":[{"value":"0098-7484","type":"print"}],"subject":["General
+        Medicine"],"published":{"date-parts":[[1966,12,12]]}}],"items-per-page":100,"query":{"start-index":0,"search-terms":null}}}'
+  recorded_at: 2021-08-13 12:57:15 GMT
   recorded_with: vcr/1.0.2, webmockr/0.8.0
 - request:
     method: get
@@ -6389,7 +6391,7 @@ http_interactions:
       explanation: Request fulfilled, document follows
     headers:
       status: HTTP/1.1 200 OK
-      date: Sun, 01 Aug 2021 15:46:48 GMT
+      date: Fri, 13 Aug 2021 12:57:11 GMT
       content-type: application/json
       transfer-encoding: chunked
       access-control-allow-origin: '*'
@@ -6399,6 +6401,7 @@ http_interactions:
       server: Jetty(9.4.40.v20210413)
       x-ratelimit-limit: '50'
       x-ratelimit-interval: 1s
+      x-api-pool: public
       x-rate-limit-limit: '50'
       x-rate-limit-interval: 1s
       permissions-policy: interest-cohort=()
@@ -6406,7 +6409,7 @@ http_interactions:
     body:
       encoding: UTF-8
       file: no
-      string: '{"status":"ok","message-type":"work-list","message-version":"1.0.0","message":{"facets":{},"next-cursor":"DnF1ZXJ5VGhlbkZldGNoBgAAAAABogSNFm5mUEZvZ2pvUXZDeEI3UDFkZUg0RncAAAAAAbvZ9RZfeW9KekNGcFJLbVZoTE5jSTBhazR3AAAAAAGh0D4WWDloMXdoTzlRT3VIaEI5MmZPUkU4UQAAAAABptJ0FlBnamVIM014UUpHOUxqRjdNQXFUYXcAAAAAAeEf9BZ5X1NoUkRTR1FqV2wwTF9JS0pCc0xBAAAAAAMnlPwWZjl2cmtrRUhSQnFFbnZ5NTBIa2RRUQ==","total-results":286581,"items":[{"indexed":{"date-parts":[[2021,5,6]],"date-time":"2021-05-06T20:41:20Z","timestamp":1620333680846},"reference-count":13,"publisher":"Hindawi
+      string: '{"status":"ok","message-type":"work-list","message-version":"1.0.0","message":{"facets":{},"next-cursor":"DnF1ZXJ5VGhlbkZldGNoBgAAAAAD7abyFmJsa3E5SWZHUmhTeDhLTW5sdDFCdVEAAAAAAiuxRhZfeW9KekNGcFJLbVZoTE5jSTBhazR3AAAAAAJjtvEWdGtxZFdlbXRRbDIxQkszOHAyVGQ0dwAAAAACDbwNFlBnamVIM014UUpHOUxqRjdNQXFUYXcAAAAAArneghZ5X1NoUkRTR1FqV2wwTF9JS0pCc0xBAAAAAAOOhsoWZjl2cmtrRUhSQnFFbnZ5NTBIa2RRUQ==","total-results":287193,"items":[{"indexed":{"date-parts":[[2021,5,6]],"date-time":"2021-05-06T20:41:20Z","timestamp":1620333680846},"reference-count":13,"publisher":"Hindawi
         Limited","license":[{"start":{"date-parts":[[2006,5,2]],"date-time":"2006-05-02T00:00:00Z","timestamp":1146528000000},"content-version":"unspecified","delay-in-days":0,"URL":"http:\/\/creativecommons.org\/licenses\/by\/3.0\/"}],"funder":[{"DOI":"10.13039\/501100000923","name":"Australian
         Research Council","doi-asserted-by":"publisher","award":["C 0010 6980"]}],"content-domain":{"domain":[],"crossmark-restriction":false},"short-container-title":["Journal
         of Applied Mathematics and Stochastic Analysis"],"published-print":{"date-parts":[[2006,5,2]]},"abstract":"<jats:p>We
@@ -7618,26 +7621,7 @@ http_interactions:
         University, Chiang Mai 50200, Thailand"}]}],"member":"98","reference":[{"issue":"2","key":"1","first-page":"109","volume":"2","year":"1982","journal-title":"Morphologia
         Medica"},{"key":"2","doi-asserted-by":"publisher","DOI":"10.1055\/s-0030-1247252"},{"key":"3","doi-asserted-by":"publisher","DOI":"10.1186\/1757-1626-1-320"},{"issue":"5","key":"4","first-page":"224","volume":"25","year":"1985","journal-title":"Radiologe"},{"key":"5","doi-asserted-by":"publisher","DOI":"10.1023\/a:1017502404191"},{"key":"6","doi-asserted-by":"publisher","DOI":"10.1007\/s00270-004-0006-8"},{"key":"7","doi-asserted-by":"publisher","DOI":"10.1097\/00005373-199307000-00003"},{"key":"8","first-page":"361","volume":"56","year":"1989","journal-title":"Helvetica
         Chirurgica Acta"},{"key":"9","doi-asserted-by":"publisher","DOI":"10.1007\/s00404-008-0817-y"},{"key":"10","doi-asserted-by":"publisher","DOI":"10.1016\/j.jvs.2008.05.067"}],"container-title":["Case
-        Reports in Urology"],"language":"en","link":[{"URL":"http:\/\/downloads.hindawi.com\/journals\/criu\/2016\/5042456.pdf","content-type":"application\/pdf","content-version":"vor","intended-application":"text-mining"},{"URL":"http:\/\/downloads.hindawi.com\/journals\/criu\/2016\/5042456.xml","content-type":"application\/xml","content-version":"vor","intended-application":"text-mining"},{"URL":"http:\/\/downloads.hindawi.com\/journals\/criu\/2016\/5042456.pdf","content-type":"unspecified","content-version":"vor","intended-application":"similarity-checking"}],"deposited":{"date-parts":[[2016,7,26]],"date-time":"2016-07-26T15:38:41Z","timestamp":1469547521000},"score":0.0,"issued":{"date-parts":[[2016]]},"references-count":10,"alternative-id":["5042456","5042456"],"URL":"http:\/\/dx.doi.org\/10.1155\/2016\/5042456","ISSN":["2090-696X","2090-6978"],"issn-type":[{"value":"2090-696X","type":"print"},{"value":"2090-6978","type":"electronic"}],"published":{"date-parts":[[2016]]}},{"indexed":{"date-parts":[[2021,5,8]],"date-time":"2021-05-08T03:40:31Z","timestamp":1620445231033},"reference-count":15,"publisher":"Hindawi
-        Limited","license":[{"start":{"date-parts":[[2016,1,1]],"date-time":"2016-01-01T00:00:00Z","timestamp":1451606400000},"content-version":"unspecified","delay-in-days":0,"URL":"http:\/\/creativecommons.org\/licenses\/by\/4.0\/"}],"content-domain":{"domain":[],"crossmark-restriction":false},"short-container-title":["Case
-        Reports in Surgery"],"published-print":{"date-parts":[[2016]]},"abstract":"<jats:p>Diverticulum
-        of the cecum is a rarely seen reason of acute abdomen and it is difficult
-        to be distinguished from appendicitis. The diagnosis is generally made during
-        operation. We have presented this case in order to remember that it is a disease
-        which should be kept in mind in cases of right lower quadrant pain.<\/jats:p>","DOI":"10.1155\/2016\/5427980","type":"journal-article","created":{"date-parts":[[2016,2,18]],"date-time":"2016-02-18T23:09:21Z","timestamp":1455836961000},"page":"1-3","source":"Crossref","is-referenced-by-count":0,"title":["Uncommon
-        Caecum Diverticulitis Mimicking Acute Appendicitis"],"prefix":"10.1155","volume":"2016","author":[{"given":"\u00d6zkan","family":"Yilmaz","sequence":"first","affiliation":[{"name":"General
-        Surgery Department, Y\u00fcz\u00fcnc\u00fc Y\u0131l University Faculty of
-        Medicine, 65090 Van, Turkey"}]},{"given":"Remzi","family":"Kiziltan","sequence":"additional","affiliation":[{"name":"General
-        Surgery Department, Y\u00fcz\u00fcnc\u00fc Y\u0131l University Faculty of
-        Medicine, 65090 Van, Turkey"}]},{"given":"Vedat","family":"Bayrak","sequence":"additional","affiliation":[{"name":"Ceyhan
-        Government Hospital, Department of General Surgery, Adana, Turkey"}]},{"given":"Sebahattin","family":"\u00c7elik","sequence":"additional","affiliation":[{"name":"General
-        Surgery Department, Y\u00fcz\u00fcnc\u00fc Y\u0131l University Faculty of
-        Medicine, 65090 Van, Turkey"}]},{"given":"Iskan","family":"\u00c7alli","sequence":"additional","affiliation":[{"name":"Van
-        Training and Research Hospital, Department of General Surgery, Van, Turkey"}]}],"member":"98","reference":[{"key":"1","first-page":"29","volume":"37","year":"1912","journal-title":"Bulletins
-        et M\u00e9moires de la Soci\u00e9t\u00e9 Anatomique de Paris"},{"key":"2","doi-asserted-by":"publisher","DOI":"10.1308\/003588406x149336"},{"key":"3","doi-asserted-by":"publisher","DOI":"10.1016\/s1072-7515(99)00043-5"},{"key":"4","doi-asserted-by":"publisher","DOI":"10.3748\/wjg.v9.i3.606"},{"key":"5","doi-asserted-by":"publisher","DOI":"10.1046\/j.1463-1318.2003.00430.x"},{"issue":"2","key":"6","first-page":"132","volume":"74","year":"2005","journal-title":"Ulster
-        Medical Journal"},{"key":"7","doi-asserted-by":"publisher","DOI":"10.1186\/1752-1947-1-132"},{"key":"8","doi-asserted-by":"publisher","DOI":"10.1007\/s004649901007"},{"key":"9","doi-asserted-by":"publisher","DOI":"10.1007\/bf02236631"},{"key":"10","doi-asserted-by":"publisher","DOI":"10.3748\/wjg.14.1981"},{"key":"11","doi-asserted-by":"publisher","DOI":"10.1007\/s00384-012-1595-3"},{"key":"12","doi-asserted-by":"publisher","DOI":"10.1016\/s0002-9610(02)01209-6"},{"issue":"11","key":"13","first-page":"875","volume":"98","year":"2006","journal-title":"Revista
-        Espanola de Enfermedades Digestivas"},{"key":"14","doi-asserted-by":"publisher","DOI":"10.1148\/radiology.208.3.9722836"},{"issue":"1","key":"15","first-page":"55","volume":"58","year":"2006","journal-title":"Chirurgia
-        Italiana"}],"container-title":["Case Reports in Surgery"],"language":"en","link":[{"URL":"http:\/\/downloads.hindawi.com\/journals\/cris\/2016\/5427980.pdf","content-type":"application\/pdf","content-version":"vor","intended-application":"text-mining"},{"URL":"http:\/\/downloads.hindawi.com\/journals\/cris\/2016\/5427980.xml","content-type":"application\/xml","content-version":"vor","intended-application":"text-mining"},{"URL":"http:\/\/downloads.hindawi.com\/journals\/cris\/2016\/5427980.pdf","content-type":"unspecified","content-version":"vor","intended-application":"similarity-checking"}],"deposited":{"date-parts":[[2016,8,18]],"date-time":"2016-08-18T21:00:11Z","timestamp":1471554011000},"score":0.0,"issued":{"date-parts":[[2016]]},"references-count":15,"alternative-id":["5427980","5427980"],"URL":"http:\/\/dx.doi.org\/10.1155\/2016\/5427980","ISSN":["2090-6900","2090-6919"],"issn-type":[{"value":"2090-6900","type":"print"},{"value":"2090-6919","type":"electronic"}],"published":{"date-parts":[[2016]]}},{"indexed":{"date-parts":[[2021,5,8]],"date-time":"2021-05-08T03:41:19Z","timestamp":1620445279578},"reference-count":18,"publisher":"Hindawi
+        Reports in Urology"],"language":"en","link":[{"URL":"http:\/\/downloads.hindawi.com\/journals\/criu\/2016\/5042456.pdf","content-type":"application\/pdf","content-version":"vor","intended-application":"text-mining"},{"URL":"http:\/\/downloads.hindawi.com\/journals\/criu\/2016\/5042456.xml","content-type":"application\/xml","content-version":"vor","intended-application":"text-mining"},{"URL":"http:\/\/downloads.hindawi.com\/journals\/criu\/2016\/5042456.pdf","content-type":"unspecified","content-version":"vor","intended-application":"similarity-checking"}],"deposited":{"date-parts":[[2016,7,26]],"date-time":"2016-07-26T15:38:41Z","timestamp":1469547521000},"score":0.0,"issued":{"date-parts":[[2016]]},"references-count":10,"alternative-id":["5042456","5042456"],"URL":"http:\/\/dx.doi.org\/10.1155\/2016\/5042456","ISSN":["2090-696X","2090-6978"],"issn-type":[{"value":"2090-696X","type":"print"},{"value":"2090-6978","type":"electronic"}],"published":{"date-parts":[[2016]]}},{"indexed":{"date-parts":[[2021,5,8]],"date-time":"2021-05-08T03:41:19Z","timestamp":1620445279578},"reference-count":18,"publisher":"Hindawi
         Limited","license":[{"start":{"date-parts":[[2016,1,1]],"date-time":"2016-01-01T00:00:00Z","timestamp":1451606400000},"content-version":"unspecified","delay-in-days":0,"URL":"http:\/\/creativecommons.org\/licenses\/by\/4.0\/"}],"funder":[{"DOI":"10.13039\/501100003329","name":"Ministerio
         de Econom\u00eda y Competitividad","doi-asserted-by":"publisher","award":["TEC2011-28302"]}],"content-domain":{"domain":[],"crossmark-restriction":false},"short-container-title":["Active
         and Passive Electronic Components"],"published-print":{"date-parts":[[2016]]},"abstract":"<jats:p>A
@@ -9241,45 +9225,7 @@ http_interactions:
         and Cellular Biology"},{"key":"23","doi-asserted-by":"publisher","DOI":"10.1242\/dev.00593"},{"key":"24","doi-asserted-by":"crossref","first-page":"179","volume":"58","year":"1993","journal-title":"Cold
         Spring Harbor Symposia on Quantitative Biology","DOI":"10.1101\/SQB.1993.058.01.022"},{"key":"25","doi-asserted-by":"publisher","DOI":"10.1038\/35012645"},{"key":"26","doi-asserted-by":"publisher","DOI":"10.1146\/annurev.neuro.23.1.217"},{"key":"27","doi-asserted-by":"publisher","DOI":"10.1126\/science.1073845"},{"issue":"5","key":"28","first-page":"767","volume":"128","year":"2001","journal-title":"Development"},{"key":"29","doi-asserted-by":"publisher","DOI":"10.1006\/mpev.2001.1021"},{"issue":"5","key":"30","doi-asserted-by":"crossref","first-page":"887","DOI":"10.1016\/0092-8674(88)90144-4","volume":"55","year":"1988","journal-title":"Cell"}],"container-title":["Stem
         Cells International"],"language":"en","link":[{"URL":"http:\/\/downloads.hindawi.com\/journals\/sci\/2010\/145183.pdf","content-type":"application\/pdf","content-version":"vor","intended-application":"text-mining"},{"URL":"http:\/\/downloads.hindawi.com\/journals\/sci\/2010\/145183.xml","content-type":"application\/xml","content-version":"vor","intended-application":"text-mining"},{"URL":"http:\/\/downloads.hindawi.com\/journals\/sci\/2010\/145183.pdf","content-type":"unspecified","content-version":"vor","intended-application":"similarity-checking"}],"deposited":{"date-parts":[[2017,6,19]],"date-time":"2017-06-19T01:47:14Z","timestamp":1497836834000},"score":0.0,"issued":{"date-parts":[[2010]]},"references-count":29,"alternative-id":["145183","145183"],"URL":"http:\/\/dx.doi.org\/10.4061\/2010\/145183","ISSN":["1687-9678"],"issn-type":[{"value":"1687-9678","type":"electronic"}],"subject":["Cell
-        Biology","Molecular Biology"],"published":{"date-parts":[[2010]]}}],"items-per-page":100,"query":{"start-index":0,"search-terms":null}}}'
-  recorded_at: 2021-08-01 15:46:55 GMT
-  recorded_with: vcr/1.0.2, webmockr/0.8.0
-- request:
-    method: get
-    uri: https://api.crossref.org/members/98/works?rows=100&cursor=DnF1ZXJ5VGhlbkZldGNoBgAAAAABogSNFm5mUEZvZ2pvUXZDeEI3UDFkZUg0RncAAAAAAbvZ9RZfeW9KekNGcFJLbVZoTE5jSTBhazR3AAAAAAGh0D4WWDloMXdoTzlRT3VIaEI5MmZPUkU4UQAAAAABptJ0FlBnamVIM014UUpHOUxqRjdNQXFUYXcAAAAAAeEf9BZ5X1NoUkRTR1FqV2wwTF9JS0pCc0xBAAAAAAMnlPwWZjl2cmtrRUhSQnFFbnZ5NTBIa2RRUQ%3D%3D
-    body:
-      encoding: ''
-      string: ''
-    headers:
-      Accept-Encoding: gzip, deflate
-      Accept: application/json, text/xml, application/xml, */*
-      User-Agent: r-curl/4.3.2 crul/1.1.0 rOpenSci(rcrossref/1.1.0.94)
-      X-USER-AGENT: r-curl/4.3.2 crul/1.1.0 rOpenSci(rcrossref/1.1.0.94)
-  response:
-    status:
-      status_code: '200'
-      message: OK
-      explanation: Request fulfilled, document follows
-    headers:
-      status: HTTP/1.1 200 OK
-      date: Sun, 01 Aug 2021 15:46:53 GMT
-      content-type: application/json
-      transfer-encoding: chunked
-      access-control-allow-origin: '*'
-      access-control-allow-headers: X-Requested-With
-      vary: Accept-Encoding
-      content-encoding: gzip
-      server: Jetty(9.4.40.v20210413)
-      x-ratelimit-limit: '50'
-      x-ratelimit-interval: 1s
-      x-rate-limit-limit: '50'
-      x-rate-limit-interval: 1s
-      permissions-policy: interest-cohort=()
-      connection: close
-    body:
-      encoding: UTF-8
-      file: no
-      string: '{"status":"ok","message-type":"work-list","message-version":"1.0.0","message":{"facets":{},"next-cursor":"DnF1ZXJ5VGhlbkZldGNoBgAAAAABogSNFm5mUEZvZ2pvUXZDeEI3UDFkZUg0RncAAAAAAbvZ9RZfeW9KekNGcFJLbVZoTE5jSTBhazR3AAAAAAGh0D4WWDloMXdoTzlRT3VIaEI5MmZPUkU4UQAAAAABptJ0FlBnamVIM014UUpHOUxqRjdNQXFUYXcAAAAAAeEf9BZ5X1NoUkRTR1FqV2wwTF9JS0pCc0xBAAAAAAMnlPwWZjl2cmtrRUhSQnFFbnZ5NTBIa2RRUQ==","total-results":286581,"items":[{"indexed":{"date-parts":[[2021,5,8]],"date-time":"2021-05-08T02:05:06Z","timestamp":1620439506037},"reference-count":5,"publisher":"Hindawi
+        Biology","Molecular Biology"],"published":{"date-parts":[[2010]]}},{"indexed":{"date-parts":[[2021,5,8]],"date-time":"2021-05-08T02:05:06Z","timestamp":1620439506037},"reference-count":5,"publisher":"Hindawi
         Limited","license":[{"start":{"date-parts":[[2009,1,1]],"date-time":"2009-01-01T00:00:00Z","timestamp":1230768000000},"content-version":"unspecified","delay-in-days":0,"URL":"http:\/\/creativecommons.org\/licenses\/by\/3.0\/"}],"content-domain":{"domain":[],"crossmark-restriction":false},"short-container-title":["Case
         Reports in Medicine"],"published-print":{"date-parts":[[2009]]},"abstract":"<jats:p>Polyarticular
         psoriatic arthritis is a chronic, progressive and disabling auto-immune disease
@@ -9305,7 +9251,46 @@ http_interactions:
         Department, Southport and Ormskirk Hospital NHS Trust, Liverpool University,
         PR8 6PN, UK"}]}],"member":"98","reference":[{"key":"1","doi-asserted-by":"publisher","DOI":"10.1136\/ard.2003.012500"},{"key":"2","doi-asserted-by":"publisher","DOI":"10.1136\/ard.21.4.370"},{"key":"3","doi-asserted-by":"publisher","DOI":"10.1136\/ard.54.6.532"},{"key":"4","doi-asserted-by":"publisher","DOI":"10.1126\/science.92.2378.77"},{"key":"5","doi-asserted-by":"publisher","DOI":"10.1136\/ard.56.8.497"}],"container-title":["Case
         Reports in Medicine"],"language":"en","link":[{"URL":"http:\/\/downloads.hindawi.com\/journals\/crim\/2009\/518976.pdf","content-type":"application\/pdf","content-version":"vor","intended-application":"text-mining"},{"URL":"http:\/\/downloads.hindawi.com\/journals\/crim\/2009\/518976.xml","content-type":"application\/xml","content-version":"vor","intended-application":"text-mining"},{"URL":"http:\/\/downloads.hindawi.com\/journals\/crim\/2009\/518976.pdf","content-type":"unspecified","content-version":"vor","intended-application":"similarity-checking"}],"deposited":{"date-parts":[[2016,8,11]],"date-time":"2016-08-11T13:57:15Z","timestamp":1470923835000},"score":0.0,"issued":{"date-parts":[[2009]]},"references-count":5,"alternative-id":["518976","518976"],"URL":"http:\/\/dx.doi.org\/10.1155\/2009\/518976","ISSN":["1687-9627","1687-9635"],"issn-type":[{"value":"1687-9627","type":"print"},{"value":"1687-9635","type":"electronic"}],"subject":["General
-        Medicine"],"published":{"date-parts":[[2009]]}},{"indexed":{"date-parts":[[2021,5,8]],"date-time":"2021-05-08T02:05:21Z","timestamp":1620439521048},"reference-count":17,"publisher":"Hindawi
+        Medicine"],"published":{"date-parts":[[2009]]}}],"items-per-page":100,"query":{"start-index":0,"search-terms":null}}}'
+  recorded_at: 2021-08-13 12:57:15 GMT
+  recorded_with: vcr/1.0.2, webmockr/0.8.0
+- request:
+    method: get
+    uri: https://api.crossref.org/members/98/works?rows=100&cursor=DnF1ZXJ5VGhlbkZldGNoBgAAAAAD7abyFmJsa3E5SWZHUmhTeDhLTW5sdDFCdVEAAAAAAiuxRhZfeW9KekNGcFJLbVZoTE5jSTBhazR3AAAAAAJjtvEWdGtxZFdlbXRRbDIxQkszOHAyVGQ0dwAAAAACDbwNFlBnamVIM014UUpHOUxqRjdNQXFUYXcAAAAAArneghZ5X1NoUkRTR1FqV2wwTF9JS0pCc0xBAAAAAAOOhsoWZjl2cmtrRUhSQnFFbnZ5NTBIa2RRUQ%3D%3D
+    body:
+      encoding: ''
+      string: ''
+    headers:
+      Accept-Encoding: gzip, deflate
+      Accept: application/json, text/xml, application/xml, */*
+      User-Agent: r-curl/4.3.2 crul/1.1.0 rOpenSci(rcrossref/1.1.0.94)
+      X-USER-AGENT: r-curl/4.3.2 crul/1.1.0 rOpenSci(rcrossref/1.1.0.94)
+  response:
+    status:
+      status_code: '200'
+      message: OK
+      explanation: Request fulfilled, document follows
+    headers:
+      status: HTTP/1.1 200 OK
+      date: Fri, 13 Aug 2021 12:57:13 GMT
+      content-type: application/json
+      transfer-encoding: chunked
+      access-control-allow-origin: '*'
+      access-control-allow-headers: X-Requested-With
+      vary: Accept-Encoding
+      content-encoding: gzip
+      server: Jetty(9.4.40.v20210413)
+      x-ratelimit-limit: '50'
+      x-ratelimit-interval: 1s
+      x-api-pool: public
+      x-rate-limit-limit: '50'
+      x-rate-limit-interval: 1s
+      permissions-policy: interest-cohort=()
+      connection: close
+    body:
+      encoding: UTF-8
+      file: no
+      string: '{"status":"ok","message-type":"work-list","message-version":"1.0.0","message":{"facets":{},"next-cursor":"DnF1ZXJ5VGhlbkZldGNoBgAAAAAD7abyFmJsa3E5SWZHUmhTeDhLTW5sdDFCdVEAAAAAAiuxRhZfeW9KekNGcFJLbVZoTE5jSTBhazR3AAAAAAJjtvEWdGtxZFdlbXRRbDIxQkszOHAyVGQ0dwAAAAACDbwNFlBnamVIM014UUpHOUxqRjdNQXFUYXcAAAAAArneghZ5X1NoUkRTR1FqV2wwTF9JS0pCc0xBAAAAAAOOhsoWZjl2cmtrRUhSQnFFbnZ5NTBIa2RRUQ==","total-results":287193,"items":[{"indexed":{"date-parts":[[2021,5,8]],"date-time":"2021-05-08T02:05:21Z","timestamp":1620439521048},"reference-count":17,"publisher":"Hindawi
         Limited","license":[{"start":{"date-parts":[[2009,1,1]],"date-time":"2009-01-01T00:00:00Z","timestamp":1230768000000},"content-version":"unspecified","delay-in-days":0,"URL":"http:\/\/creativecommons.org\/licenses\/by\/3.0\/"}],"funder":[{"DOI":"10.13039\/501100001809","name":"National
         Natural Science Foundation of China","doi-asserted-by":"publisher","award":["10701061"]}],"content-domain":{"domain":[],"crossmark-restriction":false},"short-container-title":["Discrete
         Dynamics in Nature and Society"],"published-print":{"date-parts":[[2009]]},"abstract":"<jats:p>Nonexistence
@@ -10366,6 +10351,12 @@ http_interactions:
         Molecular Genetics: A Case Study Course with Problems & Scenarios. By Jeffrey
         H. Miller. Cold Spring Harbor. 1995. 700 pages. Price $59.00cloth. ISBN 0-87969-475-0."],"prefix":"10.1155","volume":"68","author":[{"given":"Noreen","family":"Murray","sequence":"first","affiliation":[]}],"member":"98","published-online":{"date-parts":[[2009,4,14]]},"container-title":["Genetical
         Research"],"language":"en","link":[{"URL":"https:\/\/www.cambridge.org\/core\/services\/aop-cambridge-core\/content\/view\/S0016672300034091","content-type":"unspecified","content-version":"vor","intended-application":"similarity-checking"}],"deposited":{"date-parts":[[2020,12,31]],"date-time":"2020-12-31T22:44:18Z","timestamp":1609454658000},"score":0.0,"issued":{"date-parts":[[1996,10]]},"references-count":0,"journal-issue":{"issue":"2","published-print":{"date-parts":[[1996,10]]}},"alternative-id":["S0016672300034091"],"URL":"http:\/\/dx.doi.org\/10.1017\/s0016672300034091","ISSN":["0016-6723","1469-5073"],"issn-type":[{"value":"0016-6723","type":"print"},{"value":"1469-5073","type":"electronic"}],"subject":["Genetics","General
-        Medicine"],"published":{"date-parts":[[1996,10]]}}],"items-per-page":100,"query":{"start-index":0,"search-terms":null}}}'
-  recorded_at: 2021-08-01 15:46:55 GMT
+        Medicine"],"published":{"date-parts":[[1996,10]]}},{"indexed":{"date-parts":[[2021,5,8]],"date-time":"2021-05-08T01:53:46Z","timestamp":1620438826609},"reference-count":0,"publisher":"Hindawi
+        Limited","issue":"1","license":[{"start":{"date-parts":[[2009,4,14]],"date-time":"2009-04-14T00:00:00Z","timestamp":1239667200000},"content-version":"unspecified","delay-in-days":8108,"URL":"https:\/\/www.cambridge.org\/core\/terms"}],"content-domain":{"domain":[],"crossmark-restriction":false},"short-container-title":["Genet.
+        Res."],"published-print":{"date-parts":[[1987,2]]},"DOI":"10.1017\/s0016672300026781","type":"journal-article","created":{"date-parts":[[2009,9,17]],"date-time":"2009-09-17T07:37:16Z","timestamp":1253173036000},"page":"83-84","source":"Crossref","is-referenced-by-count":0,"title":["Essentials
+        of Behaviour Genetics. By David A. Hay. Blackwell Scientific Publications.
+        1985. 359 pages. \u00a315.80. ISBN 0 86793 0640"],"prefix":"10.1155","volume":"49","author":[{"given":"Aubrey","family":"Manning","sequence":"first","affiliation":[]}],"member":"98","published-online":{"date-parts":[[2009,4,14]]},"container-title":["Genetical
+        Research"],"language":"en","link":[{"URL":"https:\/\/www.cambridge.org\/core\/services\/aop-cambridge-core\/content\/view\/S0016672300026781","content-type":"unspecified","content-version":"vor","intended-application":"similarity-checking"}],"deposited":{"date-parts":[[2020,12,31]],"date-time":"2020-12-31T22:44:10Z","timestamp":1609454650000},"score":0.0,"issued":{"date-parts":[[1987,2]]},"references-count":0,"journal-issue":{"issue":"1","published-print":{"date-parts":[[1987,2]]}},"alternative-id":["S0016672300026781"],"URL":"http:\/\/dx.doi.org\/10.1017\/s0016672300026781","ISSN":["0016-6723","1469-5073"],"issn-type":[{"value":"0016-6723","type":"print"},{"value":"1469-5073","type":"electronic"}],"subject":["Genetics","General
+        Medicine"],"published":{"date-parts":[[1987,2]]}}],"items-per-page":100,"query":{"start-index":0,"search-terms":null}}}'
+  recorded_at: 2021-08-13 12:57:15 GMT
   recorded_with: vcr/1.0.2, webmockr/0.8.0

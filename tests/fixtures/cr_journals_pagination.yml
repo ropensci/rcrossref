@@ -17,7 +17,7 @@ http_interactions:
       explanation: Request fulfilled, document follows
     headers:
       status: HTTP/1.1 200 OK
-      date: Sun, 01 Aug 2021 15:45:27 GMT
+      date: Fri, 13 Aug 2021 12:56:13 GMT
       content-type: application/json
       content-length: '11792'
       access-control-allow-origin: '*'
@@ -27,6 +27,7 @@ http_interactions:
       server: Jetty(9.4.40.v20210413)
       x-ratelimit-limit: '50'
       x-ratelimit-interval: 1s
+      x-api-pool: public
       x-rate-limit-limit: '50'
       x-rate-limit-interval: 1s
       permissions-policy: interest-cohort=()
@@ -354,5 +355,5 @@ http_interactions:
         Young","year":"2005","journal-title":"Biodiversity and Conservation"}],"container-title":["Journal
         of Landscape Ecology"],"link":[{"URL":"https:\/\/www.degruyter.com\/view\/j\/jlecol.2010.3.issue-2\/v10285-012-0027-y\/v10285-012-0027-y.pdf","content-type":"unspecified","content-version":"vor","intended-application":"similarity-checking"}],"deposited":{"date-parts":[[2020,5,30]],"date-time":"2020-05-30T16:10:00Z","timestamp":1590855000000},"score":0.0,"issued":{"date-parts":[[2010,1,1]]},"references-count":34,"journal-issue":{"issue":"2"},"URL":"http:\/\/dx.doi.org\/10.2478\/v10285-012-0027-y","ISSN":["1803-2427"],"issn-type":[{"value":"1803-2427","type":"print"}],"subject":["Management,
         Monitoring, Policy and Law","Nature and Landscape Conservation","Ecology"],"published":{"date-parts":[[2010,1,1]]}}],"items-per-page":5,"query":{"start-index":0,"search-terms":null}}}'
-  recorded_at: 2021-08-01 15:45:27 GMT
+  recorded_at: 2021-08-13 12:56:13 GMT
   recorded_with: vcr/1.0.2, webmockr/0.8.0

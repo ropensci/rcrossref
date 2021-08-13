@@ -17,9 +17,9 @@ http_interactions:
       explanation: Request fulfilled, document follows
     headers:
       status: HTTP/1.1 200 OK
-      date: Sun, 01 Aug 2021 15:54:38 GMT
+      date: Fri, 13 Aug 2021 13:04:13 GMT
       content-type: application/json
-      content-length: '2440'
+      content-length: '2441'
       access-control-allow-origin: '*'
       access-control-allow-headers: X-Requested-With
       vary: Accept-Encoding
@@ -27,6 +27,7 @@ http_interactions:
       server: Jetty(9.4.40.v20210413)
       x-ratelimit-limit: '50'
       x-ratelimit-interval: 1s
+      x-api-pool: public
       x-rate-limit-limit: '50'
       x-rate-limit-interval: 1s
       permissions-policy: interest-cohort=()
@@ -34,7 +35,7 @@ http_interactions:
     body:
       encoding: UTF-8
       file: no
-      string: '{"status":"ok","message-type":"work-list","message-version":"1.0.0","message":{"facets":{},"total-results":35425949,"items":[{"indexed":{"date-parts":[[2021,5,6]],"date-time":"2021-05-06T20:07:48Z","timestamp":1620331668136},"reference-count":0,"publisher":"JSTOR","issue":"1","content-domain":{"domain":[],"crossmark-restriction":false},"short-container-title":["Proceedings
+      string: '{"status":"ok","message-type":"work-list","message-version":"1.0.0","message":{"facets":{},"total-results":35518609,"items":[{"indexed":{"date-parts":[[2021,5,6]],"date-time":"2021-05-06T20:07:48Z","timestamp":1620331668136},"reference-count":0,"publisher":"JSTOR","issue":"1","content-domain":{"domain":[],"crossmark-restriction":false},"short-container-title":["Proceedings
         of the American Mathematical Society"],"published-print":{"date-parts":[[1993,9]]},"DOI":"10.2307\/2159849","type":"journal-article","created":{"date-parts":[[2006,4,23]],"date-time":"2006-04-23T05:33:13Z","timestamp":1145770393000},"page":"251","source":"Crossref","is-referenced-by-count":0,"title":["Some
         Deformations of the Hopf Foliation are also Kahler"],"prefix":"10.2307","volume":"119","author":[{"given":"Paul
         D.","family":"Scofield","sequence":"first","affiliation":[]}],"member":"1121","container-title":["Proceedings
@@ -82,7 +83,7 @@ http_interactions:
         Dov","family":"Walfish","sequence":"additional","affiliation":[]}],"member":"1121","container-title":["Journal
         of the American Oriental Society"],"deposited":{"date-parts":[[2018,4,18]],"date-time":"2018-04-18T02:30:51Z","timestamp":1524018651000},"score":1.0,"issued":{"date-parts":[[1995,4]]},"references-count":0,"journal-issue":{"issue":"2","published-print":{"date-parts":[[1995,4]]}},"URL":"http:\/\/dx.doi.org\/10.2307\/604699","ISSN":["0003-0279"],"issn-type":[{"value":"0003-0279","type":"print"}],"subject":["General
         Arts and Humanities","Cultural Studies"],"published":{"date-parts":[[1995,4]]}}],"items-per-page":10,"query":{"start-index":0,"search-terms":null}}}'
-  recorded_at: 2021-08-01 15:54:44 GMT
+  recorded_at: 2021-08-13 13:04:14 GMT
   recorded_with: vcr/1.0.2, webmockr/0.8.0
 - request:
     method: get
@@ -102,9 +103,9 @@ http_interactions:
       explanation: Request fulfilled, document follows
     headers:
       status: HTTP/1.1 200 OK
-      date: Sun, 01 Aug 2021 15:54:44 GMT
+      date: Fri, 13 Aug 2021 13:04:14 GMT
       content-type: application/json
-      content-length: '7042'
+      content-length: '7041'
       access-control-allow-origin: '*'
       access-control-allow-headers: X-Requested-With
       vary: Accept-Encoding
@@ -112,6 +113,7 @@ http_interactions:
       server: Jetty(9.4.40.v20210413)
       x-ratelimit-limit: '50'
       x-ratelimit-interval: 1s
+      x-api-pool: public
       x-rate-limit-limit: '50'
       x-rate-limit-interval: 1s
       permissions-policy: interest-cohort=()
@@ -119,7 +121,7 @@ http_interactions:
     body:
       encoding: UTF-8
       file: no
-      string: '{"status":"ok","message-type":"work-list","message-version":"1.0.0","message":{"facets":{},"total-results":90846973,"items":[{"indexed":{"date-parts":[[2021,5,6]],"date-time":"2021-05-06T20:07:48Z","timestamp":1620331668137},"reference-count":0,"publisher":"Elsevier
+      string: '{"status":"ok","message-type":"work-list","message-version":"1.0.0","message":{"facets":{},"total-results":90993232,"items":[{"indexed":{"date-parts":[[2021,5,6]],"date-time":"2021-05-06T20:07:48Z","timestamp":1620331668137},"reference-count":0,"publisher":"Elsevier
         BV","issue":"2","license":[{"start":{"date-parts":[[1990,10,1]],"date-time":"1990-10-01T00:00:00Z","timestamp":654739200000},"content-version":"tdm","delay-in-days":0,"URL":"https:\/\/www.elsevier.com\/tdm\/userlicense\/1.0\/"}],"content-domain":{"domain":[],"crossmark-restriction":false},"short-container-title":["Carbohydrate
         Research"],"published-print":{"date-parts":[[1990,10]]},"DOI":"10.1016\/0008-6215(90)84065-3","type":"journal-article","created":{"date-parts":[[2002,7,25]],"date-time":"2002-07-25T17:10:16Z","timestamp":1027617016000},"page":"C9-C10","source":"Crossref","is-referenced-by-count":0,"title":["Subject
         index"],"prefix":"10.1016","volume":"207","member":"78","container-title":["Carbohydrate
@@ -255,5 +257,5 @@ http_interactions:
         Plasma endothelin levels in patients with abdominal aortic aneurysms"],"prefix":"10.1016","volume":"5","author":[{"given":"V","family":"TRESKA","sequence":"first","affiliation":[]},{"given":"J","family":"VALENTA","sequence":"additional","affiliation":[]},{"given":"O","family":"TOPOLCAN","sequence":"additional","affiliation":[]},{"given":"J","family":"KOCOVA","sequence":"additional","affiliation":[]},{"given":"Z","family":"CHUDACEK","sequence":"additional","affiliation":[]},{"given":"L","family":"PECEN","sequence":"additional","affiliation":[]}],"member":"78","container-title":["Cardiovascular
         Surgery"],"language":"en","link":[{"URL":"https:\/\/api.elsevier.com\/content\/article\/PII:S0967210997889065?httpAccept=text\/xml","content-type":"text\/xml","content-version":"vor","intended-application":"text-mining"},{"URL":"https:\/\/api.elsevier.com\/content\/article\/PII:S0967210997889065?httpAccept=text\/plain","content-type":"text\/plain","content-version":"vor","intended-application":"text-mining"}],"deposited":{"date-parts":[[2019,4,25]],"date-time":"2019-04-25T04:50:49Z","timestamp":1556167849000},"score":0.0,"issued":{"date-parts":[[1997,9]]},"references-count":0,"alternative-id":["S0967210997889065"],"URL":"http:\/\/dx.doi.org\/10.1016\/s0967-2109(97)88906-5","ISSN":["0967-2109"],"issn-type":[{"value":"0967-2109","type":"print"}],"subject":["Cardiology
         and Cardiovascular Medicine","Radiology Nuclear Medicine and imaging","Surgery"],"published":{"date-parts":[[1997,9]]}}],"items-per-page":10,"query":{"start-index":0,"search-terms":null}}}'
-  recorded_at: 2021-08-01 15:54:44 GMT
+  recorded_at: 2021-08-13 13:04:14 GMT
   recorded_with: vcr/1.0.2, webmockr/0.8.0

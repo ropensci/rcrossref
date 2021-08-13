@@ -23,14 +23,15 @@ http_interactions:
       access-control-allow-headers: X-Requested-With
       content-length: '158'
       server: http-kit
-      date: Sun, 01 Aug 2021 15:43:22 GMT
+      date: Fri, 13 Aug 2021 12:53:12 GMT
       x-rate-limit-limit: '50'
       x-rate-limit-interval: 1s
+      x-api-pool: polite
       permissions-policy: interest-cohort=()
       connection: close
     body:
       encoding: UTF-8
       file: no
       string: '{"status":"ok","message-type":"work-agency","message-version":"1.0.0","message":{"DOI":"10.1038\/jid.2009.428","agency":{"id":"crossref","label":"Crossref"}}}'
-  recorded_at: 2021-08-01 15:43:22 GMT
+  recorded_at: 2021-08-13 12:53:12 GMT
   recorded_with: vcr/1.0.2, webmockr/0.8.0

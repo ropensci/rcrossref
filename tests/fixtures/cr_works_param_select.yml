@@ -17,9 +17,9 @@ http_interactions:
       explanation: Request fulfilled, document follows
     headers:
       status: HTTP/1.1 200 OK
-      date: Sun, 01 Aug 2021 15:54:55 GMT
+      date: Fri, 13 Aug 2021 13:04:22 GMT
       content-type: application/json
-      content-length: '723'
+      content-length: '715'
       access-control-allow-origin: '*'
       access-control-allow-headers: X-Requested-With
       vary: Accept-Encoding
@@ -27,6 +27,7 @@ http_interactions:
       server: Jetty(9.4.40.v20210413)
       x-ratelimit-limit: '50'
       x-ratelimit-interval: 1s
+      x-api-pool: public
       x-rate-limit-limit: '50'
       x-rate-limit-interval: 1s
       permissions-policy: interest-cohort=()
@@ -34,26 +35,26 @@ http_interactions:
     body:
       encoding: UTF-8
       file: no
-      string: '{"status":"ok","message-type":"work-list","message-version":"1.0.0","message":{"facets":{},"total-results":8537634,"items":[{"DOI":"10.1126\/science.caredit.a1300194","title":["Elsewhere
-        in Science Index"]},{"DOI":"10.1126\/science.caredit.a1300099","title":["When
-        All Science Becomes Data Science"]},{"DOI":"10.1126\/science.caredit.a1300244","title":["Science
-        Careers in India"]},{"DOI":"10.7551\/mitpress\/9755.003.0003","title":["Unsettling
-        Science"]},{"DOI":"10.1093\/obo\/9780199756223-0095","title":["Science and
-        Democracy"]},{"DOI":"10.7551\/mitpress\/9755.003.0005","title":["Values Everywhere
-        within Science"]},{"DOI":"10.1126\/science.caredit.a0800074","title":["Science
-        Careers Podcast Index"]},{"DOI":"10.1093\/oso\/9780190690649.003.0007","title":["Philosophy
-        of Science and Science Studies"]},{"DOI":"10.1126\/science.1174131","title":["Science\n            for
-        Science"]},{"DOI":"10.4324\/9780203047842-13","title":["Conclusion: The Science
-        of Social Science"]},{"DOI":"10.4324\/9780203134962-10","title":["The science
-        curriculum and science in the curriculum"]},{"DOI":"10.5749\/j.ctt189tts8.2","title":["Science
-        Fiction and Extro-Science Fiction"]},{"DOI":"10.4324\/9780203125878-7","title":["Introduction:
-        Science Education and Science Studies"]},{"DOI":"10.1126\/science.caredit.a0900139","title":["The
+      string: '{"status":"ok","message-type":"work-list","message-version":"1.0.0","message":{"facets":{},"total-results":8562975,"items":[{"DOI":"10.1126\/science.caredit.a1300194","title":["Elsewhere
+        in Science Index"]},{"DOI":"10.7551\/mitpress\/9755.003.0003","title":["Unsettling
+        Science"]},{"DOI":"10.1093\/oso\/9780190690649.003.0007","title":["Philosophy
+        of Science and Science Studies"]},{"DOI":"10.1126\/science.caredit.a0800074","title":["Science
+        Careers Podcast Index"]},{"DOI":"10.1126\/science.caredit.a1300244","title":["Science
+        Careers in India"]},{"DOI":"10.1126\/science.caredit.a1300099","title":["When
+        All Science Becomes Data Science"]},{"DOI":"10.1126\/science.caredit.a0900139","title":["The
         Audacity in Science Series"]},{"DOI":"10.1126\/science.caredit.a1500165","title":["Leaving
         science for science writing"]},{"DOI":"10.4324\/9780203047842-8","title":["Social
-        Science as Science"]},{"DOI":"10.1017\/9781108610834.029","title":["Last Thought:
-        All the Science of Science"]},{"DOI":"10.1002\/(issn)2691-1078","title":["Crop
-        Science, Soil Science, Agronomy News"]},{"DOI":"10.4324\/9780203047842-12","title":["New
-        Science and New Social Science"]},{"DOI":"10.1126\/science.caredit.aat2794","title":["Celebrating
-        women in science"]}],"items-per-page":20,"query":{"start-index":0,"search-terms":"science"}}}'
-  recorded_at: 2021-08-01 15:54:55 GMT
+        Science as Science"]},{"DOI":"10.4324\/9780203047842-12","title":["New Science
+        and New Social Science"]},{"DOI":"10.1126\/science.caredit.aat2794","title":["Celebrating
+        women in science"]},{"DOI":"10.4324\/9780203125878-7","title":["Introduction:
+        Science Education and Science Studies"]},{"DOI":"10.1093\/obo\/9780199756223-0095","title":["Science
+        and Democracy"]},{"DOI":"10.7551\/mitpress\/9755.003.0005","title":["Values
+        Everywhere within Science"]},{"DOI":"10.1017\/9781108610834.029","title":["Last
+        Thought: All the Science of Science"]},{"DOI":"10.1126\/science.1174131","title":["Science\n            for
+        Science"]},{"DOI":"10.1126\/science.caredit.a1000124","title":["The Best of
+        Science Careers, 2010"]},{"DOI":"10.4324\/9780203047842-10","title":["Against
+        Science in Social Science"]},{"DOI":"10.1002\/scin.5591821322","title":["People:
+        The science life: Alt science"]},{"DOI":"10.5749\/j.ctt189tts8.2","title":["Science
+        Fiction and Extro-Science Fiction"]}],"items-per-page":20,"query":{"start-index":0,"search-terms":"science"}}}'
+  recorded_at: 2021-08-13 13:04:22 GMT
   recorded_with: vcr/1.0.2, webmockr/0.8.0

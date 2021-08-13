@@ -17,7 +17,7 @@ http_interactions:
       explanation: Request fulfilled, document follows
     headers:
       status: HTTP/1.1 200 OK
-      date: Sun, 01 Aug 2021 15:46:26 GMT
+      date: Fri, 13 Aug 2021 12:56:58 GMT
       content-type: application/json;charset=utf-8
       content-length: '373'
       vary: Accept, Accept-Encoding
@@ -27,6 +27,7 @@ http_interactions:
       server: Jetty(9.4.40.v20210413)
       x-ratelimit-limit: '50'
       x-ratelimit-interval: 1s
+      x-api-pool: public
       x-rate-limit-limit: '50'
       x-rate-limit-interval: 1s
       permissions-policy: interest-cohort=()
@@ -34,11 +35,11 @@ http_interactions:
     body:
       encoding: UTF-8
       file: no
-      string: '{"status":"ok","message-type":"license-list","message-version":"1.0.0","message":{"total-results":7158,"items":[{"URL":"Http:\/\/creativecommons.org\/license\/by-nc\/4.0.","work-count":100},{"URL":"http:\/\/
+      string: '{"status":"ok","message-type":"license-list","message-version":"1.0.0","message":{"total-results":7291,"items":[{"URL":"Http:\/\/creativecommons.org\/license\/by-nc\/4.0.","work-count":100},{"URL":"http:\/\/
         creativecommons.org\/licenses\/by-nc-nd\/4.0\/","work-count":11},{"URL":"http:\/\/
         creativecommons.org\/licenses\/by\/4.0\/","work-count":3},{"URL":"http:\/\/
         http:\/\/creativecommons.org\/licenses\/by-sa\/3.0\/","work-count":6},{"URL":"http:\/\/\/journals.bsu.by\/index.php\/biology\/about","work-count":9},{"URL":"http:\/\/\/nv.pdpu.edu.ua\/Info\/Index\/be91efc0-7518-4106-b1df-7c0b3b9da77b","work-count":1},{"URL":"http:\/\/0000-0002-1666-2848","work-count":1},{"URL":"http:\/\/10.5281\/zenodo.1186380","work-count":1},{"URL":"http:\/\/10.5281\/zenodo.1186387","work-count":1},{"URL":"http:\/\/10.5281\/zenodo.1186395","work-count":1},{"URL":"http:\/\/10.5281\/zenodo.1186401","work-count":1},{"URL":"http:\/\/10.5281\/zenodo.1186407","work-count":1},{"URL":"http:\/\/10.5281\/zenodo.1186409","work-count":1},{"URL":"http:\/\/10.5281\/zenodo.1186415","work-count":1},{"URL":"http:\/\/10.5281\/zenodo.1186421","work-count":1},{"URL":"http:\/\/10.5281\/zenodo.1186424","work-count":1},{"URL":"http:\/\/10.5281\/zenodo.1186426","work-count":1},{"URL":"http:\/\/10.5281\/zenodo.1186430","work-count":1},{"URL":"http:\/\/10.5281\/zenodo.1186480","work-count":1},{"URL":"http:\/\/10.5281\/zenodo.1186484","work-count":1}]}}'
-  recorded_at: 2021-08-01 15:46:27 GMT
+  recorded_at: 2021-08-13 12:56:59 GMT
   recorded_with: vcr/1.0.2, webmockr/0.8.0
 - request:
     method: get
@@ -58,9 +59,9 @@ http_interactions:
       explanation: Request fulfilled, document follows
     headers:
       status: HTTP/1.1 200 OK
-      date: Sun, 01 Aug 2021 15:46:27 GMT
+      date: Fri, 13 Aug 2021 12:56:59 GMT
       content-type: application/json;charset=utf-8
-      content-length: '440'
+      content-length: '439'
       vary: Accept, Accept-Encoding
       access-control-allow-origin: '*'
       access-control-allow-headers: X-Requested-With
@@ -68,6 +69,7 @@ http_interactions:
       server: Jetty(9.4.40.v20210413)
       x-ratelimit-limit: '50'
       x-ratelimit-interval: 1s
+      x-api-pool: public
       x-rate-limit-limit: '50'
       x-rate-limit-interval: 1s
       permissions-policy: interest-cohort=()
@@ -75,6 +77,6 @@ http_interactions:
     body:
       encoding: UTF-8
       file: no
-      string: '{"status":"ok","message-type":"license-list","message-version":"1.0.0","message":{"total-results":50,"items":[{"URL":"http:\/\/aspb.org\/publications\/aspb-journals\/open-articles","work-count":1},{"URL":"http:\/\/creativecommons.org\/licenses\/by-nc-nd\/3.0","work-count":3},{"URL":"http:\/\/creativecommons.org\/licenses\/by-nc-nd\/3.0\/","work-count":11},{"URL":"http:\/\/creativecommons.org\/licenses\/by-nc-nd\/4.0\/","work-count":21},{"URL":"http:\/\/creativecommons.org\/licenses\/by-nc\/4.0\/","work-count":6},{"URL":"http:\/\/creativecommons.org\/licenses\/by-sa\/4.0","work-count":1},{"URL":"http:\/\/creativecommons.org\/licenses\/by\/2.0","work-count":2},{"URL":"http:\/\/creativecommons.org\/licenses\/by\/3.0","work-count":2},{"URL":"http:\/\/creativecommons.org\/licenses\/by\/3.0\/","work-count":2},{"URL":"http:\/\/creativecommons.org\/licenses\/by\/3.0\/igo\/","work-count":1},{"URL":"http:\/\/creativecommons.org\/licenses\/by\/4.0","work-count":11},{"URL":"http:\/\/creativecommons.org\/licenses\/by\/4.0\/","work-count":22},{"URL":"http:\/\/doi.wiley.com\/10.1002\/tdm_license_1","work-count":136},{"URL":"http:\/\/doi.wiley.com\/10.1002\/tdm_license_1.1","work-count":2254},{"URL":"http:\/\/iopscience.iop.org\/info\/page\/text-and-data-mining","work-count":2},{"URL":"http:\/\/iopscience.iop.org\/page\/copyright","work-count":2},{"URL":"http:\/\/journals.iucr.org\/services\/copyrightpolicy.html","work-count":11},{"URL":"http:\/\/journals.iucr.org\/services\/copyrightpolicy.html#TDM","work-count":11},{"URL":"http:\/\/journals.sagepub.com\/page\/policies\/text-and-data-mining-license","work-count":365},{"URL":"http:\/\/onlinelibrary.wiley.com\/termsAndConditions","work-count":63}]}}'
-  recorded_at: 2021-08-01 15:46:27 GMT
+      string: '{"status":"ok","message-type":"license-list","message-version":"1.0.0","message":{"total-results":51,"items":[{"URL":"http:\/\/aspb.org\/publications\/aspb-journals\/open-articles","work-count":1},{"URL":"http:\/\/creativecommons.org\/licenses\/by-nc-nd\/3.0","work-count":3},{"URL":"http:\/\/creativecommons.org\/licenses\/by-nc-nd\/3.0\/","work-count":11},{"URL":"http:\/\/creativecommons.org\/licenses\/by-nc-nd\/4.0\/","work-count":21},{"URL":"http:\/\/creativecommons.org\/licenses\/by-nc\/4.0\/","work-count":6},{"URL":"http:\/\/creativecommons.org\/licenses\/by-sa\/4.0","work-count":1},{"URL":"http:\/\/creativecommons.org\/licenses\/by\/2.0","work-count":2},{"URL":"http:\/\/creativecommons.org\/licenses\/by\/3.0","work-count":2},{"URL":"http:\/\/creativecommons.org\/licenses\/by\/3.0\/","work-count":2},{"URL":"http:\/\/creativecommons.org\/licenses\/by\/3.0\/igo\/","work-count":1},{"URL":"http:\/\/creativecommons.org\/licenses\/by\/4.0","work-count":11},{"URL":"http:\/\/creativecommons.org\/licenses\/by\/4.0\/","work-count":22},{"URL":"http:\/\/doi.wiley.com\/10.1002\/tdm_license_1","work-count":136},{"URL":"http:\/\/doi.wiley.com\/10.1002\/tdm_license_1.1","work-count":2255},{"URL":"http:\/\/iopscience.iop.org\/info\/page\/text-and-data-mining","work-count":2},{"URL":"http:\/\/iopscience.iop.org\/page\/copyright","work-count":2},{"URL":"http:\/\/journals.iucr.org\/services\/copyrightpolicy.html","work-count":11},{"URL":"http:\/\/journals.iucr.org\/services\/copyrightpolicy.html#TDM","work-count":11},{"URL":"http:\/\/journals.sagepub.com\/page\/policies\/text-and-data-mining-license","work-count":365},{"URL":"http:\/\/onlinelibrary.wiley.com\/termsAndConditions","work-count":63}]}}'
+  recorded_at: 2021-08-13 12:56:59 GMT
   recorded_with: vcr/1.0.2, webmockr/0.8.0

@@ -17,7 +17,7 @@ http_interactions:
       explanation: Nothing matches the given URI
     headers:
       status: HTTP/1.1 404 Not Found
-      date: Sun, 01 Aug 2021 15:46:01 GMT
+      date: Fri, 13 Aug 2021 12:56:36 GMT
       content-type: application/json;charset=utf-8
       content-length: '19'
       vary: Accept
@@ -26,6 +26,7 @@ http_interactions:
       server: Jetty(9.4.40.v20210413)
       x-ratelimit-limit: '50'
       x-ratelimit-interval: 1s
+      x-api-pool: public
       x-rate-limit-limit: '50'
       x-rate-limit-interval: 1s
       permissions-policy: interest-cohort=()
@@ -34,7 +35,7 @@ http_interactions:
       encoding: UTF-8
       file: no
       string: Resource not found.
-  recorded_at: 2021-08-01 15:46:02 GMT
+  recorded_at: 2021-08-13 12:56:38 GMT
   recorded_with: vcr/1.0.2, webmockr/0.8.0
 - request:
     method: get
@@ -54,7 +55,7 @@ http_interactions:
       explanation: Nothing matches the given URI
     headers:
       status: HTTP/1.1 404 Not Found
-      date: Sun, 01 Aug 2021 15:46:01 GMT
+      date: Fri, 13 Aug 2021 12:56:37 GMT
       content-type: application/json;charset=utf-8
       content-length: '19'
       vary: Accept
@@ -63,6 +64,7 @@ http_interactions:
       server: Jetty(9.4.40.v20210413)
       x-ratelimit-limit: '50'
       x-ratelimit-interval: 1s
+      x-api-pool: public
       x-rate-limit-limit: '50'
       x-rate-limit-interval: 1s
       permissions-policy: interest-cohort=()
@@ -71,7 +73,7 @@ http_interactions:
       encoding: UTF-8
       file: no
       string: Resource not found.
-  recorded_at: 2021-08-01 15:46:02 GMT
+  recorded_at: 2021-08-13 12:56:38 GMT
   recorded_with: vcr/1.0.2, webmockr/0.8.0
 - request:
     method: get
@@ -91,9 +93,9 @@ http_interactions:
       explanation: Request fulfilled, document follows
     headers:
       status: HTTP/1.1 200 OK
-      date: Sun, 01 Aug 2021 15:46:02 GMT
+      date: Fri, 13 Aug 2021 12:56:37 GMT
       content-type: application/json
-      transfer-encoding: chunked
+      content-length: '30154'
       access-control-allow-origin: '*'
       access-control-allow-headers: X-Requested-With
       vary: Accept-Encoding
@@ -101,6 +103,7 @@ http_interactions:
       server: Jetty(9.4.40.v20210413)
       x-ratelimit-limit: '50'
       x-ratelimit-interval: 1s
+      x-api-pool: public
       x-rate-limit-limit: '50'
       x-rate-limit-interval: 1s
       permissions-policy: interest-cohort=()
@@ -108,7 +111,7 @@ http_interactions:
     body:
       encoding: UTF-8
       file: no
-      string: '{"status":"ok","message-type":"work-list","message-version":"1.0.0","message":{"facets":{},"total-results":4127,"items":[{"indexed":{"date-parts":[[2021,5,8]],"date-time":"2021-05-08T03:23:04Z","timestamp":1620444184914},"reference-count":0,"publisher":"Oxford
+      string: '{"status":"ok","message-type":"work-list","message-version":"1.0.0","message":{"facets":{},"total-results":4130,"items":[{"indexed":{"date-parts":[[2021,5,8]],"date-time":"2021-05-08T03:23:04Z","timestamp":1620444184914},"reference-count":0,"publisher":"Oxford
         University Press (OUP)","issue":"1","content-domain":{"domain":[],"crossmark-restriction":false},"published-print":{"date-parts":[[1995,1]]},"DOI":"10.1111\/fem.1995.16.issue-1","type":"journal-issue","created":{"date-parts":[[2015,1,7]],"date-time":"2015-01-07T13:12:38Z","timestamp":1420636358000},"source":"Crossref","is-referenced-by-count":0,"prefix":"10.1093","volume":"16","member":"286","container-title":["FEMS
         Microbiology Ecology"],"language":"en","deposited":{"date-parts":[[2015,1,7]],"date-time":"2015-01-07T13:12:38Z","timestamp":1420636358000},"score":0.0,"issued":{"date-parts":[[1995,1]]},"references-count":0,"journal-issue":{"issue":"1"},"URL":"http:\/\/dx.doi.org\/10.1111\/fem.1995.16.issue-1","ISSN":["0168-6496","1574-6941"],"issn-type":[{"value":"0168-6496","type":"print"},{"value":"1574-6941","type":"electronic"}],"subject":["Applied
         Microbiology and Biotechnology","Ecology","Microbiology"],"published":{"date-parts":[[1995,1]]}},{"indexed":{"date-parts":[[2021,5,8]],"date-time":"2021-05-08T03:27:59Z","timestamp":1620444479330},"reference-count":0,"publisher":"Oxford
@@ -135,151 +138,7 @@ http_interactions:
         Microbiology and Biotechnology","Ecology","Microbiology"],"published":{"date-parts":[[1992,12]]}},{"indexed":{"date-parts":[[2021,5,8]],"date-time":"2021-05-08T01:03:08Z","timestamp":1620435788633},"reference-count":0,"publisher":"Oxford
         University Press (OUP)","issue":"1","content-domain":{"domain":[],"crossmark-restriction":false},"published-print":{"date-parts":[[2006,4]]},"DOI":"10.1111\/fem.2006.56.issue-1","type":"journal-issue","created":{"date-parts":[[2006,3,14]],"date-time":"2006-03-14T08:56:25Z","timestamp":1142326585000},"source":"Crossref","is-referenced-by-count":0,"prefix":"10.1093","volume":"56","member":"286","container-title":["FEMS
         Microbiology Ecology"],"language":"en","deposited":{"date-parts":[[2015,1,7]],"date-time":"2015-01-07T13:43:52Z","timestamp":1420638232000},"score":0.0,"issued":{"date-parts":[[2006,4]]},"references-count":0,"journal-issue":{"issue":"1"},"URL":"http:\/\/dx.doi.org\/10.1111\/fem.2006.56.issue-1","ISSN":["0168-6496","1574-6941"],"issn-type":[{"value":"0168-6496","type":"print"},{"value":"1574-6941","type":"electronic"}],"subject":["Applied
-        Microbiology and Biotechnology","Ecology","Microbiology"],"published":{"date-parts":[[2006,4]]}},{"indexed":{"date-parts":[[2021,5,11]],"date-time":"2021-05-11T21:01:10Z","timestamp":1620766870028},"reference-count":64,"publisher":"Oxford
-        University Press (OUP)","issue":"3","content-domain":{"domain":[],"crossmark-restriction":false},"published-print":{"date-parts":[[2005,2]]},"DOI":"10.1016\/j.femsec.2004.09.015","type":"journal-article","created":{"date-parts":[[2004,11,13]],"date-time":"2004-11-13T16:59:08Z","timestamp":1100365148000},"page":"375-388","source":"Crossref","is-referenced-by-count":71,"title":["Occurrence
-        and community composition of fast-growing Mycobacterium in soils contaminated
-        with polycyclic aromatic hydrocarbons"],"prefix":"10.1093","volume":"51","author":[{"given":"Natalie
-        M.","family":"Leys","sequence":"first","affiliation":[]},{"given":"Annemie","family":"Ryngaert","sequence":"additional","affiliation":[]},{"given":"Leen","family":"Bastiaens","sequence":"additional","affiliation":[]},{"given":"Pierre","family":"Wattiau","sequence":"additional","affiliation":[]},{"given":"Eva
-        M.","family":"Top","sequence":"additional","affiliation":[]},{"given":"Willy","family":"Verstraete","sequence":"additional","affiliation":[]},{"given":"Dirk","family":"Springael","sequence":"additional","affiliation":[]}],"member":"286","reference":[{"key":"10.1016\/j.femsec.2004.09.015-BIB1|cit1","doi-asserted-by":"crossref","first-page":"351","DOI":"10.1007\/BF00129093","article-title":"Biodegradation
-        of polycyclic aromatic hydrocarbons","volume":"3","author":"Cerniglia","year":"1992","journal-title":"Biodegradation"},{"key":"10.1016\/j.femsec.2004.09.015-BIB2|cit2","doi-asserted-by":"crossref","first-page":"937","DOI":"10.1128\/AEM.54.4.937-944.1988","article-title":"Mineralization
-        of phenanthrene by a Mycobacterium sp.","volume":"54","author":"Guerin","year":"1988","journal-title":"Appl.
-        Environ. Microbiol."},{"key":"10.1016\/j.femsec.2004.09.015-BIB3|cit3","unstructured":""},{"key":"10.1016\/j.femsec.2004.09.015-BIB4|cit4","doi-asserted-by":"crossref","first-page":"549","DOI":"10.1128\/AEM.65.2.549-552.1999","article-title":"Isolation
-        and characterization of a Mycobacterium species capable of degrading three-
-        and four-ring aromatic and aliphatic hydrocarbons","volume":"65","author":"Churchill","year":"1999","journal-title":"Appl.
-        Environ. Microbiol."},{"key":"10.1016\/j.femsec.2004.09.015-BIB5|cit5","doi-asserted-by":"crossref","first-page":"1834","DOI":"10.1128\/AEM.66.5.1834-1843.2000","article-title":"Isolation
-        of adherent polycyclic aromatic hydrocarbon (PAH)-degrading bacteria using
-        PAH-sorbing carriers","volume":"66","author":"Bastiaens","year":"2000","journal-title":"Appl.
-        Environ. Microbiol."},{"key":"10.1016\/j.femsec.2004.09.015-BIB6|cit6","doi-asserted-by":"crossref","first-page":"2392","DOI":"10.1128\/AEM.66.6.2392-2399.2000","article-title":"A
-        Mycobacterium strain with extended capacities for degradation of gasoline
-        hydrocarbons","volume":"66","author":"Solano-Serena","year":"2000","journal-title":"Appl.
-        Environ. Microbiol."},{"key":"10.1016\/j.femsec.2004.09.015-BIB7|cit7","doi-asserted-by":"crossref","first-page":"1715","DOI":"10.1099\/00207713-51-5-1715","article-title":"Mycobacterium
-        frederiksbergense sp. nov., a novel polycyclic aromatic hydrocarbon-degrading
-        Mycobacterium species","volume":"51","author":"Willumsen","year":"2001","journal-title":"Int.
-        J. Syst. Evol. Microbiol."},{"key":"10.1016\/j.femsec.2004.09.015-BIB8|cit8","doi-asserted-by":"crossref","first-page":"494","DOI":"10.1099\/00207713-44-3-494","article-title":"Phylogenetic
-        evidence for transfer of pentachlorophenol-mineralizing Rhodococcus chlorophenolicus
-        PCP-I(T) to the genus Mycobacterium","volume":"44","author":"Briglia","year":"1994","journal-title":"Int.
-        J. Syst. Bacteriol."},{"key":"10.1016\/j.femsec.2004.09.015-BIB9|cit9","doi-asserted-by":"crossref","first-page":"2050","DOI":"10.1128\/JB.181.7.2050-2058.1999","article-title":"Degradation
-        of 1,2-dibromoethane by Mycobacterium sp. strain GP1","volume":"181","author":"Poelarends","year":"1999","journal-title":"J.
-        Bacteriol."},{"key":"10.1016\/j.femsec.2004.09.015-BIB10|cit10","doi-asserted-by":"crossref","first-page":"4693","DOI":"10.1128\/AEM.65.10.4693-4696.1999","article-title":"Aerobic
-        degradation of 1,1,1-trichloroethane by Mycobacterium spp. isolated from soil","volume":"65","author":"Yagi","year":"1999","journal-title":"Appl.
-        Environ. Microbiol."},{"key":"10.1016\/j.femsec.2004.09.015-BIB11|cit11","doi-asserted-by":"crossref","first-page":"1091","DOI":"10.1099\/00221287-146-5-1091","article-title":"High
-        morpholine degradation rates and formation of cytochrome P450 during growth
-        on different cyclic amines by newly isolated Mycobacterium sp. strain HE5","volume":"146","author":"Schrader","year":"2000","journal-title":"Microbiology"},{"key":"10.1016\/j.femsec.2004.09.015-BIB12|cit12","doi-asserted-by":"crossref","first-page":"116","DOI":"10.1128\/jb.172.1.116-124.1990","article-title":"The
-        division between fast- and slow-growing species correspond to natural relationships
-        among the mycobacteria","volume":"172","author":"Stalh","year":"1990","journal-title":"J.
-        Bacteriol."},{"key":"10.1016\/j.femsec.2004.09.015-BIB13|cit13","doi-asserted-by":"crossref","first-page":"323","DOI":"10.1099\/00207713-40-4-323","article-title":"Towards
-        a phylogeny and definition of species at the molecular level within the genus
-        Mycobacterium","volume":"40","author":"Rogall","year":"1990","journal-title":"Int.
-        J. Syst. Bacteriol."},{"key":"10.1016\/j.femsec.2004.09.015-BIB14|cit14","doi-asserted-by":"crossref","first-page":"337","DOI":"10.1099\/00207713-42-3-337","article-title":"Phylogeny
-        of rapidly growing members of the genus Mycobacterium","volume":"42","author":"Pitulle","year":"1992","journal-title":"Int.
-        J. Syst. Bacteriol."},{"key":"10.1016\/j.femsec.2004.09.015-BIB15|cit15","doi-asserted-by":"crossref","first-page":"319","DOI":"10.1128\/CMR.16.2.319-354.2003","article-title":"Impact
-        of genotypic studies on mycobacterial taxonomy: the new mycobacteria of the
-        1990s","volume":"16","author":"Tortoli","year":"2003","journal-title":"Clin.
-        Microbiol. Rev."},{"key":"10.1016\/j.femsec.2004.09.015-BIB16|cit16","doi-asserted-by":"crossref","first-page":"321","DOI":"10.1146\/annurev.mi.39.100185.001541","article-title":"Measurement
-        of in situ activities of non-photosynthetic microorganisms in aquatic and
-        terrestrial habitats","volume":"39","author":"Staley","year":"1985","journal-title":"Ann.
-        Rev. Microbiol."},{"key":"10.1016\/j.femsec.2004.09.015-BIB17|cit17","doi-asserted-by":"crossref","first-page":"143","DOI":"10.1128\/MMBR.59.1.143-169.1995","article-title":"Phylogenetic
-        identification and in situ detection of individual microbial cells without
-        cultivation","volume":"59","author":"Amann","year":"1995","journal-title":"Microbiol.
-        Rev."},{"key":"10.1016\/j.femsec.2004.09.015-BIB18|cit18","doi-asserted-by":"crossref","first-page":"203","DOI":"10.1111\/j.1574-6941.1999.tb00648.x","article-title":"Induction
-        of the viable but non-culturable condition in Xanthomonas campestris pv. campestris
-        in liquid microcosms and sterile soil","volume":"30","author":"Ghezzi","year":"1999","journal-title":"FEMS.
-        Microbiol. Ecol."},{"key":"10.1016\/j.femsec.2004.09.015-BIB19|cit19","doi-asserted-by":"crossref","first-page":"143","DOI":"10.1016\/S0163-7827(98)00008-3","article-title":"Mycolic
-        acids: structure, biosynsthesis and physiological functions","volume":"37","author":"Barry","year":"1998","journal-title":"Prog.
-        Lipid Res."},{"key":"10.1016\/j.femsec.2004.09.015-BIB20|cit20","doi-asserted-by":"crossref","first-page":"1253","DOI":"10.2741\/A360","article-title":"The
-        outer parts of the mycobacterial envelope as permeability barriers","volume":"3","author":"Draper","year":"1998","journal-title":"Front.
-        Biosci."},{"key":"10.1016\/j.femsec.2004.09.015-BIB21|cit21","unstructured":""},{"key":"10.1016\/j.femsec.2004.09.015-BIB22|cit22","doi-asserted-by":"crossref","first-page":"1751","DOI":"10.1128\/JCM.28.8.1751-1759.1990","article-title":"Detection
-        and identification of mycobacteria by amplification of rRNA","volume":"28","author":"B\u00c3\u00b6ddinghaus","year":"1990","journal-title":"Clin.
-        Microbiol."},{"key":"10.1016\/j.femsec.2004.09.015-BIB23|cit23","doi-asserted-by":"crossref","first-page":"2994","DOI":"10.1128\/JCM.33.11.2994-2998.1995","article-title":"Detection
-        and identification of mycobacteria by DNA amplification and oligonucleotide-specific
-        capture plate hybridisation","volume":"33","author":"Beenhouwer","year":"1995","journal-title":"J.
-        Clin. Microbiol."},{"key":"10.1016\/j.femsec.2004.09.015-BIB24|cit24","doi-asserted-by":"crossref","first-page":"3225","DOI":"10.1128\/JCM.33.12.3225-3233.1995","article-title":"PCR
-        assay based on DNA coding for 16S rRNA for detection and identification of
-        mycobacteria in clinical samples","volume":"33","author":"Kox","year":"1995","journal-title":"J.
-        Clin. Microbiol."},{"key":"10.1016\/j.femsec.2004.09.015-BIB25|cit25","doi-asserted-by":"crossref","first-page":"1492","DOI":"10.1128\/JCM.35.6.1492-1498.1997","article-title":"Multiplex
-        PCR assay for immediate identification of the infecting species in patients
-        with mycobacterial diseases","volume":"35","author":"Kox","year":"1997","journal-title":"J.
-        Clin. Microbiol."},{"key":"10.1016\/j.femsec.2004.09.015-BIB26|cit26","doi-asserted-by":"crossref","first-page":"547","DOI":"10.1093\/rheumatology\/38.6.547","article-title":"Detection
-        of mycobacteria in joint samples from patients with arthritis using a genus-specific
-        polymerase chain reaction and sequence analysis","volume":"38","author":"Heijden","year":"1999","journal-title":"Rheumatology"},{"key":"10.1016\/j.femsec.2004.09.015-BIB27|cit27","doi-asserted-by":"crossref","first-page":"229","DOI":"10.1016\/S0378-1135(97)00120-X","article-title":"Identification
-        of mycobacteria infecting fish to the species level using polymerase chain
-        reaction and restriction enzyme analysis","volume":"58","author":"Talaat","year":"1997","journal-title":"Vet.
-        Microbiol."},{"key":"10.1016\/j.femsec.2004.09.015-BIB28|cit28","first-page":"3225","article-title":"PCR-based
-        detection of mycobacteria in biofilms from a drinking water distribution system","volume":"33","author":"Schwartz","year":"1998","journal-title":"J.
-        Clin. Microbiol."},{"key":"10.1016\/j.femsec.2004.09.015-BIB29|cit29","doi-asserted-by":"crossref","first-page":"3206","DOI":"10.1128\/AEM.66.8.3206-3213.2000","article-title":"Identification
-        of Mycobacterium ulcerans in the environment from regions in southeast Australia
-        in which it is endemic with sequence capture-PCR","volume":"66","author":"Stinear","year":"2000","journal-title":"Appl.
-        Environ. Microbiol."},{"key":"10.1016\/j.femsec.2004.09.015-BIB30|cit30","doi-asserted-by":"crossref","first-page":"189","DOI":"10.1111\/j.1574-6968.2000.tb09060.x","article-title":"The
-        PCR amplification of non-tuberculose mycobacterial 16S rRNA sequences from
-        soil","volume":"185","author":"Mendum","year":"2000","journal-title":"FEMS
-        Microbiol. Lett."},{"key":"10.1016\/j.femsec.2004.09.015-BIB31|cit31","doi-asserted-by":"crossref","first-page":"2222","DOI":"10.1128\/AEM.67.5.2222-2229.2001","article-title":"Mycobacterium
-        diversity and pyrene mineralisation in petroleum-contaminated soils","volume":"67","author":"Cheung","year":"2001","journal-title":"Appl.
-        Environ. Microbiol."},{"key":"10.1016\/j.femsec.2004.09.015-BIB32|cit32","unstructured":""},{"key":"10.1016\/j.femsec.2004.09.015-BIB33|cit33","unstructured":""},{"key":"10.1016\/j.femsec.2004.09.015-BIB34|cit34","doi-asserted-by":"crossref","first-page":"328","DOI":"10.1128\/JB.162.1.328-334.1985","article-title":"Alcaligenes
-        eutrophus CH34 is a facultative chemolithotroph with plasmid-bound resistance
-        to heavy metals","volume":"162","author":"Mergeay","year":"1985","journal-title":"J.
-        Bacteriol."},{"key":"10.1016\/j.femsec.2004.09.015-BIB35|cit35","doi-asserted-by":"crossref","first-page":"354","DOI":"10.1021\/es001384w","article-title":"Kinetics
-        of mass transfer-limited bacterial growth on solid PAHs","volume":"35","author":"Wick","year":"2001","journal-title":"Environ.
-        Sci. Technol."},{"key":"10.1016\/j.femsec.2004.09.015-BIB36|cit36","unstructured":"http:\/\/www.epa.gov\/triinter\/tridata\/tri02\/index.htm"},{"key":"10.1016\/j.femsec.2004.09.015-BIB37|cit37","doi-asserted-by":"crossref","first-page":"D23","DOI":"10.1093\/nar\/gkh045","article-title":"GenBank:
-        update","volume":"32","author":"Benson","year":"2004","journal-title":"Nucleic
-        Acids Res."},{"key":"10.1016\/j.femsec.2004.09.015-BIB38|cit38","doi-asserted-by":"crossref","first-page":"276","DOI":"10.1016\/S0168-9525(00)02024-2","article-title":"EMBOSS:
-        The European Molecular Biology Open Software Suite","volume":"16","author":"Rice","year":"2000","journal-title":"Trends
-        Genet."},{"key":"10.1016\/j.femsec.2004.09.015-BIB39|cit39","doi-asserted-by":"crossref","first-page":"442","DOI":"10.1093\/nar\/gkg039","article-title":"The
-        Ribosomal Database Project (RDP-II): previewing a new autoaligner that allows
-        regular updates and the new prokaryotic taxonomy","volume":"31","author":"Cole","year":"2003","journal-title":"Nucleic
-        Acids Res."},{"key":"10.1016\/j.femsec.2004.09.015-BIB40|cit40","doi-asserted-by":"crossref","first-page":"403","DOI":"10.1016\/S0022-2836(05)80360-2","article-title":"Basic
-        local alignment search tool","volume":"215","author":"Altschul","year":"1990","journal-title":"J.
-        Mol. Biol."},{"key":"10.1016\/j.femsec.2004.09.015-BIB41|cit41","doi-asserted-by":"crossref","first-page":"695","DOI":"10.1128\/AEM.59.3.695-700.1993","article-title":"Profiling
-        of complex microbial populations by denaturing gradient gel electrophoresis
-        analysis of polymerase chain reaction-amplified genes encoding for 16S rRNA","volume":"59","author":"Muyzer","year":"1993","journal-title":"Appl.
-        Environ. Microbiol."},{"key":"10.1016\/j.femsec.2004.09.015-BIB42|cit42","unstructured":""},{"key":"10.1016\/j.femsec.2004.09.015-BIB43|cit43","unstructured":""},{"key":"10.1016\/j.femsec.2004.09.015-BIB44|cit44","doi-asserted-by":"crossref","first-page":"1136","DOI":"10.1016\/0006-291X(86)90452-3","article-title":"Mycobacteria
-        possess a surprisingly small number of ribosomal RNA genes in relation to
-        the size of their genome","volume":"136","author":"Bercovier","year":"1986","journal-title":"Biochem.
-        Biophys. Res. Commun."},{"key":"10.1016\/j.femsec.2004.09.015-BIB45|cit45","doi-asserted-by":"crossref","first-page":"2906","DOI":"10.1128\/AEM.66.7.2906-2913.2000","article-title":"Bioaugmentation
-        of activated sludge by an indigenous 3-chloroaniline-degrading Comamonas testosteroni
-        strain I2gfp","volume":"66","author":"Boon","year":"2000","journal-title":"Appl.
-        Environ. Microbiol."},{"key":"10.1016\/j.femsec.2004.09.015-BIB46|cit46","doi-asserted-by":"crossref","first-page":"795","DOI":"10.1128\/AEM.64.2.795-799.1998","article-title":"Design
-        and evaluation of useful bacterium-specific PCR primers that amplify genes
-        coding for bacterial 16S rRNA","volume":"64","author":"Marchesi","year":"1998","journal-title":"Appl.
-        Environ. Microbiol."},{"key":"10.1016\/j.femsec.2004.09.015-BIB47|cit47","doi-asserted-by":"crossref","first-page":"3724","DOI":"10.1128\/AEM.64.10.3724-3730.1998","article-title":"Bias
-        in template-to-product ratios in multitemplate PCR","volume":"64","author":"Polz","year":"1998","journal-title":"Appl.
-        Environ. Microbiol."},{"key":"10.1016\/j.femsec.2004.09.015-BIB48|cit48","unstructured":""},{"key":"10.1016\/j.femsec.2004.09.015-BIB49|cit49","first-page":"406","article-title":"The
-        neighbor-joining method: a new method for reconstructing phylogenetic trees","volume":"4","author":"Saitou","year":"1987","journal-title":"Mol.
-        Biol. Evol."},{"key":"10.1016\/j.femsec.2004.09.015-BIB50|cit50","doi-asserted-by":"crossref","first-page":"368","DOI":"10.1007\/BF01734359","article-title":"Evolutionary
-        trees from DNA sequences: a maximum likelihood approach","volume":"17","author":"Felsenstein","year":"1981","journal-title":"J.
-        Mol. Evol."},{"key":"10.1016\/j.femsec.2004.09.015-BIB51|cit51","doi-asserted-by":"crossref","first-page":"1","DOI":"10.2307\/2412407","article-title":"Quantitative
-        phyletics and the evolution of anurans","volume":"18","author":"Kluge","year":"1969","journal-title":"System.
-        Zool."},{"key":"10.1016\/j.femsec.2004.09.015-BIB52|cit52","unstructured":""},{"key":"10.1016\/j.femsec.2004.09.015-BIB53|cit53","doi-asserted-by":"crossref","first-page":"1595","DOI":"10.1128\/AEM.68.4.1595-1603.2002","article-title":"Molecular
-        method to asses the diversity of Burkholderia species in environmental samples","volume":"68","author":"Falc\u00c3\u00a3o
-        Salles","year":"2002","journal-title":"Appl. Environ. Microbiol."},{"key":"10.1016\/j.femsec.2004.09.015-BIB54|cit54","doi-asserted-by":"crossref","first-page":"504","DOI":"10.1128\/AEM.67.2.504-513.2001","article-title":"Bifidobacterial
-        diversity in human feces detected by genus-specific PCR and denaturing gradient
-        gel electrophoresis","volume":"67","author":"Satokari","year":"2001","journal-title":"Appl.
-        Environ. Microbiol."},{"key":"10.1016\/j.femsec.2004.09.015-BIB55|cit55","doi-asserted-by":"crossref","first-page":"113","DOI":"10.1099\/00207713-49-1-113","article-title":"Application
-        of temperature-gradient electrophoresis in taxonomy of coryneform bacteria","volume":"49","author":"Felske","year":"1999","journal-title":"Int.
-        J. Syst. Bacteriol."},{"key":"10.1016\/j.femsec.2004.09.015-BIB56|cit56","doi-asserted-by":"crossref","first-page":"5636","DOI":"10.1128\/jb.178.19.5636-5643.1996","article-title":"Sequence
-        heterogeneities of genes encoding 16S rRNAs in Paenibacillus polymyxa detected
-        by Temperature Gradient Gel Electrophoresis","volume":"178","author":"N\u00c3\u00bcbel","year":"1996","journal-title":"J.
-        Bacteriol."},{"key":"10.1016\/j.femsec.2004.09.015-BIB57|cit57","doi-asserted-by":"crossref","first-page":"181","DOI":"10.1093\/nar\/29.1.181","article-title":"rrndb:
-        The ribosomal RNA operon copy number database","volume":"29","author":"Klappenbach","year":"2001","journal-title":"Nucleic
-        Acids Res."},{"key":"10.1016\/j.femsec.2004.09.015-BIB58|cit58","first-page":"225","article-title":"Heteroduplex
-        mobility assay for rapid, sensitive and specific detection of mycobacteria.
-        Diagnostic Microbiol","volume":"36","author":"Wal\u00c3\u00a9ria-Aleixo","year":"2000","journal-title":"Infect.
-        Disease"},{"key":"10.1016\/j.femsec.2004.09.015-BIB59|cit59","doi-asserted-by":"crossref","first-page":"378","DOI":"10.1007\/s00253-001-0898-z","article-title":"Responses
-        of Mycobacterium sp. LB501T to the low bioavailability of solid anthracene","volume":"58","author":"Wick","year":"2002","journal-title":"Appl.
-        Microbiol. Biotechnol."},{"key":"10.1016\/j.femsec.2004.09.015-BIB60|cit60","doi-asserted-by":"crossref","first-page":"1927","DOI":"10.1128\/AEM.59.6.1927-1930.1993","article-title":"Degradation
-        of phenanthrene, fluorene and pyrene by a Mycobacterium sp.","volume":"59","author":"Boldrin","year":"1993","journal-title":"Appl.
-        Environ. Microbiol."},{"key":"10.1016\/j.femsec.2004.09.015-BIB61|cit61","doi-asserted-by":"crossref","first-page":"1839","DOI":"10.1099\/00207713-49-4-1839","article-title":"Mycobacterium
-        tusciae sp. nov.","volume":"49","author":"Tortoli","year":"1999","journal-title":"Int.
-        J. Syst. Bacteriol."},{"key":"10.1016\/j.femsec.2004.09.015-BIB62|cit62","doi-asserted-by":"crossref","first-page":"3577","DOI":"10.1128\/AEM.67.8.3577-3585.2001","article-title":"Molecular
-        cloning, nucleotide sequence and expression of genes encoding a polycyclic
-        aromatic ring dioxygenase from Mycobacterium sp. strain PYR-1","volume":"67","author":"Khan","year":"2001","journal-title":"Appl.
-        Environ. Microbiol."},{"key":"10.1016\/j.femsec.2004.09.015-BIB63|cit63","doi-asserted-by":"crossref","first-page":"3828","DOI":"10.1128\/JB.185.13.3828-3841.2003","article-title":"Identification
-        of pyrene-induced proteins in Mycobacterium sp. strain 6PY1: evidence for
-        two ring-hydroxylating dioxygenases","volume":"185","author":"Krivobok","year":"2003","journal-title":"J.
-        Bacteriol."},{"key":"10.1016\/j.femsec.2004.09.015-BIB64|cit64","doi-asserted-by":"crossref","first-page":"1944","DOI":"10.1128\/AEM.70.4.1944-1955.2004","article-title":"Occurrence
-        and phylogenetic diversity of Sphingomonas in soils contaminated with polycyclic
-        aromatic hydrocarbons (PAHs)","volume":"70","author":"Leys","year":"2004","journal-title":"Appl.
-        Environ. Microbiol."}],"container-title":["FEMS Microbiology Ecology"],"language":"en","link":[{"URL":"http:\/\/academic.oup.com\/femsec\/article-pdf\/51\/3\/375\/18099046\/51-3-375.pdf","content-type":"unspecified","content-version":"vor","intended-application":"similarity-checking"}],"deposited":{"date-parts":[[2020,4,4]],"date-time":"2020-04-04T02:07:52Z","timestamp":1585966072000},"score":0.0,"issued":{"date-parts":[[2005,2]]},"references-count":64,"journal-issue":{"issue":"3"},"URL":"http:\/\/dx.doi.org\/10.1016\/j.femsec.2004.09.015","ISSN":["0168-6496","1574-6941"],"issn-type":[{"value":"0168-6496","type":"print"},{"value":"1574-6941","type":"electronic"}],"subject":["Applied
-        Microbiology and Biotechnology","Ecology","Microbiology"],"published":{"date-parts":[[2005,2]]}},{"indexed":{"date-parts":[[2021,5,11]],"date-time":"2021-05-11T22:09:52Z","timestamp":1620770992643},"reference-count":20,"publisher":"Oxford
+        Microbiology and Biotechnology","Ecology","Microbiology"],"published":{"date-parts":[[2006,4]]}},{"indexed":{"date-parts":[[2021,5,11]],"date-time":"2021-05-11T22:09:52Z","timestamp":1620770992643},"reference-count":20,"publisher":"Oxford
         University Press (OUP)","issue":"3","content-domain":{"domain":[],"crossmark-restriction":false},"published-print":{"date-parts":[[2003,4]]},"DOI":"10.1111\/j.1574-6941.2003.tb01070.x","type":"journal-article","created":{"date-parts":[[2006,1,5]],"date-time":"2006-01-05T13:39:19Z","timestamp":1136468359000},"page":"299-308","source":"Crossref","is-referenced-by-count":63,"title":["Differential
         detection of type II methanotrophic bacteria in acidic peatlands using newly
         developed 16S rRNA-targeted fluorescent oligonucleotide probes"],"prefix":"10.1093","volume":"43","author":[{"given":"Svetlana
@@ -1175,6 +1034,72 @@ http_interactions:
         a widespread bacterial group: in situ detection of planctomycetes with 16S
         rRNA-targeted probes","volume":"144","author":"Neef","year":"1998","journal-title":"Microbiology"},{"key":"10.1111\/j.1574-6941.2001.tb00888.x-BIB49|cit49","unstructured":""}],"container-title":["FEMS
         Microbiology Ecology"],"language":"en","link":[{"URL":"http:\/\/academic.oup.com\/femsec\/article-pdf\/38\/2-3\/105\/18089359\/38-2-3-105.pdf","content-type":"unspecified","content-version":"vor","intended-application":"similarity-checking"}],"deposited":{"date-parts":[[2020,4,11]],"date-time":"2020-04-11T23:21:14Z","timestamp":1586647274000},"score":0.0,"issued":{"date-parts":[[2001,12]]},"references-count":49,"journal-issue":{"issue":"2-3"},"URL":"http:\/\/dx.doi.org\/10.1111\/j.1574-6941.2001.tb00888.x","ISSN":["0168-6496","1574-6941"],"issn-type":[{"value":"0168-6496","type":"print"},{"value":"1574-6941","type":"electronic"}],"subject":["Applied
-        Microbiology and Biotechnology","Ecology","Microbiology"],"published":{"date-parts":[[2001,12]]}}],"items-per-page":20,"query":{"start-index":0,"search-terms":null}}}'
-  recorded_at: 2021-08-01 15:46:02 GMT
+        Microbiology and Biotechnology","Ecology","Microbiology"],"published":{"date-parts":[[2001,12]]}},{"indexed":{"date-parts":[[2021,5,11]],"date-time":"2021-05-11T22:10:05Z","timestamp":1620771005024},"reference-count":25,"publisher":"Oxford
+        University Press (OUP)","issue":"2-3","content-domain":{"domain":[],"crossmark-restriction":false},"published-print":{"date-parts":[[2001,7]]},"DOI":"10.1111\/j.1574-6941.2001.tb00836.x","type":"journal-article","created":{"date-parts":[[2006,1,5]],"date-time":"2006-01-05T14:02:01Z","timestamp":1136469721000},"page":"165-168","source":"Crossref","is-referenced-by-count":37,"title":["Use
+        of 16S rRNA-targeted oligonucleotide probes to investigate the distribution
+        of sulphate-reducing bacteria in estuarine sediments"],"prefix":"10.1093","volume":"36","author":[{"given":"Kevin
+        J.","family":"Purdy","sequence":"first","affiliation":[]},{"given":"David
+        B.","family":"Nedwell","sequence":"additional","affiliation":[]},{"given":"T.","family":"Martin
+        Embley","sequence":"additional","affiliation":[]},{"given":"Susumu","family":"Takii","sequence":"additional","affiliation":[]}],"member":"286","reference":[{"key":"10.1111\/j.1574-6941.2001.tb00836.x-BIB1|cit1","first-page":"1","article-title":"Relative
+        importance of methanogenesis, sulfate reduction and denitrification in sediments
+        of the lower Tama river","volume":"6","author":"Takii","year":"1991","journal-title":"Bull.
+        Jpn. Soc. Microbiol. Ecol."},{"key":"10.1111\/j.1574-6941.2001.tb00836.x-BIB2|cit2","doi-asserted-by":"crossref","first-page":"93","DOI":"10.1007\/978-1-4684-8989-7_3","article-title":"The
+        input and mineralization of organic carbon in anaerobic aquatic sediments","volume":"7","author":"Nedwell","year":"1984","journal-title":"Adv.
+        Microbiol. Ecol."},{"key":"10.1111\/j.1574-6941.2001.tb00836.x-BIB3|cit3","doi-asserted-by":"crossref","first-page":"601","DOI":"10.1016\/S0723-2020(11)80122-0","article-title":"Genus-
+        and group-specific hybridisation probes for determinative and environmental
+        studies of sulfate-reducing bacteria","volume":"15","author":"Devereux","year":"1992","journal-title":"Syst.
+        Appl. Microbiol."},{"key":"10.1111\/j.1574-6941.2001.tb00836.x-BIB4|cit4","doi-asserted-by":"crossref","first-page":"23","DOI":"10.1111\/j.1574-6941.1996.tb00301.x","article-title":"Depth
+        profile of sulfate-reducing bacterial ribosomal RNA and mercury methylation
+        in an estuarine sediment","volume":"20","author":"Devereux","year":"1996","journal-title":"FEMS
+        Microbiol. Ecol."},{"key":"10.1111\/j.1574-6941.2001.tb00836.x-BIB5|cit5","doi-asserted-by":"crossref","first-page":"333","DOI":"10.1111\/j.1574-6941.1997.tb00450.x","article-title":"Process
+        measurement and phylogenetic analysis of the sulphate reducing bacterial communities
+        of two contrasting benthic sites in the upper estuary of the Great Ouse, Norfolk,
+        UK","volume":"24","author":"Trimmer","year":"1997","journal-title":"FEMS Microbiol.
+        Ecol."},{"key":"10.1111\/j.1574-6941.2001.tb00836.x-BIB6|cit6","doi-asserted-by":"crossref","first-page":"31","DOI":"10.1111\/j.1574-6941.1999.tb00558.x","article-title":"Seasonal
+        changes in ribosomal RNA of sulfate-reducing bacteria and sulfate reducing
+        activity in a freshwater lake sediment","volume":"28","author":"Li","year":"1999","journal-title":"FEMS
+        Microbiol. Ecol."},{"key":"10.1111\/j.1574-6941.2001.tb00836.x-BIB7|cit7","doi-asserted-by":"crossref","first-page":"4659","DOI":"10.1128\/AEM.65.10.4659-4665.1999","article-title":"Unexpected
+        population distribution in a microbial mat community: Sulfate-reducing bacteria
+        localized to the highly oxic chemocline in contrast to a eukaryotic preference
+        for anoxia","volume":"65","author":"Minz","year":"1999","journal-title":"Appl.
+        Environ. Microbiol."},{"key":"10.1111\/j.1574-6941.2001.tb00836.x-BIB8|cit8","doi-asserted-by":"crossref","first-page":"65","DOI":"10.1046\/j.1462-2920.1999.00007.x","article-title":"Sulphate
+        reduction and vertical distribution of sulphate-reducing bacteria quantified
+        by rRNA slot-blot hybridization in a coastal marine sediment","volume":"1","author":"Sahm","year":"1999","journal-title":"Environ.
+        Microbiol."},{"key":"10.1111\/j.1574-6941.2001.tb00836.x-BIB9|cit9","doi-asserted-by":"crossref","first-page":"221","DOI":"10.1111\/j.1574-6941.1997.tb00439.x","article-title":"Use
+        of 16S rRNA-targeted oligonucleotide probes to investigate the occurrence
+        and selection of sulphate-reducing bacteria in response to nutrient addition
+        to sediment slurry microcosms from a Japanese estuary","volume":"24","author":"Purdy","year":"1997","journal-title":"FEMS
+        Microbiol. Ecol."},{"key":"10.1111\/j.1574-6941.2001.tb00836.x-BIB10|cit10","doi-asserted-by":"crossref","first-page":"3905","DOI":"10.1128\/AEM.62.10.3905-3907.1996","article-title":"Rapid
+        extraction of DNA and rRNA from sediments using a novel hydroxyapatite spin-column
+        method","volume":"62","author":"Purdy","year":"1996","journal-title":"Appl.
+        Environ. Microbiol."},{"key":"10.1111\/j.1574-6941.2001.tb00836.x-BIB11|cit11","unstructured":""},{"key":"10.1111\/j.1574-6941.2001.tb00836.x-BIB12|cit12","unstructured":""},{"key":"10.1111\/j.1574-6941.2001.tb00836.x-BIB13|cit13","unstructured":""},{"key":"10.1111\/j.1574-6941.2001.tb00836.x-BIB14|cit14","doi-asserted-by":"crossref","first-page":"308","DOI":"10.1016\/S0022-2836(66)80248-6","article-title":"Ribonucleic
+        acid composition of bacteria as a function of growth rate","volume":"18","author":"Rosset","year":"1966","journal-title":"J.
+        Mol. Biol."},{"key":"10.1111\/j.1574-6941.2001.tb00836.x-BIB15|cit15","unstructured":""},{"key":"10.1111\/j.1574-6941.2001.tb00836.x-BIB16|cit16","doi-asserted-by":"crossref","first-page":"360","DOI":"10.1007\/BF00411187","article-title":"Studies
+        on dissimilatory sulfate-reducing bacteria that decompose fatty acids. II.
+        Incomplete oxidation of propionate by Desulfobulbus propionicus gen. nov.
+        sp. nov.","volume":"131","author":"Widdel","year":"1982","journal-title":"Arch.
+        Microbiol."},{"key":"10.1111\/j.1574-6941.2001.tb00836.x-BIB17|cit17","doi-asserted-by":"crossref","first-page":"163","DOI":"10.1007\/BF00415278","article-title":"Complete
+        oxidation of catechol by the strictly sulfate-reducing Desulfobacterium catecholicum
+        sp. nov.","volume":"147","author":"Szewzyk","year":"1987","journal-title":"Arch.
+        Microbiol."},{"key":"10.1111\/j.1574-6941.2001.tb00836.x-BIB18|cit18","doi-asserted-by":"crossref","first-page":"41","DOI":"10.1016\/0025-3227(93)90148-O","article-title":"Enzymatic
+        iron and uranium reduction by sulfate-reducing bacteria","volume":"113","author":"Lovley","year":"1993","journal-title":"Mar.
+        Geol."},{"key":"10.1111\/j.1574-6941.2001.tb00836.x-BIB19|cit19","doi-asserted-by":"crossref","first-page":"291","DOI":"10.1128\/AEM.60.1.291-297.1994","article-title":"Nitrate
+        reduction in a sulfate-reducing bacterium, Desulfovibrio desulfuricans, isolated
+        from a rice paddy soil: Sulfide inhibition, kinetics and regulation","volume":"60","author":"Dalsgaard","year":"1994","journal-title":"Appl.
+        Environ. Microbiol."},{"key":"10.1111\/j.1574-6941.2001.tb00836.x-BIB20|cit20","doi-asserted-by":"crossref","first-page":"801","DOI":"10.1038\/33900","article-title":"Direct
+        linking of microbial populations to specific biogeochemical processes by C-13-labelling
+        of biomarkers","volume":"392","author":"Boschker","year":"1998","journal-title":"Nature"},{"key":"10.1111\/j.1574-6941.2001.tb00836.x-BIB21|cit21","doi-asserted-by":"crossref","first-page":"43","DOI":"10.1111\/j.1574-6968.1991.tb04696.x","article-title":"Sulfate-reducing
+        bacteria in littoral sediment of Lake Constance","volume":"85","author":"Bak","year":"1991","journal-title":"FEMS
+        Microbiol. Ecol."},{"key":"10.1111\/j.1574-6941.2001.tb00836.x-BIB22|cit22","doi-asserted-by":"crossref","first-page":"107","DOI":"10.1111\/j.1574-6941.1997.tb00395.x","article-title":"Turnover
+        of propionate in methanogenic paddy soil","volume":"23","author":"Krylova","year":"1997","journal-title":"FEMS
+        Microbiol. Ecol."},{"key":"10.1111\/j.1574-6941.2001.tb00836.x-BIB23|cit23","doi-asserted-by":"crossref","first-page":"281","DOI":"10.1111\/j.1574-6941.1998.tb00512.x","article-title":"Thermodynamics
+        of propionate degradation in methanogenic paddy soil","volume":"26","author":"Krylova","year":"1998","journal-title":"FEMS
+        Microbiol. Ecol."},{"key":"10.1111\/j.1574-6941.2001.tb00836.x-BIB24|cit24","doi-asserted-by":"crossref","first-page":"3731","DOI":"10.1128\/AEM.64.10.3731-3739.1998","article-title":"Structural
+        and functional dynamics of sulfate-reducing populations in bacterial biofilms","volume":"64","author":"Santegoeds","year":"1998","journal-title":"Appl.
+        Environ. Microbiol."},{"key":"10.1111\/j.1574-6941.2001.tb00836.x-BIB25|cit25","doi-asserted-by":"crossref","first-page":"614","DOI":"10.1128\/AEM.58.2.614-623.1992","article-title":"Molecular
+        and microscopic identifications of sulfate-reducing bacteria in multispecies
+        biofilms","volume":"58","author":"Amann","year":"1992","journal-title":"Appl.
+        Environ. Microbiol."}],"container-title":["FEMS Microbiology Ecology"],"language":"en","link":[{"URL":"http:\/\/academic.oup.com\/femsec\/article-pdf\/36\/2-3\/165\/18089522\/36-2-3-165.pdf","content-type":"unspecified","content-version":"vor","intended-application":"similarity-checking"}],"deposited":{"date-parts":[[2020,4,11]],"date-time":"2020-04-11T23:23:17Z","timestamp":1586647397000},"score":0.0,"issued":{"date-parts":[[2001,7]]},"references-count":25,"journal-issue":{"issue":"2-3"},"URL":"http:\/\/dx.doi.org\/10.1111\/j.1574-6941.2001.tb00836.x","ISSN":["0168-6496","1574-6941"],"issn-type":[{"value":"0168-6496","type":"print"},{"value":"1574-6941","type":"electronic"}],"subject":["Applied
+        Microbiology and Biotechnology","Ecology","Microbiology"],"published":{"date-parts":[[2001,7]]}}],"items-per-page":20,"query":{"start-index":0,"search-terms":null}}}'
+  recorded_at: 2021-08-13 12:56:38 GMT
   recorded_with: vcr/1.0.2, webmockr/0.8.0

@@ -17,7 +17,7 @@ http_interactions:
       explanation: Request fulfilled, document follows
     headers:
       status: HTTP/1.1 200 OK
-      date: Sun, 01 Aug 2021 15:50:39 GMT
+      date: Fri, 13 Aug 2021 13:01:37 GMT
       content-type: application/json;charset=utf-8
       content-length: '432'
       vary: Accept, Accept-Encoding
@@ -27,6 +27,7 @@ http_interactions:
       server: Jetty(9.4.40.v20210413)
       x-ratelimit-limit: '50'
       x-ratelimit-interval: 1s
+      x-api-pool: public
       x-rate-limit-limit: '50'
       x-rate-limit-interval: 1s
       permissions-policy: interest-cohort=()
@@ -46,7 +47,7 @@ http_interactions:
         Issue"},{"id":"dissertation","label":"Dissertation"},{"id":"dataset","label":"Dataset"},{"id":"book-series","label":"Book
         Series"},{"id":"edited-book","label":"Edited Book"},{"id":"standard-series","label":"Standard
         Series"}]}}'
-  recorded_at: 2021-08-01 15:50:41 GMT
+  recorded_at: 2021-08-13 13:01:38 GMT
   recorded_with: vcr/1.0.2, webmockr/0.8.0
 - request:
     method: get
@@ -66,7 +67,7 @@ http_interactions:
       explanation: Request fulfilled, document follows
     headers:
       status: HTTP/1.1 200 OK
-      date: Sun, 01 Aug 2021 15:50:41 GMT
+      date: Fri, 13 Aug 2021 13:01:38 GMT
       content-type: application/json
       content-length: '895'
       access-control-allow-origin: '*'
@@ -76,6 +77,7 @@ http_interactions:
       server: Jetty(9.4.40.v20210413)
       x-ratelimit-limit: '50'
       x-ratelimit-interval: 1s
+      x-api-pool: public
       x-rate-limit-limit: '50'
       x-rate-limit-interval: 1s
       permissions-policy: interest-cohort=()
@@ -83,7 +85,7 @@ http_interactions:
     body:
       encoding: UTF-8
       file: no
-      string: '{"status":"ok","message-type":"work-list","message-version":"1.0.0","message":{"facets":{},"total-results":515423,"items":[{"indexed":{"date-parts":[[2021,5,6]],"date-time":"2021-05-06T20:38:10Z","timestamp":1620333490062},"publisher-location":"Chicoutimi","reference-count":0,"publisher":"J.-M.
+      string: '{"status":"ok","message-type":"work-list","message-version":"1.0.0","message":{"facets":{},"total-results":516285,"items":[{"indexed":{"date-parts":[[2021,5,6]],"date-time":"2021-05-06T20:38:10Z","timestamp":1620333490062},"publisher-location":"Chicoutimi","reference-count":0,"publisher":"J.-M.
         Tremblay","isbn-type":[{"value":"1554418453","type":"electronic"}],"content-domain":{"domain":[],"crossmark-restriction":false},"DOI":"10.1522\/cla.rim.epi","type":"monograph","created":{"date-parts":[[2006,5,1]],"date-time":"2006-05-01T17:22:42Z","timestamp":1146504162000},"source":"Crossref","is-referenced-by-count":0,"title":["E\u0301piste\u0301mologie
         et enseignement des sciences"],"prefix":"10.1522","author":[{"given":"Martin","family":"Riopel","sequence":"first","affiliation":[]}],"member":"208","published-online":{"date-parts":[[2005]]},"container-title":["Classiques
         des sciences sociales."],"deposited":{"date-parts":[[2009,2,2]],"date-time":"2009-02-02T21:19:43Z","timestamp":1233609583000},"score":0.0,"issued":{"date-parts":[[2005]]},"ISBN":["1554418453"],"references-count":0,"URL":"http:\/\/dx.doi.org\/10.1522\/cla.rim.epi","published":{"date-parts":[[2005]]}},{"indexed":{"date-parts":[[2021,5,6]],"date-time":"2021-05-06T20:35:53Z","timestamp":1620333353999},"publisher-location":"Chicoutimi","reference-count":0,"publisher":"J.-M.
@@ -93,5 +95,5 @@ http_interactions:
         Tremblay","isbn-type":[{"value":"1554419026","type":"electronic"}],"content-domain":{"domain":[],"crossmark-restriction":false},"DOI":"10.1522\/cla.dev.ide","type":"monograph","created":{"date-parts":[[2006,5,1]],"date-time":"2006-05-01T17:22:42Z","timestamp":1146504162000},"source":"Crossref","is-referenced-by-count":0,"title":["identification
         des ide\u0301es"],"prefix":"10.1522","author":[{"given":"Vincent.","family":"Descombes","sequence":"first","affiliation":[]}],"member":"208","published-online":{"date-parts":[[2006]]},"container-title":["Classiques
         des sciences sociales."],"deposited":{"date-parts":[[2009,2,2]],"date-time":"2009-02-02T21:19:43Z","timestamp":1233609583000},"score":0.0,"issued":{"date-parts":[[2006]]},"ISBN":["1554419026"],"references-count":0,"URL":"http:\/\/dx.doi.org\/10.1522\/cla.dev.ide","published":{"date-parts":[[2006]]}}],"items-per-page":3,"query":{"start-index":0,"search-terms":null}}}'
-  recorded_at: 2021-08-01 15:50:41 GMT
+  recorded_at: 2021-08-13 13:01:38 GMT
   recorded_with: vcr/1.0.2, webmockr/0.8.0
