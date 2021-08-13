@@ -1,0 +1,64 @@
+http_interactions:
+- request:
+    method: get
+    uri: https://www.ncbi.nlm.nih.gov/pmc/utils/idconv/v1.0/?tool=rcrossref&email=myrmecocystus%40gmail.com&ids=10.1038%2Fng.590&format=json
+    body:
+      encoding: ''
+      string: ''
+    headers:
+      Accept-Encoding: gzip, deflate
+      Accept: application/json, text/xml, application/xml, */*
+      User-Agent: r-curl/4.3.2 crul/1.1.0 rOpenSci(rcrossref/1.1.0.94)
+      X-USER-AGENT: r-curl/4.3.2 crul/1.1.0 rOpenSci(rcrossref/1.1.0.94)
+  response:
+    status:
+      status_code: '200'
+      message: OK
+      explanation: Request fulfilled, document follows
+    headers:
+      status: 'HTTP/2 200 '
+      date: Fri, 13 Aug 2021 13:04:27 GMT
+      server: Apache
+      strict-transport-security: max-age=31536000; includeSubDomains; preload
+      referrer-policy: origin-when-cross-origin
+      content-security-policy: upgrade-insecure-requests
+      allow: GET,OPTIONS
+      access-control-allow-origin: '*'
+      access-control-allow-methods: GET, OPTIONS
+      access-control-allow-headers: Content-Type, Access-Control-Allow-Headers, Authorization,
+        X-Requested-With
+      content-type: application/json; charset=ISO-8859-1
+      vary: Accept-Encoding
+      content-encoding: gzip
+      x-ua-compatible: IE=Edge
+      x-xss-protection: 1; mode=block
+      content-length: '277'
+    body:
+      encoding: UTF-8
+      file: no
+      string: |
+        {
+         "status": "ok",
+         "responseDate": "2021-08-13 09:04:27",
+         "request": "tool=rcrossref;email=myrmecocystus%40gmail.com;ids=10.1038%2Fng.590;format=json",
+         "records": [
+           {
+            "pmcid": "PMC2883744",
+            "pmid": "20495566",
+            "doi": "10.1038/ng.590",
+            "versions": [
+              {
+               "pmcid": "PMC2883744.1",
+               "mid": "UKMS29888"
+              },
+              {
+               "pmcid": "PMC2883744.2",
+               "mid": "NIHMS198092",
+               "current": "true"
+              }
+            ]
+           }
+         ]
+        }
+  recorded_at: 2021-08-13 13:04:28 GMT
+  recorded_with: vcr/1.0.2, webmockr/0.8.0
