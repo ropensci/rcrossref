@@ -258,4 +258,23 @@ chk4pk <- function(x) {
 #' Listing all facets no longer works in new API. Here's the string to request
 #' all valid facets.
 #' @noRd
-star_facet <- function() "issn:*,container-title:*,journal-issue:*,link-application:*,affiliation:*,assertion:*,assertion-group:*,orcid:*,update-type:*,funder-name:*,archive:*,category-name:*,relation-type:*,published:*,source:*,type-name:*,publisher-name:*,journal-volume:*,license:*,funder-doi:*"
+star_facet <- function() paste("issn:*",
+  "container-title:*",
+  "journal-issue:*",
+  "link-application:*",
+  "affiliation:*",
+  "assertion:*",
+  "assertion-group:*",
+  "orcid:*",
+  "update-type:*",
+  "funder-name:*",
+  "archive:*",
+  "category-name:*",
+  "relation-type:*",
+  "published:*",
+  "source:*",
+  "type-name:*",
+  "publisher-name:*",
+  "journal-volume:*",
+  "license:*",
+  "funder-doi:*", sep = ",")

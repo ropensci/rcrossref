@@ -22,14 +22,14 @@ http_interactions:
       content-encoding: gzip
       content-length: '2187'
       content-type: application/json
-      date: Tue, 17 Aug 2021 17:24:28 GMT
+      date: Tue, 17 Aug 2021 18:41:25 GMT
       permissions-policy: interest-cohort=()
       server: Jetty(9.4.40.v20210413)
       set-cookie:
-      - AWSALB=izWp2llIpxhoxA7epitynugGjaq2i+xG/4NrFKZ+KozofU04pNUYUoJ0S/PHY1cU1z4fiFEEBzJKt+FuxaF6YjXV8A3OUufRvxWj8F5erX6t2ufCk0MdmHxWsvey;
-        Expires=Tue, 24 Aug 2021 17:24:28 GMT; Path=/
-      - AWSALBCORS=izWp2llIpxhoxA7epitynugGjaq2i+xG/4NrFKZ+KozofU04pNUYUoJ0S/PHY1cU1z4fiFEEBzJKt+FuxaF6YjXV8A3OUufRvxWj8F5erX6t2ufCk0MdmHxWsvey;
-        Expires=Tue, 24 Aug 2021 17:24:28 GMT; Path=/; SameSite=None
+      - AWSALB=wQR6UB3Sf14d8uFfL+Uct6QJ7lm8cfzHos92fNHGOM4b4+5L4IrHCRlMtlrJjsqzaagQt5ydRZmYcjbBcDS5+J27fACQWuzhV5CXN94L3WTY5PeC6o8QckIQoVkR;
+        Expires=Tue, 24 Aug 2021 18:41:25 GMT; Path=/
+      - AWSALBCORS=wQR6UB3Sf14d8uFfL+Uct6QJ7lm8cfzHos92fNHGOM4b4+5L4IrHCRlMtlrJjsqzaagQt5ydRZmYcjbBcDS5+J27fACQWuzhV5CXN94L3WTY5PeC6o8QckIQoVkR;
+        Expires=Tue, 24 Aug 2021 18:41:25 GMT; Path=/; SameSite=None
       status: HTTP/1.1 200 OK
       vary: Accept-Encoding
       x-api-pool: polite
@@ -56,7 +56,7 @@ http_interactions:
         (International Scholarly Research Network)","Hindawi (Conference Papers in
         Science)","Hindawi (Datasets International)","Hindawi Publishing Corporation
         (Sage-Hindawi Access to Research)"]}}'
-  recorded_at: 2021-08-17 17:24:38 GMT
+  recorded_at: 2021-08-17 18:41:35 GMT
   recorded_with: vcr/1.0.2, webmockr/0.8.0
 - request:
     method: get
@@ -80,14 +80,14 @@ http_interactions:
       connection: close
       content-encoding: gzip
       content-type: application/json
-      date: Tue, 17 Aug 2021 17:24:29 GMT
+      date: Tue, 17 Aug 2021 18:41:26 GMT
       permissions-policy: interest-cohort=()
       server: Jetty(9.4.40.v20210413)
       set-cookie:
-      - AWSALB=Qfiu+o0G0ZX00U/pJNwyN2GmCuohTiM4I2DUuM0UK/LRa/AactDTtV9HHdZjUKEEnLDUIaQ3IWbBwgNugYecblAD8VOBeKk4Y/vSkJyyqxWhxbqAO9dd7dLmsYiq;
-        Expires=Tue, 24 Aug 2021 17:24:29 GMT; Path=/
-      - AWSALBCORS=Qfiu+o0G0ZX00U/pJNwyN2GmCuohTiM4I2DUuM0UK/LRa/AactDTtV9HHdZjUKEEnLDUIaQ3IWbBwgNugYecblAD8VOBeKk4Y/vSkJyyqxWhxbqAO9dd7dLmsYiq;
-        Expires=Tue, 24 Aug 2021 17:24:29 GMT; Path=/; SameSite=None
+      - AWSALB=i5lqrJk2F+f+DC/bIFa3vZLfSKbERdlg25RE3QouhcCjLrZK/GSNpMPugkrw/wlySc+HSB4ZoH41W1t73A7xm7SUUvLseFoZjKqmxo6RScSt3jrad2te/VrPPPzi;
+        Expires=Tue, 24 Aug 2021 18:41:26 GMT; Path=/
+      - AWSALBCORS=i5lqrJk2F+f+DC/bIFa3vZLfSKbERdlg25RE3QouhcCjLrZK/GSNpMPugkrw/wlySc+HSB4ZoH41W1t73A7xm7SUUvLseFoZjKqmxo6RScSt3jrad2te/VrPPPzi;
+        Expires=Tue, 24 Aug 2021 18:41:26 GMT; Path=/; SameSite=None
       status: HTTP/1.1 200 OK
       transfer-encoding: chunked
       vary: Accept-Encoding
@@ -99,7 +99,7 @@ http_interactions:
     body:
       encoding: UTF-8
       file: no
-      string: '{"status":"ok","message-type":"work-list","message-version":"1.0.0","message":{"facets":{},"total-results":287496,"items":[{"indexed":{"date-parts":[[2021,5,6]],"date-time":"2021-05-06T20:46:05Z","timestamp":1620333965187},"reference-count":13,"publisher":"Hindawi
+      string: '{"status":"ok","message-type":"work-list","message-version":"1.0.0","message":{"facets":{},"total-results":287505,"items":[{"indexed":{"date-parts":[[2021,5,6]],"date-time":"2021-05-06T20:46:05Z","timestamp":1620333965187},"reference-count":13,"publisher":"Hindawi
         Limited","license":[{"start":{"date-parts":[[2006,5,2]],"date-time":"2006-05-02T00:00:00Z","timestamp":1146528000000},"content-version":"unspecified","delay-in-days":0,"URL":"http:\/\/creativecommons.org\/licenses\/by\/3.0\/"}],"funder":[{"DOI":"10.13039\/501100000923","name":"Australian
         Research Council","doi-asserted-by":"publisher","award":["C 0010 6980"]}],"content-domain":{"domain":[],"crossmark-restriction":false},"short-container-title":["Journal
         of Applied Mathematics and Stochastic Analysis"],"published-print":{"date-parts":[[2006,5,2]]},"abstract":"<jats:p>We
@@ -1120,7 +1120,7 @@ http_interactions:
         Medica Iranica"},{"key":"17","doi-asserted-by":"publisher","DOI":"10.1097\/aln.0000000000001053"},{"key":"18","doi-asserted-by":"publisher","DOI":"10.1097\/01.ccm.0000297888.82492.31"},{"key":"19","doi-asserted-by":"publisher","DOI":"10.1111\/j.1399-6576.2011.02542.x"},{"key":"20","doi-asserted-by":"publisher","DOI":"10.4037\/ajcc2014489"},{"key":"21","doi-asserted-by":"publisher","DOI":"10.4187\/respcare.03387"},{"key":"22","doi-asserted-by":"publisher","DOI":"10.1097\/ccm.0b013e31826a4804"},{"key":"23","doi-asserted-by":"publisher","DOI":"10.1093\/bja\/aef176"}],"container-title":["Canadian
         Respiratory Journal"],"language":"en","link":[{"URL":"http:\/\/downloads.hindawi.com\/journals\/crj\/2019\/7876417.pdf","content-type":"application\/pdf","content-version":"vor","intended-application":"text-mining"},{"URL":"http:\/\/downloads.hindawi.com\/journals\/crj\/2019\/7876417.xml","content-type":"application\/xml","content-version":"vor","intended-application":"text-mining"},{"URL":"http:\/\/downloads.hindawi.com\/journals\/crj\/2019\/7876417.pdf","content-type":"unspecified","content-version":"vor","intended-application":"similarity-checking"}],"deposited":{"date-parts":[[2020,2,13]],"date-time":"2020-02-13T23:32:51Z","timestamp":1581636771000},"score":0.0,"issued":{"date-parts":[[2019,1,22]]},"references-count":23,"alternative-id":["7876417","7876417"],"URL":"http:\/\/dx.doi.org\/10.1155\/2019\/7876417","ISSN":["1198-2241","1916-7245"],"issn-type":[{"value":"1198-2241","type":"print"},{"value":"1916-7245","type":"electronic"}],"subject":["Pulmonary
         and Respiratory Medicine"],"published":{"date-parts":[[2019,1,22]]}}],"items-per-page":20,"query":{"start-index":0,"search-terms":null}}}'
-  recorded_at: 2021-08-17 17:24:38 GMT
+  recorded_at: 2021-08-17 18:41:35 GMT
   recorded_with: vcr/1.0.2, webmockr/0.8.0
 - request:
     method: get
@@ -1145,14 +1145,14 @@ http_interactions:
       content-encoding: gzip
       content-length: '1844'
       content-type: application/json
-      date: Tue, 17 Aug 2021 17:24:30 GMT
+      date: Tue, 17 Aug 2021 18:41:27 GMT
       permissions-policy: interest-cohort=()
       server: Jetty(9.4.40.v20210413)
       set-cookie:
-      - AWSALB=B46jAlOKfONnxOqjsgC7Bu6AqKwGqPYPBA1sHreXRrbFSypP5uew6Gra1sfADXysFSpWzwsfTbQ/NIBWsNaxShr5TF8vS8R7xK9TsGOWfT8VQtSP5d591DQnUTWc;
-        Expires=Tue, 24 Aug 2021 17:24:30 GMT; Path=/
-      - AWSALBCORS=B46jAlOKfONnxOqjsgC7Bu6AqKwGqPYPBA1sHreXRrbFSypP5uew6Gra1sfADXysFSpWzwsfTbQ/NIBWsNaxShr5TF8vS8R7xK9TsGOWfT8VQtSP5d591DQnUTWc;
-        Expires=Tue, 24 Aug 2021 17:24:30 GMT; Path=/; SameSite=None
+      - AWSALB=TvJB9AQenp44O9n0GIJYQOcBSVrXutUFqvbLsF0xzNzSyP3MBDHpPNNtkOpBDakTgHHDgq1fmy7bP28h/Ch1vlvuDi5h+fQPUPhaOrBxzlFtHn496Lz1dgNHreGx;
+        Expires=Tue, 24 Aug 2021 18:41:27 GMT; Path=/
+      - AWSALBCORS=TvJB9AQenp44O9n0GIJYQOcBSVrXutUFqvbLsF0xzNzSyP3MBDHpPNNtkOpBDakTgHHDgq1fmy7bP28h/Ch1vlvuDi5h+fQPUPhaOrBxzlFtHn496Lz1dgNHreGx;
+        Expires=Tue, 24 Aug 2021 18:41:27 GMT; Path=/; SameSite=None
       status: HTTP/1.1 200 OK
       vary: Accept-Encoding
       x-api-pool: polite
@@ -1169,7 +1169,7 @@ http_interactions:
         Medical Association","value":"10.1001","public-references":true}],"id":10,"tokens":["american","medical","association","ama"],"counts-type":{"all":{"journal-article":616251,"book":2,"book-chapter":34},"backfile":{"journal-article":595955,"book":1,"book-chapter":17},"current":{"journal-article":20296,"book":1,"book-chapter":17}},"coverage-type":{"all":{"journal-article":{"last-status-check-time":1629156284004,"affiliations":0.06442017943987109,"abstracts":6.442180215529062E-4,"orcids":0.0,"licenses":7.075039229145267E-4,"references":0.03527458778971555,"funders":0.0,"similarity-checking":0.7020402400969735,"award-numbers":0.0,"update-policies":0.0,"resource-links":7.075039229145267E-4,"open-references":1.0},"book":{"last-status-check-time":1629156284004,"affiliations":0.5,"abstracts":0.0,"orcids":0.0,"licenses":0.0,"references":0.0,"funders":0.0,"similarity-checking":0.0,"award-numbers":0.0,"update-policies":0.0,"resource-links":0.0,"open-references":1.0},"book-chapter":{"last-status-check-time":1629156284004,"affiliations":0.0,"abstracts":0.0,"orcids":0.0,"licenses":0.0,"references":0.5,"funders":0.0,"similarity-checking":0.0,"award-numbers":0.0,"update-policies":0.0,"resource-links":0.0,"open-references":1.0}},"backfile":{"journal-article":{"last-status-check-time":1629156284004,"affiliations":0.03835356696394862,"abstracts":6.057504341770771E-4,"orcids":0.0,"licenses":7.315988623302095E-4,"references":0.007594533144281028,"funders":0.0,"similarity-checking":0.6926194091835793,"award-numbers":0.0,"update-policies":0.0,"resource-links":7.315988623302095E-4,"open-references":1.0},"book":{"last-status-check-time":1629156284004,"affiliations":0.0,"abstracts":0.0,"orcids":0.0,"licenses":0.0,"references":0.0,"funders":0.0,"similarity-checking":0.0,"award-numbers":0.0,"update-policies":0.0,"resource-links":0.0,"open-references":1.0},"book-chapter":{"last-status-check-time":1629156284004,"affiliations":0.0,"abstracts":0.0,"orcids":0.0,"licenses":0.0,"references":0.0,"funders":0.0,"similarity-checking":0.0,"award-numbers":0.0,"update-policies":0.0,"resource-links":0.0,"open-references":1.0}},"current":{"journal-article":{"last-status-check-time":1629156284004,"affiliations":0.8298186834844304,"abstracts":0.001773748521876232,"orcids":0.0,"licenses":0.0,"references":0.8480488766259361,"funders":0.0,"similarity-checking":0.9786657469452109,"award-numbers":0.0,"update-policies":0.0,"resource-links":0.0,"open-references":1.0},"book":{"last-status-check-time":1629156284004,"affiliations":1.0,"abstracts":0.0,"orcids":0.0,"licenses":0.0,"references":0.0,"funders":0.0,"similarity-checking":0.0,"award-numbers":0.0,"update-policies":0.0,"resource-links":0.0,"open-references":1.0},"book-chapter":{"last-status-check-time":1629156284004,"affiliations":0.0,"abstracts":0.0,"orcids":0.0,"licenses":0.0,"references":1.0,"funders":0.0,"similarity-checking":0.0,"award-numbers":0.0,"update-policies":0.0,"resource-links":0.0,"open-references":1.0}}},"flags":{"deposits-abstracts-current":true,"deposits-orcids-current":false,"deposits":true,"deposits-affiliations-backfile":true,"deposits-update-policies-backfile":false,"deposits-similarity-checking-backfile":true,"deposits-award-numbers-current":false,"deposits-resource-links-current":false,"deposits-articles":true,"deposits-affiliations-current":true,"deposits-funders-current":false,"deposits-references-backfile":true,"deposits-abstracts-backfile":true,"deposits-licenses-backfile":true,"deposits-award-numbers-backfile":false,"deposits-open-references-backfile":true,"deposits-open-references-current":true,"deposits-references-current":true,"deposits-resource-links-backfile":true,"deposits-orcids-backfile":false,"deposits-funders-backfile":false,"deposits-update-policies-current":false,"deposits-similarity-checking-current":true,"deposits-licenses-current":false},"location":"Chicago,
         IL, United States","names":["American Medical Association (AMA)","American
         Medical Association"]}}'
-  recorded_at: 2021-08-17 17:24:38 GMT
+  recorded_at: 2021-08-17 18:41:35 GMT
   recorded_with: vcr/1.0.2, webmockr/0.8.0
 - request:
     method: get
@@ -1194,14 +1194,14 @@ http_interactions:
       content-encoding: gzip
       content-length: '2187'
       content-type: application/json
-      date: Tue, 17 Aug 2021 17:24:31 GMT
+      date: Tue, 17 Aug 2021 18:41:28 GMT
       permissions-policy: interest-cohort=()
       server: Jetty(9.4.40.v20210413)
       set-cookie:
-      - AWSALB=msj+RIcLVcVsNwwmf2IHWRGYp4iXb/tpgEx+2MWfYFqKpj/wdzv4Z9h5Dg8qSRBMa4VUbqJPAocU7PT40Qp7f+x3lEq1up9CJ3u91iY2b1z/jsevLjrhAoKdYKxt;
-        Expires=Tue, 24 Aug 2021 17:24:31 GMT; Path=/
-      - AWSALBCORS=msj+RIcLVcVsNwwmf2IHWRGYp4iXb/tpgEx+2MWfYFqKpj/wdzv4Z9h5Dg8qSRBMa4VUbqJPAocU7PT40Qp7f+x3lEq1up9CJ3u91iY2b1z/jsevLjrhAoKdYKxt;
-        Expires=Tue, 24 Aug 2021 17:24:31 GMT; Path=/; SameSite=None
+      - AWSALB=t3gKUQnTMfHoCdb3WUxxFHHAKKI43CNHs+YkyB28YVCsfBDeC2j21TlTBlvZvHNJhzUR2NalfvcUFDBBbUvKV7lqHvczgtgTm8oUP9jRzIbWMoolF4ya+wevD91x;
+        Expires=Tue, 24 Aug 2021 18:41:27 GMT; Path=/
+      - AWSALBCORS=t3gKUQnTMfHoCdb3WUxxFHHAKKI43CNHs+YkyB28YVCsfBDeC2j21TlTBlvZvHNJhzUR2NalfvcUFDBBbUvKV7lqHvczgtgTm8oUP9jRzIbWMoolF4ya+wevD91x;
+        Expires=Tue, 24 Aug 2021 18:41:27 GMT; Path=/; SameSite=None
       status: HTTP/1.1 200 OK
       vary: Accept-Encoding
       x-api-pool: polite
@@ -1228,7 +1228,7 @@ http_interactions:
         (International Scholarly Research Network)","Hindawi (Conference Papers in
         Science)","Hindawi (Datasets International)","Hindawi Publishing Corporation
         (Sage-Hindawi Access to Research)"]}}'
-  recorded_at: 2021-08-17 17:24:38 GMT
+  recorded_at: 2021-08-17 18:41:35 GMT
   recorded_with: vcr/1.0.2, webmockr/0.8.0
 - request:
     method: get
@@ -1253,14 +1253,14 @@ http_interactions:
       content-encoding: gzip
       content-length: '1824'
       content-type: application/json
-      date: Tue, 17 Aug 2021 17:24:32 GMT
+      date: Tue, 17 Aug 2021 18:41:28 GMT
       permissions-policy: interest-cohort=()
       server: Jetty(9.4.40.v20210413)
       set-cookie:
-      - AWSALB=WO9W86/5TNQacC3HbdKM4FqUxNFr9appJCDYKEtIN3JNKYSdtQ9gI2sUu3CDMw+6NxDYozsyPETyyhAbuWsgztKId/iKFqna+OpMxhxMxRtt5gi8Ec00+3+AiPPB;
-        Expires=Tue, 24 Aug 2021 17:24:32 GMT; Path=/
-      - AWSALBCORS=WO9W86/5TNQacC3HbdKM4FqUxNFr9appJCDYKEtIN3JNKYSdtQ9gI2sUu3CDMw+6NxDYozsyPETyyhAbuWsgztKId/iKFqna+OpMxhxMxRtt5gi8Ec00+3+AiPPB;
-        Expires=Tue, 24 Aug 2021 17:24:32 GMT; Path=/; SameSite=None
+      - AWSALB=CyonxgWGCbZMZClPY4/EqTYaUyErJKPllfDyh9XM0dv/OEYA7jJsP7iuKmnmHFhTXdn09ceUYIWt2P4Qi43WND39vIkRV7nghLkFe/noDbJvjd1wAWXhlrmn2yLj;
+        Expires=Tue, 24 Aug 2021 18:41:28 GMT; Path=/
+      - AWSALBCORS=CyonxgWGCbZMZClPY4/EqTYaUyErJKPllfDyh9XM0dv/OEYA7jJsP7iuKmnmHFhTXdn09ceUYIWt2P4Qi43WND39vIkRV7nghLkFe/noDbJvjd1wAWXhlrmn2yLj;
+        Expires=Tue, 24 Aug 2021 18:41:28 GMT; Path=/; SameSite=None
       status: HTTP/1.1 200 OK
       vary: Accept-Encoding
       x-api-pool: polite
@@ -1276,7 +1276,7 @@ http_interactions:
         Institute of Radiology","value":"10.1259","public-references":true},{"reference-visibility":"open","name":"British
         Institute of Radiology","value":"10.1259","public-references":true}],"id":45,"tokens":["british","institute","of","radiology"],"counts-type":{"all":{"report":1,"journal-article":37532,"book":3,"proceedings-article":157,"component":49,"book-chapter":19,"proceedings":36,"dataset":39},"backfile":{"journal-article":35862,"book":3,"proceedings-article":127,"component":33,"book-chapter":19,"proceedings":34,"dataset":20},"current":{"report":1,"journal-article":1670,"proceedings-article":30,"proceedings":2}},"coverage-type":{"all":{"report":{"last-status-check-time":1629156287008,"affiliations":0.0,"abstracts":0.0,"orcids":0.0,"licenses":0.0,"references":0.0,"funders":0.0,"similarity-checking":0.0,"award-numbers":0.0,"update-policies":0.0,"resource-links":0.0,"open-references":1.0},"journal-article":{"last-status-check-time":1629156287008,"affiliations":0.07031333262282852,"abstracts":0.03788766918895876,"orcids":0.02603112011083875,"licenses":0.0,"references":0.6314611531493126,"funders":0.0,"similarity-checking":0.987210913353938,"award-numbers":0.0,"update-policies":0.0,"resource-links":0.0,"open-references":1.0},"book":{"last-status-check-time":1629156287008,"affiliations":0.0,"abstracts":0.0,"orcids":0.0,"licenses":0.0,"references":0.0,"funders":0.0,"similarity-checking":0.0,"award-numbers":0.0,"update-policies":0.0,"resource-links":0.0,"open-references":1.0},"proceedings-article":{"last-status-check-time":1629156287008,"affiliations":0.0,"abstracts":0.0,"orcids":0.0,"licenses":0.0,"references":0.03821656050955414,"funders":0.0,"similarity-checking":0.0,"award-numbers":0.0,"update-policies":0.0,"resource-links":0.0,"open-references":1.0},"component":{"last-status-check-time":1629156287008,"affiliations":0.0,"abstracts":0.0,"orcids":0.0,"licenses":0.0,"references":0.0,"funders":0.0,"similarity-checking":0.0,"award-numbers":0.0,"update-policies":0.0,"resource-links":0.0,"open-references":1.0},"book-chapter":{"last-status-check-time":1629156287008,"affiliations":0.0,"abstracts":0.0,"orcids":0.0,"licenses":0.0,"references":0.7894736842105263,"funders":0.0,"similarity-checking":0.0,"award-numbers":0.0,"update-policies":0.0,"resource-links":0.0,"open-references":1.0},"proceedings":{"last-status-check-time":1629156287008,"affiliations":0.0,"abstracts":0.0,"orcids":0.0,"licenses":0.0,"references":0.0,"funders":0.0,"similarity-checking":0.0,"award-numbers":0.0,"update-policies":0.0,"resource-links":0.0,"open-references":1.0},"dataset":{"last-status-check-time":1629156287008,"affiliations":0.4871794871794872,"abstracts":0.0,"orcids":0.0,"licenses":0.0,"references":0.3076923076923077,"funders":0.0,"similarity-checking":0.0,"award-numbers":0.0,"update-policies":0.0,"resource-links":0.0,"open-references":1.0}},"backfile":{"journal-article":{"last-status-check-time":1629156287008,"affiliations":0.02738274496681724,"abstracts":3.346160281077464E-4,"orcids":0.00858847805476549,"licenses":0.0,"references":0.6152473370141096,"funders":0.0,"similarity-checking":0.9866153588756901,"award-numbers":0.0,"update-policies":0.0,"resource-links":0.0,"open-references":1.0},"book":{"last-status-check-time":1629156287008,"affiliations":0.0,"abstracts":0.0,"orcids":0.0,"licenses":0.0,"references":0.0,"funders":0.0,"similarity-checking":0.0,"award-numbers":0.0,"update-policies":0.0,"resource-links":0.0,"open-references":1.0},"proceedings-article":{"last-status-check-time":1629156287008,"affiliations":0.0,"abstracts":0.0,"orcids":0.0,"licenses":0.0,"references":0.04724409448818898,"funders":0.0,"similarity-checking":0.0,"award-numbers":0.0,"update-policies":0.0,"resource-links":0.0,"open-references":1.0},"component":{"last-status-check-time":1629156287008,"affiliations":0.0,"abstracts":0.0,"orcids":0.0,"licenses":0.0,"references":0.0,"funders":0.0,"similarity-checking":0.0,"award-numbers":0.0,"update-policies":0.0,"resource-links":0.0,"open-references":1.0},"book-chapter":{"last-status-check-time":1629156287008,"affiliations":0.0,"abstracts":0.0,"orcids":0.0,"licenses":0.0,"references":0.7894736842105263,"funders":0.0,"similarity-checking":0.0,"award-numbers":0.0,"update-policies":0.0,"resource-links":0.0,"open-references":1.0},"proceedings":{"last-status-check-time":1629156287008,"affiliations":0.0,"abstracts":0.0,"orcids":0.0,"licenses":0.0,"references":0.0,"funders":0.0,"similarity-checking":0.0,"award-numbers":0.0,"update-policies":0.0,"resource-links":0.0,"open-references":1.0},"dataset":{"last-status-check-time":1629156287008,"affiliations":0.95,"abstracts":0.0,"orcids":0.0,"licenses":0.0,"references":0.55,"funders":0.0,"similarity-checking":0.0,"award-numbers":0.0,"update-policies":0.0,"resource-links":0.0,"open-references":1.0}},"current":{"report":{"last-status-check-time":1629156287008,"affiliations":0.0,"abstracts":0.0,"orcids":0.0,"licenses":0.0,"references":0.0,"funders":0.0,"similarity-checking":0.0,"award-numbers":0.0,"update-policies":0.0,"resource-links":0.0,"open-references":1.0},"journal-article":{"last-status-check-time":1629156287008,"affiliations":0.9922155688622754,"abstracts":0.844311377245509,"orcids":0.4005988023952096,"licenses":0.0,"references":0.9796407185628743,"funders":0.0,"similarity-checking":1.0,"award-numbers":0.0,"update-policies":0.0,"resource-links":0.0,"open-references":1.0},"proceedings-article":{"last-status-check-time":1629156287008,"affiliations":0.0,"abstracts":0.0,"orcids":0.0,"licenses":0.0,"references":0.0,"funders":0.0,"similarity-checking":0.0,"award-numbers":0.0,"update-policies":0.0,"resource-links":0.0,"open-references":1.0},"proceedings":{"last-status-check-time":1629156287008,"affiliations":0.0,"abstracts":0.0,"orcids":0.0,"licenses":0.0,"references":0.0,"funders":0.0,"similarity-checking":0.0,"award-numbers":0.0,"update-policies":0.0,"resource-links":0.0,"open-references":1.0}}},"flags":{"deposits-abstracts-current":true,"deposits-orcids-current":true,"deposits":true,"deposits-affiliations-backfile":true,"deposits-update-policies-backfile":false,"deposits-similarity-checking-backfile":true,"deposits-award-numbers-current":false,"deposits-resource-links-current":false,"deposits-articles":true,"deposits-affiliations-current":true,"deposits-funders-current":false,"deposits-references-backfile":true,"deposits-abstracts-backfile":true,"deposits-licenses-backfile":false,"deposits-award-numbers-backfile":false,"deposits-open-references-backfile":true,"deposits-open-references-current":true,"deposits-references-current":true,"deposits-resource-links-backfile":false,"deposits-orcids-backfile":true,"deposits-funders-backfile":false,"deposits-update-policies-current":false,"deposits-similarity-checking-current":true,"deposits-licenses-current":false},"location":"London,
         United Kingdom","names":["British Institute of Radiology"]}}'
-  recorded_at: 2021-08-17 17:24:38 GMT
+  recorded_at: 2021-08-17 18:41:35 GMT
   recorded_with: vcr/1.0.2, webmockr/0.8.0
 - request:
     method: get
@@ -1301,14 +1301,14 @@ http_interactions:
       content-encoding: gzip
       content-length: '829'
       content-type: application/json
-      date: Tue, 17 Aug 2021 17:24:32 GMT
+      date: Tue, 17 Aug 2021 18:41:29 GMT
       permissions-policy: interest-cohort=()
       server: Jetty(9.4.40.v20210413)
       set-cookie:
-      - AWSALB=Ejl4tm/MUvpi7Kbb6UAkp5yTfa1O5H06KFx41OeIaNzPmIpBOsA2gluA1QJ1o5CbyC3xSZfUufqDxpg579bLLNS9EkmLzSvf3y5OaKgmE/BKC47L1/pv8+NoMily;
-        Expires=Tue, 24 Aug 2021 17:24:32 GMT; Path=/
-      - AWSALBCORS=Ejl4tm/MUvpi7Kbb6UAkp5yTfa1O5H06KFx41OeIaNzPmIpBOsA2gluA1QJ1o5CbyC3xSZfUufqDxpg579bLLNS9EkmLzSvf3y5OaKgmE/BKC47L1/pv8+NoMily;
-        Expires=Tue, 24 Aug 2021 17:24:32 GMT; Path=/; SameSite=None
+      - AWSALB=uLqm//mukCYNRy7jSxJemkvQ9dFNfVTqz0m0OYBxCX1WZCJKKPeGeNXPvaJB3VIqxFXLohkIycks+2neFWB/oe2RVLLKVMn7zPqgoT3nrfkjvGhOHpjpputxhJ/s;
+        Expires=Tue, 24 Aug 2021 18:41:29 GMT; Path=/
+      - AWSALBCORS=uLqm//mukCYNRy7jSxJemkvQ9dFNfVTqz0m0OYBxCX1WZCJKKPeGeNXPvaJB3VIqxFXLohkIycks+2neFWB/oe2RVLLKVMn7zPqgoT3nrfkjvGhOHpjpputxhJ/s;
+        Expires=Tue, 24 Aug 2021 18:41:29 GMT; Path=/; SameSite=None
       status: HTTP/1.1 200 OK
       vary: Accept-Encoding
       x-api-pool: polite
@@ -1324,7 +1324,7 @@ http_interactions:
         of Family Medicine","value":"10.1370","public-references":false},{"reference-visibility":"limited","name":"Annals
         of Family Medicine","value":"10.1370","public-references":false}],"id":1,"tokens":["annals","of","family","medicine"],"counts-type":{"all":{"journal-article":2462},"backfile":{"journal-article":2085},"current":{"journal-article":377}},"coverage-type":{"all":{"journal-article":{"last-status-check-time":1629156281582,"affiliations":0.0,"abstracts":0.0,"orcids":0.0,"licenses":0.0,"references":0.0,"funders":0.0,"similarity-checking":0.2871649065800162,"award-numbers":0.0,"update-policies":0.0,"resource-links":0.0,"open-references":0.0}},"backfile":{"journal-article":{"last-status-check-time":1629156281582,"affiliations":0.0,"abstracts":0.0,"orcids":0.0,"licenses":0.0,"references":0.0,"funders":0.0,"similarity-checking":0.158273381294964,"award-numbers":0.0,"update-policies":0.0,"resource-links":0.0,"open-references":0.0}},"current":{"journal-article":{"last-status-check-time":1629156281582,"affiliations":0.0,"abstracts":0.0,"orcids":0.0,"licenses":0.0,"references":0.0,"funders":0.0,"similarity-checking":1.0,"award-numbers":0.0,"update-policies":0.0,"resource-links":0.0,"open-references":0.0}}},"flags":{"deposits-abstracts-current":false,"deposits-orcids-current":false,"deposits":true,"deposits-affiliations-backfile":false,"deposits-update-policies-backfile":false,"deposits-similarity-checking-backfile":true,"deposits-award-numbers-current":false,"deposits-resource-links-current":false,"deposits-articles":true,"deposits-affiliations-current":false,"deposits-funders-current":false,"deposits-references-backfile":false,"deposits-abstracts-backfile":false,"deposits-licenses-backfile":false,"deposits-award-numbers-backfile":false,"deposits-open-references-backfile":false,"deposits-open-references-current":false,"deposits-references-current":false,"deposits-resource-links-backfile":false,"deposits-orcids-backfile":false,"deposits-funders-backfile":false,"deposits-update-policies-current":false,"deposits-similarity-checking-current":true,"deposits-licenses-current":false},"location":"Leawood,
         KS, United States","names":["Annals of Family Medicine"]}}'
-  recorded_at: 2021-08-17 17:24:38 GMT
+  recorded_at: 2021-08-17 18:41:35 GMT
   recorded_with: vcr/1.0.2, webmockr/0.8.0
 - request:
     method: get
@@ -1349,14 +1349,14 @@ http_interactions:
       content-encoding: gzip
       content-length: '588'
       content-type: application/json
-      date: Tue, 17 Aug 2021 17:24:33 GMT
+      date: Tue, 17 Aug 2021 18:41:30 GMT
       permissions-policy: interest-cohort=()
       server: Jetty(9.4.40.v20210413)
       set-cookie:
-      - AWSALB=uDtp0Uh0IW719UCaT0l6OzLGDS/MWmeVAife7mbe5AN2fT8hImjhiFJYSbA4SYZ0Pz51iShygsZsWCusPfwYx8Nwf3/hIoRyfgcuEbjO+7X/43Cvcjy0MqvPKI2q;
-        Expires=Tue, 24 Aug 2021 17:24:33 GMT; Path=/
-      - AWSALBCORS=uDtp0Uh0IW719UCaT0l6OzLGDS/MWmeVAife7mbe5AN2fT8hImjhiFJYSbA4SYZ0Pz51iShygsZsWCusPfwYx8Nwf3/hIoRyfgcuEbjO+7X/43Cvcjy0MqvPKI2q;
-        Expires=Tue, 24 Aug 2021 17:24:33 GMT; Path=/; SameSite=None
+      - AWSALB=aztoa+R4w12jB1bAn5D2qQEMDf9GiBsoTDYD03Hzab1nyaY/LS0C0NU+4GZ+8Uycw9HwX+SMQWBYIdpf5Uqiolc70byyS7CmmCEHvMDQZRoJauctVZ50kdaoExXJ;
+        Expires=Tue, 24 Aug 2021 18:41:30 GMT; Path=/
+      - AWSALBCORS=aztoa+R4w12jB1bAn5D2qQEMDf9GiBsoTDYD03Hzab1nyaY/LS0C0NU+4GZ+8Uycw9HwX+SMQWBYIdpf5Uqiolc70byyS7CmmCEHvMDQZRoJauctVZ50kdaoExXJ;
+        Expires=Tue, 24 Aug 2021 18:41:30 GMT; Path=/; SameSite=None
       status: HTTP/1.1 200 OK
       vary: Accept-Encoding
       x-api-pool: polite
@@ -1372,7 +1372,7 @@ http_interactions:
         Press","value":"10.1043","public-references":false},{"reference-visibility":"limited","name":"Allen
         Press","value":"10.1043","public-references":false}],"id":9,"tokens":["allen","press"],"counts-type":{"all":{},"backfile":{},"current":{}},"coverage-type":{"all":{},"backfile":{},"current":{}},"flags":{"deposits-abstracts-current":false,"deposits-orcids-current":false,"deposits":false,"deposits-affiliations-backfile":false,"deposits-update-policies-backfile":false,"deposits-similarity-checking-backfile":false,"deposits-award-numbers-current":false,"deposits-resource-links-current":false,"deposits-articles":false,"deposits-affiliations-current":false,"deposits-funders-current":false,"deposits-references-backfile":false,"deposits-abstracts-backfile":false,"deposits-licenses-backfile":false,"deposits-award-numbers-backfile":false,"deposits-open-references-backfile":false,"deposits-open-references-current":false,"deposits-references-current":false,"deposits-resource-links-backfile":false,"deposits-orcids-backfile":false,"deposits-funders-backfile":false,"deposits-update-policies-current":false,"deposits-similarity-checking-current":false,"deposits-licenses-current":false},"location":"Lawrence,
         KS, United States","names":["Allen Press"]}}'
-  recorded_at: 2021-08-17 17:24:38 GMT
+  recorded_at: 2021-08-17 18:41:35 GMT
   recorded_with: vcr/1.0.2, webmockr/0.8.0
 - request:
     method: get
@@ -1397,14 +1397,14 @@ http_interactions:
       content-encoding: gzip
       content-length: '3568'
       content-type: application/json
-      date: Tue, 17 Aug 2021 17:24:34 GMT
+      date: Tue, 17 Aug 2021 18:41:30 GMT
       permissions-policy: interest-cohort=()
       server: Jetty(9.4.40.v20210413)
       set-cookie:
-      - AWSALB=8Rwqgxm9Of+ymuyDoYApFu8LMuzfqMYl0MOpLhHl+D+qwZKn29w8B4ugTQwem2KVX7NCR7KAx908uHWFLEqN2J7pcV1CQ6eTbXcVPcQE9BXwlzkX8XkoejVObxm5;
-        Expires=Tue, 24 Aug 2021 17:24:34 GMT; Path=/
-      - AWSALBCORS=8Rwqgxm9Of+ymuyDoYApFu8LMuzfqMYl0MOpLhHl+D+qwZKn29w8B4ugTQwem2KVX7NCR7KAx908uHWFLEqN2J7pcV1CQ6eTbXcVPcQE9BXwlzkX8XkoejVObxm5;
-        Expires=Tue, 24 Aug 2021 17:24:34 GMT; Path=/; SameSite=None
+      - AWSALB=mj1rXhGdIrP2V3N27e+qvvctc7ZUWEky46qjEreE9BFRJTcwP3BX9HguzCgRP2r4tN7fB5qdnmh3VwQCB6dLrf0Zz8/v/Z/J5GaPxIDUdiQwCBBY+VunOXo68QLC;
+        Expires=Tue, 24 Aug 2021 18:41:30 GMT; Path=/
+      - AWSALBCORS=mj1rXhGdIrP2V3N27e+qvvctc7ZUWEky46qjEreE9BFRJTcwP3BX9HguzCgRP2r4tN7fB5qdnmh3VwQCB6dLrf0Zz8/v/Z/J5GaPxIDUdiQwCBBY+VunOXo68QLC;
+        Expires=Tue, 24 Aug 2021 18:41:30 GMT; Path=/; SameSite=None
       status: HTTP/1.1 200 OK
       vary: Accept-Encoding
       x-api-pool: polite
@@ -1497,7 +1497,7 @@ http_interactions:
         Medical Association (AMA)","issue":"18","content-domain":{"domain":[],"crossmark-restriction":false},"short-container-title":["JAMA"],"published-print":{"date-parts":[[2006,5,10]]},"DOI":"10.1001\/jama.295.18.2130-b","type":"journal-article","created":{"date-parts":[[2006,5,9]],"date-time":"2006-05-09T20:35:47Z","timestamp":1147206947000},"page":"2130","source":"Crossref","is-referenced-by-count":0,"title":["Senate
         Eyes School Junk Food"],"prefix":"10.1001","volume":"295","author":[{"given":"Mike","family":"Mitka","sequence":"first","affiliation":[]}],"member":"10","container-title":["JAMA"],"language":"en","link":[{"URL":"http:\/\/jamanetwork.com\/journals\/jama\/fullarticle\/202809","content-type":"unspecified","content-version":"vor","intended-application":"similarity-checking"}],"deposited":{"date-parts":[[2016,12,15]],"date-time":"2016-12-15T18:21:25Z","timestamp":1481826085000},"score":0.0,"issued":{"date-parts":[[2006,5,10]]},"references-count":0,"journal-issue":{"issue":"18","published-print":{"date-parts":[[2006,5,10]]}},"URL":"http:\/\/dx.doi.org\/10.1001\/jama.295.18.2130-b","ISSN":["0098-7484"],"issn-type":[{"value":"0098-7484","type":"print"}],"subject":["General
         Medicine"],"published":{"date-parts":[[2006,5,10]]}}],"items-per-page":20,"query":{"start-index":0,"search-terms":null}}}'
-  recorded_at: 2021-08-17 17:24:38 GMT
+  recorded_at: 2021-08-17 18:41:35 GMT
   recorded_with: vcr/1.0.2, webmockr/0.8.0
 - request:
     method: get
@@ -1521,14 +1521,14 @@ http_interactions:
       connection: close
       content-encoding: gzip
       content-type: application/json
-      date: Tue, 17 Aug 2021 17:24:35 GMT
+      date: Tue, 17 Aug 2021 18:41:31 GMT
       permissions-policy: interest-cohort=()
       server: Jetty(9.4.40.v20210413)
       set-cookie:
-      - AWSALB=wjMZE1uiQktpca4hCmcIAvdV+UP2QG+ynnon5l84O4OC/YZdDXfk1h1GxDd+PIPx71J/d+Tp33Q3Wr9aIqHf3aY0fycdUwQ5sqmGB201kO6Rqx3B8Y8GO95+R1Hu;
-        Expires=Tue, 24 Aug 2021 17:24:35 GMT; Path=/
-      - AWSALBCORS=wjMZE1uiQktpca4hCmcIAvdV+UP2QG+ynnon5l84O4OC/YZdDXfk1h1GxDd+PIPx71J/d+Tp33Q3Wr9aIqHf3aY0fycdUwQ5sqmGB201kO6Rqx3B8Y8GO95+R1Hu;
-        Expires=Tue, 24 Aug 2021 17:24:35 GMT; Path=/; SameSite=None
+      - AWSALB=pIfZgfJeQYB22GOM8pFm9FuU/0A6dyYmwvKMHB4VnEwNhd8/NwN7iDYQiY5Bxq0sgNsVC6Sjw7ebgIVaeTmJJEx2XyU5CliJc/cC8A+kkFh0QUZCpOni89t2Tez3;
+        Expires=Tue, 24 Aug 2021 18:41:31 GMT; Path=/
+      - AWSALBCORS=pIfZgfJeQYB22GOM8pFm9FuU/0A6dyYmwvKMHB4VnEwNhd8/NwN7iDYQiY5Bxq0sgNsVC6Sjw7ebgIVaeTmJJEx2XyU5CliJc/cC8A+kkFh0QUZCpOni89t2Tez3;
+        Expires=Tue, 24 Aug 2021 18:41:31 GMT; Path=/; SameSite=None
       status: HTTP/1.1 200 OK
       transfer-encoding: chunked
       vary: Accept-Encoding
@@ -1540,7 +1540,7 @@ http_interactions:
     body:
       encoding: UTF-8
       file: no
-      string: '{"status":"ok","message-type":"work-list","message-version":"1.0.0","message":{"facets":{},"total-results":287496,"items":[{"indexed":{"date-parts":[[2021,5,6]],"date-time":"2021-05-06T20:46:05Z","timestamp":1620333965187},"reference-count":13,"publisher":"Hindawi
+      string: '{"status":"ok","message-type":"work-list","message-version":"1.0.0","message":{"facets":{},"total-results":287505,"items":[{"indexed":{"date-parts":[[2021,5,6]],"date-time":"2021-05-06T20:46:05Z","timestamp":1620333965187},"reference-count":13,"publisher":"Hindawi
         Limited","license":[{"start":{"date-parts":[[2006,5,2]],"date-time":"2006-05-02T00:00:00Z","timestamp":1146528000000},"content-version":"unspecified","delay-in-days":0,"URL":"http:\/\/creativecommons.org\/licenses\/by\/3.0\/"}],"funder":[{"DOI":"10.13039\/501100000923","name":"Australian
         Research Council","doi-asserted-by":"publisher","award":["C 0010 6980"]}],"content-domain":{"domain":[],"crossmark-restriction":false},"short-container-title":["Journal
         of Applied Mathematics and Stochastic Analysis"],"published-print":{"date-parts":[[2006,5,2]]},"abstract":"<jats:p>We
@@ -2561,7 +2561,7 @@ http_interactions:
         Medica Iranica"},{"key":"17","doi-asserted-by":"publisher","DOI":"10.1097\/aln.0000000000001053"},{"key":"18","doi-asserted-by":"publisher","DOI":"10.1097\/01.ccm.0000297888.82492.31"},{"key":"19","doi-asserted-by":"publisher","DOI":"10.1111\/j.1399-6576.2011.02542.x"},{"key":"20","doi-asserted-by":"publisher","DOI":"10.4037\/ajcc2014489"},{"key":"21","doi-asserted-by":"publisher","DOI":"10.4187\/respcare.03387"},{"key":"22","doi-asserted-by":"publisher","DOI":"10.1097\/ccm.0b013e31826a4804"},{"key":"23","doi-asserted-by":"publisher","DOI":"10.1093\/bja\/aef176"}],"container-title":["Canadian
         Respiratory Journal"],"language":"en","link":[{"URL":"http:\/\/downloads.hindawi.com\/journals\/crj\/2019\/7876417.pdf","content-type":"application\/pdf","content-version":"vor","intended-application":"text-mining"},{"URL":"http:\/\/downloads.hindawi.com\/journals\/crj\/2019\/7876417.xml","content-type":"application\/xml","content-version":"vor","intended-application":"text-mining"},{"URL":"http:\/\/downloads.hindawi.com\/journals\/crj\/2019\/7876417.pdf","content-type":"unspecified","content-version":"vor","intended-application":"similarity-checking"}],"deposited":{"date-parts":[[2020,2,13]],"date-time":"2020-02-13T23:32:51Z","timestamp":1581636771000},"score":0.0,"issued":{"date-parts":[[2019,1,22]]},"references-count":23,"alternative-id":["7876417","7876417"],"URL":"http:\/\/dx.doi.org\/10.1155\/2019\/7876417","ISSN":["1198-2241","1916-7245"],"issn-type":[{"value":"1198-2241","type":"print"},{"value":"1916-7245","type":"electronic"}],"subject":["Pulmonary
         and Respiratory Medicine"],"published":{"date-parts":[[2019,1,22]]}}],"items-per-page":20,"query":{"start-index":0,"search-terms":null}}}'
-  recorded_at: 2021-08-17 17:24:38 GMT
+  recorded_at: 2021-08-17 18:41:35 GMT
   recorded_with: vcr/1.0.2, webmockr/0.8.0
 - request:
     method: get
@@ -2586,14 +2586,14 @@ http_interactions:
       content-encoding: gzip
       content-length: '6883'
       content-type: application/json
-      date: Tue, 17 Aug 2021 17:24:36 GMT
+      date: Tue, 17 Aug 2021 18:41:32 GMT
       permissions-policy: interest-cohort=()
       server: Jetty(9.4.40.v20210413)
       set-cookie:
-      - AWSALB=hhHKC4HJ7BXXqkgRhGGESV45TtN++imvIdoFIdcDw3qzwAUowRGif7GPzS+i8x2rAVe7uWYufROVOVlPWFP5gb6tzdPhK/bmfaUXZTBFT2uGVe8X6GOfec1MyC4E;
-        Expires=Tue, 24 Aug 2021 17:24:36 GMT; Path=/
-      - AWSALBCORS=hhHKC4HJ7BXXqkgRhGGESV45TtN++imvIdoFIdcDw3qzwAUowRGif7GPzS+i8x2rAVe7uWYufROVOVlPWFP5gb6tzdPhK/bmfaUXZTBFT2uGVe8X6GOfec1MyC4E;
-        Expires=Tue, 24 Aug 2021 17:24:36 GMT; Path=/; SameSite=None
+      - AWSALB=ZrN00TjVLGNC0z3hXmbrfepfN7XhW323MkFnPAkK/W9HCCj3j8IlIB7QAAJ8kwgixqsyu0iif50IXxMGFI2/67uATjzWiys8brBgekqxMl1gJZLUMNRvxG81GDtC;
+        Expires=Tue, 24 Aug 2021 18:41:32 GMT; Path=/
+      - AWSALBCORS=ZrN00TjVLGNC0z3hXmbrfepfN7XhW323MkFnPAkK/W9HCCj3j8IlIB7QAAJ8kwgixqsyu0iif50IXxMGFI2/67uATjzWiys8brBgekqxMl1gJZLUMNRvxG81GDtC;
+        Expires=Tue, 24 Aug 2021 18:41:32 GMT; Path=/; SameSite=None
       status: HTTP/1.1 200 OK
       vary: Accept-Encoding
       x-api-pool: polite
@@ -2773,7 +2773,7 @@ http_interactions:
         Logan","family":"Turner","sequence":"first","affiliation":[]},{"given":"W.
         G.","family":"Porter","sequence":"additional","affiliation":[]}],"member":"45","container-title":["Archives
         of The Roentgen Ray"],"language":"en","link":[{"URL":"http:\/\/www.birpublications.org\/doi\/pdf\/10.1259\/arr.1912.0035","content-type":"unspecified","content-version":"vor","intended-application":"similarity-checking"}],"deposited":{"date-parts":[[2016,8,22]],"date-time":"2016-08-22T16:22:27Z","timestamp":1471882947000},"score":0.0,"issued":{"date-parts":[[1912,8]]},"references-count":0,"journal-issue":{"issue":"3","published-print":{"date-parts":[[1912,8]]}},"alternative-id":["10.1259\/arr.1912.0035"],"URL":"http:\/\/dx.doi.org\/10.1259\/arr.1912.0035","ISSN":["2053-1966","2053-1974"],"issn-type":[{"value":"2053-1966","type":"print"},{"value":"2053-1974","type":"electronic"}],"published":{"date-parts":[[1912,8]]}}],"items-per-page":20,"query":{"start-index":0,"search-terms":null}}}'
-  recorded_at: 2021-08-17 17:24:38 GMT
+  recorded_at: 2021-08-17 18:41:35 GMT
   recorded_with: vcr/1.0.2, webmockr/0.8.0
 - request:
     method: get
@@ -2798,14 +2798,14 @@ http_interactions:
       content-encoding: gzip
       content-length: '4457'
       content-type: application/json
-      date: Tue, 17 Aug 2021 17:24:36 GMT
+      date: Tue, 17 Aug 2021 18:41:33 GMT
       permissions-policy: interest-cohort=()
       server: Jetty(9.4.40.v20210413)
       set-cookie:
-      - AWSALB=Ml6aSKzeMOTebS92fIOOpukpp76STeEweHwrvVMF5A+fRZ39ulserDjy4NyQOfFKCJPvKzEdP7wYk6P0dI/ZRD3jVF+ibeNkbpSpAogdLtnjNUURgBahAMxSIMvd;
-        Expires=Tue, 24 Aug 2021 17:24:36 GMT; Path=/
-      - AWSALBCORS=Ml6aSKzeMOTebS92fIOOpukpp76STeEweHwrvVMF5A+fRZ39ulserDjy4NyQOfFKCJPvKzEdP7wYk6P0dI/ZRD3jVF+ibeNkbpSpAogdLtnjNUURgBahAMxSIMvd;
-        Expires=Tue, 24 Aug 2021 17:24:36 GMT; Path=/; SameSite=None
+      - AWSALB=aZtQk5q0k36ZFpvLbEA02B86ZeEdlklxBrUeLoIuJ0TvDqWGq62lUEKdUWtV1bfF61v0tF6ekWTWzbF1VR6XcpAvWsIGIzoc5mB0yyl96c/XXzmW4KGQMflbw4eV;
+        Expires=Tue, 24 Aug 2021 18:41:33 GMT; Path=/
+      - AWSALBCORS=aZtQk5q0k36ZFpvLbEA02B86ZeEdlklxBrUeLoIuJ0TvDqWGq62lUEKdUWtV1bfF61v0tF6ekWTWzbF1VR6XcpAvWsIGIzoc5mB0yyl96c/XXzmW4KGQMflbw4eV;
+        Expires=Tue, 24 Aug 2021 18:41:33 GMT; Path=/; SameSite=None
       status: HTTP/1.1 200 OK
       vary: Accept-Encoding
       x-api-pool: polite
@@ -2937,7 +2937,7 @@ http_interactions:
         M.","family":"Jones","sequence":"first","affiliation":[]}],"member":"1","container-title":["The
         Annals of Family Medicine"],"language":"en","deposited":{"date-parts":[[2007,2,13]],"date-time":"2007-02-13T15:56:13Z","timestamp":1171382173000},"score":0.0,"issued":{"date-parts":[[2007,1,1]]},"references-count":0,"journal-issue":{"issue":"1","published-print":{"date-parts":[[2007,1,1]]}},"URL":"http:\/\/dx.doi.org\/10.1370\/afm.672","ISSN":["1544-1709","1544-1717"],"issn-type":[{"value":"1544-1709","type":"print"},{"value":"1544-1717","type":"electronic"}],"subject":["Family
         Practice"],"published":{"date-parts":[[2007,1,1]]}}],"items-per-page":20,"query":{"start-index":0,"search-terms":null}}}'
-  recorded_at: 2021-08-17 17:24:38 GMT
+  recorded_at: 2021-08-17 18:41:35 GMT
   recorded_with: vcr/1.0.2, webmockr/0.8.0
 - request:
     method: get
@@ -2961,14 +2961,14 @@ http_interactions:
       connection: close
       content-length: '187'
       content-type: application/json
-      date: Tue, 17 Aug 2021 17:24:37 GMT
+      date: Tue, 17 Aug 2021 18:41:34 GMT
       permissions-policy: interest-cohort=()
       server: Jetty(9.4.40.v20210413)
       set-cookie:
-      - AWSALB=wZv02jChHG79LAG2ikTtNGn88VIgZJaKcYbw+vMXFc1BXt3RVD6ZtM8koaW4arx9jQD0sbqF72xO++8ST9bxf9kKH0B6rZt/RcO/GRBDZcL1AnoTw8FQHaHltGBq;
-        Expires=Tue, 24 Aug 2021 17:24:37 GMT; Path=/
-      - AWSALBCORS=wZv02jChHG79LAG2ikTtNGn88VIgZJaKcYbw+vMXFc1BXt3RVD6ZtM8koaW4arx9jQD0sbqF72xO++8ST9bxf9kKH0B6rZt/RcO/GRBDZcL1AnoTw8FQHaHltGBq;
-        Expires=Tue, 24 Aug 2021 17:24:37 GMT; Path=/; SameSite=None
+      - AWSALB=yEb2lSF1BMm16+wAi4ywZXTCs8qLvBHv36lUAd7hfMBQjBFdqE8uGnvGr/SJxIW1OXXgt3W0SgrixIKXatclTQRyndBULrjwneSW1bO5MJgN7ke3NJJEXuXNou9k;
+        Expires=Tue, 24 Aug 2021 18:41:34 GMT; Path=/
+      - AWSALBCORS=yEb2lSF1BMm16+wAi4ywZXTCs8qLvBHv36lUAd7hfMBQjBFdqE8uGnvGr/SJxIW1OXXgt3W0SgrixIKXatclTQRyndBULrjwneSW1bO5MJgN7ke3NJJEXuXNou9k;
+        Expires=Tue, 24 Aug 2021 18:41:34 GMT; Path=/; SameSite=None
       status: HTTP/1.1 200 OK
       x-api-pool: polite
       x-rate-limit-interval: 1s
@@ -2979,7 +2979,7 @@ http_interactions:
       encoding: UTF-8
       file: no
       string: '{"status":"ok","message-type":"work-list","message-version":"1.0.0","message":{"facets":{},"total-results":0,"items":[],"items-per-page":20,"query":{"start-index":0,"search-terms":null}}}'
-  recorded_at: 2021-08-17 17:24:38 GMT
+  recorded_at: 2021-08-17 18:41:35 GMT
   recorded_with: vcr/1.0.2, webmockr/0.8.0
 - request:
     method: get
@@ -3004,14 +3004,14 @@ http_interactions:
       content-encoding: gzip
       content-length: '6691'
       content-type: application/json
-      date: Tue, 17 Aug 2021 17:24:38 GMT
+      date: Tue, 17 Aug 2021 18:41:35 GMT
       permissions-policy: interest-cohort=()
       server: Jetty(9.4.40.v20210413)
       set-cookie:
-      - AWSALB=mCj68IUctl7SMFf70CT51RMlTGCWQQB1JUWyr2H5tiTS+IX9+9C12C8lfQlznS7D4WFInOO03iaRL7dPXatFbQsciwxBa2Dbh733IwDOoOEDgAtrvhAHA0SVTkaI;
-        Expires=Tue, 24 Aug 2021 17:24:38 GMT; Path=/
-      - AWSALBCORS=mCj68IUctl7SMFf70CT51RMlTGCWQQB1JUWyr2H5tiTS+IX9+9C12C8lfQlznS7D4WFInOO03iaRL7dPXatFbQsciwxBa2Dbh733IwDOoOEDgAtrvhAHA0SVTkaI;
-        Expires=Tue, 24 Aug 2021 17:24:38 GMT; Path=/; SameSite=None
+      - AWSALB=t4sRdPuJAJEM/emCIhuKJ+qyAeSUKjmgOd8ejO5Zu0ZKGaW22jPIiBpukf/SUs4yUdcGvvvMrVmZ3dVDitbKy9bahiJLo9+nx4p4IYVYxLtTKeCfFtXhc0hE54hk;
+        Expires=Tue, 24 Aug 2021 18:41:35 GMT; Path=/
+      - AWSALBCORS=t4sRdPuJAJEM/emCIhuKJ+qyAeSUKjmgOd8ejO5Zu0ZKGaW22jPIiBpukf/SUs4yUdcGvvvMrVmZ3dVDitbKy9bahiJLo9+nx4p4IYVYxLtTKeCfFtXhc0hE54hk;
+        Expires=Tue, 24 Aug 2021 18:41:35 GMT; Path=/; SameSite=None
       status: HTTP/1.1 200 OK
       vary: Accept-Encoding
       x-api-pool: polite
@@ -3103,5 +3103,5 @@ http_interactions:
         Society of Sivilculture and Forest Ecology (SISEF)","counts":{"current-dois":237,"backfile-dois":1254,"total-dois":1491},"breakdowns":{"dois-by-issued-year":[[2017,155],[2016,134],[2018,118],[2015,116],[2020,92],[2019,87],[2009,87],[2014,77],[2008,74],[2011,72],[2006,71],[2012,68],[2010,68],[2013,64],[2007,60],[2021,58],[2005,58],[2004,32]]},"prefixes":["10.3832","10.3832"],"coverage":{"affiliations-current":0.0,"similarity-checking-current":0.0,"funders-backfile":0.0,"licenses-backfile":0.0,"funders-current":0.0,"affiliations-backfile":0.0,"resource-links-backfile":0.0,"orcids-backfile":0.0,"update-policies-current":0.0,"open-references-backfile":0.0,"orcids-current":0.0,"similarity-checking-backfile":0.0,"references-backfile":0.854066985645933,"award-numbers-backfile":0.0,"update-policies-backfile":0.0,"licenses-current":0.0,"award-numbers-current":0.0,"abstracts-backfile":0.0,"resource-links-current":0.0,"abstracts-current":0.0,"open-references-current":0.0,"references-current":0.9409282700421941},"prefix":[{"reference-visibility":"limited","name":"SISEF","value":"10.3832","public-references":false},{"reference-visibility":"limited","name":"SISEF","value":"10.3832","public-references":false}],"id":2169,"tokens":["italian","society","of","sivilculture","and","forest","ecology","sisef"],"counts-type":{"all":{"journal-article":1491},"backfile":{"journal-article":1254},"current":{"journal-article":237}},"coverage-type":{"all":{"journal-article":{"last-status-check-time":1629156402565,"affiliations":0.0,"abstracts":0.0,"orcids":0.0,"licenses":0.0,"references":0.8678739101274313,"funders":0.0,"similarity-checking":0.0,"award-numbers":0.0,"update-policies":0.0,"resource-links":0.0,"open-references":0.0}},"backfile":{"journal-article":{"last-status-check-time":1629156402565,"affiliations":0.0,"abstracts":0.0,"orcids":0.0,"licenses":0.0,"references":0.854066985645933,"funders":0.0,"similarity-checking":0.0,"award-numbers":0.0,"update-policies":0.0,"resource-links":0.0,"open-references":0.0}},"current":{"journal-article":{"last-status-check-time":1629156402565,"affiliations":0.0,"abstracts":0.0,"orcids":0.0,"licenses":0.0,"references":0.9409282700421941,"funders":0.0,"similarity-checking":0.0,"award-numbers":0.0,"update-policies":0.0,"resource-links":0.0,"open-references":0.0}}},"flags":{"deposits-abstracts-current":false,"deposits-orcids-current":false,"deposits":true,"deposits-affiliations-backfile":false,"deposits-update-policies-backfile":false,"deposits-similarity-checking-backfile":false,"deposits-award-numbers-current":false,"deposits-resource-links-current":false,"deposits-articles":true,"deposits-affiliations-current":false,"deposits-funders-current":false,"deposits-references-backfile":true,"deposits-abstracts-backfile":false,"deposits-licenses-backfile":false,"deposits-award-numbers-backfile":false,"deposits-open-references-backfile":false,"deposits-open-references-current":false,"deposits-references-current":true,"deposits-resource-links-backfile":false,"deposits-orcids-backfile":false,"deposits-funders-backfile":false,"deposits-update-policies-current":false,"deposits-similarity-checking-current":false,"deposits-licenses-current":false},"location":"43100
         Parma, Italy","names":["Italian Society of Sivilculture and Forest Ecology
         (SISEF)","SISEF"]}]}}'
-  recorded_at: 2021-08-17 17:24:38 GMT
+  recorded_at: 2021-08-17 18:41:35 GMT
   recorded_with: vcr/1.0.2, webmockr/0.8.0

@@ -21,14 +21,14 @@ http_interactions:
       connection: close
       content-length: '199'
       content-type: application/json;charset=utf-8
-      date: Tue, 17 Aug 2021 17:25:10 GMT
+      date: Tue, 17 Aug 2021 18:41:50 GMT
       permissions-policy: interest-cohort=()
       server: Jetty(9.4.40.v20210413)
       set-cookie:
-      - AWSALB=p2HOz4Kub26MOnXGdCAOrDICDONdzAUysgWnubzFmpWqtCprcGpBU4S+iLpx/IAsj68+g90DWlzUH9ODZmiGOwe/2lYMUTwh+UhAN2syfY9CnIQYvvHbL4PTGUos;
-        Expires=Tue, 24 Aug 2021 17:25:10 GMT; Path=/
-      - AWSALBCORS=p2HOz4Kub26MOnXGdCAOrDICDONdzAUysgWnubzFmpWqtCprcGpBU4S+iLpx/IAsj68+g90DWlzUH9ODZmiGOwe/2lYMUTwh+UhAN2syfY9CnIQYvvHbL4PTGUos;
-        Expires=Tue, 24 Aug 2021 17:25:10 GMT; Path=/; SameSite=None
+      - AWSALB=OX8phx7e/SD9FlhXalh7/CI235vrHOGQo/TFzxvrfD/XdfSRHAiSnP4bm0Q0BFlTYFbzHaL1yippHrMsC4/kxbCt6RINOPBRYPzM4fjuboFR+nKSfPCsF5eRxbYH;
+        Expires=Tue, 24 Aug 2021 18:41:50 GMT; Path=/
+      - AWSALBCORS=OX8phx7e/SD9FlhXalh7/CI235vrHOGQo/TFzxvrfD/XdfSRHAiSnP4bm0Q0BFlTYFbzHaL1yippHrMsC4/kxbCt6RINOPBRYPzM4fjuboFR+nKSfPCsF5eRxbYH;
+        Expires=Tue, 24 Aug 2021 18:41:50 GMT; Path=/; SameSite=None
       status: HTTP/1.1 200 OK
       vary: Accept
       x-api-pool: polite
@@ -41,5 +41,5 @@ http_interactions:
       file: no
       string: '{"status":"ok","message-type":"prefix","message-version":"1.0.0","message":{"member":"http:\/\/id.crossref.org\/member\/78","name":"Elsevier
         BV","prefix":"http:\/\/id.crossref.org\/prefix\/10.1016"}}'
-  recorded_at: 2021-08-17 17:25:10 GMT
+  recorded_at: 2021-08-17 18:41:50 GMT
   recorded_with: vcr/1.0.2, webmockr/0.8.0
