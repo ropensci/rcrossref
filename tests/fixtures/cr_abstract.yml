@@ -8,32 +8,37 @@ http_interactions:
     headers:
       Accept-Encoding: gzip, deflate
       Accept: application/json, text/xml, application/xml, */*
-      User-Agent: r-curl/4.3.2 crul/1.1.0 rOpenSci(rcrossref/1.1.0.94)
-      X-USER-AGENT: r-curl/4.3.2 crul/1.1.0 rOpenSci(rcrossref/1.1.0.94)
+      User-Agent: r-curl/4.3.2 crul/1.1.0 rOpenSci(rcrossref/1.1.0.94) (mailto:<crossref_email>)
+      X-USER-AGENT: r-curl/4.3.2 crul/1.1.0 rOpenSci(rcrossref/1.1.0.94) (mailto:<crossref_email>)
   response:
     status:
       status_code: '200'
       message: OK
       explanation: Request fulfilled, document follows
     headers:
-      status: HTTP/1.1 200 OK
-      date: Fri, 13 Aug 2021 12:52:45 GMT
+      access-control-allow-headers: X-Requested-With
+      access-control-allow-origin: '*'
+      connection: close
+      content-encoding: gzip
       content-length: '6586'
+      date: Tue, 17 Aug 2021 17:22:07 GMT
       link: <http://dx.doi.org/10.1175//2572.1>; rel="canonical", <http://journals.ametsoc.org/mwr/article-pdf/131/8/1895/4208740/_2572_1.pdf>;
         version="vor"; type="application/pdf"; rel="item", <http://journals.ametsoc.org/mwr/article-pdf/131/8/1895/4208740/_2572_1.pdf>;
         version="vor"; rel="item"
-      access-control-allow-origin: '*'
-      access-control-allow-headers: X-Requested-With
-      vary: Accept-Encoding
-      content-encoding: gzip
-      server: Jetty(9.4.40.v20210413)
-      x-ratelimit-limit: '50'
-      x-ratelimit-interval: 1s
-      x-api-pool: public
-      x-rate-limit-limit: '50'
-      x-rate-limit-interval: 1s
       permissions-policy: interest-cohort=()
-      connection: close
+      server: Jetty(9.4.40.v20210413)
+      set-cookie:
+      - AWSALB=L3eUoeo5tz2WGBsjnwshGliWed2FECiOMgcgTocpvGyXkn5LCb9YTGfPRg4xu4Gdzx0s4by2ZuCg9St6HneeyXizgg+bAgtDIaa6yWdk6H97/4W82LU32EAJJ5Yf;
+        Expires=Tue, 24 Aug 2021 17:22:07 GMT; Path=/
+      - AWSALBCORS=L3eUoeo5tz2WGBsjnwshGliWed2FECiOMgcgTocpvGyXkn5LCb9YTGfPRg4xu4Gdzx0s4by2ZuCg9St6HneeyXizgg+bAgtDIaa6yWdk6H97/4W82LU32EAJJ5Yf;
+        Expires=Tue, 24 Aug 2021 17:22:07 GMT; Path=/; SameSite=None
+      status: HTTP/1.1 200 OK
+      vary: Accept-Encoding
+      x-api-pool: polite
+      x-rate-limit-interval: 1s
+      x-rate-limit-limit: '50'
+      x-ratelimit-interval: 1s
+      x-ratelimit-limit: '50'
     body:
       encoding: UTF-8
       file: no
@@ -452,5 +457,5 @@ http_interactions:
         \                 </citation>\r\n                </citation_list>\r\n              </journal_article>\r\n
         \           </journal>\r\n          </crossref>\r\n        </doi_record>\r\n
         \     </query>\r\n    </body>\r\n  </query_result>\r\n</crossref_result>"
-  recorded_at: 2021-08-13 12:52:45 GMT
+  recorded_at: 2021-08-17 17:22:07 GMT
   recorded_with: vcr/1.0.2, webmockr/0.8.0

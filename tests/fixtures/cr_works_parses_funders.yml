@@ -8,34 +8,39 @@ http_interactions:
     headers:
       Accept-Encoding: gzip, deflate
       Accept: application/json, text/xml, application/xml, */*
-      User-Agent: r-curl/4.3.2 crul/1.1.0 rOpenSci(rcrossref/1.1.0.94)
-      X-USER-AGENT: r-curl/4.3.2 crul/1.1.0 rOpenSci(rcrossref/1.1.0.94)
+      User-Agent: r-curl/4.3.2 crul/1.1.0 rOpenSci(rcrossref/1.1.0.94) (mailto:<crossref_email>)
+      X-USER-AGENT: r-curl/4.3.2 crul/1.1.0 rOpenSci(rcrossref/1.1.0.94) (mailto:<crossref_email>)
   response:
     status:
       status_code: '200'
       message: OK
       explanation: Request fulfilled, document follows
     headers:
-      status: HTTP/1.1 200 OK
-      date: Fri, 13 Aug 2021 13:04:15 GMT
-      content-type: application/json
-      content-length: '1312'
-      access-control-allow-origin: '*'
       access-control-allow-headers: X-Requested-With
-      vary: Accept-Encoding
-      content-encoding: gzip
-      server: Jetty(9.4.40.v20210413)
-      x-ratelimit-limit: '50'
-      x-ratelimit-interval: 1s
-      x-api-pool: public
-      x-rate-limit-limit: '50'
-      x-rate-limit-interval: 1s
-      permissions-policy: interest-cohort=()
+      access-control-allow-origin: '*'
       connection: close
+      content-encoding: gzip
+      content-length: '1311'
+      content-type: application/json
+      date: Tue, 17 Aug 2021 17:54:17 GMT
+      permissions-policy: interest-cohort=()
+      server: Jetty(9.4.40.v20210413)
+      set-cookie:
+      - AWSALB=yx8hoZFt3UyV3GT/LkU9QRxYwcnFhMNOjl98MJ6J94PDeSw0sdi5LivDwEeEcUcQNEt1L5YeArZ/NYRn1SBPddsjCZBw4FppHlCVEWk6mD2XcCoBgt+ytB8cVjgN;
+        Expires=Tue, 24 Aug 2021 17:54:17 GMT; Path=/
+      - AWSALBCORS=yx8hoZFt3UyV3GT/LkU9QRxYwcnFhMNOjl98MJ6J94PDeSw0sdi5LivDwEeEcUcQNEt1L5YeArZ/NYRn1SBPddsjCZBw4FppHlCVEWk6mD2XcCoBgt+ytB8cVjgN;
+        Expires=Tue, 24 Aug 2021 17:54:17 GMT; Path=/; SameSite=None
+      status: HTTP/1.1 200 OK
+      vary: Accept-Encoding
+      x-api-pool: polite
+      x-rate-limit-interval: 1s
+      x-rate-limit-limit: '50'
+      x-ratelimit-interval: 1s
+      x-ratelimit-limit: '50'
     body:
       encoding: UTF-8
       file: no
-      string: '{"status":"ok","message-type":"work","message-version":"1.0.0","message":{"indexed":{"date-parts":[[2021,5,12]],"date-time":"2021-05-12T04:52:09Z","timestamp":1620795129082},"reference-count":0,"publisher":"Walter
+      string: '{"status":"ok","message-type":"work","message-version":"1.0.0","message":{"indexed":{"date-parts":[[2021,5,12]],"date-time":"2021-05-12T04:52:07Z","timestamp":1620795127212},"reference-count":0,"publisher":"Walter
         de Gruyter GmbH","issue":"700","funder":[{"name":"NSF","award":["DMS-0800084"]},{"name":"NSF","award":["DMS-1206661"]},{"name":"NSF","award":["DMS-0804042"]},{"name":"NSF","award":["DMS-1105187"]}],"content-domain":{"domain":[],"crossmark-restriction":false},"short-container-title":[],"published-print":{"date-parts":[[2015,1,1]]},"abstract":"<jats:title>Abstract<\/jats:title><jats:p>We
         investigate rigidity and stability properties of critical points of quadratic
         curvature functionals on the space of Riemannian metrics. We show it is possible
@@ -52,7 +57,7 @@ http_interactions:
         A.","family":"Viaclovsky","sequence":"additional","affiliation":[]}],"member":"374","container-title":["Journal
         f\u00fcr die reine und angewandte Mathematik (Crelles Journal)"],"original-title":[],"link":[{"URL":"https:\/\/www.degruyter.com\/document\/doi\/10.1515\/crelle-2013-0024\/pdf","content-type":"unspecified","content-version":"vor","intended-application":"similarity-checking"}],"deposited":{"date-parts":[[2021,4,21]],"date-time":"2021-04-21T21:47:03Z","timestamp":1619041623000},"score":1,"subtitle":[],"short-title":[],"issued":{"date-parts":[[2015,1,1]]},"references-count":0,"journal-issue":{"issue":"700"},"URL":"http:\/\/dx.doi.org\/10.1515\/crelle-2013-0024","relation":{},"ISSN":["0075-4102","1435-5345"],"issn-type":[{"value":"0075-4102","type":"print"},{"value":"1435-5345","type":"electronic"}],"subject":["Applied
         Mathematics","General Mathematics"],"published":{"date-parts":[[2015,1,1]]}}}'
-  recorded_at: 2021-08-13 13:04:20 GMT
+  recorded_at: 2021-08-17 17:54:24 GMT
   recorded_with: vcr/1.0.2, webmockr/0.8.0
 - request:
     method: get
@@ -63,39 +68,44 @@ http_interactions:
     headers:
       Accept-Encoding: gzip, deflate
       Accept: application/json, text/xml, application/xml, */*
-      User-Agent: r-curl/4.3.2 crul/1.1.0 rOpenSci(rcrossref/1.1.0.94)
-      X-USER-AGENT: r-curl/4.3.2 crul/1.1.0 rOpenSci(rcrossref/1.1.0.94)
+      User-Agent: r-curl/4.3.2 crul/1.1.0 rOpenSci(rcrossref/1.1.0.94) (mailto:<crossref_email>)
+      X-USER-AGENT: r-curl/4.3.2 crul/1.1.0 rOpenSci(rcrossref/1.1.0.94) (mailto:<crossref_email>)
   response:
     status:
       status_code: '200'
       message: OK
       explanation: Request fulfilled, document follows
     headers:
-      status: HTTP/1.1 200 OK
-      date: Fri, 13 Aug 2021 13:04:15 GMT
-      content-type: application/json
-      content-length: '691'
-      access-control-allow-origin: '*'
       access-control-allow-headers: X-Requested-With
-      vary: Accept-Encoding
-      content-encoding: gzip
-      server: Jetty(9.4.40.v20210413)
-      x-ratelimit-limit: '50'
-      x-ratelimit-interval: 1s
-      x-api-pool: public
-      x-rate-limit-limit: '50'
-      x-rate-limit-interval: 1s
-      permissions-policy: interest-cohort=()
+      access-control-allow-origin: '*'
       connection: close
+      content-encoding: gzip
+      content-length: '692'
+      content-type: application/json
+      date: Tue, 17 Aug 2021 17:54:18 GMT
+      permissions-policy: interest-cohort=()
+      server: Jetty(9.4.40.v20210413)
+      set-cookie:
+      - AWSALB=iaqGvU1H1LttCvX1+Js2/gmEmoMh0twwklxQRJhcS6fBNTiV9c2CzMS2O6iyFVBHBPsFOCZ/oPUea7a8kU8UaDTSLXdcqOvNo0IkINeY4fwazj9GaW1upd4FRZXE;
+        Expires=Tue, 24 Aug 2021 17:54:18 GMT; Path=/
+      - AWSALBCORS=iaqGvU1H1LttCvX1+Js2/gmEmoMh0twwklxQRJhcS6fBNTiV9c2CzMS2O6iyFVBHBPsFOCZ/oPUea7a8kU8UaDTSLXdcqOvNo0IkINeY4fwazj9GaW1upd4FRZXE;
+        Expires=Tue, 24 Aug 2021 17:54:18 GMT; Path=/; SameSite=None
+      status: HTTP/1.1 200 OK
+      vary: Accept-Encoding
+      x-api-pool: polite
+      x-rate-limit-interval: 1s
+      x-rate-limit-limit: '50'
+      x-ratelimit-interval: 1s
+      x-ratelimit-limit: '50'
     body:
       encoding: UTF-8
       file: no
       string: '{"status":"ok","message-type":"work","message-version":"1.0.0","message":{"institution":[{"name":"ISRCTN","place":["London,
-        UK"]}],"indexed":{"date-parts":[[2021,5,10]],"date-time":"2021-05-10T12:42:28Z","timestamp":1620650548811},"reference-count":0,"publisher":"Springer
+        UK"]}],"indexed":{"date-parts":[[2021,5,10]],"date-time":"2021-05-10T12:39:05Z","timestamp":1620650345495},"reference-count":0,"publisher":"Springer
         Science and Business Media LLC","funder":[{"DOI":"10.13039\/501100000272","name":"National
         Institute for Health Research","doi-asserted-by":"publisher"}],"content-domain":{"domain":["www.isrctn.com"],"crossmark-restriction":true},"short-container-title":[],"DOI":"10.1186\/isrctn11093872","type":"dataset","created":{"date-parts":[[2015,11,11]],"date-time":"2015-11-11T07:20:04Z","timestamp":1447226404000},"update-policy":"http:\/\/dx.doi.org\/10.1186\/isrctn_crossmark_policy","source":"Crossref","is-referenced-by-count":0,"title":["CapaCiTY
         Study 2 - Chronic Constipation Treatment Pathway"],"prefix":"10.1186","author":[{"given":"Shiva","family":"Taheri","sequence":"first","affiliation":[]}],"member":"297","content-created":{"date-parts":[[2015,11,11]]},"container-title":["http:\/\/isrctn.com\/"],"original-title":[],"deposited":{"date-parts":[[2015,11,11]],"date-time":"2015-11-11T07:20:06Z","timestamp":1447226406000},"score":1,"subtitle":[],"short-title":[],"issued":{"date-parts":[[2015,11,11]]},"references-count":0,"URL":"http:\/\/dx.doi.org\/10.1186\/isrctn11093872","relation":{},"published":{"date-parts":[[2015,11,11]]}}}'
-  recorded_at: 2021-08-13 13:04:20 GMT
+  recorded_at: 2021-08-17 17:54:24 GMT
   recorded_with: vcr/1.0.2, webmockr/0.8.0
 - request:
     method: get
@@ -106,34 +116,39 @@ http_interactions:
     headers:
       Accept-Encoding: gzip, deflate
       Accept: application/json, text/xml, application/xml, */*
-      User-Agent: r-curl/4.3.2 crul/1.1.0 rOpenSci(rcrossref/1.1.0.94)
-      X-USER-AGENT: r-curl/4.3.2 crul/1.1.0 rOpenSci(rcrossref/1.1.0.94)
+      User-Agent: r-curl/4.3.2 crul/1.1.0 rOpenSci(rcrossref/1.1.0.94) (mailto:<crossref_email>)
+      X-USER-AGENT: r-curl/4.3.2 crul/1.1.0 rOpenSci(rcrossref/1.1.0.94) (mailto:<crossref_email>)
   response:
     status:
       status_code: '200'
       message: OK
       explanation: Request fulfilled, document follows
     headers:
-      status: HTTP/1.1 200 OK
-      date: Fri, 13 Aug 2021 13:04:16 GMT
-      content-type: application/json
-      content-length: '2484'
-      access-control-allow-origin: '*'
       access-control-allow-headers: X-Requested-With
-      vary: Accept-Encoding
-      content-encoding: gzip
-      server: Jetty(9.4.40.v20210413)
-      x-ratelimit-limit: '50'
-      x-ratelimit-interval: 1s
-      x-api-pool: public
-      x-rate-limit-limit: '50'
-      x-rate-limit-interval: 1s
-      permissions-policy: interest-cohort=()
+      access-control-allow-origin: '*'
       connection: close
+      content-encoding: gzip
+      content-length: '2485'
+      content-type: application/json
+      date: Tue, 17 Aug 2021 17:54:19 GMT
+      permissions-policy: interest-cohort=()
+      server: Jetty(9.4.40.v20210413)
+      set-cookie:
+      - AWSALB=piVZrTcd7jVVw6kYKk2YNAvfZuBbFkES0nbZR10pwr/0bA4sRT+HJ2pL+zhFRPGe5S5Vs7QdJpWm0Bh5oDjU4H1hrle55hNMrPh/1EwPRJYzfm0qNAk9An3QvD3z;
+        Expires=Tue, 24 Aug 2021 17:54:19 GMT; Path=/
+      - AWSALBCORS=piVZrTcd7jVVw6kYKk2YNAvfZuBbFkES0nbZR10pwr/0bA4sRT+HJ2pL+zhFRPGe5S5Vs7QdJpWm0Bh5oDjU4H1hrle55hNMrPh/1EwPRJYzfm0qNAk9An3QvD3z;
+        Expires=Tue, 24 Aug 2021 17:54:19 GMT; Path=/; SameSite=None
+      status: HTTP/1.1 200 OK
+      vary: Accept-Encoding
+      x-api-pool: polite
+      x-rate-limit-interval: 1s
+      x-rate-limit-limit: '50'
+      x-ratelimit-interval: 1s
+      x-ratelimit-limit: '50'
     body:
       encoding: UTF-8
       file: no
-      string: '{"status":"ok","message-type":"work","message-version":"1.0.0","message":{"indexed":{"date-parts":[[2021,5,12]],"date-time":"2021-05-12T07:03:41Z","timestamp":1620803021420},"publisher-location":"New
+      string: '{"status":"ok","message-type":"work","message-version":"1.0.0","message":{"indexed":{"date-parts":[[2021,5,12]],"date-time":"2021-05-12T07:03:40Z","timestamp":1620803020675},"publisher-location":"New
         York, New York, USA","reference-count":18,"publisher":"ACM Press","license":[{"start":{"date-parts":[[2015,11,15]],"date-time":"2015-11-15T00:00:00Z","timestamp":1447545600000},"content-version":"vor","delay-in-days":318,"URL":"http:\/\/www.acm.org\/publications\/policies\/copyright_policy#Background"}],"funder":[{"name":"Office
         of Science of the U.S. Department of Energy","award":["DE-AC02-05CH11231"]},{"name":"National
         Science Foundatio","award":["1564647"]},{"name":"National Science Foundation
@@ -180,7 +195,7 @@ http_interactions:
         Computing, Special Interest Group on High Performance Computing"],"start":{"date-parts":[[2015,11,15]]},"end":{"date-parts":[[2015,11,15]]}},"container-title":["Proceedings
         of the 2015 International Workshop on Data-Intensive Scalable Computing Systems
         - DISCS ''15"],"original-title":[],"link":[{"URL":"http:\/\/dl.acm.org\/ft_gateway.cfm?id=2831252&amp;ftid=1643730&amp;dwn=1","content-type":"unspecified","content-version":"vor","intended-application":"similarity-checking"}],"deposited":{"date-parts":[[2019,9,1]],"date-time":"2019-09-01T12:39:03Z","timestamp":1567341543000},"score":1,"subtitle":[],"short-title":[],"issued":{"date-parts":[[2015]]},"references-count":18,"URL":"http:\/\/dx.doi.org\/10.1145\/2831244.2831252","relation":{},"published":{"date-parts":[[2015]]}}}'
-  recorded_at: 2021-08-13 13:04:20 GMT
+  recorded_at: 2021-08-17 17:54:24 GMT
   recorded_with: vcr/1.0.2, webmockr/0.8.0
 - request:
     method: get
@@ -191,34 +206,39 @@ http_interactions:
     headers:
       Accept-Encoding: gzip, deflate
       Accept: application/json, text/xml, application/xml, */*
-      User-Agent: r-curl/4.3.2 crul/1.1.0 rOpenSci(rcrossref/1.1.0.94)
-      X-USER-AGENT: r-curl/4.3.2 crul/1.1.0 rOpenSci(rcrossref/1.1.0.94)
+      User-Agent: r-curl/4.3.2 crul/1.1.0 rOpenSci(rcrossref/1.1.0.94) (mailto:<crossref_email>)
+      X-USER-AGENT: r-curl/4.3.2 crul/1.1.0 rOpenSci(rcrossref/1.1.0.94) (mailto:<crossref_email>)
   response:
     status:
       status_code: '200'
       message: OK
       explanation: Request fulfilled, document follows
     headers:
-      status: HTTP/1.1 200 OK
-      date: Fri, 13 Aug 2021 13:04:17 GMT
-      content-type: application/json
-      content-length: '4130'
-      access-control-allow-origin: '*'
       access-control-allow-headers: X-Requested-With
-      vary: Accept-Encoding
-      content-encoding: gzip
-      server: Jetty(9.4.40.v20210413)
-      x-ratelimit-limit: '50'
-      x-ratelimit-interval: 1s
-      x-api-pool: public
-      x-rate-limit-limit: '50'
-      x-rate-limit-interval: 1s
-      permissions-policy: interest-cohort=()
+      access-control-allow-origin: '*'
       connection: close
+      content-encoding: gzip
+      content-length: '4130'
+      content-type: application/json
+      date: Tue, 17 Aug 2021 17:54:20 GMT
+      permissions-policy: interest-cohort=()
+      server: Jetty(9.4.40.v20210413)
+      set-cookie:
+      - AWSALB=7yGLqPmG1avaLYPSd851ySORTWy1ed2ruWM63yNmBY06ZkgSMnSmaBeqIy4NrhLee93hbfp7xjf3hP3Zruvv23+0OuGPPjUe45q+nsVJhw1GntX5gutZoa8efMD7;
+        Expires=Tue, 24 Aug 2021 17:54:20 GMT; Path=/
+      - AWSALBCORS=7yGLqPmG1avaLYPSd851ySORTWy1ed2ruWM63yNmBY06ZkgSMnSmaBeqIy4NrhLee93hbfp7xjf3hP3Zruvv23+0OuGPPjUe45q+nsVJhw1GntX5gutZoa8efMD7;
+        Expires=Tue, 24 Aug 2021 17:54:20 GMT; Path=/; SameSite=None
+      status: HTTP/1.1 200 OK
+      vary: Accept-Encoding
+      x-api-pool: polite
+      x-rate-limit-interval: 1s
+      x-rate-limit-limit: '50'
+      x-ratelimit-interval: 1s
+      x-ratelimit-limit: '50'
     body:
       encoding: UTF-8
       file: no
-      string: '{"status":"ok","message-type":"work","message-version":"1.0.0","message":{"indexed":{"date-parts":[[2021,5,12]],"date-time":"2021-05-12T07:03:41Z","timestamp":1620803021245},"publisher-location":"New
+      string: '{"status":"ok","message-type":"work","message-version":"1.0.0","message":{"indexed":{"date-parts":[[2021,5,12]],"date-time":"2021-05-12T07:03:42Z","timestamp":1620803022228},"publisher-location":"New
         York, New York, USA","reference-count":29,"publisher":"ACM Press","license":[{"start":{"date-parts":[[2015,11,15]],"date-time":"2015-11-15T00:00:00Z","timestamp":1447545600000},"content-version":"vor","delay-in-days":318,"URL":"http:\/\/www.acm.org\/publications\/policies\/copyright_policy#Background"}],"funder":[{"name":"Russian
         Scientific Foundation","award":["N14-11-00190"]},{"name":"panish Ministerio
         de Economia y Competitividad","award":["TIN2011- 23283 and TIN2014-53495-R"]},{"DOI":"10.13039\/100000015","name":"U.S.
@@ -306,7 +326,7 @@ http_interactions:
         Computing, Special Interest Group on High Performance Computing"],"start":{"date-parts":[[2015,11,15]]},"end":{"date-parts":[[2015,11,15]]}},"container-title":["Proceedings
         of the 3rd International Workshop on Energy Efficient Supercomputing - E2SC
         ''15"],"original-title":[],"link":[{"URL":"http:\/\/dl.acm.org\/ft_gateway.cfm?id=2834802&amp;ftid=1643738&amp;dwn=1","content-type":"unspecified","content-version":"vor","intended-application":"similarity-checking"}],"deposited":{"date-parts":[[2019,9,1]],"date-time":"2019-09-01T08:39:30Z","timestamp":1567327170000},"score":1,"subtitle":[],"short-title":[],"issued":{"date-parts":[[2015]]},"references-count":29,"URL":"http:\/\/dx.doi.org\/10.1145\/2834800.2834802","relation":{},"published":{"date-parts":[[2015]]}}}'
-  recorded_at: 2021-08-13 13:04:20 GMT
+  recorded_at: 2021-08-17 17:54:24 GMT
   recorded_with: vcr/1.0.2, webmockr/0.8.0
 - request:
     method: get
@@ -317,34 +337,39 @@ http_interactions:
     headers:
       Accept-Encoding: gzip, deflate
       Accept: application/json, text/xml, application/xml, */*
-      User-Agent: r-curl/4.3.2 crul/1.1.0 rOpenSci(rcrossref/1.1.0.94)
-      X-USER-AGENT: r-curl/4.3.2 crul/1.1.0 rOpenSci(rcrossref/1.1.0.94)
+      User-Agent: r-curl/4.3.2 crul/1.1.0 rOpenSci(rcrossref/1.1.0.94) (mailto:<crossref_email>)
+      X-USER-AGENT: r-curl/4.3.2 crul/1.1.0 rOpenSci(rcrossref/1.1.0.94) (mailto:<crossref_email>)
   response:
     status:
       status_code: '200'
       message: OK
       explanation: Request fulfilled, document follows
     headers:
-      status: HTTP/1.1 200 OK
-      date: Fri, 13 Aug 2021 13:04:18 GMT
-      content-type: application/json
-      content-length: '4130'
-      access-control-allow-origin: '*'
       access-control-allow-headers: X-Requested-With
-      vary: Accept-Encoding
-      content-encoding: gzip
-      server: Jetty(9.4.40.v20210413)
-      x-ratelimit-limit: '50'
-      x-ratelimit-interval: 1s
-      x-api-pool: public
-      x-rate-limit-limit: '50'
-      x-rate-limit-interval: 1s
-      permissions-policy: interest-cohort=()
+      access-control-allow-origin: '*'
       connection: close
+      content-encoding: gzip
+      content-length: '4130'
+      content-type: application/json
+      date: Tue, 17 Aug 2021 17:54:21 GMT
+      permissions-policy: interest-cohort=()
+      server: Jetty(9.4.40.v20210413)
+      set-cookie:
+      - AWSALB=sMqmn2U9PkqSoXjudPIDSWvoFkRuXUxILuGTpqA3uHwjVdWKnPEHmpvgu5zlBvleJbR8Cbf9aVf0SzCuFsrpkNEHVcC9PBnJT0iSR2uJX0BhFPwqaNNluQ+ZDkmF;
+        Expires=Tue, 24 Aug 2021 17:54:21 GMT; Path=/
+      - AWSALBCORS=sMqmn2U9PkqSoXjudPIDSWvoFkRuXUxILuGTpqA3uHwjVdWKnPEHmpvgu5zlBvleJbR8Cbf9aVf0SzCuFsrpkNEHVcC9PBnJT0iSR2uJX0BhFPwqaNNluQ+ZDkmF;
+        Expires=Tue, 24 Aug 2021 17:54:21 GMT; Path=/; SameSite=None
+      status: HTTP/1.1 200 OK
+      vary: Accept-Encoding
+      x-api-pool: polite
+      x-rate-limit-interval: 1s
+      x-rate-limit-limit: '50'
+      x-ratelimit-interval: 1s
+      x-ratelimit-limit: '50'
     body:
       encoding: UTF-8
       file: no
-      string: '{"status":"ok","message-type":"work","message-version":"1.0.0","message":{"indexed":{"date-parts":[[2021,5,12]],"date-time":"2021-05-12T07:03:41Z","timestamp":1620803021245},"publisher-location":"New
+      string: '{"status":"ok","message-type":"work","message-version":"1.0.0","message":{"indexed":{"date-parts":[[2021,5,12]],"date-time":"2021-05-12T07:03:42Z","timestamp":1620803022228},"publisher-location":"New
         York, New York, USA","reference-count":29,"publisher":"ACM Press","license":[{"start":{"date-parts":[[2015,11,15]],"date-time":"2015-11-15T00:00:00Z","timestamp":1447545600000},"content-version":"vor","delay-in-days":318,"URL":"http:\/\/www.acm.org\/publications\/policies\/copyright_policy#Background"}],"funder":[{"name":"Russian
         Scientific Foundation","award":["N14-11-00190"]},{"name":"panish Ministerio
         de Economia y Competitividad","award":["TIN2011- 23283 and TIN2014-53495-R"]},{"DOI":"10.13039\/100000015","name":"U.S.
@@ -432,7 +457,7 @@ http_interactions:
         Computing, Special Interest Group on High Performance Computing"],"start":{"date-parts":[[2015,11,15]]},"end":{"date-parts":[[2015,11,15]]}},"container-title":["Proceedings
         of the 3rd International Workshop on Energy Efficient Supercomputing - E2SC
         ''15"],"original-title":[],"link":[{"URL":"http:\/\/dl.acm.org\/ft_gateway.cfm?id=2834802&amp;ftid=1643738&amp;dwn=1","content-type":"unspecified","content-version":"vor","intended-application":"similarity-checking"}],"deposited":{"date-parts":[[2019,9,1]],"date-time":"2019-09-01T08:39:30Z","timestamp":1567327170000},"score":1,"subtitle":[],"short-title":[],"issued":{"date-parts":[[2015]]},"references-count":29,"URL":"http:\/\/dx.doi.org\/10.1145\/2834800.2834802","relation":{},"published":{"date-parts":[[2015]]}}}'
-  recorded_at: 2021-08-13 13:04:20 GMT
+  recorded_at: 2021-08-17 17:54:24 GMT
   recorded_with: vcr/1.0.2, webmockr/0.8.0
 - request:
     method: get
@@ -443,34 +468,39 @@ http_interactions:
     headers:
       Accept-Encoding: gzip, deflate
       Accept: application/json, text/xml, application/xml, */*
-      User-Agent: r-curl/4.3.2 crul/1.1.0 rOpenSci(rcrossref/1.1.0.94)
-      X-USER-AGENT: r-curl/4.3.2 crul/1.1.0 rOpenSci(rcrossref/1.1.0.94)
+      User-Agent: r-curl/4.3.2 crul/1.1.0 rOpenSci(rcrossref/1.1.0.94) (mailto:<crossref_email>)
+      X-USER-AGENT: r-curl/4.3.2 crul/1.1.0 rOpenSci(rcrossref/1.1.0.94) (mailto:<crossref_email>)
   response:
     status:
       status_code: '200'
       message: OK
       explanation: Request fulfilled, document follows
     headers:
-      status: HTTP/1.1 200 OK
-      date: Fri, 13 Aug 2021 13:04:18 GMT
-      content-type: application/json
-      content-length: '3263'
-      access-control-allow-origin: '*'
       access-control-allow-headers: X-Requested-With
-      vary: Accept-Encoding
-      content-encoding: gzip
-      server: Jetty(9.4.40.v20210413)
-      x-ratelimit-limit: '50'
-      x-ratelimit-interval: 1s
-      x-api-pool: public
-      x-rate-limit-limit: '50'
-      x-rate-limit-interval: 1s
-      permissions-policy: interest-cohort=()
+      access-control-allow-origin: '*'
       connection: close
+      content-encoding: gzip
+      content-length: '3263'
+      content-type: application/json
+      date: Tue, 17 Aug 2021 17:54:21 GMT
+      permissions-policy: interest-cohort=()
+      server: Jetty(9.4.40.v20210413)
+      set-cookie:
+      - AWSALB=bLWxAAXE0gRpQhVc4yPF1+lyYT2WGGLaX9mwuYfa46VKu9OQ2ftXh+3gRWlOOEu5rcbjHho6Pwl0DAh9Pkmy/wzTv8SEbMtG5z3IJBWHkwx0Q4p8e/7TjtS1d1Pq;
+        Expires=Tue, 24 Aug 2021 17:54:21 GMT; Path=/
+      - AWSALBCORS=bLWxAAXE0gRpQhVc4yPF1+lyYT2WGGLaX9mwuYfa46VKu9OQ2ftXh+3gRWlOOEu5rcbjHho6Pwl0DAh9Pkmy/wzTv8SEbMtG5z3IJBWHkwx0Q4p8e/7TjtS1d1Pq;
+        Expires=Tue, 24 Aug 2021 17:54:21 GMT; Path=/; SameSite=None
+      status: HTTP/1.1 200 OK
+      vary: Accept-Encoding
+      x-api-pool: polite
+      x-rate-limit-interval: 1s
+      x-rate-limit-limit: '50'
+      x-ratelimit-interval: 1s
+      x-ratelimit-limit: '50'
     body:
       encoding: UTF-8
       file: no
-      string: '{"status":"ok","message-type":"work","message-version":"1.0.0","message":{"indexed":{"date-parts":[[2021,5,12]],"date-time":"2021-05-12T07:03:43Z","timestamp":1620803023536},"publisher-location":"New
+      string: '{"status":"ok","message-type":"work","message-version":"1.0.0","message":{"indexed":{"date-parts":[[2021,5,12]],"date-time":"2021-05-12T07:03:41Z","timestamp":1620803021426},"publisher-location":"New
         York, New York, USA","reference-count":24,"publisher":"ACM Press","license":[{"start":{"date-parts":[[2015,11,15]],"date-time":"2015-11-15T00:00:00Z","timestamp":1447545600000},"content-version":"vor","delay-in-days":318,"URL":"http:\/\/www.acm.org\/publications\/policies\/copyright_policy#Background"}],"funder":[{"DOI":"10.13039\/501100001691","name":"Japan
         Society for the Promotion of Science","doi-asserted-by":"publisher","award":["26330145"]},{"name":"National
         Institute of Information and Communications Technology"}],"content-domain":{"domain":[],"crossmark-restriction":false},"short-container-title":[],"published-print":{"date-parts":[[2015]]},"DOI":"10.1145\/2832099.2832103","type":"proceedings-article","created":{"date-parts":[[2015,11,11]],"date-time":"2015-11-11T13:07:06Z","timestamp":1447247226000},"source":"Crossref","is-referenced-by-count":1,"title":["Design
@@ -537,7 +567,7 @@ http_interactions:
         Group on High Performance Computing","IEEE-CS\\DATC, IEEE Computer Society"],"start":{"date-parts":[[2015,11,15]]},"end":{"date-parts":[[2015,11,15]]}},"container-title":["Proceedings
         of the Fifth International Workshop on Network-Aware Data Management - NDM
         ''15"],"original-title":[],"link":[{"URL":"http:\/\/dl.acm.org\/ft_gateway.cfm?id=2832103&amp;ftid=1644573&amp;dwn=1","content-type":"unspecified","content-version":"vor","intended-application":"similarity-checking"}],"deposited":{"date-parts":[[2019,9,1]],"date-time":"2019-09-01T12:41:23Z","timestamp":1567341683000},"score":1,"subtitle":[],"short-title":[],"issued":{"date-parts":[[2015]]},"references-count":24,"URL":"http:\/\/dx.doi.org\/10.1145\/2832099.2832103","relation":{},"published":{"date-parts":[[2015]]}}}'
-  recorded_at: 2021-08-13 13:04:20 GMT
+  recorded_at: 2021-08-17 17:54:24 GMT
   recorded_with: vcr/1.0.2, webmockr/0.8.0
 - request:
     method: get
@@ -548,34 +578,39 @@ http_interactions:
     headers:
       Accept-Encoding: gzip, deflate
       Accept: application/json, text/xml, application/xml, */*
-      User-Agent: r-curl/4.3.2 crul/1.1.0 rOpenSci(rcrossref/1.1.0.94)
-      X-USER-AGENT: r-curl/4.3.2 crul/1.1.0 rOpenSci(rcrossref/1.1.0.94)
+      User-Agent: r-curl/4.3.2 crul/1.1.0 rOpenSci(rcrossref/1.1.0.94) (mailto:<crossref_email>)
+      X-USER-AGENT: r-curl/4.3.2 crul/1.1.0 rOpenSci(rcrossref/1.1.0.94) (mailto:<crossref_email>)
   response:
     status:
       status_code: '200'
       message: OK
       explanation: Request fulfilled, document follows
     headers:
-      status: HTTP/1.1 200 OK
-      date: Fri, 13 Aug 2021 13:04:19 GMT
-      content-type: application/json
-      content-length: '4240'
-      access-control-allow-origin: '*'
       access-control-allow-headers: X-Requested-With
-      vary: Accept-Encoding
-      content-encoding: gzip
-      server: Jetty(9.4.40.v20210413)
-      x-ratelimit-limit: '50'
-      x-ratelimit-interval: 1s
-      x-api-pool: public
-      x-rate-limit-limit: '50'
-      x-rate-limit-interval: 1s
-      permissions-policy: interest-cohort=()
+      access-control-allow-origin: '*'
       connection: close
+      content-encoding: gzip
+      content-length: '4241'
+      content-type: application/json
+      date: Tue, 17 Aug 2021 17:54:22 GMT
+      permissions-policy: interest-cohort=()
+      server: Jetty(9.4.40.v20210413)
+      set-cookie:
+      - AWSALB=yONf5wphBmWmu397b7uxrEeyPqieYndg/kc3R0gj4ceMVeba0sPuQlWYkkBXKwehx/8zqjDQz9X4kiWQgPpEc7LxPZEl89oOS+Koa6nyecl5PdQ8GgsVUTOfuUaA;
+        Expires=Tue, 24 Aug 2021 17:54:22 GMT; Path=/
+      - AWSALBCORS=yONf5wphBmWmu397b7uxrEeyPqieYndg/kc3R0gj4ceMVeba0sPuQlWYkkBXKwehx/8zqjDQz9X4kiWQgPpEc7LxPZEl89oOS+Koa6nyecl5PdQ8GgsVUTOfuUaA;
+        Expires=Tue, 24 Aug 2021 17:54:22 GMT; Path=/; SameSite=None
+      status: HTTP/1.1 200 OK
+      vary: Accept-Encoding
+      x-api-pool: polite
+      x-rate-limit-interval: 1s
+      x-rate-limit-limit: '50'
+      x-ratelimit-interval: 1s
+      x-ratelimit-limit: '50'
     body:
       encoding: UTF-8
       file: no
-      string: '{"status":"ok","message-type":"work","message-version":"1.0.0","message":{"indexed":{"date-parts":[[2021,7,28]],"date-time":"2021-07-28T09:45:44Z","timestamp":1627465544311},"reference-count":36,"publisher":"Elsevier
+      string: '{"status":"ok","message-type":"work","message-version":"1.0.0","message":{"indexed":{"date-parts":[[2021,8,16]],"date-time":"2021-08-16T13:48:38Z","timestamp":1629121718331},"reference-count":36,"publisher":"Elsevier
         BV","issue":"4","license":[{"start":{"date-parts":[[2015,10,1]],"date-time":"2015-10-01T00:00:00Z","timestamp":1443657600000},"content-version":"tdm","delay-in-days":0,"URL":"https:\/\/www.elsevier.com\/tdm\/userlicense\/1.0\/"},{"start":{"date-parts":[[2015,6,8]],"date-time":"2015-06-08T00:00:00Z","timestamp":1433721600000},"content-version":"vor","delay-in-days":0,"URL":"http:\/\/creativecommons.org\/licenses\/by-nc-nd\/4.0\/"}],"funder":[{"DOI":"10.13039\/100005614","name":"Biogen","doi-asserted-by":"publisher"}],"content-domain":{"domain":["clinicalkey.jp","clinicalkey.com","clinicalkey.es","pedneur.com","clinicalkey.com.au","clinicalkey.fr","elsevier.com","sciencedirect.com"],"crossmark-restriction":true},"short-container-title":["Pediatric
         Neurology"],"published-print":{"date-parts":[[2015,10]]},"DOI":"10.1016\/j.pediatrneurol.2015.06.002","type":"journal-article","created":{"date-parts":[[2015,6,12]],"date-time":"2015-06-12T08:12:07Z","timestamp":1434096727000},"page":"293-300","update-policy":"http:\/\/dx.doi.org\/10.1016\/elsevier_cm_policy","source":"Crossref","is-referenced-by-count":43,"title":["Delay
         in Diagnosis of Spinal Muscular Atrophy: A Systematic Literature Review"],"prefix":"10.1016","volume":"53","author":[{"ORCID":"http:\/\/orcid.org\/0000-0001-9219-2449","authenticated-orcid":false,"given":"Chia-Wei","family":"Lin","sequence":"first","affiliation":[]},{"given":"Stephanie
@@ -671,7 +706,7 @@ http_interactions:
         DOI link to publisher maintained version"},{"value":"article","name":"content_type","label":"Content
         Type"},{"value":"Copyright \u00a9 2015 The Authors. Published by Elsevier
         Inc.","name":"copyright","label":"Copyright"}]}}'
-  recorded_at: 2021-08-13 13:04:20 GMT
+  recorded_at: 2021-08-17 17:54:24 GMT
   recorded_with: vcr/1.0.2, webmockr/0.8.0
 - request:
     method: get
@@ -682,34 +717,39 @@ http_interactions:
     headers:
       Accept-Encoding: gzip, deflate
       Accept: application/json, text/xml, application/xml, */*
-      User-Agent: r-curl/4.3.2 crul/1.1.0 rOpenSci(rcrossref/1.1.0.94)
-      X-USER-AGENT: r-curl/4.3.2 crul/1.1.0 rOpenSci(rcrossref/1.1.0.94)
+      User-Agent: r-curl/4.3.2 crul/1.1.0 rOpenSci(rcrossref/1.1.0.94) (mailto:<crossref_email>)
+      X-USER-AGENT: r-curl/4.3.2 crul/1.1.0 rOpenSci(rcrossref/1.1.0.94) (mailto:<crossref_email>)
   response:
     status:
       status_code: '200'
       message: OK
       explanation: Request fulfilled, document follows
     headers:
-      status: HTTP/1.1 200 OK
-      date: Fri, 13 Aug 2021 13:04:20 GMT
-      content-type: application/json
-      content-length: '2180'
-      access-control-allow-origin: '*'
       access-control-allow-headers: X-Requested-With
-      vary: Accept-Encoding
-      content-encoding: gzip
-      server: Jetty(9.4.40.v20210413)
-      x-ratelimit-limit: '50'
-      x-ratelimit-interval: 1s
-      x-api-pool: public
-      x-rate-limit-limit: '50'
-      x-rate-limit-interval: 1s
-      permissions-policy: interest-cohort=()
+      access-control-allow-origin: '*'
       connection: close
+      content-encoding: gzip
+      content-length: '2181'
+      content-type: application/json
+      date: Tue, 17 Aug 2021 17:54:23 GMT
+      permissions-policy: interest-cohort=()
+      server: Jetty(9.4.40.v20210413)
+      set-cookie:
+      - AWSALB=PDZUcr6vfEQ4ulgF007X7Sbg37eJB/rhb3HTtQRbdlPZD8HpaBlIF7t7mVBuC0GaCslELKyabdlC1K9NM8z4goboa9HQi8yF479fncfuDhkkfo56GE9DXnz7Kbj8;
+        Expires=Tue, 24 Aug 2021 17:54:23 GMT; Path=/
+      - AWSALBCORS=PDZUcr6vfEQ4ulgF007X7Sbg37eJB/rhb3HTtQRbdlPZD8HpaBlIF7t7mVBuC0GaCslELKyabdlC1K9NM8z4goboa9HQi8yF479fncfuDhkkfo56GE9DXnz7Kbj8;
+        Expires=Tue, 24 Aug 2021 17:54:23 GMT; Path=/; SameSite=None
+      status: HTTP/1.1 200 OK
+      vary: Accept-Encoding
+      x-api-pool: polite
+      x-rate-limit-interval: 1s
+      x-rate-limit-limit: '50'
+      x-ratelimit-interval: 1s
+      x-ratelimit-limit: '50'
     body:
       encoding: UTF-8
       file: no
-      string: '{"status":"ok","message-type":"work","message-version":"1.0.0","message":{"indexed":{"date-parts":[[2021,8,4]],"date-time":"2021-08-04T10:28:14Z","timestamp":1628072894401},"reference-count":13,"publisher":"Elsevier
+      string: '{"status":"ok","message-type":"work","message-version":"1.0.0","message":{"indexed":{"date-parts":[[2021,8,4]],"date-time":"2021-08-04T10:28:15Z","timestamp":1628072895558},"reference-count":13,"publisher":"Elsevier
         BV","license":[{"start":{"date-parts":[[2015,9,1]],"date-time":"2015-09-01T00:00:00Z","timestamp":1441065600000},"content-version":"tdm","delay-in-days":0,"URL":"https:\/\/www.elsevier.com\/tdm\/userlicense\/1.0\/"},{"start":{"date-parts":[[2019,9,20]],"date-time":"2019-09-20T00:00:00Z","timestamp":1568937600000},"content-version":"vor","delay-in-days":1480,"URL":"http:\/\/www.elsevier.com\/open-access\/userlicense\/1.0\/"}],"funder":[{"DOI":"10.13039\/501100003407","name":"MIUR","doi-asserted-by":"publisher","award":["H41J12000190001"]},{"DOI":"10.13039\/501100001665","name":"French
         National Research Agency","doi-asserted-by":"crossref","award":["ANR-09-BLAN-0164"]}],"content-domain":{"domain":["elsevier.com","sciencedirect.com"],"crossmark-restriction":true},"short-container-title":["Theoretical
         Computer Science"],"published-print":{"date-parts":[[2015,9]]},"DOI":"10.1016\/j.tcs.2015.06.001","type":"journal-article","created":{"date-parts":[[2015,6,12]],"date-time":"2015-06-12T08:27:19Z","timestamp":1434097639000},"page":"138-149","update-policy":"http:\/\/dx.doi.org\/10.1016\/elsevier_cm_policy","source":"Crossref","is-referenced-by-count":9,"title":["Reaction
@@ -744,7 +784,7 @@ http_interactions:
         Computer Science","name":"journaltitle","label":"Journal Title"},{"value":"https:\/\/doi.org\/10.1016\/j.tcs.2015.06.001","name":"articlelink","label":"CrossRef
         DOI link to publisher maintained version"},{"value":"article","name":"content_type","label":"Content
         Type"},{"value":"Copyright \u00a9 2015 Elsevier B.V. All rights reserved.","name":"copyright","label":"Copyright"}]}}'
-  recorded_at: 2021-08-13 13:04:20 GMT
+  recorded_at: 2021-08-17 17:54:24 GMT
   recorded_with: vcr/1.0.2, webmockr/0.8.0
 - request:
     method: get
@@ -755,34 +795,39 @@ http_interactions:
     headers:
       Accept-Encoding: gzip, deflate
       Accept: application/json, text/xml, application/xml, */*
-      User-Agent: r-curl/4.3.2 crul/1.1.0 rOpenSci(rcrossref/1.1.0.94)
-      X-USER-AGENT: r-curl/4.3.2 crul/1.1.0 rOpenSci(rcrossref/1.1.0.94)
+      User-Agent: r-curl/4.3.2 crul/1.1.0 rOpenSci(rcrossref/1.1.0.94) (mailto:<crossref_email>)
+      X-USER-AGENT: r-curl/4.3.2 crul/1.1.0 rOpenSci(rcrossref/1.1.0.94) (mailto:<crossref_email>)
   response:
     status:
       status_code: '200'
       message: OK
       explanation: Request fulfilled, document follows
     headers:
-      status: HTTP/1.1 200 OK
-      date: Fri, 13 Aug 2021 13:04:20 GMT
-      content-type: application/json
-      content-length: '2997'
-      access-control-allow-origin: '*'
       access-control-allow-headers: X-Requested-With
-      vary: Accept-Encoding
-      content-encoding: gzip
-      server: Jetty(9.4.40.v20210413)
-      x-ratelimit-limit: '50'
-      x-ratelimit-interval: 1s
-      x-api-pool: public
-      x-rate-limit-limit: '50'
-      x-rate-limit-interval: 1s
-      permissions-policy: interest-cohort=()
+      access-control-allow-origin: '*'
       connection: close
+      content-encoding: gzip
+      content-length: '2997'
+      content-type: application/json
+      date: Tue, 17 Aug 2021 17:54:24 GMT
+      permissions-policy: interest-cohort=()
+      server: Jetty(9.4.40.v20210413)
+      set-cookie:
+      - AWSALB=oZUH+lBvgnLR+Ba+qn8An2uvkP+Enm4Ffm/krIApj2XU6yiOMF9GovPoQowXXoIyDLEyP27ZHjAu1IHkKZbZGxkfLIlJ7jZmTu52zW8udYiGJycDk2z437q5vWYO;
+        Expires=Tue, 24 Aug 2021 17:54:24 GMT; Path=/
+      - AWSALBCORS=oZUH+lBvgnLR+Ba+qn8An2uvkP+Enm4Ffm/krIApj2XU6yiOMF9GovPoQowXXoIyDLEyP27ZHjAu1IHkKZbZGxkfLIlJ7jZmTu52zW8udYiGJycDk2z437q5vWYO;
+        Expires=Tue, 24 Aug 2021 17:54:24 GMT; Path=/; SameSite=None
+      status: HTTP/1.1 200 OK
+      vary: Accept-Encoding
+      x-api-pool: polite
+      x-rate-limit-interval: 1s
+      x-rate-limit-limit: '50'
+      x-ratelimit-interval: 1s
+      x-ratelimit-limit: '50'
     body:
       encoding: UTF-8
       file: no
-      string: '{"status":"ok","message-type":"work","message-version":"1.0.0","message":{"indexed":{"date-parts":[[2021,5,12]],"date-time":"2021-05-12T07:04:33Z","timestamp":1620803073557},"reference-count":25,"publisher":"Elsevier
+      string: '{"status":"ok","message-type":"work","message-version":"1.0.0","message":{"indexed":{"date-parts":[[2021,5,12]],"date-time":"2021-05-12T07:04:33Z","timestamp":1620803073734},"reference-count":25,"publisher":"Elsevier
         BV","license":[{"start":{"date-parts":[[2016,1,1]],"date-time":"2016-01-01T00:00:00Z","timestamp":1451606400000},"content-version":"tdm","delay-in-days":0,"URL":"https:\/\/www.elsevier.com\/tdm\/userlicense\/1.0\/"},{"start":{"date-parts":[[2020,1,1]],"date-time":"2020-01-01T00:00:00Z","timestamp":1577836800000},"content-version":"vor","delay-in-days":1461,"URL":"http:\/\/www.elsevier.com\/open-access\/userlicense\/1.0\/"}],"funder":[{"DOI":"10.13039\/501100001809","name":"National
         Natural Science Foundation of China","doi-asserted-by":"publisher","award":["61502048","61370194"]},{"DOI":"10.13039\/501100001809","name":"NSFC","doi-asserted-by":"publisher","award":["61411146001"]}],"content-domain":{"domain":["elsevier.com","sciencedirect.com"],"crossmark-restriction":true},"short-container-title":["Finite
         Fields and Their Applications"],"published-print":{"date-parts":[[2016,1]]},"DOI":"10.1016\/j.ffa.2015.10.008","type":"journal-article","created":{"date-parts":[[2015,11,18]],"date-time":"2015-11-18T02:15:39Z","timestamp":1447812939000},"page":"328-343","update-policy":"http:\/\/dx.doi.org\/10.1016\/elsevier_cm_policy","source":"Crossref","is-referenced-by-count":8,"title":["Construction
@@ -843,5 +888,5 @@ http_interactions:
         Fields and Their Applications","name":"journaltitle","label":"Journal Title"},{"value":"https:\/\/doi.org\/10.1016\/j.ffa.2015.10.008","name":"articlelink","label":"CrossRef
         DOI link to publisher maintained version"},{"value":"article","name":"content_type","label":"Content
         Type"},{"value":"Copyright \u00a9 2015 Elsevier Inc. All rights reserved.","name":"copyright","label":"Copyright"}]}}'
-  recorded_at: 2021-08-13 13:04:20 GMT
+  recorded_at: 2021-08-17 17:54:24 GMT
   recorded_with: vcr/1.0.2, webmockr/0.8.0

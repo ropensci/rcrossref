@@ -8,33 +8,38 @@ http_interactions:
     headers:
       Accept-Encoding: gzip, deflate
       Accept: application/json, text/xml, application/xml, */*
-      User-Agent: r-curl/4.3.2 crul/1.1.0 rOpenSci(rcrossref/1.1.0.94)
-      X-USER-AGENT: r-curl/4.3.2 crul/1.1.0 rOpenSci(rcrossref/1.1.0.94)
+      User-Agent: r-curl/4.3.2 crul/1.1.0 rOpenSci(rcrossref/1.1.0.94) (mailto:<crossref_email>)
+      X-USER-AGENT: r-curl/4.3.2 crul/1.1.0 rOpenSci(rcrossref/1.1.0.94) (mailto:<crossref_email>)
   response:
     status:
       status_code: '200'
       message: OK
       explanation: Request fulfilled, document follows
     headers:
-      status: HTTP/1.1 200 OK
-      date: Fri, 13 Aug 2021 13:47:09 GMT
-      content-type: application/json;charset=utf-8
-      content-length: '199'
-      vary: Accept
-      access-control-allow-origin: '*'
       access-control-allow-headers: X-Requested-With
-      server: Jetty(9.4.40.v20210413)
-      x-ratelimit-limit: '50'
-      x-ratelimit-interval: 1s
-      x-api-pool: public
-      x-rate-limit-limit: '50'
-      x-rate-limit-interval: 1s
-      permissions-policy: interest-cohort=()
+      access-control-allow-origin: '*'
       connection: close
+      content-length: '199'
+      content-type: application/json;charset=utf-8
+      date: Tue, 17 Aug 2021 17:25:10 GMT
+      permissions-policy: interest-cohort=()
+      server: Jetty(9.4.40.v20210413)
+      set-cookie:
+      - AWSALB=p2HOz4Kub26MOnXGdCAOrDICDONdzAUysgWnubzFmpWqtCprcGpBU4S+iLpx/IAsj68+g90DWlzUH9ODZmiGOwe/2lYMUTwh+UhAN2syfY9CnIQYvvHbL4PTGUos;
+        Expires=Tue, 24 Aug 2021 17:25:10 GMT; Path=/
+      - AWSALBCORS=p2HOz4Kub26MOnXGdCAOrDICDONdzAUysgWnubzFmpWqtCprcGpBU4S+iLpx/IAsj68+g90DWlzUH9ODZmiGOwe/2lYMUTwh+UhAN2syfY9CnIQYvvHbL4PTGUos;
+        Expires=Tue, 24 Aug 2021 17:25:10 GMT; Path=/; SameSite=None
+      status: HTTP/1.1 200 OK
+      vary: Accept
+      x-api-pool: polite
+      x-rate-limit-interval: 1s
+      x-rate-limit-limit: '50'
+      x-ratelimit-interval: 1s
+      x-ratelimit-limit: '50'
     body:
       encoding: UTF-8
       file: no
       string: '{"status":"ok","message-type":"prefix","message-version":"1.0.0","message":{"member":"http:\/\/id.crossref.org\/member\/78","name":"Elsevier
         BV","prefix":"http:\/\/id.crossref.org\/prefix\/10.1016"}}'
-  recorded_at: 2021-08-13 13:47:09 GMT
+  recorded_at: 2021-08-17 17:25:10 GMT
   recorded_with: vcr/1.0.2, webmockr/0.8.0

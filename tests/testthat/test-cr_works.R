@@ -175,22 +175,26 @@ test_that("cr_works - select works", {
 
 test_that("cr_works - email works", {
   vcr::use_cassette("cr_works_email_works", {
-    Sys.setenv("crossref_email" = "name@example.com")
-    a <- cr_works(query="NSF")
-    expect_is(a, "list")
+     withr::with_envvar(
+      new = c("crossref_email" = "name@example.com"),
+      expect_is(cr_works(query = "NSF"), "list")
+      )
   })
 })
 
 test_that("cr_works - email is validated", {
-    Sys.setenv("crossref_email" = "name@example")
-    expect_error(cr_works(query="NSF"))
+    withr::with_envvar(
+      new = c("crossref_email" = "name@example"),
+      expect_error(cr_works(query = "NSF"))
+    )
 })
 
 test_that("cr_works - email NULL works", {
   vcr::use_cassette("cr_works_email_null_works", {
-    Sys.setenv("crossref_email" = "")
-    a <- cr_works(query="NSF")
-    expect_is(a, "list")
+     withr::with_envvar(
+      new = c("crossref_email" = ""),
+      expect_is(cr_works(query = "NSF"), "list")
+     )
   })
 })
 

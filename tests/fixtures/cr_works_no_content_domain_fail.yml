@@ -8,35 +8,40 @@ http_interactions:
     headers:
       Accept-Encoding: gzip, deflate
       Accept: application/json, text/xml, application/xml, */*
-      User-Agent: r-curl/4.3.2 crul/1.1.0 rOpenSci(rcrossref/1.1.0.94)
-      X-USER-AGENT: r-curl/4.3.2 crul/1.1.0 rOpenSci(rcrossref/1.1.0.94)
+      User-Agent: r-curl/4.3.2 crul/1.1.0 rOpenSci(rcrossref/1.1.0.94) (mailto:<crossref_email>)
+      X-USER-AGENT: r-curl/4.3.2 crul/1.1.0 rOpenSci(rcrossref/1.1.0.94) (mailto:<crossref_email>)
   response:
     status:
       status_code: '200'
       message: OK
       explanation: Request fulfilled, document follows
     headers:
-      status: HTTP/1.1 200 OK
-      date: Fri, 13 Aug 2021 13:04:27 GMT
-      content-type: application/json
-      content-length: '631'
-      access-control-allow-origin: '*'
       access-control-allow-headers: X-Requested-With
-      vary: Accept-Encoding
-      content-encoding: gzip
-      server: Jetty(9.4.40.v20210413)
-      x-ratelimit-limit: '50'
-      x-ratelimit-interval: 1s
-      x-api-pool: public
-      x-rate-limit-limit: '50'
-      x-rate-limit-interval: 1s
-      permissions-policy: interest-cohort=()
+      access-control-allow-origin: '*'
       connection: close
+      content-encoding: gzip
+      content-length: '630'
+      content-type: application/json
+      date: Tue, 17 Aug 2021 17:54:29 GMT
+      permissions-policy: interest-cohort=()
+      server: Jetty(9.4.40.v20210413)
+      set-cookie:
+      - AWSALB=vQMnhJrrj5/8UVGcQFkJxg/ZFdu2bfabOeHo9ruLxuGzjCeyfwg9t8TKI88Qy687OTllQRcICdtdRZz5GnKTwDNYWffFLjFOK7Pq87sjHUX/Kyv5SI3n4EiYV9Ae;
+        Expires=Tue, 24 Aug 2021 17:54:29 GMT; Path=/
+      - AWSALBCORS=vQMnhJrrj5/8UVGcQFkJxg/ZFdu2bfabOeHo9ruLxuGzjCeyfwg9t8TKI88Qy687OTllQRcICdtdRZz5GnKTwDNYWffFLjFOK7Pq87sjHUX/Kyv5SI3n4EiYV9Ae;
+        Expires=Tue, 24 Aug 2021 17:54:29 GMT; Path=/; SameSite=None
+      status: HTTP/1.1 200 OK
+      vary: Accept-Encoding
+      x-api-pool: polite
+      x-rate-limit-interval: 1s
+      x-rate-limit-limit: '50'
+      x-ratelimit-interval: 1s
+      x-ratelimit-limit: '50'
     body:
       encoding: UTF-8
       file: no
-      string: '{"status":"ok","message-type":"work","message-version":"1.0.0","message":{"indexed":{"date-parts":[[2021,5,9]],"date-time":"2021-05-09T04:51:38Z","timestamp":1620535898408},"reference-count":0,"publisher":"PeerJ","content-domain":{"domain":[]},"short-container-title":[],"published-print":{"date-parts":[[2017,9,20]]},"DOI":"10.7287\/peerj.3819v0.1\/reviews\/2","type":"peer-review","created":{"date-parts":[[2017,12,23]],"date-time":"2017-12-23T05:32:15Z","timestamp":1514007135000},"source":"Crossref","is-referenced-by-count":0,"title":["Peer
+      string: '{"status":"ok","message-type":"work","message-version":"1.0.0","message":{"indexed":{"date-parts":[[2021,5,9]],"date-time":"2021-05-09T04:40:30Z","timestamp":1620535230479},"reference-count":0,"publisher":"PeerJ","content-domain":{"domain":[]},"short-container-title":[],"published-print":{"date-parts":[[2017,9,20]]},"DOI":"10.7287\/peerj.3819v0.1\/reviews\/2","type":"peer-review","created":{"date-parts":[[2017,12,23]],"date-time":"2017-12-23T05:32:15Z","timestamp":1514007135000},"source":"Crossref","is-referenced-by-count":0,"title":["Peer
         Review #2 of \"Human agency beliefs influence behaviour during virtual social
         interactions (v0.1)\""],"prefix":"10.7287","author":[{"given":"A","family":"Georgescu","sequence":"additional","affiliation":[]}],"member":"4443","container-title":[],"review":{"revision-round":"2","stage":"pre-publication"},"original-title":[],"deposited":{"date-parts":[[2017,12,23]],"date-time":"2017-12-23T05:32:15Z","timestamp":1514007135000},"score":1,"subtitle":[],"short-title":[],"issued":{"date-parts":[[2017,9,20]]},"references-count":0,"URL":"http:\/\/dx.doi.org\/10.7287\/peerj.3819v0.1\/reviews\/2","relation":{"is-review-of":[{"id-type":"doi","id":"10.7717\/peerj.3819","asserted-by":"subject"}]},"published":{"date-parts":[[2017,9,20]]}}}'
-  recorded_at: 2021-08-13 13:04:27 GMT
+  recorded_at: 2021-08-17 17:54:29 GMT
   recorded_with: vcr/1.0.2, webmockr/0.8.0

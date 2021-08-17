@@ -42,7 +42,8 @@ Suggests:
     knitr,
     rmarkdown,
     vcr (>= 0.2.6),
-    bibtex
+    bibtex,
+    withr
 RoxygenNote: 7.1.1
 X-schema.org-applicationCategory: Literature
 X-schema.org-keywords: text-ming, literature, pdf, xml, publications, citations, full-text, TDM, Crossref

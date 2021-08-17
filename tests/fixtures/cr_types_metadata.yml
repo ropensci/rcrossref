@@ -8,30 +8,35 @@ http_interactions:
     headers:
       Accept-Encoding: gzip, deflate
       Accept: application/json, text/xml, application/xml, */*
-      User-Agent: r-curl/4.3.2 crul/1.1.0 rOpenSci(rcrossref/1.1.0.94)
-      X-USER-AGENT: r-curl/4.3.2 crul/1.1.0 rOpenSci(rcrossref/1.1.0.94)
+      User-Agent: r-curl/4.3.2 crul/1.1.0 rOpenSci(rcrossref/1.1.0.94) (mailto:<crossref_email>)
+      X-USER-AGENT: r-curl/4.3.2 crul/1.1.0 rOpenSci(rcrossref/1.1.0.94) (mailto:<crossref_email>)
   response:
     status:
       status_code: '200'
       message: OK
       explanation: Request fulfilled, document follows
     headers:
-      status: HTTP/1.1 200 OK
-      date: Fri, 13 Aug 2021 13:01:39 GMT
-      content-type: application/json;charset=utf-8
-      content-length: '432'
-      vary: Accept, Accept-Encoding
-      access-control-allow-origin: '*'
       access-control-allow-headers: X-Requested-With
-      content-encoding: gzip
-      server: Jetty(9.4.40.v20210413)
-      x-ratelimit-limit: '50'
-      x-ratelimit-interval: 1s
-      x-api-pool: public
-      x-rate-limit-limit: '50'
-      x-rate-limit-interval: 1s
-      permissions-policy: interest-cohort=()
+      access-control-allow-origin: '*'
       connection: close
+      content-encoding: gzip
+      content-length: '432'
+      content-type: application/json;charset=utf-8
+      date: Tue, 17 Aug 2021 17:26:22 GMT
+      permissions-policy: interest-cohort=()
+      server: Jetty(9.4.40.v20210413)
+      set-cookie:
+      - AWSALB=OF/eJQYRPmFAOrybLMdNKc0ySBjlRzPtIP8JdmkrOmL1qsqws5hYTz12aZKpo0BMUnMZcmczy90AmgNk168gOeN68VuRHfd2Llwpwjl5T3gBcTSrV2KCf5helzt8;
+        Expires=Tue, 24 Aug 2021 17:26:22 GMT; Path=/
+      - AWSALBCORS=OF/eJQYRPmFAOrybLMdNKc0ySBjlRzPtIP8JdmkrOmL1qsqws5hYTz12aZKpo0BMUnMZcmczy90AmgNk168gOeN68VuRHfd2Llwpwjl5T3gBcTSrV2KCf5helzt8;
+        Expires=Tue, 24 Aug 2021 17:26:22 GMT; Path=/; SameSite=None
+      status: HTTP/1.1 200 OK
+      vary: Accept, Accept-Encoding
+      x-api-pool: polite
+      x-rate-limit-interval: 1s
+      x-rate-limit-limit: '50'
+      x-ratelimit-interval: 1s
+      x-ratelimit-limit: '50'
     body:
       encoding: UTF-8
       file: no
@@ -47,7 +52,7 @@ http_interactions:
         Issue"},{"id":"dissertation","label":"Dissertation"},{"id":"dataset","label":"Dataset"},{"id":"book-series","label":"Book
         Series"},{"id":"edited-book","label":"Edited Book"},{"id":"standard-series","label":"Standard
         Series"}]}}'
-  recorded_at: 2021-08-13 13:01:40 GMT
+  recorded_at: 2021-08-17 17:26:23 GMT
   recorded_with: vcr/1.0.2, webmockr/0.8.0
 - request:
     method: get
@@ -58,42 +63,48 @@ http_interactions:
     headers:
       Accept-Encoding: gzip, deflate
       Accept: application/json, text/xml, application/xml, */*
-      User-Agent: r-curl/4.3.2 crul/1.1.0 rOpenSci(rcrossref/1.1.0.94)
-      X-USER-AGENT: r-curl/4.3.2 crul/1.1.0 rOpenSci(rcrossref/1.1.0.94)
+      User-Agent: r-curl/4.3.2 crul/1.1.0 rOpenSci(rcrossref/1.1.0.94) (mailto:<crossref_email>)
+      X-USER-AGENT: r-curl/4.3.2 crul/1.1.0 rOpenSci(rcrossref/1.1.0.94) (mailto:<crossref_email>)
   response:
     status:
       status_code: '200'
       message: OK
       explanation: Request fulfilled, document follows
     headers:
-      status: HTTP/1.1 200 OK
-      date: Fri, 13 Aug 2021 13:01:40 GMT
-      content-type: application/json
-      content-length: '895'
-      access-control-allow-origin: '*'
       access-control-allow-headers: X-Requested-With
-      vary: Accept-Encoding
-      content-encoding: gzip
-      server: Jetty(9.4.40.v20210413)
-      x-ratelimit-limit: '50'
-      x-ratelimit-interval: 1s
-      x-api-pool: public
-      x-rate-limit-limit: '50'
-      x-rate-limit-interval: 1s
-      permissions-policy: interest-cohort=()
+      access-control-allow-origin: '*'
       connection: close
+      content-encoding: gzip
+      content-length: '1029'
+      content-type: application/json
+      date: Tue, 17 Aug 2021 17:26:22 GMT
+      permissions-policy: interest-cohort=()
+      server: Jetty(9.4.40.v20210413)
+      set-cookie:
+      - AWSALB=bcfxoNHX53Bbxts8UW327fISmFAbkvUbJw72eYgRlCsmJ4pKwgDabzSIGc2bdCP3Ft6JTnVh650Ksgs7Zy5wIoZYLrbg276chzpkGtpYo8iV8uGQYxSpq4aml5AZ;
+        Expires=Tue, 24 Aug 2021 17:26:22 GMT; Path=/
+      - AWSALBCORS=bcfxoNHX53Bbxts8UW327fISmFAbkvUbJw72eYgRlCsmJ4pKwgDabzSIGc2bdCP3Ft6JTnVh650Ksgs7Zy5wIoZYLrbg276chzpkGtpYo8iV8uGQYxSpq4aml5AZ;
+        Expires=Tue, 24 Aug 2021 17:26:22 GMT; Path=/; SameSite=None
+      status: HTTP/1.1 200 OK
+      vary: Accept-Encoding
+      x-api-pool: polite
+      x-rate-limit-interval: 1s
+      x-rate-limit-limit: '50'
+      x-ratelimit-interval: 1s
+      x-ratelimit-limit: '50'
     body:
       encoding: UTF-8
       file: no
-      string: '{"status":"ok","message-type":"work-list","message-version":"1.0.0","message":{"facets":{},"total-results":516285,"items":[{"indexed":{"date-parts":[[2021,5,6]],"date-time":"2021-05-06T20:38:10Z","timestamp":1620333490062},"publisher-location":"Chicoutimi","reference-count":0,"publisher":"J.-M.
+      string: '{"status":"ok","message-type":"work-list","message-version":"1.0.0","message":{"facets":{},"total-results":517544,"items":[{"indexed":{"date-parts":[[2021,5,6]],"date-time":"2021-05-06T20:44:21Z","timestamp":1620333861525},"publisher-location":"Chicoutimi","reference-count":0,"publisher":"J.-M.
         Tremblay","isbn-type":[{"value":"1554418453","type":"electronic"}],"content-domain":{"domain":[],"crossmark-restriction":false},"DOI":"10.1522\/cla.rim.epi","type":"monograph","created":{"date-parts":[[2006,5,1]],"date-time":"2006-05-01T17:22:42Z","timestamp":1146504162000},"source":"Crossref","is-referenced-by-count":0,"title":["E\u0301piste\u0301mologie
         et enseignement des sciences"],"prefix":"10.1522","author":[{"given":"Martin","family":"Riopel","sequence":"first","affiliation":[]}],"member":"208","published-online":{"date-parts":[[2005]]},"container-title":["Classiques
-        des sciences sociales."],"deposited":{"date-parts":[[2009,2,2]],"date-time":"2009-02-02T21:19:43Z","timestamp":1233609583000},"score":0.0,"issued":{"date-parts":[[2005]]},"ISBN":["1554418453"],"references-count":0,"URL":"http:\/\/dx.doi.org\/10.1522\/cla.rim.epi","published":{"date-parts":[[2005]]}},{"indexed":{"date-parts":[[2021,5,6]],"date-time":"2021-05-06T20:35:53Z","timestamp":1620333353999},"publisher-location":"Chicoutimi","reference-count":0,"publisher":"J.-M.
-        Tremblay","isbn-type":[{"value":"1554418836","type":"electronic"}],"content-domain":{"domain":[],"crossmark-restriction":false},"DOI":"10.1522\/cla.der.con","type":"monograph","created":{"date-parts":[[2006,5,1]],"date-time":"2006-05-01T13:22:42Z","timestamp":1146489762000},"source":"Crossref","is-referenced-by-count":0,"title":["conjoncture
-        politique que\u0301be\u0301coise, 1960-1970"],"prefix":"10.1522","author":[{"given":"Roch","family":"Denis","sequence":"first","affiliation":[]},{"given":"Luc","family":"Racine","sequence":"additional","affiliation":[]}],"member":"208","published-online":{"date-parts":[[2005]]},"container-title":["Classiques
-        des sciences sociales."],"deposited":{"date-parts":[[2009,2,2]],"date-time":"2009-02-02T16:19:43Z","timestamp":1233591583000},"score":0.0,"issued":{"date-parts":[[2005]]},"ISBN":["1554418836"],"references-count":0,"URL":"http:\/\/dx.doi.org\/10.1522\/cla.der.con","published":{"date-parts":[[2005]]}},{"indexed":{"date-parts":[[2021,5,6]],"date-time":"2021-05-06T20:35:57Z","timestamp":1620333357897},"publisher-location":"Chicoutimi","reference-count":0,"publisher":"J.-M.
-        Tremblay","isbn-type":[{"value":"1554419026","type":"electronic"}],"content-domain":{"domain":[],"crossmark-restriction":false},"DOI":"10.1522\/cla.dev.ide","type":"monograph","created":{"date-parts":[[2006,5,1]],"date-time":"2006-05-01T17:22:42Z","timestamp":1146504162000},"source":"Crossref","is-referenced-by-count":0,"title":["identification
-        des ide\u0301es"],"prefix":"10.1522","author":[{"given":"Vincent.","family":"Descombes","sequence":"first","affiliation":[]}],"member":"208","published-online":{"date-parts":[[2006]]},"container-title":["Classiques
-        des sciences sociales."],"deposited":{"date-parts":[[2009,2,2]],"date-time":"2009-02-02T21:19:43Z","timestamp":1233609583000},"score":0.0,"issued":{"date-parts":[[2006]]},"ISBN":["1554419026"],"references-count":0,"URL":"http:\/\/dx.doi.org\/10.1522\/cla.dev.ide","published":{"date-parts":[[2006]]}}],"items-per-page":3,"query":{"start-index":0,"search-terms":null}}}'
-  recorded_at: 2021-08-13 13:01:40 GMT
+        des sciences sociales."],"deposited":{"date-parts":[[2009,2,2]],"date-time":"2009-02-02T21:19:43Z","timestamp":1233609583000},"score":0.0,"issued":{"date-parts":[[2005]]},"ISBN":["1554418453"],"references-count":0,"URL":"http:\/\/dx.doi.org\/10.1522\/cla.rim.epi","published":{"date-parts":[[2005]]}},{"indexed":{"date-parts":[[2021,5,6]],"date-time":"2021-05-06T20:32:47Z","timestamp":1620333167991},"publisher-location":"Chicoutimi","reference-count":0,"publisher":"Universite\u0301
+        du Que\u0301bec a\u0300 Chicoutimi","isbn-type":[{"value":"1412312922","type":"electronic"}],"content-domain":{"domain":[],"crossmark-restriction":false},"DOI":"10.1522\/24587738","type":"monograph","created":{"date-parts":[[2006,4,26]],"date-time":"2006-04-26T22:12:14Z","timestamp":1146089534000},"source":"Crossref","is-referenced-by-count":0,"title":["Poder,
+        saber, verdane na produc\u0327a\u0303o de \"situac\u0327a\u0303o de fracasso
+        :"],"prefix":"10.1522","author":[{"given":"Luiz Carlos","family":"Jandiroba","sequence":"first","affiliation":[]}],"member":"208","published-online":{"date-parts":[[2004]]},"deposited":{"date-parts":[[2011,11,7]],"date-time":"2011-11-07T15:42:49Z","timestamp":1320680569000},"score":0.0,"subtitle":["um
+        estudo do cotidiano escolar no ensino noturno"],"issued":{"date-parts":[[2004]]},"ISBN":["1412312922"],"references-count":0,"URL":"http:\/\/dx.doi.org\/10.1522\/24587738","published":{"date-parts":[[2004]]}},{"indexed":{"date-parts":[[2021,5,6]],"date-time":"2021-05-06T20:41:26Z","timestamp":1620333686185},"publisher-location":"Chicoutimi","reference-count":0,"publisher":"J.-M.
+        Tremblay","isbn-type":[{"value":"1554418763","type":"electronic"}],"content-domain":{"domain":[],"crossmark-restriction":false},"DOI":"10.1522\/cla.maa.plu","type":"monograph","created":{"date-parts":[[2006,5,1]],"date-time":"2006-05-01T17:22:42Z","timestamp":1146504162000},"source":"Crossref","is-referenced-by-count":0,"title":["Pluralisme
+        paradigmatique en sociologie de l''e\u0301ducation"],"prefix":"10.1522","author":[{"given":"Alain.","family":"Massot","sequence":"first","affiliation":[]}],"member":"208","published-online":{"date-parts":[[2005]]},"container-title":["Classiques
+        des sciences sociales."],"deposited":{"date-parts":[[2009,2,2]],"date-time":"2009-02-02T21:19:43Z","timestamp":1233609583000},"score":0.0,"issued":{"date-parts":[[2005]]},"ISBN":["1554418763"],"references-count":0,"URL":"http:\/\/dx.doi.org\/10.1522\/cla.maa.plu","published":{"date-parts":[[2005]]}}],"items-per-page":3,"query":{"start-index":0,"search-terms":null}}}'
+  recorded_at: 2021-08-17 17:26:23 GMT
   recorded_with: vcr/1.0.2, webmockr/0.8.0

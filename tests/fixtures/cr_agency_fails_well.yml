@@ -8,47 +8,70 @@ http_interactions:
     headers:
       Accept-Encoding: gzip, deflate
       Accept: application/json, text/xml, application/xml, */*
-      User-Agent: r-curl/4.3.2 crul/1.1.0 rOpenSci(rcrossref/1.1.0.94)
-      X-USER-AGENT: r-curl/4.3.2 crul/1.1.0 rOpenSci(rcrossref/1.1.0.94)
+      User-Agent: r-curl/4.3.2 crul/1.1.0 rOpenSci(rcrossref/1.1.0.94) (mailto:<crossref_email>)
+      X-USER-AGENT: r-curl/4.3.2 crul/1.1.0 rOpenSci(rcrossref/1.1.0.94) (mailto:<crossref_email>)
   response:
     status:
       status_code: '200'
       message: OK
       explanation: Request fulfilled, document follows
     headers:
-      status: HTTP/1.1 200 OK
-      date: Fri, 13 Aug 2021 12:53:12 GMT
-      content-type: application/json
-      content-length: '1763'
-      access-control-allow-origin: '*'
       access-control-allow-headers: X-Requested-With
-      vary: Accept-Encoding
-      content-encoding: gzip
-      server: Jetty(9.4.40.v20210413)
-      x-ratelimit-limit: '50'
-      x-ratelimit-interval: 1s
-      x-api-pool: public
-      x-rate-limit-limit: '50'
-      x-rate-limit-interval: 1s
-      permissions-policy: interest-cohort=()
+      access-control-allow-origin: '*'
       connection: close
+      content-encoding: gzip
+      content-length: '2263'
+      content-type: application/json
+      date: Tue, 17 Aug 2021 17:22:18 GMT
+      permissions-policy: interest-cohort=()
+      server: Jetty(9.4.40.v20210413)
+      set-cookie:
+      - AWSALB=QLZ83/BYQRs7osiWfSa2sJFST2+A+mlqm1MbH1bkWYogunxYZcOQzjBN7vTIoHUXquqBZHkEin0VPTIxFMM8ODqBpdYxYKtRJPCR00lbso90/ilaDZ0JuYDsi3JF;
+        Expires=Tue, 24 Aug 2021 17:22:13 GMT; Path=/
+      - AWSALBCORS=QLZ83/BYQRs7osiWfSa2sJFST2+A+mlqm1MbH1bkWYogunxYZcOQzjBN7vTIoHUXquqBZHkEin0VPTIxFMM8ODqBpdYxYKtRJPCR00lbso90/ilaDZ0JuYDsi3JF;
+        Expires=Tue, 24 Aug 2021 17:22:13 GMT; Path=/; SameSite=None
+      status: HTTP/1.1 200 OK
+      vary: Accept-Encoding
+      x-api-pool: polite
+      x-rate-limit-interval: 1s
+      x-rate-limit-limit: '50'
+      x-ratelimit-interval: 1s
+      x-ratelimit-limit: '50'
     body:
       encoding: UTF-8
       file: no
-      string: '{"status":"ok","message-type":"work-list","message-version":"1.0.0","message":{"facets":{},"total-results":126511841,"items":[{"indexed":{"date-parts":[[2021,5,11]],"date-time":"2021-05-11T22:41:51Z","timestamp":1620772911371},"reference-count":4,"publisher":"The
-        Chemical Society of Japan","issue":"5","content-domain":{"domain":[],"crossmark-restriction":false},"short-container-title":["BCSJ"],"published-print":{"date-parts":[[1979,5]]},"DOI":"10.1246\/bcsj.52.1545","type":"journal-article","created":{"date-parts":[[2006,7,19]],"date-time":"2006-07-19T23:14:46Z","timestamp":1153350886000},"page":"1545-1546","source":"Crossref","is-referenced-by-count":1,"title":["The
-        Glow-discharge Reactions of Amines"],"prefix":"10.1246","volume":"52","author":[{"given":"Hideki","family":"Asada","sequence":"first","affiliation":[]},{"given":"Masakatsu","family":"Nomura","sequence":"additional","affiliation":[]},{"given":"Sh\\={o}ichi","family":"Kikkawa","sequence":"additional","affiliation":[]}],"member":"8597","reference":[{"key":"r1","doi-asserted-by":"publisher","DOI":"10.1246\/bcsj.50.2700"},{"key":"r2","doi-asserted-by":"publisher","DOI":"10.1021\/jo01027a009"},{"key":"r3","doi-asserted-by":"publisher","DOI":"10.5059\/yukigoseikyokaishi.34.36"},{"key":"r4","doi-asserted-by":"publisher","DOI":"10.1002\/hlca.19730560509"}],"container-title":["Bulletin
-        of the Chemical Society of Japan"],"language":"en","link":[{"URL":"https:\/\/www.jstage.jst.go.jp\/article\/bcsj1926\/52\/5\/52_5_1545\/_pdf","content-type":"unspecified","content-version":"vor","intended-application":"similarity-checking"}],"deposited":{"date-parts":[[2016,8,24]],"date-time":"2016-08-24T14:50:09Z","timestamp":1472050209000},"score":0.99999994,"issued":{"date-parts":[[1979,5]]},"references-count":4,"journal-issue":{"issue":"5","published-print":{"date-parts":[[1979,5]]}},"alternative-id":["10.1246\/bcsj.52.1545"],"URL":"http:\/\/dx.doi.org\/10.1246\/bcsj.52.1545","ISSN":["0009-2673","1348-0634"],"issn-type":[{"value":"0009-2673","type":"print"},{"value":"1348-0634","type":"electronic"}],"subject":["General
-        Chemistry"],"published":{"date-parts":[[1979,5]]}},{"indexed":{"date-parts":[[2021,5,12]],"date-time":"2021-05-12T03:34:32Z","timestamp":1620790472394},"publisher-location":"Berlin,
-        Heidelberg","reference-count":0,"publisher":"Springer Berlin Heidelberg","content-domain":{"domain":[],"crossmark-restriction":false},"published-print":{"date-parts":[[1994]]},"DOI":"10.1007\/978-3-642-78927-4_15","type":"book-chapter","created":{"date-parts":[[2011,12,6]],"date-time":"2011-12-06T21:21:26Z","timestamp":1323206486000},"page":"99-109","source":"Crossref","is-referenced-by-count":1,"title":["Hoch-
-        und Tiefdruckgebiete"],"prefix":"10.1007","author":[{"given":"Lutz","family":"Kr\u00fcger","sequence":"first","affiliation":[]}],"member":"297","container-title":["Wetter
-        und Klima"],"link":[{"URL":"http:\/\/link.springer.com\/content\/pdf\/10.1007\/978-3-642-78927-4_15.pdf","content-type":"unspecified","content-version":"vor","intended-application":"similarity-checking"}],"deposited":{"date-parts":[[2020,11,26]],"date-time":"2020-11-26T17:20:41Z","timestamp":1606411241000},"score":0.99999994,"issued":{"date-parts":[[1994]]},"references-count":0,"URL":"http:\/\/dx.doi.org\/10.1007\/978-3-642-78927-4_15","published":{"date-parts":[[1994]]}},{"institution":[{"name":"Universidade
-        de S\u00e3o Paulo","place":["S\u00e3o Paulo"],"department":["Instituto de
-        F\u00edsica"]}],"indexed":{"date-parts":[[2021,5,10]],"date-time":"2021-05-10T12:58:07Z","timestamp":1620651487162},"reference-count":0,"publisher":"Universidade
-        de Sao Paulo, Agencia USP de Gestao da Informacao Academica (AGUIA)","content-domain":{"domain":[],"crossmark-restriction":false},"DOI":"10.11606\/d.43.2011.tde-26042012-152350","type":"dissertation","created":{"date-parts":[[2015,11,12]],"date-time":"2015-11-12T15:40:12Z","timestamp":1447342812000},"approved":{"date-parts":[[2011,8,25]]},"source":"Crossref","is-referenced-by-count":0,"title":["Avalia\u00e7\u00e3o
-        de dos\u00edmetros termoluminescentes para uso em radioterapia com f\u00f3tons
-        de alta energia"],"prefix":"10.11606","author":[{"given":"Bernardo Jos\u00e9
-        Braga","family":"Batista","sequence":"first","affiliation":[]}],"member":"4873","link":[{"URL":"http:\/\/www.teses.usp.br\/teses\/disponiveis\/43\/43134\/tde-26042012-152350\/publico\/DissertacaoBatistaBernardo.pdf","content-type":"unspecified","content-version":"vor","intended-application":"similarity-checking"}],"deposited":{"date-parts":[[2017,2,23]],"date-time":"2017-02-23T13:09:01Z","timestamp":1487855341000},"score":0.99999994,"degree":["Mestrado
-        em F\u00edsica"],"issued":{"date-parts":[[null]]},"references-count":0,"URL":"http:\/\/dx.doi.org\/10.11606\/d.43.2011.tde-26042012-152350"}],"items-per-page":20,"query":{"start-index":0,"search-terms":null}}}'
-  recorded_at: 2021-08-13 12:53:12 GMT
+      string: '{"status":"ok","message-type":"work-list","message-version":"1.0.0","message":{"facets":{},"total-results":126591300,"items":[{"indexed":{"date-parts":[[2021,5,8]],"date-time":"2021-05-08T12:18:27Z","timestamp":1620476307927},"reference-count":0,"publisher":"Wiley","issue":"5","license":[{"start":{"date-parts":[[2015,9,1]],"date-time":"2015-09-01T00:00:00Z","timestamp":1441065600000},"content-version":"tdm","delay-in-days":7640,"URL":"http:\/\/doi.wiley.com\/10.1002\/tdm_license_1"}],"content-domain":{"domain":[],"crossmark-restriction":false},"published-print":{"date-parts":[[1994,10]]},"DOI":"10.1111\/apt.1994.8.issue-5","type":"journal-issue","created":{"date-parts":[[2016,2,25]],"date-time":"2016-02-25T07:46:46Z","timestamp":1456386406000},"source":"Crossref","is-referenced-by-count":0,"prefix":"10.1111","volume":"8","member":"311","container-title":["Alimentary
+        Pharmacology & Therapeutics"],"language":"en","link":[{"URL":"http:\/\/api.wiley.com\/onlinelibrary\/tdm\/v1\/articles\/10.1111%2Fapt.1994.8.issue-5","content-type":"unspecified","content-version":"vor","intended-application":"text-mining"}],"deposited":{"date-parts":[[2016,2,25]],"date-time":"2016-02-25T07:46:46Z","timestamp":1456386406000},"score":0.99999994,"issued":{"date-parts":[[1994,10]]},"references-count":0,"journal-issue":{"issue":"5"},"URL":"http:\/\/dx.doi.org\/10.1111\/apt.1994.8.issue-5","ISSN":["0269-2813","1365-2036"],"issn-type":[{"value":"0269-2813","type":"print"},{"value":"1365-2036","type":"electronic"}],"subject":["Pharmacology
+        (medical)","Gastroenterology","Hepatology","Pharmacology (medical)","General
+        Pharmacology, Toxicology and Pharmaceutics"],"published":{"date-parts":[[1994,10]]}},{"indexed":{"date-parts":[[2021,5,10]],"date-time":"2021-05-10T15:10:36Z","timestamp":1620659436250},"reference-count":0,"publisher":"Ion
+        Creanga State Pedagogical University","issue":"1","content-domain":{"domain":[],"crossmark-restriction":false},"short-container-title":["PHCS"],"published-print":{"date-parts":[[2018,6,30]]},"abstract":"<jats:p>Between
+        1914 and 1921, the population inhabiting the region of Bessarabia witnessed,
+        although from behind the frontline, the world conflagration, which was followed
+        by major political changes that detached the region from the Russian Empire,
+        then created the conditions for a short independence period, to finally attach
+        the province to \u201cGreater Romania\u201d in 1918. The history of the city
+        of Chi\u0219in\u0103u during this tumultuous time period is discussed \u2013
+        for the first time \u2013 with a specific focus on its dynamics as a place
+        in which two political systems, defined by the imperial and the national model,
+        confronted each other while also coexisting in different settings. The authors
+        are especially interested in the trajectories of individuals, communities,
+        and institutions linked to the city. They reconstruct the way local actors
+        acknowledged political changes, but also how they exercised agency and imposed
+        their own agendas, frequently based on local, group, or personal needs. The
+        case of Chi\u0219in\u0103u is relevant for\nthe understanding of the major
+        impact of political transition(s) on the local level. It shows that there
+        were various local actors, all of them being part and parcel of this transition,
+        within which they had their own story to tell. Whereas for some political
+        or social groups 1918 meant a new beginning, for others it was the time of
+        political vacuum, from which certain dividends could be extracted.<\/jats:p>","DOI":"10.37710\/plural.v6i1_1","type":"journal-article","created":{"date-parts":[[2020,4,16]],"date-time":"2020-04-16T01:09:12Z","timestamp":1586999352000},"page":"5-42","source":"Crossref","is-referenced-by-count":0,"title":["Svetlana
+        Suveic\u0103, Virgil P\u00e2slariuc, Chi\u0219in\u0103u during World WarI:
+        From the Western Borderland of Russian Empire to the Eastern Borderland of
+        Romania \/ Chi\u015fin\u0103ul \u00een anii primului r\u0103zboi mondial:
+        de la hotarul de vest al Imperiului rus la hotarul de est al Rom\u00e2niei
+        Mari"],"prefix":"10.37710","volume":"6","member":"19313","published-online":{"date-parts":[[2018,6,30]]},"container-title":["PLURAL.
+        History, Culture, Society"],"language":"ro","deposited":{"date-parts":[[2020,4,17]],"date-time":"2020-04-17T04:48:47Z","timestamp":1587098927000},"score":0.99999994,"issued":{"date-parts":[[2018,6,30]]},"references-count":0,"journal-issue":{"issue":"1","published-online":{"date-parts":[[2018,6,30]]},"published-print":{"date-parts":[[2018,6,30]]}},"URL":"http:\/\/dx.doi.org\/10.37710\/plural.v6i1_1","archive":["Internet
+        Archive","Internet Archive"],"ISSN":["2345-184X","2345-1262"],"issn-type":[{"value":"2345-184X","type":"electronic"},{"value":"2345-1262","type":"print"}],"subject":["Sociology
+        and Political Science","History","Cultural Studies"],"published":{"date-parts":[[2018,6,30]]}},{"indexed":{"date-parts":[[2021,5,9]],"date-time":"2021-05-09T03:00:54Z","timestamp":1620529254620},"reference-count":0,"publisher":"Public
+        Library of Science (PLoS)","content-domain":{"domain":[],"crossmark-restriction":false},"DOI":"10.1371\/journal.pone.0092766.g006","type":"component","created":{"date-parts":[[2014,3,27]],"date-time":"2014-03-27T16:59:24Z","timestamp":1395939564000},"source":"Crossref","is-referenced-by-count":0,"prefix":"10.1371","member":"340","deposited":{"date-parts":[[2018,10,22]],"date-time":"2018-10-22T20:29:53Z","timestamp":1540240193000},"score":0.99999994,"issued":{"date-parts":[[null]]},"references-count":0,"URL":"http:\/\/dx.doi.org\/10.1371\/journal.pone.0092766.g006"}],"items-per-page":20,"query":{"start-index":0,"search-terms":null}}}'
+  recorded_at: 2021-08-17 17:22:18 GMT
   recorded_with: vcr/1.0.2, webmockr/0.8.0

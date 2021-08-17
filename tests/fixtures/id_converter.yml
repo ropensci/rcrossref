@@ -8,8 +8,8 @@ http_interactions:
     headers:
       Accept-Encoding: gzip, deflate
       Accept: application/json, text/xml, application/xml, */*
-      User-Agent: r-curl/4.3.2 crul/1.1.0 rOpenSci(rcrossref/1.1.0.94)
-      X-USER-AGENT: r-curl/4.3.2 crul/1.1.0 rOpenSci(rcrossref/1.1.0.94)
+      User-Agent: r-curl/4.3.2 crul/1.1.0 rOpenSci(rcrossref/1.1.0.94) (mailto:<crossref_email>)
+      X-USER-AGENT: r-curl/4.3.2 crul/1.1.0 rOpenSci(rcrossref/1.1.0.94) (mailto:<crossref_email>)
   response:
     status:
       status_code: '200'
@@ -17,7 +17,7 @@ http_interactions:
       explanation: Request fulfilled, document follows
     headers:
       status: 'HTTP/2 200 '
-      date: Fri, 13 Aug 2021 13:04:27 GMT
+      date: Tue, 17 Aug 2021 17:58:40 GMT
       server: Apache
       strict-transport-security: max-age=31536000; includeSubDomains; preload
       referrer-policy: origin-when-cross-origin
@@ -39,7 +39,7 @@ http_interactions:
       string: |
         {
          "status": "ok",
-         "responseDate": "2021-08-13 09:04:27",
+         "responseDate": "2021-08-17 13:58:40",
          "request": "tool=rcrossref;email=myrmecocystus%40gmail.com;ids=10.1038%2Fng.590;format=json",
          "records": [
            {
@@ -60,5 +60,5 @@ http_interactions:
            }
          ]
         }
-  recorded_at: 2021-08-13 13:04:28 GMT
+  recorded_at: 2021-08-17 17:58:40 GMT
   recorded_with: vcr/1.0.2, webmockr/0.8.0

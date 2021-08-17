@@ -8,266 +8,39 @@ http_interactions:
     headers:
       Accept-Encoding: gzip, deflate
       Accept: application/json, text/xml, application/xml, */*
-      User-Agent: r-curl/4.3.2 crul/1.1.0 rOpenSci(rcrossref/1.1.0.94)
-      X-USER-AGENT: r-curl/4.3.2 crul/1.1.0 rOpenSci(rcrossref/1.1.0.94)
+      User-Agent: r-curl/4.3.2 crul/1.1.0 rOpenSci(rcrossref/1.1.0.94) (mailto:<crossref_email>)
+      X-USER-AGENT: r-curl/4.3.2 crul/1.1.0 rOpenSci(rcrossref/1.1.0.94) (mailto:<crossref_email>)
   response:
     status:
       status_code: '200'
       message: OK
       explanation: Request fulfilled, document follows
     headers:
-      status: HTTP/1.1 200 OK
-      date: Fri, 13 Aug 2021 12:56:13 GMT
-      content-type: application/json
-      content-length: '11792'
-      access-control-allow-origin: '*'
       access-control-allow-headers: X-Requested-With
-      vary: Accept-Encoding
-      content-encoding: gzip
-      server: Jetty(9.4.40.v20210413)
-      x-ratelimit-limit: '50'
-      x-ratelimit-interval: 1s
-      x-api-pool: public
-      x-rate-limit-limit: '50'
-      x-rate-limit-interval: 1s
-      permissions-policy: interest-cohort=()
+      access-control-allow-origin: '*'
       connection: close
+      content-encoding: gzip
+      content-length: '11736'
+      content-type: application/json
+      date: Tue, 17 Aug 2021 17:23:34 GMT
+      permissions-policy: interest-cohort=()
+      server: Jetty(9.4.40.v20210413)
+      set-cookie:
+      - AWSALB=zUeFyUZvSTiDqmFVmPMiacIXbOCkPn3ZLXYlBvK8a4l6rBucmebbEkL3W/IIh155nK5OQwCQ8NRZ+oFAQW/pvB2o7XzJ9GnweXgxAtp8JRhsWV81Jpp6iV1wnD8T;
+        Expires=Tue, 24 Aug 2021 17:23:34 GMT; Path=/
+      - AWSALBCORS=zUeFyUZvSTiDqmFVmPMiacIXbOCkPn3ZLXYlBvK8a4l6rBucmebbEkL3W/IIh155nK5OQwCQ8NRZ+oFAQW/pvB2o7XzJ9GnweXgxAtp8JRhsWV81Jpp6iV1wnD8T;
+        Expires=Tue, 24 Aug 2021 17:23:34 GMT; Path=/; SameSite=None
+      status: HTTP/1.1 200 OK
+      vary: Accept-Encoding
+      x-api-pool: polite
+      x-rate-limit-interval: 1s
+      x-rate-limit-limit: '50'
+      x-ratelimit-interval: 1s
+      x-ratelimit-limit: '50'
     body:
       encoding: UTF-8
       file: no
-      string: '{"status":"ok","message-type":"work-list","message-version":"1.0.0","message":{"facets":{},"total-results":49,"items":[{"indexed":{"date-parts":[[2021,5,12]],"date-time":"2021-05-12T04:13:13Z","timestamp":1620792793465},"reference-count":13,"publisher":"Walter
-        de Gruyter GmbH","issue":"1","content-domain":{"domain":[],"crossmark-restriction":false},"published-print":{"date-parts":[[2010,1,1]]},"DOI":"10.2478\/v10285-012-0020-5","type":"journal-article","created":{"date-parts":[[2012,8,10]],"date-time":"2012-08-10T09:14:42Z","timestamp":1344590082000},"source":"Crossref","is-referenced-by-count":1,"title":["The
-        Survival and Growth Rates of Woody Vegetation in the Man-Made Vracov Biocorridor
-        During the Period of 1993-2007"],"prefix":"10.2478","volume":"3","author":[{"given":"Boleslav","family":"Jel\u00ednek","sequence":"first","affiliation":[]},{"given":"Lubo\u0161","family":"\u00daradn\u00ed\u010dek","sequence":"additional","affiliation":[]}],"member":"374","reference":[{"key":"1","doi-asserted-by":"crossref","first-page":"254","volume-title":"Linkages
-        in the landscape: The role of corridors and connectivity in Wildlife conservation","author":"A.
-        Bennett","year":"2003","DOI":"10.2305\/IUCN.CH.2004.FR.1.en"},{"key":"2","first-page":"28","volume-title":"Linkages
-        in Practice: a Review of Their Conservation Practice","author":"G. Bennett","year":"2004"},{"key":"3","first-page":"27","article-title":"Biogeographical
-        approach to the creation of territorial systems of landscape ecological stability","volume":"21\/4","author":"A.
-        Bu\u010dek","year":"1984","journal-title":"Zpr\u00e1vy Geografick\u00e9ho
-        \u00fastavu \u010cSAV Brno"},{"key":"4","first-page":"44","article-title":"An
-        Ecological Network in the Czech Republic","volume":"10","author":"A. Bu\u010dek","year":"1995","journal-title":"Veronica"},{"key":"5","first-page":"491","volume-title":"Greenways:
-        The Beginning of an International Movement","author":"J. Fabos","year":"1996"},{"key":"6","first-page":"323","volume-title":"Corridor
-        Ecology: The Science and Practice of Linking Landscapes for Biodiversity Conservation","author":"J.
-        Hilty","year":"2006"},{"key":"7","doi-asserted-by":"crossref","first-page":"345","volume-title":"Ecological
-        networks and greenways: concept, design implementation","author":"R. Jongman","year":"2004","DOI":"10.1017\/CBO9780511606762"},{"key":"8","first-page":"122","volume-title":"Rukov\u011b\u0165
-        projektanta \u00fazemn\u00edho syst\u00e9mu ekologick\u00e9 stability","author":"J.
-        L\u00f6w","year":"1995"},{"key":"9","volume-title":"Dendrologicko - ekologick\u00e9
-        hodnocen\u00ed biokoridoru Vracov, bakal\u00e1\u0159sk\u00e1 pr\u00e1ce","author":"Z.
-        Seluck\u00fd","year":"2008"},{"key":"10","first-page":"17","volume-title":"Hodnocen\u00ed
-        d\u0159evinn\u00e9 slo\u017eky biokoridor\u016f","author":"L. \u00daradn\u00ed\u010dek","year":"2001"},{"key":"11","article-title":"Hodnocen\u00ed
-        r\u016fstu d\u0159evin v biokoridoru Vracov (Woody species growth evaluation
-        in biocorridor Vracov)","author":"L. \u00daradn\u00ed\u010dek","year":"2002"},{"key":"12","first-page":"351","volume-title":"Ekol\u00f3gia","volume":"23","author":"L.
-        \u00daradn\u00ed\u010dek","year":"2004"},{"key":"13","first-page":"52","volume-title":"Zakl\u00e1d\u00e1n\u00ed
-        m\u00edstn\u00edch \u00fazemn\u00edch syst\u00e9m\u016f na zem\u011bd\u011blsk\u00e9
-        p\u016fd\u011b","author":"E. Zimov\u00e1","year":"2002"}],"container-title":["Journal
-        of Landscape Ecology"],"link":[{"URL":"https:\/\/www.degruyter.com\/view\/j\/jlecol.2010.3.issue-1\/v10285-012-0020-5\/v10285-012-0020-5.pdf","content-type":"unspecified","content-version":"vor","intended-application":"similarity-checking"}],"deposited":{"date-parts":[[2020,5,30]],"date-time":"2020-05-30T16:09:57Z","timestamp":1590854997000},"score":0.0,"issued":{"date-parts":[[2010,1,1]]},"references-count":13,"journal-issue":{"issue":"1"},"URL":"http:\/\/dx.doi.org\/10.2478\/v10285-012-0020-5","ISSN":["1803-2427"],"issn-type":[{"value":"1803-2427","type":"print"}],"subject":["Management,
-        Monitoring, Policy and Law","Nature and Landscape Conservation","Ecology"],"published":{"date-parts":[[2010,1,1]]}},{"indexed":{"date-parts":[[2021,5,10]],"date-time":"2021-05-10T05:44:55Z","timestamp":1620625495875},"reference-count":11,"publisher":"Walter
-        de Gruyter GmbH","issue":"3","content-domain":{"domain":[],"crossmark-restriction":false},"published-print":{"date-parts":[[2011,1,1]]},"DOI":"10.2478\/v10285-012-0042-z","type":"journal-article","created":{"date-parts":[[2012,8,10]],"date-time":"2012-08-10T09:14:57Z","timestamp":1344590097000},"source":"Crossref","is-referenced-by-count":0,"title":["Destructive
-        Evolution of Postmeliorated Landscapes of Central Meschera"],"prefix":"10.2478","volume":"4","author":[{"given":"Tatiana","family":"Kharitonova","sequence":"first","affiliation":[]}],"member":"374","reference":[{"key":"1","unstructured":"\u0410\u0432\u0435\u0441\u0441\u0430\u043b\u043e\u043c\u043e\u0432\u0430,
-        \u0418.\u0410., \u0414\u044c\u044f\u043a\u043e\u043d\u043e\u0432, \u041a.\u041d.
-        (1983). \u0413\u0435\u043e\u0445\u0438\u043c\u0438\u0447\u0435\u0441\u043a\u0438\u0435
-        \u0430\u0441\u043f\u0435\u043a\u0442\u044b \u043e\u0441\u0443\u0448\u0438\u0442\u0435\u043b\u044c\u043d\u043e\u0439
-        \u043c\u0435\u043b\u0438\u043e\u0440\u0430\u0446\u0438\u0438 \u0432 \u0434\u043e\u043b\u0438\u043d\u043d\u043e-\u0437\u0430\u043d\u0434\u0440\u043e\u0432\u044b\u0445
-        \u043b\u0430\u043d\u0434\u0448\u0430\u0444\u0442\u0430\u0445 \u041c\u0435\u0449\u0435\u0440\u044b.
-        <i>\u0412\u0435\u0441\u0442\u043d. \u041c\u043e\u0441\u043a<\/i>. <i>\u0423\u043d-\u0442\u0430.
-        \u0421\u0435\u0440<\/i>.5. \u0413\u0435\u043e\u0433\u0440\u0430\u0444\u0438\u044f.
-        1983. \u21163. \u0421. 46-54."},{"key":"2","unstructured":"\u0410\u043d\u043d\u0435\u043d\u0441\u043a\u0430\u044f,
-        \u0413.\u041d., \u041c\u0430\u043c\u0430\u0439, \u0418.\u0418. & \u0426\u0435\u0441\u0435\u043b\u044c\u0447\u0443\u043a,
-        \u042e.\u041d. (1990). <i>\u041b\u0430\u043d\u0434\u0448\u0430\u0444\u0442\u044b
-        \u0420\u044f\u0437\u0430\u043d\u0441\u043a\u043e\u0439 \u041c\u0435\u0449\u0435\u0440\u044b
-        \u0438 \u0432\u043e\u0437\u043c\u043e\u0436\u043d\u043e\u0441\u0442\u0438
-        \u0438\u0445 \u043e\u0441\u0432\u043e\u0435\u043d\u0438\u044f<\/i>. \u041c.:
-        \u0418\u0437\u0434-\u0432\u043e \u041c\u043e\u0441\u043a. \u0423\u043d-\u0442\u0430.
-        246 \u0441."},{"key":"3","unstructured":"\u0413\u0435\u043e\u0433\u0440\u0430\u0444\u0438\u0447\u0435\u0441\u043a\u0438\u0435
-        \u043f\u0440\u043e\u0431\u043b\u0435\u043c\u044b \u043e\u0441\u0443\u0448\u0438\u0442\u0435\u043b\u044c\u043d\u044b\u0445
-        \u043c\u0435\u043b\u0438\u043e\u0440\u0430\u0446\u0438\u0439 (1990). 187 \u0441."},{"key":"4","unstructured":"\u0420\u0430\u043c\u0435\u043d\u0441\u043a\u0438\u0439,
-        \u041b.\u0413. (1956). <i>\u042d\u043a\u043e\u043b\u043e\u0433\u0438\u0447\u0435\u0441\u043a\u0430\u044f
-        \u043e\u0446\u0435\u043d\u043a\u0430 \u043a\u043e\u0440\u043c\u043e\u0432\u044b\u0445
-        \u0443\u0433\u043e\u0434\u0438\u0439 \u043f\u043e \u0440\u0430\u0441\u0442\u0438\u0442\u0435\u043b\u044c\u043d\u043e\u043c\u0443
-        \u043f\u043e\u043a\u0440\u043e\u0432\u0443<\/i>. \u0413\u043e\u0441. \u0438\u0437\u0434-\u0432\u043e
-        \u0441\u0435\u043b\u044c\u0445\u043e\u0437. \u041b\u0438\u0442-\u0440\u044b.
-        470 \u0441."},{"issue":"6","key":"5","doi-asserted-by":"crossref","first-page":"1375","DOI":"10.1016\/j.soilbio.2005.10.012","article-title":"The
-        physicochemical and microbiological status of a restored bog in Quebec: Identification
-        of relevant criteria to monitor success","volume":"38","author":"R. Andersen","year":"2006","journal-title":"Soil
-        Biology and Biochemistry"},{"key":"6","first-page":"735","volume-title":"Vegetation
-        Ecology of Central Europe","author":"H. Ellenberg","year":"2009"},{"issue":"3","key":"7","doi-asserted-by":"crossref","first-page":"242","DOI":"10.1016\/j.landurbplan.2010.12.011","article-title":"Effects
-        of prospective landscape changes on species viability in Segre River valley,
-        NE Spain","volume":"100","author":"K. Franz","year":"2011","journal-title":"Landscape
-        and Urban Planning"},{"key":"8","first-page":"144","author":"M. Hayka","year":"1989","journal-title":"Geoecological
-        foundations of territotial planing"},{"key":"9","first-page":"416","volume-title":"Dynamics
-        of Agricultural lands of Russia in XX century and Postagrogenic Restoration
-        of vegetation and soils","author":"D. Lyuri","year":"2005"},{"key":"10","unstructured":"Millennium
-        Ecosystem Assessment (2005). <i>Ecosystems and Human Well-being.<\/i> Synthesis
-        Peport. \u2014 Island Press, Washington DC, 160 pp."},{"issue":"4","key":"11","doi-asserted-by":"crossref","first-page":"304","DOI":"10.1016\/j.agee.2009.10.010","article-title":"Abandonment
-        and intensified use of agricultural land decrease habitats of rare herbs in
-        semi-natural grasslands","volume":"135","author":"Y Uematsu","year":"2010","journal-title":"Agriculture,
-        Ecosystems & Environment"}],"container-title":["Journal of Landscape Ecology"],"link":[{"URL":"https:\/\/www.degruyter.com\/view\/j\/jlecol.2011.4.issue-3\/v10285-012-0042-z\/v10285-012-0042-z.pdf","content-type":"unspecified","content-version":"vor","intended-application":"similarity-checking"}],"deposited":{"date-parts":[[2020,5,30]],"date-time":"2020-05-30T16:10:08Z","timestamp":1590855008000},"score":0.0,"issued":{"date-parts":[[2011,1,1]]},"references-count":11,"journal-issue":{"issue":"3"},"URL":"http:\/\/dx.doi.org\/10.2478\/v10285-012-0042-z","ISSN":["1803-2427"],"issn-type":[{"value":"1803-2427","type":"print"}],"subject":["Management,
-        Monitoring, Policy and Law","Nature and Landscape Conservation","Ecology"],"published":{"date-parts":[[2011,1,1]]}},{"indexed":{"date-parts":[[2021,5,10]],"date-time":"2021-05-10T05:41:05Z","timestamp":1620625265874},"reference-count":38,"publisher":"Walter
-        de Gruyter GmbH","issue":"2","content-domain":{"domain":[],"crossmark-restriction":false},"published-print":{"date-parts":[[2009,1,1]]},"abstract":"<jats:title>Any
-        Lesson from the History of Sustainable Development?<\/jats:title>\n        <jats:p>Have
-        we still got time for sustainability and reasonable application of ideas of
-        sustainable development? It has been just over twenty years since the Brundtland
-        Commission Report but, taken as an axiological term; sustainable development
-        resonates with older historical horizons. At the heart of a long running history
-        we are beginning to articulate more or less sustaining relationships between
-        man and nature. We have described the (human) needs in the environmental,
-        economic and social dimension of sustainable development to show some amazing
-        shift in perception of sustainable development from local to global level.
-        We are convinced that historical lesson of sustainable development shows there
-        is no more time for sustainability, but time for SOStainability. Our proposed
-        S-O-S in SOStainability means Save Our Sustainability! SOStainability represents
-        the need to end the compromise between economic development and natural life
-        supporting systems.<\/jats:p>","DOI":"10.2478\/v10285-012-0015-2","type":"journal-article","created":{"date-parts":[[2012,8,10]],"date-time":"2012-08-10T09:14:38Z","timestamp":1344590078000},"page":"5-17","source":"Crossref","is-referenced-by-count":0,"title":["Any
-        Lesson from the History of Sustainable Development?"],"prefix":"10.2478","volume":"2","author":[{"given":"Miloslav","family":"Lapka","sequence":"first","affiliation":[]},{"given":"Eva","family":"Cudl\u00ednov\u00e1","sequence":"additional","affiliation":[]}],"member":"374","reference":[{"key":"1","unstructured":"Act
-        of Congress (1972). <i>US Marine Mammal Protection Act.<\/i> Retrieved 6.
-        September 2008, from <a target=\"_blank\" href=''http:\/\/www.nmfs.noaa.gov\/pr\/pdfs\/laws\/mmpa.pdf''>http:\/\/www.nmfs.noaa.gov\/pr\/pdfs\/laws\/mmpa.pdf<\/a>"},{"issue":"3","key":"2","doi-asserted-by":"crossref","first-page":"191","DOI":"10.3197\/096327194776679700","article-title":"\u2018Sustainable
-        Development\u2019: Is it a Useful Concept?''","volume":"3","author":"W. Beckerman","year":"1994","journal-title":"Environmental
-        Values"},{"issue":"2","key":"3","first-page":"169","article-title":"How Would
-        you Like your \u2018Sustainability\u2019, Sir? Weak or Strong? A Reply to
-        my Critics","volume":"4","author":"W. Beckermann","year":"1995","journal-title":"Environmental
-        Values"},{"key":"4","volume-title":"The Coming of the Post-Industrial Society.
-        A Venture in Social Forecasting","author":"D. Bell","year":"1973"},{"key":"5","unstructured":"Board
-        on Sustainable Development, National Research Council (1999). <i>Our Common
-        Journey: A Transition toward Sustainability.<\/i> Washington DC. National
-        Academy Press."},{"key":"6","unstructured":"Brundtland Commission - World
-        Commission on Environment and Development (WCED) (1987). <i>Our Common Future.<\/i>
-        Oxford University Press, Oxford, UK."},{"key":"7","volume-title":"Silent Spring","author":"R.
-        Carson","year":"1962"},{"issue":"3","key":"8","doi-asserted-by":"crossref","first-page":"1","DOI":"10.1086\/466560","article-title":"The
-        Problem of Social Cost","volume":"2","author":"R. Coase","year":"1960","journal-title":"Journal
-        of Law and Economics"},{"key":"9","volume-title":"Beyond Growth","author":"E.
-        Daly","year":"1996"},{"key":"10","volume-title":"For the Common Good: Redirecting
-        the Economy toward Community, the Environment, and a Sustainable Future","author":"H.
-        Daly","year":"1989"},{"issue":"1","key":"11","first-page":"49","article-title":"Discussion","volume":"4","author":"H.
-        Daly","year":"1995","journal-title":"Environmental Values"},{"key":"12","volume-title":"Managing
-        in a Time of Great Change","author":"P. Drucker","year":"1995"},{"issue":"2","key":"13","doi-asserted-by":"crossref","first-page":"185","DOI":"10.3197\/0963271054084966","article-title":"Capital
-        Substitutability and Weak Sustainability Revisited: The Conditions for Capital
-        Substitution in the Presence of Risk","volume":"14","author":"F. Figge","year":"2005","journal-title":"Environmental
-        Values"},{"key":"14","volume-title":"This Sacred Earth: Religion, Nature,
-        Environment","author":"R. Gottlieb","year":"1996"},{"issue":"3","key":"15","doi-asserted-by":"crossref","first-page":"291","DOI":"10.1016\/0047-2727(90)90002-Y","article-title":"Natural
-        Resources, National Accounting and Economic Depreciation","volume":"43","author":"J.
-        Hartwick","year":"1990","journal-title":"Journal of Public Economics"},{"issue":"3","key":"16","doi-asserted-by":"crossref","first-page":"8","DOI":"10.1080\/00139157.2005.10524444","article-title":"\u2018What
-        Is Sustainable Development? Goals, Indicators, Values, and Practice\u2019","volume":"47","author":"R.
-        Kates","year":"2005","journal-title":"Environment: Science and Policy for
-        Sustainable Development"},{"key":"17","volume-title":"Aldo Leopold and the
-        Ecological Conscience","author":"R. Knight","year":"2002"},{"key":"18","first-page":"137","volume-title":"Panswowe
-        wydawnictwo naukowe","volume":"1","author":"A. Le\u0144kowa","year":"1978"},{"key":"19","author":"A.
-        Leiserowitz","year":"2008","journal-title":"\u2018Toward a New Consciousness:
-        Values to Sustain Human and Natural Communities\u2019"},{"key":"20","volume-title":"A
-        Sand County Almanac","author":"A. Leopold","year":"1949"},{"key":"21","volume-title":"Principles
-        of Economics","author":"A. Marshall","year":"1920"},{"issue":"3","key":"22","doi-asserted-by":"crossref","first-page":"673","DOI":"10.1021\/es040394k","article-title":"Framing
-        the elusive concept of sustainability: a sustainability hierarchy","volume":"39","author":"J.
-        Marshall","year":"2005","journal-title":"Environmental Science and Technology"},{"key":"23","volume-title":"The
-        farther reaches of human nature","author":"A. Maslow","year":"1971"},{"key":"24","volume-title":"The
-        Limits to Growth","author":"D. Meadows","year":"1972"},{"issue":"6","key":"25","doi-asserted-by":"crossref","first-page":"493","DOI":"10.1016\/S0195-9255(98)00019-5","article-title":"Sustainability
-        and sustainable development. Historical and conceptual review","volume":"18","author":"D.
-        Mebratu","year":"1998","journal-title":"Environmental Impact Assessment Review"},{"key":"26","volume-title":"Weak
-        versus Strong Sustainability - Exploring the Limits of Two Opposing Paradigms","author":"E.
-        Neuymayer","year":"1999"},{"issue":"3","key":"27","doi-asserted-by":"crossref","first-page":"279","DOI":"10.3197\/096327104323312699","article-title":"Operationalising
-        Strong Sustainability: Definitions, Methodologies and Outcomes","volume":"13","author":"B.
-        \u00d6zkaynak","year":"2004","journal-title":"Environmental Values"},{"key":"28","volume-title":"Societies:
-        Evolutionary and Comparative Perspectives","author":"T. Parsons","year":"1966"},{"key":"29","volume-title":"Economics
-        of Natural Resources and the Environment","author":"D. Pearce","year":"1990"},{"key":"30","volume-title":"Blue
-        Print for a Green Economy","author":"D. Pearce","year":"1998"},{"key":"31","volume-title":"What
-        is Property? Principle of Right and of Government","author":"P. Proudhon","year":"1840"},{"issue":"2","key":"32","doi-asserted-by":"crossref","first-page":"3","DOI":"10.3197\/096327193776679981","article-title":"\u2018Sustainable
-        Development: Needs, Values, Rights\u2019","author":"M. Redclift","year":"1993","journal-title":"Environmental
-        Values"},{"key":"33","volume-title":"Resources, Values and Development","author":"A.
-        Sen","year":"1984"},{"key":"34","volume-title":"Small Is Beautiful","author":"E.
-        Schumacher","year":"1989"},{"key":"35","volume-title":"An Inquiry Into the
-        Nature and Causes of the Wealth of Nations. (In four volumes)","author":"A.
-        Smith","year":"1776"},{"issue":"3","key":"36","doi-asserted-by":"crossref","first-page":"162","DOI":"10.1016\/0301-4207(93)90001-4","article-title":"An
-        Almost Practical Step Toward Sustainability","volume":"19","author":"R. Solow","year":"1993","journal-title":"Resource
-        Policy"},{"key":"37","unstructured":"Anonymus (2002, September). <i>The Johannesburg
-        Declaration on Sustainable Development.<\/i> Retrieved 18 September 2008,
-        from <a target=\"_blank\" href=''http:\/\/www.housing.gov.za\/content\/legislation_policies\/johannesburg.htm''>http:\/\/www.housing.gov.za\/content\/legislation_policies\/johannesburg.htm<\/a>"},{"key":"38","volume-title":"The
-        Third Wave","author":"A. Toffler","year":"1990"}],"container-title":["Journal
-        of Landscape Ecology"],"link":[{"URL":"http:\/\/content.sciendo.com\/view\/journals\/jlecol\/2\/2\/article-p5.xml","content-type":"text\/html","content-version":"vor","intended-application":"text-mining"},{"URL":"https:\/\/www.degruyter.com\/view\/j\/jlecol.2009.2.issue-2\/v10285-012-0015-2\/v10285-012-0015-2.pdf","content-type":"unspecified","content-version":"vor","intended-application":"similarity-checking"}],"deposited":{"date-parts":[[2020,5,30]],"date-time":"2020-05-30T16:09:54Z","timestamp":1590854994000},"score":0.0,"issued":{"date-parts":[[2009,1,1]]},"references-count":38,"journal-issue":{"issue":"2"},"URL":"http:\/\/dx.doi.org\/10.2478\/v10285-012-0015-2","ISSN":["1803-2427"],"issn-type":[{"value":"1803-2427","type":"print"}],"subject":["Management,
-        Monitoring, Policy and Law","Nature and Landscape Conservation","Ecology"],"published":{"date-parts":[[2009,1,1]]}},{"indexed":{"date-parts":[[2021,5,10]],"date-time":"2021-05-10T05:41:15Z","timestamp":1620625275988},"reference-count":41,"publisher":"Walter
-        de Gruyter GmbH","issue":"1","content-domain":{"domain":[],"crossmark-restriction":false},"published-print":{"date-parts":[[2011,1,1]]},"DOI":"10.2478\/v10285-012-0034-z","type":"journal-article","created":{"date-parts":[[2012,8,10]],"date-time":"2012-08-10T09:15:57Z","timestamp":1344590157000},"source":"Crossref","is-referenced-by-count":0,"title":["Antropogenically
-        Created Forest Edge in the Starohorsk\u00e9 Vrchy Mts. on the Example of Donovaly
-        Village"],"prefix":"10.2478","volume":"4","author":[{"given":"Martina","family":"\u0160kodov\u00e1","sequence":"first","affiliation":[]},{"given":"Alfonz","family":"Gajdo\u0161","sequence":"additional","affiliation":[]}],"member":"374","reference":[{"key":"1","first-page":"29","article-title":"Landscape-geobotanical
-        basis for a typology of the man-made forest boundary","volume":"1","author":"S.
-        Balcerkiewicz","year":"1992","journal-title":"Ecology (\u010cSFR)"},{"key":"2","doi-asserted-by":"crossref","first-page":"389","DOI":"10.1111\/j.1523-1739.2004.00184.x","article-title":"Evidence
-        of an edge effect on avian nest success: a meta-analysis","volume":"18","author":"P.
-        Bat\u00e1ry","year":"2004","journal-title":"Conservation Biology"},{"key":"3","first-page":"866","volume-title":"Grundz\u00fcge
-        der Vegetationskunde. Pflanzensoziologie","volume":"3","author":"J. Braun-Blanquet","year":"1964"},{"key":"4","doi-asserted-by":"crossref","first-page":"91","DOI":"10.1111\/j.1523-1739.2001.99309.x","article-title":"Effects
-        of edge structure on flux of species into forest interiors","volume":"15","author":"M.
-        Cadenasso","year":"2001","journal-title":"Conservation Biology"},{"key":"5","first-page":"1","volume-title":"Waldrand
-        - Liebensraum Voller \u00dcberraschngen","author":"R. Costa","year":"2001"},{"key":"6","volume-title":"Saumgesellschaften
-        im vegetations- und Standortsgef\u00e4lle an waldr\u00e4ndern","author":"H.
-        Dierschke","year":"1974"},{"key":"7","first-page":"620","volume-title":"Landscape
-        ecology","author":"R. Forman","year":"1986"},{"key":"8","first-page":"81","volume-title":"Fyzickogeografick\u00e1
-        \u0161trukt\u00fara krajiny Starohorsk\u00fdch vrchov. Geografick\u00e9 \u0161t\u00fadie","volume":"11","author":"A.
-        Gajdo\u0161","year":"2005"},{"key":"9","first-page":"646","volume-title":"Das
-        Klima der bodennahen Luftschicht. Vierte AuJage","author":"R. Geiger","year":"1961"},{"key":"10","doi-asserted-by":"crossref","first-page":"287","DOI":"10.1046\/j.1466-822X.2003.00035.x","article-title":"How
-        important are large vs. small forest remnants for the conservation of the
-        woodland flora in an urban context?","volume":"12","author":"S. Godefroid","year":"2003","journal-title":"Global
-        Ecology and Biogeography"},{"key":"11","doi-asserted-by":"crossref","first-page":"50","DOI":"10.1111\/j.1466-822X.2006.00197.x","article-title":"Understorey
-        plant species richness and composition in metropolitan forest archipelagos:
-        Effects of forest size, adjacent land use and distance to the edge","volume":"15","author":"M.
-        Guirado","year":"2006","journal-title":"Global ecology and biogeography"},{"key":"12","doi-asserted-by":"crossref","first-page":"768","DOI":"10.1111\/j.1523-1739.2005.00045.x","article-title":"Edge
-        influence on forest structure and composition in fragmented landscapes","volume":"19","author":"K.
-        Harper","year":"2005","journal-title":"Conservation Biology"},{"key":"13","doi-asserted-by":"crossref","unstructured":"Hennekens,
-        S. M., Schamin\u00e9e, J. H. J. (2001). TURBOVEG, a comprehensive database
-        management system for vegetation data. In: Bruelheide, H. (Ed.): <i>Journal
-        of Vegetation Science<\/i> 12, pp 589-591.","DOI":"10.2307\/3237010"},{"issue":"2","key":"14","doi-asserted-by":"crossref","first-page":"427","DOI":"10.2307\/1934352","article-title":"Diversity
-        and evencess: a unifying notation and is consequenses","volume":"54","author":"M.
-        Hill","year":"1973","journal-title":"Ecology"},{"key":"15","first-page":"263","volume-title":"Travinnobylinn\u00e1
-        veget\u00e1cia slovenska - elektronick\u00fd expertn\u00fd syst\u00e9m na
-        identifik\u00e1ciu syntax\u00f3nov","author":"M. Jani\u0161ov\u00e1","year":"2007"},{"issue":"14","key":"16","first-page":"703","article-title":"Biotopverbund
-        im Forst","volume":"46","author":"E. Jedicke","year":"1991","journal-title":"Allgemeine
-        Forst Zeitschrift"},{"key":"17","first-page":"243250","article-title":"Ecotone
-        and ecocline: Two questionable concepts in ecology","volume":"11","author":"J.
-        Jen\u00edk","year":"1992","journal-title":"Ecology (\u010cSFR), Bratislava"},{"key":"18","doi-asserted-by":"crossref","first-page":"134","DOI":"10.1016\/S0169-5347(00)01838-3","article-title":"Do
-        edge effects occur over large spatial scales?","volume":"15","author":"W.
-        Laurance","year":"2000","journal-title":"Trends in Ecology and Evolution"},{"key":"19","first-page":"451","article-title":"Nachweis
-        des Barriere-Effekts von verkehrsarmen Stra\u00dfen und Forstwegen auf Kleins\u00e4uger
-        der waldbioz\u00f6nose durch Markierungs- und Umsetzungsversuche","volume":"58","author":"H.
-        Mader","year":"1981","journal-title":"Natur und Landschaft"},{"key":"20","article-title":"Geobotanick\u00e1
-        mapa \u010cSSR","volume":"1","author":"J. Michalko","year":"1986","journal-title":"\u010das\u0165
-        SSR"},{"key":"21","first-page":"391","volume-title":"Walkd\u00f6kologie","author":"H.
-        Otto","year":"1994"},{"key":"22","doi-asserted-by":"crossref","first-page":"1","DOI":"10.1111\/j.1523-1739.2004.00300.x","article-title":"Influence
-        of elevation, land use and landscape context on patterns of alien plant invasions
-        along roadsides in protected areas of south-central Chile","volume":"18","author":"A.
-        Pauchard","year":"2004","journal-title":"Conservation Biology"},{"key":"23","first-page":"168","volume-title":"Ekotony
-        v sou\u010dasn\u00e9 krajin\u011b. Anal\u00fdza a modelov\u00e1n\u00ed ekoton\u016f
-        v povod\u00ed Trkmanky","author":"H. Kilianov\u00e1","year":"2009"},{"key":"24","first-page":"107","article-title":"Waldrandgestaltung
-        unter Ber\u00fccksichtigung der nat\u00fcrlichen Vegetationsdynamik","volume":"64","author":"U.
-        Pietzarka","year":"1993","journal-title":"Forstarchiv"},{"issue":"2","key":"25","article-title":"Lebensraum
-        Waldrand","author":"U. Pietzarka","year":"1996","journal-title":"Merkbl\u00e4tter
-        wald\u00f6kologie"},{"key":"26","first-page":"218","volume-title":"Vysvetlivky
-        ku geologickej mape Starohorsk\u00fdch vrchov, \u010cier\u0165a\u017ee a severnej
-        \u010dasti Zvolenskej kotliny","volume":"1","author":"M. Pol\u00e1k","year":"2003"},{"key":"27","first-page":"34","article-title":"V\u00fdznam
-        lesn\u00edch ekoton\u016f pro stabilitu krajiny","volume":"1","author":"M.
-        Rajnoch","year":"1989","journal-title":"Z\u00e1hradn\u00edctvo"},{"key":"28","first-page":"195","volume-title":"Ekologick\u00e9
-        a socioekologick\u00e9 hodnotenie veget\u00e1cie","author":"C. Raunkiaer","year":"1905"},{"key":"29","doi-asserted-by":"crossref","first-page":"491","DOI":"10.1146\/annurev.ecolsys.35.112202.130148","article-title":"Ecological
-        responses to habitat edges: mechanisms, models, and variability explained","volume":"35","author":"L.
-        Ries","year":"2004","journal-title":"Annual Review of Ecology Evolution and
-        Systematics"},{"key":"30","first-page":"192","volume-title":"Biotopy Slovenska","author":"H.
-        Ru\u017ei\u010dkova","year":"1996"},{"key":"31","first-page":"1963","volume-title":"The
-        Mathematical Theory of Communication. Warren Weaver","author":"C. Shannon","year":"1949"},{"issue":"3","key":"32","first-page":"109","article-title":"Effects
-        of forest edges on the yield of silage maize","volume":"56","author":"P. Skleni\u010dka","year":"2005","journal-title":"Die
-        Bodenkultur"},{"key":"33","first-page":"77","article-title":"Edge effect of
-        krummholz in Giant Mts. tundra, the Sudetes","volume":"38","author":"L. Soukupov\u00e1","year":"2002","journal-title":"Opera
-        Corcontica"},{"key":"34","first-page":"34","article-title":"Lesn\u00ed a porostn\u00ed
-        okraje z hlediska lesn\u00edho hospod\u00e1\u0159stv\u00ed, ochrany p\u0159\u00edrody
-        a krajiny","volume":"47","author":"J. \u0160indel\u00e1\u0159","year":"2002","journal-title":"Zpr\u00e1vy
-        lesn\u00edckeho v\u00fdskumu"},{"key":"35","unstructured":"\u0160kodov\u00e1,
-        M. (2010). <i>Antropick\u00e9 okraje lesov v Starohorsk\u00fdch vrchoch.<\/i>
-        Dissertation, Comenius University in Bratislava, Faculty of natural sciences,
-        p 167."},{"key":"36","first-page":"22","article-title":"The edge of the cut.
-        Implications for Wildlife Populations","author":"S. Temple","year":"1998","journal-title":"Journal
-        of Forestry"},{"key":"37","first-page":"352","volume-title":"CANOCO Reference
-        manual and CanoDraw for Windows User''s guide. Sftw. for Canonical Community
-        Ordination (version 4.5)","author":"C. Ter Braak","year":"2002"},{"key":"38","doi-asserted-by":"crossref","first-page":"451","DOI":"10.1111\/j.1654-1103.2002.tb02069.x","article-title":"JUICE,
-        software for veg. classification","volume":"13","author":"L. Tich\u00fd","year":"2002","journal-title":"Journal
-        of Vegetation Science"},{"key":"39","doi-asserted-by":"crossref","first-page":"207","DOI":"10.1111\/j.1469-185X.1967.tb01419.x","article-title":"Gradient
-        analysis of vegetation","volume":"42","author":"R. Whittaker","year":"1967","journal-title":"Biol.
-        Rev"},{"key":"40","doi-asserted-by":"crossref","first-page":"333","DOI":"10.1111\/j.1523-1739.1988.tb00197.x","article-title":"Changes
-        in wildlife communities near edges","volume":"2","author":"R. Yahner","year":"1988","journal-title":"Conserv.
-        biol"},{"key":"41","first-page":"186","article-title":"Waldr\u00e4nder in
-        der Kulturlandschaft","author":"S. Zerbe","year":"1991","journal-title":"Naturschutz
-        u. Landschaftsplanung"}],"container-title":["Journal of Landscape Ecology"],"link":[{"URL":"https:\/\/www.degruyter.com\/view\/j\/jlecol.2011.4.issue-1\/v10285-012-0034-z\/v10285-012-0034-z.pdf","content-type":"unspecified","content-version":"vor","intended-application":"similarity-checking"}],"deposited":{"date-parts":[[2020,5,30]],"date-time":"2020-05-30T16:10:04Z","timestamp":1590855004000},"score":0.0,"issued":{"date-parts":[[2011,1,1]]},"references-count":41,"journal-issue":{"issue":"1"},"URL":"http:\/\/dx.doi.org\/10.2478\/v10285-012-0034-z","ISSN":["1803-2427"],"issn-type":[{"value":"1803-2427","type":"print"}],"subject":["Management,
-        Monitoring, Policy and Law","Nature and Landscape Conservation","Ecology"],"published":{"date-parts":[[2011,1,1]]}},{"indexed":{"date-parts":[[2021,5,19]],"date-time":"2021-05-19T01:48:11Z","timestamp":1621388891737},"reference-count":34,"publisher":"Walter
+      string: '{"status":"ok","message-type":"work-list","message-version":"1.0.0","message":{"facets":{},"total-results":49,"items":[{"indexed":{"date-parts":[[2021,5,19]],"date-time":"2021-05-19T01:48:11Z","timestamp":1621388891082},"reference-count":34,"publisher":"Walter
         de Gruyter GmbH","issue":"2","content-domain":{"domain":[],"crossmark-restriction":false},"published-print":{"date-parts":[[2010,1,1]]},"DOI":"10.2478\/v10285-012-0027-y","type":"journal-article","created":{"date-parts":[[2012,8,10]],"date-time":"2012-08-10T09:15:16Z","timestamp":1344590116000},"source":"Crossref","is-referenced-by-count":6,"title":["Driving
         Forces, Threats and Trends Relating to Mosaics in Agricultural Landscape in
         Slovakia"],"prefix":"10.2478","volume":"3","author":[{"given":"Jana","family":"Spulerova","sequence":"first","affiliation":[]},{"given":"Marta","family":"Dobrovodsk\u00e1","sequence":"additional","affiliation":[]},{"given":"Dagmar","family":"Stefunkova","sequence":"additional","affiliation":[]}],"member":"374","reference":[{"key":"1","doi-asserted-by":"crossref","first-page":"21","DOI":"10.1016\/j.landurbplan.2003.10.002","article-title":"Why
@@ -354,6 +127,238 @@ http_interactions:
         activities and biodiversity conservation in Europe","volume":"14\/7","author":"J.
         Young","year":"2005","journal-title":"Biodiversity and Conservation"}],"container-title":["Journal
         of Landscape Ecology"],"link":[{"URL":"https:\/\/www.degruyter.com\/view\/j\/jlecol.2010.3.issue-2\/v10285-012-0027-y\/v10285-012-0027-y.pdf","content-type":"unspecified","content-version":"vor","intended-application":"similarity-checking"}],"deposited":{"date-parts":[[2020,5,30]],"date-time":"2020-05-30T16:10:00Z","timestamp":1590855000000},"score":0.0,"issued":{"date-parts":[[2010,1,1]]},"references-count":34,"journal-issue":{"issue":"2"},"URL":"http:\/\/dx.doi.org\/10.2478\/v10285-012-0027-y","ISSN":["1803-2427"],"issn-type":[{"value":"1803-2427","type":"print"}],"subject":["Management,
-        Monitoring, Policy and Law","Nature and Landscape Conservation","Ecology"],"published":{"date-parts":[[2010,1,1]]}}],"items-per-page":5,"query":{"start-index":0,"search-terms":null}}}'
-  recorded_at: 2021-08-13 12:56:13 GMT
+        Monitoring, Policy and Law","Nature and Landscape Conservation","Ecology"],"published":{"date-parts":[[2010,1,1]]}},{"indexed":{"date-parts":[[2021,5,12]],"date-time":"2021-05-12T04:11:58Z","timestamp":1620792718474},"reference-count":13,"publisher":"Walter
+        de Gruyter GmbH","issue":"1","content-domain":{"domain":[],"crossmark-restriction":false},"published-print":{"date-parts":[[2010,1,1]]},"DOI":"10.2478\/v10285-012-0020-5","type":"journal-article","created":{"date-parts":[[2012,8,10]],"date-time":"2012-08-10T09:14:42Z","timestamp":1344590082000},"source":"Crossref","is-referenced-by-count":1,"title":["The
+        Survival and Growth Rates of Woody Vegetation in the Man-Made Vracov Biocorridor
+        During the Period of 1993-2007"],"prefix":"10.2478","volume":"3","author":[{"given":"Boleslav","family":"Jel\u00ednek","sequence":"first","affiliation":[]},{"given":"Lubo\u0161","family":"\u00daradn\u00ed\u010dek","sequence":"additional","affiliation":[]}],"member":"374","reference":[{"key":"1","doi-asserted-by":"crossref","first-page":"254","volume-title":"Linkages
+        in the landscape: The role of corridors and connectivity in Wildlife conservation","author":"A.
+        Bennett","year":"2003","DOI":"10.2305\/IUCN.CH.2004.FR.1.en"},{"key":"2","first-page":"28","volume-title":"Linkages
+        in Practice: a Review of Their Conservation Practice","author":"G. Bennett","year":"2004"},{"key":"3","first-page":"27","article-title":"Biogeographical
+        approach to the creation of territorial systems of landscape ecological stability","volume":"21\/4","author":"A.
+        Bu\u010dek","year":"1984","journal-title":"Zpr\u00e1vy Geografick\u00e9ho
+        \u00fastavu \u010cSAV Brno"},{"key":"4","first-page":"44","article-title":"An
+        Ecological Network in the Czech Republic","volume":"10","author":"A. Bu\u010dek","year":"1995","journal-title":"Veronica"},{"key":"5","first-page":"491","volume-title":"Greenways:
+        The Beginning of an International Movement","author":"J. Fabos","year":"1996"},{"key":"6","first-page":"323","volume-title":"Corridor
+        Ecology: The Science and Practice of Linking Landscapes for Biodiversity Conservation","author":"J.
+        Hilty","year":"2006"},{"key":"7","doi-asserted-by":"crossref","first-page":"345","volume-title":"Ecological
+        networks and greenways: concept, design implementation","author":"R. Jongman","year":"2004","DOI":"10.1017\/CBO9780511606762"},{"key":"8","first-page":"122","volume-title":"Rukov\u011b\u0165
+        projektanta \u00fazemn\u00edho syst\u00e9mu ekologick\u00e9 stability","author":"J.
+        L\u00f6w","year":"1995"},{"key":"9","volume-title":"Dendrologicko - ekologick\u00e9
+        hodnocen\u00ed biokoridoru Vracov, bakal\u00e1\u0159sk\u00e1 pr\u00e1ce","author":"Z.
+        Seluck\u00fd","year":"2008"},{"key":"10","first-page":"17","volume-title":"Hodnocen\u00ed
+        d\u0159evinn\u00e9 slo\u017eky biokoridor\u016f","author":"L. \u00daradn\u00ed\u010dek","year":"2001"},{"key":"11","article-title":"Hodnocen\u00ed
+        r\u016fstu d\u0159evin v biokoridoru Vracov (Woody species growth evaluation
+        in biocorridor Vracov)","author":"L. \u00daradn\u00ed\u010dek","year":"2002"},{"key":"12","first-page":"351","volume-title":"Ekol\u00f3gia","volume":"23","author":"L.
+        \u00daradn\u00ed\u010dek","year":"2004"},{"key":"13","first-page":"52","volume-title":"Zakl\u00e1d\u00e1n\u00ed
+        m\u00edstn\u00edch \u00fazemn\u00edch syst\u00e9m\u016f na zem\u011bd\u011blsk\u00e9
+        p\u016fd\u011b","author":"E. Zimov\u00e1","year":"2002"}],"container-title":["Journal
+        of Landscape Ecology"],"link":[{"URL":"https:\/\/www.degruyter.com\/view\/j\/jlecol.2010.3.issue-1\/v10285-012-0020-5\/v10285-012-0020-5.pdf","content-type":"unspecified","content-version":"vor","intended-application":"similarity-checking"}],"deposited":{"date-parts":[[2020,5,30]],"date-time":"2020-05-30T16:09:57Z","timestamp":1590854997000},"score":0.0,"issued":{"date-parts":[[2010,1,1]]},"references-count":13,"journal-issue":{"issue":"1"},"URL":"http:\/\/dx.doi.org\/10.2478\/v10285-012-0020-5","ISSN":["1803-2427"],"issn-type":[{"value":"1803-2427","type":"print"}],"subject":["Management,
+        Monitoring, Policy and Law","Nature and Landscape Conservation","Ecology"],"published":{"date-parts":[[2010,1,1]]}},{"indexed":{"date-parts":[[2021,5,10]],"date-time":"2021-05-10T05:32:14Z","timestamp":1620624734043},"reference-count":41,"publisher":"Walter
+        de Gruyter GmbH","issue":"1","content-domain":{"domain":[],"crossmark-restriction":false},"published-print":{"date-parts":[[2011,1,1]]},"DOI":"10.2478\/v10285-012-0034-z","type":"journal-article","created":{"date-parts":[[2012,8,10]],"date-time":"2012-08-10T09:15:57Z","timestamp":1344590157000},"source":"Crossref","is-referenced-by-count":0,"title":["Antropogenically
+        Created Forest Edge in the Starohorsk\u00e9 Vrchy Mts. on the Example of Donovaly
+        Village"],"prefix":"10.2478","volume":"4","author":[{"given":"Martina","family":"\u0160kodov\u00e1","sequence":"first","affiliation":[]},{"given":"Alfonz","family":"Gajdo\u0161","sequence":"additional","affiliation":[]}],"member":"374","reference":[{"key":"1","first-page":"29","article-title":"Landscape-geobotanical
+        basis for a typology of the man-made forest boundary","volume":"1","author":"S.
+        Balcerkiewicz","year":"1992","journal-title":"Ecology (\u010cSFR)"},{"key":"2","doi-asserted-by":"crossref","first-page":"389","DOI":"10.1111\/j.1523-1739.2004.00184.x","article-title":"Evidence
+        of an edge effect on avian nest success: a meta-analysis","volume":"18","author":"P.
+        Bat\u00e1ry","year":"2004","journal-title":"Conservation Biology"},{"key":"3","first-page":"866","volume-title":"Grundz\u00fcge
+        der Vegetationskunde. Pflanzensoziologie","volume":"3","author":"J. Braun-Blanquet","year":"1964"},{"key":"4","doi-asserted-by":"crossref","first-page":"91","DOI":"10.1111\/j.1523-1739.2001.99309.x","article-title":"Effects
+        of edge structure on flux of species into forest interiors","volume":"15","author":"M.
+        Cadenasso","year":"2001","journal-title":"Conservation Biology"},{"key":"5","first-page":"1","volume-title":"Waldrand
+        - Liebensraum Voller \u00dcberraschngen","author":"R. Costa","year":"2001"},{"key":"6","volume-title":"Saumgesellschaften
+        im vegetations- und Standortsgef\u00e4lle an waldr\u00e4ndern","author":"H.
+        Dierschke","year":"1974"},{"key":"7","first-page":"620","volume-title":"Landscape
+        ecology","author":"R. Forman","year":"1986"},{"key":"8","first-page":"81","volume-title":"Fyzickogeografick\u00e1
+        \u0161trukt\u00fara krajiny Starohorsk\u00fdch vrchov. Geografick\u00e9 \u0161t\u00fadie","volume":"11","author":"A.
+        Gajdo\u0161","year":"2005"},{"key":"9","first-page":"646","volume-title":"Das
+        Klima der bodennahen Luftschicht. Vierte AuJage","author":"R. Geiger","year":"1961"},{"key":"10","doi-asserted-by":"crossref","first-page":"287","DOI":"10.1046\/j.1466-822X.2003.00035.x","article-title":"How
+        important are large vs. small forest remnants for the conservation of the
+        woodland flora in an urban context?","volume":"12","author":"S. Godefroid","year":"2003","journal-title":"Global
+        Ecology and Biogeography"},{"key":"11","doi-asserted-by":"crossref","first-page":"50","DOI":"10.1111\/j.1466-822X.2006.00197.x","article-title":"Understorey
+        plant species richness and composition in metropolitan forest archipelagos:
+        Effects of forest size, adjacent land use and distance to the edge","volume":"15","author":"M.
+        Guirado","year":"2006","journal-title":"Global ecology and biogeography"},{"key":"12","doi-asserted-by":"crossref","first-page":"768","DOI":"10.1111\/j.1523-1739.2005.00045.x","article-title":"Edge
+        influence on forest structure and composition in fragmented landscapes","volume":"19","author":"K.
+        Harper","year":"2005","journal-title":"Conservation Biology"},{"key":"13","doi-asserted-by":"crossref","unstructured":"Hennekens,
+        S. M., Schamin\u00e9e, J. H. J. (2001). TURBOVEG, a comprehensive database
+        management system for vegetation data. In: Bruelheide, H. (Ed.): <i>Journal
+        of Vegetation Science<\/i> 12, pp 589-591.","DOI":"10.2307\/3237010"},{"issue":"2","key":"14","doi-asserted-by":"crossref","first-page":"427","DOI":"10.2307\/1934352","article-title":"Diversity
+        and evencess: a unifying notation and is consequenses","volume":"54","author":"M.
+        Hill","year":"1973","journal-title":"Ecology"},{"key":"15","first-page":"263","volume-title":"Travinnobylinn\u00e1
+        veget\u00e1cia slovenska - elektronick\u00fd expertn\u00fd syst\u00e9m na
+        identifik\u00e1ciu syntax\u00f3nov","author":"M. Jani\u0161ov\u00e1","year":"2007"},{"issue":"14","key":"16","first-page":"703","article-title":"Biotopverbund
+        im Forst","volume":"46","author":"E. Jedicke","year":"1991","journal-title":"Allgemeine
+        Forst Zeitschrift"},{"key":"17","first-page":"243250","article-title":"Ecotone
+        and ecocline: Two questionable concepts in ecology","volume":"11","author":"J.
+        Jen\u00edk","year":"1992","journal-title":"Ecology (\u010cSFR), Bratislava"},{"key":"18","doi-asserted-by":"crossref","first-page":"134","DOI":"10.1016\/S0169-5347(00)01838-3","article-title":"Do
+        edge effects occur over large spatial scales?","volume":"15","author":"W.
+        Laurance","year":"2000","journal-title":"Trends in Ecology and Evolution"},{"key":"19","first-page":"451","article-title":"Nachweis
+        des Barriere-Effekts von verkehrsarmen Stra\u00dfen und Forstwegen auf Kleins\u00e4uger
+        der waldbioz\u00f6nose durch Markierungs- und Umsetzungsversuche","volume":"58","author":"H.
+        Mader","year":"1981","journal-title":"Natur und Landschaft"},{"key":"20","article-title":"Geobotanick\u00e1
+        mapa \u010cSSR","volume":"1","author":"J. Michalko","year":"1986","journal-title":"\u010das\u0165
+        SSR"},{"key":"21","first-page":"391","volume-title":"Walkd\u00f6kologie","author":"H.
+        Otto","year":"1994"},{"key":"22","doi-asserted-by":"crossref","first-page":"1","DOI":"10.1111\/j.1523-1739.2004.00300.x","article-title":"Influence
+        of elevation, land use and landscape context on patterns of alien plant invasions
+        along roadsides in protected areas of south-central Chile","volume":"18","author":"A.
+        Pauchard","year":"2004","journal-title":"Conservation Biology"},{"key":"23","first-page":"168","volume-title":"Ekotony
+        v sou\u010dasn\u00e9 krajin\u011b. Anal\u00fdza a modelov\u00e1n\u00ed ekoton\u016f
+        v povod\u00ed Trkmanky","author":"H. Kilianov\u00e1","year":"2009"},{"key":"24","first-page":"107","article-title":"Waldrandgestaltung
+        unter Ber\u00fccksichtigung der nat\u00fcrlichen Vegetationsdynamik","volume":"64","author":"U.
+        Pietzarka","year":"1993","journal-title":"Forstarchiv"},{"issue":"2","key":"25","article-title":"Lebensraum
+        Waldrand","author":"U. Pietzarka","year":"1996","journal-title":"Merkbl\u00e4tter
+        wald\u00f6kologie"},{"key":"26","first-page":"218","volume-title":"Vysvetlivky
+        ku geologickej mape Starohorsk\u00fdch vrchov, \u010cier\u0165a\u017ee a severnej
+        \u010dasti Zvolenskej kotliny","volume":"1","author":"M. Pol\u00e1k","year":"2003"},{"key":"27","first-page":"34","article-title":"V\u00fdznam
+        lesn\u00edch ekoton\u016f pro stabilitu krajiny","volume":"1","author":"M.
+        Rajnoch","year":"1989","journal-title":"Z\u00e1hradn\u00edctvo"},{"key":"28","first-page":"195","volume-title":"Ekologick\u00e9
+        a socioekologick\u00e9 hodnotenie veget\u00e1cie","author":"C. Raunkiaer","year":"1905"},{"key":"29","doi-asserted-by":"crossref","first-page":"491","DOI":"10.1146\/annurev.ecolsys.35.112202.130148","article-title":"Ecological
+        responses to habitat edges: mechanisms, models, and variability explained","volume":"35","author":"L.
+        Ries","year":"2004","journal-title":"Annual Review of Ecology Evolution and
+        Systematics"},{"key":"30","first-page":"192","volume-title":"Biotopy Slovenska","author":"H.
+        Ru\u017ei\u010dkova","year":"1996"},{"key":"31","first-page":"1963","volume-title":"The
+        Mathematical Theory of Communication. Warren Weaver","author":"C. Shannon","year":"1949"},{"issue":"3","key":"32","first-page":"109","article-title":"Effects
+        of forest edges on the yield of silage maize","volume":"56","author":"P. Skleni\u010dka","year":"2005","journal-title":"Die
+        Bodenkultur"},{"key":"33","first-page":"77","article-title":"Edge effect of
+        krummholz in Giant Mts. tundra, the Sudetes","volume":"38","author":"L. Soukupov\u00e1","year":"2002","journal-title":"Opera
+        Corcontica"},{"key":"34","first-page":"34","article-title":"Lesn\u00ed a porostn\u00ed
+        okraje z hlediska lesn\u00edho hospod\u00e1\u0159stv\u00ed, ochrany p\u0159\u00edrody
+        a krajiny","volume":"47","author":"J. \u0160indel\u00e1\u0159","year":"2002","journal-title":"Zpr\u00e1vy
+        lesn\u00edckeho v\u00fdskumu"},{"key":"35","unstructured":"\u0160kodov\u00e1,
+        M. (2010). <i>Antropick\u00e9 okraje lesov v Starohorsk\u00fdch vrchoch.<\/i>
+        Dissertation, Comenius University in Bratislava, Faculty of natural sciences,
+        p 167."},{"key":"36","first-page":"22","article-title":"The edge of the cut.
+        Implications for Wildlife Populations","author":"S. Temple","year":"1998","journal-title":"Journal
+        of Forestry"},{"key":"37","first-page":"352","volume-title":"CANOCO Reference
+        manual and CanoDraw for Windows User''s guide. Sftw. for Canonical Community
+        Ordination (version 4.5)","author":"C. Ter Braak","year":"2002"},{"key":"38","doi-asserted-by":"crossref","first-page":"451","DOI":"10.1111\/j.1654-1103.2002.tb02069.x","article-title":"JUICE,
+        software for veg. classification","volume":"13","author":"L. Tich\u00fd","year":"2002","journal-title":"Journal
+        of Vegetation Science"},{"key":"39","doi-asserted-by":"crossref","first-page":"207","DOI":"10.1111\/j.1469-185X.1967.tb01419.x","article-title":"Gradient
+        analysis of vegetation","volume":"42","author":"R. Whittaker","year":"1967","journal-title":"Biol.
+        Rev"},{"key":"40","doi-asserted-by":"crossref","first-page":"333","DOI":"10.1111\/j.1523-1739.1988.tb00197.x","article-title":"Changes
+        in wildlife communities near edges","volume":"2","author":"R. Yahner","year":"1988","journal-title":"Conserv.
+        biol"},{"key":"41","first-page":"186","article-title":"Waldr\u00e4nder in
+        der Kulturlandschaft","author":"S. Zerbe","year":"1991","journal-title":"Naturschutz
+        u. Landschaftsplanung"}],"container-title":["Journal of Landscape Ecology"],"link":[{"URL":"https:\/\/www.degruyter.com\/view\/j\/jlecol.2011.4.issue-1\/v10285-012-0034-z\/v10285-012-0034-z.pdf","content-type":"unspecified","content-version":"vor","intended-application":"similarity-checking"}],"deposited":{"date-parts":[[2020,5,30]],"date-time":"2020-05-30T16:10:04Z","timestamp":1590855004000},"score":0.0,"issued":{"date-parts":[[2011,1,1]]},"references-count":41,"journal-issue":{"issue":"1"},"URL":"http:\/\/dx.doi.org\/10.2478\/v10285-012-0034-z","ISSN":["1803-2427"],"issn-type":[{"value":"1803-2427","type":"print"}],"subject":["Management,
+        Monitoring, Policy and Law","Nature and Landscape Conservation","Ecology"],"published":{"date-parts":[[2011,1,1]]}},{"indexed":{"date-parts":[[2021,5,10]],"date-time":"2021-05-10T05:30:51Z","timestamp":1620624651240},"reference-count":11,"publisher":"Walter
+        de Gruyter GmbH","issue":"3","content-domain":{"domain":[],"crossmark-restriction":false},"published-print":{"date-parts":[[2011,1,1]]},"DOI":"10.2478\/v10285-012-0042-z","type":"journal-article","created":{"date-parts":[[2012,8,10]],"date-time":"2012-08-10T09:14:57Z","timestamp":1344590097000},"source":"Crossref","is-referenced-by-count":0,"title":["Destructive
+        Evolution of Postmeliorated Landscapes of Central Meschera"],"prefix":"10.2478","volume":"4","author":[{"given":"Tatiana","family":"Kharitonova","sequence":"first","affiliation":[]}],"member":"374","reference":[{"key":"1","unstructured":"\u0410\u0432\u0435\u0441\u0441\u0430\u043b\u043e\u043c\u043e\u0432\u0430,
+        \u0418.\u0410., \u0414\u044c\u044f\u043a\u043e\u043d\u043e\u0432, \u041a.\u041d.
+        (1983). \u0413\u0435\u043e\u0445\u0438\u043c\u0438\u0447\u0435\u0441\u043a\u0438\u0435
+        \u0430\u0441\u043f\u0435\u043a\u0442\u044b \u043e\u0441\u0443\u0448\u0438\u0442\u0435\u043b\u044c\u043d\u043e\u0439
+        \u043c\u0435\u043b\u0438\u043e\u0440\u0430\u0446\u0438\u0438 \u0432 \u0434\u043e\u043b\u0438\u043d\u043d\u043e-\u0437\u0430\u043d\u0434\u0440\u043e\u0432\u044b\u0445
+        \u043b\u0430\u043d\u0434\u0448\u0430\u0444\u0442\u0430\u0445 \u041c\u0435\u0449\u0435\u0440\u044b.
+        <i>\u0412\u0435\u0441\u0442\u043d. \u041c\u043e\u0441\u043a<\/i>. <i>\u0423\u043d-\u0442\u0430.
+        \u0421\u0435\u0440<\/i>.5. \u0413\u0435\u043e\u0433\u0440\u0430\u0444\u0438\u044f.
+        1983. \u21163. \u0421. 46-54."},{"key":"2","unstructured":"\u0410\u043d\u043d\u0435\u043d\u0441\u043a\u0430\u044f,
+        \u0413.\u041d., \u041c\u0430\u043c\u0430\u0439, \u0418.\u0418. & \u0426\u0435\u0441\u0435\u043b\u044c\u0447\u0443\u043a,
+        \u042e.\u041d. (1990). <i>\u041b\u0430\u043d\u0434\u0448\u0430\u0444\u0442\u044b
+        \u0420\u044f\u0437\u0430\u043d\u0441\u043a\u043e\u0439 \u041c\u0435\u0449\u0435\u0440\u044b
+        \u0438 \u0432\u043e\u0437\u043c\u043e\u0436\u043d\u043e\u0441\u0442\u0438
+        \u0438\u0445 \u043e\u0441\u0432\u043e\u0435\u043d\u0438\u044f<\/i>. \u041c.:
+        \u0418\u0437\u0434-\u0432\u043e \u041c\u043e\u0441\u043a. \u0423\u043d-\u0442\u0430.
+        246 \u0441."},{"key":"3","unstructured":"\u0413\u0435\u043e\u0433\u0440\u0430\u0444\u0438\u0447\u0435\u0441\u043a\u0438\u0435
+        \u043f\u0440\u043e\u0431\u043b\u0435\u043c\u044b \u043e\u0441\u0443\u0448\u0438\u0442\u0435\u043b\u044c\u043d\u044b\u0445
+        \u043c\u0435\u043b\u0438\u043e\u0440\u0430\u0446\u0438\u0439 (1990). 187 \u0441."},{"key":"4","unstructured":"\u0420\u0430\u043c\u0435\u043d\u0441\u043a\u0438\u0439,
+        \u041b.\u0413. (1956). <i>\u042d\u043a\u043e\u043b\u043e\u0433\u0438\u0447\u0435\u0441\u043a\u0430\u044f
+        \u043e\u0446\u0435\u043d\u043a\u0430 \u043a\u043e\u0440\u043c\u043e\u0432\u044b\u0445
+        \u0443\u0433\u043e\u0434\u0438\u0439 \u043f\u043e \u0440\u0430\u0441\u0442\u0438\u0442\u0435\u043b\u044c\u043d\u043e\u043c\u0443
+        \u043f\u043e\u043a\u0440\u043e\u0432\u0443<\/i>. \u0413\u043e\u0441. \u0438\u0437\u0434-\u0432\u043e
+        \u0441\u0435\u043b\u044c\u0445\u043e\u0437. \u041b\u0438\u0442-\u0440\u044b.
+        470 \u0441."},{"issue":"6","key":"5","doi-asserted-by":"crossref","first-page":"1375","DOI":"10.1016\/j.soilbio.2005.10.012","article-title":"The
+        physicochemical and microbiological status of a restored bog in Quebec: Identification
+        of relevant criteria to monitor success","volume":"38","author":"R. Andersen","year":"2006","journal-title":"Soil
+        Biology and Biochemistry"},{"key":"6","first-page":"735","volume-title":"Vegetation
+        Ecology of Central Europe","author":"H. Ellenberg","year":"2009"},{"issue":"3","key":"7","doi-asserted-by":"crossref","first-page":"242","DOI":"10.1016\/j.landurbplan.2010.12.011","article-title":"Effects
+        of prospective landscape changes on species viability in Segre River valley,
+        NE Spain","volume":"100","author":"K. Franz","year":"2011","journal-title":"Landscape
+        and Urban Planning"},{"key":"8","first-page":"144","author":"M. Hayka","year":"1989","journal-title":"Geoecological
+        foundations of territotial planing"},{"key":"9","first-page":"416","volume-title":"Dynamics
+        of Agricultural lands of Russia in XX century and Postagrogenic Restoration
+        of vegetation and soils","author":"D. Lyuri","year":"2005"},{"key":"10","unstructured":"Millennium
+        Ecosystem Assessment (2005). <i>Ecosystems and Human Well-being.<\/i> Synthesis
+        Peport. \u2014 Island Press, Washington DC, 160 pp."},{"issue":"4","key":"11","doi-asserted-by":"crossref","first-page":"304","DOI":"10.1016\/j.agee.2009.10.010","article-title":"Abandonment
+        and intensified use of agricultural land decrease habitats of rare herbs in
+        semi-natural grasslands","volume":"135","author":"Y Uematsu","year":"2010","journal-title":"Agriculture,
+        Ecosystems & Environment"}],"container-title":["Journal of Landscape Ecology"],"link":[{"URL":"https:\/\/www.degruyter.com\/view\/j\/jlecol.2011.4.issue-3\/v10285-012-0042-z\/v10285-012-0042-z.pdf","content-type":"unspecified","content-version":"vor","intended-application":"similarity-checking"}],"deposited":{"date-parts":[[2020,5,30]],"date-time":"2020-05-30T16:10:08Z","timestamp":1590855008000},"score":0.0,"issued":{"date-parts":[[2011,1,1]]},"references-count":11,"journal-issue":{"issue":"3"},"URL":"http:\/\/dx.doi.org\/10.2478\/v10285-012-0042-z","ISSN":["1803-2427"],"issn-type":[{"value":"1803-2427","type":"print"}],"subject":["Management,
+        Monitoring, Policy and Law","Nature and Landscape Conservation","Ecology"],"published":{"date-parts":[[2011,1,1]]}},{"indexed":{"date-parts":[[2021,5,10]],"date-time":"2021-05-10T05:30:36Z","timestamp":1620624636116},"reference-count":38,"publisher":"Walter
+        de Gruyter GmbH","issue":"2","content-domain":{"domain":[],"crossmark-restriction":false},"published-print":{"date-parts":[[2009,1,1]]},"abstract":"<jats:title>Any
+        Lesson from the History of Sustainable Development?<\/jats:title>\n        <jats:p>Have
+        we still got time for sustainability and reasonable application of ideas of
+        sustainable development? It has been just over twenty years since the Brundtland
+        Commission Report but, taken as an axiological term; sustainable development
+        resonates with older historical horizons. At the heart of a long running history
+        we are beginning to articulate more or less sustaining relationships between
+        man and nature. We have described the (human) needs in the environmental,
+        economic and social dimension of sustainable development to show some amazing
+        shift in perception of sustainable development from local to global level.
+        We are convinced that historical lesson of sustainable development shows there
+        is no more time for sustainability, but time for SOStainability. Our proposed
+        S-O-S in SOStainability means Save Our Sustainability! SOStainability represents
+        the need to end the compromise between economic development and natural life
+        supporting systems.<\/jats:p>","DOI":"10.2478\/v10285-012-0015-2","type":"journal-article","created":{"date-parts":[[2012,8,10]],"date-time":"2012-08-10T09:14:38Z","timestamp":1344590078000},"page":"5-17","source":"Crossref","is-referenced-by-count":0,"title":["Any
+        Lesson from the History of Sustainable Development?"],"prefix":"10.2478","volume":"2","author":[{"given":"Miloslav","family":"Lapka","sequence":"first","affiliation":[]},{"given":"Eva","family":"Cudl\u00ednov\u00e1","sequence":"additional","affiliation":[]}],"member":"374","reference":[{"key":"1","unstructured":"Act
+        of Congress (1972). <i>US Marine Mammal Protection Act.<\/i> Retrieved 6.
+        September 2008, from <a target=\"_blank\" href=''http:\/\/www.nmfs.noaa.gov\/pr\/pdfs\/laws\/mmpa.pdf''>http:\/\/www.nmfs.noaa.gov\/pr\/pdfs\/laws\/mmpa.pdf<\/a>"},{"issue":"3","key":"2","doi-asserted-by":"crossref","first-page":"191","DOI":"10.3197\/096327194776679700","article-title":"\u2018Sustainable
+        Development\u2019: Is it a Useful Concept?''","volume":"3","author":"W. Beckerman","year":"1994","journal-title":"Environmental
+        Values"},{"issue":"2","key":"3","first-page":"169","article-title":"How Would
+        you Like your \u2018Sustainability\u2019, Sir? Weak or Strong? A Reply to
+        my Critics","volume":"4","author":"W. Beckermann","year":"1995","journal-title":"Environmental
+        Values"},{"key":"4","volume-title":"The Coming of the Post-Industrial Society.
+        A Venture in Social Forecasting","author":"D. Bell","year":"1973"},{"key":"5","unstructured":"Board
+        on Sustainable Development, National Research Council (1999). <i>Our Common
+        Journey: A Transition toward Sustainability.<\/i> Washington DC. National
+        Academy Press."},{"key":"6","unstructured":"Brundtland Commission - World
+        Commission on Environment and Development (WCED) (1987). <i>Our Common Future.<\/i>
+        Oxford University Press, Oxford, UK."},{"key":"7","volume-title":"Silent Spring","author":"R.
+        Carson","year":"1962"},{"issue":"3","key":"8","doi-asserted-by":"crossref","first-page":"1","DOI":"10.1086\/466560","article-title":"The
+        Problem of Social Cost","volume":"2","author":"R. Coase","year":"1960","journal-title":"Journal
+        of Law and Economics"},{"key":"9","volume-title":"Beyond Growth","author":"E.
+        Daly","year":"1996"},{"key":"10","volume-title":"For the Common Good: Redirecting
+        the Economy toward Community, the Environment, and a Sustainable Future","author":"H.
+        Daly","year":"1989"},{"issue":"1","key":"11","first-page":"49","article-title":"Discussion","volume":"4","author":"H.
+        Daly","year":"1995","journal-title":"Environmental Values"},{"key":"12","volume-title":"Managing
+        in a Time of Great Change","author":"P. Drucker","year":"1995"},{"issue":"2","key":"13","doi-asserted-by":"crossref","first-page":"185","DOI":"10.3197\/0963271054084966","article-title":"Capital
+        Substitutability and Weak Sustainability Revisited: The Conditions for Capital
+        Substitution in the Presence of Risk","volume":"14","author":"F. Figge","year":"2005","journal-title":"Environmental
+        Values"},{"key":"14","volume-title":"This Sacred Earth: Religion, Nature,
+        Environment","author":"R. Gottlieb","year":"1996"},{"issue":"3","key":"15","doi-asserted-by":"crossref","first-page":"291","DOI":"10.1016\/0047-2727(90)90002-Y","article-title":"Natural
+        Resources, National Accounting and Economic Depreciation","volume":"43","author":"J.
+        Hartwick","year":"1990","journal-title":"Journal of Public Economics"},{"issue":"3","key":"16","doi-asserted-by":"crossref","first-page":"8","DOI":"10.1080\/00139157.2005.10524444","article-title":"\u2018What
+        Is Sustainable Development? Goals, Indicators, Values, and Practice\u2019","volume":"47","author":"R.
+        Kates","year":"2005","journal-title":"Environment: Science and Policy for
+        Sustainable Development"},{"key":"17","volume-title":"Aldo Leopold and the
+        Ecological Conscience","author":"R. Knight","year":"2002"},{"key":"18","first-page":"137","volume-title":"Panswowe
+        wydawnictwo naukowe","volume":"1","author":"A. Le\u0144kowa","year":"1978"},{"key":"19","author":"A.
+        Leiserowitz","year":"2008","journal-title":"\u2018Toward a New Consciousness:
+        Values to Sustain Human and Natural Communities\u2019"},{"key":"20","volume-title":"A
+        Sand County Almanac","author":"A. Leopold","year":"1949"},{"key":"21","volume-title":"Principles
+        of Economics","author":"A. Marshall","year":"1920"},{"issue":"3","key":"22","doi-asserted-by":"crossref","first-page":"673","DOI":"10.1021\/es040394k","article-title":"Framing
+        the elusive concept of sustainability: a sustainability hierarchy","volume":"39","author":"J.
+        Marshall","year":"2005","journal-title":"Environmental Science and Technology"},{"key":"23","volume-title":"The
+        farther reaches of human nature","author":"A. Maslow","year":"1971"},{"key":"24","volume-title":"The
+        Limits to Growth","author":"D. Meadows","year":"1972"},{"issue":"6","key":"25","doi-asserted-by":"crossref","first-page":"493","DOI":"10.1016\/S0195-9255(98)00019-5","article-title":"Sustainability
+        and sustainable development. Historical and conceptual review","volume":"18","author":"D.
+        Mebratu","year":"1998","journal-title":"Environmental Impact Assessment Review"},{"key":"26","volume-title":"Weak
+        versus Strong Sustainability - Exploring the Limits of Two Opposing Paradigms","author":"E.
+        Neuymayer","year":"1999"},{"issue":"3","key":"27","doi-asserted-by":"crossref","first-page":"279","DOI":"10.3197\/096327104323312699","article-title":"Operationalising
+        Strong Sustainability: Definitions, Methodologies and Outcomes","volume":"13","author":"B.
+        \u00d6zkaynak","year":"2004","journal-title":"Environmental Values"},{"key":"28","volume-title":"Societies:
+        Evolutionary and Comparative Perspectives","author":"T. Parsons","year":"1966"},{"key":"29","volume-title":"Economics
+        of Natural Resources and the Environment","author":"D. Pearce","year":"1990"},{"key":"30","volume-title":"Blue
+        Print for a Green Economy","author":"D. Pearce","year":"1998"},{"key":"31","volume-title":"What
+        is Property? Principle of Right and of Government","author":"P. Proudhon","year":"1840"},{"issue":"2","key":"32","doi-asserted-by":"crossref","first-page":"3","DOI":"10.3197\/096327193776679981","article-title":"\u2018Sustainable
+        Development: Needs, Values, Rights\u2019","author":"M. Redclift","year":"1993","journal-title":"Environmental
+        Values"},{"key":"33","volume-title":"Resources, Values and Development","author":"A.
+        Sen","year":"1984"},{"key":"34","volume-title":"Small Is Beautiful","author":"E.
+        Schumacher","year":"1989"},{"key":"35","volume-title":"An Inquiry Into the
+        Nature and Causes of the Wealth of Nations. (In four volumes)","author":"A.
+        Smith","year":"1776"},{"issue":"3","key":"36","doi-asserted-by":"crossref","first-page":"162","DOI":"10.1016\/0301-4207(93)90001-4","article-title":"An
+        Almost Practical Step Toward Sustainability","volume":"19","author":"R. Solow","year":"1993","journal-title":"Resource
+        Policy"},{"key":"37","unstructured":"Anonymus (2002, September). <i>The Johannesburg
+        Declaration on Sustainable Development.<\/i> Retrieved 18 September 2008,
+        from <a target=\"_blank\" href=''http:\/\/www.housing.gov.za\/content\/legislation_policies\/johannesburg.htm''>http:\/\/www.housing.gov.za\/content\/legislation_policies\/johannesburg.htm<\/a>"},{"key":"38","volume-title":"The
+        Third Wave","author":"A. Toffler","year":"1990"}],"container-title":["Journal
+        of Landscape Ecology"],"link":[{"URL":"http:\/\/content.sciendo.com\/view\/journals\/jlecol\/2\/2\/article-p5.xml","content-type":"text\/html","content-version":"vor","intended-application":"text-mining"},{"URL":"https:\/\/www.degruyter.com\/view\/j\/jlecol.2009.2.issue-2\/v10285-012-0015-2\/v10285-012-0015-2.pdf","content-type":"unspecified","content-version":"vor","intended-application":"similarity-checking"}],"deposited":{"date-parts":[[2020,5,30]],"date-time":"2020-05-30T16:09:54Z","timestamp":1590854994000},"score":0.0,"issued":{"date-parts":[[2009,1,1]]},"references-count":38,"journal-issue":{"issue":"2"},"URL":"http:\/\/dx.doi.org\/10.2478\/v10285-012-0015-2","ISSN":["1803-2427"],"issn-type":[{"value":"1803-2427","type":"print"}],"subject":["Management,
+        Monitoring, Policy and Law","Nature and Landscape Conservation","Ecology"],"published":{"date-parts":[[2009,1,1]]}}],"items-per-page":5,"query":{"start-index":0,"search-terms":null}}}'
+  recorded_at: 2021-08-17 17:23:34 GMT
   recorded_with: vcr/1.0.2, webmockr/0.8.0

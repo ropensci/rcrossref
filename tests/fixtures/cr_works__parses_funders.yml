@@ -8,34 +8,39 @@ http_interactions:
     headers:
       Accept-Encoding: gzip, deflate
       Accept: application/json, text/xml, application/xml, */*
-      User-Agent: r-curl/4.3.2 crul/1.1.0 rOpenSci(rcrossref/1.1.0.94)
-      X-USER-AGENT: r-curl/4.3.2 crul/1.1.0 rOpenSci(rcrossref/1.1.0.94)
+      User-Agent: r-curl/4.3.2 crul/1.1.0 rOpenSci(rcrossref/1.1.0.94) (mailto:<crossref_email>)
+      X-USER-AGENT: r-curl/4.3.2 crul/1.1.0 rOpenSci(rcrossref/1.1.0.94) (mailto:<crossref_email>)
   response:
     status:
       status_code: '200'
       message: OK
       explanation: Request fulfilled, document follows
     headers:
-      status: HTTP/1.1 200 OK
-      date: Fri, 13 Aug 2021 13:02:26 GMT
-      content-type: application/json
-      content-length: '1312'
-      access-control-allow-origin: '*'
       access-control-allow-headers: X-Requested-With
-      vary: Accept-Encoding
-      content-encoding: gzip
-      server: Jetty(9.4.40.v20210413)
-      x-ratelimit-limit: '50'
-      x-ratelimit-interval: 1s
-      x-api-pool: public
-      x-rate-limit-limit: '50'
-      x-rate-limit-interval: 1s
-      permissions-policy: interest-cohort=()
+      access-control-allow-origin: '*'
       connection: close
+      content-encoding: gzip
+      content-length: '1311'
+      content-type: application/json
+      date: Tue, 17 Aug 2021 17:49:13 GMT
+      permissions-policy: interest-cohort=()
+      server: Jetty(9.4.40.v20210413)
+      set-cookie:
+      - AWSALB=1saTE3tgbA3r3a8cMd0nUFDoAQrcbQJqoT6sNKb3Kt3kMLDPUvKtpi5WBAaThWH2BrKedLsvRoCdaZ6LxrAYFycA7dhkYBjjuuSyCWxC78LwmifC8+FMrgESKLim;
+        Expires=Tue, 24 Aug 2021 17:49:13 GMT; Path=/
+      - AWSALBCORS=1saTE3tgbA3r3a8cMd0nUFDoAQrcbQJqoT6sNKb3Kt3kMLDPUvKtpi5WBAaThWH2BrKedLsvRoCdaZ6LxrAYFycA7dhkYBjjuuSyCWxC78LwmifC8+FMrgESKLim;
+        Expires=Tue, 24 Aug 2021 17:49:13 GMT; Path=/; SameSite=None
+      status: HTTP/1.1 200 OK
+      vary: Accept-Encoding
+      x-api-pool: polite
+      x-rate-limit-interval: 1s
+      x-rate-limit-limit: '50'
+      x-ratelimit-interval: 1s
+      x-ratelimit-limit: '50'
     body:
       encoding: UTF-8
       file: no
-      string: '{"status":"ok","message-type":"work","message-version":"1.0.0","message":{"indexed":{"date-parts":[[2021,5,12]],"date-time":"2021-05-12T04:52:09Z","timestamp":1620795129082},"reference-count":0,"publisher":"Walter
+      string: '{"status":"ok","message-type":"work","message-version":"1.0.0","message":{"indexed":{"date-parts":[[2021,5,12]],"date-time":"2021-05-12T04:52:07Z","timestamp":1620795127212},"reference-count":0,"publisher":"Walter
         de Gruyter GmbH","issue":"700","funder":[{"name":"NSF","award":["DMS-0800084"]},{"name":"NSF","award":["DMS-1206661"]},{"name":"NSF","award":["DMS-0804042"]},{"name":"NSF","award":["DMS-1105187"]}],"content-domain":{"domain":[],"crossmark-restriction":false},"short-container-title":[],"published-print":{"date-parts":[[2015,1,1]]},"abstract":"<jats:title>Abstract<\/jats:title><jats:p>We
         investigate rigidity and stability properties of critical points of quadratic
         curvature functionals on the space of Riemannian metrics. We show it is possible
@@ -52,7 +57,7 @@ http_interactions:
         A.","family":"Viaclovsky","sequence":"additional","affiliation":[]}],"member":"374","container-title":["Journal
         f\u00fcr die reine und angewandte Mathematik (Crelles Journal)"],"original-title":[],"link":[{"URL":"https:\/\/www.degruyter.com\/document\/doi\/10.1515\/crelle-2013-0024\/pdf","content-type":"unspecified","content-version":"vor","intended-application":"similarity-checking"}],"deposited":{"date-parts":[[2021,4,21]],"date-time":"2021-04-21T21:47:03Z","timestamp":1619041623000},"score":1,"subtitle":[],"short-title":[],"issued":{"date-parts":[[2015,1,1]]},"references-count":0,"journal-issue":{"issue":"700"},"URL":"http:\/\/dx.doi.org\/10.1515\/crelle-2013-0024","relation":{},"ISSN":["0075-4102","1435-5345"],"issn-type":[{"value":"0075-4102","type":"print"},{"value":"1435-5345","type":"electronic"}],"subject":["Applied
         Mathematics","General Mathematics"],"published":{"date-parts":[[2015,1,1]]}}}'
-  recorded_at: 2021-08-13 13:02:27 GMT
+  recorded_at: 2021-08-17 17:49:14 GMT
   recorded_with: vcr/1.0.2, webmockr/0.8.0
 - request:
     method: get
@@ -63,37 +68,42 @@ http_interactions:
     headers:
       Accept-Encoding: gzip, deflate
       Accept: application/json, text/xml, application/xml, */*
-      User-Agent: r-curl/4.3.2 crul/1.1.0 rOpenSci(rcrossref/1.1.0.94)
-      X-USER-AGENT: r-curl/4.3.2 crul/1.1.0 rOpenSci(rcrossref/1.1.0.94)
+      User-Agent: r-curl/4.3.2 crul/1.1.0 rOpenSci(rcrossref/1.1.0.94) (mailto:<crossref_email>)
+      X-USER-AGENT: r-curl/4.3.2 crul/1.1.0 rOpenSci(rcrossref/1.1.0.94) (mailto:<crossref_email>)
   response:
     status:
       status_code: '200'
       message: OK
       explanation: Request fulfilled, document follows
     headers:
-      status: HTTP/1.1 200 OK
-      date: Fri, 13 Aug 2021 13:02:27 GMT
-      content-type: application/json
-      content-length: '691'
-      access-control-allow-origin: '*'
       access-control-allow-headers: X-Requested-With
-      vary: Accept-Encoding
-      content-encoding: gzip
-      server: Jetty(9.4.40.v20210413)
-      x-ratelimit-limit: '50'
-      x-ratelimit-interval: 1s
-      x-api-pool: public
-      x-rate-limit-limit: '50'
-      x-rate-limit-interval: 1s
-      permissions-policy: interest-cohort=()
+      access-control-allow-origin: '*'
       connection: close
+      content-encoding: gzip
+      content-length: '692'
+      content-type: application/json
+      date: Tue, 17 Aug 2021 17:49:14 GMT
+      permissions-policy: interest-cohort=()
+      server: Jetty(9.4.40.v20210413)
+      set-cookie:
+      - AWSALB=rOI7s+t45sMBBpq+omgz2okiTnD0Kclk8Br4zNyaRSxs9MX8eKLpunvasPibaSIj1uRntu90S7fc13MSO8wz0tZChg+UV6Cjch08QpHj1bORNG1bNif705USmYsI;
+        Expires=Tue, 24 Aug 2021 17:49:14 GMT; Path=/
+      - AWSALBCORS=rOI7s+t45sMBBpq+omgz2okiTnD0Kclk8Br4zNyaRSxs9MX8eKLpunvasPibaSIj1uRntu90S7fc13MSO8wz0tZChg+UV6Cjch08QpHj1bORNG1bNif705USmYsI;
+        Expires=Tue, 24 Aug 2021 17:49:14 GMT; Path=/; SameSite=None
+      status: HTTP/1.1 200 OK
+      vary: Accept-Encoding
+      x-api-pool: polite
+      x-rate-limit-interval: 1s
+      x-rate-limit-limit: '50'
+      x-ratelimit-interval: 1s
+      x-ratelimit-limit: '50'
     body:
       encoding: UTF-8
       file: no
       string: '{"status":"ok","message-type":"work","message-version":"1.0.0","message":{"institution":[{"name":"ISRCTN","place":["London,
-        UK"]}],"indexed":{"date-parts":[[2021,5,10]],"date-time":"2021-05-10T12:42:28Z","timestamp":1620650548811},"reference-count":0,"publisher":"Springer
+        UK"]}],"indexed":{"date-parts":[[2021,5,10]],"date-time":"2021-05-10T12:39:05Z","timestamp":1620650345495},"reference-count":0,"publisher":"Springer
         Science and Business Media LLC","funder":[{"DOI":"10.13039\/501100000272","name":"National
         Institute for Health Research","doi-asserted-by":"publisher"}],"content-domain":{"domain":["www.isrctn.com"],"crossmark-restriction":true},"short-container-title":[],"DOI":"10.1186\/isrctn11093872","type":"dataset","created":{"date-parts":[[2015,11,11]],"date-time":"2015-11-11T07:20:04Z","timestamp":1447226404000},"update-policy":"http:\/\/dx.doi.org\/10.1186\/isrctn_crossmark_policy","source":"Crossref","is-referenced-by-count":0,"title":["CapaCiTY
         Study 2 - Chronic Constipation Treatment Pathway"],"prefix":"10.1186","author":[{"given":"Shiva","family":"Taheri","sequence":"first","affiliation":[]}],"member":"297","content-created":{"date-parts":[[2015,11,11]]},"container-title":["http:\/\/isrctn.com\/"],"original-title":[],"deposited":{"date-parts":[[2015,11,11]],"date-time":"2015-11-11T07:20:06Z","timestamp":1447226406000},"score":1,"subtitle":[],"short-title":[],"issued":{"date-parts":[[2015,11,11]]},"references-count":0,"URL":"http:\/\/dx.doi.org\/10.1186\/isrctn11093872","relation":{},"published":{"date-parts":[[2015,11,11]]}}}'
-  recorded_at: 2021-08-13 13:02:27 GMT
+  recorded_at: 2021-08-17 17:49:14 GMT
   recorded_with: vcr/1.0.2, webmockr/0.8.0

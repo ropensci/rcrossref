@@ -8,33 +8,38 @@ http_interactions:
     headers:
       Accept-Encoding: gzip, deflate
       Accept: application/json, text/xml, application/xml, */*
-      User-Agent: r-curl/4.3.2 crul/1.1.0 rOpenSci(rcrossref/1.1.0.94)
-      X-USER-AGENT: r-curl/4.3.2 crul/1.1.0 rOpenSci(rcrossref/1.1.0.94)
+      User-Agent: r-curl/4.3.2 crul/1.1.0 rOpenSci(rcrossref/1.1.0.94) (mailto:<crossref_email>)
+      X-USER-AGENT: r-curl/4.3.2 crul/1.1.0 rOpenSci(rcrossref/1.1.0.94) (mailto:<crossref_email>)
   response:
     status:
       status_code: '200'
       message: OK
       explanation: Request fulfilled, document follows
     headers:
-      status: HTTP/1.1 200 OK
-      date: Fri, 13 Aug 2021 13:04:07 GMT
-      content-type: application/json
-      content-length: '191'
-      access-control-allow-origin: '*'
       access-control-allow-headers: X-Requested-With
-      server: Jetty(9.4.40.v20210413)
-      x-ratelimit-limit: '50'
-      x-ratelimit-interval: 1s
-      x-api-pool: public
-      x-rate-limit-limit: '50'
-      x-rate-limit-interval: 1s
-      permissions-policy: interest-cohort=()
+      access-control-allow-origin: '*'
       connection: close
+      content-length: '191'
+      content-type: application/json
+      date: Tue, 17 Aug 2021 17:54:07 GMT
+      permissions-policy: interest-cohort=()
+      server: Jetty(9.4.40.v20210413)
+      set-cookie:
+      - AWSALB=SGcH+gLthafm3DX91Aq4oI12ZjrvYNI5ReUIlncWwedqU3ItdTZE3jfuoLVUoPbnLquP18yvvv80AfsmDPpiavq3tyi/ATqpIKPNEwt2qNlHpyUq0O07yNLpC7dV;
+        Expires=Tue, 24 Aug 2021 17:54:07 GMT; Path=/
+      - AWSALBCORS=SGcH+gLthafm3DX91Aq4oI12ZjrvYNI5ReUIlncWwedqU3ItdTZE3jfuoLVUoPbnLquP18yvvv80AfsmDPpiavq3tyi/ATqpIKPNEwt2qNlHpyUq0O07yNLpC7dV;
+        Expires=Tue, 24 Aug 2021 17:54:07 GMT; Path=/; SameSite=None
+      status: HTTP/1.1 200 OK
+      x-api-pool: polite
+      x-rate-limit-interval: 1s
+      x-rate-limit-limit: '50'
+      x-ratelimit-interval: 1s
+      x-ratelimit-limit: '50'
     body:
       encoding: UTF-8
       file: no
       string: '{"status":"ok","message-type":"work-list","message-version":"1.0.0","message":{"facets":{},"total-results":0,"items":[],"items-per-page":20,"query":{"start-index":0,"search-terms":"adfaaf"}}}'
-  recorded_at: 2021-08-13 13:04:07 GMT
+  recorded_at: 2021-08-17 17:54:08 GMT
   recorded_with: vcr/1.0.2, webmockr/0.8.0
 - request:
     method: get
@@ -45,34 +50,39 @@ http_interactions:
     headers:
       Accept-Encoding: gzip, deflate
       Accept: application/json, text/xml, application/xml, */*
-      User-Agent: r-curl/4.3.2 crul/1.1.0 rOpenSci(rcrossref/1.1.0.94)
-      X-USER-AGENT: r-curl/4.3.2 crul/1.1.0 rOpenSci(rcrossref/1.1.0.94)
+      User-Agent: r-curl/4.3.2 crul/1.1.0 rOpenSci(rcrossref/1.1.0.94) (mailto:<crossref_email>)
+      X-USER-AGENT: r-curl/4.3.2 crul/1.1.0 rOpenSci(rcrossref/1.1.0.94) (mailto:<crossref_email>)
   response:
     status:
       status_code: '400'
       message: Bad Request
       explanation: Bad request syntax or unsupported method
     headers:
-      status: HTTP/1.1 400 Bad Request
-      date: Fri, 13 Aug 2021 13:04:07 GMT
-      content-type: application/json;charset=utf-8
-      content-length: '206'
-      vary: Accept
-      access-control-allow-origin: '*'
       access-control-allow-headers: X-Requested-With
-      server: Jetty(9.4.40.v20210413)
-      x-ratelimit-limit: '50'
-      x-ratelimit-interval: 1s
-      x-api-pool: public
-      x-rate-limit-limit: '50'
-      x-rate-limit-interval: 1s
-      permissions-policy: interest-cohort=()
+      access-control-allow-origin: '*'
       connection: close
+      content-length: '206'
+      content-type: application/json;charset=utf-8
+      date: Tue, 17 Aug 2021 17:54:08 GMT
+      permissions-policy: interest-cohort=()
+      server: Jetty(9.4.40.v20210413)
+      set-cookie:
+      - AWSALB=q4Lw494g52wP+PnvaEXLZCdwqiqEFOPa7pb2NakA5XZP0uOfhCtOwkc33uqBqWNBY+jnWcoCFaL1M1RbcB1qLagXlM/Y43JEqeHUSUuz1spdTXEKW8HQoFkFbSru;
+        Expires=Tue, 24 Aug 2021 17:54:08 GMT; Path=/
+      - AWSALBCORS=q4Lw494g52wP+PnvaEXLZCdwqiqEFOPa7pb2NakA5XZP0uOfhCtOwkc33uqBqWNBY+jnWcoCFaL1M1RbcB1qLagXlM/Y43JEqeHUSUuz1spdTXEKW8HQoFkFbSru;
+        Expires=Tue, 24 Aug 2021 17:54:08 GMT; Path=/; SameSite=None
+      status: HTTP/1.1 400 Bad Request
+      vary: Accept
+      x-api-pool: polite
+      x-rate-limit-interval: 1s
+      x-rate-limit-limit: '50'
+      x-ratelimit-interval: 1s
+      x-ratelimit-limit: '50'
     body:
       encoding: UTF-8
       file: no
       string: '{"status":"failed","message-type":"validation-failure","message":[{"type":"integer-not-valid","value":"200","message":"Integer
         specified as 200 but must be a positive integer less than or equal to 100.
         "}]}'
-  recorded_at: 2021-08-13 13:04:07 GMT
+  recorded_at: 2021-08-17 17:54:08 GMT
   recorded_with: vcr/1.0.2, webmockr/0.8.0

@@ -8,34 +8,39 @@ http_interactions:
     headers:
       Accept-Encoding: gzip, deflate
       Accept: application/json, text/xml, application/xml, */*
-      User-Agent: r-curl/4.3.2 crul/1.1.0 rOpenSci(rcrossref/1.1.0.94)
-      X-USER-AGENT: r-curl/4.3.2 crul/1.1.0 rOpenSci(rcrossref/1.1.0.94)
+      User-Agent: r-curl/4.3.2 crul/1.1.0 rOpenSci(rcrossref/1.1.0.94) (mailto:<crossref_email>)
+      X-USER-AGENT: r-curl/4.3.2 crul/1.1.0 rOpenSci(rcrossref/1.1.0.94) (mailto:<crossref_email>)
   response:
     status:
       status_code: '200'
       message: OK
       explanation: Request fulfilled, document follows
     headers:
-      status: HTTP/1.1 200 OK
-      date: Fri, 13 Aug 2021 12:53:34 GMT
-      content-type: application/json;charset=utf-8
-      content-length: '166'
-      vary: Accept
-      access-control-allow-origin: '*'
       access-control-allow-headers: X-Requested-With
-      server: Jetty(9.4.40.v20210413)
-      x-ratelimit-limit: '50'
-      x-ratelimit-interval: 1s
-      x-api-pool: public
-      x-rate-limit-limit: '50'
-      x-rate-limit-interval: 1s
-      permissions-policy: interest-cohort=()
+      access-control-allow-origin: '*'
       connection: close
+      content-length: '166'
+      content-type: application/json;charset=utf-8
+      date: Tue, 17 Aug 2021 17:22:23 GMT
+      permissions-policy: interest-cohort=()
+      server: Jetty(9.4.40.v20210413)
+      set-cookie:
+      - AWSALB=CRHyCF5pV45uK+0hemzaXvqFIjVgRjuW0YdD43H+OcWELvonCKLBZqzPj8bK0iHGA83mm+iIG6T/zkafapcsFC2lFVWEv6oEEdDAPjpS3ZcD89YUMU69yraO7Rpg;
+        Expires=Tue, 24 Aug 2021 17:22:23 GMT; Path=/
+      - AWSALBCORS=CRHyCF5pV45uK+0hemzaXvqFIjVgRjuW0YdD43H+OcWELvonCKLBZqzPj8bK0iHGA83mm+iIG6T/zkafapcsFC2lFVWEv6oEEdDAPjpS3ZcD89YUMU69yraO7Rpg;
+        Expires=Tue, 24 Aug 2021 17:22:23 GMT; Path=/; SameSite=None
+      status: HTTP/1.1 200 OK
+      vary: Accept
+      x-api-pool: polite
+      x-rate-limit-interval: 1s
+      x-rate-limit-limit: '50'
+      x-ratelimit-interval: 1s
+      x-ratelimit-limit: '50'
     body:
       encoding: UTF-8
       file: no
       string: '{"status":"ok","message-type":"work-agency","message-version":"1.0.0","message":{"DOI":"10.1126\/science.169.3946.635","agency":{"id":"crossref","label":"Crossref"}}}'
-  recorded_at: 2021-08-13 12:53:35 GMT
+  recorded_at: 2021-08-17 17:22:25 GMT
   recorded_with: vcr/1.0.2, webmockr/0.8.0
 - request:
     method: get
@@ -45,8 +50,8 @@ http_interactions:
       string: ''
     headers:
       Accept-Encoding: gzip, deflate
-      User-Agent: r-curl/4.3.2 crul/1.1.0 rOpenSci(rcrossref/1.1.0.94)
-      X-USER-AGENT: r-curl/4.3.2 crul/1.1.0 rOpenSci(rcrossref/1.1.0.94)
+      User-Agent: r-curl/4.3.2 crul/1.1.0 rOpenSci(rcrossref/1.1.0.94) (mailto:<crossref_email>)
+      X-USER-AGENT: r-curl/4.3.2 crul/1.1.0 rOpenSci(rcrossref/1.1.0.94) (mailto:<crossref_email>)
       Accept: application/x-bibtex
   response:
     status:
@@ -64,7 +69,7 @@ http_interactions:
       content-type: application/x-bibtex
       content-length: '459'
       server: http-kit
-      date: Fri, 13 Aug 2021 12:53:35 GMT
+      date: Tue, 17 Aug 2021 17:22:24 GMT
       x-rate-limit-limit: '50'
       x-rate-limit-interval: 1s
       permissions-policy: interest-cohort=()
@@ -79,5 +84,5 @@ http_interactions:
         = {H. S. Frank},\n\ttitle = {The Structure of Ordinary Water: New data and
         interpretations are yielding new insights into this fascinating substance},\n\tjournal
         = {Science}\n}"
-  recorded_at: 2021-08-13 12:53:35 GMT
+  recorded_at: 2021-08-17 17:22:25 GMT
   recorded_with: vcr/1.0.2, webmockr/0.8.0

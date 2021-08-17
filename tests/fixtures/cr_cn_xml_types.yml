@@ -8,29 +8,34 @@ http_interactions:
     headers:
       Accept-Encoding: gzip, deflate
       Accept: application/json, text/xml, application/xml, */*
-      User-Agent: r-curl/4.3.2 crul/1.1.0 rOpenSci(rcrossref/1.1.0.94)
-      X-USER-AGENT: r-curl/4.3.2 crul/1.1.0 rOpenSci(rcrossref/1.1.0.94)
+      User-Agent: r-curl/4.3.2 crul/1.1.0 rOpenSci(rcrossref/1.1.0.94) (mailto:<crossref_email>)
+      X-USER-AGENT: r-curl/4.3.2 crul/1.1.0 rOpenSci(rcrossref/1.1.0.94) (mailto:<crossref_email>)
   response:
     status:
       status_code: '200'
       message: OK
       explanation: Request fulfilled, document follows
     headers:
-      status: HTTP/1.1 200 OK
-      date: Fri, 13 Aug 2021 12:53:35 GMT
-      content-type: application/json;charset=utf-8
-      content-length: '166'
-      vary: Accept
-      access-control-allow-origin: '*'
       access-control-allow-headers: X-Requested-With
-      server: Jetty(9.4.40.v20210413)
-      x-ratelimit-limit: '50'
-      x-ratelimit-interval: 1s
-      x-api-pool: public
-      x-rate-limit-limit: '50'
-      x-rate-limit-interval: 1s
-      permissions-policy: interest-cohort=()
+      access-control-allow-origin: '*'
       connection: close
+      content-length: '166'
+      content-type: application/json;charset=utf-8
+      date: Tue, 17 Aug 2021 17:22:25 GMT
+      permissions-policy: interest-cohort=()
+      server: Jetty(9.4.40.v20210413)
+      set-cookie:
+      - AWSALB=Ib43hPr99lHG61oYjaUNhVUAjVtQrv0S9y9VuIgdoW2B5LG8gYKtkRInOBDjRkk11/Jq18jfMQFZbWZ9TjmIxgqt1sNm6qbKBnJjWAw1nRoo405XKdEL27b6Zx7E;
+        Expires=Tue, 24 Aug 2021 17:22:25 GMT; Path=/
+      - AWSALBCORS=Ib43hPr99lHG61oYjaUNhVUAjVtQrv0S9y9VuIgdoW2B5LG8gYKtkRInOBDjRkk11/Jq18jfMQFZbWZ9TjmIxgqt1sNm6qbKBnJjWAw1nRoo405XKdEL27b6Zx7E;
+        Expires=Tue, 24 Aug 2021 17:22:25 GMT; Path=/; SameSite=None
+      status: HTTP/1.1 200 OK
+      vary: Accept
+      x-api-pool: polite
+      x-rate-limit-interval: 1s
+      x-rate-limit-limit: '50'
+      x-ratelimit-interval: 1s
+      x-ratelimit-limit: '50'
     body:
       encoding: ASCII-8BIT
       file: no
@@ -38,7 +43,7 @@ http_interactions:
         eyJzdGF0dXMiOiJvayIsIm1lc3NhZ2UtdHlwZSI6IndvcmstYWdlbmN5IiwibWVzc2FnZS12ZXJzaW9u
         IjoiMS4wLjAiLCJtZXNzYWdlIjp7IkRPSSI6IjEwLjExMjZcL3NjaWVuY2UuMTY5LjM5NDYuNjM1Iiwi
         YWdlbmN5Ijp7ImlkIjoiY3Jvc3NyZWYiLCJsYWJlbCI6IkNyb3NzcmVmIn19fQ==
-  recorded_at: 2021-08-13 12:53:40 GMT
+  recorded_at: 2021-08-17 17:22:29 GMT
   recorded_with: vcr/1.0.2, webmockr/0.8.0
 - request:
     method: get
@@ -48,8 +53,8 @@ http_interactions:
       string: ''
     headers:
       Accept-Encoding: gzip, deflate
-      User-Agent: r-curl/4.3.2 crul/1.1.0 rOpenSci(rcrossref/1.1.0.94)
-      X-USER-AGENT: r-curl/4.3.2 crul/1.1.0 rOpenSci(rcrossref/1.1.0.94)
+      User-Agent: r-curl/4.3.2 crul/1.1.0 rOpenSci(rcrossref/1.1.0.94) (mailto:<crossref_email>)
+      X-USER-AGENT: r-curl/4.3.2 crul/1.1.0 rOpenSci(rcrossref/1.1.0.94) (mailto:<crossref_email>)
       Accept: application/rdf+xml
   response:
     status:
@@ -67,7 +72,7 @@ http_interactions:
       content-type: application/rdf+xml
       content-length: '2000'
       server: http-kit
-      date: Fri, 13 Aug 2021 12:53:36 GMT
+      date: Tue, 17 Aug 2021 17:22:26 GMT
       x-rate-limit-limit: '50'
       x-rate-limit-interval: 1s
       permissions-policy: interest-cohort=()
@@ -110,7 +115,7 @@ http_interactions:
         bWEjZGF0ZSIKICAgID4xOTcwLTA4LTE0PC9qLjA6ZGF0ZT4KICAgIDxqLjE6dm9sdW1lPjE2OTwvai4x
         OnZvbHVtZT4KICAgIDxqLjI6cGFnZVN0YXJ0PjYzNTwvai4yOnBhZ2VTdGFydD4KICA8L3JkZjpEZXNj
         cmlwdGlvbj4KPC9yZGY6UkRGPgo=
-  recorded_at: 2021-08-13 12:53:40 GMT
+  recorded_at: 2021-08-17 17:22:29 GMT
   recorded_with: vcr/1.0.2, webmockr/0.8.0
 - request:
     method: get
@@ -121,29 +126,34 @@ http_interactions:
     headers:
       Accept-Encoding: gzip, deflate
       Accept: application/json, text/xml, application/xml, */*
-      User-Agent: r-curl/4.3.2 crul/1.1.0 rOpenSci(rcrossref/1.1.0.94)
-      X-USER-AGENT: r-curl/4.3.2 crul/1.1.0 rOpenSci(rcrossref/1.1.0.94)
+      User-Agent: r-curl/4.3.2 crul/1.1.0 rOpenSci(rcrossref/1.1.0.94) (mailto:<crossref_email>)
+      X-USER-AGENT: r-curl/4.3.2 crul/1.1.0 rOpenSci(rcrossref/1.1.0.94) (mailto:<crossref_email>)
   response:
     status:
       status_code: '200'
       message: OK
       explanation: Request fulfilled, document follows
     headers:
-      status: HTTP/1.1 200 OK
-      date: Fri, 13 Aug 2021 12:53:37 GMT
-      content-type: application/json;charset=utf-8
-      content-length: '166'
-      vary: Accept
-      access-control-allow-origin: '*'
       access-control-allow-headers: X-Requested-With
-      server: Jetty(9.4.40.v20210413)
-      x-ratelimit-limit: '50'
-      x-ratelimit-interval: 1s
-      x-api-pool: public
-      x-rate-limit-limit: '50'
-      x-rate-limit-interval: 1s
-      permissions-policy: interest-cohort=()
+      access-control-allow-origin: '*'
       connection: close
+      content-length: '166'
+      content-type: application/json;charset=utf-8
+      date: Tue, 17 Aug 2021 17:22:27 GMT
+      permissions-policy: interest-cohort=()
+      server: Jetty(9.4.40.v20210413)
+      set-cookie:
+      - AWSALB=8EV52hl5Wo+xmgM7ecyP+gXlGp3Qtyjh1EErzNgBWgoRElHM3f5AQTnMVRkfHbQRbXn6KaUkOYrdzoUC+6An2gRQTlqU6+xVyjMLlFB9bKn+zvJfKGK6wVV8JIN3;
+        Expires=Tue, 24 Aug 2021 17:22:27 GMT; Path=/
+      - AWSALBCORS=8EV52hl5Wo+xmgM7ecyP+gXlGp3Qtyjh1EErzNgBWgoRElHM3f5AQTnMVRkfHbQRbXn6KaUkOYrdzoUC+6An2gRQTlqU6+xVyjMLlFB9bKn+zvJfKGK6wVV8JIN3;
+        Expires=Tue, 24 Aug 2021 17:22:27 GMT; Path=/; SameSite=None
+      status: HTTP/1.1 200 OK
+      vary: Accept
+      x-api-pool: polite
+      x-rate-limit-interval: 1s
+      x-rate-limit-limit: '50'
+      x-ratelimit-interval: 1s
+      x-ratelimit-limit: '50'
     body:
       encoding: ASCII-8BIT
       file: no
@@ -151,7 +161,7 @@ http_interactions:
         eyJzdGF0dXMiOiJvayIsIm1lc3NhZ2UtdHlwZSI6IndvcmstYWdlbmN5IiwibWVzc2FnZS12ZXJzaW9u
         IjoiMS4wLjAiLCJtZXNzYWdlIjp7IkRPSSI6IjEwLjExMjZcL3NjaWVuY2UuMTY5LjM5NDYuNjM1Iiwi
         YWdlbmN5Ijp7ImlkIjoiY3Jvc3NyZWYiLCJsYWJlbCI6IkNyb3NzcmVmIn19fQ==
-  recorded_at: 2021-08-13 12:53:40 GMT
+  recorded_at: 2021-08-17 17:22:29 GMT
   recorded_with: vcr/1.0.2, webmockr/0.8.0
 - request:
     method: get
@@ -161,8 +171,8 @@ http_interactions:
       string: ''
     headers:
       Accept-Encoding: gzip, deflate
-      User-Agent: r-curl/4.3.2 crul/1.1.0 rOpenSci(rcrossref/1.1.0.94)
-      X-USER-AGENT: r-curl/4.3.2 crul/1.1.0 rOpenSci(rcrossref/1.1.0.94)
+      User-Agent: r-curl/4.3.2 crul/1.1.0 rOpenSci(rcrossref/1.1.0.94) (mailto:<crossref_email>)
+      X-USER-AGENT: r-curl/4.3.2 crul/1.1.0 rOpenSci(rcrossref/1.1.0.94) (mailto:<crossref_email>)
       Accept: application/vnd.crossref.unixref+xml
   response:
     status:
@@ -180,7 +190,7 @@ http_interactions:
       content-type: application/vnd.crossref.unixref+xml
       content-length: '2286'
       server: http-kit
-      date: Fri, 13 Aug 2021 12:53:39 GMT
+      date: Tue, 17 Aug 2021 17:22:27 GMT
       x-rate-limit-limit: '50'
       x-rate-limit-interval: 1s
       permissions-policy: interest-cohort=()
@@ -228,7 +238,7 @@ http_interactions:
         ZWN0aW9uPg0KICAgICAgICAgIDwvZG9pX2RhdGE+DQogICAgICAgIDwvam91cm5hbF9hcnRpY2xlPg0K
         ICAgICAgPC9qb3VybmFsPg0KICAgIDwvY3Jvc3NyZWY+DQogIDwvZG9pX3JlY29yZD4NCjwvZG9pX3Jl
         Y29yZHM+
-  recorded_at: 2021-08-13 12:53:40 GMT
+  recorded_at: 2021-08-17 17:22:29 GMT
   recorded_with: vcr/1.0.2, webmockr/0.8.0
 - request:
     method: get
@@ -239,29 +249,34 @@ http_interactions:
     headers:
       Accept-Encoding: gzip, deflate
       Accept: application/json, text/xml, application/xml, */*
-      User-Agent: r-curl/4.3.2 crul/1.1.0 rOpenSci(rcrossref/1.1.0.94)
-      X-USER-AGENT: r-curl/4.3.2 crul/1.1.0 rOpenSci(rcrossref/1.1.0.94)
+      User-Agent: r-curl/4.3.2 crul/1.1.0 rOpenSci(rcrossref/1.1.0.94) (mailto:<crossref_email>)
+      X-USER-AGENT: r-curl/4.3.2 crul/1.1.0 rOpenSci(rcrossref/1.1.0.94) (mailto:<crossref_email>)
   response:
     status:
       status_code: '200'
       message: OK
       explanation: Request fulfilled, document follows
     headers:
-      status: HTTP/1.1 200 OK
-      date: Fri, 13 Aug 2021 12:53:40 GMT
-      content-type: application/json;charset=utf-8
-      content-length: '150'
-      vary: Accept
-      access-control-allow-origin: '*'
       access-control-allow-headers: X-Requested-With
-      server: Jetty(9.4.40.v20210413)
-      x-ratelimit-limit: '50'
-      x-ratelimit-interval: 1s
-      x-api-pool: public
-      x-rate-limit-limit: '50'
-      x-rate-limit-interval: 1s
-      permissions-policy: interest-cohort=()
+      access-control-allow-origin: '*'
       connection: close
+      content-length: '150'
+      content-type: application/json;charset=utf-8
+      date: Tue, 17 Aug 2021 17:22:28 GMT
+      permissions-policy: interest-cohort=()
+      server: Jetty(9.4.40.v20210413)
+      set-cookie:
+      - AWSALB=OKZL+qfF2ZJD0NiOVoif59c3YQLAbIQ0w0a5kmgOoywg8Y2SNJMvpfIVCl6LmpUdVzWpDIi4lUytj+KKpk5IMrt5T3CYViHpO3hCNqKhHQ7Gn/MIgnHUUCw/K6EI;
+        Expires=Tue, 24 Aug 2021 17:22:28 GMT; Path=/
+      - AWSALBCORS=OKZL+qfF2ZJD0NiOVoif59c3YQLAbIQ0w0a5kmgOoywg8Y2SNJMvpfIVCl6LmpUdVzWpDIi4lUytj+KKpk5IMrt5T3CYViHpO3hCNqKhHQ7Gn/MIgnHUUCw/K6EI;
+        Expires=Tue, 24 Aug 2021 17:22:28 GMT; Path=/; SameSite=None
+      status: HTTP/1.1 200 OK
+      vary: Accept
+      x-api-pool: polite
+      x-rate-limit-interval: 1s
+      x-rate-limit-limit: '50'
+      x-ratelimit-interval: 1s
+      x-ratelimit-limit: '50'
     body:
       encoding: ASCII-8BIT
       file: no
@@ -269,7 +284,7 @@ http_interactions:
         eyJzdGF0dXMiOiJvayIsIm1lc3NhZ2UtdHlwZSI6IndvcmstYWdlbmN5IiwibWVzc2FnZS12ZXJzaW9u
         IjoiMS4wLjAiLCJtZXNzYWdlIjp7IkRPSSI6IjEwLjMyMzNcL2lzdS0xNTA3ODAiLCJhZ2VuY3kiOnsi
         aWQiOiJtZWRyYSIsImxhYmVsIjoibUVEUkEifX19
-  recorded_at: 2021-08-13 12:53:40 GMT
+  recorded_at: 2021-08-17 17:22:29 GMT
   recorded_with: vcr/1.0.2, webmockr/0.8.0
 - request:
     method: get
@@ -279,8 +294,8 @@ http_interactions:
       string: ''
     headers:
       Accept-Encoding: gzip, deflate
-      User-Agent: r-curl/4.3.2 crul/1.1.0 rOpenSci(rcrossref/1.1.0.94)
-      X-USER-AGENT: r-curl/4.3.2 crul/1.1.0 rOpenSci(rcrossref/1.1.0.94)
+      User-Agent: r-curl/4.3.2 crul/1.1.0 rOpenSci(rcrossref/1.1.0.94) (mailto:<crossref_email>)
+      X-USER-AGENT: r-curl/4.3.2 crul/1.1.0 rOpenSci(rcrossref/1.1.0.94) (mailto:<crossref_email>)
       Accept: application/vnd.medra.onixdoi+xml
   response:
     status:
@@ -289,7 +304,7 @@ http_interactions:
       explanation: Request fulfilled, document follows
     headers:
       status: HTTP/1.1 200 OK
-      date: Fri, 13 Aug 2021 12:53:40 GMT
+      date: Tue, 17 Aug 2021 17:22:29 GMT
       server: Apache-Coyote/1.1
       cache-control: no-transform, max-age=60
       access-control-allow-origin: '*'
@@ -311,7 +326,7 @@ http_interactions:
         L0RPSU1ldGFkYXRhLzIuMC9PTklYX0RPSU1ldGFkYXRhXzIuMC54c2QiPgogICA8SGVhZGVyPgogICAg
         ICA8RnJvbUNvbXBhbnk+bUVEUkE8L0Zyb21Db21wYW55PgogICAgICA8RnJvbUVtYWlsPm1lZHJhQG1l
         ZHJhLm9yZzwvRnJvbUVtYWlsPgogICAgICA8VG9Db21wYW55PlB1YmxpY1NlcnZpY2U8L1RvQ29tcGFu
-        eT4KICAgICAgPFNlbnREYXRlPjIwMjEwODEzPC9TZW50RGF0ZT4KICAgPC9IZWFkZXI+CiAgIDxET0lT
+        eT4KICAgICAgPFNlbnREYXRlPjIwMjEwODE3PC9TZW50RGF0ZT4KICAgPC9IZWFkZXI+CiAgIDxET0lT
         ZXJpYWxBcnRpY2xlV29yaz4KICAgICAgPE5vdGlmaWNhdGlvblR5cGU+MDc8L05vdGlmaWNhdGlvblR5
         cGU+CiAgICAgIDxET0k+MTAuMzIzMy9JU1UtMTUwNzgwPC9ET0k+CiAgICAgIDxET0lXZWJzaXRlTGlu
         az5odHRwczovL3d3dy5tZWRyYS5vcmcvc2VydmxldC9hbGlhc1Jlc29sdmVyP2FsaWFzPWlvc3ByZXNz
@@ -383,5 +398,5 @@ http_interactions:
         IDwvQ29weXJpZ2h0T3duZXI+CiAgICAgICAgIDwvQ29weXJpZ2h0U3RhdGVtZW50PgogICAgICA8L0Nv
         bnRlbnRJdGVtPgogICA8L0RPSVNlcmlhbEFydGljbGVXb3JrPgo8L09OSVhET0lTZXJpYWxBcnRpY2xl
         V29ya1JlZ2lzdHJhdGlvbk1lc3NhZ2U+
-  recorded_at: 2021-08-13 12:53:40 GMT
+  recorded_at: 2021-08-17 17:22:29 GMT
   recorded_with: vcr/1.0.2, webmockr/0.8.0

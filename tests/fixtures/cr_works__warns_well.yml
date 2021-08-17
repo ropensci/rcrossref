@@ -8,34 +8,39 @@ http_interactions:
     headers:
       Accept-Encoding: gzip, deflate
       Accept: application/json, text/xml, application/xml, */*
-      User-Agent: r-curl/4.3.2 crul/1.1.0 rOpenSci(rcrossref/1.1.0.94)
-      X-USER-AGENT: r-curl/4.3.2 crul/1.1.0 rOpenSci(rcrossref/1.1.0.94)
+      User-Agent: r-curl/4.3.2 crul/1.1.0 rOpenSci(rcrossref/1.1.0.94) (mailto:<crossref_email>)
+      X-USER-AGENT: r-curl/4.3.2 crul/1.1.0 rOpenSci(rcrossref/1.1.0.94) (mailto:<crossref_email>)
   response:
     status:
       status_code: '404'
       message: Not Found
       explanation: Nothing matches the given URI
     headers:
-      status: HTTP/1.1 404 Not Found
-      date: Fri, 13 Aug 2021 13:02:18 GMT
-      content-type: application/json;charset=utf-8
-      content-length: '19'
-      vary: Accept
-      access-control-allow-origin: '*'
       access-control-allow-headers: X-Requested-With
-      server: Jetty(9.4.40.v20210413)
-      x-ratelimit-limit: '50'
-      x-ratelimit-interval: 1s
-      x-api-pool: public
-      x-rate-limit-limit: '50'
-      x-rate-limit-interval: 1s
-      permissions-policy: interest-cohort=()
+      access-control-allow-origin: '*'
       connection: close
+      content-length: '19'
+      content-type: application/json;charset=utf-8
+      date: Tue, 17 Aug 2021 17:26:43 GMT
+      permissions-policy: interest-cohort=()
+      server: Jetty(9.4.40.v20210413)
+      set-cookie:
+      - AWSALB=NEcmHz76aiq1Xnlr8ZwgWxyys6nS+TuEg58CWmHP8wX7+ZbIR0DjS4THk3ofcle1Ztw2SJnGrRa53I4kpIcQSUd4pH/uJ7pQq/fPbBypW7MF7o+YqpBYemwGmQpH;
+        Expires=Tue, 24 Aug 2021 17:26:43 GMT; Path=/
+      - AWSALBCORS=NEcmHz76aiq1Xnlr8ZwgWxyys6nS+TuEg58CWmHP8wX7+ZbIR0DjS4THk3ofcle1Ztw2SJnGrRa53I4kpIcQSUd4pH/uJ7pQq/fPbBypW7MF7o+YqpBYemwGmQpH;
+        Expires=Tue, 24 Aug 2021 17:26:43 GMT; Path=/; SameSite=None
+      status: HTTP/1.1 404 Not Found
+      vary: Accept
+      x-api-pool: polite
+      x-rate-limit-interval: 1s
+      x-rate-limit-limit: '50'
+      x-ratelimit-interval: 1s
+      x-ratelimit-limit: '50'
     body:
       encoding: UTF-8
       file: no
       string: Resource not found.
-  recorded_at: 2021-08-13 13:02:20 GMT
+  recorded_at: 2021-08-17 17:26:45 GMT
   recorded_with: vcr/1.0.2, webmockr/0.8.0
 - request:
     method: get
@@ -46,34 +51,39 @@ http_interactions:
     headers:
       Accept-Encoding: gzip, deflate
       Accept: application/json, text/xml, application/xml, */*
-      User-Agent: r-curl/4.3.2 crul/1.1.0 rOpenSci(rcrossref/1.1.0.94)
-      X-USER-AGENT: r-curl/4.3.2 crul/1.1.0 rOpenSci(rcrossref/1.1.0.94)
+      User-Agent: r-curl/4.3.2 crul/1.1.0 rOpenSci(rcrossref/1.1.0.94) (mailto:<crossref_email>)
+      X-USER-AGENT: r-curl/4.3.2 crul/1.1.0 rOpenSci(rcrossref/1.1.0.94) (mailto:<crossref_email>)
   response:
     status:
       status_code: '200'
       message: OK
       explanation: Request fulfilled, document follows
     headers:
-      status: HTTP/1.1 200 OK
-      date: Fri, 13 Aug 2021 13:02:19 GMT
-      content-type: application/json
-      content-length: '1968'
-      access-control-allow-origin: '*'
       access-control-allow-headers: X-Requested-With
-      vary: Accept-Encoding
-      content-encoding: gzip
-      server: Jetty(9.4.40.v20210413)
-      x-ratelimit-limit: '50'
-      x-ratelimit-interval: 1s
-      x-api-pool: public
-      x-rate-limit-limit: '50'
-      x-rate-limit-interval: 1s
-      permissions-policy: interest-cohort=()
+      access-control-allow-origin: '*'
       connection: close
+      content-encoding: gzip
+      content-length: '1967'
+      content-type: application/json
+      date: Tue, 17 Aug 2021 17:26:44 GMT
+      permissions-policy: interest-cohort=()
+      server: Jetty(9.4.40.v20210413)
+      set-cookie:
+      - AWSALB=hAtXlqGZVefv+uL0laLlg6fAfFfk39vPZzf5vZVe0+gO4GmbtLWzDm4+xIem+8x6o+9eVqb+GEJGoEZdcAnbjWBtJG+FPLoALysJ6464eUFRs3M8G58atm9kwfq0;
+        Expires=Tue, 24 Aug 2021 17:26:44 GMT; Path=/
+      - AWSALBCORS=hAtXlqGZVefv+uL0laLlg6fAfFfk39vPZzf5vZVe0+gO4GmbtLWzDm4+xIem+8x6o+9eVqb+GEJGoEZdcAnbjWBtJG+FPLoALysJ6464eUFRs3M8G58atm9kwfq0;
+        Expires=Tue, 24 Aug 2021 17:26:44 GMT; Path=/; SameSite=None
+      status: HTTP/1.1 200 OK
+      vary: Accept-Encoding
+      x-api-pool: polite
+      x-rate-limit-interval: 1s
+      x-rate-limit-limit: '50'
+      x-ratelimit-interval: 1s
+      x-ratelimit-limit: '50'
     body:
       encoding: UTF-8
       file: no
-      string: '{"status":"ok","message-type":"work","message-version":"1.0.0","message":{"indexed":{"date-parts":[[2021,7,28]],"date-time":"2021-07-28T10:44:53Z","timestamp":1627469093223},"reference-count":12,"publisher":"Springer
+      string: '{"status":"ok","message-type":"work","message-version":"1.0.0","message":{"indexed":{"date-parts":[[2021,8,15]],"date-time":"2021-08-15T06:49:30Z","timestamp":1629010170853},"reference-count":12,"publisher":"Springer
         Science and Business Media LLC","issue":"1","license":[{"start":{"date-parts":[[2014,11,10]],"date-time":"2014-11-10T00:00:00Z","timestamp":1415577600000},"content-version":"tdm","delay-in-days":0,"URL":"http:\/\/www.springer.com\/tdm"}],"content-domain":{"domain":["link.springer.com"],"crossmark-restriction":false},"short-container-title":["Nature
         Nanotech"],"published-print":{"date-parts":[[2015,1]]},"DOI":"10.1038\/nnano.2014.279","type":"journal-article","created":{"date-parts":[[2014,11,7]],"date-time":"2014-11-07T14:30:15Z","timestamp":1415370615000},"page":"22-24","update-policy":"http:\/\/dx.doi.org\/10.1007\/springer_crossmark_policy","source":"Crossref","is-referenced-by-count":41,"title":["Charges
         ride the spin wave"],"prefix":"10.1038","volume":"10","author":[{"given":"Timo","family":"Kuschel","sequence":"first","affiliation":[]},{"given":"G\u00fcnter","family":"Reiss","sequence":"additional","affiliation":[]}],"member":"297","published-online":{"date-parts":[[2014,11,10]]},"reference":[{"key":"BFnnano2014279_CR1","doi-asserted-by":"publisher","first-page":"212405","DOI":"10.1103\/PhysRevB.78.212405","volume":"78","author":"A
@@ -106,7 +116,7 @@ http_interactions:
         Science","Biomedical Engineering","Atomic and Molecular Physics, and Optics","Bioengineering"],"published":{"date-parts":[[2014,11,10]]},"assertion":[{"value":"10
         November 2014","order":1,"name":"first_online","label":"First Online","group":{"name":"ArticleHistory","label":"Article
         History"}}]}}'
-  recorded_at: 2021-08-13 13:02:20 GMT
+  recorded_at: 2021-08-17 17:26:45 GMT
   recorded_with: vcr/1.0.2, webmockr/0.8.0
 - request:
     method: get
@@ -117,34 +127,39 @@ http_interactions:
     headers:
       Accept-Encoding: gzip, deflate
       Accept: application/json, text/xml, application/xml, */*
-      User-Agent: r-curl/4.3.2 crul/1.1.0 rOpenSci(rcrossref/1.1.0.94)
-      X-USER-AGENT: r-curl/4.3.2 crul/1.1.0 rOpenSci(rcrossref/1.1.0.94)
+      User-Agent: r-curl/4.3.2 crul/1.1.0 rOpenSci(rcrossref/1.1.0.94) (mailto:<crossref_email>)
+      X-USER-AGENT: r-curl/4.3.2 crul/1.1.0 rOpenSci(rcrossref/1.1.0.94) (mailto:<crossref_email>)
   response:
     status:
       status_code: '404'
       message: Not Found
       explanation: Nothing matches the given URI
     headers:
-      status: HTTP/1.1 404 Not Found
-      date: Fri, 13 Aug 2021 13:02:20 GMT
-      content-type: application/json;charset=utf-8
-      content-length: '19'
-      vary: Accept
-      access-control-allow-origin: '*'
       access-control-allow-headers: X-Requested-With
-      server: Jetty(9.4.40.v20210413)
-      x-ratelimit-limit: '50'
-      x-ratelimit-interval: 1s
-      x-api-pool: public
-      x-rate-limit-limit: '50'
-      x-rate-limit-interval: 1s
-      permissions-policy: interest-cohort=()
+      access-control-allow-origin: '*'
       connection: close
+      content-length: '19'
+      content-type: application/json;charset=utf-8
+      date: Tue, 17 Aug 2021 17:26:44 GMT
+      permissions-policy: interest-cohort=()
+      server: Jetty(9.4.40.v20210413)
+      set-cookie:
+      - AWSALB=oHFe0q1C0THn+r2MzU8s/4W4Pd//vEWbrGn+XtmonBtutMR/T9abw851mfOkEojGLqriwbhveW3TmyHoeu1hPcP7m19uAEwikV+DPfco1ZOSgEOiuiQ5QtBf8JK+;
+        Expires=Tue, 24 Aug 2021 17:26:44 GMT; Path=/
+      - AWSALBCORS=oHFe0q1C0THn+r2MzU8s/4W4Pd//vEWbrGn+XtmonBtutMR/T9abw851mfOkEojGLqriwbhveW3TmyHoeu1hPcP7m19uAEwikV+DPfco1ZOSgEOiuiQ5QtBf8JK+;
+        Expires=Tue, 24 Aug 2021 17:26:44 GMT; Path=/; SameSite=None
+      status: HTTP/1.1 404 Not Found
+      vary: Accept
+      x-api-pool: polite
+      x-rate-limit-interval: 1s
+      x-rate-limit-limit: '50'
+      x-ratelimit-interval: 1s
+      x-ratelimit-limit: '50'
     body:
       encoding: UTF-8
       file: no
       string: Resource not found.
-  recorded_at: 2021-08-13 13:02:20 GMT
+  recorded_at: 2021-08-17 17:26:45 GMT
   recorded_with: vcr/1.0.2, webmockr/0.8.0
 - request:
     method: get
@@ -155,34 +170,39 @@ http_interactions:
     headers:
       Accept-Encoding: gzip, deflate
       Accept: application/json, text/xml, application/xml, */*
-      User-Agent: r-curl/4.3.2 crul/1.1.0 rOpenSci(rcrossref/1.1.0.94)
-      X-USER-AGENT: r-curl/4.3.2 crul/1.1.0 rOpenSci(rcrossref/1.1.0.94)
+      User-Agent: r-curl/4.3.2 crul/1.1.0 rOpenSci(rcrossref/1.1.0.94) (mailto:<crossref_email>)
+      X-USER-AGENT: r-curl/4.3.2 crul/1.1.0 rOpenSci(rcrossref/1.1.0.94) (mailto:<crossref_email>)
   response:
     status:
       status_code: '200'
       message: OK
       explanation: Request fulfilled, document follows
     headers:
-      status: HTTP/1.1 200 OK
-      date: Fri, 13 Aug 2021 13:02:20 GMT
-      content-type: application/json
-      content-length: '1968'
-      access-control-allow-origin: '*'
       access-control-allow-headers: X-Requested-With
-      vary: Accept-Encoding
-      content-encoding: gzip
-      server: Jetty(9.4.40.v20210413)
-      x-ratelimit-limit: '50'
-      x-ratelimit-interval: 1s
-      x-api-pool: public
-      x-rate-limit-limit: '50'
-      x-rate-limit-interval: 1s
-      permissions-policy: interest-cohort=()
+      access-control-allow-origin: '*'
       connection: close
+      content-encoding: gzip
+      content-length: '1967'
+      content-type: application/json
+      date: Tue, 17 Aug 2021 17:26:45 GMT
+      permissions-policy: interest-cohort=()
+      server: Jetty(9.4.40.v20210413)
+      set-cookie:
+      - AWSALB=pvGbHcvng/pmPLmzqCswUO8aoxJ4hA1Gec2CUP05p7cYC9a03P1L1+3kTaK3S+RN1oGrO+ziZ0YBo+tI460V9ot4G0zEE0AxjW0FhX4D3bkmg7JwmD5FTVApBqSo;
+        Expires=Tue, 24 Aug 2021 17:26:45 GMT; Path=/
+      - AWSALBCORS=pvGbHcvng/pmPLmzqCswUO8aoxJ4hA1Gec2CUP05p7cYC9a03P1L1+3kTaK3S+RN1oGrO+ziZ0YBo+tI460V9ot4G0zEE0AxjW0FhX4D3bkmg7JwmD5FTVApBqSo;
+        Expires=Tue, 24 Aug 2021 17:26:45 GMT; Path=/; SameSite=None
+      status: HTTP/1.1 200 OK
+      vary: Accept-Encoding
+      x-api-pool: polite
+      x-rate-limit-interval: 1s
+      x-rate-limit-limit: '50'
+      x-ratelimit-interval: 1s
+      x-ratelimit-limit: '50'
     body:
       encoding: UTF-8
       file: no
-      string: '{"status":"ok","message-type":"work","message-version":"1.0.0","message":{"indexed":{"date-parts":[[2021,7,28]],"date-time":"2021-07-28T10:44:53Z","timestamp":1627469093223},"reference-count":12,"publisher":"Springer
+      string: '{"status":"ok","message-type":"work","message-version":"1.0.0","message":{"indexed":{"date-parts":[[2021,8,15]],"date-time":"2021-08-15T06:49:30Z","timestamp":1629010170853},"reference-count":12,"publisher":"Springer
         Science and Business Media LLC","issue":"1","license":[{"start":{"date-parts":[[2014,11,10]],"date-time":"2014-11-10T00:00:00Z","timestamp":1415577600000},"content-version":"tdm","delay-in-days":0,"URL":"http:\/\/www.springer.com\/tdm"}],"content-domain":{"domain":["link.springer.com"],"crossmark-restriction":false},"short-container-title":["Nature
         Nanotech"],"published-print":{"date-parts":[[2015,1]]},"DOI":"10.1038\/nnano.2014.279","type":"journal-article","created":{"date-parts":[[2014,11,7]],"date-time":"2014-11-07T14:30:15Z","timestamp":1415370615000},"page":"22-24","update-policy":"http:\/\/dx.doi.org\/10.1007\/springer_crossmark_policy","source":"Crossref","is-referenced-by-count":41,"title":["Charges
         ride the spin wave"],"prefix":"10.1038","volume":"10","author":[{"given":"Timo","family":"Kuschel","sequence":"first","affiliation":[]},{"given":"G\u00fcnter","family":"Reiss","sequence":"additional","affiliation":[]}],"member":"297","published-online":{"date-parts":[[2014,11,10]]},"reference":[{"key":"BFnnano2014279_CR1","doi-asserted-by":"publisher","first-page":"212405","DOI":"10.1103\/PhysRevB.78.212405","volume":"78","author":"A
@@ -215,5 +235,5 @@ http_interactions:
         Science","Biomedical Engineering","Atomic and Molecular Physics, and Optics","Bioengineering"],"published":{"date-parts":[[2014,11,10]]},"assertion":[{"value":"10
         November 2014","order":1,"name":"first_online","label":"First Online","group":{"name":"ArticleHistory","label":"Article
         History"}}]}}'
-  recorded_at: 2021-08-13 13:02:20 GMT
+  recorded_at: 2021-08-17 17:26:45 GMT
   recorded_with: vcr/1.0.2, webmockr/0.8.0
