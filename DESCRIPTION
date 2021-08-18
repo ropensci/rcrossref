@@ -5,14 +5,14 @@ Description: Client for various 'CrossRef' 'APIs', including 'metadata' search
     (including 'bibtex', 'citeproc-json', 'rdf-xml', etc.), convert 'DOIs'
     to 'PMIDs', and 'vice versa', get citations for 'DOIs', and get links to
     full text of articles when available.
-Version: 1.1.0.94
+Version: 1.1.0.99
 License: MIT + file LICENSE
 Authors@R: c(
-    person("Scott", "Chamberlain", role = c("aut", "cre"), 
-        email = "myrmecocystus@gmail.com", 
-        comment = c(ORCID = "0000-0003-1444-9135")),
+    person("Scott", "Chamberlain", role = "aut"),
     person("Hao", "Zhu", role = "aut"),
-    person("Najko", "Jahn", role = "aut"),
+    person("Najko", "Jahn", role = c("aut", "cre"),
+        email = "najko.jahn@gmail.com",
+        comment = c(ORCID = "0000-0001-5105-1463")),
     person("Carl", "Boettiger", role = "aut"),
     person("Karthik", "Ram", role = "aut")
     )
