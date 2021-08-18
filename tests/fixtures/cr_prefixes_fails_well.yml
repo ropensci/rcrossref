@@ -8,31 +8,41 @@ http_interactions:
     headers:
       Accept-Encoding: gzip, deflate
       Accept: application/json, text/xml, application/xml, */*
-      User-Agent: r-curl/3.2 crul/0.6.1.9100 rOpenSci(rcrossref/0.8.5.9110) (mailto:<crossref_email>)
-      X-USER-AGENT: r-curl/3.2 crul/0.6.1.9100 rOpenSci(rcrossref/0.8.5.9110) (mailto:<crossref_email>)
+      User-Agent: r-curl/4.3.2 crul/1.1.0 rOpenSci(rcrossref/1.1.0.94) (mailto:<crossref_email>)
+      X-USER-AGENT: r-curl/4.3.2 crul/1.1.0 rOpenSci(rcrossref/1.1.0.94) (mailto:<crossref_email>)
   response:
     status:
       status_code: '200'
       message: OK
       explanation: Request fulfilled, document follows
     headers:
-      status: HTTP/1.1 200 OK
-      content-type: application/json;charset=UTF-8
-      vary: Accept
-      access-control-allow-origin: '*'
       access-control-allow-headers: X-Requested-With
-      content-length: '204'
-      server: http-kit
-      date: Fri, 07 Dec 2018 22:14:42 GMT
-      x-rate-limit-limit: '50'
-      x-rate-limit-interval: 1s
+      access-control-allow-origin: '*'
       connection: close
+      content-length: '228'
+      content-type: application/json;charset=utf-8
+      date: Tue, 17 Aug 2021 17:25:52 GMT
+      permissions-policy: interest-cohort=()
+      server: Jetty(9.4.40.v20210413)
+      set-cookie:
+      - AWSALB=vmHsy61J0gQQB31FmH4EKynU3aSdPmLHlc0B8d6m/tQ+uEsFJ1mnYZfC54OeQDpP1jOiBd5sYQxwdEST0EouRjbPGtg0dtizIKiNBSo9MzmUD9kF/s0x3XQ5wn8W;
+        Expires=Tue, 24 Aug 2021 17:25:52 GMT; Path=/
+      - AWSALBCORS=vmHsy61J0gQQB31FmH4EKynU3aSdPmLHlc0B8d6m/tQ+uEsFJ1mnYZfC54OeQDpP1jOiBd5sYQxwdEST0EouRjbPGtg0dtizIKiNBSo9MzmUD9kF/s0x3XQ5wn8W;
+        Expires=Tue, 24 Aug 2021 17:25:52 GMT; Path=/; SameSite=None
+      status: HTTP/1.1 200 OK
+      vary: Accept
+      x-api-pool: polite
+      x-rate-limit-interval: 1s
+      x-rate-limit-limit: '50'
+      x-ratelimit-interval: 1s
+      x-ratelimit-limit: '50'
     body:
       encoding: UTF-8
+      file: no
       string: '{"status":"ok","message-type":"prefix","message-version":"1.0.0","message":{"member":"http:\/\/id.crossref.org\/member\/297","name":"Springer
-        Nature","prefix":"http:\/\/id.crossref.org\/prefix\/10.1038"}}'
-  recorded_at: 2018-12-07 22:14:43 GMT
-  recorded_with: vcr/0.2.0.9101, webmockr/0.2.9.9311
+        Science and Business Media LLC","prefix":"http:\/\/id.crossref.org\/prefix\/10.1038"}}'
+  recorded_at: 2021-08-17 17:25:53 GMT
+  recorded_with: vcr/1.0.2, webmockr/0.8.0
 - request:
     method: get
     uri: https://api.crossref.org/prefixes/10.1684
@@ -42,60 +52,81 @@ http_interactions:
     headers:
       Accept-Encoding: gzip, deflate
       Accept: application/json, text/xml, application/xml, */*
-      User-Agent: r-curl/3.2 crul/0.6.1.9100 rOpenSci(rcrossref/0.8.5.9110) (mailto:<crossref_email>)
-      X-USER-AGENT: r-curl/3.2 crul/0.6.1.9100 rOpenSci(rcrossref/0.8.5.9110) (mailto:<crossref_email>)
-  response:
-    status:
-      status_code: '404'
-      message: Not Found
-      explanation: Nothing matches the given URI
-    headers:
-      status: HTTP/1.1 404 Not Found
-      content-type: text/plain
-      access-control-allow-origin: '*'
-      access-control-allow-headers: X-Requested-With
-      content-length: '19'
-      server: http-kit
-      date: Fri, 07 Dec 2018 22:14:43 GMT
-      x-rate-limit-limit: '50'
-      x-rate-limit-interval: 1s
-      connection: close
-    body:
-      encoding: UTF-8
-      string: Resource not found.
-  recorded_at: 2018-12-07 22:14:43 GMT
-  recorded_with: vcr/0.2.0.9101, webmockr/0.2.9.9311
-- request:
-    method: get
-    uri: https://api.crossref.org/prefixes/10.1109
-    body:
-      encoding: ''
-      string: ''
-    headers:
-      Accept-Encoding: gzip, deflate
-      Accept: application/json, text/xml, application/xml, */*
-      User-Agent: r-curl/3.2 crul/0.6.1.9100 rOpenSci(rcrossref/0.8.5.9110) (mailto:<crossref_email>)
-      X-USER-AGENT: r-curl/3.2 crul/0.6.1.9100 rOpenSci(rcrossref/0.8.5.9110) (mailto:<crossref_email>)
+      User-Agent: r-curl/4.3.2 crul/1.1.0 rOpenSci(rcrossref/1.1.0.94) (mailto:<crossref_email>)
+      X-USER-AGENT: r-curl/4.3.2 crul/1.1.0 rOpenSci(rcrossref/1.1.0.94) (mailto:<crossref_email>)
   response:
     status:
       status_code: '200'
       message: OK
       explanation: Request fulfilled, document follows
     headers:
-      status: HTTP/1.1 200 OK
-      content-type: application/json;charset=UTF-8
-      vary: Accept
-      access-control-allow-origin: '*'
       access-control-allow-headers: X-Requested-With
-      content-length: '245'
-      server: http-kit
-      date: Fri, 07 Dec 2018 22:14:43 GMT
-      x-rate-limit-limit: '50'
-      x-rate-limit-interval: 1s
+      access-control-allow-origin: '*'
       connection: close
+      content-length: '211'
+      content-type: application/json;charset=utf-8
+      date: Tue, 17 Aug 2021 17:25:53 GMT
+      permissions-policy: interest-cohort=()
+      server: Jetty(9.4.40.v20210413)
+      set-cookie:
+      - AWSALB=YmLET9RNkUIC7Ps56khz8g9UkVWP6LeNtru/1vJ4FAwgfc8cySVYihmiKEA+Of1yC8EoUpGTi+iir/4inpnTrw5QQIVEseN8mG5VZDBwuEJ26CzQFx5htrgliKvy;
+        Expires=Tue, 24 Aug 2021 17:25:53 GMT; Path=/
+      - AWSALBCORS=YmLET9RNkUIC7Ps56khz8g9UkVWP6LeNtru/1vJ4FAwgfc8cySVYihmiKEA+Of1yC8EoUpGTi+iir/4inpnTrw5QQIVEseN8mG5VZDBwuEJ26CzQFx5htrgliKvy;
+        Expires=Tue, 24 Aug 2021 17:25:53 GMT; Path=/; SameSite=None
+      status: HTTP/1.1 200 OK
+      vary: Accept
+      x-api-pool: polite
+      x-rate-limit-interval: 1s
+      x-rate-limit-limit: '50'
+      x-ratelimit-interval: 1s
+      x-ratelimit-limit: '50'
     body:
       encoding: UTF-8
-      string: '{"status":"ok","message-type":"prefix","message-version":"1.0.0","message":{"member":"http:\/\/id.crossref.org\/member\/263","name":"Institute
-        of Electrical and Electronics Engineers (IEEE)","prefix":"http:\/\/id.crossref.org\/prefix\/10.1109"}}'
-  recorded_at: 2018-12-07 22:14:43 GMT
-  recorded_with: vcr/0.2.0.9101, webmockr/0.2.9.9311
+      file: no
+      string: '{"status":"ok","message-type":"prefix","message-version":"1.0.0","message":{"member":"http:\/\/id.crossref.org\/member\/18929","name":"John
+        Libbey Eurotext","prefix":"http:\/\/id.crossref.org\/prefix\/10.1684"}}'
+  recorded_at: 2021-08-17 17:25:53 GMT
+  recorded_with: vcr/1.0.2, webmockr/0.8.0
+- request:
+    method: get
+    uri: https://api.crossref.org/prefixes/10.11090
+    body:
+      encoding: ''
+      string: ''
+    headers:
+      Accept-Encoding: gzip, deflate
+      Accept: application/json, text/xml, application/xml, */*
+      User-Agent: r-curl/4.3.2 crul/1.1.0 rOpenSci(rcrossref/1.1.0.94) (mailto:<crossref_email>)
+      X-USER-AGENT: r-curl/4.3.2 crul/1.1.0 rOpenSci(rcrossref/1.1.0.94) (mailto:<crossref_email>)
+  response:
+    status:
+      status_code: '404'
+      message: Not Found
+      explanation: Nothing matches the given URI
+    headers:
+      access-control-allow-headers: X-Requested-With
+      access-control-allow-origin: '*'
+      connection: close
+      content-length: '19'
+      content-type: application/json;charset=utf-8
+      date: Tue, 17 Aug 2021 17:25:53 GMT
+      permissions-policy: interest-cohort=()
+      server: Jetty(9.4.40.v20210413)
+      set-cookie:
+      - AWSALB=4V2xtkJrt+t22IjUkd5fGB25GK9FfDhw/mG9wxtXhS8nZ1fYx+Zdz3joLNZ43aa8/VEUUwSyEM58mA+h7OS6wX9IqWAVYuGrCedICBQDqrLUeclVYRHnQCyBA6cs;
+        Expires=Tue, 24 Aug 2021 17:25:53 GMT; Path=/
+      - AWSALBCORS=4V2xtkJrt+t22IjUkd5fGB25GK9FfDhw/mG9wxtXhS8nZ1fYx+Zdz3joLNZ43aa8/VEUUwSyEM58mA+h7OS6wX9IqWAVYuGrCedICBQDqrLUeclVYRHnQCyBA6cs;
+        Expires=Tue, 24 Aug 2021 17:25:53 GMT; Path=/; SameSite=None
+      status: HTTP/1.1 404 Not Found
+      vary: Accept
+      x-api-pool: polite
+      x-rate-limit-interval: 1s
+      x-rate-limit-limit: '50'
+      x-ratelimit-interval: 1s
+      x-ratelimit-limit: '50'
+    body:
+      encoding: UTF-8
+      file: no
+      string: Resource not found.
+  recorded_at: 2021-08-17 17:25:53 GMT
+  recorded_with: vcr/1.0.2, webmockr/0.8.0

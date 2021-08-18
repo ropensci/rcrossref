@@ -8,16 +8,16 @@ http_interactions:
     headers:
       Accept-Encoding: gzip, deflate
       Accept: application/json, text/xml, application/xml, */*
-      User-Agent: r-curl/4.3 crul/0.9.0 rOpenSci(rcrossref/1.0.0.91) (mailto:<crossref_email>)
-      X-USER-AGENT: r-curl/4.3 crul/0.9.0 rOpenSci(rcrossref/1.0.0.91) (mailto:<crossref_email>)
+      User-Agent: r-curl/4.3.2 crul/1.1.0 rOpenSci(rcrossref/1.1.0.94) (mailto:<crossref_email>)
+      X-USER-AGENT: r-curl/4.3.2 crul/1.1.0 rOpenSci(rcrossref/1.1.0.94) (mailto:<crossref_email>)
   response:
     status:
       status_code: '404'
       message: Not Found
       explanation: Nothing matches the given URI
     headers:
-      status: HTTP/1.1 404 Not Found
-      date: Mon, 08 Jun 2020 17:31:52 GMT
+      status: 'HTTP/2 404 '
+      date: Tue, 17 Aug 2021 17:58:40 GMT
       server: Apache
       strict-transport-security: max-age=31536000; includeSubDomains; preload
       referrer-policy: origin-when-cross-origin
@@ -40,8 +40,8 @@ http_interactions:
         {
          "status": "error",
          "message": "ID%20type%20%27doi%27%20mismatch%20for%20%2728371833%27",
-         "responseDate": "2020-06-08 13:31:52",
+         "responseDate": "2021-08-17 13:58:40",
          "request": "tool=rcrossref;email=myrmecocystus%40gmail.com;ids=28371833;idtype=doi;format=json"
         }
-  recorded_at: 2020-06-08 17:31:52 GMT
-  recorded_with: vcr/0.5.4, webmockr/0.6.2
+  recorded_at: 2021-08-17 17:58:40 GMT
+  recorded_with: vcr/1.0.2, webmockr/0.8.0

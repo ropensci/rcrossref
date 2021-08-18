@@ -44,11 +44,11 @@ test_that("cr_members fails correctly", {
     expect_warning(
       cr_members(
         member_ids=c(323234343434, 3434343434), works=TRUE, facet=TRUE),
-      "java.lang.NumberFormatException: For input string:")
+      "Resource not found.")
     expect_warning(
       cr_members(
         member_ids=c(323234343434,3434343434,98), works=TRUE, facet=TRUE),
-      "java.lang.NumberFormatException: For input string:")
+      "Resource not found.")
 
     # fails due to facet not supported
     expect_warning(cr_members(facet = TRUE),

@@ -89,7 +89,7 @@ vcr::use_cassette("cr_works__parses_funders", {
     doi <- "10.1186/isrctn11093872"
     bb <- pj(cr_works_(doi))
     expect_true(any(grepl("funder", names(bb$message))))
-    expect_named(bb$message$funder, c("DOI", "name", "doi-asserted-by", "award"))
+    expect_named(bb$message$funder, c("DOI", "name", "doi-asserted-by"))
   })
 })
 

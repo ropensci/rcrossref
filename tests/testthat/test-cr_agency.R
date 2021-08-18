@@ -24,25 +24,27 @@ test_that("cr_ageny fails correctly", {
 
 test_that("cr_agency - email works", {
   vcr::use_cassette("cr_agency_email_works", {
-  
-    Sys.setenv("crossref_email" = "name@example.com")
-    expect_is(cr_agency(dois = '10.1038/jid.2009.428'), "list")
+    withr::with_envvar(
+      new = c("crossref_email" = "name@example.com"),
+      expect_is(cr_agency(dois = '10.1038/jid.2009.428'), "list")
+    )
   })
 })
 
 
 test_that("cr_agency - email is validated", {
-  vcr::use_cassette("cr_agency_email_is_validated", {
-  
-    Sys.setenv("crossref_email" = "name@example")
-    expect_error(cr_agency(dois = '10.1038/jid.2009.428'))
-  })
+    withr::with_envvar(
+      new = c("crossref_email" = "name@example"),
+      expect_error(cr_agency(dois = '10.1038/jid.2009.428'))
+    )
 })
 
 test_that("cr_agency - email NULL works", {
   vcr::use_cassette("cr_agency_null_works", {
   
-    Sys.setenv("crossref_email" = "")
-    expect_is(cr_agency(dois = '10.1038/jid.2009.428'), "list")
+     withr::with_envvar(
+      new = c("crossref_email" = ""),
+      expect_is(cr_agency(dois = '10.1038/jid.2009.428'), "list")
+     )
   })
 })

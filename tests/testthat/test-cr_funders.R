@@ -48,27 +48,30 @@ vcr::use_cassette("cr_funders_fails_well", {
 })
 
 vcr::use_cassette("cr_funders_email_works", {
-  test_that("cr_works - email works", {
+  test_that("cr_funders - email works", {
   
-    Sys.setenv("crossref_email" = "name@example.com")
-    expect_is(cr_funders(dois=c('10.13039/100000001')), "list")
+    withr::with_envvar(
+      new = c("crossref_email" = "name@example.com"),
+      expect_is(cr_funders(dois=c('10.13039/100000001')), "list")
+    )
   })
 })
 
 
-vcr::use_cassette("cr_funders_email_is_validated", {
   test_that("cr_funders - email is validated", {
-  
-    Sys.setenv("crossref_email" = "name@example")
-    expect_error(cr_funders(dois=c('10.13039/100000001')))
-  })
+    withr::with_envvar(
+      new = c("crossref_email" = "name@example"),
+      expect_error(cr_funders(dois=c('10.13039/100000001')))
+    )
 })
 
 vcr::use_cassette("cr_funders_email_null_works", {
   test_that("cr_funders - email NULL works", {
-  
-    Sys.setenv("crossref_email" = "")
-    expect_is(cr_funders(dois=c('10.13039/100000001')), "list")
+
+    withr::with_envvar(
+      new = c("crossref_email" = ""),
+      expect_is(cr_funders(dois=c('10.13039/100000001')), "list")
+    )
   })
 })
 

@@ -25,10 +25,7 @@ test_that("cr_journals metadata works correctly", {
 })
 
 test_that("cr_journals fails correctly", {
-  vcr::use_cassette("cr_journals_fails_well", {
-
     expect_error(cr_journals(query="peerj", limit=4, timeout_ms = 1))
-  })
 })
 
 test_that("cr_journals facet works", {

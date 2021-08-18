@@ -14,7 +14,7 @@ test_that("cr_cn bibtex", {
     e <- cr_cn("10.1126/science.169.3946.635", "bibentry")
     expect_is(e, "list")
     expect_match(e$year, "1970")
-  })
+  }, match_requests_on = c("method"))
 })
 
 test_that("cr_cn xml types", {
@@ -27,7 +27,9 @@ test_that("cr_cn xml types", {
 
     h <- cr_cn("10.3233/ISU-150780", "onix-xml")
     expect_is(h, "xml_document")
-  }, preserve_exact_body_bytes = TRUE)
+  }, preserve_exact_body_bytes = TRUE,
+  match_requests_on = c("method")
+)
 })
 
 test_that("cr_cn fails correctly", {
@@ -52,7 +54,7 @@ test_that("DOIs with no agency found still work, at least some do", {
       suppressWarnings(cr_cn("10.1890/0012-9615(1999)069[0569:EDILSA]2.0.CO;2")),
       "character"
     )
-  })
+  }, match_requests_on = c("method"))
 })
 
 test_that("cr_cn checks if doi agency supports format", {
@@ -88,5 +90,5 @@ test_that("cr_cn works with different URLs", {
       cr_cn("10.5284/1011335", url = "https://citation.crosscite.org/format"),
       "Archaeology"
     )
-  }, preserve_exact_body_bytes = TRUE)
+  }, preserve_exact_body_bytes = TRUE, match_requests_on = c("method"))
 })
