@@ -1,7 +1,7 @@
 ---
 title: rcrossref introduction 
 author: Scott Chamberlain
-date: "2021-08-02"
+date: "2021-08-19"
 output: rmarkdown::html_vignette
 vignette: >
     %\VignetteIndexEntry{rcrossref introduction}
@@ -39,7 +39,7 @@ CrossRef's DOI Content Negotiation service, where you can citations back in vari
 
 ```r
 cr_cn(dois = "10.1371/journal.pone.0112608", format = "text", style = "apa")
-#> Error in cr_GET(endpoint = sprintf("works/%s/agency", x), args = list(), : res$response_headers$`content-type` == "application/json;charset=UTF-8" ist nicht TRUE
+#> [1] "Wang, Q., & Taylor, J. E. (2014). Quantifying Human Mobility Perturbation and Resilience in Hurricane Sandy. PLoS ONE, 9(11), e112608. doi:10.1371/journal.pone.0112608"
 ```
 
 There are a lot more styles. We include a dataset as a character vector within the package, accessible via the `get_styles()` function, e.g.,
@@ -59,7 +59,19 @@ get_styles()[1:5]
 
 ```r
 cat(cr_cn(dois = "10.1126/science.169.3946.635", format = "bibtex"))
-#> Error in cr_GET(endpoint = sprintf("works/%s/agency", x), args = list(), : res$response_headers$`content-type` == "application/json;charset=UTF-8" ist nicht TRUE
+#> @article{Frank_1970,
+#> 	doi = {10.1126/science.169.3946.635},
+#> 	url = {https://doi.org/10.1126%2Fscience.169.3946.635},
+#> 	year = 1970,
+#> 	month = {aug},
+#> 	publisher = {American Association for the Advancement of Science ({AAAS})},
+#> 	volume = {169},
+#> 	number = {3946},
+#> 	pages = {635--641},
+#> 	author = {H. S. Frank},
+#> 	title = {The Structure of Ordinary Water: New data and interpretations are yielding new insights into this fascinating substance},
+#> 	journal = {Science}
+#> }
 ```
 
 `bibentry`
@@ -67,7 +79,35 @@ cat(cr_cn(dois = "10.1126/science.169.3946.635", format = "bibtex"))
 
 ```r
 cr_cn(dois = "10.6084/m9.figshare.97218", format = "bibentry")
-#> Error in cr_GET(endpoint = sprintf("works/%s/agency", x), args = list(), : res$response_headers$`content-type` == "application/json;charset=UTF-8" ist nicht TRUE
+#> $doi
+#> [1] "10.6084/M9.FIGSHARE.97218"
+#> 
+#> $url
+#> [1] "https://figshare.com/articles/thesis/Regime_shifts_in_ecology_and_evolution_(PhD_Dissertation)/97218"
+#> 
+#> $author
+#> [1] "Boettiger, Carl"
+#> 
+#> $keywords
+#> [1] "Evolutionary Biology, FOS: Biological sciences, FOS: Biological sciences, Ecology"
+#> 
+#> $title
+#> [1] "Regime shifts in ecology and evolution (PhD Dissertation)"
+#> 
+#> $publisher
+#> [1] "figshare"
+#> 
+#> $year
+#> [1] "2012"
+#> 
+#> $copyright
+#> [1] "Creative Commons Attribution 4.0 International"
+#> 
+#> $key
+#> [1] "https://doi.org/10.6084/m9.figshare.97218"
+#> 
+#> $entry
+#> [1] "article"
 ```
 
 ## Citation count
@@ -90,7 +130,37 @@ The following functions all use the CrossRef API.
 
 ```r
 cr_funders(query="NSF")
-#> Error in cr_GET(path, args, todf = FALSE, ...): res$response_headers$`content-type` == "application/json;charset=UTF-8" ist nicht TRUE
+#> $meta
+#>   total_results search_terms start_index items_per_page
+#> 1            39          NSF           0             20
+#> 
+#> $data
+#> # A tibble: 20 × 6
+#>    id           location       name         alt.names       uri     tokens      
+#>    <chr>        <chr>          <chr>        <chr>           <chr>   <chr>       
+#>  1 100000001    United States  National Sc… "USA NSF, NSF,… http:/… national, s…
+#>  2 100015388    United States  Kansas NSF … "KNE, NSF EPSC… http:/… kansas, nsf…
+#>  3 100016323    United States  Arkansas NS… "Arkansas EPSC… http:/… arkansas, n…
+#>  4 100003187    United States  National Sl… "NSF"           http:/… national, s…
+#>  5 501100000930 Australia      National St… "NSF"           http:/… national, s…
+#>  6 501100004190 Norway         Norsk Sykep… "NSF, Norwegia… http:/… norsk, syke…
+#>  7 501100020414 United Kingdom Neuroscienc… "The Neuroscie… http:/… neuroscienc…
+#>  8 100000154    United States  Division of… "IOS, NSF Divi… http:/… division, o…
+#>  9 100017338    China          Key Program… ""              http:/… key, progra…
+#> 10 100000084    United States  Directorate… "NSF Directora… http:/… directorate…
+#> 11 100016620    United States  Nick Simons… "NSF, The Nick… http:/… nick, simon…
+#> 12 100006445    United States  Center for … "CHM, NSF, Uni… http:/… center, for…
+#> 13 100017325    United States  Engineering… "ERC, The NSF … http:/… engineering…
+#> 14 100008367    Denmark        Statens Nat… "Danish Nation… http:/… statens, na…
+#> 15 100000179    United States  Office of t… "NSF Office of… http:/… office, of,…
+#> 16 501100019492 China          National Na… "NSFC-General … http:/… national, n…
+#> 17 501100011002 China          National Na… "NSFC-Yunnan J… http:/… national, n…
+#> 18 501100008982 Sri Lanka      National Sc… "National Scie… http:/… national, s…
+#> 19 501100001809 China          National Na… "NNSF of China… http:/… national, n…
+#> 20 501100014220 China          National Na… "NSFC-Henan Jo… http:/… national, n…
+#> 
+#> $facets
+#> NULL
 ```
 
 ### Check the DOI minting agency
@@ -98,7 +168,15 @@ cr_funders(query="NSF")
 
 ```r
 cr_agency(dois = '10.13039/100000001')
-#> Error in cr_GET(endpoint = sprintf("works/%s/agency", x), args = list(), : res$response_headers$`content-type` == "application/json;charset=UTF-8" ist nicht TRUE
+#> $DOI
+#> [1] "10.13039/100000001"
+#> 
+#> $agency
+#> $agency$id
+#> [1] "crossref"
+#> 
+#> $agency$label
+#> [1] "Crossref"
 ```
 
 ### Search works (i.e., articles, books, etc.)
@@ -106,7 +184,24 @@ cr_agency(dois = '10.13039/100000001')
 
 ```r
 cr_works(filter=c(has_orcid=TRUE, from_pub_date='2004-04-04'), limit=1)
-#> Error in cr_GET(endpoint = path, args, todf = FALSE, ...): res$response_headers$`content-type` == "application/json;charset=UTF-8" ist nicht TRUE
+#> $meta
+#>   total_results search_terms start_index items_per_page
+#> 1       6556799           NA           0              1
+#> 
+#> $data
+#> # A tibble: 1 × 26
+#>   container.title created  deposited  published.online doi   indexed issn  issue
+#>   <chr>           <chr>    <chr>      <chr>            <chr> <chr>   <chr> <chr>
+#> 1 Belügyi Szemle  2021-04… 2021-04-26 2021-04-26       10.3… 2021-0… 2677… 4    
+#> # … with 18 more variables: issued <chr>, member <chr>, page <chr>,
+#> #   prefix <chr>, publisher <chr>, score <chr>, source <chr>,
+#> #   reference.count <chr>, references.count <chr>,
+#> #   is.referenced.by.count <chr>, title <chr>, type <chr>, url <chr>,
+#> #   volume <chr>, abstract <chr>, short.container.title <chr>, author <list>,
+#> #   link <list>
+#> 
+#> $facets
+#> NULL
 ```
 
 ### Search journals
@@ -114,7 +209,22 @@ cr_works(filter=c(has_orcid=TRUE, from_pub_date='2004-04-04'), limit=1)
 
 ```r
 cr_journals(issn=c('1803-2427','2326-4225'))
-#> Error in cr_GET(endpoint = path, args, todf = FALSE, parse = TRUE, ...): res$response_headers$`content-type` == "application/json;charset=UTF-8" ist nicht TRUE
+#> $data
+#> # A tibble: 2 × 53
+#>   title    publisher   issn   last_status_che… deposits_abstra… deposits_orcids…
+#>   <chr>    <chr>       <chr>  <date>           <lgl>            <lgl>           
+#> 1 Journal… De Gruyter… 1803-… 2021-08-18       TRUE             TRUE            
+#> 2 Journal… American S… 2326-… 2021-08-18       FALSE            FALSE           
+#> # … with 47 more variables: deposits <lgl>,
+#> #   deposits_affiliations_backfile <lgl>,
+#> #   deposits_update_policies_backfile <lgl>,
+#> #   deposits_similarity_checking_backfile <lgl>,
+#> #   deposits_award_numbers_current <lgl>,
+#> #   deposits_resource_links_current <lgl>, deposits_articles <lgl>,
+#> #   deposits_affiliations_current <lgl>, deposits_funders_current <lgl>, …
+#> 
+#> $facets
+#> NULL
 ```
 
 ### Search license information
@@ -122,7 +232,34 @@ cr_journals(issn=c('1803-2427','2326-4225'))
 
 ```r
 cr_licenses(query = 'elsevier')
-#> Error in cr_GET("licenses", args, todf = FALSE, on_error = stop, parse = parse, : res$response_headers$`content-type` == "application/json;charset=UTF-8" ist nicht TRUE
+#> $meta
+#>   total_results search_terms start_index items_per_page
+#> 1            52           NA          NA             NA
+#> 
+#> $data
+#> # A tibble: 20 × 2
+#>    URL                                                                    work.count
+#>    <chr>                                                                       <int>
+#>  1 http://aspb.org/publications/aspb-journals/open-articles                        1
+#>  2 http://creativecommons.org/licenses/by-nc-nd/3.0                                3
+#>  3 http://creativecommons.org/licenses/by-nc-nd/3.0/                              11
+#>  4 http://creativecommons.org/licenses/by-nc-nd/4.0/                              21
+#>  5 http://creativecommons.org/licenses/by-nc/4.0/                                  6
+#>  6 http://creativecommons.org/licenses/by-sa/4.0                                   1
+#>  7 http://creativecommons.org/licenses/by/2.0                                      2
+#>  8 http://creativecommons.org/licenses/by/3.0                                      2
+#>  9 http://creativecommons.org/licenses/by/3.0/                                     2
+#> 10 http://creativecommons.org/licenses/by/3.0/igo/                                 1
+#> 11 http://creativecommons.org/licenses/by/4.0                                     11
+#> 12 http://creativecommons.org/licenses/by/4.0/                                    22
+#> 13 http://doi.wiley.com/10.1002/tdm_license_1                                    136
+#> 14 http://doi.wiley.com/10.1002/tdm_license_1.1                                 2255
+#> 15 http://iopscience.iop.org/info/page/text-and-data-mining                        2
+#> 16 http://iopscience.iop.org/page/copyright                                        2
+#> 17 http://journals.iucr.org/services/copyrightpolicy.html                         11
+#> 18 http://journals.iucr.org/services/copyrightpolicy.html#TDM                     11
+#> 19 http://journals.sagepub.com/page/policies/text-and-data-mining-license        365
+#> 20 http://onlinelibrary.wiley.com/termsAndConditions                              63
 ```
 
 ### Search based on DOI prefixes
@@ -130,7 +267,25 @@ cr_licenses(query = 'elsevier')
 
 ```r
 cr_prefixes(prefixes=c('10.1016','10.1371','10.1023','10.4176','10.1093'))
-#> Error in cr_GET(path, args, todf = FALSE, ...): res$response_headers$`content-type` == "application/json;charset=UTF-8" ist nicht TRUE
+#> $meta
+#> NULL
+#> 
+#> $data
+#>                               member                                    name
+#> 1   http://id.crossref.org/member/78                             Elsevier BV
+#> 2  http://id.crossref.org/member/340        Public Library of Science (PLoS)
+#> 3  http://id.crossref.org/member/297 Springer Science and Business Media LLC
+#> 4 http://id.crossref.org/member/1989                    Co-Action Publishing
+#> 5  http://id.crossref.org/member/286           Oxford University Press (OUP)
+#>                                  prefix
+#> 1 http://id.crossref.org/prefix/10.1016
+#> 2 http://id.crossref.org/prefix/10.1371
+#> 3 http://id.crossref.org/prefix/10.1023
+#> 4 http://id.crossref.org/prefix/10.4176
+#> 5 http://id.crossref.org/prefix/10.1093
+#> 
+#> $facets
+#> list()
 ```
 
 ### Search CrossRef members
@@ -138,7 +293,29 @@ cr_prefixes(prefixes=c('10.1016','10.1371','10.1023','10.4176','10.1093'))
 
 ```r
 cr_members(query='ecology', limit = 5)
-#> Error in cr_GET(endpoint = path, args, FALSE, parse = TRUE, ...): res$response_headers$`content-type` == "application/json;charset=UTF-8" ist nicht TRUE
+#> $meta
+#>   total_results search_terms start_index items_per_page
+#> 1            24      ecology           0              5
+#> 
+#> $data
+#> # A tibble: 5 × 56
+#>      id primary_name    location     last_status_che… current.dois backfile.dois
+#>   <int> <chr>           <chr>        <date>           <chr>        <chr>        
+#> 1  4302 Immediate Scie… Toronto, ON… 2021-08-18       0            6            
+#> 2  6933 Knowledge Ecol… Washington,… 2021-08-18       0            1            
+#> 3  1950 Journal of Vec… United Stat… 2021-08-18       0            0            
+#> 4  2899 Association fo… Eugene, OR,… 2021-08-18       0            0            
+#> 5  7745 Institute of A… Makhachkala… 2021-08-18       172          678          
+#> # … with 50 more variables: total.dois <chr>, prefixes <chr>,
+#> #   coverge.affiliations.current <chr>,
+#> #   coverge.similarity.checking.current <chr>, coverge.funders.backfile <chr>,
+#> #   coverge.licenses.backfile <chr>, coverge.funders.current <chr>,
+#> #   coverge.affiliations.backfile <chr>, coverge.resource.links.backfile <chr>,
+#> #   coverge.orcids.backfile <chr>, coverge.update.policies.current <chr>,
+#> #   coverge.open.references.backfile <chr>, coverge.orcids.current <chr>, …
+#> 
+#> $facets
+#> NULL
 ```
 
 ### Get N random DOIs
@@ -148,7 +325,16 @@ cr_members(query='ecology', limit = 5)
 
 ```r
 cr_r()
-#> Error in cr_GET(endpoint = path, args, todf = FALSE, ...): res$response_headers$`content-type` == "application/json;charset=UTF-8" ist nicht TRUE
+#>  [1] "10.1111/biot.1990.4.issue-2"           
+#>  [2] "10.7717/peerj.5714/table-5"            
+#>  [3] "10.1061/(asce)0733-947x(2008)134:1(34)"
+#>  [4] "10.1016/j.clml.2015.04.108"            
+#>  [5] "10.1371/journal.pntd.0009063.s016"     
+#>  [6] "10.31616/asj.2020.0425"                
+#>  [7] "10.15446/revfacmed.v65n3.61313"        
+#>  [8] "10.1586/ecp.09.36"                     
+#>  [9] "10.1007/978-3-8348-9174-7_1"           
+#> [10] "10.1080/09511920601160171"
 ```
 
 You can pass in the number of DOIs you want back (default is 10)
@@ -156,7 +342,7 @@ You can pass in the number of DOIs you want back (default is 10)
 
 ```r
 cr_r(2)
-#> Error in cr_GET(endpoint = path, args, todf = FALSE, ...): res$response_headers$`content-type` == "application/json;charset=UTF-8" ist nicht TRUE
+#> [1] "10.5194/gmd-2021-94-supplement" "10.1108/prt.2009.12938bad.009"
 ```
 
 ## Get full text
@@ -170,9 +356,17 @@ Get some DOIs for articles that provide full text, and that have `CC-BY 3.0` lic
 out <-
   cr_works(filter = list(has_full_text = TRUE,
     license_url = "http://creativecommons.org/licenses/by/3.0/"))
-#> Error in cr_GET(endpoint = path, args, todf = FALSE, ...): res$response_headers$`content-type` == "application/json;charset=UTF-8" ist nicht TRUE
 (dois <- out$data$doi)
-#> Error in eval(expr, envir, enclos): Objekt 'out' nicht gefunden
+#>  [1] "10.1155/jamsa/2006/42542"        "10.1016/s0370-2693(02)01651-9"  
+#>  [3] "10.1016/s0370-2693(02)01624-6"   "10.1155/ijmms/2006/89545"       
+#>  [5] "10.1016/s0370-2693(01)01058-9"   "10.1016/s0370-2693(01)01257-6"  
+#>  [7] "10.1016/s0370-2693(01)01287-4"   "10.1016/s0370-2693(01)01385-5"  
+#>  [9] "10.1002/cfg.80"                  "10.1002/cfg.118"                
+#> [11] "10.1002/cfg.166"                 "10.1002/cfg.59"                 
+#> [13] "10.1002/cfg.108"                 "10.1088/1742-6596/1147/1/012044"
+#> [15] "10.1088/1742-6596/1147/1/012077" "10.1088/1742-6596/578/1/012006" 
+#> [17] "10.1088/1755-1315/222/1/012020"  "10.1002/ecs2.2575"              
+#> [19] "10.1088/1755-1315/214/1/012004"  "10.1088/1755-1315/214/1/012021"
 ```
 
 From the output of `cr_works` we can get full text links if we know where to look:
@@ -180,7 +374,20 @@ From the output of `cr_works` we can get full text links if we know where to loo
 
 ```r
 do.call("rbind", out$data$link)
-#> Error in do.call("rbind", out$data$link): Objekt 'out' nicht gefunden
+#> # A tibble: 55 × 4
+#>    URL                           content.type  content.version intended.applica…
+#>    <chr>                         <chr>         <chr>           <chr>            
+#>  1 http://downloads.hindawi.com… application/… vor             text-mining      
+#>  2 http://downloads.hindawi.com… unspecified   vor             similarity-check…
+#>  3 https://api.elsevier.com/con… text/xml      vor             text-mining      
+#>  4 https://api.elsevier.com/con… text/plain    vor             text-mining      
+#>  5 https://api.elsevier.com/con… text/xml      vor             text-mining      
+#>  6 https://api.elsevier.com/con… text/plain    vor             text-mining      
+#>  7 http://downloads.hindawi.com… application/… vor             text-mining      
+#>  8 http://downloads.hindawi.com… unspecified   vor             similarity-check…
+#>  9 https://api.elsevier.com/con… text/xml      vor             text-mining      
+#> 10 https://api.elsevier.com/con… text/plain    vor             text-mining      
+#> # … with 45 more rows
 ```
 
 From there, you can grab your full text, but because most links require
@@ -200,9 +407,9 @@ if (!requireNamespace("crminer")) {
 
 ```r
 library(crminer)
-#> Error in library(crminer): es gibt kein Paket namens 'crminer'
+#> Error in library(crminer): there is no package called 'crminer'
 (links <- crm_links("10.1155/2014/128505"))
-#> Error in crm_links("10.1155/2014/128505"): konnte Funktion "crm_links" nicht finden
+#> Error in crm_links("10.1155/2014/128505"): could not find function "crm_links"
 ```
 
 Then use those URLs to get full text
