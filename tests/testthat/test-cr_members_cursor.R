@@ -19,8 +19,7 @@ test_that("cr_members cursor basic functionality works", {
 test_that("cr_members cursor fails correctly", {
   vcr::use_cassette("cr_members_with_cursor_fails_well", {
 
-    expect_warning(cr_members(cursor = 5),
-                 "This route does not support cursor")
+    expect_warning(cr_members(cursor = 5))
     expect_error(cr_works(cursor_max = 3.4),
                  "cursor_max must be an integer")
   })

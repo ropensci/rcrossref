@@ -19,7 +19,7 @@
 #' # cr_abstract(cr_r(1))
 #' }
 cr_abstract <- function(doi, ...) {
-  url <- paste0('https://api.crossref.org/works/', doi, '.xml')
+  url <- paste0('https://api.crossref.org/works/', doi, '/transform/application/vnd.crossref.unixsd+xml')
   cli <- crul::HttpClient$new(
     url = url,
     opts = list(followlocation = 1),

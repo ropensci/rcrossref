@@ -13,10 +13,10 @@ test_that("cr_prefixes returns correct class", {
 test_that("cr_prefixes paging works correctly", {
   vcr::use_cassette("cr_prefixes_pagination", {
     expect_equal(NROW(
-      cr_prefixes(prefixes="10.1016", works = TRUE, 
+      cr_prefixes(prefixes="10.1016", works = TRUE,
                   filter=c(has_full_text=TRUE),
                   limit=5)$data
-      ), 
+      ),
       5
     )
     expect_equal(NCOL(cr_prefixes(prefixes="10.1016", works = TRUE,
@@ -53,8 +53,8 @@ test_that("cr_prefixes fails correctly", {
 
     # prefix not found
     expect_warning(
-      cr_prefixes_(prefixes = c("10.1038", "10.1684", "10.1109")),
-      "/prefixes/10.1684 - Resource not found."
+      cr_prefixes_(prefixes = c("10.1038", "10.1684", "10.11090")),
+      "/prefixes/10.11090 - Resource not found."
     )
   })
 })

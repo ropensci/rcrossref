@@ -8,42 +8,70 @@ http_interactions:
     headers:
       Accept-Encoding: gzip, deflate
       Accept: application/json, text/xml, application/xml, */*
-      User-Agent: r-curl/3.2 crul/0.6.1.9100 rOpenSci(rcrossref/0.8.5.9110) (mailto:<crossref_email>)
-      X-USER-AGENT: r-curl/3.2 crul/0.6.1.9100 rOpenSci(rcrossref/0.8.5.9110) (mailto:<crossref_email>)
+      User-Agent: r-curl/4.3.2 crul/1.1.0 rOpenSci(rcrossref/1.1.0.94) (mailto:<crossref_email>)
+      X-USER-AGENT: r-curl/4.3.2 crul/1.1.0 rOpenSci(rcrossref/1.1.0.94) (mailto:<crossref_email>)
   response:
     status:
       status_code: '200'
       message: OK
       explanation: Request fulfilled, document follows
     headers:
-      status: HTTP/1.1 200 OK
-      content-type: application/json;charset=UTF-8
-      vary: Accept
-      access-control-allow-origin: '*'
       access-control-allow-headers: X-Requested-With
-      content-length: '5302'
-      server: http-kit
-      date: Fri, 07 Dec 2018 22:46:36 GMT
-      x-rate-limit-limit: '50'
-      x-rate-limit-interval: 1s
+      access-control-allow-origin: '*'
       connection: close
+      content-encoding: gzip
+      content-length: '2263'
+      content-type: application/json
+      date: Tue, 17 Aug 2021 17:22:18 GMT
+      permissions-policy: interest-cohort=()
+      server: Jetty(9.4.40.v20210413)
+      set-cookie:
+      - AWSALB=QLZ83/BYQRs7osiWfSa2sJFST2+A+mlqm1MbH1bkWYogunxYZcOQzjBN7vTIoHUXquqBZHkEin0VPTIxFMM8ODqBpdYxYKtRJPCR00lbso90/ilaDZ0JuYDsi3JF;
+        Expires=Tue, 24 Aug 2021 17:22:13 GMT; Path=/
+      - AWSALBCORS=QLZ83/BYQRs7osiWfSa2sJFST2+A+mlqm1MbH1bkWYogunxYZcOQzjBN7vTIoHUXquqBZHkEin0VPTIxFMM8ODqBpdYxYKtRJPCR00lbso90/ilaDZ0JuYDsi3JF;
+        Expires=Tue, 24 Aug 2021 17:22:13 GMT; Path=/; SameSite=None
+      status: HTTP/1.1 200 OK
+      vary: Accept-Encoding
+      x-api-pool: polite
+      x-rate-limit-interval: 1s
+      x-rate-limit-limit: '50'
+      x-ratelimit-interval: 1s
+      x-ratelimit-limit: '50'
     body:
       encoding: UTF-8
-      string: '{"status":"ok","message-type":"work-list","message-version":"1.0.0","message":{"facets":{},"total-results":101602035,"items":[{"indexed":{"date-parts":[[2018,5,3]],"date-time":"2018-05-03T06:54:57Z","timestamp":1525330497638},"reference-count":0,"publisher":"Elsevier
-        BV","issue":"4","license":[{"URL":"http:\/\/www.elsevier.com\/tdm\/userlicense\/1.0\/","start":{"date-parts":[[1921,4,1]],"date-time":"1921-04-01T00:00:00Z","timestamp":-1538524800000},"delay-in-days":0,"content-version":"tdm"}],"content-domain":{"domain":[],"crossmark-restriction":false},"short-container-title":["The
-        Journal of the American Pharmaceutical Association (1912)"],"published-print":{"date-parts":[[1921,4]]},"DOI":"10.1002\/jps.3080100422","type":"journal-article","created":{"date-parts":[[2010,7,2]],"date-time":"2010-07-02T17:01:14Z","timestamp":1278090074000},"page":"304-306","source":"Crossref","is-referenced-by-count":0,"title":["Council
-        Business"],"prefix":"10.1016","volume":"10","member":"78","container-title":["The
-        Journal of the American Pharmaceutical Association (1912)"],"language":"en","link":[{"URL":"http:\/\/api.elsevier.com\/content\/article\/PII:S0898140X1534266X?httpAccept=text\/xml","content-type":"text\/xml","content-version":"vor","intended-application":"text-mining"},{"URL":"http:\/\/api.elsevier.com\/content\/article\/PII:S0898140X1534266X?httpAccept=text\/plain","content-type":"text\/plain","content-version":"vor","intended-application":"text-mining"}],"deposited":{"date-parts":[[2016,9,9]],"date-time":"2016-09-09T01:07:04Z","timestamp":1473383224000},"score":1.0,"issued":{"date-parts":[[1921,4]]},"references-count":0,"journal-issue":{"published-print":{"date-parts":[[1921,4]]},"issue":"4"},"alternative-id":["S0898140X1534266X"],"URL":"http:\/\/dx.doi.org\/10.1002\/jps.3080100422","ISSN":["0898-140X"],"issn-type":[{"value":"0898-140X","type":"print"}]},{"institution":{"name":"American
-        Psychological Association","place":["-"],"acronym":["APA"]},"indexed":{"date-parts":[[2018,4,14]],"date-time":"2018-04-14T08:37:33Z","timestamp":1523695053988},"reference-count":0,"publisher":"American
-        Psychological Association (APA)","content-domain":{"domain":[],"crossmark-restriction":false},"published-print":{"date-parts":[[2014]]},"DOI":"10.1037\/e540502014-001","type":"dataset","created":{"date-parts":[[2014,11,3]],"date-time":"2014-11-03T16:25:37Z","timestamp":1415031937000},"source":"Crossref","is-referenced-by-count":0,"title":["Psychologists''
-        Perceptions of Siblings of the Mentally Ill"],"prefix":"10.1037","author":[{"given":"Alexis
-        J.","family":"Kahan","sequence":"first","affiliation":[]},{"given":"Barbara","family":"Gerson","sequence":"additional","affiliation":[]}],"member":"15","container-title":["PsycEXTRA
-        Dataset"],"deposited":{"date-parts":[[2014,11,3]],"date-time":"2014-11-03T16:29:29Z","timestamp":1415032169000},"score":1.0,"subtitle":["(540502014-001)"],"issued":{"date-parts":[[2014]]},"references-count":0,"alternative-id":["540502014-001"],"URL":"http:\/\/dx.doi.org\/10.1037\/e540502014-001"},{"indexed":{"date-parts":[[2018,11,26]],"date-time":"2018-11-26T08:40:11Z","timestamp":1543221611992},"reference-count":24,"publisher":"Elsevier
-        BV","issue":"12","license":[{"URL":"https:\/\/www.elsevier.com\/tdm\/userlicense\/1.0\/","start":{"date-parts":[[2012,6,1]],"date-time":"2012-06-01T00:00:00Z","timestamp":1338508800000},"delay-in-days":0,"content-version":"tdm"}],"content-domain":{"domain":[],"crossmark-restriction":false},"short-container-title":["Physica
-        B: Condensed Matter"],"published-print":{"date-parts":[[2012,6]]},"DOI":"10.1016\/j.physb.2012.02.007","type":"journal-article","created":{"date-parts":[[2012,2,13]],"date-time":"2012-02-13T19:10:43Z","timestamp":1329160243000},"page":"2072-2077","source":"Crossref","is-referenced-by-count":15,"title":["Room
-        temperature ferroelectricity in multiferroic HoMnO3 ceramics"],"prefix":"10.1016","volume":"407","author":[{"given":"P.P.","family":"Rout","sequence":"first","affiliation":[]},{"given":"S.K.","family":"Pradhan","sequence":"additional","affiliation":[]},{"given":"S.K.","family":"Das","sequence":"additional","affiliation":[]},{"given":"B.K.","family":"Roul","sequence":"additional","affiliation":[]}],"member":"78","container-title":["Physica
-        B: Condensed Matter"],"language":"en","link":[{"URL":"https:\/\/api.elsevier.com\/content\/article\/PII:S0921452612001755?httpAccept=text\/xml","content-type":"text\/xml","content-version":"vor","intended-application":"text-mining"},{"URL":"https:\/\/api.elsevier.com\/content\/article\/PII:S0921452612001755?httpAccept=text\/plain","content-type":"text\/plain","content-version":"vor","intended-application":"text-mining"}],"deposited":{"date-parts":[[2018,11,26]],"date-time":"2018-11-26T07:59:55Z","timestamp":1543219195000},"score":1.0,"issued":{"date-parts":[[2012,6]]},"references-count":24,"journal-issue":{"published-print":{"date-parts":[[2012,6]]},"issue":"12"},"alternative-id":["S0921452612001755"],"URL":"http:\/\/dx.doi.org\/10.1016\/j.physb.2012.02.007","ISSN":["0921-4526"],"issn-type":[{"value":"0921-4526","type":"print"}],"subject":["Electrical
-        and Electronic Engineering","Electronic, Optical and Magnetic Materials","Condensed
-        Matter Physics"]}],"items-per-page":20,"query":{"start-index":0,"search-terms":null}}}'
-  recorded_at: 2018-12-07 22:46:36 GMT
-  recorded_with: vcr/0.2.0.9101, webmockr/0.2.9.9311
+      file: no
+      string: '{"status":"ok","message-type":"work-list","message-version":"1.0.0","message":{"facets":{},"total-results":126591300,"items":[{"indexed":{"date-parts":[[2021,5,8]],"date-time":"2021-05-08T12:18:27Z","timestamp":1620476307927},"reference-count":0,"publisher":"Wiley","issue":"5","license":[{"start":{"date-parts":[[2015,9,1]],"date-time":"2015-09-01T00:00:00Z","timestamp":1441065600000},"content-version":"tdm","delay-in-days":7640,"URL":"http:\/\/doi.wiley.com\/10.1002\/tdm_license_1"}],"content-domain":{"domain":[],"crossmark-restriction":false},"published-print":{"date-parts":[[1994,10]]},"DOI":"10.1111\/apt.1994.8.issue-5","type":"journal-issue","created":{"date-parts":[[2016,2,25]],"date-time":"2016-02-25T07:46:46Z","timestamp":1456386406000},"source":"Crossref","is-referenced-by-count":0,"prefix":"10.1111","volume":"8","member":"311","container-title":["Alimentary
+        Pharmacology & Therapeutics"],"language":"en","link":[{"URL":"http:\/\/api.wiley.com\/onlinelibrary\/tdm\/v1\/articles\/10.1111%2Fapt.1994.8.issue-5","content-type":"unspecified","content-version":"vor","intended-application":"text-mining"}],"deposited":{"date-parts":[[2016,2,25]],"date-time":"2016-02-25T07:46:46Z","timestamp":1456386406000},"score":0.99999994,"issued":{"date-parts":[[1994,10]]},"references-count":0,"journal-issue":{"issue":"5"},"URL":"http:\/\/dx.doi.org\/10.1111\/apt.1994.8.issue-5","ISSN":["0269-2813","1365-2036"],"issn-type":[{"value":"0269-2813","type":"print"},{"value":"1365-2036","type":"electronic"}],"subject":["Pharmacology
+        (medical)","Gastroenterology","Hepatology","Pharmacology (medical)","General
+        Pharmacology, Toxicology and Pharmaceutics"],"published":{"date-parts":[[1994,10]]}},{"indexed":{"date-parts":[[2021,5,10]],"date-time":"2021-05-10T15:10:36Z","timestamp":1620659436250},"reference-count":0,"publisher":"Ion
+        Creanga State Pedagogical University","issue":"1","content-domain":{"domain":[],"crossmark-restriction":false},"short-container-title":["PHCS"],"published-print":{"date-parts":[[2018,6,30]]},"abstract":"<jats:p>Between
+        1914 and 1921, the population inhabiting the region of Bessarabia witnessed,
+        although from behind the frontline, the world conflagration, which was followed
+        by major political changes that detached the region from the Russian Empire,
+        then created the conditions for a short independence period, to finally attach
+        the province to \u201cGreater Romania\u201d in 1918. The history of the city
+        of Chi\u0219in\u0103u during this tumultuous time period is discussed \u2013
+        for the first time \u2013 with a specific focus on its dynamics as a place
+        in which two political systems, defined by the imperial and the national model,
+        confronted each other while also coexisting in different settings. The authors
+        are especially interested in the trajectories of individuals, communities,
+        and institutions linked to the city. They reconstruct the way local actors
+        acknowledged political changes, but also how they exercised agency and imposed
+        their own agendas, frequently based on local, group, or personal needs. The
+        case of Chi\u0219in\u0103u is relevant for\nthe understanding of the major
+        impact of political transition(s) on the local level. It shows that there
+        were various local actors, all of them being part and parcel of this transition,
+        within which they had their own story to tell. Whereas for some political
+        or social groups 1918 meant a new beginning, for others it was the time of
+        political vacuum, from which certain dividends could be extracted.<\/jats:p>","DOI":"10.37710\/plural.v6i1_1","type":"journal-article","created":{"date-parts":[[2020,4,16]],"date-time":"2020-04-16T01:09:12Z","timestamp":1586999352000},"page":"5-42","source":"Crossref","is-referenced-by-count":0,"title":["Svetlana
+        Suveic\u0103, Virgil P\u00e2slariuc, Chi\u0219in\u0103u during World WarI:
+        From the Western Borderland of Russian Empire to the Eastern Borderland of
+        Romania \/ Chi\u015fin\u0103ul \u00een anii primului r\u0103zboi mondial:
+        de la hotarul de vest al Imperiului rus la hotarul de est al Rom\u00e2niei
+        Mari"],"prefix":"10.37710","volume":"6","member":"19313","published-online":{"date-parts":[[2018,6,30]]},"container-title":["PLURAL.
+        History, Culture, Society"],"language":"ro","deposited":{"date-parts":[[2020,4,17]],"date-time":"2020-04-17T04:48:47Z","timestamp":1587098927000},"score":0.99999994,"issued":{"date-parts":[[2018,6,30]]},"references-count":0,"journal-issue":{"issue":"1","published-online":{"date-parts":[[2018,6,30]]},"published-print":{"date-parts":[[2018,6,30]]}},"URL":"http:\/\/dx.doi.org\/10.37710\/plural.v6i1_1","archive":["Internet
+        Archive","Internet Archive"],"ISSN":["2345-184X","2345-1262"],"issn-type":[{"value":"2345-184X","type":"electronic"},{"value":"2345-1262","type":"print"}],"subject":["Sociology
+        and Political Science","History","Cultural Studies"],"published":{"date-parts":[[2018,6,30]]}},{"indexed":{"date-parts":[[2021,5,9]],"date-time":"2021-05-09T03:00:54Z","timestamp":1620529254620},"reference-count":0,"publisher":"Public
+        Library of Science (PLoS)","content-domain":{"domain":[],"crossmark-restriction":false},"DOI":"10.1371\/journal.pone.0092766.g006","type":"component","created":{"date-parts":[[2014,3,27]],"date-time":"2014-03-27T16:59:24Z","timestamp":1395939564000},"source":"Crossref","is-referenced-by-count":0,"prefix":"10.1371","member":"340","deposited":{"date-parts":[[2018,10,22]],"date-time":"2018-10-22T20:29:53Z","timestamp":1540240193000},"score":0.99999994,"issued":{"date-parts":[[null]]},"references-count":0,"URL":"http:\/\/dx.doi.org\/10.1371\/journal.pone.0092766.g006"}],"items-per-page":20,"query":{"start-index":0,"search-terms":null}}}'
+  recorded_at: 2021-08-17 17:22:18 GMT
+  recorded_with: vcr/1.0.2, webmockr/0.8.0

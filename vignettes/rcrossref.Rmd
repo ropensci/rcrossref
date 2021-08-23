@@ -1,7 +1,7 @@
 ---
 title: rcrossref introduction 
 author: Scott Chamberlain
-date: "2020-10-02"
+date: "2021-08-19"
 output: rmarkdown::html_vignette
 vignette: >
     %\VignetteIndexEntry{rcrossref introduction}
@@ -118,7 +118,7 @@ Citation count, using OpenURL
 ```r
 cr_citation_count(doi="10.1371/journal.pone.0042793")
 #>                            doi count
-#> 1 10.1371/journal.pone.0042793    40
+#> 1 10.1371/journal.pone.0042793    43
 ```
 
 ## Search Crossref metadata API
@@ -132,32 +132,32 @@ The following functions all use the CrossRef API.
 cr_funders(query="NSF")
 #> $meta
 #>   total_results search_terms start_index items_per_page
-#> 1            22          NSF           0             20
+#> 1            39          NSF           0             20
 #> 
 #> $data
-#> # A tibble: 20 x 6
-#>    id     name            alt.names          uri        tokens          location
-#>    <chr>  <chr>           <chr>              <chr>      <chr>           <chr>   
-#>  1 50110… National Strok… NSF                http://dx… national, stro… <NA>    
-#>  2 50110… National Scien… NSF, National Sci… http://dx… national, scie… <NA>    
-#>  3 10000… National Sleep… NSF                http://dx… national, slee… United …
-#>  4 50110… Norsk Sykeplei… NSF, Norwegian Nu… http://dx… norsk, sykeple… <NA>    
-#>  5 10000… National Scien… USA NSF, NSF, US … http://dx… national, scie… United …
-#>  6 10000… Center for Hie… CHM, NSF, Univers… http://dx… center, for, h… United …
-#>  7 10001… Arkansas NSF E… Arkansas EPSCoR P… http://dx… arkansas, nsf,… United …
-#>  8 10001… Kansas NSF EPS… KNE, NSF EPSCoR    http://dx… kansas, nsf, e… United …
-#>  9 50110… Natural Scienc… Anhui Provincial … http://dx… natural, scien… China   
-#> 10 10000… Statens Naturv… Danish National S… http://dx… statens, natur… <NA>    
-#> 11 10000… Office of the … NSF Office of the… http://dx… office, of, th… United …
-#> 12 50110… National Natur… Natural Science F… http://dx… national, natu… China   
-#> 13 10001… Nick Simons Fo… NSF, The Nick Sim… http://dx… nick, simons, … United …
-#> 14 10001… BioXFEL Scienc… National Science … http://dx… bioxfel, scien… United …
-#> 15 10000… Division of In… IOS, NSF Division… http://dx… division, of, … United …
-#> 16 50110… NSFC-Henan Joi… NSFC-Henan Provin… http://dx… nsfc, henan, j… China   
-#> 17 50110… National Natur… NSFC-Guangdong Jo… http://dx… national, natu… China   
-#> 18 50110… Data Center of… Data Center of Ma… http://dx… data, center, … China   
-#> 19 50110… National Natur… NSFC-Yunnan Joint… http://dx… national, natu… China   
-#> 20 50110… National Natur… NSFC-Shandong Joi… http://dx… national, natu… China   
+#> # A tibble: 20 × 6
+#>    id           location       name         alt.names       uri     tokens      
+#>    <chr>        <chr>          <chr>        <chr>           <chr>   <chr>       
+#>  1 100000001    United States  National Sc… "USA NSF, NSF,… http:/… national, s…
+#>  2 100015388    United States  Kansas NSF … "KNE, NSF EPSC… http:/… kansas, nsf…
+#>  3 100016323    United States  Arkansas NS… "Arkansas EPSC… http:/… arkansas, n…
+#>  4 100003187    United States  National Sl… "NSF"           http:/… national, s…
+#>  5 501100000930 Australia      National St… "NSF"           http:/… national, s…
+#>  6 501100004190 Norway         Norsk Sykep… "NSF, Norwegia… http:/… norsk, syke…
+#>  7 501100020414 United Kingdom Neuroscienc… "The Neuroscie… http:/… neuroscienc…
+#>  8 100000154    United States  Division of… "IOS, NSF Divi… http:/… division, o…
+#>  9 100017338    China          Key Program… ""              http:/… key, progra…
+#> 10 100000084    United States  Directorate… "NSF Directora… http:/… directorate…
+#> 11 100016620    United States  Nick Simons… "NSF, The Nick… http:/… nick, simon…
+#> 12 100006445    United States  Center for … "CHM, NSF, Uni… http:/… center, for…
+#> 13 100017325    United States  Engineering… "ERC, The NSF … http:/… engineering…
+#> 14 100008367    Denmark        Statens Nat… "Danish Nation… http:/… statens, na…
+#> 15 100000179    United States  Office of t… "NSF Office of… http:/… office, of,…
+#> 16 501100019492 China          National Na… "NSFC-General … http:/… national, n…
+#> 17 501100011002 China          National Na… "NSFC-Yunnan J… http:/… national, n…
+#> 18 501100008982 Sri Lanka      National Sc… "National Scie… http:/… national, s…
+#> 19 501100001809 China          National Na… "NNSF of China… http:/… national, n…
+#> 20 501100014220 China          National Na… "NSFC-Henan Jo… http:/… national, n…
 #> 
 #> $facets
 #> NULL
@@ -186,21 +186,19 @@ cr_agency(dois = '10.13039/100000001')
 cr_works(filter=c(has_orcid=TRUE, from_pub_date='2004-04-04'), limit=1)
 #> $meta
 #>   total_results search_terms start_index items_per_page
-#> 1       4738988           NA           0              1
+#> 1       6556799           NA           0              1
 #> 
 #> $data
-#> # A tibble: 1 x 34
-#>   container.title created deposited published.online doi   indexed issn  issue
-#>   <chr>           <chr>   <chr>     <chr>            <chr> <chr>   <chr> <chr>
-#> 1 Chemical Commu… 2018-1… 2019-11-… 2019             10.1… 2020-0… 1359… 6    
-#> # … with 26 more variables: issued <chr>, member <chr>, page <chr>,
+#> # A tibble: 1 × 26
+#>   container.title created  deposited  published.online doi   indexed issn  issue
+#>   <chr>           <chr>    <chr>      <chr>            <chr> <chr>   <chr> <chr>
+#> 1 Belügyi Szemle  2021-04… 2021-04-26 2021-04-26       10.3… 2021-0… 2677… 4    
+#> # … with 18 more variables: issued <chr>, member <chr>, page <chr>,
 #> #   prefix <chr>, publisher <chr>, score <chr>, source <chr>,
 #> #   reference.count <chr>, references.count <chr>,
-#> #   is.referenced.by.count <chr>, subject <chr>, title <chr>, type <chr>,
-#> #   update.policy <chr>, url <chr>, volume <chr>, abstract <chr>,
-#> #   language <chr>, short.container.title <chr>, assertion <list>,
-#> #   author <list>, funder <list>, link <list>, content_domain <list>,
-#> #   license <list>, reference <list>
+#> #   is.referenced.by.count <chr>, title <chr>, type <chr>, url <chr>,
+#> #   volume <chr>, abstract <chr>, short.container.title <chr>, author <list>,
+#> #   link <list>
 #> 
 #> $facets
 #> NULL
@@ -212,38 +210,18 @@ cr_works(filter=c(has_orcid=TRUE, from_pub_date='2004-04-04'), limit=1)
 ```r
 cr_journals(issn=c('1803-2427','2326-4225'))
 #> $data
-#> # A tibble: 2 x 53
-#>   title publisher issn  last_status_che… deposits_abstra… deposits_orcids…
-#>   <chr> <chr>     <chr> <date>           <lgl>            <lgl>           
-#> 1 Jour… "De Gruy… 1805… 2020-09-30       TRUE             FALSE           
-#> 2 Jour… "America… 2326… 2020-09-29       FALSE            FALSE           
+#> # A tibble: 2 × 53
+#>   title    publisher   issn   last_status_che… deposits_abstra… deposits_orcids…
+#>   <chr>    <chr>       <chr>  <date>           <lgl>            <lgl>           
+#> 1 Journal… De Gruyter… 1803-… 2021-08-18       TRUE             TRUE            
+#> 2 Journal… American S… 2326-… 2021-08-18       FALSE            FALSE           
 #> # … with 47 more variables: deposits <lgl>,
 #> #   deposits_affiliations_backfile <lgl>,
 #> #   deposits_update_policies_backfile <lgl>,
 #> #   deposits_similarity_checking_backfile <lgl>,
 #> #   deposits_award_numbers_current <lgl>,
 #> #   deposits_resource_links_current <lgl>, deposits_articles <lgl>,
-#> #   deposits_affiliations_current <lgl>, deposits_funders_current <lgl>,
-#> #   deposits_references_backfile <lgl>, deposits_abstracts_backfile <lgl>,
-#> #   deposits_licenses_backfile <lgl>, deposits_award_numbers_backfile <lgl>,
-#> #   deposits_open_references_backfile <lgl>,
-#> #   deposits_open_references_current <lgl>, deposits_references_current <lgl>,
-#> #   deposits_resource_links_backfile <lgl>, deposits_orcids_backfile <lgl>,
-#> #   deposits_funders_backfile <lgl>, deposits_update_policies_current <lgl>,
-#> #   deposits_similarity_checking_current <lgl>,
-#> #   deposits_licenses_current <lgl>, affiliations_current <dbl>,
-#> #   similarity_checking_current <dbl>, funders_backfile <dbl>,
-#> #   licenses_backfile <dbl>, funders_current <dbl>,
-#> #   affiliations_backfile <dbl>, resource_links_backfile <dbl>,
-#> #   orcids_backfile <dbl>, update_policies_current <dbl>,
-#> #   open_references_backfile <dbl>, orcids_current <dbl>,
-#> #   similarity_checking_backfile <dbl>, references_backfile <dbl>,
-#> #   award_numbers_backfile <dbl>, update_policies_backfile <dbl>,
-#> #   licenses_current <dbl>, award_numbers_current <dbl>,
-#> #   abstracts_backfile <dbl>, resource_links_current <dbl>,
-#> #   abstracts_current <dbl>, open_references_current <dbl>,
-#> #   references_current <dbl>, total_dois <int>, current_dois <int>,
-#> #   backfile_dois <int>
+#> #   deposits_affiliations_current <lgl>, deposits_funders_current <lgl>, …
 #> 
 #> $facets
 #> NULL
@@ -256,23 +234,32 @@ cr_journals(issn=c('1803-2427','2326-4225'))
 cr_licenses(query = 'elsevier')
 #> $meta
 #>   total_results search_terms start_index items_per_page
-#> 1            39     elsevier           0             20
+#> 1            52           NA          NA             NA
 #> 
 #> $data
-#> # A tibble: 39 x 2
-#>    URL                                                      work.count
-#>    <chr>                                                         <int>
-#>  1 http://aspb.org/publications/aspb-journals/open-articles          1
-#>  2 http://creativecommons.org/licenses/by-nc-nd/3.0/                11
-#>  3 http://creativecommons.org/licenses/by-nc-nd/4.0/                16
-#>  4 http://creativecommons.org/licenses/by-nc/4.0/                    4
-#>  5 http://creativecommons.org/licenses/by/2.0                        2
-#>  6 http://creativecommons.org/licenses/by/3.0/                       1
-#>  7 http://creativecommons.org/licenses/by/3.0/igo/                   1
-#>  8 http://creativecommons.org/licenses/by/4.0                        9
-#>  9 http://creativecommons.org/licenses/by/4.0/                      16
-#> 10 http://doi.wiley.com/10.1002/tdm_license_1                      136
-#> # … with 29 more rows
+#> # A tibble: 20 × 2
+#>    URL                                                                    work.count
+#>    <chr>                                                                       <int>
+#>  1 http://aspb.org/publications/aspb-journals/open-articles                        1
+#>  2 http://creativecommons.org/licenses/by-nc-nd/3.0                                3
+#>  3 http://creativecommons.org/licenses/by-nc-nd/3.0/                              11
+#>  4 http://creativecommons.org/licenses/by-nc-nd/4.0/                              21
+#>  5 http://creativecommons.org/licenses/by-nc/4.0/                                  6
+#>  6 http://creativecommons.org/licenses/by-sa/4.0                                   1
+#>  7 http://creativecommons.org/licenses/by/2.0                                      2
+#>  8 http://creativecommons.org/licenses/by/3.0                                      2
+#>  9 http://creativecommons.org/licenses/by/3.0/                                     2
+#> 10 http://creativecommons.org/licenses/by/3.0/igo/                                 1
+#> 11 http://creativecommons.org/licenses/by/4.0                                     11
+#> 12 http://creativecommons.org/licenses/by/4.0/                                    22
+#> 13 http://doi.wiley.com/10.1002/tdm_license_1                                    136
+#> 14 http://doi.wiley.com/10.1002/tdm_license_1.1                                 2255
+#> 15 http://iopscience.iop.org/info/page/text-and-data-mining                        2
+#> 16 http://iopscience.iop.org/page/copyright                                        2
+#> 17 http://journals.iucr.org/services/copyrightpolicy.html                         11
+#> 18 http://journals.iucr.org/services/copyrightpolicy.html#TDM                     11
+#> 19 http://journals.sagepub.com/page/policies/text-and-data-mining-license        365
+#> 20 http://onlinelibrary.wiley.com/termsAndConditions                              63
 ```
 
 ### Search based on DOI prefixes
@@ -308,52 +295,24 @@ cr_prefixes(prefixes=c('10.1016','10.1371','10.1023','10.4176','10.1093'))
 cr_members(query='ecology', limit = 5)
 #> $meta
 #>   total_results search_terms start_index items_per_page
-#> 1            23      ecology           0              5
+#> 1            24      ecology           0              5
 #> 
 #> $data
-#> # A tibble: 5 x 56
-#>      id primary_name location last_status_che… total.dois current.dois
-#>   <int> <chr>        <chr>    <date>           <chr>      <chr>       
-#> 1  1950 Journal of … Suite 8… 2020-10-02       0          0           
-#> 2  2899 Association… P.O. Bo… 2020-10-02       0          0           
-#> 3  4302 Immediate S… Dept. o… 2020-10-02       6          0           
-#> 4  7052 Chinese Jou… Flat C … 2020-10-02       1372       251         
-#> 5  2467 Ideas in Ec… Prins W… 2020-10-02       0          0           
-#> # … with 50 more variables: backfile.dois <chr>, prefixes <chr>,
+#> # A tibble: 5 × 56
+#>      id primary_name    location     last_status_che… current.dois backfile.dois
+#>   <int> <chr>           <chr>        <date>           <chr>        <chr>        
+#> 1  4302 Immediate Scie… Toronto, ON… 2021-08-18       0            6            
+#> 2  6933 Knowledge Ecol… Washington,… 2021-08-18       0            1            
+#> 3  1950 Journal of Vec… United Stat… 2021-08-18       0            0            
+#> 4  2899 Association fo… Eugene, OR,… 2021-08-18       0            0            
+#> 5  7745 Institute of A… Makhachkala… 2021-08-18       172          678          
+#> # … with 50 more variables: total.dois <chr>, prefixes <chr>,
 #> #   coverge.affiliations.current <chr>,
 #> #   coverge.similarity.checking.current <chr>, coverge.funders.backfile <chr>,
 #> #   coverge.licenses.backfile <chr>, coverge.funders.current <chr>,
 #> #   coverge.affiliations.backfile <chr>, coverge.resource.links.backfile <chr>,
 #> #   coverge.orcids.backfile <chr>, coverge.update.policies.current <chr>,
-#> #   coverge.open.references.backfile <chr>, coverge.orcids.current <chr>,
-#> #   coverge.similarity.checking.backfile <chr>,
-#> #   coverge.references.backfile <chr>, coverge.award.numbers.backfile <chr>,
-#> #   coverge.update.policies.backfile <chr>, coverge.licenses.current <chr>,
-#> #   coverge.award.numbers.current <chr>, coverge.abstracts.backfile <chr>,
-#> #   coverge.resource.links.current <chr>, coverge.abstracts.current <chr>,
-#> #   coverge.open.references.current <chr>, coverge.references.current <chr>,
-#> #   flags.deposits.abstracts.current <chr>,
-#> #   flags.deposits.orcids.current <chr>, flags.deposits <chr>,
-#> #   flags.deposits.affiliations.backfile <chr>,
-#> #   flags.deposits.update.policies.backfile <chr>,
-#> #   flags.deposits.similarity.checking.backfile <chr>,
-#> #   flags.deposits.award.numbers.current <chr>,
-#> #   flags.deposits.resource.links.current <chr>, flags.deposits.articles <chr>,
-#> #   flags.deposits.affiliations.current <chr>,
-#> #   flags.deposits.funders.current <chr>,
-#> #   flags.deposits.references.backfile <chr>,
-#> #   flags.deposits.abstracts.backfile <chr>,
-#> #   flags.deposits.licenses.backfile <chr>,
-#> #   flags.deposits.award.numbers.backfile <chr>,
-#> #   flags.deposits.open.references.backfile <chr>,
-#> #   flags.deposits.open.references.current <chr>,
-#> #   flags.deposits.references.current <chr>,
-#> #   flags.deposits.resource.links.backfile <chr>,
-#> #   flags.deposits.orcids.backfile <chr>,
-#> #   flags.deposits.funders.backfile <chr>,
-#> #   flags.deposits.update.policies.current <chr>,
-#> #   flags.deposits.similarity.checking.current <chr>,
-#> #   flags.deposits.licenses.current <chr>, names <chr>, tokens <chr>
+#> #   coverge.open.references.backfile <chr>, coverge.orcids.current <chr>, …
 #> 
 #> $facets
 #> NULL
@@ -366,11 +325,16 @@ cr_members(query='ecology', limit = 5)
 
 ```r
 cr_r()
-#>  [1] "10.1093/oseo/instance.00086433"    "10.1093/jaoac/49.5.915"           
-#>  [3] "10.14814/phy2.13993"               "10.2210/pdb5rnw/pdb"              
-#>  [5] "10.1002/ajp.1350150207"            "10.1111/j.1532-950x.2012.01075.x" 
-#>  [7] "10.1021/ma00060a006"               "10.1371/journal.pone.0045474.s001"
-#>  [9] "10.1086/447083"                    "10.17352/jbm.000021"
+#>  [1] "10.1111/biot.1990.4.issue-2"           
+#>  [2] "10.7717/peerj.5714/table-5"            
+#>  [3] "10.1061/(asce)0733-947x(2008)134:1(34)"
+#>  [4] "10.1016/j.clml.2015.04.108"            
+#>  [5] "10.1371/journal.pntd.0009063.s016"     
+#>  [6] "10.31616/asj.2020.0425"                
+#>  [7] "10.15446/revfacmed.v65n3.61313"        
+#>  [8] "10.1586/ecp.09.36"                     
+#>  [9] "10.1007/978-3-8348-9174-7_1"           
+#> [10] "10.1080/09511920601160171"
 ```
 
 You can pass in the number of DOIs you want back (default is 10)
@@ -378,7 +342,7 @@ You can pass in the number of DOIs you want back (default is 10)
 
 ```r
 cr_r(2)
-#> [1] "10.1525/ncl.1983.38.2.99p0363h" "10.1177/1087057109350114"
+#> [1] "10.5194/gmd-2021-94-supplement" "10.1108/prt.2009.12938bad.009"
 ```
 
 ## Get full text
@@ -393,16 +357,16 @@ out <-
   cr_works(filter = list(has_full_text = TRUE,
     license_url = "http://creativecommons.org/licenses/by/3.0/"))
 (dois <- out$data$doi)
-#>  [1] "10.1016/s0370-2693(01)01461-7" "10.1016/s0370-2693(01)01505-2"
-#>  [3] "10.1016/s0370-2693(01)01497-6" "10.1016/s0370-2693(01)01503-9"
-#>  [5] "10.1016/s0370-2693(01)01486-1" "10.1016/s0370-2693(02)01156-5"
-#>  [7] "10.1016/s0370-2693(02)01181-4" "10.1016/s0370-2693(01)01471-x"
-#>  [9] "10.1016/s0370-2693(01)01467-8" "10.1016/s0370-2693(02)01166-8"
-#> [11] "10.1016/s0370-2693(02)01174-7" "10.1016/s0370-2693(02)01179-6"
-#> [13] "10.1016/s0370-2693(01)01473-3" "10.1016/s0370-2693(01)01518-0"
-#> [15] "10.1016/s0370-2693(01)01512-x" "10.1016/s0370-2693(01)01500-3"
-#> [17] "10.1016/s0370-2693(01)01487-3" "10.1016/s0370-2693(01)01431-9"
-#> [19] "10.1016/s0370-2693(01)01469-1" "10.1016/s0370-2693(01)01450-2"
+#>  [1] "10.1155/jamsa/2006/42542"        "10.1016/s0370-2693(02)01651-9"  
+#>  [3] "10.1016/s0370-2693(02)01624-6"   "10.1155/ijmms/2006/89545"       
+#>  [5] "10.1016/s0370-2693(01)01058-9"   "10.1016/s0370-2693(01)01257-6"  
+#>  [7] "10.1016/s0370-2693(01)01287-4"   "10.1016/s0370-2693(01)01385-5"  
+#>  [9] "10.1002/cfg.80"                  "10.1002/cfg.118"                
+#> [11] "10.1002/cfg.166"                 "10.1002/cfg.59"                 
+#> [13] "10.1002/cfg.108"                 "10.1088/1742-6596/1147/1/012044"
+#> [15] "10.1088/1742-6596/1147/1/012077" "10.1088/1742-6596/578/1/012006" 
+#> [17] "10.1088/1755-1315/222/1/012020"  "10.1002/ecs2.2575"              
+#> [19] "10.1088/1755-1315/214/1/012004"  "10.1088/1755-1315/214/1/012021"
 ```
 
 From the output of `cr_works` we can get full text links if we know where to look:
@@ -410,20 +374,20 @@ From the output of `cr_works` we can get full text links if we know where to loo
 
 ```r
 do.call("rbind", out$data$link)
-#> # A tibble: 40 x 4
-#>    URL                            content.type content.version intended.applica…
-#>    <chr>                          <chr>        <chr>           <chr>            
-#>  1 https://api.elsevier.com/cont… text/xml     vor             text-mining      
-#>  2 https://api.elsevier.com/cont… text/plain   vor             text-mining      
-#>  3 https://api.elsevier.com/cont… text/xml     vor             text-mining      
-#>  4 https://api.elsevier.com/cont… text/plain   vor             text-mining      
-#>  5 https://api.elsevier.com/cont… text/xml     vor             text-mining      
-#>  6 https://api.elsevier.com/cont… text/plain   vor             text-mining      
-#>  7 https://api.elsevier.com/cont… text/xml     vor             text-mining      
-#>  8 https://api.elsevier.com/cont… text/plain   vor             text-mining      
-#>  9 https://api.elsevier.com/cont… text/xml     vor             text-mining      
-#> 10 https://api.elsevier.com/cont… text/plain   vor             text-mining      
-#> # … with 30 more rows
+#> # A tibble: 55 × 4
+#>    URL                           content.type  content.version intended.applica…
+#>    <chr>                         <chr>         <chr>           <chr>            
+#>  1 http://downloads.hindawi.com… application/… vor             text-mining      
+#>  2 http://downloads.hindawi.com… unspecified   vor             similarity-check…
+#>  3 https://api.elsevier.com/con… text/xml      vor             text-mining      
+#>  4 https://api.elsevier.com/con… text/plain    vor             text-mining      
+#>  5 https://api.elsevier.com/con… text/xml      vor             text-mining      
+#>  6 https://api.elsevier.com/con… text/plain    vor             text-mining      
+#>  7 http://downloads.hindawi.com… application/… vor             text-mining      
+#>  8 http://downloads.hindawi.com… unspecified   vor             similarity-check…
+#>  9 https://api.elsevier.com/con… text/xml      vor             text-mining      
+#> 10 https://api.elsevier.com/con… text/plain    vor             text-mining      
+#> # … with 45 more rows
 ```
 
 From there, you can grab your full text, but because most links require
@@ -443,15 +407,9 @@ if (!requireNamespace("crminer")) {
 
 ```r
 library(crminer)
+#> Error in library(crminer): there is no package called 'crminer'
 (links <- crm_links("10.1155/2014/128505"))
-#> $pdf
-#> <url> http://downloads.hindawi.com/archive/2014/128505.pdf
-#> 
-#> $xml
-#> <url> http://downloads.hindawi.com/archive/2014/128505.xml
-#> 
-#> $unspecified
-#> <url> http://downloads.hindawi.com/archive/2014/128505.pdf
+#> Error in crm_links("10.1155/2014/128505"): could not find function "crm_links"
 ```
 
 Then use those URLs to get full text

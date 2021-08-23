@@ -19,9 +19,7 @@ test_that("id_converter returns", {
 })
 
 test_that("id_converter fails correctly", {
-  vcr::use_cassette("id_converter_fails_well", {
     expect_error(id_converter("", timeout_ms = 1))
-  })
 
   skip_on_cran()
   expect_error(id_converter(), "argument \"x\" is missing")

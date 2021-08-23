@@ -50,10 +50,7 @@ test_that("cr_types facet works correctly", {
 })
 
 test_that("cr_types fails correctly", {
-  vcr::use_cassette("cr_types_fails_well", {
-
     expect_error(cr_types(types="monograph", timeout_ms = 1))
-  })
 })
 
 test_that("cr_types cursor works with progress bar", {

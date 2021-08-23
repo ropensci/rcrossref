@@ -250,8 +250,8 @@ parse_meta <- function(x) {
   st <- tmp$query$`search-terms`
   data.frame(total_results = tmp$`total-results`,
              search_terms = if (is.null(st)) NA else st,
-             start_index = tmp$query$`start-index`,
-             items_per_page = tmp$`items-per-page`,
+             start_index = if (is.null(tmp$query$`start-index`)) NA else tmp$query$`start-index`,
+             items_per_page = if (is.null(tmp$`items-per-page`)) NA else tmp$`items-per-page`,
              stringsAsFactors = FALSE)
 }
 

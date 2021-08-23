@@ -118,13 +118,15 @@ test_that("cr_works - parses funders correctly", {
     dd <- cr_works(doi)
     expect_true(any(grepl("funder", names(dd$data))))
     expect_named(dd$data$funder[[1]],
-                 c("DOI", "name", "doi.asserted.by", "award"))
+                 c("DOI", "name", "doi.asserted.by", "award"),
+                 ignore.order = TRUE)
 
     doi <- "10.1145/2834800.2834802"
     dd <- cr_works(doi)
     expect_true(any(grepl("funder", names(dd$data))))
     expect_named(dd$data$funder[[1]],
-                 c("DOI", "name", "doi.asserted.by", "award"))
+                 c("DOI", "name", "doi.asserted.by", "award"),
+                 ignore.order = TRUE)
 
     doi <- "10.1145/2832099.2832103"
     ee <- cr_works(doi)
@@ -148,7 +150,8 @@ test_that("cr_works - parses funders correctly", {
     expect_true(any(grepl("funder", names(hh$data))))
     expect_named(
       hh$data$funder[[1]],
-      c("DOI", "name", "doi.asserted.by", "award1", "award2", "award3"))
+      c("DOI", "name", "doi.asserted.by", "award", "award1", "award2"),
+      ignore.order = TRUE)
   })
 })
 
@@ -172,24 +175,26 @@ test_that("cr_works - select works", {
 
 test_that("cr_works - email works", {
   vcr::use_cassette("cr_works_email_works", {
-    Sys.setenv("crossref_email" = "name@example.com")
-    a <- cr_works(query="NSF")
-    expect_is(a, "list")
+     withr::with_envvar(
+      new = c("crossref_email" = "name@example.com"),
+      expect_is(cr_works(query = "NSF"), "list")
+      )
   })
 })
 
 test_that("cr_works - email is validated", {
-  vcr::use_cassette("cr_works_email_is_validated", {  
-    Sys.setenv("crossref_email" = "name@example")
-    expect_error(cr_works(query="NSF"))
-  })
+    withr::with_envvar(
+      new = c("crossref_email" = "name@example"),
+      expect_error(cr_works(query = "NSF"))
+    )
 })
 
 test_that("cr_works - email NULL works", {
   vcr::use_cassette("cr_works_email_null_works", {
-    Sys.setenv("crossref_email" = "")
-    a <- cr_works(query="NSF")
-    expect_is(a, "list")
+     withr::with_envvar(
+      new = c("crossref_email" = ""),
+      expect_is(cr_works(query = "NSF"), "list")
+     )
   })
 })
 
