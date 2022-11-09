@@ -24,19 +24,19 @@ vcr::use_cassette("cr_funders", {
   })
 })
 
-vcr::use_cassette("cr_funders_faceting", {
-  test_that("cr_funders facet works", {
+# vcr::use_cassette("cr_funders_faceting", {
+#   test_that("cr_funders facet works", {
   
-    a <- cr_funders("10.13039/100000001", works=TRUE, facet=TRUE, limit = 0)
+#     a <- cr_funders("10.13039/100000001", works=TRUE, facet=TRUE, limit = 0)
     
-    expect_is(a, "list")
-    expect_is(a$data, "data.frame")
-    expect_is(a$meta, "data.frame")
-    expect_is(a$facets, "list")
-    expect_is(a$facets$affiliation, "data.frame")
-    expect_is(a$facets$published, "data.frame")
-  })
-})
+#     expect_is(a, "list")
+#     expect_is(a$data, "data.frame")
+#     expect_is(a$meta, "data.frame")
+#     expect_is(a$facets, "list")
+#     expect_is(a$facets$affiliation, "data.frame")
+#     expect_is(a$facets$published, "data.frame")
+#   })
+# })
 
 
 vcr::use_cassette("cr_funders_fails_well", {

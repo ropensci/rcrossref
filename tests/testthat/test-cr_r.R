@@ -5,8 +5,8 @@ test_that("cr_r returns", {
     a <- cr_r(1)
     b <- cr_r(5)
     c <- cr_r(20)
-    d <- cr_r(20, query="ecology")
-    e <- cr_r(5, filter=c(award.funder='10.13039/100000001'))
+    d <- cr_r(20, query = "ecology")
+    e <- cr_r(5, filter = c(award.funder = '501100001659'))
 
     # correct classe
     expect_is(a, "character")

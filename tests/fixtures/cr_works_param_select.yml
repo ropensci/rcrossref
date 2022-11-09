@@ -8,28 +8,30 @@ http_interactions:
     headers:
       Accept-Encoding: gzip, deflate
       Accept: application/json, text/xml, application/xml, */*
-      User-Agent: r-curl/4.3.2 crul/1.1.0 rOpenSci(rcrossref/1.1.0.94) (mailto:<crossref_email>)
-      X-USER-AGENT: r-curl/4.3.2 crul/1.1.0 rOpenSci(rcrossref/1.1.0.94) (mailto:<crossref_email>)
+      User-Agent: r-curl/4.3.2 crul/1.3 rOpenSci(rcrossref/1.1.0.99) (mailto:<crossref_email>)
+      X-USER-AGENT: r-curl/4.3.2 crul/1.3 rOpenSci(rcrossref/1.1.0.99) (mailto:<crossref_email>)
   response:
     status:
       status_code: '200'
       message: OK
       explanation: Request fulfilled, document follows
     headers:
-      access-control-allow-headers: X-Requested-With
+      access-control-allow-headers: X-Requested-With, Accept, Accept-Encoding, Accept-Charset,
+        Accept-Language, Accept-Ranges, Cache-Control
       access-control-allow-origin: '*'
+      access-control-expose-headers: Link
       connection: close
       content-encoding: gzip
-      content-length: '720'
+      content-length: '696'
       content-type: application/json
-      date: Tue, 17 Aug 2021 17:54:25 GMT
+      date: Wed, 09 Nov 2022 13:19:43 GMT
       permissions-policy: interest-cohort=()
       server: Jetty(9.4.40.v20210413)
       set-cookie:
-      - AWSALB=/sKmaH+dcMfNvZswVxJewGDs7qzzw0CX6jwWqzxc9IDQTrgcsmc/tWZXBSp2lx95Pja4wNLiqzR2I9Fc2cXd3mD175OEhPLsojWj/r3eMuKLkzO/v/0CKAVemCoL;
-        Expires=Tue, 24 Aug 2021 17:54:25 GMT; Path=/
-      - AWSALBCORS=/sKmaH+dcMfNvZswVxJewGDs7qzzw0CX6jwWqzxc9IDQTrgcsmc/tWZXBSp2lx95Pja4wNLiqzR2I9Fc2cXd3mD175OEhPLsojWj/r3eMuKLkzO/v/0CKAVemCoL;
-        Expires=Tue, 24 Aug 2021 17:54:25 GMT; Path=/; SameSite=None
+      - AWSALB=fxs0V49qJ0kuGMgbvqiTVNPlEoISCrv9ctJbn+E264onzbLp0ic0wGokmvdF2dr6LaCJTxmM0oZ7YQBmfznoHiqVxnZ8HCQgrdK2/odf5w21dRoy911fwPv18Ue+;
+        Expires=Wed, 16 Nov 2022 13:19:17 GMT; Path=/
+      - AWSALBCORS=fxs0V49qJ0kuGMgbvqiTVNPlEoISCrv9ctJbn+E264onzbLp0ic0wGokmvdF2dr6LaCJTxmM0oZ7YQBmfznoHiqVxnZ8HCQgrdK2/odf5w21dRoy911fwPv18Ue+;
+        Expires=Wed, 16 Nov 2022 13:19:17 GMT; Path=/; SameSite=None
       status: HTTP/1.1 200 OK
       vary: Accept-Encoding
       x-api-pool: polite
@@ -38,27 +40,25 @@ http_interactions:
       x-ratelimit-interval: 1s
       x-ratelimit-limit: '50'
     body:
-      encoding: UTF-8
+      encoding: ''
       file: no
-      string: '{"status":"ok","message-type":"work-list","message-version":"1.0.0","message":{"facets":{},"total-results":8570855,"items":[{"DOI":"10.1126\/science.caredit.a1300244","title":["Science
-        Careers in India"]},{"DOI":"10.7551\/mitpress\/9755.003.0003","title":["Unsettling
-        Science"]},{"DOI":"10.1126\/science.1174131","title":["Science\n            for
+      string: '{"status":"ok","message-type":"work-list","message-version":"1.0.0","message":{"facets":{},"total-results":10001855,"items":[{"DOI":"10.1093\/obo\/9780199363445-0133","title":["Citizen
+        Science"]},{"DOI":"10.1126\/science.10.1126\/science.291.5501.27f","title":["Boosting
+        Science"]},{"DOI":"10.1126\/science.caredit.a1300244","title":["Science Careers
+        in India"]},{"DOI":"10.1017\/cbo9781107252950.029","title":["Science and Reality"]},{"DOI":"10.1093\/oso\/9780190690649.003.0007","title":["Philosophy
+        of Science and Science Studies"]},{"DOI":"10.1002\/(issn)2691-1078","title":["Crop
+        Science, Soil Science, Agronomy News"]},{"DOI":"10.7551\/mitpress\/9755.003.0003","title":["Unsettling
         Science"]},{"DOI":"10.1126\/science.caredit.a1300194","title":["Elsewhere
-        in Science Index"]},{"DOI":"10.5749\/j.ctt189tts8.2","title":["Science Fiction
-        and Extro-Science Fiction"]},{"DOI":"10.1093\/oso\/9780190690649.003.0007","title":["Philosophy
-        of Science and Science Studies"]},{"DOI":"10.1126\/science.caredit.a1300099","title":["When
-        All Science Becomes Data Science"]},{"DOI":"10.1126\/science.caredit.a0700148","title":["Experiences
-        of Ethnic Minorities in Science: Resources"]},{"DOI":"10.4324\/9780203125878-7","title":["Introduction:
-        Science Education and Science Studies"]},{"DOI":"10.1126\/science.caredit.a0800074","title":["Science
-        Careers Podcast Index"]},{"DOI":"10.1017\/9781108610834.029","title":["Last
-        Thought: All the Science of Science"]},{"DOI":"10.1093\/obo\/9780199756223-0095","title":["Science
-        and Democracy"]},{"DOI":"10.7551\/mitpress\/9755.003.0005","title":["Values
-        Everywhere within Science"]},{"DOI":"10.1002\/scin.5591820702","title":["Science
-        notebook"]},{"DOI":"10.1002\/scin.5591831102","title":["Science notebook"]},{"DOI":"10.1002\/scin.5591820202","title":["Science
-        notebook"]},{"DOI":"10.1126\/science.caredit.a1400310","title":["More science
-        doctorates, fewer post-doctorate science jobs"]},{"DOI":"10.1126\/science.caredit.a1500165","title":["Leaving
-        science for science writing"]},{"DOI":"10.1126\/science.caredit.a0900139","title":["The
-        Audacity in Science Series"]},{"DOI":"10.4324\/9780203047842-8","title":["Social
-        Science as Science"]}],"items-per-page":20,"query":{"start-index":0,"search-terms":"science"}}}'
-  recorded_at: 2021-08-17 17:54:25 GMT
-  recorded_with: vcr/1.0.2, webmockr/0.8.0
+        in Science Index"]},{"DOI":"10.7551\/mitpress\/9755.003.0006","title":["Science
+        Reflects Who Does It"]},{"DOI":"10.1126\/science.128.3319.289-b","title":["News
+        of Science"]},{"DOI":"10.1126\/science.177.4045.211","title":["Science and
+        Trans-Science"]},{"DOI":"10.5749\/j.ctt189tts8.2","title":["Science Fiction
+        and Extro-Science Fiction"]},{"DOI":"10.1126\/science.caredit.aat2794","title":["Celebrating
+        women in science"]},{"DOI":"10.1017\/cbo9781107252950.028","title":["Is Science
+        Artificial?"]},{"DOI":"10.1126\/science.129.3350.708","title":["News of Science"]},{"DOI":"10.1126\/science.252.5009.1046-d","title":["Big
+        Science, Little Science"]},{"DOI":"10.4324\/9780203821954-11","title":["The
+        science curriculum and science in the curriculum"]},{"DOI":"10.1002\/scin.5591811002","title":["Science
+        notebook"]},{"DOI":"10.1002\/scin.5591831002","title":["Science notebook"]},{"DOI":"10.1093\/med\/9780198717607.003.0001","title":["Science
+        before science"]}],"items-per-page":20,"query":{"start-index":0,"search-terms":"science"}}}'
+  recorded_at: 2022-11-09 13:19:43 GMT
+  recorded_with: vcr/1.1.0, webmockr/0.8.0

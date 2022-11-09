@@ -8,28 +8,30 @@ http_interactions:
     headers:
       Accept-Encoding: gzip, deflate
       Accept: application/json, text/xml, application/xml, */*
-      User-Agent: r-curl/4.3.2 crul/1.1.0 rOpenSci(rcrossref/1.1.0.94) (mailto:<crossref_email>)
-      X-USER-AGENT: r-curl/4.3.2 crul/1.1.0 rOpenSci(rcrossref/1.1.0.94) (mailto:<crossref_email>)
+      User-Agent: r-curl/4.3.2 crul/1.3 rOpenSci(rcrossref/1.1.0.99) (mailto:<crossref_email>)
+      X-USER-AGENT: r-curl/4.3.2 crul/1.3 rOpenSci(rcrossref/1.1.0.99) (mailto:<crossref_email>)
   response:
     status:
       status_code: '200'
       message: OK
       explanation: Request fulfilled, document follows
     headers:
-      access-control-allow-headers: X-Requested-With
+      access-control-allow-headers: X-Requested-With, Accept, Accept-Encoding, Accept-Charset,
+        Accept-Language, Accept-Ranges, Cache-Control
       access-control-allow-origin: '*'
+      access-control-expose-headers: Link
       connection: close
       content-encoding: gzip
-      content-length: '2668'
+      content-length: '2688'
       content-type: application/json
-      date: Tue, 17 Aug 2021 17:54:28 GMT
+      date: Wed, 09 Nov 2022 13:21:16 GMT
       permissions-policy: interest-cohort=()
       server: Jetty(9.4.40.v20210413)
       set-cookie:
-      - AWSALB=iJDqzmhsdZ/0UWJzHAzP/6vA6BstQ0DxRDaigNcYNP+wEaXKHPFMucXAcljcIyih1aR6X1638lLQw4hgqgpJMz2+vSxGdYUAIfUGcptQYc+hpTYm1nGA8vb9BWPU;
-        Expires=Tue, 24 Aug 2021 17:54:28 GMT; Path=/
-      - AWSALBCORS=iJDqzmhsdZ/0UWJzHAzP/6vA6BstQ0DxRDaigNcYNP+wEaXKHPFMucXAcljcIyih1aR6X1638lLQw4hgqgpJMz2+vSxGdYUAIfUGcptQYc+hpTYm1nGA8vb9BWPU;
-        Expires=Tue, 24 Aug 2021 17:54:28 GMT; Path=/; SameSite=None
+      - AWSALB=E899USFNHZAeLS0b5CNa9ka1gxzxvfTBS0Fw+7KaoYoJWympex0AvhOkIEhGzlhu37Hvev0s+kcBc4ufXHEnxFjmYGkfLNRXgykCFtmeRgo1Rnk0LCYPwsBn4O/G;
+        Expires=Wed, 16 Nov 2022 13:21:14 GMT; Path=/
+      - AWSALBCORS=E899USFNHZAeLS0b5CNa9ka1gxzxvfTBS0Fw+7KaoYoJWympex0AvhOkIEhGzlhu37Hvev0s+kcBc4ufXHEnxFjmYGkfLNRXgykCFtmeRgo1Rnk0LCYPwsBn4O/G;
+        Expires=Wed, 16 Nov 2022 13:21:14 GMT; Path=/; SameSite=None
       status: HTTP/1.1 200 OK
       vary: Accept-Encoding
       x-api-pool: polite
@@ -38,9 +40,9 @@ http_interactions:
       x-ratelimit-interval: 1s
       x-ratelimit-limit: '50'
     body:
-      encoding: UTF-8
+      encoding: ''
       file: no
-      string: '{"status":"ok","message-type":"work","message-version":"1.0.0","message":{"indexed":{"date-parts":[[2021,5,12]],"date-time":"2021-05-12T09:00:04Z","timestamp":1620810004932},"reference-count":22,"publisher":"Frontiers
+      string: '{"status":"ok","message-type":"work","message-version":"1.0.0","message":{"indexed":{"date-parts":[[2022,4,1]],"date-time":"2022-04-01T13:42:10Z","timestamp":1648820530376},"reference-count":22,"publisher":"Frontiers
         Media SA","funder":[{"DOI":"10.13039\/501100001824","name":"Grantov\u00e1
         Agentura \u010cesk\u00e9 Republiky","doi-asserted-by":"publisher","award":["GA15-00885S"]},{"award":["LM2015047"]}],"content-domain":{"domain":["frontiersin.org"],"crossmark-restriction":true},"short-container-title":["Front.
         Genet."],"DOI":"10.3389\/fgene.2017.00147","type":"journal-article","created":{"date-parts":[[2017,10,10]],"date-time":"2017-10-10T04:14:18Z","timestamp":1507608858000},"update-policy":"http:\/\/dx.doi.org\/10.3389\/crossmark-policy","source":"Crossref","is-referenced-by-count":2,"title":["An
@@ -86,7 +88,7 @@ http_interactions:
         sequence weighting, position-specific gap penalties and weight matrix choice","volume":"22","author":"Thompson","year":"1994","journal-title":"Nucleic
         Acids Res"},{"key":"B22","doi-asserted-by":"publisher","first-page":"995","DOI":"10.1038\/nmeth.1529","article-title":"FragSeq:
         transcriptome-wide RNA structure probing using high-throughput sequencing","volume":"7","author":"Underwood","year":"2010","journal-title":"Nat.
-        Methods"}],"container-title":["Frontiers in Genetics"],"original-title":[],"link":[{"URL":"http:\/\/journal.frontiersin.org\/article\/10.3389\/fgene.2017.00147\/full","content-type":"unspecified","content-version":"vor","intended-application":"similarity-checking"}],"deposited":{"date-parts":[[2017,10,10]],"date-time":"2017-10-10T04:14:22Z","timestamp":1507608862000},"score":1,"subtitle":[],"short-title":[],"issued":{"date-parts":[[2017,10,10]]},"references-count":22,"alternative-id":["10.3389\/fgene.2017.00147"],"URL":"http:\/\/dx.doi.org\/10.3389\/fgene.2017.00147","relation":{"has-preprint":[{"id-type":"doi","id":"10.1101\/171108","asserted-by":"object"}]},"ISSN":["1664-8021"],"issn-type":[{"value":"1664-8021","type":"electronic"}],"subject":["Genetics(clinical)","Genetics","Molecular
-        Medicine"],"published":{"date-parts":[[2017,10,10]]}}}'
-  recorded_at: 2021-08-17 17:54:28 GMT
-  recorded_with: vcr/1.0.2, webmockr/0.8.0
+        Methods"}],"container-title":["Frontiers in Genetics"],"original-title":[],"link":[{"URL":"http:\/\/journal.frontiersin.org\/article\/10.3389\/fgene.2017.00147\/full","content-type":"unspecified","content-version":"vor","intended-application":"similarity-checking"}],"deposited":{"date-parts":[[2017,10,10]],"date-time":"2017-10-10T04:14:22Z","timestamp":1507608862000},"score":1,"resource":{"primary":{"URL":"http:\/\/journal.frontiersin.org\/article\/10.3389\/fgene.2017.00147\/full"}},"subtitle":[],"short-title":[],"issued":{"date-parts":[[2017,10,10]]},"references-count":22,"alternative-id":["10.3389\/fgene.2017.00147"],"URL":"http:\/\/dx.doi.org\/10.3389\/fgene.2017.00147","relation":{"has-preprint":[{"id-type":"doi","id":"10.1101\/171108","asserted-by":"object"}]},"ISSN":["1664-8021"],"issn-type":[{"value":"1664-8021","type":"electronic"}],"subject":["Genetics
+        (clinical)","Genetics","Molecular Medicine"],"published":{"date-parts":[[2017,10,10]]}}}'
+  recorded_at: 2022-11-09 13:21:16 GMT
+  recorded_with: vcr/1.1.0, webmockr/0.8.0

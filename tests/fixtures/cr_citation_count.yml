@@ -8,8 +8,8 @@ http_interactions:
     headers:
       Accept-Encoding: gzip, deflate
       Accept: application/json, text/xml, application/xml, */*
-      User-Agent: r-curl/4.3.2 crul/1.1.0 rOpenSci(rcrossref/1.1.0.94) (mailto:<crossref_email>)
-      X-USER-AGENT: r-curl/4.3.2 crul/1.1.0 rOpenSci(rcrossref/1.1.0.94) (mailto:<crossref_email>)
+      User-Agent: r-curl/4.3.2 crul/1.3 rOpenSci(rcrossref/1.1.0.99) (mailto:<crossref_email>)
+      X-USER-AGENT: r-curl/4.3.2 crul/1.3 rOpenSci(rcrossref/1.1.0.99) (mailto:<crossref_email>)
   response:
     status:
       status_code: '200'
@@ -22,20 +22,20 @@ http_interactions:
       content-type: text/xml;charset=UTF-8
       content-language: en-US
       transfer-encoding: chunked
-      date: Tue, 17 Aug 2021 17:22:20 GMT
+      date: Wed, 09 Nov 2022 09:22:02 GMT
       permissions-policy: interest-cohort=()
       connection: close
     body:
-      encoding: ASCII-8BIT
+      encoding: ''
       file: no
-      string: |-
+      base64_string: |-
         PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPGNyb3NzcmVmX3Jlc3VsdCB4bWxu
         cz0iaHR0cDovL3d3dy5jcm9zc3JlZi5vcmcvcXJzY2hlbWEvMi4wIiB2ZXJzaW9uPSIyLjAiIHhtbG5z
         OnhzaT0iaHR0cDovL3d3dy53My5vcmcvMjAwMS9YTUxTY2hlbWEtaW5zdGFuY2UiIHhzaTpzY2hlbWFM
         b2NhdGlvbj0iaHR0cDovL3d3dy5jcm9zc3JlZi5vcmcvcXJzY2hlbWEvMi4wIGh0dHBzOi8vd3d3LmNy
         b3NzcmVmLm9yZy9zY2hlbWEvY3Jvc3NyZWZfcXVlcnlfb3V0cHV0Mi4wLnhzZCI+PHF1ZXJ5X3Jlc3Vs
         dD48aGVhZD48ZG9pX2JhdGNoX2lkPm5vbmU8L2RvaV9iYXRjaF9pZD48L2hlYWQ+PGJvZHk+PHF1ZXJ5
-        IHN0YXR1cz0icmVzb2x2ZWQiIGZsX2NvdW50PSI0MyI+PGRvaSB0eXBlPSJqb3VybmFsX2FydGljbGUi
+        IHN0YXR1cz0icmVzb2x2ZWQiIGZsX2NvdW50PSI1MyI+PGRvaSB0eXBlPSJqb3VybmFsX2FydGljbGUi
         PjEwLjEzNzEvam91cm5hbC5wb25lLjAwNDI3OTM8L2RvaT48aXNzbiB0eXBlPSJlbGVjdHJvbmljIj4x
         OTMyLTYyMDM8L2lzc24+PGpvdXJuYWxfdGl0bGU+UExvUyBPTkU8L2pvdXJuYWxfdGl0bGU+PGNvbnRy
         aWJ1dG9ycz48Y29udHJpYnV0b3Igc2VxdWVuY2U9ImZpcnN0IiBjb250cmlidXRvcl9yb2xlPSJlZGl0
@@ -57,8 +57,8 @@ http_interactions:
         LUJlaW5nIGFuZCBTb2NpYWwgQ2FwaXRhbCBvbiBQbGFuZXQgRWFydGg6IENyb3NzLU5hdGlvbmFsIEV2
         aWRlbmNlIGZyb20gMTQyIENvdW50cmllczwvYXJ0aWNsZV90aXRsZT48L3F1ZXJ5PjwvYm9keT48L3F1
         ZXJ5X3Jlc3VsdD48L2Nyb3NzcmVmX3Jlc3VsdD4=
-  recorded_at: 2021-08-17 17:22:21 GMT
-  recorded_with: vcr/1.0.2, webmockr/0.8.0
+  recorded_at: 2022-11-09 09:22:03 GMT
+  recorded_with: vcr/1.1.0, webmockr/0.8.0
 - request:
     method: get
     uri: http://www.crossref.org/openurl/?id=doi%3A10.1371%2Fjournal.pone.0042793&pid=cboettig%40ropensci.org&noredirect=TRUE
@@ -68,8 +68,8 @@ http_interactions:
     headers:
       Accept-Encoding: gzip, deflate
       Accept: application/json, text/xml, application/xml, */*
-      User-Agent: r-curl/4.3.2 crul/1.1.0 rOpenSci(rcrossref/1.1.0.94) (mailto:<crossref_email>)
-      X-USER-AGENT: r-curl/4.3.2 crul/1.1.0 rOpenSci(rcrossref/1.1.0.94) (mailto:<crossref_email>)
+      User-Agent: r-curl/4.3.2 crul/1.3 rOpenSci(rcrossref/1.1.0.99) (mailto:<crossref_email>)
+      X-USER-AGENT: r-curl/4.3.2 crul/1.3 rOpenSci(rcrossref/1.1.0.99) (mailto:<crossref_email>)
   response:
     status:
       status_code: '200'
@@ -78,24 +78,24 @@ http_interactions:
     headers:
       status: HTTP/1.1 200 OK
       server: Apache-Coyote/1.1
-      crossref-deployment-name: qs5-1
+      crossref-deployment-name: qs4-1
       content-type: text/xml;charset=UTF-8
       content-language: en-US
       transfer-encoding: chunked
-      date: Tue, 17 Aug 2021 17:22:20 GMT
+      date: Wed, 09 Nov 2022 09:22:03 GMT
       permissions-policy: interest-cohort=()
       connection: close
     body:
-      encoding: ASCII-8BIT
+      encoding: ''
       file: no
-      string: |-
+      base64_string: |-
         PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPGNyb3NzcmVmX3Jlc3VsdCB4bWxu
         cz0iaHR0cDovL3d3dy5jcm9zc3JlZi5vcmcvcXJzY2hlbWEvMi4wIiB2ZXJzaW9uPSIyLjAiIHhtbG5z
         OnhzaT0iaHR0cDovL3d3dy53My5vcmcvMjAwMS9YTUxTY2hlbWEtaW5zdGFuY2UiIHhzaTpzY2hlbWFM
         b2NhdGlvbj0iaHR0cDovL3d3dy5jcm9zc3JlZi5vcmcvcXJzY2hlbWEvMi4wIGh0dHBzOi8vd3d3LmNy
         b3NzcmVmLm9yZy9zY2hlbWEvY3Jvc3NyZWZfcXVlcnlfb3V0cHV0Mi4wLnhzZCI+PHF1ZXJ5X3Jlc3Vs
         dD48aGVhZD48ZG9pX2JhdGNoX2lkPm5vbmU8L2RvaV9iYXRjaF9pZD48L2hlYWQ+PGJvZHk+PHF1ZXJ5
-        IHN0YXR1cz0icmVzb2x2ZWQiIGZsX2NvdW50PSI0MyI+PGRvaSB0eXBlPSJqb3VybmFsX2FydGljbGUi
+        IHN0YXR1cz0icmVzb2x2ZWQiIGZsX2NvdW50PSI1MyI+PGRvaSB0eXBlPSJqb3VybmFsX2FydGljbGUi
         PjEwLjEzNzEvam91cm5hbC5wb25lLjAwNDI3OTM8L2RvaT48aXNzbiB0eXBlPSJlbGVjdHJvbmljIj4x
         OTMyLTYyMDM8L2lzc24+PGpvdXJuYWxfdGl0bGU+UExvUyBPTkU8L2pvdXJuYWxfdGl0bGU+PGNvbnRy
         aWJ1dG9ycz48Y29udHJpYnV0b3Igc2VxdWVuY2U9ImZpcnN0IiBjb250cmlidXRvcl9yb2xlPSJlZGl0
@@ -117,8 +117,8 @@ http_interactions:
         LUJlaW5nIGFuZCBTb2NpYWwgQ2FwaXRhbCBvbiBQbGFuZXQgRWFydGg6IENyb3NzLU5hdGlvbmFsIEV2
         aWRlbmNlIGZyb20gMTQyIENvdW50cmllczwvYXJ0aWNsZV90aXRsZT48L3F1ZXJ5PjwvYm9keT48L3F1
         ZXJ5X3Jlc3VsdD48L2Nyb3NzcmVmX3Jlc3VsdD4=
-  recorded_at: 2021-08-17 17:22:21 GMT
-  recorded_with: vcr/1.0.2, webmockr/0.8.0
+  recorded_at: 2022-11-09 09:22:03 GMT
+  recorded_with: vcr/1.1.0, webmockr/0.8.0
 - request:
     method: get
     uri: http://www.crossref.org/openurl/?id=doi%3A10.1016%2Fj.fbr.2012.01.001&pid=cboettig%40ropensci.org&noredirect=TRUE
@@ -128,8 +128,8 @@ http_interactions:
     headers:
       Accept-Encoding: gzip, deflate
       Accept: application/json, text/xml, application/xml, */*
-      User-Agent: r-curl/4.3.2 crul/1.1.0 rOpenSci(rcrossref/1.1.0.94) (mailto:<crossref_email>)
-      X-USER-AGENT: r-curl/4.3.2 crul/1.1.0 rOpenSci(rcrossref/1.1.0.94) (mailto:<crossref_email>)
+      User-Agent: r-curl/4.3.2 crul/1.3 rOpenSci(rcrossref/1.1.0.99) (mailto:<crossref_email>)
+      X-USER-AGENT: r-curl/4.3.2 crul/1.3 rOpenSci(rcrossref/1.1.0.99) (mailto:<crossref_email>)
   response:
     status:
       status_code: '200'
@@ -142,20 +142,20 @@ http_interactions:
       content-type: text/xml;charset=UTF-8
       content-language: en-US
       transfer-encoding: chunked
-      date: Tue, 17 Aug 2021 17:22:21 GMT
+      date: Wed, 09 Nov 2022 09:22:03 GMT
       permissions-policy: interest-cohort=()
       connection: close
     body:
-      encoding: ASCII-8BIT
+      encoding: ''
       file: no
-      string: |-
+      base64_string: |-
         PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPGNyb3NzcmVmX3Jlc3VsdCB4bWxu
         cz0iaHR0cDovL3d3dy5jcm9zc3JlZi5vcmcvcXJzY2hlbWEvMi4wIiB2ZXJzaW9uPSIyLjAiIHhtbG5z
         OnhzaT0iaHR0cDovL3d3dy53My5vcmcvMjAwMS9YTUxTY2hlbWEtaW5zdGFuY2UiIHhzaTpzY2hlbWFM
         b2NhdGlvbj0iaHR0cDovL3d3dy5jcm9zc3JlZi5vcmcvcXJzY2hlbWEvMi4wIGh0dHBzOi8vd3d3LmNy
         b3NzcmVmLm9yZy9zY2hlbWEvY3Jvc3NyZWZfcXVlcnlfb3V0cHV0Mi4wLnhzZCI+PHF1ZXJ5X3Jlc3Vs
         dD48aGVhZD48ZG9pX2JhdGNoX2lkPm5vbmU8L2RvaV9iYXRjaF9pZD48L2hlYWQ+PGJvZHk+PHF1ZXJ5
-        IHN0YXR1cz0icmVzb2x2ZWQiIGZsX2NvdW50PSIyMTkiPjxkb2kgdHlwZT0iam91cm5hbF9hcnRpY2xl
+        IHN0YXR1cz0icmVzb2x2ZWQiIGZsX2NvdW50PSIyODIiPjxkb2kgdHlwZT0iam91cm5hbF9hcnRpY2xl
         Ij4xMC4xMDE2L2ouZmJyLjIwMTIuMDEuMDAxPC9kb2k+PGlzc24gdHlwZT0icHJpbnQiPjE3NDk0NjEz
         PC9pc3NuPjxqb3VybmFsX3RpdGxlPkZ1bmdhbCBCaW9sb2d5IFJldmlld3M8L2pvdXJuYWxfdGl0bGU+
         PGNvbnRyaWJ1dG9ycz48Y29udHJpYnV0b3Igc2VxdWVuY2U9ImZpcnN0IiBjb250cmlidXRvcl9yb2xl
@@ -177,5 +177,5 @@ http_interactions:
         aWNhdGlvbl90eXBlPmZ1bGxfdGV4dDwvcHVibGljYXRpb25fdHlwZT48YXJ0aWNsZV90aXRsZT5NeWNv
         cnJoaXphbCBuZXR3b3JrczogTWVjaGFuaXNtcywgZWNvbG9neSBhbmQgbW9kZWxsaW5nPC9hcnRpY2xl
         X3RpdGxlPjwvcXVlcnk+PC9ib2R5PjwvcXVlcnlfcmVzdWx0PjwvY3Jvc3NyZWZfcmVzdWx0Pg==
-  recorded_at: 2021-08-17 17:22:21 GMT
-  recorded_with: vcr/1.0.2, webmockr/0.8.0
+  recorded_at: 2022-11-09 09:22:03 GMT
+  recorded_with: vcr/1.1.0, webmockr/0.8.0

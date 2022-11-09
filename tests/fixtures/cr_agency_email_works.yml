@@ -8,28 +8,30 @@ http_interactions:
     headers:
       Accept-Encoding: gzip, deflate
       Accept: application/json, text/xml, application/xml, */*
-      User-Agent: r-curl/4.3.2 crul/1.1.0 rOpenSci(rcrossref/1.1.0.94) (mailto:name@example.com)
-      X-USER-AGENT: r-curl/4.3.2 crul/1.1.0 rOpenSci(rcrossref/1.1.0.94) (mailto:name@example.com)
+      User-Agent: r-curl/4.3.2 crul/1.3 rOpenSci(rcrossref/1.1.0.99) (mailto:name@example.com)
+      X-USER-AGENT: r-curl/4.3.2 crul/1.3 rOpenSci(rcrossref/1.1.0.99) (mailto:name@example.com)
   response:
     status:
       status_code: '200'
       message: OK
       explanation: Request fulfilled, document follows
     headers:
-      access-control-allow-headers: X-Requested-With
+      access-control-allow-headers: X-Requested-With, Accept, Accept-Encoding, Accept-Charset,
+        Accept-Language, Accept-Ranges, Cache-Control
       access-control-allow-origin: '*'
+      access-control-expose-headers: Link
       connection: close
-      content-length: '158'
       content-type: application/json;charset=utf-8
-      date: Tue, 17 Aug 2021 17:22:19 GMT
+      date: Wed, 09 Nov 2022 09:22:01 GMT
       permissions-policy: interest-cohort=()
       server: Jetty(9.4.40.v20210413)
       set-cookie:
-      - AWSALB=cfg5ap7KkXvx5BvDuIvWPhHAcFp6KNI9OwLY6m2tQHxjqpwm8qseFoWJ+S3SibjBuM+8HcuuSw+4SYGMvBepKfRbQbTLA2kS+IC+PJdKnKZ2Rv5hSSVLd56UZR++;
-        Expires=Tue, 24 Aug 2021 17:22:19 GMT; Path=/
-      - AWSALBCORS=cfg5ap7KkXvx5BvDuIvWPhHAcFp6KNI9OwLY6m2tQHxjqpwm8qseFoWJ+S3SibjBuM+8HcuuSw+4SYGMvBepKfRbQbTLA2kS+IC+PJdKnKZ2Rv5hSSVLd56UZR++;
-        Expires=Tue, 24 Aug 2021 17:22:19 GMT; Path=/; SameSite=None
+      - AWSALB=JDFCuYw3vZeqbNCmA6zY1X8M/CpQ5TK9TXDPq0TDCWR6c9Ga2x6KeTAYM+GxYig/cn9mZ9pFW29rODxTJd4bR70BOXBYYGKjvKkRB4nnbAG1a+3Dm7t33PVysdF0;
+        Expires=Wed, 16 Nov 2022 09:22:01 GMT; Path=/
+      - AWSALBCORS=JDFCuYw3vZeqbNCmA6zY1X8M/CpQ5TK9TXDPq0TDCWR6c9Ga2x6KeTAYM+GxYig/cn9mZ9pFW29rODxTJd4bR70BOXBYYGKjvKkRB4nnbAG1a+3Dm7t33PVysdF0;
+        Expires=Wed, 16 Nov 2022 09:22:01 GMT; Path=/; SameSite=None
       status: HTTP/1.1 200 OK
+      transfer-encoding: chunked
       vary: Accept
       x-api-pool: polite
       x-rate-limit-interval: 1s
@@ -37,8 +39,8 @@ http_interactions:
       x-ratelimit-interval: 1s
       x-ratelimit-limit: '50'
     body:
-      encoding: UTF-8
+      encoding: ''
       file: no
       string: '{"status":"ok","message-type":"work-agency","message-version":"1.0.0","message":{"DOI":"10.1038\/jid.2009.428","agency":{"id":"crossref","label":"Crossref"}}}'
-  recorded_at: 2021-08-17 17:22:19 GMT
-  recorded_with: vcr/1.0.2, webmockr/0.8.0
+  recorded_at: 2022-11-09 09:22:01 GMT
+  recorded_with: vcr/1.1.0, webmockr/0.8.0

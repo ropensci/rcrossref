@@ -8,28 +8,30 @@ http_interactions:
     headers:
       Accept-Encoding: gzip, deflate
       Accept: application/json, text/xml, application/xml, */*
-      User-Agent: r-curl/4.3.2 crul/1.1.0 rOpenSci(rcrossref/1.1.0.94) (mailto:<crossref_email>)
-      X-USER-AGENT: r-curl/4.3.2 crul/1.1.0 rOpenSci(rcrossref/1.1.0.94) (mailto:<crossref_email>)
+      User-Agent: r-curl/4.3.2 crul/1.3 rOpenSci(rcrossref/1.1.0.99) (mailto:<crossref_email>)
+      X-USER-AGENT: r-curl/4.3.2 crul/1.3 rOpenSci(rcrossref/1.1.0.99) (mailto:<crossref_email>)
   response:
     status:
       status_code: '200'
       message: OK
       explanation: Request fulfilled, document follows
     headers:
-      access-control-allow-headers: X-Requested-With
+      access-control-allow-headers: X-Requested-With, Accept, Accept-Encoding, Accept-Charset,
+        Accept-Language, Accept-Ranges, Cache-Control
       access-control-allow-origin: '*'
+      access-control-expose-headers: Link
       connection: close
       content-encoding: gzip
-      content-length: '373'
+      content-length: '370'
       content-type: application/json;charset=utf-8
-      date: Tue, 17 Aug 2021 17:24:06 GMT
+      date: Wed, 09 Nov 2022 09:36:20 GMT
       permissions-policy: interest-cohort=()
       server: Jetty(9.4.40.v20210413)
       set-cookie:
-      - AWSALB=1/ZWz4sJx4744sZVsMhWWTb6ObBiqXbhgUjqx2G6vng3hJy6EVvfwb1piwQm5lOA3S2cJJqCNWn42Fj9A0l1G2VDjGTQyOr8cS+RskXoNq7cT862uuZjJwiZwk68;
-        Expires=Tue, 24 Aug 2021 17:24:01 GMT; Path=/
-      - AWSALBCORS=1/ZWz4sJx4744sZVsMhWWTb6ObBiqXbhgUjqx2G6vng3hJy6EVvfwb1piwQm5lOA3S2cJJqCNWn42Fj9A0l1G2VDjGTQyOr8cS+RskXoNq7cT862uuZjJwiZwk68;
-        Expires=Tue, 24 Aug 2021 17:24:01 GMT; Path=/; SameSite=None
+      - AWSALB=DxnX+GwduIjIUsObNVNVGqUhhPTcAa0tetVivvX5sie2zOfTD7n50LwhayPYSrLiK4nW8a7WFdy+5P6q0gAA5p1bUQ74cVHyk6QY3HZCYHXiefsEzK/yq/TF3Dg2;
+        Expires=Wed, 16 Nov 2022 09:35:59 GMT; Path=/
+      - AWSALBCORS=DxnX+GwduIjIUsObNVNVGqUhhPTcAa0tetVivvX5sie2zOfTD7n50LwhayPYSrLiK4nW8a7WFdy+5P6q0gAA5p1bUQ74cVHyk6QY3HZCYHXiefsEzK/yq/TF3Dg2;
+        Expires=Wed, 16 Nov 2022 09:35:59 GMT; Path=/; SameSite=None
       status: HTTP/1.1 200 OK
       vary: Accept, Accept-Encoding
       x-api-pool: polite
@@ -38,14 +40,14 @@ http_interactions:
       x-ratelimit-interval: 1s
       x-ratelimit-limit: '50'
     body:
-      encoding: UTF-8
+      encoding: ''
       file: no
-      string: '{"status":"ok","message-type":"license-list","message-version":"1.0.0","message":{"total-results":7305,"items":[{"URL":"Http:\/\/creativecommons.org\/license\/by-nc\/4.0.","work-count":100},{"URL":"http:\/\/
+      string: '{"status":"ok","message-type":"license-list","message-version":"1.0.0","message":{"total-results":11753,"items":[{"URL":"Http:\/\/creativecommons.org\/license\/by-nc\/4.0.","work-count":100},{"URL":"Http:\/\/creativecommons.org\/licenses\/by-nc\/4.0","work-count":1},{"URL":"http:\/\/
         creativecommons.org\/licenses\/by-nc-nd\/4.0\/","work-count":11},{"URL":"http:\/\/
         creativecommons.org\/licenses\/by\/4.0\/","work-count":3},{"URL":"http:\/\/
-        http:\/\/creativecommons.org\/licenses\/by-sa\/3.0\/","work-count":6},{"URL":"http:\/\/\/journals.bsu.by\/index.php\/biology\/about","work-count":9},{"URL":"http:\/\/\/nv.pdpu.edu.ua\/Info\/Index\/be91efc0-7518-4106-b1df-7c0b3b9da77b","work-count":1},{"URL":"http:\/\/0000-0002-1666-2848","work-count":1},{"URL":"http:\/\/10.5281\/zenodo.1186380","work-count":1},{"URL":"http:\/\/10.5281\/zenodo.1186387","work-count":1},{"URL":"http:\/\/10.5281\/zenodo.1186395","work-count":1},{"URL":"http:\/\/10.5281\/zenodo.1186401","work-count":1},{"URL":"http:\/\/10.5281\/zenodo.1186407","work-count":1},{"URL":"http:\/\/10.5281\/zenodo.1186409","work-count":1},{"URL":"http:\/\/10.5281\/zenodo.1186415","work-count":1},{"URL":"http:\/\/10.5281\/zenodo.1186421","work-count":1},{"URL":"http:\/\/10.5281\/zenodo.1186424","work-count":1},{"URL":"http:\/\/10.5281\/zenodo.1186426","work-count":1},{"URL":"http:\/\/10.5281\/zenodo.1186430","work-count":1},{"URL":"http:\/\/10.5281\/zenodo.1186480","work-count":1},{"URL":"http:\/\/10.5281\/zenodo.1186484","work-count":1}]}}'
-  recorded_at: 2021-08-17 17:24:07 GMT
-  recorded_with: vcr/1.0.2, webmockr/0.8.0
+        http:\/\/creativecommons.org\/licenses\/by-sa\/3.0\/","work-count":6},{"URL":"http:\/\/\/journals.bsu.by\/index.php\/biology\/about","work-count":9},{"URL":"http:\/\/\/nv.pdpu.edu.ua\/Info\/Index\/be91efc0-7518-4106-b1df-7c0b3b9da77b","work-count":1},{"URL":"http:\/\/0000-0002-1666-2848","work-count":1},{"URL":"http:\/\/10.5281\/zenodo.1186380","work-count":1},{"URL":"http:\/\/10.5281\/zenodo.1186387","work-count":1},{"URL":"http:\/\/10.5281\/zenodo.1186395","work-count":1},{"URL":"http:\/\/10.5281\/zenodo.1186401","work-count":1},{"URL":"http:\/\/10.5281\/zenodo.1186407","work-count":1},{"URL":"http:\/\/10.5281\/zenodo.1186409","work-count":1},{"URL":"http:\/\/10.5281\/zenodo.1186415","work-count":1},{"URL":"http:\/\/10.5281\/zenodo.1186421","work-count":1},{"URL":"http:\/\/10.5281\/zenodo.1186424","work-count":1},{"URL":"http:\/\/10.5281\/zenodo.1186426","work-count":1},{"URL":"http:\/\/10.5281\/zenodo.1186430","work-count":1},{"URL":"http:\/\/10.5281\/zenodo.1186480","work-count":1}]}}'
+  recorded_at: 2022-11-09 09:36:43 GMT
+  recorded_with: vcr/1.1.0, webmockr/0.8.0
 - request:
     method: get
     uri: https://api.crossref.org/licenses?query=elsevier
@@ -55,28 +57,30 @@ http_interactions:
     headers:
       Accept-Encoding: gzip, deflate
       Accept: application/json, text/xml, application/xml, */*
-      User-Agent: r-curl/4.3.2 crul/1.1.0 rOpenSci(rcrossref/1.1.0.94) (mailto:<crossref_email>)
-      X-USER-AGENT: r-curl/4.3.2 crul/1.1.0 rOpenSci(rcrossref/1.1.0.94) (mailto:<crossref_email>)
+      User-Agent: r-curl/4.3.2 crul/1.3 rOpenSci(rcrossref/1.1.0.99) (mailto:<crossref_email>)
+      X-USER-AGENT: r-curl/4.3.2 crul/1.3 rOpenSci(rcrossref/1.1.0.99) (mailto:<crossref_email>)
   response:
     status:
       status_code: '200'
       message: OK
       explanation: Request fulfilled, document follows
     headers:
-      access-control-allow-headers: X-Requested-With
+      access-control-allow-headers: X-Requested-With, Accept, Accept-Encoding, Accept-Charset,
+        Accept-Language, Accept-Ranges, Cache-Control
       access-control-allow-origin: '*'
+      access-control-expose-headers: Link
       connection: close
       content-encoding: gzip
-      content-length: '439'
+      content-length: '413'
       content-type: application/json;charset=utf-8
-      date: Tue, 17 Aug 2021 17:24:07 GMT
+      date: Wed, 09 Nov 2022 09:36:43 GMT
       permissions-policy: interest-cohort=()
       server: Jetty(9.4.40.v20210413)
       set-cookie:
-      - AWSALB=a4tFGUBLvDGLIMU9KHZh5f8WrkW1ymW+ogg+GBBie4azUEtuoO/UYJJtU9Vigngj8LcH2yitoLdNX8tvcAYtQ4ed5EP3u72PgpLSeOoPQJkkZ1OgiCu/QrwQLDkl;
-        Expires=Tue, 24 Aug 2021 17:24:07 GMT; Path=/
-      - AWSALBCORS=a4tFGUBLvDGLIMU9KHZh5f8WrkW1ymW+ogg+GBBie4azUEtuoO/UYJJtU9Vigngj8LcH2yitoLdNX8tvcAYtQ4ed5EP3u72PgpLSeOoPQJkkZ1OgiCu/QrwQLDkl;
-        Expires=Tue, 24 Aug 2021 17:24:07 GMT; Path=/; SameSite=None
+      - AWSALB=5/B5fVeNzW7U/IrXyuL/A1+zeEEsk0LV9/Lg7IhDywB1NcAeJo6yL02xX9eJdO31f5iXyE3QDoFsHV8jQ1bfNjMTOfn4V+F9VfVyZeHzZ+ib9fxMttO7tRTVtX5y;
+        Expires=Wed, 16 Nov 2022 09:36:21 GMT; Path=/
+      - AWSALBCORS=5/B5fVeNzW7U/IrXyuL/A1+zeEEsk0LV9/Lg7IhDywB1NcAeJo6yL02xX9eJdO31f5iXyE3QDoFsHV8jQ1bfNjMTOfn4V+F9VfVyZeHzZ+ib9fxMttO7tRTVtX5y;
+        Expires=Wed, 16 Nov 2022 09:36:21 GMT; Path=/; SameSite=None
       status: HTTP/1.1 200 OK
       vary: Accept, Accept-Encoding
       x-api-pool: polite
@@ -85,8 +89,8 @@ http_interactions:
       x-ratelimit-interval: 1s
       x-ratelimit-limit: '50'
     body:
-      encoding: UTF-8
+      encoding: ''
       file: no
-      string: '{"status":"ok","message-type":"license-list","message-version":"1.0.0","message":{"total-results":52,"items":[{"URL":"http:\/\/aspb.org\/publications\/aspb-journals\/open-articles","work-count":1},{"URL":"http:\/\/creativecommons.org\/licenses\/by-nc-nd\/3.0","work-count":3},{"URL":"http:\/\/creativecommons.org\/licenses\/by-nc-nd\/3.0\/","work-count":11},{"URL":"http:\/\/creativecommons.org\/licenses\/by-nc-nd\/4.0\/","work-count":21},{"URL":"http:\/\/creativecommons.org\/licenses\/by-nc\/4.0\/","work-count":6},{"URL":"http:\/\/creativecommons.org\/licenses\/by-sa\/4.0","work-count":1},{"URL":"http:\/\/creativecommons.org\/licenses\/by\/2.0","work-count":2},{"URL":"http:\/\/creativecommons.org\/licenses\/by\/3.0","work-count":2},{"URL":"http:\/\/creativecommons.org\/licenses\/by\/3.0\/","work-count":2},{"URL":"http:\/\/creativecommons.org\/licenses\/by\/3.0\/igo\/","work-count":1},{"URL":"http:\/\/creativecommons.org\/licenses\/by\/4.0","work-count":11},{"URL":"http:\/\/creativecommons.org\/licenses\/by\/4.0\/","work-count":22},{"URL":"http:\/\/doi.wiley.com\/10.1002\/tdm_license_1","work-count":136},{"URL":"http:\/\/doi.wiley.com\/10.1002\/tdm_license_1.1","work-count":2255},{"URL":"http:\/\/iopscience.iop.org\/info\/page\/text-and-data-mining","work-count":2},{"URL":"http:\/\/iopscience.iop.org\/page\/copyright","work-count":2},{"URL":"http:\/\/journals.iucr.org\/services\/copyrightpolicy.html","work-count":11},{"URL":"http:\/\/journals.iucr.org\/services\/copyrightpolicy.html#TDM","work-count":11},{"URL":"http:\/\/journals.sagepub.com\/page\/policies\/text-and-data-mining-license","work-count":365},{"URL":"http:\/\/onlinelibrary.wiley.com\/termsAndConditions","work-count":63}]}}'
-  recorded_at: 2021-08-17 17:24:07 GMT
-  recorded_with: vcr/1.0.2, webmockr/0.8.0
+      string: '{"status":"ok","message-type":"license-list","message-version":"1.0.0","message":{"total-results":60,"items":[{"URL":"http:\/\/aspb.org\/publications\/aspb-journals\/open-articles","work-count":1},{"URL":"http:\/\/creativecommons.org\/licenses\/by-nc-nd\/3.0","work-count":7},{"URL":"http:\/\/creativecommons.org\/licenses\/by-nc-nd\/3.0\/","work-count":11},{"URL":"http:\/\/creativecommons.org\/licenses\/by-nc-nd\/4.0\/","work-count":28},{"URL":"http:\/\/creativecommons.org\/licenses\/by-nc\/3.0\/","work-count":1},{"URL":"http:\/\/creativecommons.org\/licenses\/by-nc\/4.0\/","work-count":7},{"URL":"http:\/\/creativecommons.org\/licenses\/by-sa\/4.0","work-count":1},{"URL":"http:\/\/creativecommons.org\/licenses\/by\/2.0","work-count":2},{"URL":"http:\/\/creativecommons.org\/licenses\/by\/3.0","work-count":2},{"URL":"http:\/\/creativecommons.org\/licenses\/by\/3.0\/","work-count":2},{"URL":"http:\/\/creativecommons.org\/licenses\/by\/3.0\/igo\/","work-count":1},{"URL":"http:\/\/creativecommons.org\/licenses\/by\/4.0","work-count":9},{"URL":"http:\/\/creativecommons.org\/licenses\/by\/4.0\/","work-count":27},{"URL":"http:\/\/doi.wiley.com\/10.1002\/tdm_license_1","work-count":136},{"URL":"http:\/\/doi.wiley.com\/10.1002\/tdm_license_1.1","work-count":2271},{"URL":"http:\/\/iopscience.iop.org\/info\/page\/text-and-data-mining","work-count":2},{"URL":"http:\/\/iopscience.iop.org\/page\/copyright","work-count":2},{"URL":"http:\/\/journals.iucr.org\/services\/copyrightpolicy.html","work-count":11},{"URL":"http:\/\/journals.iucr.org\/services\/copyrightpolicy.html#TDM","work-count":11},{"URL":"http:\/\/journals.sagepub.com\/page\/policies\/text-and-data-mining-license","work-count":367}]}}'
+  recorded_at: 2022-11-09 09:36:43 GMT
+  recorded_with: vcr/1.1.0, webmockr/0.8.0

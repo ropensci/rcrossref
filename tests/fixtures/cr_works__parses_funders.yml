@@ -8,28 +8,30 @@ http_interactions:
     headers:
       Accept-Encoding: gzip, deflate
       Accept: application/json, text/xml, application/xml, */*
-      User-Agent: r-curl/4.3.2 crul/1.1.0 rOpenSci(rcrossref/1.1.0.94) (mailto:<crossref_email>)
-      X-USER-AGENT: r-curl/4.3.2 crul/1.1.0 rOpenSci(rcrossref/1.1.0.94) (mailto:<crossref_email>)
+      User-Agent: r-curl/4.3.2 crul/1.3 rOpenSci(rcrossref/1.1.0.99) (mailto:<crossref_email>)
+      X-USER-AGENT: r-curl/4.3.2 crul/1.3 rOpenSci(rcrossref/1.1.0.99) (mailto:<crossref_email>)
   response:
     status:
       status_code: '200'
       message: OK
       explanation: Request fulfilled, document follows
     headers:
-      access-control-allow-headers: X-Requested-With
+      access-control-allow-headers: X-Requested-With, Accept, Accept-Encoding, Accept-Charset,
+        Accept-Language, Accept-Ranges, Cache-Control
       access-control-allow-origin: '*'
+      access-control-expose-headers: Link
       connection: close
       content-encoding: gzip
-      content-length: '1311'
+      content-length: '1335'
       content-type: application/json
-      date: Tue, 17 Aug 2021 17:49:13 GMT
+      date: Wed, 09 Nov 2022 12:35:27 GMT
       permissions-policy: interest-cohort=()
       server: Jetty(9.4.40.v20210413)
       set-cookie:
-      - AWSALB=1saTE3tgbA3r3a8cMd0nUFDoAQrcbQJqoT6sNKb3Kt3kMLDPUvKtpi5WBAaThWH2BrKedLsvRoCdaZ6LxrAYFycA7dhkYBjjuuSyCWxC78LwmifC8+FMrgESKLim;
-        Expires=Tue, 24 Aug 2021 17:49:13 GMT; Path=/
-      - AWSALBCORS=1saTE3tgbA3r3a8cMd0nUFDoAQrcbQJqoT6sNKb3Kt3kMLDPUvKtpi5WBAaThWH2BrKedLsvRoCdaZ6LxrAYFycA7dhkYBjjuuSyCWxC78LwmifC8+FMrgESKLim;
-        Expires=Tue, 24 Aug 2021 17:49:13 GMT; Path=/; SameSite=None
+      - AWSALB=qZ5+0DnNQ6XoQhz0z4ah+IFhebLFhu6AabLFhZvK0vOijpUh6rdWkOmWhiLq3joMBKn/JcmVf7H9/Y3QvSHDsn1Y711OxfNqujhgB1jwJ2ll2DYvbdc/yO2Ykylc;
+        Expires=Wed, 16 Nov 2022 12:35:27 GMT; Path=/
+      - AWSALBCORS=qZ5+0DnNQ6XoQhz0z4ah+IFhebLFhu6AabLFhZvK0vOijpUh6rdWkOmWhiLq3joMBKn/JcmVf7H9/Y3QvSHDsn1Y711OxfNqujhgB1jwJ2ll2DYvbdc/yO2Ykylc;
+        Expires=Wed, 16 Nov 2022 12:35:27 GMT; Path=/; SameSite=None
       status: HTTP/1.1 200 OK
       vary: Accept-Encoding
       x-api-pool: polite
@@ -38,9 +40,9 @@ http_interactions:
       x-ratelimit-interval: 1s
       x-ratelimit-limit: '50'
     body:
-      encoding: UTF-8
+      encoding: ''
       file: no
-      string: '{"status":"ok","message-type":"work","message-version":"1.0.0","message":{"indexed":{"date-parts":[[2021,5,12]],"date-time":"2021-05-12T04:52:07Z","timestamp":1620795127212},"reference-count":0,"publisher":"Walter
+      string: '{"status":"ok","message-type":"work","message-version":"1.0.0","message":{"indexed":{"date-parts":[[2022,3,30]],"date-time":"2022-03-30T17:46:26Z","timestamp":1648662386775},"reference-count":0,"publisher":"Walter
         de Gruyter GmbH","issue":"700","funder":[{"name":"NSF","award":["DMS-0800084"]},{"name":"NSF","award":["DMS-1206661"]},{"name":"NSF","award":["DMS-0804042"]},{"name":"NSF","award":["DMS-1105187"]}],"content-domain":{"domain":[],"crossmark-restriction":false},"short-container-title":[],"published-print":{"date-parts":[[2015,1,1]]},"abstract":"<jats:title>Abstract<\/jats:title><jats:p>We
         investigate rigidity and stability properties of critical points of quadratic
         curvature functionals on the space of Riemannian metrics. We show it is possible
@@ -55,10 +57,10 @@ http_interactions:
         and stability of Einstein metrics for quadratic curvature functionals"],"prefix":"10.1515","volume":"2015","author":[{"given":"Matthew
         J.","family":"Gursky","sequence":"first","affiliation":[]},{"given":"Jeff
         A.","family":"Viaclovsky","sequence":"additional","affiliation":[]}],"member":"374","container-title":["Journal
-        f\u00fcr die reine und angewandte Mathematik (Crelles Journal)"],"original-title":[],"link":[{"URL":"https:\/\/www.degruyter.com\/document\/doi\/10.1515\/crelle-2013-0024\/pdf","content-type":"unspecified","content-version":"vor","intended-application":"similarity-checking"}],"deposited":{"date-parts":[[2021,4,21]],"date-time":"2021-04-21T21:47:03Z","timestamp":1619041623000},"score":1,"subtitle":[],"short-title":[],"issued":{"date-parts":[[2015,1,1]]},"references-count":0,"journal-issue":{"issue":"700"},"URL":"http:\/\/dx.doi.org\/10.1515\/crelle-2013-0024","relation":{},"ISSN":["0075-4102","1435-5345"],"issn-type":[{"value":"0075-4102","type":"print"},{"value":"1435-5345","type":"electronic"}],"subject":["Applied
+        f\u00fcr die reine und angewandte Mathematik (Crelles Journal)"],"original-title":[],"link":[{"URL":"https:\/\/www.degruyter.com\/document\/doi\/10.1515\/crelle-2013-0024\/pdf","content-type":"unspecified","content-version":"vor","intended-application":"similarity-checking"}],"deposited":{"date-parts":[[2021,4,21]],"date-time":"2021-04-21T21:47:03Z","timestamp":1619041623000},"score":1,"resource":{"primary":{"URL":"https:\/\/www.degruyter.com\/document\/doi\/10.1515\/crelle-2013-0024\/html"}},"subtitle":[],"short-title":[],"issued":{"date-parts":[[2015,1,1]]},"references-count":0,"journal-issue":{"issue":"700"},"URL":"http:\/\/dx.doi.org\/10.1515\/crelle-2013-0024","relation":{},"ISSN":["0075-4102","1435-5345"],"issn-type":[{"value":"0075-4102","type":"print"},{"value":"1435-5345","type":"electronic"}],"subject":["Applied
         Mathematics","General Mathematics"],"published":{"date-parts":[[2015,1,1]]}}}'
-  recorded_at: 2021-08-17 17:49:14 GMT
-  recorded_with: vcr/1.0.2, webmockr/0.8.0
+  recorded_at: 2022-11-09 12:35:28 GMT
+  recorded_with: vcr/1.1.0, webmockr/0.8.0
 - request:
     method: get
     uri: https://api.crossref.org/works/10.1186/isrctn11093872
@@ -68,28 +70,30 @@ http_interactions:
     headers:
       Accept-Encoding: gzip, deflate
       Accept: application/json, text/xml, application/xml, */*
-      User-Agent: r-curl/4.3.2 crul/1.1.0 rOpenSci(rcrossref/1.1.0.94) (mailto:<crossref_email>)
-      X-USER-AGENT: r-curl/4.3.2 crul/1.1.0 rOpenSci(rcrossref/1.1.0.94) (mailto:<crossref_email>)
+      User-Agent: r-curl/4.3.2 crul/1.3 rOpenSci(rcrossref/1.1.0.99) (mailto:<crossref_email>)
+      X-USER-AGENT: r-curl/4.3.2 crul/1.3 rOpenSci(rcrossref/1.1.0.99) (mailto:<crossref_email>)
   response:
     status:
       status_code: '200'
       message: OK
       explanation: Request fulfilled, document follows
     headers:
-      access-control-allow-headers: X-Requested-With
+      access-control-allow-headers: X-Requested-With, Accept, Accept-Encoding, Accept-Charset,
+        Accept-Language, Accept-Ranges, Cache-Control
       access-control-allow-origin: '*'
+      access-control-expose-headers: Link
       connection: close
       content-encoding: gzip
-      content-length: '692'
+      content-length: '722'
       content-type: application/json
-      date: Tue, 17 Aug 2021 17:49:14 GMT
+      date: Wed, 09 Nov 2022 12:35:28 GMT
       permissions-policy: interest-cohort=()
       server: Jetty(9.4.40.v20210413)
       set-cookie:
-      - AWSALB=rOI7s+t45sMBBpq+omgz2okiTnD0Kclk8Br4zNyaRSxs9MX8eKLpunvasPibaSIj1uRntu90S7fc13MSO8wz0tZChg+UV6Cjch08QpHj1bORNG1bNif705USmYsI;
-        Expires=Tue, 24 Aug 2021 17:49:14 GMT; Path=/
-      - AWSALBCORS=rOI7s+t45sMBBpq+omgz2okiTnD0Kclk8Br4zNyaRSxs9MX8eKLpunvasPibaSIj1uRntu90S7fc13MSO8wz0tZChg+UV6Cjch08QpHj1bORNG1bNif705USmYsI;
-        Expires=Tue, 24 Aug 2021 17:49:14 GMT; Path=/; SameSite=None
+      - AWSALB=ntVbC9z/S3eajHyli2gJngkTbKe1CF2p/PZ4Ri6JsQHpBnfvZs59BbSQg1Ti4Blp+LptNuG8MruhGlLn+h89SitepJ2hXaUrPh7KuAgi6Rumsbllm6umWHe0ICNl;
+        Expires=Wed, 16 Nov 2022 12:35:28 GMT; Path=/
+      - AWSALBCORS=ntVbC9z/S3eajHyli2gJngkTbKe1CF2p/PZ4Ri6JsQHpBnfvZs59BbSQg1Ti4Blp+LptNuG8MruhGlLn+h89SitepJ2hXaUrPh7KuAgi6Rumsbllm6umWHe0ICNl;
+        Expires=Wed, 16 Nov 2022 12:35:28 GMT; Path=/; SameSite=None
       status: HTTP/1.1 200 OK
       vary: Accept-Encoding
       x-api-pool: polite
@@ -98,12 +102,12 @@ http_interactions:
       x-ratelimit-interval: 1s
       x-ratelimit-limit: '50'
     body:
-      encoding: UTF-8
+      encoding: ''
       file: no
       string: '{"status":"ok","message-type":"work","message-version":"1.0.0","message":{"institution":[{"name":"ISRCTN","place":["London,
-        UK"]}],"indexed":{"date-parts":[[2021,5,10]],"date-time":"2021-05-10T12:39:05Z","timestamp":1620650345495},"reference-count":0,"publisher":"Springer
+        UK"]}],"indexed":{"date-parts":[[2022,3,29]],"date-time":"2022-03-29T21:30:00Z","timestamp":1648589400618},"reference-count":0,"publisher":"Springer
         Science and Business Media LLC","funder":[{"DOI":"10.13039\/501100000272","name":"National
         Institute for Health Research","doi-asserted-by":"publisher"}],"content-domain":{"domain":["www.isrctn.com"],"crossmark-restriction":true},"short-container-title":[],"DOI":"10.1186\/isrctn11093872","type":"dataset","created":{"date-parts":[[2015,11,11]],"date-time":"2015-11-11T07:20:04Z","timestamp":1447226404000},"update-policy":"http:\/\/dx.doi.org\/10.1186\/isrctn_crossmark_policy","source":"Crossref","is-referenced-by-count":0,"title":["CapaCiTY
-        Study 2 - Chronic Constipation Treatment Pathway"],"prefix":"10.1186","author":[{"given":"Shiva","family":"Taheri","sequence":"first","affiliation":[]}],"member":"297","content-created":{"date-parts":[[2015,11,11]]},"container-title":["http:\/\/isrctn.com\/"],"original-title":[],"deposited":{"date-parts":[[2015,11,11]],"date-time":"2015-11-11T07:20:06Z","timestamp":1447226406000},"score":1,"subtitle":[],"short-title":[],"issued":{"date-parts":[[2015,11,11]]},"references-count":0,"URL":"http:\/\/dx.doi.org\/10.1186\/isrctn11093872","relation":{},"published":{"date-parts":[[2015,11,11]]}}}'
-  recorded_at: 2021-08-17 17:49:14 GMT
-  recorded_with: vcr/1.0.2, webmockr/0.8.0
+        Study 2 - Chronic Constipation Treatment Pathway"],"prefix":"10.1186","author":[{"given":"Shiva","family":"Taheri","sequence":"first","affiliation":[]}],"member":"297","content-created":{"date-parts":[[2015,11,11]]},"container-title":["http:\/\/isrctn.com\/"],"original-title":[],"deposited":{"date-parts":[[2015,11,11]],"date-time":"2015-11-11T07:20:06Z","timestamp":1447226406000},"score":1,"resource":{"primary":{"URL":"http:\/\/www.isrctn.com\/ISRCTN11093872"}},"subtitle":[],"short-title":[],"issued":{"date-parts":[[2015,11,11]]},"references-count":0,"URL":"http:\/\/dx.doi.org\/10.1186\/isrctn11093872","relation":{},"published":{"date-parts":[[2015,11,11]]}}}'
+  recorded_at: 2022-11-09 12:35:28 GMT
+  recorded_with: vcr/1.1.0, webmockr/0.8.0

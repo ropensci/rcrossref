@@ -8,28 +8,30 @@ http_interactions:
     headers:
       Accept-Encoding: gzip, deflate
       Accept: application/json, text/xml, application/xml, */*
-      User-Agent: r-curl/4.3.2 crul/1.1.0 rOpenSci(rcrossref/1.1.0.94) (mailto:<crossref_email>)
-      X-USER-AGENT: r-curl/4.3.2 crul/1.1.0 rOpenSci(rcrossref/1.1.0.94) (mailto:<crossref_email>)
+      User-Agent: r-curl/4.3.2 crul/1.3 rOpenSci(rcrossref/1.1.0.99) (mailto:<crossref_email>)
+      X-USER-AGENT: r-curl/4.3.2 crul/1.3 rOpenSci(rcrossref/1.1.0.99) (mailto:<crossref_email>)
   response:
     status:
       status_code: '200'
       message: OK
       explanation: Request fulfilled, document follows
     headers:
-      access-control-allow-headers: X-Requested-With
+      access-control-allow-headers: X-Requested-With, Accept, Accept-Encoding, Accept-Charset,
+        Accept-Language, Accept-Ranges, Cache-Control
       access-control-allow-origin: '*'
+      access-control-expose-headers: Link
       connection: close
       content-encoding: gzip
-      content-length: '432'
+      content-length: '451'
       content-type: application/json;charset=utf-8
-      date: Tue, 17 Aug 2021 17:26:22 GMT
+      date: Wed, 09 Nov 2022 12:31:34 GMT
       permissions-policy: interest-cohort=()
       server: Jetty(9.4.40.v20210413)
       set-cookie:
-      - AWSALB=OF/eJQYRPmFAOrybLMdNKc0ySBjlRzPtIP8JdmkrOmL1qsqws5hYTz12aZKpo0BMUnMZcmczy90AmgNk168gOeN68VuRHfd2Llwpwjl5T3gBcTSrV2KCf5helzt8;
-        Expires=Tue, 24 Aug 2021 17:26:22 GMT; Path=/
-      - AWSALBCORS=OF/eJQYRPmFAOrybLMdNKc0ySBjlRzPtIP8JdmkrOmL1qsqws5hYTz12aZKpo0BMUnMZcmczy90AmgNk168gOeN68VuRHfd2Llwpwjl5T3gBcTSrV2KCf5helzt8;
-        Expires=Tue, 24 Aug 2021 17:26:22 GMT; Path=/; SameSite=None
+      - AWSALB=jnk0HLhNISEiKFk0roz0p4PkSciPf7tZv42RAtUX5YVwzl7NInxbSY0Yuy/K68WeYcEUWmSzdqOSkUBgTz6PYvtHk5qQHeoH9dMiitGd3Ln4i5IOU1qCJXOVs9by;
+        Expires=Wed, 16 Nov 2022 12:31:34 GMT; Path=/
+      - AWSALBCORS=jnk0HLhNISEiKFk0roz0p4PkSciPf7tZv42RAtUX5YVwzl7NInxbSY0Yuy/K68WeYcEUWmSzdqOSkUBgTz6PYvtHk5qQHeoH9dMiitGd3Ln4i5IOU1qCJXOVs9by;
+        Expires=Wed, 16 Nov 2022 12:31:34 GMT; Path=/; SameSite=None
       status: HTTP/1.1 200 OK
       vary: Accept, Accept-Encoding
       x-api-pool: polite
@@ -38,22 +40,22 @@ http_interactions:
       x-ratelimit-interval: 1s
       x-ratelimit-limit: '50'
     body:
-      encoding: UTF-8
+      encoding: ''
       file: no
-      string: '{"status":"ok","message-type":"type-list","message-version":"1.0.0","message":{"total-results":28,"items":[{"id":"book-section","label":"Book
-        Section"},{"id":"monograph","label":"Monograph"},{"id":"report","label":"Report"},{"id":"peer-review","label":"Peer
+      string: '{"status":"ok","message-type":"type-list","message-version":"1.0.0","message":{"total-results":30,"items":[{"id":"book-section","label":"Book
+        Section"},{"id":"monograph","label":"Monograph"},{"id":"report-component","label":"Report
+        Component"},{"id":"report","label":"Report"},{"id":"peer-review","label":"Peer
         Review"},{"id":"book-track","label":"Book Track"},{"id":"journal-article","label":"Journal
         Article"},{"id":"book-part","label":"Part"},{"id":"other","label":"Other"},{"id":"book","label":"Book"},{"id":"journal-volume","label":"Journal
         Volume"},{"id":"book-set","label":"Book Set"},{"id":"reference-entry","label":"Reference
         Entry"},{"id":"proceedings-article","label":"Proceedings Article"},{"id":"journal","label":"Journal"},{"id":"component","label":"Component"},{"id":"book-chapter","label":"Book
         Chapter"},{"id":"proceedings-series","label":"Proceedings Series"},{"id":"report-series","label":"Report
-        Series"},{"id":"proceedings","label":"Proceedings"},{"id":"standard","label":"Standard"},{"id":"reference-book","label":"Reference
+        Series"},{"id":"proceedings","label":"Proceedings"},{"id":"database","label":"Database"},{"id":"standard","label":"Standard"},{"id":"reference-book","label":"Reference
         Book"},{"id":"posted-content","label":"Posted Content"},{"id":"journal-issue","label":"Journal
-        Issue"},{"id":"dissertation","label":"Dissertation"},{"id":"dataset","label":"Dataset"},{"id":"book-series","label":"Book
-        Series"},{"id":"edited-book","label":"Edited Book"},{"id":"standard-series","label":"Standard
-        Series"}]}}'
-  recorded_at: 2021-08-17 17:26:23 GMT
-  recorded_with: vcr/1.0.2, webmockr/0.8.0
+        Issue"},{"id":"dissertation","label":"Dissertation"},{"id":"grant","label":"Grant"},{"id":"dataset","label":"Dataset"},{"id":"book-series","label":"Book
+        Series"},{"id":"edited-book","label":"Edited Book"}]}}'
+  recorded_at: 2022-11-09 12:31:56 GMT
+  recorded_with: vcr/1.1.0, webmockr/0.8.0
 - request:
     method: get
     uri: https://api.crossref.org/types/monograph/works?rows=3
@@ -63,28 +65,30 @@ http_interactions:
     headers:
       Accept-Encoding: gzip, deflate
       Accept: application/json, text/xml, application/xml, */*
-      User-Agent: r-curl/4.3.2 crul/1.1.0 rOpenSci(rcrossref/1.1.0.94) (mailto:<crossref_email>)
-      X-USER-AGENT: r-curl/4.3.2 crul/1.1.0 rOpenSci(rcrossref/1.1.0.94) (mailto:<crossref_email>)
+      User-Agent: r-curl/4.3.2 crul/1.3 rOpenSci(rcrossref/1.1.0.99) (mailto:<crossref_email>)
+      X-USER-AGENT: r-curl/4.3.2 crul/1.3 rOpenSci(rcrossref/1.1.0.99) (mailto:<crossref_email>)
   response:
     status:
       status_code: '200'
       message: OK
       explanation: Request fulfilled, document follows
     headers:
-      access-control-allow-headers: X-Requested-With
+      access-control-allow-headers: X-Requested-With, Accept, Accept-Encoding, Accept-Charset,
+        Accept-Language, Accept-Ranges, Cache-Control
       access-control-allow-origin: '*'
+      access-control-expose-headers: Link
       connection: close
       content-encoding: gzip
-      content-length: '1029'
+      content-length: '1181'
       content-type: application/json
-      date: Tue, 17 Aug 2021 17:26:22 GMT
+      date: Wed, 09 Nov 2022 12:31:56 GMT
       permissions-policy: interest-cohort=()
       server: Jetty(9.4.40.v20210413)
       set-cookie:
-      - AWSALB=bcfxoNHX53Bbxts8UW327fISmFAbkvUbJw72eYgRlCsmJ4pKwgDabzSIGc2bdCP3Ft6JTnVh650Ksgs7Zy5wIoZYLrbg276chzpkGtpYo8iV8uGQYxSpq4aml5AZ;
-        Expires=Tue, 24 Aug 2021 17:26:22 GMT; Path=/
-      - AWSALBCORS=bcfxoNHX53Bbxts8UW327fISmFAbkvUbJw72eYgRlCsmJ4pKwgDabzSIGc2bdCP3Ft6JTnVh650Ksgs7Zy5wIoZYLrbg276chzpkGtpYo8iV8uGQYxSpq4aml5AZ;
-        Expires=Tue, 24 Aug 2021 17:26:22 GMT; Path=/; SameSite=None
+      - AWSALB=GdK7CFyxidw5PBWBw1gZM/us8vk/3K52I8JKfSkfqt0zEwEx4Wsv8t5q2EiZiinUDIpRVsM0B0laOPetdVjA5ExLH3G062Y8/js7Z+g2DH8FL+q+SxR5faC9EOCX;
+        Expires=Wed, 16 Nov 2022 12:31:35 GMT; Path=/
+      - AWSALBCORS=GdK7CFyxidw5PBWBw1gZM/us8vk/3K52I8JKfSkfqt0zEwEx4Wsv8t5q2EiZiinUDIpRVsM0B0laOPetdVjA5ExLH3G062Y8/js7Z+g2DH8FL+q+SxR5faC9EOCX;
+        Expires=Wed, 16 Nov 2022 12:31:35 GMT; Path=/; SameSite=None
       status: HTTP/1.1 200 OK
       vary: Accept-Encoding
       x-api-pool: polite
@@ -93,18 +97,21 @@ http_interactions:
       x-ratelimit-interval: 1s
       x-ratelimit-limit: '50'
     body:
-      encoding: UTF-8
+      encoding: ''
       file: no
-      string: '{"status":"ok","message-type":"work-list","message-version":"1.0.0","message":{"facets":{},"total-results":517544,"items":[{"indexed":{"date-parts":[[2021,5,6]],"date-time":"2021-05-06T20:44:21Z","timestamp":1620333861525},"publisher-location":"Chicoutimi","reference-count":0,"publisher":"J.-M.
-        Tremblay","isbn-type":[{"value":"1554418453","type":"electronic"}],"content-domain":{"domain":[],"crossmark-restriction":false},"DOI":"10.1522\/cla.rim.epi","type":"monograph","created":{"date-parts":[[2006,5,1]],"date-time":"2006-05-01T17:22:42Z","timestamp":1146504162000},"source":"Crossref","is-referenced-by-count":0,"title":["E\u0301piste\u0301mologie
-        et enseignement des sciences"],"prefix":"10.1522","author":[{"given":"Martin","family":"Riopel","sequence":"first","affiliation":[]}],"member":"208","published-online":{"date-parts":[[2005]]},"container-title":["Classiques
-        des sciences sociales."],"deposited":{"date-parts":[[2009,2,2]],"date-time":"2009-02-02T21:19:43Z","timestamp":1233609583000},"score":0.0,"issued":{"date-parts":[[2005]]},"ISBN":["1554418453"],"references-count":0,"URL":"http:\/\/dx.doi.org\/10.1522\/cla.rim.epi","published":{"date-parts":[[2005]]}},{"indexed":{"date-parts":[[2021,5,6]],"date-time":"2021-05-06T20:32:47Z","timestamp":1620333167991},"publisher-location":"Chicoutimi","reference-count":0,"publisher":"Universite\u0301
-        du Que\u0301bec a\u0300 Chicoutimi","isbn-type":[{"value":"1412312922","type":"electronic"}],"content-domain":{"domain":[],"crossmark-restriction":false},"DOI":"10.1522\/24587738","type":"monograph","created":{"date-parts":[[2006,4,26]],"date-time":"2006-04-26T22:12:14Z","timestamp":1146089534000},"source":"Crossref","is-referenced-by-count":0,"title":["Poder,
-        saber, verdane na produc\u0327a\u0303o de \"situac\u0327a\u0303o de fracasso
-        :"],"prefix":"10.1522","author":[{"given":"Luiz Carlos","family":"Jandiroba","sequence":"first","affiliation":[]}],"member":"208","published-online":{"date-parts":[[2004]]},"deposited":{"date-parts":[[2011,11,7]],"date-time":"2011-11-07T15:42:49Z","timestamp":1320680569000},"score":0.0,"subtitle":["um
-        estudo do cotidiano escolar no ensino noturno"],"issued":{"date-parts":[[2004]]},"ISBN":["1412312922"],"references-count":0,"URL":"http:\/\/dx.doi.org\/10.1522\/24587738","published":{"date-parts":[[2004]]}},{"indexed":{"date-parts":[[2021,5,6]],"date-time":"2021-05-06T20:41:26Z","timestamp":1620333686185},"publisher-location":"Chicoutimi","reference-count":0,"publisher":"J.-M.
-        Tremblay","isbn-type":[{"value":"1554418763","type":"electronic"}],"content-domain":{"domain":[],"crossmark-restriction":false},"DOI":"10.1522\/cla.maa.plu","type":"monograph","created":{"date-parts":[[2006,5,1]],"date-time":"2006-05-01T17:22:42Z","timestamp":1146504162000},"source":"Crossref","is-referenced-by-count":0,"title":["Pluralisme
-        paradigmatique en sociologie de l''e\u0301ducation"],"prefix":"10.1522","author":[{"given":"Alain.","family":"Massot","sequence":"first","affiliation":[]}],"member":"208","published-online":{"date-parts":[[2005]]},"container-title":["Classiques
-        des sciences sociales."],"deposited":{"date-parts":[[2009,2,2]],"date-time":"2009-02-02T21:19:43Z","timestamp":1233609583000},"score":0.0,"issued":{"date-parts":[[2005]]},"ISBN":["1554418763"],"references-count":0,"URL":"http:\/\/dx.doi.org\/10.1522\/cla.maa.plu","published":{"date-parts":[[2005]]}}],"items-per-page":3,"query":{"start-index":0,"search-terms":null}}}'
-  recorded_at: 2021-08-17 17:26:23 GMT
-  recorded_with: vcr/1.0.2, webmockr/0.8.0
+      string: '{"status":"ok","message-type":"work-list","message-version":"1.0.0","message":{"facets":{},"total-results":565570,"items":[{"indexed":{"date-parts":[[2022,3,30]],"date-time":"2022-03-30T13:52:08Z","timestamp":1648648328146},"reference-count":0,"publisher":"[s.n.]","content-domain":{"domain":[],"crossmark-restriction":false},"published-print":{"date-parts":[[1898]]},"DOI":"10.5962\/bhl.title.134007","type":"monograph","created":{"date-parts":[[2017,8,1]],"date-time":"2017-08-01T01:00:09Z","timestamp":1501549209000},"source":"Crossref","is-referenced-by-count":0,"title":["Field
+        notes, central Kentucky, 1898"],"prefix":"10.5962","author":[{"given":"Aug.
+        F","family":"Foerste","sequence":"first","affiliation":[]}],"member":"3444","deposited":{"date-parts":[[2017,8,1]],"date-time":"2017-08-01T01:00:12Z","timestamp":1501549212000},"score":0.0,"resource":{"primary":{"URL":"http:\/\/www.biodiversitylibrary.org\/bibliography\/134007"}},"issued":{"date-parts":[[1898]]},"references-count":0,"URL":"http:\/\/dx.doi.org\/10.5962\/bhl.title.134007","published":{"date-parts":[[1898]]}},{"indexed":{"date-parts":[[2022,3,30]],"date-time":"2022-03-30T13:53:02Z","timestamp":1648648382705},"reference-count":0,"publisher":"Universidad
+        Santo Tom\u00e1s","content-domain":{"domain":[],"crossmark-restriction":false},"published-print":{"date-parts":[[2017]]},"DOI":"10.15332\/tg.mae.2017.00032","type":"monograph","created":{"date-parts":[[2019,2,22]],"date-time":"2019-02-22T15:41:05Z","timestamp":1550850065000},"source":"Crossref","is-referenced-by-count":0,"title":["Los
+        m\u00e9todos alternativos de resoluci\u00f3n de conflictos -marc- para el
+        fortalecimiento de educaci\u00f3n en derechos humanos: un estudio de caso
+        en los coordinadores de convivencia de las instituciones educativas distritales
+        Arborizadora baja y San Francisco en la ciudad de Bogot\u00e1"],"prefix":"10.15332","author":[{"given":"Leonel","family":"Manzano
+        Neira","sequence":"first","affiliation":[]}],"member":"6169","published-online":{"date-parts":[[2017]]},"deposited":{"date-parts":[[2019,2,22]],"date-time":"2019-02-22T15:41:05Z","timestamp":1550850065000},"score":0.0,"resource":{"primary":{"URL":"https:\/\/repository.usta.edu.co\/handle\/11634\/9183"}},"issued":{"date-parts":[[2017]]},"references-count":0,"URL":"http:\/\/dx.doi.org\/10.15332\/tg.mae.2017.00032","published":{"date-parts":[[2017]]}},{"indexed":{"date-parts":[[2022,3,30]],"date-time":"2022-03-30T13:53:02Z","timestamp":1648648382856},"publisher-location":"San
+        Francisco, Calif. :","reference-count":0,"publisher":"Sunset Seed and Plant
+        Co.,","content-domain":{"domain":[],"crossmark-restriction":false},"published-print":{"date-parts":[[1897]]},"DOI":"10.5962\/bhl.title.94827","type":"monograph","created":{"date-parts":[[2014,9,21]],"date-time":"2014-09-21T06:05:39Z","timestamp":1411279539000},"source":"Crossref","is-referenced-by-count":0,"title":["Sunset
+        seasonables for present planting \/"],"prefix":"10.5962","author":[{"name":"Sunset
+        Seed and Plant Co.","sequence":"first","affiliation":[]},{"name":"Henry G.
+        Gilbert Nursery and Seed Trade Catalog Collection.","sequence":"additional","affiliation":[]}],"member":"3444","deposited":{"date-parts":[[2014,9,21]],"date-time":"2014-09-21T06:05:39Z","timestamp":1411279539000},"score":0.0,"resource":{"primary":{"URL":"http:\/\/www.biodiversitylibrary.org\/bibliography\/94827"}},"issued":{"date-parts":[[1897]]},"references-count":0,"URL":"http:\/\/dx.doi.org\/10.5962\/bhl.title.94827","published":{"date-parts":[[1897]]}}],"items-per-page":3,"query":{"start-index":0,"search-terms":null}}}'
+  recorded_at: 2022-11-09 12:31:56 GMT
+  recorded_with: vcr/1.1.0, webmockr/0.8.0

@@ -22,14 +22,14 @@ http_interactions:
       access-control-expose-headers: Link
       connection: close
       content-type: application/json;charset=utf-8
-      date: Wed, 09 Nov 2022 09:11:10 GMT
+      date: Wed, 09 Nov 2022 10:03:07 GMT
       permissions-policy: interest-cohort=()
       server: Jetty(9.4.40.v20210413)
       set-cookie:
-      - AWSALB=vNv+/zj0mbMTpB97uxJVYJ5liCwUqZrebt4kTQXha++QnX3/JUu8tG0UvrBGsxikasBqImHvZutoE4NyT8ZpYyqbre4g4ltIpIeV26yOj0zzOW4g9xA8oCeK/a01;
-        Expires=Wed, 16 Nov 2022 09:11:09 GMT; Path=/
-      - AWSALBCORS=vNv+/zj0mbMTpB97uxJVYJ5liCwUqZrebt4kTQXha++QnX3/JUu8tG0UvrBGsxikasBqImHvZutoE4NyT8ZpYyqbre4g4ltIpIeV26yOj0zzOW4g9xA8oCeK/a01;
-        Expires=Wed, 16 Nov 2022 09:11:09 GMT; Path=/; SameSite=None
+      - AWSALB=c0n4nNYxRY/ezLU9JWaasxj+T7kPDA09/uB/zVKBWQ7LPfcHZaeT05KKa6tbpDA0cWcTi+RHIhlp3x994IcgU5/qqj357tK6zo6imp81Ey6hfcJEVZTIDBM0hDNP;
+        Expires=Wed, 16 Nov 2022 10:03:07 GMT; Path=/
+      - AWSALBCORS=c0n4nNYxRY/ezLU9JWaasxj+T7kPDA09/uB/zVKBWQ7LPfcHZaeT05KKa6tbpDA0cWcTi+RHIhlp3x994IcgU5/qqj357tK6zo6imp81Ey6hfcJEVZTIDBM0hDNP;
+        Expires=Wed, 16 Nov 2022 10:03:07 GMT; Path=/; SameSite=None
       status: HTTP/1.1 200 OK
       transfer-encoding: chunked
       vary: Accept
@@ -42,5 +42,5 @@ http_interactions:
       encoding: ''
       file: no
       string: '{"status":"ok","message-type":"work-agency","message-version":"1.0.0","message":{"DOI":"10.1126\/science.169.3946.635","agency":{"id":"crossref","label":"Crossref"}}}'
-  recorded_at: 2022-11-09 09:11:10 GMT
+  recorded_at: 2022-11-09 10:03:07 GMT
   recorded_with: vcr/1.1.0, webmockr/0.8.0

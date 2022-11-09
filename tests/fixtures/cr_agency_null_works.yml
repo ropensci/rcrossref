@@ -8,8 +8,8 @@ http_interactions:
     headers:
       Accept-Encoding: gzip, deflate
       Accept: application/json, text/xml, application/xml, */*
-      User-Agent: r-curl/4.3.2 crul/1.1.0 rOpenSci(rcrossref/1.1.0.94)
-      X-USER-AGENT: r-curl/4.3.2 crul/1.1.0 rOpenSci(rcrossref/1.1.0.94)
+      User-Agent: r-curl/4.3.2 crul/1.3 rOpenSci(rcrossref/1.1.0.99)
+      X-USER-AGENT: r-curl/4.3.2 crul/1.3 rOpenSci(rcrossref/1.1.0.99)
   response:
     status:
       status_code: '200'
@@ -17,12 +17,14 @@ http_interactions:
       explanation: Request fulfilled, document follows
     headers:
       status: HTTP/1.1 200 OK
-      date: Tue, 17 Aug 2021 17:22:20 GMT
+      date: Wed, 09 Nov 2022 09:22:02 GMT
       content-type: application/json;charset=utf-8
-      content-length: '158'
+      transfer-encoding: chunked
       vary: Accept
+      access-control-expose-headers: Link
+      access-control-allow-headers: X-Requested-With, Accept, Accept-Encoding, Accept-Charset,
+        Accept-Language, Accept-Ranges, Cache-Control
       access-control-allow-origin: '*'
-      access-control-allow-headers: X-Requested-With
       server: Jetty(9.4.40.v20210413)
       x-ratelimit-limit: '50'
       x-ratelimit-interval: 1s
@@ -32,8 +34,8 @@ http_interactions:
       permissions-policy: interest-cohort=()
       connection: close
     body:
-      encoding: UTF-8
+      encoding: ''
       file: no
       string: '{"status":"ok","message-type":"work-agency","message-version":"1.0.0","message":{"DOI":"10.1038\/jid.2009.428","agency":{"id":"crossref","label":"Crossref"}}}'
-  recorded_at: 2021-08-17 17:22:20 GMT
-  recorded_with: vcr/1.0.2, webmockr/0.8.0
+  recorded_at: 2022-11-09 09:22:02 GMT
+  recorded_with: vcr/1.1.0, webmockr/0.8.0

@@ -25,7 +25,7 @@ test_that("cr_cn xml types", {
     d <- cr_cn("10.1126/science.169.3946.635", "crossref-xml")
     expect_is(d, "xml_document")
 
-    h <- cr_cn("10.3233/ISU-150780", "onix-xml")
+    h <- cr_cn("10.1430/8105", "onix-xml")
     expect_is(h, "xml_document")
   }, preserve_exact_body_bytes = TRUE,
   match_requests_on = c("method")
@@ -61,7 +61,7 @@ test_that("cr_cn checks if doi agency supports format", {
   vcr::use_cassette("cr_cn_doi_agency_check", {
 
     expect_error(
-      cr_cn(dois = "10.3233/ISU-150780", format = "crossref-tdm"),
+      cr_cn(dois = "10.1430/8105", format = "crossref-tdm"),
       "not supported by the DOI registration agency: 'medra'"
     )
     # expect_error(

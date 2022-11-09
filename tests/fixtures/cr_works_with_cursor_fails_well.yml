@@ -8,8 +8,8 @@ http_interactions:
     headers:
       Accept-Encoding: gzip, deflate
       Accept: application/json, text/xml, application/xml, */*
-      User-Agent: r-curl/4.3.2 crul/1.1.0 rOpenSci(rcrossref/1.1.0.94) (mailto:<crossref_email>)
-      X-USER-AGENT: r-curl/4.3.2 crul/1.1.0 rOpenSci(rcrossref/1.1.0.94) (mailto:<crossref_email>)
+      User-Agent: r-curl/4.3.2 crul/1.3 rOpenSci(rcrossref/1.1.0.99) (mailto:<crossref_email>)
+      X-USER-AGENT: r-curl/4.3.2 crul/1.3 rOpenSci(rcrossref/1.1.0.99) (mailto:<crossref_email>)
   response:
     status:
       status_code: '500'
@@ -17,28 +17,28 @@ http_interactions:
       explanation: Server got itself in trouble
     headers:
       connection: close
-      content-length: '2475'
       content-type: application/json
-      date: Tue, 17 Aug 2021 17:50:59 GMT
+      date: Wed, 09 Nov 2022 13:09:54 GMT
       exception-name: class clojure.lang.ExceptionInfo
       permissions-policy: interest-cohort=()
       server: Jetty(9.4.40.v20210413)
       set-cookie:
-      - AWSALB=j+UFXNT9TW1g0vlH/drff2ZnbmLcGXzQoaLAXNguc0jH1MPAEp22mZ1LzbXG4t0R3JzXecO5YK4Rv/SZkfAJ+Lzwh3pZFt0vfL+NqWrfWAt/Glsmsay4X3fPoLLS;
-        Expires=Tue, 24 Aug 2021 17:50:59 GMT; Path=/
-      - AWSALBCORS=j+UFXNT9TW1g0vlH/drff2ZnbmLcGXzQoaLAXNguc0jH1MPAEp22mZ1LzbXG4t0R3JzXecO5YK4Rv/SZkfAJ+Lzwh3pZFt0vfL+NqWrfWAt/Glsmsay4X3fPoLLS;
-        Expires=Tue, 24 Aug 2021 17:50:59 GMT; Path=/; SameSite=None
+      - AWSALB=2XDxrZaOLaofURKD7TcjTcgLJVMoQSxbjcnP4O3h0eOxqB/eUM4K/xugact9UMC17U0qAbIYixL2W/AVhhvlQ/QLQpesyxe/vq0eWbNnyPx8tykxtSe8o2SoKc3+;
+        Expires=Wed, 16 Nov 2022 13:09:54 GMT; Path=/
+      - AWSALBCORS=2XDxrZaOLaofURKD7TcjTcgLJVMoQSxbjcnP4O3h0eOxqB/eUM4K/xugact9UMC17U0qAbIYixL2W/AVhhvlQ/QLQpesyxe/vq0eWbNnyPx8tykxtSe8o2SoKc3+;
+        Expires=Wed, 16 Nov 2022 13:09:54 GMT; Path=/; SameSite=None
       status: HTTP/1.1 500 Server Error
+      transfer-encoding: chunked
       x-api-pool: polite
       x-rate-limit-interval: 1s
       x-rate-limit-limit: '50'
       x-ratelimit-interval: 1s
       x-ratelimit-limit: '50'
     body:
-      encoding: UTF-8
+      encoding: ''
       file: no
       string: '{"status":"error","message-type":"exception","message-version":"1.0.0","message":{"name":"class
         clojure.lang.ExceptionInfo","description":"clojure.lang.ExceptionInfo: Response
-        Exception qbits.spandex.Response@5ad5b623","message":"Response Exception","stack":["clojure.core$ex_info.invokeStatic(core.clj:4617)","clojure.core$ex_info.invoke(core.clj:4617)","qbits.spandex$response_ex__GT_ex_info.invokeStatic(spandex.clj:218)","qbits.spandex$response_ex__GT_ex_info.invoke(spandex.clj:215)","qbits.spandex$eval12716$fn__12717.invoke(spandex.clj:227)","qbits.spandex$eval12699$fn__12700$G__12690__12705.invoke(spandex.clj:222)","qbits.spandex$response_listener$reify__12725.onFailure(spandex.clj:251)","org.elasticsearch.client.RestClient$FailureTrackingResponseListener.onDefinitiveFailure(RestClient.java:605)","org.elasticsearch.client.RestClient$1.completed(RestClient.java:362)","org.elasticsearch.client.RestClient$1.completed(RestClient.java:343)","org.apache.http.concurrent.BasicFuture.completed(BasicFuture.java:119)","org.apache.http.impl.nio.client.DefaultClientExchangeHandlerImpl.responseCompleted(DefaultClientExchangeHandlerImpl.java:181)","org.apache.http.nio.protocol.HttpAsyncRequestExecutor.processResponse(HttpAsyncRequestExecutor.java:437)","org.apache.http.nio.protocol.HttpAsyncRequestExecutor.inputReady(HttpAsyncRequestExecutor.java:327)","org.apache.http.impl.nio.client.InternalRequestExecutor.inputReady(InternalRequestExecutor.java:83)","org.apache.http.impl.nio.DefaultNHttpClientConnection.consumeInput(DefaultNHttpClientConnection.java:265)","org.apache.http.impl.nio.client.InternalIODispatch.onInputReady(InternalIODispatch.java:81)","org.apache.http.impl.nio.client.InternalIODispatch.onInputReady(InternalIODispatch.java:39)","org.apache.http.impl.nio.reactor.AbstractIODispatch.inputReady(AbstractIODispatch.java:121)","org.apache.http.impl.nio.reactor.BaseIOReactor.readable(BaseIOReactor.java:162)","org.apache.http.impl.nio.reactor.AbstractIOReactor.processEvent(AbstractIOReactor.java:337)","org.apache.http.impl.nio.reactor.AbstractIOReactor.processEvents(AbstractIOReactor.java:315)","org.apache.http.impl.nio.reactor.AbstractIOReactor.execute(AbstractIOReactor.java:276)","org.apache.http.impl.nio.reactor.BaseIOReactor.execute(BaseIOReactor.java:104)","org.apache.http.impl.nio.reactor.AbstractMultiworkerIOReactor$Worker.run(AbstractMultiworkerIOReactor.java:588)","java.base\/java.lang.Thread.run(Thread.java:829)"],"cause":null}}'
-  recorded_at: 2021-08-17 17:50:59 GMT
-  recorded_with: vcr/1.0.2, webmockr/0.8.0
+        Exception qbits.spandex.Response@40533e24","message":"Response Exception","stack":["clojure.core$ex_info.invokeStatic(core.clj:4617)","clojure.core$ex_info.invoke(core.clj:4617)","qbits.spandex$response_ex__GT_ex_info.invokeStatic(spandex.clj:218)","qbits.spandex$response_ex__GT_ex_info.invoke(spandex.clj:215)","qbits.spandex$eval12776$fn__12777.invoke(spandex.clj:227)","qbits.spandex$eval12759$fn__12760$G__12750__12765.invoke(spandex.clj:222)","qbits.spandex$response_listener$reify__12785.onFailure(spandex.clj:251)","org.elasticsearch.client.RestClient$FailureTrackingResponseListener.onDefinitiveFailure(RestClient.java:605)","org.elasticsearch.client.RestClient$1.completed(RestClient.java:362)","org.elasticsearch.client.RestClient$1.completed(RestClient.java:343)","org.apache.http.concurrent.BasicFuture.completed(BasicFuture.java:119)","org.apache.http.impl.nio.client.DefaultClientExchangeHandlerImpl.responseCompleted(DefaultClientExchangeHandlerImpl.java:181)","org.apache.http.nio.protocol.HttpAsyncRequestExecutor.processResponse(HttpAsyncRequestExecutor.java:437)","org.apache.http.nio.protocol.HttpAsyncRequestExecutor.inputReady(HttpAsyncRequestExecutor.java:327)","org.apache.http.impl.nio.DefaultNHttpClientConnection.consumeInput(DefaultNHttpClientConnection.java:265)","org.apache.http.impl.nio.client.InternalIODispatch.onInputReady(InternalIODispatch.java:81)","org.apache.http.impl.nio.client.InternalIODispatch.onInputReady(InternalIODispatch.java:39)","org.apache.http.impl.nio.reactor.AbstractIODispatch.inputReady(AbstractIODispatch.java:121)","org.apache.http.impl.nio.reactor.BaseIOReactor.readable(BaseIOReactor.java:162)","org.apache.http.impl.nio.reactor.AbstractIOReactor.processEvent(AbstractIOReactor.java:337)","org.apache.http.impl.nio.reactor.AbstractIOReactor.processEvents(AbstractIOReactor.java:315)","org.apache.http.impl.nio.reactor.AbstractIOReactor.execute(AbstractIOReactor.java:276)","org.apache.http.impl.nio.reactor.BaseIOReactor.execute(BaseIOReactor.java:104)","org.apache.http.impl.nio.reactor.AbstractMultiworkerIOReactor$Worker.run(AbstractMultiworkerIOReactor.java:588)","java.base\/java.lang.Thread.run(Thread.java:833)"],"cause":null}}'
+  recorded_at: 2022-11-09 13:09:54 GMT
+  recorded_with: vcr/1.1.0, webmockr/0.8.0

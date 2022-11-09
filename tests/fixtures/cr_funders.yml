@@ -8,28 +8,30 @@ http_interactions:
     headers:
       Accept-Encoding: gzip, deflate
       Accept: application/json, text/xml, application/xml, */*
-      User-Agent: r-curl/4.3.2 crul/1.1.0 rOpenSci(rcrossref/1.1.0.94) (mailto:<crossref_email>)
-      X-USER-AGENT: r-curl/4.3.2 crul/1.1.0 rOpenSci(rcrossref/1.1.0.94) (mailto:<crossref_email>)
+      User-Agent: r-curl/4.3.2 crul/1.3 rOpenSci(rcrossref/1.1.0.99) (mailto:<crossref_email>)
+      X-USER-AGENT: r-curl/4.3.2 crul/1.3 rOpenSci(rcrossref/1.1.0.99) (mailto:<crossref_email>)
   response:
     status:
       status_code: '200'
       message: OK
       explanation: Request fulfilled, document follows
     headers:
-      access-control-allow-headers: X-Requested-With
+      access-control-allow-headers: X-Requested-With, Accept, Accept-Encoding, Accept-Charset,
+        Accept-Language, Accept-Ranges, Cache-Control
       access-control-allow-origin: '*'
+      access-control-expose-headers: Link
       connection: close
       content-encoding: gzip
-      content-length: '928'
+      content-length: '948'
       content-type: application/json
-      date: Tue, 17 Aug 2021 17:22:57 GMT
+      date: Wed, 09 Nov 2022 12:35:48 GMT
       permissions-policy: interest-cohort=()
       server: Jetty(9.4.40.v20210413)
       set-cookie:
-      - AWSALB=nBVRqVHXDPW9xYfPqC7Tv8ecIb+uMQcyK9nMT95H2lHGaxFAr8c9uk9TcKSabTPelrJP3G7gDlFRYTjbdnKO39R9rZh9QBzmt4bXKeTbDmfR/x1GF74YR/ctDqMF;
-        Expires=Tue, 24 Aug 2021 17:22:57 GMT; Path=/
-      - AWSALBCORS=nBVRqVHXDPW9xYfPqC7Tv8ecIb+uMQcyK9nMT95H2lHGaxFAr8c9uk9TcKSabTPelrJP3G7gDlFRYTjbdnKO39R9rZh9QBzmt4bXKeTbDmfR/x1GF74YR/ctDqMF;
-        Expires=Tue, 24 Aug 2021 17:22:57 GMT; Path=/; SameSite=None
+      - AWSALB=DWwVKC426olHtOWI6bGPGfAjMEpKvxs3x+kQgEA/DXVPDiZcWrQgSQ8u+IRp1xO3HPGKoSZWKzKQlR+cPYCJKwz8A0z8YHFD5Szuaz4VqGdISKuRcZMZgc73KyNC;
+        Expires=Wed, 16 Nov 2022 12:34:59 GMT; Path=/
+      - AWSALBCORS=DWwVKC426olHtOWI6bGPGfAjMEpKvxs3x+kQgEA/DXVPDiZcWrQgSQ8u+IRp1xO3HPGKoSZWKzKQlR+cPYCJKwz8A0z8YHFD5Szuaz4VqGdISKuRcZMZgc73KyNC;
+        Expires=Wed, 16 Nov 2022 12:34:59 GMT; Path=/; SameSite=None
       status: HTTP/1.1 200 OK
       vary: Accept-Encoding
       x-api-pool: polite
@@ -38,7 +40,7 @@ http_interactions:
       x-ratelimit-interval: 1s
       x-ratelimit-limit: '50'
     body:
-      encoding: UTF-8
+      encoding: ''
       file: no
       string: '{"status":"ok","message-type":"funder","message-version":"1.0.0","message":{"hierarchy-names":{"100010608":"Office
         of Inspector General","100000179":"Office of the Director","100014411":"Center
@@ -51,11 +53,12 @@ http_interactions:
         Science and Technology Center","100000088":"Directorate for Social, Behavioral
         and Economic Sciences","100005447":"Office of Information and Resource Management","100000086":"Directorate
         for Mathematical and Physical Sciences","100000085":"Directorate for Geosciences","100014072":"National
-        Coordination Office"},"replaced-by":[],"work-count":246656,"name":"National
-        Science Foundation","descendants":["100000076","100000077","100000078","100000081","100000082","100000083","100000084","100000085","100000086","100000087","100000088","100000089","100000105","100000106","100000121","100000141","100000143","100000144","100000145","100000146","100000147","100000148","100000149","100000150","100000151","100000152","100000153","100000154","100000155","100000156","100000159","100000160","100000162","100000163","100000164","100000165","100000166","100000169","100000170","100000171","100000172","100000173","100000174","100000175","100000176","100000177","100000178","100000179","100005441","100005442","100005443","100005444","100005445","100005446","100005447","100005448","100005449","100005450","100005553","100005554","100005714","100005716","100005717","100006091","100006603","100007352","100007521","100007522","100007523","100010608","100014071","100014072","100014073","100014074","100014411","100014591","100015815"],"descendant-work-count":309283,"id":"100000001","tokens":["national","science","foundation","usa","nsf","nsf","us","nsf"],"replaces":[],"uri":"http:\/\/dx.doi.org\/10.13039\/100000001","hierarchy":{"100000001":{"100010608":{},"100000179":{"more":true},"100014411":{},"100005716":{},"100000081":{"more":true},"100000083":{"more":true},"100015815":{},"100005441":{"more":true},"100000076":{"more":true},"100000084":{"more":true},"100014073":{},"100014591":{},"100000088":{"more":true},"100005447":{"more":true},"100000086":{"more":true},"100000085":{"more":true},"100014072":{}}},"alt-names":["USA
-        NSF","NSF","US NSF"],"location":"United States"}}'
-  recorded_at: 2021-08-17 17:23:00 GMT
-  recorded_with: vcr/1.0.2, webmockr/0.8.0
+        Coordination Office"},"replaced-by":[],"work-count":297216,"name":"National
+        Science Foundation","descendants":["100000076","100000077","100000078","100000081","100000082","100000083","100000084","100000085","100000086","100000087","100000088","100000089","100000105","100000106","100000121","100000141","100000143","100000144","100000145","100000146","100000147","100000148","100000149","100000150","100000151","100000152","100000153","100000154","100000155","100000156","100000159","100000160","100000162","100000163","100000164","100000165","100000166","100000169","100000170","100000171","100000172","100000173","100000174","100000175","100000176","100000177","100000178","100000179","100005441","100005442","100005443","100005444","100005445","100005446","100005447","100005448","100005449","100005450","100005553","100005554","100005714","100005716","100005717","100006091","100006603","100007352","100007521","100007522","100007523","100010608","100014071","100014072","100014073","100014074","100014411","100014591","100015815"],"descendant-work-count":368301,"id":"100000001","tokens":["national","science","foundation","us","national","science","foundation","usa","nsf","nsf","usnsf","us","national","science","foundation","us","nsf"],"replaces":[],"uri":"http:\/\/dx.doi.org\/10.13039\/100000001","hierarchy":{"100000001":{"100010608":{},"100000179":{"more":true},"100014411":{},"100005716":{},"100000081":{"more":true},"100000083":{"more":true},"100015815":{},"100005441":{"more":true},"100000076":{"more":true},"100000084":{"more":true},"100014073":{},"100014591":{},"100000088":{"more":true},"100005447":{"more":true},"100000086":{"more":true},"100000085":{"more":true},"100014072":{}}},"alt-names":["U.S.
+        National Science Foundation","USA NSF","NSF","USNSF","US National Science
+        Foundation","US NSF"],"location":"United States"}}'
+  recorded_at: 2022-11-09 12:36:59 GMT
+  recorded_with: vcr/1.1.0, webmockr/0.8.0
 - request:
     method: get
     uri: https://api.crossref.org/funders/10.13039/100000015
@@ -65,28 +68,30 @@ http_interactions:
     headers:
       Accept-Encoding: gzip, deflate
       Accept: application/json, text/xml, application/xml, */*
-      User-Agent: r-curl/4.3.2 crul/1.1.0 rOpenSci(rcrossref/1.1.0.94) (mailto:<crossref_email>)
-      X-USER-AGENT: r-curl/4.3.2 crul/1.1.0 rOpenSci(rcrossref/1.1.0.94) (mailto:<crossref_email>)
+      User-Agent: r-curl/4.3.2 crul/1.3 rOpenSci(rcrossref/1.1.0.99) (mailto:<crossref_email>)
+      X-USER-AGENT: r-curl/4.3.2 crul/1.3 rOpenSci(rcrossref/1.1.0.99) (mailto:<crossref_email>)
   response:
     status:
       status_code: '200'
       message: OK
       explanation: Request fulfilled, document follows
     headers:
-      access-control-allow-headers: X-Requested-With
+      access-control-allow-headers: X-Requested-With, Accept, Accept-Encoding, Accept-Charset,
+        Accept-Language, Accept-Ranges, Cache-Control
       access-control-allow-origin: '*'
+      access-control-expose-headers: Link
       connection: close
       content-encoding: gzip
-      content-length: '1596'
+      content-length: '1652'
       content-type: application/json
-      date: Tue, 17 Aug 2021 17:22:57 GMT
+      date: Wed, 09 Nov 2022 12:36:09 GMT
       permissions-policy: interest-cohort=()
       server: Jetty(9.4.40.v20210413)
       set-cookie:
-      - AWSALB=n078gRjNmC/kBEOYQZs4eS+4wbUJmrmG4I3tBCKupityyrYYdePfgmuEGRBzgyCHyp2goqttl4sCFAavpv70Yl7XF8emQ/FP0WHeic5Uo4sbQ8rbXSKke0Qt5jnQ;
-        Expires=Tue, 24 Aug 2021 17:22:57 GMT; Path=/
-      - AWSALBCORS=n078gRjNmC/kBEOYQZs4eS+4wbUJmrmG4I3tBCKupityyrYYdePfgmuEGRBzgyCHyp2goqttl4sCFAavpv70Yl7XF8emQ/FP0WHeic5Uo4sbQ8rbXSKke0Qt5jnQ;
-        Expires=Tue, 24 Aug 2021 17:22:57 GMT; Path=/; SameSite=None
+      - AWSALB=TDAkDIVtI1gbWXe9eRCEISv0LFXw9DqThJqJusK6eU42MGDAGnuvYAVrASluNjJ/mJV8Cqgy5/54Q8s9JfCdNG7i8hJfYern0BsYSrfjZiM4nmWNYxb79Iz8FzK5;
+        Expires=Wed, 16 Nov 2022 12:35:48 GMT; Path=/
+      - AWSALBCORS=TDAkDIVtI1gbWXe9eRCEISv0LFXw9DqThJqJusK6eU42MGDAGnuvYAVrASluNjJ/mJV8Cqgy5/54Q8s9JfCdNG7i8hJfYern0BsYSrfjZiM4nmWNYxb79Iz8FzK5;
+        Expires=Wed, 16 Nov 2022 12:35:48 GMT; Path=/; SameSite=None
       status: HTTP/1.1 200 OK
       vary: Accept-Encoding
       x-api-pool: polite
@@ -95,7 +100,7 @@ http_interactions:
       x-ratelimit-interval: 1s
       x-ratelimit-limit: '50'
     body:
-      encoding: UTF-8
+      encoding: ''
       file: no
       string: '{"status":"ok","message-type":"funder","message-version":"1.0.0","message":{"hierarchy-names":{"100017865":"Office
         of Cybersecurity, Energy Security, and Emergency Response","100006130":"Office
@@ -107,26 +112,28 @@ http_interactions:
         Laboratory","100006138":"Office of Environmental Management","100006133":"Advanced
         Research Projects Agency - Energy","100007783":"Office of International Affairs","100006174":"Office
         of Under Secretary for Science","100015704":"Bonneville Power Administration","100006132":"Office
-        of Science","100006113":"Office of Under Secretary","100006131":"Office of
-        Public Affairs","100006124":"Office of the Chief Information Officer","100006147":"Office
-        of Nuclear Energy","100006122":"Office of Environment, Health, Safety, and
-        Security","100006150":"Office of Policy and International Affairs","100007002":"Small
-        Business Innovative Research and Small Business Technology Transfer","100006120":"Office
-        of Fossil Energy","100016153":"Office of Electricity","100015814":"Great Lakes
-        Bioenergy Research Center","100006162":"Energy Information Administration","100006157":"Office
-        of Secretary of Energy","100013178":"Environmental Management Consolidated
-        Business Center","100006144":"Office of Intelligence and Counterintelligence","100017269":"Office
-        of Policy","100006186":"Office of Legacy Management","100006143":"Office of
-        Inspector General","100006121":"Office of the General Counsel","100017266":"Artificial
-        Intelligence and Technology Office","100006158":"Office of Congressional and
-        Intergovernmental Affairs","100006168":"National Nuclear Security Administration","100006134":"Office
-        of Energy Efficiency and Renewable Energy","100017270":"Office of Under Secretary
-        for Science and Energy"},"replaced-by":[],"work-count":82076,"name":"U.S.
-        Department of Energy","descendants":["100006113","100006114","100006115","100006116","100006117","100006118","100006119","100006120","100006121","100006122","100006123","100006124","100006126","100006127","100006129","100006130","100006131","100006132","100006133","100006134","100006135","100006136","100006137","100006138","100006139","100006140","100006141","100006142","100006143","100006144","100006145","100006146","100006147","100006148","100006149","100006150","100006151","100006157","100006158","100006159","100006160","100006161","100006162","100006163","100006164","100006165","100006166","100006167","100006168","100006169","100006170","100006171","100006172","100006173","100006174","100006175","100006176","100006177","100006178","100006179","100006180","100006181","100006182","100006183","100006184","100006185","100006186","100006187","100006188","100006189","100006190","100006191","100006192","100006200","100006201","100006206","100006207","100006208","100006209","100006210","100006224","100006226","100006227","100006228","100006229","100006230","100006231","100006233","100006234","100006235","100006335","100006998","100006999","100007000","100007001","100007002","100007783","100008902","100010268","100011030","100011031","100011659","100011660","100011661","100011662","100011663","100011664","100011665","100011680","100011681","100011682","100011735","100011883","100011884","100013055","100013145","100013165","100013178","100014456","100014492","100015417","100015704","100015814","100016153","100016186","100017258","100017259","100017260","100017261","100017262","100017263","100017264","100017265","100017266","100017267","100017268","100017269","100017270","100017271","100017272","100017273","100017274","100017275","100017276","100017280","100017281","100017282","100017283","100017284","100017285","100017286","100017535","100017613","100017865","100018075"],"descendant-work-count":130689,"id":"100000015","tokens":["us","department","of","energy","doe","united","states","department","of","energy","department","of","energy","usdoe","energy","department","energygov","usadoe","us","doe"],"replaces":[],"uri":"http:\/\/dx.doi.org\/10.13039\/100000015","hierarchy":{"100000015":{"100017865":{},"100006130":{"more":true},"100017267":{},"100016186":{},"100017268":{},"100006229":{},"100017271":{},"100013165":{},"100006138":{"more":true},"100006133":{"more":true},"100007783":{"more":true},"100006174":{},"100015704":{},"100006132":{"more":true},"100006113":{},"100006131":{"more":true},"100006124":{"more":true},"100006147":{"more":true},"100006122":{"more":true},"100006150":{},"100007002":{},"100006120":{"more":true},"100016153":{"more":true},"100015814":{},"100006162":{"more":true},"100006157":{},"100013178":{},"100006144":{"more":true},"100017269":{},"100006186":{"more":true},"100006143":{"more":true},"100006121":{"more":true},"100017266":{},"100006158":{"more":true},"100006168":{"more":true},"100006134":{"more":true},"100017270":{}}},"alt-names":["DOE","United
-        States Department of Energy","Department of Energy","USDOE","Energy Department","ENERGY.GOV","USADOE","US
-        DOE"],"location":"United States"}}'
-  recorded_at: 2021-08-17 17:23:00 GMT
-  recorded_with: vcr/1.0.2, webmockr/0.8.0
+        of Science","100006113":"Office of Under Secretary","100020312":"Office of
+        Fossil Energy and Carbon Management","100006131":"Office of Public Affairs","100006124":"Office
+        of the Chief Information Officer","100006147":"Office of Nuclear Energy","100006122":"Office
+        of Health, Safety, and Security","100006150":"Office of Policy and International
+        Affairs","100007002":"Small Business Innovative Research and Small Business
+        Technology Transfer","100006120":"Office of Fossil Energy","100016153":"Office
+        of Electricity","100015814":"Great Lakes Bioenergy Research Center","100006162":"Energy
+        Information Administration","100006157":"Office of Secretary of Energy","100013178":"Environmental
+        Management Consolidated Business Center","100006144":"Office of Intelligence
+        and Counterintelligence","100017269":"Office of Policy","100006186":"Office
+        of Legacy Management","100006143":"Office of Inspector General","100006121":"Office
+        of the General Counsel","100017266":"Artificial Intelligence and Technology
+        Office","100006158":"Office of Congressional and Intergovernmental Affairs","100006168":"National
+        Nuclear Security Administration","100006134":"Office of Energy Efficiency
+        and Renewable Energy","100017279":"Office of Environment, Health, Safety and
+        Security","100017270":"Office of Under Secretary for Science and Energy"},"replaced-by":[],"work-count":97266,"name":"U.S.
+        Department of Energy","descendants":["100006113","100006114","100006115","100006116","100006117","100006118","100006119","100006120","100006121","100006122","100006123","100006124","100006126","100006127","100006129","100006130","100006131","100006132","100006133","100006134","100006135","100006136","100006137","100006138","100006139","100006140","100006141","100006142","100006143","100006144","100006145","100006146","100006147","100006148","100006149","100006150","100006151","100006157","100006158","100006159","100006160","100006161","100006162","100006163","100006164","100006166","100006167","100006168","100006169","100006170","100006171","100006172","100006173","100006174","100006175","100006176","100006177","100006178","100006179","100006180","100006181","100006182","100006183","100006184","100006185","100006186","100006187","100006188","100006189","100006190","100006191","100006192","100006200","100006201","100006206","100006207","100006208","100006209","100006210","100006224","100006226","100006227","100006228","100006229","100006230","100006231","100006233","100006234","100006235","100006335","100006998","100006999","100007000","100007001","100007002","100007783","100008902","100010268","100011030","100011031","100011659","100011660","100011661","100011662","100011663","100011664","100011665","100011680","100011681","100011682","100011735","100011883","100011884","100013055","100013145","100013165","100013178","100014456","100014492","100015417","100015704","100015814","100016153","100016186","100017258","100017259","100017260","100017261","100017262","100017263","100017264","100017265","100017266","100017267","100017268","100017269","100017270","100017271","100017272","100017273","100017274","100017275","100017276","100017277","100017278","100017279","100017280","100017281","100017282","100017283","100017284","100017285","100017286","100017535","100017613","100017865","100018075","100019666","100020312","100020315","100020316"],"descendant-work-count":156985,"id":"100000015","tokens":["us","department","of","energy","us","department","of","energy","doe","united","states","department","of","energy","department","of","energy","usdoe","energy","department","energygov","usadoe","us","doe"],"replaces":[],"uri":"http:\/\/dx.doi.org\/10.13039\/100000015","hierarchy":{"100000015":{"100017865":{"more":true},"100006130":{"more":true},"100017267":{},"100016186":{},"100017268":{},"100006229":{},"100017271":{},"100013165":{},"100006138":{"more":true},"100006133":{"more":true},"100007783":{"more":true},"100006174":{},"100015704":{},"100006132":{"more":true},"100006113":{},"100020312":{"more":true},"100006131":{"more":true},"100006124":{"more":true},"100006147":{"more":true},"100006122":{"more":true},"100006150":{},"100007002":{},"100006120":{"more":true},"100016153":{"more":true},"100015814":{},"100006162":{"more":true},"100006157":{},"100013178":{},"100006144":{"more":true},"100017269":{},"100006186":{"more":true},"100006143":{"more":true},"100006121":{"more":true},"100017266":{},"100006158":{"more":true},"100006168":{"more":true},"100006134":{"more":true},"100017279":{"more":true},"100017270":{}}},"alt-names":["US
+        Department of Energy","DOE","United States Department of Energy","Department
+        of Energy","USDOE","Energy Department","ENERGY.GOV","USADOE","US DOE"],"location":"United
+        States"}}'
+  recorded_at: 2022-11-09 12:36:59 GMT
+  recorded_with: vcr/1.1.0, webmockr/0.8.0
 - request:
     method: get
     uri: https://api.crossref.org/funders/10.13039/100000001/works?rows=5
@@ -136,28 +143,30 @@ http_interactions:
     headers:
       Accept-Encoding: gzip, deflate
       Accept: application/json, text/xml, application/xml, */*
-      User-Agent: r-curl/4.3.2 crul/1.1.0 rOpenSci(rcrossref/1.1.0.94) (mailto:<crossref_email>)
-      X-USER-AGENT: r-curl/4.3.2 crul/1.1.0 rOpenSci(rcrossref/1.1.0.94) (mailto:<crossref_email>)
+      User-Agent: r-curl/4.3.2 crul/1.3 rOpenSci(rcrossref/1.1.0.99) (mailto:<crossref_email>)
+      X-USER-AGENT: r-curl/4.3.2 crul/1.3 rOpenSci(rcrossref/1.1.0.99) (mailto:<crossref_email>)
   response:
     status:
       status_code: '200'
       message: OK
       explanation: Request fulfilled, document follows
     headers:
-      access-control-allow-headers: X-Requested-With
+      access-control-allow-headers: X-Requested-With, Accept, Accept-Encoding, Accept-Charset,
+        Accept-Language, Accept-Ranges, Cache-Control
       access-control-allow-origin: '*'
+      access-control-expose-headers: Link
       connection: close
       content-encoding: gzip
-      content-length: '15163'
+      content-length: '13995'
       content-type: application/json
-      date: Tue, 17 Aug 2021 17:22:58 GMT
+      date: Wed, 09 Nov 2022 12:36:58 GMT
       permissions-policy: interest-cohort=()
       server: Jetty(9.4.40.v20210413)
       set-cookie:
-      - AWSALB=WRBHFnZiVvYfr9ii4Ao2+4/etHLl9cHiql1i1pRHyntripCMI/hz2mcMk5Y01Mopytna4b280cMT87cmVmXjtUhftseW5u0bbm3k++/0aGLRQMUtfx4aDcPv0jtF;
-        Expires=Tue, 24 Aug 2021 17:22:58 GMT; Path=/
-      - AWSALBCORS=WRBHFnZiVvYfr9ii4Ao2+4/etHLl9cHiql1i1pRHyntripCMI/hz2mcMk5Y01Mopytna4b280cMT87cmVmXjtUhftseW5u0bbm3k++/0aGLRQMUtfx4aDcPv0jtF;
-        Expires=Tue, 24 Aug 2021 17:22:58 GMT; Path=/; SameSite=None
+      - AWSALB=4HFv6Zvl9l/xoxcaSlmpf3+ELzSDwCvguVbKJCgnHbx2a8vlu2W+Sb1T0arWChRlNdXmlcw0GiEvNSrCFFqkuEHKDfJ5jfanIE6ETIndVyiUVZyL/wADLD6H5x2Q;
+        Expires=Wed, 16 Nov 2022 12:36:09 GMT; Path=/
+      - AWSALBCORS=4HFv6Zvl9l/xoxcaSlmpf3+ELzSDwCvguVbKJCgnHbx2a8vlu2W+Sb1T0arWChRlNdXmlcw0GiEvNSrCFFqkuEHKDfJ5jfanIE6ETIndVyiUVZyL/wADLD6H5x2Q;
+        Expires=Wed, 16 Nov 2022 12:36:09 GMT; Path=/; SameSite=None
       status: HTTP/1.1 200 OK
       vary: Accept-Encoding
       x-api-pool: polite
@@ -166,380 +175,312 @@ http_interactions:
       x-ratelimit-interval: 1s
       x-ratelimit-limit: '50'
     body:
-      encoding: UTF-8
+      encoding: ''
       file: no
-      string: '{"status":"ok","message-type":"work-list","message-version":"1.0.0","message":{"facets":{},"total-results":309283,"items":[{"indexed":{"date-parts":[[2021,5,9]],"date-time":"2021-05-09T19:49:33Z","timestamp":1620589773430},"reference-count":23,"publisher":"Informa
-        UK Limited","issue":"4","funder":[{"name":"NSF-DMS","award":["1412023","1712294"]},{"DOI":"10.13039\/100000121","name":"Division
-        of Mathematical Sciences","doi-asserted-by":"crossref"}],"content-domain":{"domain":["www.tandfonline.com"],"crossmark-restriction":true},"short-container-title":["Communications
-        in Partial Differential Equations"],"published-print":{"date-parts":[[2019,4,3]]},"DOI":"10.1080\/03605302.2018.1546318","type":"journal-article","created":{"date-parts":[[2019,1,21]],"date-time":"2019-01-21T16:35:31Z","timestamp":1548088531000},"page":"279-308","update-policy":"http:\/\/dx.doi.org\/10.1080\/tandf_crossmark_01","source":"Crossref","is-referenced-by-count":2,"title":["Global
-        regularity and fast small-scale formation for Euler patch equation in a smooth
-        domain"],"prefix":"10.1080","volume":"44","author":[{"ORCID":"http:\/\/orcid.org\/0000-0002-3096-6522","authenticated-orcid":false,"given":"Alexander","family":"Kiselev","sequence":"first","affiliation":[{"name":"Department
-        of Mathematics, Duke University, Durham, NC, USA;"}]},{"given":"Chao","family":"Li","sequence":"additional","affiliation":[{"name":"Department
-        of Mathematics, Rice University, Houston, TX, USA"}]}],"member":"301","published-online":{"date-parts":[[2019,1,21]]},"reference":[{"key":"CIT0001","volume-title":"Vorticity
-        and Incompressible Flow","author":"Majda A.","year":"2002"},{"key":"CIT0002","doi-asserted-by":"publisher","DOI":"10.1007\/978-1-4612-4284-0"},{"key":"CIT0003","doi-asserted-by":"publisher","DOI":"10.1007\/BF01474610"},{"key":"CIT0004","doi-asserted-by":"publisher","DOI":"10.1016\/0041-5553(63)90247-7"},{"key":"CIT0005","doi-asserted-by":"publisher","DOI":"10.1063\/1.857353"},{"key":"CIT0006","doi-asserted-by":"publisher","DOI":"10.1002\/cpa.3160390711"},{"key":"CIT0007","doi-asserted-by":"crossref","first-page":"1","DOI":"10.24033\/asens.1665","volume":"26","author":"Chemin
-        J.-Y.","year":"1993","journal-title":"Ann. Sci.\u2019\u00c9cole Norm. Sup\u00e9r"},{"key":"CIT0008","doi-asserted-by":"publisher","DOI":"10.1007\/BF02097055"},{"key":"CIT0009","first-page":"515","volume":"318","author":"Serfati
-        P.","year":"1994","journal-title":"C. R. Acad. Sci. Paris"},{"key":"CIT0010","doi-asserted-by":"publisher","DOI":"10.1016\/S0021-7824(98)00003-8"},{"issue":"3","key":"CIT0011","first-page":"456","volume":"55","author":"Morgulis
-        A.","year":"1997","journal-title":"Doklady Math"},{"key":"CIT0012","doi-asserted-by":"publisher","DOI":"10.1081\/PDE-120024362"},{"key":"CIT0013","doi-asserted-by":"publisher","DOI":"10.24033\/bsmf.2265"},{"key":"CIT0014","doi-asserted-by":"publisher","DOI":"10.1080\/03605309708821280"},{"key":"CIT0015","doi-asserted-by":"publisher","DOI":"10.4171\/RMI\/276"},{"key":"CIT0016","doi-asserted-by":"publisher","DOI":"10.4007\/annals.2016.184.3.7"},{"key":"CIT0017","doi-asserted-by":"publisher","DOI":"10.4007\/annals.2014.180.3.9"},{"key":"CIT0018","doi-asserted-by":"publisher","DOI":"10.2307\/1971233"},{"key":"CIT0019","doi-asserted-by":"crossref","volume-title":"Elliptic
-        Partial Differential Equations of Second Order","author":"Gilbarg D.","year":"2001","DOI":"10.1007\/978-3-642-61798-0"},{"key":"CIT0020","first-page":"123","volume":"3","author":"Th\u00e4le
-        C.","year":"2008","journal-title":"Surv. Math. Appl"},{"key":"CIT0021","doi-asserted-by":"publisher","DOI":"10.1016\/j.jmaa.2016.02.066"},{"key":"CIT0022","volume-title":"Partial
-        Differential Equations, Graduate Studies in Mathematics 19, AMS","author":"Evans
-        L. C."},{"key":"CIT0023","volume-title":"Singular Integrals and Differentiability
-        Properties of Functions","author":"Stein E. M.","year":"1970"}],"container-title":["Communications
-        in Partial Differential Equations"],"language":"en","link":[{"URL":"https:\/\/www.tandfonline.com\/doi\/pdf\/10.1080\/03605302.2018.1546318","content-type":"unspecified","content-version":"vor","intended-application":"similarity-checking"}],"deposited":{"date-parts":[[2020,11,23]],"date-time":"2020-11-23T02:19:41Z","timestamp":1606097981000},"score":0.0,"issued":{"date-parts":[[2019,1,21]]},"references-count":23,"journal-issue":{"issue":"4","published-online":{"date-parts":[[2018,12,27]]},"published-print":{"date-parts":[[2019,4,3]]}},"alternative-id":["10.1080\/03605302.2018.1546318"],"URL":"http:\/\/dx.doi.org\/10.1080\/03605302.2018.1546318","ISSN":["0360-5302","1532-4133"],"issn-type":[{"value":"0360-5302","type":"print"},{"value":"1532-4133","type":"electronic"}],"subject":["Applied
-        Mathematics","Analysis"],"published":{"date-parts":[[2019,1,21]]},"assertion":[{"value":"The
+      string: '{"status":"ok","message-type":"work-list","message-version":"1.0.0","message":{"facets":{},"total-results":368301,"items":[{"indexed":{"date-parts":[[2022,3,30]],"date-time":"2022-03-30T13:53:12Z","timestamp":1648648392261},"reference-count":73,"publisher":"Informa
+        UK Limited","issue":"1","funder":[{"DOI":"10.13039\/100000001","name":"National
+        Science Foundation","doi-asserted-by":"publisher","award":["1420374"]}],"content-domain":{"domain":["www.tandfonline.com"],"crossmark-restriction":true},"short-container-title":["Journal
+        of Research on Educational Effectiveness"],"published-print":{"date-parts":[[2021,1,2]]},"DOI":"10.1080\/19345747.2020.1823538","type":"journal-article","created":{"date-parts":[[2020,12,21]],"date-time":"2020-12-21T15:39:15Z","timestamp":1608565155000},"page":"241-269","update-policy":"http:\/\/dx.doi.org\/10.1080\/tandf_crossmark_01","source":"Crossref","is-referenced-by-count":0,"title":["Student
+        Log-Data from a Randomized Evaluation of Educational Technology: A Causal
+        Case Study"],"prefix":"10.1080","volume":"14","author":[{"ORCID":"http:\/\/orcid.org\/0000-0003-0416-0610","authenticated-orcid":false,"given":"Adam
+        C.","family":"Sales","sequence":"first","affiliation":[{"name":"University
+        of Texas, Austin, Texas, USA"}]},{"ORCID":"http:\/\/orcid.org\/0000-0001-5155-2436","authenticated-orcid":false,"given":"John
+        F.","family":"Pane","sequence":"additional","affiliation":[{"name":"Education
+        and Labor Division at RAND Corporation, Pittsburgh, Pennsylvania, USA"}]}],"member":"301","published-online":{"date-parts":[[2020,12,21]]},"reference":[{"key":"CIT0001","doi-asserted-by":"publisher","DOI":"10.1007\/s40593-015-0089-1"},{"key":"CIT0002","doi-asserted-by":"publisher","DOI":"10.4324\/9781315799438"},{"key":"CIT0003","doi-asserted-by":"publisher","DOI":"10.1126\/science.228.4698.456"},{"key":"CIT0004","doi-asserted-by":"publisher","DOI":"10.1207\/s15327809jls0402_2"},{"key":"CIT0005","doi-asserted-by":"publisher","DOI":"10.18637\/jss.v067.i01"},{"key":"CIT0006","doi-asserted-by":"publisher","DOI":"10.1007\/978-3-540-69132-7_42"},{"key":"CIT0007","unstructured":"Bowers,
+        J., Fredrickson, M. & Hansen, B. (2017). RItools: Randomization inference
+        tools (development version) [R package version 0.2-0]. https:\/\/github.com\/markmfredrickson\/RItools"},{"key":"CIT0008","doi-asserted-by":"publisher","DOI":"10.1111\/j.1467-6419.2007.00527.x"},{"key":"CIT0009","doi-asserted-by":"publisher","DOI":"10.1002\/pam.20375"},{"key":"CIT0010","doi-asserted-by":"publisher","DOI":"10.1080\/00273170903333673"},{"key":"CIT0011","doi-asserted-by":"crossref","unstructured":"Escueta,
+        M., Quan, V., Nickow, A. J. & Oreopoulos, P. (2017). Education technology:
+        An evidence-based review. Technical report, National Bureau of Economic Research.","DOI":"10.3386\/w23744"},{"key":"CIT0012","doi-asserted-by":"crossref","unstructured":"Fancsali,
+        S. E., Holstein, K., Sandbothe, M., Ritter, S., McLaren, B. M. & Aleven, V.
+        (2020). Towards practical detection of unproductive struggle. Proceedings
+        of the 21st International Conference on Artificial Intelligence in Education.","DOI":"10.1007\/978-3-030-52240-7_17"},{"key":"CIT0013","author":"Feller
+        A.","year":"2016","journal-title":"arXiv Preprint arXiv:1602.06595"},{"key":"CIT0014","doi-asserted-by":"publisher","DOI":"10.1214\/16-AOAS910"},{"key":"CIT0015","doi-asserted-by":"publisher","DOI":"10.1111\/j.0006-341X.2002.00021.x"},{"key":"CIT0016","doi-asserted-by":"publisher","DOI":"10.1037\/0022-0663.86.1.122"},{"key":"CIT0017","doi-asserted-by":"publisher","DOI":"10.17265\/2159-5313\/2016.09.003"},{"key":"CIT0018","volume-title":"Bayesian
+        data analysis","volume":"2","author":"Gelman A.","year":"2014"},{"key":"CIT0019","doi-asserted-by":"publisher","DOI":"10.1111\/j.1541-0420.2008.01014.x"},{"key":"CIT0020","volume-title":"Vincent
+        Aleven. Learner differences in hint processing","author":"Goldin I. M.","year":"2012"},{"key":"CIT0023","doi-asserted-by":"publisher","DOI":"10.1198\/016214504000000647"},{"key":"CIT0024","doi-asserted-by":"publisher","DOI":"10.1007\/978-1-4419-9389-2_9"},{"key":"CIT0021","doi-asserted-by":"publisher","DOI":"10.1214\/08-STS254"},{"key":"CIT0022","doi-asserted-by":"publisher","DOI":"10.1198\/106186006X137047"},{"key":"CIT0025","first-page":"73","volume":"226164","author":"Hirano
+        K.","year":"2004","journal-title":"Applied Bayesian Modeling and Causal Inference
+        from Incomplete-Data Perspectives"},{"key":"CIT0026","doi-asserted-by":"publisher","DOI":"10.1093\/pan\/mpl013"},{"key":"CIT0027","doi-asserted-by":"publisher","DOI":"10.1002\/9781119030638"},{"key":"CIT0028","doi-asserted-by":"publisher","DOI":"10.1214\/09-AOAS315"},{"key":"CIT0029","doi-asserted-by":"publisher","DOI":"10.1017\/S0003055411000414"},{"key":"CIT0030","unstructured":"Israni,
+        A., Sales, A. C. & Pane, J. F. (2018). Mastery learning in practice: A (mostly)
+        descriptive analysis of log data from the cognitive tutor algebra I effectiveness
+        trial. arXiv:1802.08616."},{"key":"CIT0031","doi-asserted-by":"publisher","DOI":"10.1198\/016214507000000347"},{"key":"CIT0032","doi-asserted-by":"publisher","DOI":"10.1037\/a0014207"},{"key":"CIT0033","doi-asserted-by":"publisher","DOI":"10.2307\/2985676"},{"key":"CIT0034","doi-asserted-by":"publisher","DOI":"10.1007\/s10648-007-9049-0"},{"key":"CIT0035","doi-asserted-by":"publisher","DOI":"10.1111\/j.1551-6709.2012.01245.x"},{"key":"CIT0036","doi-asserted-by":"publisher","DOI":"10.1002\/sim.2042"},{"key":"CIT0037","doi-asserted-by":"publisher","DOI":"10.1002\/sim.7413"},{"key":"CIT0038","doi-asserted-by":"publisher","DOI":"10.1201\/9780429029608"},{"key":"CIT0039","doi-asserted-by":"publisher","DOI":"10.1207\/s15327051hci0504_2"},{"key":"CIT0040","doi-asserted-by":"publisher","DOI":"10.1515\/1557-4679.1380"},{"key":"CIT0041","doi-asserted-by":"publisher","DOI":"10.3102\/1076998616646199"},{"key":"CIT0042","doi-asserted-by":"publisher","DOI":"10.1214\/17-STS612"},{"key":"CIT0043","doi-asserted-by":"publisher","DOI":"10.1080\/19345747.2017.1379576"},{"key":"CIT0044","first-page":"1","volume":"10","author":"Neyman
+        J.","year":"1923","journal-title":"Roczniki Nauk Rolniczych"},{"key":"CIT0045","doi-asserted-by":"publisher","DOI":"10.1198\/jasa.2011.tm10356"},{"key":"CIT0046","doi-asserted-by":"publisher","DOI":"10.1080\/19345747.2012.688410"},{"key":"CIT0047","doi-asserted-by":"publisher","DOI":"10.3102\/0162373713507480"},{"key":"CIT0048","volume-title":"Proceedings
+        of the 2009 Conference on Artificial Intelligence in Education","author":"Pavlik
+        P. I.","year":"2009"},{"key":"CIT0050","doi-asserted-by":"publisher","DOI":"10.1080\/07350015.2016.1247004"},{"key":"CIT0049","doi-asserted-by":"publisher","DOI":"10.2202\/1557-4679.1322"},{"key":"CIT0051","unstructured":"Pustejovsky,
+        J. (2018). clubSandwich: Cluster-robust (sandwich) variance estimators with
+        small-sample corrections [R package version 0.3.2]. https:\/\/CRAN.R-project.org\/package=clubSandwich."},{"key":"CIT0052","volume-title":"R:
+        A language and environment for statistical computing.","author":"R Core Team.","year":"2016"},{"key":"CIT0053","volume-title":"Probabilistic
+        models for some intelligence and attainment tests","author":"Rasch G.","year":"1993"},{"key":"CIT0055","doi-asserted-by":"publisher","DOI":"10.1007\/978-1-4757-3692-2"},{"key":"CIT0054","doi-asserted-by":"publisher","DOI":"10.1093\/biomet\/70.1.41"},{"key":"CIT0056","doi-asserted-by":"publisher","DOI":"10.1214\/aos\/1176344064"},{"key":"CIT0057","doi-asserted-by":"publisher","DOI":"10.1111\/j.1467-9469.2004.02-123.x"},{"key":"CIT0058","unstructured":"Sales,
+        A. & Pane, J. (2020). The effect of teachers reassigning students to new cognitive
+        tutor sections.\u00a0Proceedings of the 13th International Conference on Educational
+        Data Mining. International Educational Data Mining Society."},{"key":"CIT0059","doi-asserted-by":"publisher","DOI":"10.3102\/1076998617731518"},{"key":"CIT0060","doi-asserted-by":"publisher","DOI":"10.1214\/18-AOAS1196"},{"key":"CIT0061","unstructured":"Sales,
+        A. C. & Pane, J. F. (2019b). Principal stratification for intelligent tutors:
+        A tutorial. https:\/\/github.com\/adamSales\/tutorial\/blob\/master\/paper.pdf."},{"key":"CIT0062","unstructured":"Sales,
+        A., Wilks, A. & Pane, J. (2016). Student usage predicts treatment effect heterogeneity
+        in the cognitive tutor algebra I program.\u00a0Proceedings of the 9th International
+        Conference on Educational Data Mining (pp. 207\u2013214). International Educational
+        Data Mining Society."},{"key":"CIT0063","volume-title":"Statistical theory
+        for the RCT-YES software: Design-based causal inference for RCTs","author":"Schochet
+        P. Z.","year":"2015"},{"key":"CIT0064","doi-asserted-by":"publisher","DOI":"10.1198\/jasa.2011.ap10425"},{"key":"CIT0065","doi-asserted-by":"publisher","DOI":"10.1053\/j.nainr.2009.12.010"},{"key":"CIT0066","doi-asserted-by":"crossref","unstructured":"Singh,
+        R., Saleem, M., Pradhan, P., Heffernan, C., Heffernan, N. T., Razzaq, L.,
+        Dailey, M. D., O\u2019Connor, C. & Mulcahy, C. (2011). Feedback during web-based
+        homework: the role of hints (pp. 328\u2013336). International Conference on
+        Artificial Intelligence in Education. Springer.","DOI":"10.1007\/978-3-642-21869-9_43"},{"key":"CIT0067","doi-asserted-by":"publisher","DOI":"10.1093\/bioinformatics\/btr597"},{"key":"CIT0068","doi-asserted-by":"publisher","DOI":"10.1207\/s1532690xci0201_3"},{"key":"CIT0070","doi-asserted-by":"publisher","DOI":"10.1016\/j.spl.2008.05.029"},{"key":"CIT0071","doi-asserted-by":"publisher","DOI":"10.2202\/1557-4679.1329"},{"key":"CIT0072","doi-asserted-by":"publisher","DOI":"10.1080\/19345747.2012.688412"},{"key":"CIT0069","volume-title":"Explanation
+        in causal inference: Methods for mediation and interaction","author":"VanderWeele
+        T.","year":"2015"},{"key":"CIT0073","doi-asserted-by":"publisher","DOI":"10.18637\/jss.v011.i10"}],"container-title":["Journal
+        of Research on Educational Effectiveness"],"language":"en","link":[{"URL":"https:\/\/www.tandfonline.com\/doi\/pdf\/10.1080\/19345747.2020.1823538","content-type":"unspecified","content-version":"vor","intended-application":"similarity-checking"}],"deposited":{"date-parts":[[2021,8,10]],"date-time":"2021-08-10T17:43:17Z","timestamp":1628617397000},"score":0.0,"resource":{"primary":{"URL":"https:\/\/www.tandfonline.com\/doi\/full\/10.1080\/19345747.2020.1823538"}},"issued":{"date-parts":[[2020,12,21]]},"references-count":73,"journal-issue":{"issue":"1","published-print":{"date-parts":[[2021,1,2]]}},"alternative-id":["10.1080\/19345747.2020.1823538"],"URL":"http:\/\/dx.doi.org\/10.1080\/19345747.2020.1823538","ISSN":["1934-5747","1934-5739"],"issn-type":[{"value":"1934-5747","type":"print"},{"value":"1934-5739","type":"electronic"}],"subject":["Education"],"published":{"date-parts":[[2020,12,21]]},"assertion":[{"value":"The
         publishing and review policy for this title is described in its Aims & Scope.","order":1,"name":"peerreview_statement","label":"Peer
-        Review Statement"},{"value":"http:\/\/www.tandfonline.com\/action\/journalInformation?show=aimsScope&journalCode=lpde20","URL":"http:\/\/www.tandfonline.com\/action\/journalInformation?show=aimsScope&journalCode=lpde20","order":2,"name":"aims_and_scope_url","label":"Aim
-        & Scope"},{"value":"2018-06-19","order":0,"name":"received","label":"Received","group":{"name":"publication_history","label":"Publication
-        History"}},{"value":"2018-10-24","order":2,"name":"accepted","label":"Accepted","group":{"name":"publication_history","label":"Publication
-        History"}},{"value":"2019-01-21","order":3,"name":"published","label":"Published","group":{"name":"publication_history","label":"Publication
-        History"}}]},{"indexed":{"date-parts":[[2021,5,9]],"date-time":"2021-05-09T19:51:28Z","timestamp":1620589888321},"reference-count":32,"publisher":"American
-        Physical Society (APS)","issue":"3","license":[{"start":{"date-parts":[[2019,1,24]],"date-time":"2019-01-24T00:00:00Z","timestamp":1548288000000},"content-version":"vor","delay-in-days":0,"URL":"https:\/\/link.aps.org\/licenses\/aps-default-license"},{"start":{"date-parts":[[2020,1,24]],"date-time":"2020-01-24T00:00:00Z","timestamp":1579824000000},"content-version":"am","delay-in-days":365,"URL":"https:\/\/link.aps.org\/licenses\/aps-default-accepted-manuscript-license"}],"funder":[{"DOI":"10.13039\/100000001","name":"National
-        Science Foundation","doi-asserted-by":"publisher","award":["1408685\/1409560"]}],"content-domain":{"domain":["journals.aps.org"],"crossmark-restriction":true},"short-container-title":["Phys.
-        Rev. Lett."],"DOI":"10.1103\/physrevlett.122.035501","type":"journal-article","created":{"date-parts":[[2019,1,24]],"date-time":"2019-01-24T13:21:30Z","timestamp":1548336090000},"update-policy":"http:\/\/dx.doi.org\/10.1103\/crossmark-policy","source":"Crossref","is-referenced-by-count":5,"title":["Critical
-        Analysis of an FeP Empirical Potential Employed to Study the Fracture of Metallic
-        Glasses"],"prefix":"10.1103","volume":"122","author":[{"given":"Yezeng","family":"He","sequence":"first","affiliation":[]},{"given":"Peng","family":"Yi","sequence":"additional","affiliation":[]},{"given":"Michael
-        L.","family":"Falk","sequence":"additional","affiliation":[]}],"member":"16","published-online":{"date-parts":[[2019,1,24]]},"reference":[{"key":"PhysRevLett.122.035501Cc1R1","doi-asserted-by":"publisher","DOI":"10.1016\/S1369-7021(04)00124-5"},{"key":"PhysRevLett.122.035501Cc2R1","doi-asserted-by":"publisher","DOI":"10.1103\/PhysRevLett.93.255506"},{"key":"PhysRevLett.122.035501Cc3R1","doi-asserted-by":"publisher","DOI":"10.1016\/j.actamat.2007.01.052"},{"key":"PhysRevLett.122.035501Cc4R1","doi-asserted-by":"publisher","DOI":"10.1103\/PhysRevLett.96.245502"},{"key":"PhysRevLett.122.035501Cc5R1","doi-asserted-by":"publisher","DOI":"10.1016\/j.actamat.2016.01.049"},{"key":"PhysRevLett.122.035501Cc6R1","doi-asserted-by":"publisher","DOI":"10.1103\/PhysRevLett.94.205501"},{"key":"PhysRevLett.122.035501Cc7R1","doi-asserted-by":"publisher","DOI":"10.1103\/PhysRevLett.94.125510"},{"key":"PhysRevLett.122.035501Cc8R1","doi-asserted-by":"publisher","DOI":"10.1103\/PhysRevLett.98.235501"},{"key":"PhysRevLett.122.035501Cc9R1","doi-asserted-by":"publisher","DOI":"10.1080\/09500830500080474"},{"key":"PhysRevLett.122.035501Cc10R1","doi-asserted-by":"publisher","DOI":"10.1016\/j.actamat.2004.11.040"},{"key":"PhysRevLett.122.035501Cc11R1","doi-asserted-by":"publisher","DOI":"10.1103\/PhysRevLett.109.194301"},{"key":"PhysRevLett.122.035501Cc12R1","doi-asserted-by":"publisher","DOI":"10.1038\/s41467-018-05682-8"},{"key":"PhysRevLett.122.035501Cc13R1","doi-asserted-by":"publisher","DOI":"10.1103\/PhysRevLett.110.185502"},{"key":"PhysRevLett.122.035501Cc14R1","doi-asserted-by":"publisher","DOI":"10.1073\/pnas.1607506113"},{"key":"PhysRevLett.122.035501Cc15R1","doi-asserted-by":"publisher","DOI":"10.1103\/PhysRevE.80.031133"},{"key":"PhysRevLett.122.035501Cc16R1","doi-asserted-by":"publisher","DOI":"10.1038\/nmat1758"},{"key":"PhysRevLett.122.035501Cc17R1","doi-asserted-by":"publisher","DOI":"10.1016\/S0966-9795(02)00137-1"},{"key":"PhysRevLett.122.035501Cc18R1","doi-asserted-by":"publisher","DOI":"10.1016\/j.actamat.2004.05.025"},{"key":"PhysRevLett.122.035501Cc19R1","doi-asserted-by":"publisher","DOI":"10.1103\/PhysRevB.60.7062"},{"key":"PhysRevLett.122.035501Cc20R1","doi-asserted-by":"publisher","DOI":"10.1103\/PhysRevLett.107.215501"},{"key":"PhysRevLett.122.035501Cc21R1","doi-asserted-by":"publisher","DOI":"10.1021\/nl5027869"},{"key":"PhysRevLett.122.035501Cc22R1","doi-asserted-by":"publisher","DOI":"10.1016\/j.pmatsci.2010.12.002"},{"key":"PhysRevLett.122.035501Cc23R1","doi-asserted-by":"publisher","DOI":"10.1088\/0953-8984\/16\/27\/003"},{"key":"PhysRevLett.122.035501Cc24R1","doi-asserted-by":"publisher","DOI":"10.1006\/jcph.1995.1039"},{"key":"PhysRevLett.122.035501Cc25R1","doi-asserted-by":"publisher","DOI":"10.1016\/j.jnoncrysol.2017.10.029"},{"key":"PhysRevLett.122.035501Cc26R1","doi-asserted-by":"publisher","DOI":"10.1103\/PhysRevB.97.134107"},{"key":"PhysRevLett.122.035501Cc27R1","doi-asserted-by":"publisher","DOI":"10.1016\/S1359-6454(02)00303-8"},{"key":"PhysRevLett.122.035501Cc28R1","doi-asserted-by":"publisher","DOI":"10.1038\/nature06598"},{"key":"PhysRevLett.122.035501Cc29R1","doi-asserted-by":"publisher","DOI":"10.1016\/j.scriptamat.2016.11.011"},{"key":"PhysRevLett.122.035501Cc30R1","doi-asserted-by":"publisher","DOI":"10.1016\/j.actamat.2011.03.036"},{"key":"PhysRevLett.122.035501Cc31R1","doi-asserted-by":"publisher","DOI":"10.1016\/j.actamat.2005.12.020"},{"key":"PhysRevLett.122.035501Cc32R1","doi-asserted-by":"publisher","DOI":"10.1103\/PhysRevLett.96.245503"}],"container-title":["Physical
-        Review Letters"],"language":"en","link":[{"URL":"https:\/\/link.aps.org\/accepted\/10.1103\/PhysRevLett.122.035501","content-type":"application\/pdf","content-version":"am","intended-application":"unspecified"},{"URL":"https:\/\/link.aps.org\/article\/10.1103\/PhysRevLett.122.035501","content-type":"unspecified","content-version":"vor","intended-application":"syndication"},{"URL":"http:\/\/harvest.aps.org\/v2\/journals\/articles\/10.1103\/PhysRevLett.122.035501\/fulltext","content-type":"unspecified","content-version":"vor","intended-application":"similarity-checking"}],"deposited":{"date-parts":[[2019,1,24]],"date-time":"2019-01-24T18:05:21Z","timestamp":1548353121000},"score":0.0,"issued":{"date-parts":[[2019,1,24]]},"references-count":32,"journal-issue":{"issue":"3","published-print":{"date-parts":[[2019,1]]}},"URL":"http:\/\/dx.doi.org\/10.1103\/physrevlett.122.035501","ISSN":["0031-9007","1079-7114"],"issn-type":[{"value":"0031-9007","type":"print"},{"value":"1079-7114","type":"electronic"}],"subject":["General
-        Physics and Astronomy"],"published":{"date-parts":[[2019,1,24]]},"article-number":"035501"},{"indexed":{"date-parts":[[2021,5,9]],"date-time":"2021-05-09T19:51:31Z","timestamp":1620589891610},"reference-count":48,"publisher":"Elsevier
-        BV","license":[{"start":{"date-parts":[[2019,3,1]],"date-time":"2019-03-01T00:00:00Z","timestamp":1551398400000},"content-version":"tdm","delay-in-days":0,"URL":"https:\/\/www.elsevier.com\/tdm\/userlicense\/1.0\/"},{"start":{"date-parts":[[2020,1,31]],"date-time":"2020-01-31T00:00:00Z","timestamp":1580428800000},"content-version":"am","delay-in-days":336,"URL":"http:\/\/www.elsevier.com\/open-access\/userlicense\/1.0\/"}],"funder":[{"DOI":"10.13039\/100000001","name":"NSF","doi-asserted-by":"publisher","award":["1453083"]},{"name":"NM
-        EPSCoR","award":["1301346","2015-38422-24059"]},{"DOI":"10.13039\/100000199","name":"USDA","doi-asserted-by":"publisher"},{"DOI":"10.13039\/501100001809","name":"National
-        Natural Science Foundation of China","doi-asserted-by":"publisher","award":["21671011"]},{"name":"Beijing
-        High Talent Program and Beijing Natural Science Foundation","award":["KZ201710005002"]},{"name":"Beijing
-        Municipal High Level Innovative Team Building Program","award":["IDHT20180504"]}],"content-domain":{"domain":["elsevier.com","sciencedirect.com"],"crossmark-restriction":true},"short-container-title":["Polymer"],"published-print":{"date-parts":[[2019,3]]},"DOI":"10.1016\/j.polymer.2019.01.062","type":"journal-article","created":{"date-parts":[[2019,1,26]],"date-time":"2019-01-26T01:51:50Z","timestamp":1548467510000},"page":"115-122","update-policy":"http:\/\/dx.doi.org\/10.1016\/elsevier_cm_policy","source":"Crossref","is-referenced-by-count":2,"title":["Impact
-        of side-chain extension on physical and electronic properties of cross-conjugated
-        Poly(thienylene vinylene)s (PTVs)"],"prefix":"10.1016","volume":"166","author":[{"given":"Zhen","family":"Zhang","sequence":"first","affiliation":[]},{"given":"Xupeng","family":"Zong","sequence":"additional","affiliation":[]},{"given":"Zaicheng","family":"Sun","sequence":"additional","affiliation":[]},{"ORCID":"http:\/\/orcid.org\/0000-0002-5764-8137","authenticated-orcid":false,"given":"Yang","family":"Qin","sequence":"additional","affiliation":[]}],"member":"78","reference":[{"key":"10.1016\/j.polymer.2019.01.062_bib1","volume":"vol.
-        2","year":"2007"},{"key":"10.1016\/j.polymer.2019.01.062_bib2","doi-asserted-by":"crossref","first-page":"4401","DOI":"10.1021\/cm049669l","volume":"16","author":"Argun","year":"2004","journal-title":"Chem.
-        Mater."},{"key":"10.1016\/j.polymer.2019.01.062_bib3","doi-asserted-by":"crossref","first-page":"1292","DOI":"10.1016\/j.progpolymsci.2012.03.001","volume":"37","author":"Bian","year":"2012","journal-title":"Prog.
-        Polym. Sci."},{"key":"10.1016\/j.polymer.2019.01.062_bib4","doi-asserted-by":"crossref","first-page":"4413","DOI":"10.1002\/adma.201400384","volume":"26","author":"Lu","year":"2014","journal-title":"Adv.
-        Mater."},{"key":"10.1016\/j.polymer.2019.01.062_bib5","doi-asserted-by":"crossref","first-page":"12633","DOI":"10.1021\/acs.chemrev.5b00165","volume":"115","author":"Dou","year":"2015","journal-title":"Chem.
-        Rev."},{"key":"10.1016\/j.polymer.2019.01.062_bib6","doi-asserted-by":"crossref","first-page":"1601391","DOI":"10.1002\/adma.201601391","volume":"29","author":"Xiao","year":"2017","journal-title":"Adv.
-        Mater."},{"key":"10.1016\/j.polymer.2019.01.062_bib7","doi-asserted-by":"crossref","first-page":"1303","DOI":"10.1063\/1.457153","volume":"91","author":"Eckhardt","year":"1989","journal-title":"J.
-        Chem. Phys."},{"key":"10.1016\/j.polymer.2019.01.062_bib8","doi-asserted-by":"crossref","first-page":"1372","DOI":"10.1063\/1.109680","volume":"63","author":"Fuchigami","year":"1993","journal-title":"Appl.
-        Phys. Lett."},{"key":"10.1016\/j.polymer.2019.01.062_bib9","doi-asserted-by":"crossref","first-page":"599","DOI":"10.1038\/414599a","volume":"414","author":"Huitema","year":"2001","journal-title":"Nature"},{"key":"10.1016\/j.polymer.2019.01.062_bib10","doi-asserted-by":"crossref","first-page":"1201","DOI":"10.1002\/1521-4095(20020903)14:17<1201::AID-ADMA1201>3.0.CO;2-5","volume":"14","author":"Huitema","year":"2002","journal-title":"Adv.
-        Mater."},{"key":"10.1016\/j.polymer.2019.01.062_bib11","doi-asserted-by":"crossref","first-page":"4687","DOI":"10.1021\/cm049447n","volume":"16","author":"Smith","year":"2004","journal-title":"Chem.
-        Mater."},{"key":"10.1016\/j.polymer.2019.01.062_bib12","doi-asserted-by":"crossref","first-page":"2815","DOI":"10.1016\/j.solmat.2006.04.005","volume":"90","author":"Nguyen","year":"2006","journal-title":"Sol.
-        En. Mater. Sol. Cells"},{"key":"10.1016\/j.polymer.2019.01.062_bib13","doi-asserted-by":"crossref","first-page":"740","DOI":"10.1016\/j.orgel.2008.05.014","volume":"9","author":"Girotto","year":"2008","journal-title":"Org.
-        Electron."},{"key":"10.1016\/j.polymer.2019.01.062_bib14","doi-asserted-by":"crossref","first-page":"10790","DOI":"10.1021\/jp902199q","volume":"113","author":"Kim","year":"2009","journal-title":"J.
-        Phys. Chem. C"},{"key":"10.1016\/j.polymer.2019.01.062_bib15","doi-asserted-by":"crossref","first-page":"11408","DOI":"10.1021\/jp902198y","volume":"113","author":"Stevens","year":"2009","journal-title":"J.
-        Phys. Chem. C"},{"key":"10.1016\/j.polymer.2019.01.062_bib16","doi-asserted-by":"crossref","first-page":"235201","DOI":"10.1103\/PhysRevB.85.235201","volume":"85","author":"Olejnik","year":"2012","journal-title":"Phys.
-        Rev. B"},{"key":"10.1016\/j.polymer.2019.01.062_bib17","doi-asserted-by":"crossref","first-page":"4491","DOI":"10.1039\/c1jm14956c","volume":"22","author":"Jiang","year":"2012","journal-title":"J.
-        Mater. Chem."},{"key":"10.1016\/j.polymer.2019.01.062_bib18","doi-asserted-by":"crossref","first-page":"8980","DOI":"10.1021\/acs.jpcc.5b02166","volume":"119","author":"Gao","year":"2015","journal-title":"J.
-        Phys. Chem. C"},{"key":"10.1016\/j.polymer.2019.01.062_bib19","doi-asserted-by":"crossref","first-page":"4911","DOI":"10.1021\/ja060141m","volume":"128","author":"Hou","year":"2006","journal-title":"J.
-        Am. Chem. Soc."},{"key":"10.1016\/j.polymer.2019.01.062_bib20","doi-asserted-by":"crossref","first-page":"4657","DOI":"10.1021\/ma060662u","volume":"39","author":"Hou","year":"2006","journal-title":"Macromolecules"},{"key":"10.1016\/j.polymer.2019.01.062_bib21","doi-asserted-by":"crossref","first-page":"2952","DOI":"10.1002\/adma.200800606","volume":"20","author":"Li","year":"2008","journal-title":"Adv.
-        Mater."},{"key":"10.1016\/j.polymer.2019.01.062_bib22","doi-asserted-by":"crossref","first-page":"13886","DOI":"10.1021\/ja9066139","volume":"131","author":"Huang","year":"2009","journal-title":"J.
-        Am. Chem. Soc."},{"key":"10.1016\/j.polymer.2019.01.062_bib23","doi-asserted-by":"crossref","first-page":"7056","DOI":"10.1021\/jp112320b","volume":"115","author":"Mikroyannidis","year":"2011","journal-title":"J.
-        Phys. Chem. C"},{"key":"10.1016\/j.polymer.2019.01.062_bib24","doi-asserted-by":"crossref","first-page":"1807","DOI":"10.1039\/c3sc22188a","volume":"4","author":"Grimm","year":"2013","journal-title":"Chem.
-        Sci."},{"key":"10.1016\/j.polymer.2019.01.062_bib25","doi-asserted-by":"crossref","first-page":"113","DOI":"10.1021\/ma302243r","volume":"46","author":"Tan","year":"2013","journal-title":"Macromolecules"},{"key":"10.1016\/j.polymer.2019.01.062_bib26","doi-asserted-by":"crossref","first-page":"11073","DOI":"10.1021\/jacs.7b03327","volume":"139","author":"Freeman","year":"2017","journal-title":"J.
-        Am. Chem. Soc."},{"key":"10.1016\/j.polymer.2019.01.062_bib27","volume":"309","author":"Jen","year":"1987","journal-title":"J.
-        Chem. Soc. Chem. Commun."},{"key":"10.1016\/j.polymer.2019.01.062_bib28","doi-asserted-by":"crossref","first-page":"1448","author":"Yamada","year":"1987","journal-title":"J.
-        Chem. Soc. Chem. Commun.","DOI":"10.1039\/c39870001448"},{"key":"10.1016\/j.polymer.2019.01.062_bib29","doi-asserted-by":"crossref","first-page":"255","DOI":"10.1016\/S0379-6779(02)00669-0","volume":"135\u2013136","author":"Gillissen","year":"2003","journal-title":"Synth.
-        Met."},{"key":"10.1016\/j.polymer.2019.01.062_bib30","doi-asserted-by":"crossref","first-page":"4629","DOI":"10.1002\/(SICI)1099-0518(19991215)37:24<4629::AID-POLA21>3.0.CO;2-J","volume":"37","author":"Goldoni","year":"1999","journal-title":"J.
-        Polym. Sci. Polym. Chem."},{"key":"10.1016\/j.polymer.2019.01.062_bib31","first-page":"485","volume":"135\u2013136","author":"Zhou","year":"2003","journal-title":"Synth.
-        Met."},{"key":"10.1016\/j.polymer.2019.01.062_bib32","doi-asserted-by":"crossref","first-page":"4289","DOI":"10.1021\/ma060497i","volume":"39","author":"van
-        de Wetering","year":"2006","journal-title":"Macromolecules"},{"key":"10.1016\/j.polymer.2019.01.062_bib33","doi-asserted-by":"crossref","first-page":"70520Y","DOI":"10.1117\/12.795450","volume":"7052","author":"Zhang","year":"2008","journal-title":"Proc.
-        SPIE"},{"key":"10.1016\/j.polymer.2019.01.062_bib34","doi-asserted-by":"crossref","first-page":"663","DOI":"10.1039\/b9py00324j","volume":"1","author":"Zhang","year":"2010","journal-title":"Polym.
-        Chem."},{"key":"10.1016\/j.polymer.2019.01.062_bib35","doi-asserted-by":"crossref","first-page":"3214","DOI":"10.1021\/cm000421f","volume":"12","author":"Loewe","year":"2000","journal-title":"Chem.
-        Mater."},{"key":"10.1016\/j.polymer.2019.01.062_bib36","doi-asserted-by":"crossref","first-page":"1093","DOI":"10.1039\/C5SC03501E","volume":"7","author":"Al-Hashimi","year":"2016","journal-title":"Chem.
-        Sci."},{"key":"10.1016\/j.polymer.2019.01.062_bib37","doi-asserted-by":"crossref","first-page":"6429","DOI":"10.1021\/ma9009824","volume":"42","author":"Qin","year":"2009","journal-title":"Macromolecules"},{"key":"10.1016\/j.polymer.2019.01.062_bib38","doi-asserted-by":"crossref","first-page":"821","DOI":"10.1002\/pola.24491","volume":"49","author":"Opper","year":"2011","journal-title":"J.
-        Polym. Sci. A. Polym. Chem."},{"key":"10.1016\/j.polymer.2019.01.062_bib39","doi-asserted-by":"crossref","first-page":"9529","DOI":"10.1021\/ma2020529","volume":"44","author":"Delgado","year":"2011","journal-title":"Macromolecules"},{"key":"10.1016\/j.polymer.2019.01.062_bib40","doi-asserted-by":"crossref","first-page":"591","DOI":"10.1002\/pola.27042","volume":"52","author":"Yang","year":"2014","journal-title":"J.
-        Polym. Sci. Part A Polym. Chem."},{"key":"10.1016\/j.polymer.2019.01.062_bib41","doi-asserted-by":"crossref","first-page":"679","DOI":"10.1021\/acsmacrolett.5b00292","volume":"4","author":"Zhang","year":"2015","journal-title":"ACS
-        Macro Lett."},{"key":"10.1016\/j.polymer.2019.01.062_bib42","doi-asserted-by":"crossref","first-page":"79","DOI":"10.1016\/j.progpolymsci.2016.12.001","volume":"69","author":"da
-        Silva","year":"2017","journal-title":"Prog. Polym. Sci."},{"key":"10.1016\/j.polymer.2019.01.062_bib43","doi-asserted-by":"crossref","first-page":"3318","DOI":"10.1021\/acs.macromol.6b00502","volume":"49","author":"Zhang","year":"2016","journal-title":"Macromolecules"},{"key":"10.1016\/j.polymer.2019.01.062_bib44","doi-asserted-by":"crossref","first-page":"24315","DOI":"10.1039\/c2jm33719c","volume":"22","author":"Qi","year":"2012","journal-title":"J.
-        Mater. Chem."},{"key":"10.1016\/j.polymer.2019.01.062_bib45","doi-asserted-by":"crossref","first-page":"4168","DOI":"10.1039\/c1cc10250h","volume":"47","author":"Yan","year":"2011","journal-title":"Chem.
-        Commun."},{"key":"10.1016\/j.polymer.2019.01.062_bib46","doi-asserted-by":"crossref","first-page":"2741","DOI":"10.1039\/C4TA04779F","volume":"3","author":"Bai","year":"2015","journal-title":"J.
-        Mater. Chem."},{"key":"10.1016\/j.polymer.2019.01.062_bib47","doi-asserted-by":"crossref","first-page":"23","DOI":"10.1016\/j.apcatb.2017.02.069","volume":"209","author":"Floresyona","year":"2017","journal-title":"Appl.
-        Catal. B Environ."},{"key":"10.1016\/j.polymer.2019.01.062_bib48","doi-asserted-by":"crossref","first-page":"98","DOI":"10.1016\/j.apcatb.2017.04.033","volume":"211","author":"Zong","year":"2017","journal-title":"Appl.
-        Catal. B Environ."}],"container-title":["Polymer"],"language":"en","link":[{"URL":"https:\/\/api.elsevier.com\/content\/article\/PII:S0032386119300813?httpAccept=text\/xml","content-type":"text\/xml","content-version":"vor","intended-application":"text-mining"},{"URL":"https:\/\/api.elsevier.com\/content\/article\/PII:S0032386119300813?httpAccept=text\/plain","content-type":"text\/plain","content-version":"vor","intended-application":"text-mining"}],"deposited":{"date-parts":[[2021,4,11]],"date-time":"2021-04-11T15:54:06Z","timestamp":1618156446000},"score":0.0,"issued":{"date-parts":[[2019,3]]},"references-count":48,"alternative-id":["S0032386119300813"],"URL":"http:\/\/dx.doi.org\/10.1016\/j.polymer.2019.01.062","ISSN":["0032-3861"],"issn-type":[{"value":"0032-3861","type":"print"}],"subject":["Polymers
-        and Plastics","Materials Chemistry","Organic Chemistry"],"published":{"date-parts":[[2019,3]]},"assertion":[{"value":"Elsevier","name":"publisher","label":"This
-        article is maintained by"},{"value":"Impact of side-chain extension on physical
-        and electronic properties of cross-conjugated Poly(thienylene vinylene)s (PTVs)","name":"articletitle","label":"Article
-        Title"},{"value":"Polymer","name":"journaltitle","label":"Journal Title"},{"value":"https:\/\/doi.org\/10.1016\/j.polymer.2019.01.062","name":"articlelink","label":"CrossRef
-        DOI link to publisher maintained version"},{"value":"article","name":"content_type","label":"Content
-        Type"},{"value":"\u00a9 2019 Elsevier Ltd. All rights reserved.","name":"copyright","label":"Copyright"}]},{"indexed":{"date-parts":[[2021,5,9]],"date-time":"2021-05-09T19:51:58Z","timestamp":1620589918323},"reference-count":88,"publisher":"Public
-        Library of Science (PLoS)","issue":"1","license":[{"start":{"date-parts":[[2019,1,23]],"date-time":"2019-01-23T00:00:00Z","timestamp":1548201600000},"content-version":"vor","delay-in-days":0,"URL":"http:\/\/creativecommons.org\/licenses\/by\/4.0\/"}],"funder":[{"DOI":"10.13039\/100000001","name":"National
-        Science Foundation","doi-asserted-by":"publisher","award":["BCS-1062540"]},{"DOI":"10.13039\/100000001","name":"National
-        Science Foundation","doi-asserted-by":"publisher","award":["BCS-1638822"]},{"DOI":"10.13039\/100000001","name":"National
-        Science Foundation","doi-asserted-by":"publisher","award":["IOS-0843354"]},{"DOI":"10.13039\/100000001","name":"National
-        Science Foundation","doi-asserted-by":"publisher","award":["BCS-DDRI-1540403"]},{"DOI":"10.13039\/100001388","name":"Wenner-Gren
-        Foundation","doi-asserted-by":"publisher"},{"DOI":"10.13039\/100004451","name":"Harry
-        Frank Guggenheim Foundation","doi-asserted-by":"publisher"},{"DOI":"10.13039\/100010629","name":"Fulbright
-        Association","doi-asserted-by":"publisher"},{"DOI":"10.13039\/100006363","name":"National
-        Geographic Society","doi-asserted-by":"publisher"},{"DOI":"10.13039\/100006363","name":"National
-        Geographic Society","doi-asserted-by":"publisher"},{"DOI":"10.13039\/100005966","name":"Leakey
-        Foundation","doi-asserted-by":"publisher"},{"DOI":"10.13039\/100005966","name":"Leakey
-        Foundation","doi-asserted-by":"publisher"},{"DOI":"10.13039\/100005966","name":"Leakey
-        Foundation","doi-asserted-by":"publisher"},{"DOI":"10.13039\/100003282","name":"Primate
-        Conservation","doi-asserted-by":"publisher"}],"content-domain":{"domain":["www.plosone.org"],"crossmark-restriction":false},"short-container-title":["PLoS
-        ONE"],"DOI":"10.1371\/journal.pone.0210494","type":"journal-article","created":{"date-parts":[[2019,1,23]],"date-time":"2019-01-23T21:50:03Z","timestamp":1548280203000},"page":"e0210494","update-policy":"http:\/\/dx.doi.org\/10.1371\/journal.pone.corrections_policy","source":"Crossref","is-referenced-by-count":8,"title":["Initiation
-        of feeding by four sympatric Neotropical primates (Ateles belzebuth, Lagothrix
-        lagotricha poeppigii, Plecturocebus (Callicebus) discolor, and Pithecia aequatorialis)
-        in Amazonian Ecuador: Relationships to photic and ecological factors"],"prefix":"10.1371","volume":"14","author":[{"ORCID":"http:\/\/orcid.org\/0000-0002-3428-609X","authenticated-orcid":true,"given":"D.
-        Max","family":"Snodderly","sequence":"first","affiliation":[]},{"ORCID":"http:\/\/orcid.org\/0000-0003-1285-9886","authenticated-orcid":true,"given":"Kelsey
-        M.","family":"Ellis","sequence":"additional","affiliation":[]},{"given":"Sarina
-        R.","family":"Lieberman","sequence":"additional","affiliation":[]},{"given":"Andr\u00e9s","family":"Link","sequence":"additional","affiliation":[]},{"given":"Eduardo","family":"Fernandez-Duque","sequence":"additional","affiliation":[]},{"given":"Anthony","family":"Di
-        Fiore","sequence":"additional","affiliation":[]}],"member":"340","published-online":{"date-parts":[[2019,1,23]]},"reference":[{"issue":"3","key":"ref1","doi-asserted-by":"crossref","first-page":"301","DOI":"10.1002\/ajpa.1330520302","article-title":"Locomotor
-        behavior, body size, and comparative ecology of seven Surinam monkeys","volume":"52","author":"JG
-        Fleagle","year":"1980","journal-title":"Am J Phys Anthropol"},{"issue":"6","key":"ref2","doi-asserted-by":"crossref","first-page":"571","DOI":"10.1017\/S0266467409990216","article-title":"Phylogenetic
-        constraints on fine-scale patterns of habitat use by eight primate species
-        in eastern Ecuador","volume":"25","author":"SN Sheth","year":"2009","journal-title":"J
-        Trop Ecol"},{"issue":"5","key":"ref3","doi-asserted-by":"crossref","first-page":"1107","DOI":"10.1007\/s10764-005-6461-5","article-title":"Foraging,
-        food choice, and food processing by sympatric ripe-fruit specialists: <italic>Lagothrix
-        lagotricha poeppigii<\/italic> and <italic>Ateles belzebuth belzebuth<\/italic>","volume":"26","author":"JL
-        Dew","year":"2005","journal-title":"Int J Primatol"},{"issue":"4","key":"ref4","doi-asserted-by":"crossref","first-page":"161","DOI":"10.1016\/S0003-4339(00)88884-X","article-title":"Comparative
-        locomotion of six sympatric primates in Ecuador","volume":"20","author":"D
-        Youlatos","year":"1999","journal-title":"Annales des Sciences Naturelles\u2014Zoologie
-        et Biologie Animale"},{"issue":"1","key":"ref5","doi-asserted-by":"crossref","first-page":"5","DOI":"10.1002\/ajpa.1330810103","article-title":"Hardness
-        as a basis of fruit choice in two sympatric primates","volume":"81","author":"WG
-        Kinzey","year":"1990","journal-title":"Am J Phys Anthropol"},{"key":"ref6","article-title":"Five
-        new world primates: A study in comparative ecology","author":"J Terborgh","year":"1983"},{"key":"ref7","first-page":"57","article-title":"Seasonality
-        in primates: studies of living and extinct human and non-human primates","author":"CA
-        Hemingway","year":"2005"},{"key":"ref8","doi-asserted-by":"crossref","first-page":"153","DOI":"10.1146\/annurev.ecolsys.34.011802.132435","article-title":"Partitioning
-        of time as an ecological resource","volume":"34","author":"N Kronfeld-Schor","year":"2003","journal-title":"Annu
-        Rev Ecol Evol Syst"},{"issue":"38","key":"ref9","doi-asserted-by":"crossref","first-page":"13727","DOI":"10.1073\/pnas.1216063110","article-title":"Biogeography
-        of time partitioning in mammals","volume":"111","author":"JJ Bennie","year":"2014","journal-title":"Proc
-        Natl Acad Sci U S A"},{"key":"ref10","doi-asserted-by":"crossref","first-page":"53","DOI":"10.1146\/annurev.es.04.110173.000413","article-title":"The
-        structure of lizard communities","volume":"4","author":"ER Pianka","year":"1973","journal-title":"Annu
-        Rev Ecol Syst"},{"issue":"4","key":"ref11","doi-asserted-by":"crossref","first-page":"444","DOI":"10.1007\/BF00328682","article-title":"Patterns
-        of daily flight activity in onitine dung beetles (Scarabaeinae: Onitini)","volume":"103","author":"S
-        Caveney","year":"1995","journal-title":"Oecologia"},{"issue":"1","key":"ref12","doi-asserted-by":"crossref","first-page":"14","DOI":"10.2307\/1378869","article-title":"Resource
-        utilization: Temporal and spatial components of bat activity in central Iowa","volume":"54","author":"TH
-        Kunz","year":"1973","journal-title":"J Mammal"},{"issue":"5\u20136","key":"ref13","doi-asserted-by":"crossref","first-page":"619","DOI":"10.1017\/S0952523808080760","article-title":"Primate
-        color vision: A comparative perspective","volume":"25","author":"GH Jacobs","year":"2008","journal-title":"Vis
-        Neurosci"},{"issue":"4","key":"ref14","doi-asserted-by":"crossref","first-page":"198","DOI":"10.1016\/S0169-5347(03)00012-0","article-title":"Evolution
-        and selection of trichromatic vision in primates","volume":"18","author":"AK
-        Surridge","year":"2003","journal-title":"Trends Ecol Evol"},{"issue":"1228","key":"ref15","doi-asserted-by":"crossref","first-page":"373","DOI":"10.1098\/rspb.1984.0071","article-title":"Variations
-        of colour vision in a New World primate can be explained by polymorphism of
-        retinal photopigments","volume":"222","author":"JD Mollon","year":"1984","journal-title":"Proc
-        R Soc Lond B Biol Sci"},{"issue":"1442","key":"ref16","doi-asserted-by":"crossref","first-page":"439","DOI":"10.1098\/rspb.2000.1019","article-title":"Demonstration
-        of a foraging advantage for trichromatic marmosets (<italic>Callithrix geoffroy<\/italic>i)
-        dependent on food colour","volume":"267","author":"NG Caine","year":"2000","journal-title":"Proc
-        Biol Sci"},{"issue":"18","key":"ref17","doi-asserted-by":"crossref","first-page":"3159","DOI":"10.1242\/jeb.00536","article-title":"The
-        effect of colour vision status on the detection and selection of fruits by
-        tamarins (Saguinus spp.)","volume":"206","author":"AC Smith","year":"2003","journal-title":"J
-        Exp Biol"},{"issue":"4","key":"ref18","doi-asserted-by":"crossref","first-page":"487","DOI":"10.1002\/ajp.20202","article-title":"Color
-        vision in marmosets and tamarins: behavioral evidence","volume":"67","author":"DM
-        Pessoa","year":"2005","journal-title":"Am J Primatol"},{"issue":"4","key":"ref19","doi-asserted-by":"crossref","first-page":"471","DOI":"10.1002\/ajp.20201","article-title":"Demonstration
-        of a genotype-phenotype correlation in the polymorphic color vision of a non-callitrichine
-        New World monkey, capuchin (<italic>Cebus apella<\/italic>)","volume":"67","author":"A
-        Saito","year":"2005","journal-title":"Am J Primatol"},{"key":"ref20","first-page":"201705957","article-title":"Trichromacy
-        increases fruit intake rates of wild capuchins (<italic>Cebus capucinus imitator<\/italic>)","author":"AD
-        Melin","year":"2017","journal-title":"Proc Natl Acad Sci U S A"},{"key":"ref21","doi-asserted-by":"crossref","first-page":"38418","DOI":"10.1038\/srep38418","article-title":"Group
-        benefit associated with polymorphic trichromacy in a Malagasy primate (<italic>Propithecus
-        verreauxi<\/italic>)","volume":"6","author":"CC Veilleux","year":"2016","journal-title":"Sci
-        Rep"},{"issue":"2","key":"ref22","doi-asserted-by":"crossref","first-page":"479","DOI":"10.1016\/j.anbehav.2011.11.023","article-title":"Effect
-        of colour vision status on insect prey capture efficiency of captive and wild
-        tamarins (<italic>Saguinus<\/italic> spp.)","volume":"83","author":"AC Smith","year":"2012","journal-title":"Anim
-        Behav"},{"issue":"4","key":"ref23","doi-asserted-by":"crossref","first-page":"425","DOI":"10.1002\/ajp.20197","article-title":"Advantage
-        of dichromats over trichromats in discrimination of color-camouflaged stimuli
-        in nonhuman primates","volume":"67","author":"A Saito","year":"2005","journal-title":"Am
-        J Primatol"},{"issue":"1","key":"ref24","doi-asserted-by":"crossref","first-page":"36","DOI":"10.1098\/rsbl.2009.0591","article-title":"A
-        foraging advantage for dichromatic marmosets (<italic>Callithrix geoffroyi<\/italic>)
-        at low light intensity","volume":"6","author":"NG Caine","year":"2010","journal-title":"Biol
-        Lett"},{"issue":"1","key":"ref25","doi-asserted-by":"crossref","first-page":"205","DOI":"10.1016\/j.anbehav.2006.07.003","article-title":"Effects
-        of colour vision phenotype on insect capture by a free-ranging population
-        of white-faced capuchins, <italic>Cebus capucinus<\/italic>","volume":"73","author":"AD
-        Melin","year":"2007","journal-title":"Anim Behav"},{"issue":"3","key":"ref26","doi-asserted-by":"crossref","first-page":"300","DOI":"10.1093\/czoolo\/56.3.300","article-title":"Can
-        color vision variation explain sex differences in invertebrate foraging by
-        capuchin monkeys","volume":"56","author":"AD Melin","year":"2010","journal-title":"Current
-        Zoology"},{"issue":"1","key":"ref27","doi-asserted-by":"crossref","first-page":"99","DOI":"10.1017\/S0952523813000400","article-title":"Achromatic
-        luminance contrast sensitivity in X-linked color-deficient observers: An addition
-        to the debate","volume":"31","author":"M Janaky","year":"2014","journal-title":"Vis
-        Neurosci"},{"issue":"6","key":"ref28","doi-asserted-by":"crossref","first-page":"618","DOI":"10.1007\/s00265-005-0936-4","article-title":"Light
-        levels used during feeding by primate species with different color vision
-        phenotypes","volume":"58","author":"N Yamashita","year":"2005","journal-title":"Behav
-        Ecol Sociobiol"},{"issue":"4","key":"ref29","doi-asserted-by":"crossref","first-page":"767","DOI":"10.1023\/B:IJOP.0000029122.99458.26","article-title":"Diet
-        and feeding ecology of woolly monkeys in a western amazonian rain forest","volume":"25","author":"A
-        Di Fiore","year":"2004","journal-title":"Int J Primatol"},{"issue":"03","key":"ref30","doi-asserted-by":"crossref","first-page":"235","DOI":"10.1017\/S0266467405003081","article-title":"Seed
-        dispersal by spider monkeys and its importance in the maintenance of neotropical
-        rain-forest diversity","volume":"22","author":"A Link","year":"2006","journal-title":"J
-        Trop Ecol"},{"key":"ref31","first-page":"123","article-title":"Primates in
-        perspective","author":"MA Norconk","year":"2007"},{"issue":"5","key":"ref32","doi-asserted-by":"crossref","first-page":"493","DOI":"10.1002\/ajp.22422","article-title":"Geographic
-        comparison of plant genera used in frugivory among the pitheciids <italic>Cacajao<\/italic>,
-        <italic>Callicebus<\/italic>, <italic>Chiropotes<\/italic>, <italic>and Pithecia<\/italic>","volume":"78","author":"SA
-        Boyle","year":"2016","journal-title":"Am J Primatol"},{"key":"ref33","article-title":"Ranging
-        behavior and potential for territoriality in equatorial sakis (<italic>Pithecia
-        aequatorialis<\/italic>) in Amazonian Ecuador","author":"S Van Belle","year":"2018","journal-title":"Am
-        J Phys Anthropol"},{"issue":"4","key":"ref34","doi-asserted-by":"crossref","first-page":"579","DOI":"10.1002\/ajpa.22230","article-title":"Effects
-        of predation risk on the grouping patterns of white-bellied spider monkeys
-        (<italic>Ateles belzebuth belzebuth<\/italic>) in Western Amazonia","volume":"150","author":"A
-        Link","year":"2013","journal-title":"Am J Phys Anthropol"},{"key":"ref35","first-page":"43","article-title":"Primate
-        Societies","author":"A. Fernandes-Duque EDF","year":"2012"},{"issue":"1","key":"ref36","doi-asserted-by":"crossref","first-page":"e8767","DOI":"10.1371\/journal.pone.0008767","article-title":"Global
-        conservation significance of Ecuador&apos;s Yasuni National Park","volume":"5","author":"MS
-        Bass","year":"2010","journal-title":"PLoS One"},{"issue":"4","key":"ref37","doi-asserted-by":"crossref","first-page":"527","DOI":"10.2307\/2389015","article-title":"Estimators
-        of fruit abundance of tropical trees","volume":"24","author":"CA Chapman","year":"1992","journal-title":"Biotropica"},{"issue":"1","key":"ref38","first-page":"125","article-title":"Phenological
-        patterns of woody vegetation in Tiniqua Park, Colombia: Methodological comparisons
-        with emphasis on fruit production","volume":"26","author":"PR Stevenson","year":"2004","journal-title":"Caldasia"},{"issue":"2","key":"ref39","doi-asserted-by":"crossref","first-page":"123","DOI":"10.1002\/ajp.1350320205","article-title":"Ecological
-        strategies of woolly monkeys (<italic>Lagothrix lagotricha<\/italic>) at Tinigua
-        National Park, Colombia","volume":"32","author":"PR Stevenson","year":"1994","journal-title":"Am
-        J Primatol"},{"issue":"4\/5","key":"ref40","doi-asserted-by":"crossref","first-page":"437","DOI":"10.1163\/156853909X426345","article-title":"Dispersal
-        patterns in sympatric woolly and spider monkeys: integrating molecular and
-        observational data","volume":"146","author":"A Di Fiore","year":"2009","journal-title":"Behaviour"},{"issue":"2","key":"ref41","doi-asserted-by":"crossref","first-page":"86","DOI":"10.1159\/000314948","article-title":"Predation
-        and predation attempts on red titi monkeys (<italic>Callicebus discolor<\/italic>)
-        and equatorial sakis (<italic>Pithecia aequatorialis<\/italic>) in Amazonian
-        Ecuador","volume":"81","author":"AG de Luna","year":"2010","journal-title":"Folia
-        Primatol (Basel)"},{"key":"ref42","first-page":"43","article-title":"Evolution
-        of primate societies","author":"E Fernandez-Duque","year":"2012"},{"issue":"5","key":"ref43","doi-asserted-by":"crossref","first-page":"455","DOI":"10.1159\/000441811","article-title":"A
-        saki saga: Dynamic and disruptive relationships among <italic>Pithecia aequatorialis<\/italic>
-        in Ecuador","volume":"86","author":"AM Porter","year":"2015","journal-title":"Folia
-        Primatol (Basel)"},{"issue":"1","key":"ref44","doi-asserted-by":"crossref","first-page":"103","DOI":"10.1007\/s10329-015-0489-8","article-title":"Social
-        monogamy, male-female relationships, and biparental care in wild titi monkeys
-        (<italic>Callicebus discolor<\/italic>)","volume":"57","author":"A Spence-Aizenberg","year":"2016","journal-title":"Primates"},{"issue":"2","key":"ref45","doi-asserted-by":"crossref","first-page":"204","DOI":"10.1002\/ajp.22493","article-title":"Demography
-        and life history of wild red titi monkeys (<italic>Callicebus discolor<\/italic>)
-        and equatorial sakis (<italic>Pithecia aequatorialis<\/italic>) in Amazonian
-        Ecuador: A 12-year study","volume":"78","author":"S Van Belle","year":"2016","journal-title":"Am
-        J Primatol"},{"issue":"3","key":"ref46","doi-asserted-by":"crossref","first-page":"227","DOI":"10.1163\/156853974X00534","article-title":"Observational
-        study of behavior: sampling methods","volume":"49","author":"J Altmann","year":"1974","journal-title":"Behaviour"},{"issue":"2","key":"ref47","doi-asserted-by":"crossref","first-page":"371","DOI":"10.1002\/ajpa.1330380235","article-title":"Visual
-        sensitivity in the squirrel monkey","volume":"38","author":"GH Jacobs","year":"1973","journal-title":"Am
-        J Phys Anthropol"},{"issue":"4","key":"ref48","doi-asserted-by":"crossref","first-page":"375","DOI":"10.1016\/0042-6989(76)90199-1","article-title":"The
-        contrast sensitivity of the squirrel monkey (<italic>Saimiri sciureus<\/italic>)","volume":"16","author":"WH
-        Merigan","year":"1976","journal-title":"Vision Res"},{"issue":"4","key":"ref49","doi-asserted-by":"crossref","first-page":"425","DOI":"10.1002\/ajp.20197","article-title":"Advantage
-        of dichromats over trichromats in discrimination of color-camouflaged stimuli
-        in nonhuman primates","volume":"67","author":"A Saito","year":"2005","journal-title":"Am
-        J Primatol"},{"issue":"3853","key":"ref50","doi-asserted-by":"crossref","first-page":"533","DOI":"10.1126\/science.162.3853.533","article-title":"Primate
-        color vision","volume":"162","author":"RL DeValois","year":"1968","journal-title":"Science"},{"key":"ref51","doi-asserted-by":"crossref","first-page":"53","DOI":"10.1016\/0042-6989(74)90116-3","article-title":"Psychophysical
-        studies of monkey vision\u2014I. Macaque luminosity and color vision tests","volume":"14","author":"RL
-        DeValois","year":"1974","journal-title":"Vision Res"},{"key":"ref52","doi-asserted-by":"crossref","first-page":"75","DOI":"10.1016\/0042-6989(74)90118-7","article-title":"Psychophysical
-        studies of monkey vision\u2014III. Spatial luminance contrast sensitivity
-        tests of macaque and human observers","volume":"14","author":"RL DeValois","year":"1974","journal-title":"Vision
-        Res"},{"issue":"3","key":"ref53","doi-asserted-by":"crossref","first-page":"289","DOI":"10.1017\/S0952523808080371","article-title":"Number
-        and topography of cones, rods and optic nerve axons in New and Old World primates","volume":"25","author":"BL
-        Finlay","year":"2008","journal-title":"Vis Neurosci"},{"key":"ref54","year":"2016"},{"issue":"S66","key":"ref55","first-page":"258","article-title":"Genetic
-        diversity of color vision in four sympatric New World primates (<italic>Ateles<\/italic>,
-        <italic>Lagothrix<\/italic>, <italic>Pithecia<\/italic>, <italic>Plecturocebus<\/italic>)
-        at the Tiputini Biodiversity Station in Amazonian Ecuador","volume":"165","author":"DM
-        Snodderly","year":"2018","journal-title":"Am J Phys Anthropol"},{"key":"ref56","first-page":"1","article-title":"Color
-        vision diversity and significance in primates inferred from genetic and field
-        studies","author":"S Kawamura","year":"2016","journal-title":"Genes & Genomics"},{"issue":"3","key":"ref57","doi-asserted-by":"crossref","first-page":"403","DOI":"10.2307\/3544413","article-title":"Time
-        as a niche difference: The role of interference competition","volume":"42","author":"JH
-        Carothers","year":"1984","journal-title":"Oikos"},{"issue":"3","key":"ref58","doi-asserted-by":"crossref","first-page":"11","DOI":"10.1896\/1413-4705.13.3.11","article-title":"Boa
-        constrictor predation on a titi monkey, <italic>Callicebus discolor<\/italic>","volume":"13","author":"DF
-        Cisneros-Heredia","year":"2005","journal-title":"Neotropical Primates"},{"key":"ref59","first-page":"43","article-title":"On
-        the move: how and why animals travel in groups","author":"S Boinski","year":"2000"},{"key":"ref60","first-page":"27","article-title":"Primate
-        anti-predator strategies","author":"D Hart","year":"2007"},{"key":"ref61","doi-asserted-by":"crossref","article-title":"The
-        sensory ecology of birds","author":"GR Martin","year":"2017","DOI":"10.1093\/oso\/9780199694532.001.0001"},{"key":"ref62","article-title":"Animal
-        physiology: adaptation and environment","author":"K Schmidt-Nielsen","year":"1997"},{"issue":"4","key":"ref63","doi-asserted-by":"crossref","first-page":"331","DOI":"10.1111\/eth.12203","article-title":"Behavioural
-        thermoregulation in a small neotropical primate","volume":"120","author":"CC
-        Gestich","year":"2014","journal-title":"Ethology"},{"issue":"7","key":"ref64","doi-asserted-by":"crossref","first-page":"745","DOI":"10.1002\/ajp.22538","article-title":"Behavioral
-        thermoregulation in <italic>Lemur catta<\/italic>: The significance of sunning
-        and huddling behaviors","volume":"78","author":"EA Kelley","year":"2016","journal-title":"Am
-        J Primatol"},{"issue":"3","key":"ref65","doi-asserted-by":"crossref","first-page":"355","DOI":"10.1002\/ajpa.21415","article-title":"Behavioral
-        thermoregulation in a gregarious lemur, <italic>Eulemur collaris<\/italic>:
-        effects of climatic and dietary-related factors","volume":"144","author":"G
-        Donati","year":"2011","journal-title":"Am J Phys Anthropol"},{"issue":"4","key":"ref66","doi-asserted-by":"crossref","first-page":"351","DOI":"10.1007\/s10329-011-0266-2","article-title":"Feeding
-        ecology and activity pattern of black-fronted titi monkeys (<italic>Callicebus
-        nigrifrons<\/italic>) in a semideciduous tropical forest of southern Brazil","volume":"52","author":"C
-        Caselli","year":"2011","journal-title":"Primates"},{"issue":"10","key":"ref67","doi-asserted-by":"crossref","first-page":"e22688","DOI":"10.1002\/ajp.22688","article-title":"Sleeping
-        above the enemy: Sleeping site choice by black-fronted titi monkeys (<italic>Callicebus
-        nigrifrons<\/italic>)","volume":"79","author":"CB Caselli","year":"2017","journal-title":"Am
-        J Primatol"},{"key":"ref68","doi-asserted-by":"crossref","first-page":"104","DOI":"10.1016\/j.jtherbio.2017.06.010","article-title":"Ambient
-        temperature and humidity modulate the behavioural thermoregulation of a small
-        arboreal mammal (<italic>Callicebus bernhardi<\/italic>)","volume":"69","author":"KG
-        Lopes","year":"2017","journal-title":"J Therm Biol"},{"issue":"1","key":"ref69","doi-asserted-by":"crossref","first-page":"53","DOI":"10.1002\/ajp.1350180106","article-title":"Spider
-        monkey sleeping sites: use and availability","volume":"18","author":"CA Chapman","year":"1989","journal-title":"Am
-        J Primatol"},{"issue":"2","key":"ref70","doi-asserted-by":"crossref","first-page":"242","DOI":"10.1002\/ajpa.20264","article-title":"Thermal
-        constraints on activity scheduling and habitat choice in baboons","volume":"129","author":"RA
-        Hill","year":"2006","journal-title":"Am J Phys Anthropol"},{"issue":"2","key":"ref71","doi-asserted-by":"crossref","first-page":"172","DOI":"10.1002\/ajpa.20970","article-title":"Temperature&apos;s
-        influence on the activity budget, terrestriality, and sun exposure of chimpanzees
-        in the Budongo Forest, Uganda","volume":"139","author":"VP Kosheleff","year":"2009","journal-title":"Am
-        J Phys Anthropol"},{"issue":"1","key":"ref72","doi-asserted-by":"crossref","first-page":"81","DOI":"10.1002\/ajpa.10342","article-title":"Seasonal
-        change in terrestriality of chimpanzees in relation to microclimate in the
-        tropical forest","volume":"124","author":"H Takemoto","year":"2004","journal-title":"Am
-        J Phys Anthropol"},{"issue":"7","key":"ref73","doi-asserted-by":"crossref","first-page":"802","DOI":"10.1002\/ajp.20397","article-title":"Behavioral
-        thermoregulation of wild Japanese macaques: comparisons between two subpopulations","volume":"69","author":"G
-        Hanya","year":"2007","journal-title":"Am J Primatol"},{"issue":"4","key":"ref74","doi-asserted-by":"crossref","first-page":"351","DOI":"10.1007\/s10329-015-0481-3","article-title":"Effects
-        of food availability and climate on activity patterns of western black-crested
-        gibbons in an isolated forest fragment in southern Yunnan, China","volume":"56","author":"Q
-        Ni","year":"2015","journal-title":"Primates"},{"key":"ref75","first-page":"175","article-title":"An
-        introduction to primate conservation","author":"AH Korstjens","year":"2016"},{"issue":"1","key":"ref76","doi-asserted-by":"crossref","first-page":"e0190631","DOI":"10.1371\/journal.pone.0190631","article-title":"Activity
-        of wild Japanese macaques in Yakushima revealed by camera trapping: Patterns
-        with respect to season, daily period and rainfall","volume":"13","author":"G
-        Hanya","year":"2018","journal-title":"PLoS One"},{"key":"ref77","first-page":"81","article-title":"Spider
-        monkeys: Behavior, ecology and evolution of the genus <italic>Ateles<\/italic>","author":"A
-        Di Fiore","year":"2008"},{"key":"ref78","first-page":"371","article-title":"Frugivores
-        and Seed Dispersal","author":"J Terborgh","year":"1986"},{"issue":"1","key":"ref79","first-page":"117","article-title":"Food
-        competition and foraging party size in the black spider monkey(<italic>Ateles
-        paniscus Chamek<\/italic>)","volume":"105","author":"MM Symington","year":"1988","journal-title":"Behaviour"},{"issue":"46","key":"ref80","doi-asserted-by":"crossref","first-page":"16343","DOI":"10.1073\/pnas.1407524111","article-title":"Wild
-        chimpanzees plan their breakfast time, type, and location","volume":"111","author":"KRL
-        Janmaat","year":"2014","journal-title":"Proc Natl Acad Sci U S A"},{"issue":"4","key":"ref81","doi-asserted-by":"crossref","first-page":"515","DOI":"10.1002\/ajpa.1330880407","article-title":"Atelinae
-        adaptations: behavioral strategies and ecological constraints","volume":"88","author":"KB
-        Strier","year":"1992","journal-title":"Am J Phys Anthropol"},{"key":"ref82","article-title":"Evolutionary
-        biology and conservation of titis, sakis and uacaris","author":"LM Veiga","year":"2013"},{"issue":"12","key":"ref83","doi-asserted-by":"crossref","first-page":"1199","DOI":"10.1002\/ajp.20990","article-title":"Seasonal
-        versatility in the feeding ecology of a group of titis (<italic>Callicebus
-        coimbrai<\/italic>) in the northern Brazilian Atlantic Forest","volume":"73","author":"JP
-        Souza-Alves","year":"2011","journal-title":"Am J Primatol"},{"key":"ref84","article-title":"Evolutionary
-        biology and conservation of titis, sakis and uacaris","author":"E Palacios","year":"2013"},{"key":"ref85","doi-asserted-by":"crossref","first-page":"353","DOI":"10.1146\/annurev.es.24.110193.002033","article-title":"The
-        phenology of tropical forests- adaptive significance and consequences for
-        primary consumers","volume":"24","author":"CP Van Schaik","year":"1993","journal-title":"Annu
-        Rev Ecol Syst"},{"issue":"10","key":"ref86","article-title":"Estimating activity
-        of Japanese macaques (<italic>Macaca fuscata<\/italic>) using accelerometers","volume":"79","author":"JCM
-        Sha","year":"2017","journal-title":"Am J Primatol"},{"issue":"1\u20132","key":"ref87","doi-asserted-by":"crossref","first-page":"123","DOI":"10.1159\/000089699","article-title":"Cathemerality
-        and lunar periodicity of activity rhythms in owl monkeys of the Argentinian
-        Chaco","volume":"77","author":"E Fernandez-Duque","year":"2006","journal-title":"Folia
-        Primatol (Basel)"},{"key":"ref88","article-title":"GPS\u2010identified, low\u2010level
-        nocturnal activity of vervets (<italic>Chlorocebus pygerythrus<\/italic>)
-        and olive baboons (<italic>Papio anubis<\/italic>) in Laikipia, Kenya","author":"LA
-        Isbell","year":"2017","journal-title":"Am J Phys Anthropol"}],"container-title":["PLOS
-        ONE"],"language":"en","link":[{"URL":"http:\/\/dx.plos.org\/10.1371\/journal.pone.0210494","content-type":"unspecified","content-version":"vor","intended-application":"similarity-checking"}],"deposited":{"date-parts":[[2020,5,8]],"date-time":"2020-05-08T20:04:50Z","timestamp":1588968290000},"score":0.0,"editor":[{"given":"Suzannah","family":"Rutherford","sequence":"first","affiliation":[]}],"issued":{"date-parts":[[2019,1,23]]},"references-count":88,"journal-issue":{"issue":"1","published-online":{"date-parts":[[2019,1,23]]}},"URL":"http:\/\/dx.doi.org\/10.1371\/journal.pone.0210494","ISSN":["1932-6203"],"issn-type":[{"value":"1932-6203","type":"electronic"}],"subject":["Multidisciplinary"],"published":{"date-parts":[[2019,1,23]]}},{"indexed":{"date-parts":[[2021,5,9]],"date-time":"2021-05-09T19:52:13Z","timestamp":1620589933844},"reference-count":39,"publisher":"The
-        Optical Society","issue":"2","license":[{"start":{"date-parts":[[2019,1,23]],"date-time":"2019-01-23T00:00:00Z","timestamp":1548201600000},"content-version":"vor","delay-in-days":0,"URL":"https:\/\/doi.org\/10.1364\/OA_License_v1"}],"funder":[{"DOI":"10.13039\/100000070","name":"National
-        Institute of Biomedical Imaging and Bioengineering","doi-asserted-by":"publisher","award":["R01
-        EB023969"]},{"DOI":"10.13039\/100000001","name":"National Science Foundation","doi-asserted-by":"publisher","award":["1653267"]}],"content-domain":{"domain":["www.osapublishing.org"],"crossmark-restriction":true},"short-container-title":["Biomed.
-        Opt. Express"],"published-print":{"date-parts":[[2019,2,1]]},"DOI":"10.1364\/boe.10.000747","type":"journal-article","created":{"date-parts":[[2019,1,23]],"date-time":"2019-01-23T21:51:45Z","timestamp":1548280305000},"page":"747","update-policy":"http:\/\/dx.doi.org\/10.1364\/osa_crossmark_policy","source":"Crossref","is-referenced-by-count":5,"title":["Comparison
-        of time- and angular-domain scatter rejection in mesoscopic optical projection
-        tomography: a simulation study"],"prefix":"10.1364","volume":"10","author":[{"given":"L.","family":"Sinha","sequence":"first","affiliation":[]},{"given":"F.","family":"Massanes","sequence":"additional","affiliation":[]},{"given":"V.
-        C.","family":"Torres","sequence":"additional","affiliation":[]},{"given":"C.","family":"Li","sequence":"additional","affiliation":[]},{"given":"K.
-        M.","family":"Tichauer","sequence":"additional","affiliation":[]},{"given":"J.
-        G.","family":"Brankov","sequence":"additional","affiliation":[]}],"member":"285","published-online":{"date-parts":[[2019,1,23]]},"reference":[{"key":"boe-10-2-747-R1","doi-asserted-by":"crossref","first-page":"1068","DOI":"10.1002\/bjs.5139","volume":"92","author":"Tew","year":"2005","journal-title":"Br.
-        J. Surg."},{"key":"boe-10-2-747-R2","doi-asserted-by":"crossref","first-page":"541","DOI":"10.1126\/science.1068206","volume":"296","author":"Sharpe","year":"2002","journal-title":"Science"},{"key":"boe-10-2-747-R3","doi-asserted-by":"crossref","first-page":"79","DOI":"10.1016\/j.copbio.2005.01.002","volume":"16","author":"Hielscher","year":"2005","journal-title":"Curr.
-        Opin. Biotechnol."},{"key":"boe-10-2-747-R4","doi-asserted-by":"crossref","first-page":"603","DOI":"10.1038\/nmeth.1483","volume":"7","author":"Ntziachristos","year":"2010","journal-title":"Nat.
-        Methods"},{"key":"boe-10-2-747-R5","doi-asserted-by":"crossref","first-page":"567","DOI":"10.1364\/AO.52.000567","volume":"52","author":"Pu","year":"2013","journal-title":"Appl.
-        Opt."},{"key":"boe-10-2-747-R6","doi-asserted-by":"crossref","first-page":"769","DOI":"10.1126\/science.253.5021.769","volume":"253","author":"Wang","year":"1991","journal-title":"Science"},{"key":"boe-10-2-747-R7","doi-asserted-by":"crossref","first-page":"19126","DOI":"10.1073\/pnas.0804798105","volume":"105","author":"Niedre","year":"2008","journal-title":"Proc.
-        Natl. Acad. Sci. U.S.A."},{"key":"boe-10-2-747-R8","doi-asserted-by":"crossref","first-page":"2732","DOI":"10.1364\/OL.35.002732","volume":"35","author":"Bassi","year":"2010","journal-title":"Opt.
-        Lett."},{"key":"boe-10-2-747-R9","doi-asserted-by":"crossref","first-page":"7740","DOI":"10.1364\/OE.21.007740","volume":"21","author":"Tan","year":"2013","journal-title":"Opt.
-        Express"},{"key":"boe-10-2-747-R10","first-page":"13","volume":"25","author":"Tank","year":"2000","journal-title":"Can.
-        J. Electr. Comput. Eng."},{"key":"boe-10-2-747-R11","doi-asserted-by":"crossref","first-page":"257","DOI":"10.1109\/JSTQE.2003.811286","volume":"9","author":"Chapman","year":"2003","journal-title":"IEEE
-        J. Sel. Top. Quantum Electron."},{"key":"boe-10-2-747-R12","doi-asserted-by":"crossref","first-page":"21492","DOI":"10.1364\/OE.16.021492","volume":"16","author":"Vasefi","year":"2008","journal-title":"Opt.
-        Express"},{"key":"boe-10-2-747-R13","doi-asserted-by":"crossref","first-page":"R37","DOI":"10.1088\/0031-9155\/58\/11\/R37","volume":"58","author":"Jacques","year":"2013","journal-title":"Phys.
-        Med. Biol."},{"key":"boe-10-2-747-R16","doi-asserted-by":"crossref","first-page":"8699","DOI":"10.1364\/OE.23.008699","volume":"23","author":"Hokr","year":"2015","journal-title":"Opt.
-        Express"},{"key":"boe-10-2-747-R17","doi-asserted-by":"crossref","first-page":"2163","DOI":"10.1088\/0031-9155\/45\/8\/308","volume":"45","author":"Kawrakow","year":"2000","journal-title":"Phys.
-        Med. Biol."},{"key":"boe-10-2-747-R19","doi-asserted-by":"crossref","first-page":"043707","DOI":"10.1063\/1.5003620","volume":"89","author":"Sinha","year":"2018","journal-title":"Rev.
-        Sci. Instrum."},{"key":"boe-10-2-747-R20","doi-asserted-by":"crossref","first-page":"1088","DOI":"10.1364\/OL.31.001088","volume":"31","author":"Kim","year":"2006","journal-title":"Opt.
-        Lett."},{"key":"boe-10-2-747-R21","doi-asserted-by":"crossref","first-page":"2331","DOI":"10.1364\/AO.28.002331","volume":"28","author":"Patterson","year":"1989","journal-title":"Appl.
-        Opt."},{"key":"boe-10-2-747-R22","doi-asserted-by":"crossref","first-page":"2707","DOI":"10.1364\/BOE.3.002707","volume":"3","author":"Hall","year":"2012","journal-title":"Biomed.
-        Opt. Express"},{"key":"boe-10-2-747-R23","doi-asserted-by":"crossref","first-page":"366","DOI":"10.1364\/BOE.3.000366","volume":"3","author":"Scolaro","year":"2012","journal-title":"Biomed.
-        Opt. Express"},{"key":"boe-10-2-747-R24","doi-asserted-by":"crossref","first-page":"11495","DOI":"10.1364\/OE.18.011495","volume":"18","author":"Bouchard","year":"2010","journal-title":"Opt.
-        Express"},{"key":"boe-10-2-747-R26","doi-asserted-by":"crossref","first-page":"83","DOI":"10.1046\/j.1365-2818.2000.00738.x","volume":"200","author":"K\u00f6nig","year":"2000","journal-title":"J.
-        Microsc."},{"key":"boe-10-2-747-R27","doi-asserted-by":"crossref","first-page":"e50744","DOI":"10.1371\/journal.pone.0050744","volume":"7","author":"Fieramonti","year":"2012","journal-title":"PLoS
-        One"},{"key":"boe-10-2-747-R28","doi-asserted-by":"crossref","first-page":"3442","DOI":"10.1109\/TED.2013.2276752","volume":"60","author":"Pancheri","year":"2013","journal-title":"IEEE
-        T Electron Dev"},{"key":"boe-10-2-747-R29","doi-asserted-by":"crossref","first-page":"2727","DOI":"10.1364\/JOSAA.11.002727","volume":"11","author":"Haskell","year":"1994","journal-title":"J.
-        Opt. Soc. Am. A"},{"key":"boe-10-2-747-R30","doi-asserted-by":"crossref","first-page":"964","DOI":"10.1097\/IGC.0b013e3182954da8","volume":"23","author":"Kim","year":"2013","journal-title":"Int.
-        J. Gynecol. Cancer"},{"key":"boe-10-2-747-R31","doi-asserted-by":"crossref","first-page":"653","DOI":"10.1056\/NEJMoa0904832","volume":"361","author":"de
-        Boer","year":"2009","journal-title":"N. Engl. J. Med."},{"key":"boe-10-2-747-R32","doi-asserted-by":"crossref","first-page":"138101","DOI":"10.1103\/PhysRevLett.100.138101","volume":"100","author":"Pifferi","year":"2008","journal-title":"Phys.
-        Rev. Lett."},{"key":"boe-10-2-747-R33","doi-asserted-by":"crossref","first-page":"10735","DOI":"10.1364\/OE.19.010735","volume":"19","author":"Tosi","year":"2011","journal-title":"Opt.
-        Express"},{"key":"boe-10-2-747-R34","doi-asserted-by":"crossref","first-page":"3225","DOI":"10.1364\/OL.41.003225","volume":"41","author":"Sinha","year":"2016","journal-title":"Opt.
-        Lett."},{"key":"boe-10-2-747-R35","doi-asserted-by":"crossref","first-page":"159","DOI":"10.1002\/lpor.200810031","volume":"3","author":"Hillman","year":"2009","journal-title":"Laser
-        Photonics Rev."},{"key":"boe-10-2-747-R36","doi-asserted-by":"crossref","first-page":"271","DOI":"10.1016\/j.acra.2013.11.009","volume":"21","author":"Ozturk","year":"2014","journal-title":"Acad.
-        Radiol."},{"key":"boe-10-2-747-R37","doi-asserted-by":"crossref","first-page":"5218","DOI":"10.1364\/BOE.7.005218","volume":"7","author":"Tang","year":"2016","journal-title":"Biomed.
-        Opt. Express"},{"key":"boe-10-2-747-R38","doi-asserted-by":"crossref","first-page":"2124","DOI":"10.1364\/BOE.8.002124","volume":"8","author":"Tang","year":"2017","journal-title":"Biomed.
-        Opt. Express"},{"key":"boe-10-2-747-R39","doi-asserted-by":"crossref","first-page":"100501","DOI":"10.1117\/1.JBO.18.10.100501","volume":"18","author":"Ozturk","year":"2013","journal-title":"J.
-        Biomed. Opt."},{"key":"boe-10-2-747-R40","doi-asserted-by":"crossref","first-page":"5325","DOI":"10.1016\/j.biomaterials.2012.04.004","volume":"33","author":"Zhao","year":"2012","journal-title":"Biomaterials"},{"key":"boe-10-2-747-R41","doi-asserted-by":"crossref","first-page":"3868","DOI":"10.1364\/BOE.8.003868","volume":"8","author":"Yang","year":"2017","journal-title":"Biomed.
-        Opt. Express"},{"key":"boe-10-2-747-R42","doi-asserted-by":"crossref","first-page":"131","DOI":"10.1016\/0169-2607(95)01640-F","volume":"47","author":"Wang","year":"1995","journal-title":"Comput.
-        Methods Programs Biomed."},{"key":"boe-10-2-747-R43","doi-asserted-by":"crossref","first-page":"658","DOI":"10.1364\/BOE.1.000658","volume":"1","author":"Alerstam","year":"2010","journal-title":"Biomed.
-        Opt. Express"}],"container-title":["Biomedical Optics Express"],"language":"en","link":[{"URL":"https:\/\/www.osapublishing.org\/viewmedia.cfm?URI=boe-10-2-747","content-type":"application\/pdf","content-version":"vor","intended-application":"syndication"},{"URL":"https:\/\/www.osapublishing.org\/viewmedia.cfm?URI=boe-10-2-747&seq=0","content-type":"unspecified","content-version":"vor","intended-application":"similarity-checking"}],"deposited":{"date-parts":[[2019,1,23]],"date-time":"2019-01-23T21:51:54Z","timestamp":1548280314000},"score":0.0,"issued":{"date-parts":[[2019,1,23]]},"references-count":39,"journal-issue":{"issue":"2","published-online":{"date-parts":[[2019]]},"published-print":{"date-parts":[[2019]]}},"URL":"http:\/\/dx.doi.org\/10.1364\/boe.10.000747","ISSN":["2156-7085","2156-7085"],"issn-type":[{"value":"2156-7085","type":"print"},{"value":"2156-7085","type":"electronic"}],"subject":["Atomic
-        and Molecular Physics, and Optics","Biotechnology"],"published":{"date-parts":[[2019,1,23]]},"assertion":[{"value":"OSA
-        - The Optical Society","name":"publisher","label":"This article is maintained
-        by"},{"value":"https:\/\/doi.org\/10.1364\/BOE.10.000747","name":"articlelink","label":"Crossref
-        DOI link to publisher maintained version"},{"value":"research-article","name":"content_type","label":"Article
-        type"},{"value":"Screened by Similarity Check","name":"cross_check","label":"Similarity
-        check"},{"value":"Yes","order":0,"name":"peer_reviewed","label":"Peer reviewed","group":{"name":"peer_review","label":"Peer
-        review"}},{"value":"Single blind","order":1,"name":"review_process","label":"Review
-        process","group":{"name":"peer_review","label":"Peer review"}},{"value":"12
-        October 2018","order":0,"name":"received","label":"Received","group":{"name":"publication_history","label":"Publication
-        History"}},{"value":"10 January 2019","order":1,"name":"accepted","label":"Accepted","group":{"name":"publication_history","label":"Publication
-        History"}},{"value":"23 January 2019","order":2,"name":"published","label":"Published","group":{"name":"publication_history","label":"Publication
-        History"}},{"value":"\u00a9 2019 Optical Society of America under the terms
-        of the OSA Open Access Publishing Agreement","name":"copyright","label":"Copyright"}]}],"items-per-page":5,"query":{"start-index":0,"search-terms":null}}}'
-  recorded_at: 2021-08-17 17:23:00 GMT
-  recorded_with: vcr/1.0.2, webmockr/0.8.0
+        Review Statement"},{"value":"http:\/\/www.tandfonline.com\/action\/journalInformation?show=aimsScope&journalCode=uree20","URL":"http:\/\/www.tandfonline.com\/action\/journalInformation?show=aimsScope&journalCode=uree20","order":2,"name":"aims_and_scope_url","label":"Aim
+        & Scope"},{"value":"2018-08-03","order":0,"name":"received","label":"Received","group":{"name":"publication_history","label":"Publication
+        History"}},{"value":"2020-08-24","order":1,"name":"revised","label":"Revised","group":{"name":"publication_history","label":"Publication
+        History"}},{"value":"2020-09-01","order":2,"name":"accepted","label":"Accepted","group":{"name":"publication_history","label":"Publication
+        History"}},{"value":"2020-12-21","order":3,"name":"published","label":"Published","group":{"name":"publication_history","label":"Publication
+        History"}}]},{"indexed":{"date-parts":[[2022,3,30]],"date-time":"2022-03-30T13:52:21Z","timestamp":1648648341826},"reference-count":27,"publisher":"AIP
+        Publishing","issue":"6","funder":[{"DOI":"10.13039\/100000015","name":"U.S.
+        Department of Energy","doi-asserted-by":"publisher","award":["DE-AC02\u201a\u00c4\u00ee05CH11231"]},{"DOI":"10.13039\/100000001","name":"National
+        Science Foundation","doi-asserted-by":"publisher","award":["0416243"]}],"content-domain":{"domain":[],"crossmark-restriction":false},"short-container-title":["Journal
+        of Applied Physics"],"published-print":{"date-parts":[[2012,9,15]]},"DOI":"10.1063\/1.4752395","type":"journal-article","created":{"date-parts":[[2012,9,17]],"date-time":"2012-09-17T22:40:47Z","timestamp":1347921647000},"page":"064102","source":"Crossref","is-referenced-by-count":34,"title":["Directed
+        assembly of nano-scale phase variants in highly strained BiFeO<sub>3<\/sub>
+        thin films"],"prefix":"10.1063","volume":"112","author":[{"given":"Jian","family":"Zhou","sequence":"first","affiliation":[]},{"given":"Morgan","family":"Trassin","sequence":"additional","affiliation":[]},{"given":"Qing","family":"He","sequence":"additional","affiliation":[]},{"given":"Nobumichi","family":"Tamura","sequence":"additional","affiliation":[]},{"given":"Martin","family":"Kunz","sequence":"additional","affiliation":[]},{"given":"Chun","family":"Cheng","sequence":"additional","affiliation":[]},{"given":"Jinxing","family":"Zhang","sequence":"additional","affiliation":[]},{"given":"Wen-I","family":"Liang","sequence":"additional","affiliation":[]},{"given":"Jan","family":"Seidel","sequence":"additional","affiliation":[]},{"given":"Cheng-Lun","family":"Hsin","sequence":"additional","affiliation":[]},{"given":"Junqiao","family":"Wu","sequence":"additional","affiliation":[]}],"member":"317","reference":[{"key":"c1","doi-asserted-by":"publisher","DOI":"10.1038\/nature05023"},{"key":"c2","doi-asserted-by":"publisher","DOI":"10.1126\/science.1113357"},{"key":"c3","doi-asserted-by":"publisher","DOI":"10.1103\/PhysRevLett.96.067601"},{"key":"c4","doi-asserted-by":"publisher","DOI":"10.1016\/j.jmmm.2006.01.238"},{"key":"c5","doi-asserted-by":"publisher","DOI":"10.1038\/nmat1804"},{"key":"c6","doi-asserted-by":"publisher","DOI":"10.1038\/nmat2184"},{"key":"c7","doi-asserted-by":"publisher","DOI":"10.1103\/PhysRevB.71.060401"},{"key":"c8","doi-asserted-by":"publisher","DOI":"10.1134\/1.1787107"},{"key":"c9","doi-asserted-by":"publisher","DOI":"10.1038\/nmat2373"},{"key":"c10","doi-asserted-by":"publisher","DOI":"10.1103\/PhysRevLett.105.197603"},{"key":"c11","doi-asserted-by":"publisher","DOI":"10.1126\/science.1168636"},{"key":"c12","doi-asserted-by":"publisher","DOI":"10.1038\/nnano.2009.451"},{"key":"c13","doi-asserted-by":"publisher","DOI":"10.1126\/science.1177046"},{"key":"c14","doi-asserted-by":"publisher","DOI":"10.1038\/ncomms1221"},{"key":"c15","doi-asserted-by":"publisher","DOI":"10.1021\/nl201719w"},{"key":"c16","doi-asserted-by":"publisher","DOI":"10.1002\/adma.201200463"},{"key":"c17","doi-asserted-by":"publisher","DOI":"10.1021\/nn3012459"},{"key":"c19","doi-asserted-by":"publisher","DOI":"10.1002\/adma.201101164"},{"key":"c20","doi-asserted-by":"publisher","DOI":"10.1002\/adfm.201001867"},{"key":"c21","doi-asserted-by":"publisher","DOI":"10.1063\/1.3499658"},{"key":"c22","doi-asserted-by":"publisher","DOI":"10.1021\/nl101187a"},{"key":"c23","doi-asserted-by":"publisher","DOI":"10.1088\/0953-8984\/16\/13\/006"},{"key":"c24","doi-asserted-by":"publisher","DOI":"10.1103\/PhysRevB.72.020102"},{"key":"c25","doi-asserted-by":"publisher","DOI":"10.1007\/s10853-005-5916-6"},{"key":"c26","doi-asserted-by":"publisher","DOI":"10.1002\/pssb.200743514"},{"key":"c27","doi-asserted-by":"publisher","DOI":"10.1038\/nmat3141"},{"key":"c28","doi-asserted-by":"publisher","DOI":"10.1002\/adfm.201000475"}],"container-title":["Journal
+        of Applied Physics"],"language":"en","link":[{"URL":"http:\/\/aip.scitation.org\/doi\/pdf\/10.1063\/1.4752395","content-type":"unspecified","content-version":"vor","intended-application":"similarity-checking"}],"deposited":{"date-parts":[[2016,12,27]],"date-time":"2016-12-27T07:14:39Z","timestamp":1482822879000},"score":0.0,"resource":{"primary":{"URL":"http:\/\/aip.scitation.org\/doi\/10.1063\/1.4752395"}},"issued":{"date-parts":[[2012,9,15]]},"references-count":27,"journal-issue":{"issue":"6","published-print":{"date-parts":[[2012,9,15]]}},"alternative-id":["10.1063\/1.4752395"],"URL":"http:\/\/dx.doi.org\/10.1063\/1.4752395","ISSN":["0021-8979","1089-7550"],"issn-type":[{"value":"0021-8979","type":"print"},{"value":"1089-7550","type":"electronic"}],"subject":["General
+        Physics and Astronomy"],"published":{"date-parts":[[2012,9,15]]}},{"indexed":{"date-parts":[[2022,3,30]],"date-time":"2022-03-30T13:46:12Z","timestamp":1648647972163},"publisher-location":"New
+        York, NY, USA","reference-count":38,"publisher":"ACM","funder":[{"DOI":"10.13039\/100000152","name":"Division
+        of Molecular and Cellular Biosciences","doi-asserted-by":"publisher","award":["MCB
+        0630250, DGE 0841423"]},{"DOI":"10.13039\/100000082","name":"Division of Graduate
+        Education","doi-asserted-by":"publisher","award":["MCB 0630250, DGE 0841423"]}],"content-domain":{"domain":[],"crossmark-restriction":false},"published-print":{"date-parts":[[2014,9,20]]},"DOI":"10.1145\/2649387.2649416","type":"proceedings-article","created":{"date-parts":[[2014,10,24]],"date-time":"2014-10-24T15:29:22Z","timestamp":1414164562000},"source":"Crossref","is-referenced-by-count":0,"title":["Large
+        highly connected clusters in protein-protein interaction networks"],"prefix":"10.1145","author":[{"given":"Suzanne
+        Renick","family":"Gallagher","sequence":"first","affiliation":[{"name":"University
+        of Colorado, Boulder, CO"}]},{"given":"Debra S.","family":"Goldberg","sequence":"additional","affiliation":[{"name":"University
+        of Colorado, Boulder, CO"}]}],"member":"320","published-online":{"date-parts":[[2014,9,20]]},"reference":[{"key":"e_1_3_2_1_1_1","doi-asserted-by":"publisher","DOI":"10.1093\/bioinformatics\/btl039"},{"key":"e_1_3_2_1_2_1","doi-asserted-by":"publisher","DOI":"10.1038\/nbt1002-991"},{"key":"e_1_3_2_1_3_1","first-page":"4","article-title":"An
+        automated method for finding molecular complexes in large protein interaction
+        networks","author":"Bader G.","year":"2003","journal-title":"BMC Bioinformatics"},{"key":"e_1_3_2_1_4_1","doi-asserted-by":"publisher","DOI":"10.1093\/bioinformatics\/btp498"},{"key":"e_1_3_2_1_5_1","series-title":"Lecture
+        Notes in Computer Science","doi-asserted-by":"crossref","first-page":"20","DOI":"10.1007\/978-3-540-39884-4_3","volume-title":"Innovative
+        Internet Community Systems","author":"Brinkmeier M.","year":"2003"},{"key":"e_1_3_2_1_6_1","doi-asserted-by":"publisher","DOI":"10.1109\/BIBM.2011.66"},{"key":"e_1_3_2_1_7_1","volume-title":"Pacific
+        Symposium on Biocomputing, 11: 231--242","author":"Chu W.","year":"2006"},{"key":"e_1_3_2_1_8_1","doi-asserted-by":"crossref","unstructured":"G.
+        Cui etal An algorithm for finding functional modules and protein complexes
+        in protein-protein interaction networks. J Biomed Biotechnol 2008.  G. Cui
+        et al. An algorithm for finding functional modules and protein complexes in
+        protein-protein interaction networks. J Biomed Biotechnol 2008.","DOI":"10.1155\/2008\/860270"},{"key":"e_1_3_2_1_9_1","unstructured":"R.
+        Diestel. Graph Theory pages 50--55. Graduate Texts in Mathematics. Springer
+        second edition 1997.  R. Diestel. Graph Theory pages 50--55. Graduate Texts
+        in Mathematics. Springer second edition 1997."},{"key":"e_1_3_2_1_10_1","doi-asserted-by":"publisher","DOI":"10.1109\/TST.2012.6374369"},{"key":"e_1_3_2_1_11_1","volume-title":"The
+        Netherlands","author":"Dongen S.","year":"1998"},{"key":"e_1_3_2_1_12_1","doi-asserted-by":"publisher","DOI":"10.1016\/j.amc.2009.04.024"},{"key":"e_1_3_2_1_13_1","doi-asserted-by":"publisher","DOI":"10.1006\/jcss.1995.1022"},{"key":"e_1_3_2_1_14_1","doi-asserted-by":"publisher","DOI":"10.1145\/1183907.1183912"},{"key":"e_1_3_2_1_15_1","doi-asserted-by":"crossref","unstructured":"S.
+        Gallagher and D. Goldberg. Characterization of known protein complexes using
+        k-connectivity and other topological measures. F1000Research 2:172 2013.  S.
+        Gallagher and D. Goldberg. Characterization of known protein complexes using
+        k-connectivity and other topological measures. F1000Research 2:172 2013.","DOI":"10.12688\/f1000research.2-172.v1"},{"key":"e_1_3_2_1_16_1","doi-asserted-by":"publisher","DOI":"10.1145\/2506583.2506635"},{"key":"e_1_3_2_1_17_1","doi-asserted-by":"crossref","unstructured":"M.
+        Habibi etal Protein complex prediction based on k-connected subgraphs in protein
+        interaction network. BMC Systems Biology 4 Sep 16 2010.  M. Habibi et al.
+        Protein complex prediction based on k-connected subgraphs in protein interaction
+        network. BMC Systems Biology 4 Sep 16 2010.","DOI":"10.1186\/1752-0509-4-129"},{"key":"e_1_3_2_1_18_1","doi-asserted-by":"publisher","DOI":"10.1016\/S0020-0190(00)00142-3"},{"key":"e_1_3_2_1_19_1","doi-asserted-by":"publisher","DOI":"10.1006\/jagm.1999.1055"},{"key":"e_1_3_2_1_20_1","doi-asserted-by":"crossref","unstructured":"M.
+        Li etal Modifying the DPClus algorithm for identifying protein complexes based
+        on new topological structures. BMC Bioinformatics 9 Sep 25 2008.  M. Li et
+        al. Modifying the DPClus algorithm for identifying protein complexes based
+        on new topological structures. BMC Bioinformatics 9 Sep 25 2008.","DOI":"10.1186\/1471-2105-9-398"},{"key":"e_1_3_2_1_21_1","doi-asserted-by":"publisher","DOI":"10.1093\/bioinformatics\/btp311"},{"key":"e_1_3_2_1_22_1","doi-asserted-by":"publisher","DOI":"10.1007\/BF02993903"},{"key":"e_1_3_2_1_23_1","first-page":"215","volume-title":"The
+        Many Facets of Graph Theory (Proc. Conf., Western Mich","author":"Matula D.
+        W.","year":"1968"},{"key":"e_1_3_2_1_24_1","doi-asserted-by":"publisher","DOI":"10.1137\/0122040"},{"key":"e_1_3_2_1_25_1","doi-asserted-by":"publisher","DOI":"10.4064\/fm-10-1-96-115"},{"key":"e_1_3_2_1_26_1","doi-asserted-by":"publisher","DOI":"10.1093\/nar\/gkj148"},{"key":"e_1_3_2_1_27_1","doi-asserted-by":"publisher","DOI":"10.1073\/pnas.0505482102"},{"key":"e_1_3_2_1_28_1","unstructured":"R.
+        Milo etal On the uniform generation of random graphs with prescribed degree
+        sequences. http:\/\/arxiv.org\/abs\/cond-mat\/0312028\/ 2004.  R. Milo et
+        al. On the uniform generation of random graphs with prescribed degree sequences.
+        http:\/\/arxiv.org\/abs\/cond-mat\/0312028\/ 2004."},{"key":"e_1_3_2_1_29_1","doi-asserted-by":"crossref","unstructured":"T.
+        Nepusz etal Detecting overlapping protein complexes in protein-protein interaction
+        networks. Nature Methods 9 Mar 18 2012.  T. Nepusz et al. Detecting overlapping
+        protein complexes in protein-protein interaction networks. Nature Methods
+        9 Mar 18 2012.","DOI":"10.1038\/nmeth.1938"},{"key":"e_1_3_2_1_30_1","doi-asserted-by":"publisher","DOI":"10.1002\/prot.10505"},{"key":"e_1_3_2_1_31_1","doi-asserted-by":"publisher","DOI":"10.1093\/bioinformatics\/bth114"},{"key":"e_1_3_2_1_32_1","doi-asserted-by":"publisher","DOI":"10.1016\/S0378-8733(00)00026-5"},{"key":"e_1_3_2_1_33_1","doi-asserted-by":"publisher","DOI":"10.1093\/nar\/gkp914"},{"key":"e_1_3_2_1_34_1","doi-asserted-by":"publisher","DOI":"10.1073\/pnas.2032324100"},{"key":"e_1_3_2_1_35_1","doi-asserted-by":"publisher","DOI":"10.1093\/nar\/gkj109"},{"key":"e_1_3_2_1_36_1","doi-asserted-by":"publisher","DOI":"10.1145\/263867.263872"},{"key":"e_1_3_2_1_37_1","first-page":"231","article-title":"A
+        note on graphs without k-connected subgraphs","volume":"67","author":"Yuster
+        R.","year":"2003","journal-title":"Ars Combinatoria"},{"key":"e_1_3_2_1_38_1","first-page":"1","article-title":"Decomposition
+        of overlapping protein complexes: A graph theoretical method for analyzing
+        static and dynamic protein associations","author":"Zotenko E.","year":"2006","journal-title":"Algorithms
+        for Molecular Biology"}],"event":{"name":"BCB ''14: ACM-BCB ''14","location":"Newport
+        Beach California","acronym":"BCB ''14","sponsor":["SIGBio ACM Special Interest
+        Group on Bioinformatics"]},"container-title":["Proceedings of the 5th ACM
+        Conference on Bioinformatics, Computational Biology, and Health Informatics"],"link":[{"URL":"https:\/\/dl.acm.org\/doi\/pdf\/10.1145\/2649387.2649416","content-type":"unspecified","content-version":"vor","intended-application":"similarity-checking"}],"deposited":{"date-parts":[[2020,12,24]],"date-time":"2020-12-24T17:42:25Z","timestamp":1608831745000},"score":0.0,"resource":{"primary":{"URL":"https:\/\/dl.acm.org\/doi\/10.1145\/2649387.2649416"}},"issued":{"date-parts":[[2014,9,20]]},"references-count":38,"alternative-id":["10.1145\/2649387.2649416","10.1145\/2649387"],"URL":"http:\/\/dx.doi.org\/10.1145\/2649387.2649416","published":{"date-parts":[[2014,9,20]]}},{"indexed":{"date-parts":[[2022,3,30]],"date-time":"2022-03-30T13:50:00Z","timestamp":1648648200509},"reference-count":21,"publisher":"American
+        Physical Society (APS)","issue":"5","license":[{"start":{"date-parts":[[2015,5,29]],"date-time":"2015-05-29T00:00:00Z","timestamp":1432857600000},"content-version":"vor","delay-in-days":0,"URL":"http:\/\/link.aps.org\/licenses\/aps-default-license"},{"start":{"date-parts":[[2016,5,28]],"date-time":"2016-05-28T00:00:00Z","timestamp":1464393600000},"content-version":"am","delay-in-days":365,"URL":"http:\/\/link.aps.org\/licenses\/aps-default-accepted-manuscript-license"}],"funder":[{"DOI":"10.13039\/100006224","name":"Argonne
+        National Laboratory, Office of Science","doi-asserted-by":"publisher"},{"DOI":"10.13039\/100000001","name":"National
+        Science Foundation","doi-asserted-by":"publisher","award":["PHY-1203100 (USNA)","PHY-0754674
+        (FSU)","PHY-1419765 (ND)"]},{"DOI":"10.13039\/100000015","name":"U.S. Department
+        of Energy","doi-asserted-by":"publisher","award":["DE-AC02-06CH11357"]},{"DOI":"10.13039\/100006132","name":"Office
+        of Science","doi-asserted-by":"publisher"}],"content-domain":{"domain":[],"crossmark-restriction":false},"short-container-title":["Phys.
+        Rev. C"],"DOI":"10.1103\/physrevc.91.057301","type":"journal-article","created":{"date-parts":[[2015,5,29]],"date-time":"2015-05-29T17:08:36Z","timestamp":1432919316000},"source":"Crossref","is-referenced-by-count":2,"title":["Persistence
+        of collective behavior at high spin in the<mml:math xmlns:mml=\"http:\/\/www.w3.org\/1998\/Math\/MathML\"><mml:mrow><mml:mi>N<\/mml:mi><mml:mo>=<\/mml:mo><mml:mn>88<\/mml:mn><\/mml:mrow><\/mml:math>nucleus<mml:math
+        xmlns:mml=\"http:\/\/www.w3.org\/1998\/Math\/MathML\"><mml:mmultiscripts><mml:mi
+        mathvariant=\"normal\">Tb<\/mml:mi><mml:mprescripts \/><mml:none \/><mml:mrow><mml:mn>153<\/mml:mn><\/mml:mrow><\/mml:mmultiscripts><\/mml:math>"],"prefix":"10.1103","volume":"91","author":[{"given":"D.
+        J.","family":"Hartley","sequence":"first","affiliation":[]},{"given":"M. A.","family":"Riley","sequence":"additional","affiliation":[]},{"given":"X.","family":"Wang","sequence":"additional","affiliation":[]},{"given":"S.","family":"Miller","sequence":"additional","affiliation":[]},{"given":"R.
+        V. F.","family":"Janssens","sequence":"additional","affiliation":[]},{"given":"E.
+        S.","family":"Paul","sequence":"additional","affiliation":[]},{"given":"J.
+        M.","family":"Rees","sequence":"additional","affiliation":[]},{"given":"J.","family":"Simpson","sequence":"additional","affiliation":[]},{"given":"L.
+        L.","family":"Riedinger","sequence":"additional","affiliation":[]},{"given":"A.
+        D.","family":"Ayangeakaa","sequence":"additional","affiliation":[]},{"given":"M.
+        P.","family":"Carpenter","sequence":"additional","affiliation":[]},{"given":"C.
+        J.","family":"Chiara","sequence":"additional","affiliation":[]},{"given":"U.","family":"Garg","sequence":"additional","affiliation":[]},{"given":"P.","family":"Hampson","sequence":"additional","affiliation":[]},{"given":"C.
+        R.","family":"Hoffman","sequence":"additional","affiliation":[]},{"given":"F.
+        G.","family":"Kondev","sequence":"additional","affiliation":[]},{"given":"T.","family":"Lauritsen","sequence":"additional","affiliation":[]},{"given":"P.
+        J. R.","family":"Mason","sequence":"additional","affiliation":[]},{"given":"J.
+        T.","family":"Matta","sequence":"additional","affiliation":[]},{"given":"P.
+        J.","family":"Nolan","sequence":"additional","affiliation":[]},{"given":"J.","family":"Ollier","sequence":"additional","affiliation":[]},{"given":"M.","family":"Petri","sequence":"additional","affiliation":[]},{"given":"D.
+        C.","family":"Radford","sequence":"additional","affiliation":[]},{"given":"J.
+        P.","family":"Revill","sequence":"additional","affiliation":[]},{"given":"S.","family":"Zhu","sequence":"additional","affiliation":[]},{"given":"I.","family":"Ragnarsson","sequence":"additional","affiliation":[]}],"member":"16","published-online":{"date-parts":[[2015,5,29]]},"reference":[{"key":"PhysRevC.91.057301Cc1R1","doi-asserted-by":"publisher","DOI":"10.1103\/PhysRevLett.54.978"},{"key":"PhysRevC.91.057301Cc2R1","doi-asserted-by":"publisher","DOI":"10.1103\/PhysRevLett.54.982"},{"key":"PhysRevC.91.057301Cc3R1","doi-asserted-by":"publisher","DOI":"10.1103\/PhysRevLett.54.2584"},{"key":"PhysRevC.91.057301Cc4R1","doi-asserted-by":"publisher","DOI":"10.1088\/0031-8949\/34\/6A\/021"},{"key":"PhysRevC.91.057301Cc5R1","doi-asserted-by":"publisher","DOI":"10.1016\/S0370-1573(99)00035-6"},{"key":"PhysRevC.91.057301Cc6R1","doi-asserted-by":"publisher","DOI":"10.1103\/PhysRevLett.57.62"},{"key":"PhysRevC.91.057301Cc7R1","doi-asserted-by":"publisher","DOI":"10.1007\/BF01411877"},{"key":"PhysRevC.91.057301Cc8R1","doi-asserted-by":"publisher","DOI":"10.1103\/PhysRevC.79.044324"},{"key":"PhysRevC.91.057301Cc9R1","doi-asserted-by":"publisher","DOI":"10.1016\/0375-9474(87)90362-9"},{"key":"PhysRevC.91.057301Cc10R1","doi-asserted-by":"publisher","DOI":"10.1103\/PhysRevLett.61.46"},{"key":"PhysRevC.91.057301Cc11R1","doi-asserted-by":"publisher","DOI":"10.1016\/0146-6410(92)90028-Z"},{"key":"PhysRevC.91.057301Cc12R1","doi-asserted-by":"publisher","DOI":"10.1103\/PhysRevC.65.034312"},{"key":"PhysRevC.91.057301Cc13R1","doi-asserted-by":"publisher","DOI":"10.1103\/PhysRevC.75.064314"},{"key":"PhysRevC.91.057301Cc14R1","doi-asserted-by":"publisher","DOI":"10.1103\/PhysRevC.51.1234"},{"key":"PhysRevC.91.057301Cc15R1","doi-asserted-by":"publisher","DOI":"10.1103\/PhysRevC.91.054301"},{"key":"PhysRevC.91.057301Cc16R1","doi-asserted-by":"publisher","DOI":"10.1080\/10506899609411095"},{"key":"PhysRevC.91.057301Cc17R1","doi-asserted-by":"publisher","DOI":"10.1016\/0168-9002(95)00183-2"},{"key":"PhysRevC.91.057301Cc18R1","doi-asserted-by":"publisher","DOI":"10.1103\/PhysRevC.58.1321"},{"key":"PhysRevC.91.057301Cc19R1","doi-asserted-by":"publisher","DOI":"10.1016\/0029-5582(65)90940-5"},{"key":"PhysRevC.91.057301Cc20R1","doi-asserted-by":"publisher","DOI":"10.1016\/0375-9474(78)90031-3"},{"key":"PhysRevC.91.057301Cc21R1","doi-asserted-by":"publisher","DOI":"10.1103\/PhysRev.138.B509"}],"container-title":["Physical
+        Review C"],"language":"en","link":[{"URL":"http:\/\/link.aps.org\/accepted\/10.1103\/PhysRevC.91.057301","content-type":"application\/pdf","content-version":"am","intended-application":"unspecified"},{"URL":"http:\/\/link.aps.org\/article\/10.1103\/PhysRevC.91.057301","content-type":"unspecified","content-version":"vor","intended-application":"syndication"},{"URL":"http:\/\/harvest.aps.org\/v2\/journals\/articles\/10.1103\/PhysRevC.91.057301\/fulltext","content-type":"unspecified","content-version":"vor","intended-application":"similarity-checking"}],"deposited":{"date-parts":[[2017,4,6]],"date-time":"2017-04-06T15:29:59Z","timestamp":1491492599000},"score":0.0,"resource":{"primary":{"URL":"https:\/\/link.aps.org\/doi\/10.1103\/PhysRevC.91.057301"}},"issued":{"date-parts":[[2015,5,29]]},"references-count":21,"journal-issue":{"issue":"5","published-print":{"date-parts":[[2015,5]]}},"URL":"http:\/\/dx.doi.org\/10.1103\/physrevc.91.057301","ISSN":["0556-2813","1089-490X"],"issn-type":[{"value":"0556-2813","type":"print"},{"value":"1089-490X","type":"electronic"}],"subject":["Nuclear
+        and High Energy Physics"],"published":{"date-parts":[[2015,5,29]]},"article-number":"057301"},{"indexed":{"date-parts":[[2022,3,30]],"date-time":"2022-03-30T14:05:53Z","timestamp":1648649153629},"reference-count":65,"publisher":"Wiley","issue":"4","license":[{"start":{"date-parts":[[2015,9,1]],"date-time":"2015-09-01T00:00:00Z","timestamp":1441065600000},"content-version":"tdm","delay-in-days":589,"URL":"http:\/\/doi.wiley.com\/10.1002\/tdm_license_1.1"}],"funder":[{"DOI":"10.13039\/100000001","name":"National
+        Science Foundation","doi-asserted-by":"publisher","award":["IDBR-0754247,
+        485 DEB-1119660"]},{"DOI":"10.13039\/501100001659","name":"Deutsche Forschungsgemeinschaft","doi-asserted-by":"publisher","award":["Ho
+        443\/19-1,2,3 and Ro 2431\/3-1"]}],"content-domain":{"domain":[],"crossmark-restriction":false},"short-container-title":["Funct
+        Ecol"],"published-print":{"date-parts":[[2014,8]]},"DOI":"10.1111\/1365-2435.12231","type":"journal-article","created":{"date-parts":[[2013,12,10]],"date-time":"2013-12-10T13:40:40Z","timestamp":1386682840000},"page":"954-962","source":"Crossref","is-referenced-by-count":12,"title":["Long-term
+        effects of litter sex ratio on female reproduction in two iteroparous mammals"],"prefix":"10.1111","volume":"28","author":[{"given":"Raquel","family":"Moncl\u00fas","sequence":"first","affiliation":[{"name":"Department
+        of Ecology & Evolutionary Biology; University of California; 621 Charles E.
+        Young Dr. South Los Angeles California 90095 USA"},{"name":"Laboratoire d''Ethologie
+        Exp\u00e9rimentale et Compar\u00e9e E.A. 4443 (LEEC); Universit\u00e9 Paris
+        13; Sorbonne Paris Cit\u00e9 99 Av. J.B. Cl\u00e9ment F-93430 Villetaneuse
+        France"}]},{"given":"Dietrich","family":"von Holst","sequence":"additional","affiliation":[{"name":"Department
+        of Animal Physiology; University of Bayreuth; Universit\u00e4tsstrasse 30
+        D-95440 Bayreuth Germany"}]},{"given":"Daniel T.","family":"Blumstein","sequence":"additional","affiliation":[{"name":"Department
+        of Ecology & Evolutionary Biology; University of California; 621 Charles E.
+        Young Dr. South Los Angeles California 90095 USA"},{"name":"The Rocky Mountain
+        Biological Laboratory; Box 519 Crested Butte Colorado 81224 USA"}]},{"given":"Heiko
+        G.","family":"R\u00f6del","sequence":"additional","affiliation":[{"name":"Laboratoire
+        d''Ethologie Exp\u00e9rimentale et Compar\u00e9e E.A. 4443 (LEEC); Universit\u00e9
+        Paris 13; Sorbonne Paris Cit\u00e9 99 Av. J.B. Cl\u00e9ment F-93430 Villetaneuse
+        France"}]}],"member":"311","published-online":{"date-parts":[[2014,1,20]]},"reference":[{"key":"10.1111\/1365-2435.12231-BIB0001|fec12231-cit-0001","doi-asserted-by":"crossref","first-page":"36","DOI":"10.1007\/BF00346986","article-title":"Sociality
+        as a life history tactic of ground squirrels","volume":"48","author":"Armitage","year":"1981","journal-title":"Oecologia"},{"key":"10.1111\/1365-2435.12231-BIB0002|fec12231-cit-0002","first-page":"188","volume-title":"Wild
+        Mammals of North America","author":"Armitage","year":"2003a"},{"key":"10.1111\/1365-2435.12231-BIB0003|fec12231-cit-0003","first-page":"217","volume-title":"Adaptive
+        Strategies and Diversity in Marmots","author":"Armitage","year":"2003b"},{"key":"10.1111\/1365-2435.12231-BIB0004|fec12231-cit-0004","first-page":"133","volume-title":"Adaptive
+        Strategies and Diversity in Marmots","author":"Armitage","year":"2003c"},{"key":"10.1111\/1365-2435.12231-BIB0005|fec12231-cit-0005","doi-asserted-by":"crossref","first-page":"532","DOI":"10.1111\/j.1365-294X.2011.05323.x","article-title":"Sociality,
+        individual fitness and population dynamics of yellow-bellied marmots","volume":"21","author":"Armitage","year":"2012","journal-title":"Molecular
+        Ecology"},{"key":"10.1111\/1365-2435.12231-BIB0006|fec12231-cit-0006","doi-asserted-by":"crossref","first-page":"12149","DOI":"10.1073\/pnas.200196097","article-title":"Social
+        enhancement of fitness in yellow-bellied marmots","volume":"97","author":"Armitage","year":"2000","journal-title":"Proceedings
+        of the National Academy of Science of the United States of America"},{"key":"10.1111\/1365-2435.12231-BIB0007|fec12231-cit-0007","doi-asserted-by":"crossref","first-page":"21","DOI":"10.1051\/rnd:19970103","article-title":"Influence
+        of sex ratio during multiple pregnancies on productive and reproductive parameters
+        of lambs and ewes","volume":"37","author":"Avdi","year":"1997","journal-title":"Reproduction
+        Nutrition Development"},{"key":"10.1111\/1365-2435.12231-BIB0008|fec12231-cit-0008","doi-asserted-by":"crossref","first-page":"390","DOI":"10.1016\/j.jml.2007.12.005","article-title":"Mixed-effects
+        modeling with crossed random effects for subjects and items","volume":"59","author":"Baayen","year":"2008","journal-title":"Journal
+        of Memory and Language"},{"key":"10.1111\/1365-2435.12231-BIB0009|fec12231-cit-0009","doi-asserted-by":"crossref","first-page":"258","DOI":"10.1016\/j.physbeh.2009.05.016","article-title":"Intrauterine
+        position influences anatomy and behavior in domestic rabbits","volume":"98","author":"B\u00e1nszegi","year":"2009","journal-title":"Physiology
+        and Behavior"},{"key":"10.1111\/1365-2435.12231-BIB0010|fec12231-cit-0010","doi-asserted-by":"crossref","first-page":"1126","DOI":"10.1016\/j.physbeh.2012.01.002","article-title":"Anogenital
+        distance as a predictor of attractiveness, litter size and sex ratio of rabbit
+        does","volume":"105","author":"B\u00e1nszegi","year":"2012","journal-title":"Physiology
+        and Behavior"},{"key":"10.1111\/1365-2435.12231-BIB0011|fec12231-cit-0011","doi-asserted-by":"crossref","first-page":"20120349","DOI":"10.1098\/rstb.2012.0349","article-title":"Yellow-bellied
+        marmots: insights from an emergent view of sociality","volume":"368","author":"Blumstein","year":"2013","journal-title":"Philosophical
+        Transactions of the Royal Society of Lon don. Series B, Biological Sciences"},{"key":"10.1111\/1365-2435.12231-BIB0012|fec12231-cit-0012","doi-asserted-by":"crossref","first-page":"879","DOI":"10.1111\/j.1420-9101.2010.01967.x","article-title":"Heritability
+        of anti-predatory traits: vigilance and locomotor performance in marmots","volume":"23","author":"Blumstein","year":"2010","journal-title":"Journal
+        of Evolutionary Biology"},{"key":"10.1111\/1365-2435.12231-BIB0013|fec12231-cit-0013","doi-asserted-by":"crossref","first-page":"4009","DOI":"10.1098\/rspb.2012.1073","article-title":"Maternal
+        effects in disease resistance: poor maternal environment increases offspring
+        resistance to an insect virus","volume":"279","author":"Boots","year":"2012","journal-title":"Proceedings
+        of the Royal Society of London. Series B, Biological Sciences"},{"key":"10.1111\/1365-2435.12231-BIB0014|fec12231-cit-0014","doi-asserted-by":"crossref","first-page":"599","DOI":"10.1111\/j.1467-985X.2004.00365.x","article-title":"Variance
+        partitioning in multilevel logistic models that exhibit overdispersion","volume":"168","author":"Browne","year":"2005","journal-title":"Journal
+        of the Royal Statistical Society. Series A, (Statistics in Society)"},{"key":"10.1111\/1365-2435.12231-BIB0015|fec12231-cit-0015","doi-asserted-by":"crossref","first-page":"124","DOI":"10.1139\/z98-198","article-title":"Effects
+        of sex composition of the litter on anogenital distance in California mice
+        (Peromyscus californicus)","volume":"77","author":"Cantoni","year":"1999","journal-title":"Canadian
+        Journal of Zoology"},{"key":"10.1111\/1365-2435.12231-BIB0016|fec12231-cit-0016","volume-title":"Reproductive
+        Success. Studies of Individual Variation in Contrasting Breeding Systems","author":"Clutton-Brock","year":"1988"},{"key":"10.1111\/1365-2435.12231-BIB0017|fec12231-cit-0017","doi-asserted-by":"crossref","first-page":"53","DOI":"10.2307\/4799","article-title":"Early
+        development and population dynamics in red deer. I. Density-dependent effects
+        on juvenile survival","volume":"56","author":"Clutton-Brock","year":"1987","journal-title":"Journal
+        of Animal Ecology"},{"key":"10.1111\/1365-2435.12231-BIB0018|fec12231-cit-0018","doi-asserted-by":"crossref","first-page":"14","DOI":"10.1111\/j.1469-7998.2008.00436.x","article-title":"Parent
+        age differentially influences offspring size over the course of development
+        in Laysan albatross","volume":"276","author":"Dearborn","year":"2008","journal-title":"Journal
+        of Zoology"},{"key":"10.1111\/1365-2435.12231-BIB0019|fec12231-cit-0019","doi-asserted-by":"crossref","first-page":"585","DOI":"10.1002\/dev.20547","article-title":"Optimizing
+        temperament through litter size in short-lived, iteroparous mammals in seasonal
+        environments","volume":"53","author":"Eccard","year":"2011","journal-title":"Developmental
+        Psychobiology"},{"key":"10.1111\/1365-2435.12231-BIB0020|fec12231-cit-0020","doi-asserted-by":"crossref","first-page":"580","DOI":"10.1034\/j.1600-0706.2002.11833.x","article-title":"Direct
+        interference or indirect exploitation? An experimental study of fitness costs
+        of interspecific competition in voles","volume":"99","author":"Eccard","year":"2002","journal-title":"Oikos"},{"key":"10.1111\/1365-2435.12231-BIB0021|fec12231-cit-0021","volume-title":"Extending
+        the Linear Model with R. Generalized Linear, Mixed Effects and Nonparametric
+        Regression Models","author":"Faraway","year":"2006"},{"key":"10.1111\/1365-2435.12231-BIB0022|fec12231-cit-0022","doi-asserted-by":"crossref","first-page":"374","DOI":"10.1016\/S0169-5347(00)89141-7","article-title":"Age
+        and reproduction in birds-hypotheses and tests","volume":"10","author":"Forslund","year":"1995","journal-title":"Trends
+        in Ecology and Evolution"},{"key":"10.1111\/1365-2435.12231-BIB0023|fec12231-cit-0023","doi-asserted-by":"crossref","first-page":"367","DOI":"10.1146\/annurev.ecolsys.31.1.367","article-title":"Temporal
+        variation in fitness components and population dynamics of large herbivores","volume":"31","author":"Gaillard","year":"2000","journal-title":"Annual
+        Review of Ecology and Systematics"},{"key":"10.1111\/1365-2435.12231-BIB0024|fec12231-cit-0024","doi-asserted-by":"crossref","first-page":"333","DOI":"10.1016\/S0065-3454(08)60337-X","article-title":"Maternal
+        behavior in rabbits. A historical and multidisciplinary perspective","volume":"25","author":"Gonz\u00e1lez-Mariscal","year":"1996","journal-title":"Advances
+        in the Study of Behavior"},{"key":"10.1111\/1365-2435.12231-BIB0025|fec12231-cit-0025","first-page":"209","volume-title":"Endocrine
+        Disruptors Part II","author":"Gray","year":"2002"},{"key":"10.1111\/1365-2435.12231-BIB0026|fec12231-cit-0026","doi-asserted-by":"crossref","first-page":"310","DOI":"10.1111\/j.1365-2907.2011.00199.x","article-title":"Litter
+        sex ratio affects lifetime reproductive success of free-living female Alpine
+        marmots Marmota marmota","volume":"42","author":"Hackl\u00e4nder","year":"2012","journal-title":"Mammal
+        Review"},{"key":"10.1111\/1365-2435.12231-BIB0027|fec12231-cit-0027","doi-asserted-by":"crossref","first-page":"1","DOI":"10.1016\/S0065-3454(08)60362-9","article-title":"The
+        concept of stress and its relevance for animal behavior","volume":"27","author":"Holst","year":"1998","journal-title":"Advances
+        in the Study of Behavior"},{"key":"10.1111\/1365-2435.12231-BIB0028|fec12231-cit-0028","doi-asserted-by":"crossref","first-page":"388","DOI":"10.1007\/s001140050638","article-title":"Social
+        rank, stress, fitness, and life expectancy in wild rabbits","volume":"86","author":"Holst","year":"1999","journal-title":"Naturwissenschaften"},{"key":"10.1111\/1365-2435.12231-BIB0029|fec12231-cit-0029","doi-asserted-by":"crossref","first-page":"245","DOI":"10.1007\/s00265-001-0427-1","article-title":"Social
+        rank, fecundity and lifetime reproductive success in wild European rabbits
+        (Oryctolagus cuniculus)","volume":"51","author":"Holst","year":"2002","journal-title":"Behavioral
+        Ecology and Sociobiology"},{"key":"10.1111\/1365-2435.12231-BIB0030|fec12231-cit-0030","doi-asserted-by":"crossref","first-page":"180","DOI":"10.1016\/j.yhbeh.2012.09.009","article-title":"Sex
+        and dose-dependent effects of developmental exposure to bisphenol A on anxiety
+        and spatial learning in deer mice (Peromyscus maniculatus bairdii) offspring","volume":"63","author":"Ja\u0161arevi\u0107","year":"2013","journal-title":"Hormones
+        and Behavior"},{"key":"10.1111\/1365-2435.12231-BIB0031|fec12231-cit-0031","doi-asserted-by":"crossref","first-page":"133","DOI":"10.1007\/BF00293302","article-title":"Behavioral
+        ecology of alpine yellow-bellied marmots","volume":"5","author":"Johns","year":"1979","journal-title":"Behavioral
+        Ecology and Sociobiology"},{"key":"10.1111\/1365-2435.12231-BIB0032|fec12231-cit-0032","doi-asserted-by":"crossref","first-page":"793","DOI":"10.1016\/0031-9384(86)90434-8","article-title":"Intrauterine
+        position modulated maternal behaviors in female mice","volume":"36","author":"Kinsley","year":"1986","journal-title":"Physiology
+        and Behavior"},{"key":"10.1111\/1365-2435.12231-BIB0033|fec12231-cit-0033","doi-asserted-by":"crossref","first-page":"343","DOI":"10.1016\/S0169-5347(99)01639-0","article-title":"Early
+        development and fitness in birds and mammals","volume":"14","author":"Lindstr\u00f6m","year":"1999","journal-title":"Trends
+        in Ecology and Evolution"},{"key":"10.1111\/1365-2435.12231-BIB0034|fec12231-cit-0034","doi-asserted-by":"crossref","first-page":"10915","DOI":"10.1073\/pnas.0605875104","article-title":"Male
+        twins reduce fitness of female co-twins in humans","volume":"104","author":"Lummaa","year":"2007","journal-title":"Proceedings
+        of the National Academy of Science of the United States of America"},{"key":"10.1111\/1365-2435.12231-BIB0035|fec12231-cit-0035","doi-asserted-by":"crossref","first-page":"269","DOI":"10.1007\/BF03192526","article-title":"Nest
+        mortality in a population of small mammals","volume":"49","author":"Millar","year":"2004","journal-title":"Acta
+        Theriologica"},{"key":"10.1111\/1365-2435.12231-BIB0036|fec12231-cit-0036","doi-asserted-by":"crossref","first-page":"80","DOI":"10.1111\/j.1365-2656.2011.01888.x","article-title":"Litter
+        sex composition affects life-history traits in yellow-bellied marmots","volume":"80","author":"Moncl\u00fas","year":"2012","journal-title":"Journal
+        of Animal Ecology"},{"key":"10.1111\/1365-2435.12231-BIB0037|fec12231-cit-0037","doi-asserted-by":"crossref","first-page":"208","DOI":"10.1098\/rsbl.2011.0754","article-title":"Masculinized
+        female yellow-bellied marmots initiate more social interactions","volume":"8","author":"Moncl\u00fas","year":"2012","journal-title":"Biology
+        Letters"},{"key":"10.1111\/1365-2435.12231-BIB0038|fec12231-cit-0038","doi-asserted-by":"crossref","first-page":"403","DOI":"10.1016\/S0169-5347(98)01472-4","article-title":"The
+        adaptive significance of maternal effects","volume":"13","author":"Mousseau","year":"1998","journal-title":"Trends
+        in Ecology and Evolution"},{"key":"10.1111\/1365-2435.12231-BIB0039|fec12231-cit-0039","doi-asserted-by":"crossref","first-page":"1","DOI":"10.1071\/CWR9610001","article-title":"A
+        study of the biology of the wild rabbit, Oryctolagus cuniculus (L.), in confined
+        populations. II. The effects of season and population increase on behaviour","volume":"6","author":"Myers","year":"1961","journal-title":"Wildlife
+        Research"},{"key":"10.1111\/1365-2435.12231-BIB0040|fec12231-cit-0040","doi-asserted-by":"crossref","first-page":"225","DOI":"10.1071\/ZO9620225","article-title":"A
+        study of the biology of the wild rabbit, Oryctolagus cuniculus (L.), in confined
+        populations. III. Reproduction","volume":"10","author":"Myers","year":"1962","journal-title":"Australian
+        Journal of Zoology"},{"key":"10.1111\/1365-2435.12231-BIB0041|fec12231-cit-0041","doi-asserted-by":"crossref","first-page":"571","DOI":"10.1644\/1545-1542(2000)081<0571:TOHAMI>2.0.CO;2","article-title":"Timing
+        of hibernation and molt in female columbian ground squirrels","volume":"81","author":"Neuhaus","year":"2000","journal-title":"Journal
+        of Mammalogy"},{"key":"10.1111\/1365-2435.12231-BIB0042|fec12231-cit-0042","doi-asserted-by":"crossref","first-page":"482","DOI":"10.1038\/nature09210","article-title":"Coupled
+        dynamics of body mass and population growth in response to environmental change","volume":"466","author":"Ozgul","year":"2010","journal-title":"Nature"},{"key":"10.1111\/1365-2435.12231-BIB0043|fec12231-cit-0043","first-page":"578","article-title":"Comparison
+        of 3 methods to estimate rabbit abundance in a Mediterranean environment","volume":"29","author":"Palomares","year":"2001","journal-title":"Wildlife
+        Society Bulletin"},{"key":"10.1111\/1365-2435.12231-BIB0044|fec12231-cit-0044","doi-asserted-by":"crossref","first-page":"27","DOI":"10.1007\/s10344-010-0394-9","article-title":"Farming
+        for pests? Local and landscape-scale effects of grassland management on rabbit
+        densities","volume":"57","author":"Petrovan","year":"2011","journal-title":"European
+        Journal of Wildlife Research"},{"key":"10.1111\/1365-2435.12231-BIB0045|fec12231-cit-0045","volume-title":"R:
+        A Language and Environment for Statistical Computing","author":"R Development
+        Core Team","year":"2012"},{"key":"10.1111\/1365-2435.12231-BIB0046|fec12231-cit-0046","doi-asserted-by":"crossref","first-page":"677","DOI":"10.1007\/s00442-008-0958-5","article-title":"Optimal
+        litter size for individual growth of European rabbit pups depends on their
+        thermal environment","volume":"155","author":"R\u00f6del","year":"2008a","journal-title":"Oecologia"},{"key":"10.1111\/1365-2435.12231-BIB0047|fec12231-cit-0047","doi-asserted-by":"crossref","first-page":"789","DOI":"10.1111\/j.1365-2656.2009.01537.x","article-title":"Family
+        legacies: short- and long-term fitness consequences of early-life conditions
+        in female European rabbits","volume":"78","author":"R\u00f6del","year":"2009b","journal-title":"Journal
+        of Animal Ecology"},{"key":"10.1111\/1365-2435.12231-BIB0048|fec12231-cit-0048","doi-asserted-by":"crossref","first-page":"566","DOI":"10.1007\/s00442-004-1616-1","article-title":"Over-winter
+        survival in subadult European rabbits: weather effects, density dependence,
+        and the impact of individual characteristics","volume":"140","author":"R\u00f6del","year":"2004a","journal-title":"Oecologia"},{"key":"10.1111\/1365-2435.12231-BIB0049|fec12231-cit-0049","doi-asserted-by":"crossref","first-page":"529","DOI":"10.1111\/j.0030-1299.2004.12691.x","article-title":"Density-dependent
+        reproduction in the European rabbit: a consequence of individual response
+        and age-dependent reproductive performance","volume":"104","author":"R\u00f6del","year":"2004b","journal-title":"Oikos"},{"key":"10.1111\/1365-2435.12231-BIB0050|fec12231-cit-0050","doi-asserted-by":"crossref","first-page":"22","DOI":"10.1111\/j.1439-0310.2007.01447.x","article-title":"Infanticide
+        and maternal offspring defence in European rabbits under natural breeding
+        conditions","volume":"114","author":"R\u00f6del","year":"2008b","journal-title":"Ethology"},{"key":"10.1111\/1365-2435.12231-BIB0051|fec12231-cit-0051","doi-asserted-by":"crossref","first-page":"200","DOI":"10.1016\/j.mambio.2008.04.003","article-title":"Causes
+        and predictors of nest mortality in a European rabbit population","volume":"74","author":"R\u00f6del","year":"2009a","journal-title":"Mammalian
+        Biology"},{"key":"10.1111\/1365-2435.12231-BIB0052|fec12231-cit-0052","doi-asserted-by":"crossref","first-page":"665","DOI":"10.1016\/S0149-7634(02)00038-6","article-title":"Intrauterine
+        position effects","volume":"26","author":"Ryan","year":"2002","journal-title":"Neuroscience
+        and Biobehavioral Reviews"},{"key":"10.1111\/1365-2435.12231-BIB0053|fec12231-cit-0053","doi-asserted-by":"crossref","first-page":"1824","DOI":"10.2527\/jas1989.6771824x","article-title":"Sexual
+        differentiation in litter-bearing mammals: influence of sex of adjacent fetuses
+        in utero","volume":"67","author":"vom Saal","year":"1989","journal-title":"Journal
+        of Animal Science"},{"key":"10.1111\/1365-2435.12231-BIB0054|fec12231-cit-0054","doi-asserted-by":"crossref","first-page":"842","DOI":"10.1095\/biolreprod19.4.842","article-title":"In
+        utero proximity of female mouse fetuses to males: effect on reproductive performance
+        during later life","volume":"19","author":"vom Saal","year":"1978","journal-title":"Biology
+        of Reproduction"},{"key":"10.1111\/1365-2435.12231-BIB0055|fec12231-cit-0055","doi-asserted-by":"crossref","first-page":"597","DOI":"10.1126\/science.7367881","article-title":"Sexual
+        characteristics of adult female mice are correlated with their blood testosterone
+        levels during prenatal development","volume":"208","author":"vom Saal","year":"1980","journal-title":"Science"},{"key":"10.1111\/1365-2435.12231-BIB0056|fec12231-cit-0056","doi-asserted-by":"crossref","first-page":"73","DOI":"10.1017\/S0952836904006089","article-title":"Weather
+        influences on demography of the yellow-bellied marmot (Marmota flaviventris)","volume":"265","author":"Schwartz","year":"2005","journal-title":"Journal
+        of Zoology"},{"key":"10.1111\/1365-2435.12231-BIB0057|fec12231-cit-0057","doi-asserted-by":"crossref","first-page":"1761","DOI":"10.1098\/rspb.2008.0340","article-title":"Local
+        resource competition and local resource enhancement shape primate birth sex
+        ratios","volume":"275","author":"Silk","year":"2008","journal-title":"Proceedings
+        of the Royal Society of London. Series B, Biological Sciences"},{"key":"10.1111\/1365-2435.12231-BIB0058|fec12231-cit-0058","volume-title":"The
+        Evolution of Life Histories","author":"Stearns","year":"1992"},{"key":"10.1111\/1365-2435.12231-BIB0059|fec12231-cit-0059","doi-asserted-by":"crossref","first-page":"310","DOI":"10.1111\/j.1600-0587.2008.05532.x","article-title":"Breeding
+        like rabbits: global patterns of variability and determinants of European
+        wild rabbit reproduction","volume":"32","author":"Tablado","year":"2009","journal-title":"Ecography"},{"key":"10.1111\/1365-2435.12231-BIB0060|fec12231-cit-0060","doi-asserted-by":"crossref","first-page":"90","DOI":"10.1126\/science.179.4068.90","article-title":"Natural
+        selection of parental ability to vary the sex ratio of offspring","volume":"179","author":"Trivers","year":"1973","journal-title":"Science"},{"key":"10.1111\/1365-2435.12231-BIB0061|fec12231-cit-0061","doi-asserted-by":"crossref","first-page":"2511","DOI":"10.1111\/j.0014-3820.2004.tb00880.x","article-title":"Long-lasting
+        fitness consequences of prenatal sex ratio in a viviparous lizard","volume":"58","author":"Uller","year":"2004","journal-title":"Evolution"},{"key":"10.1111\/1365-2435.12231-BIB0062|fec12231-cit-0062","doi-asserted-by":"crossref","first-page":"1755","DOI":"10.1139\/z91-244","article-title":"Duration
+        of snow cover and its influence on life-history variation in yellow-bellied
+        marmots","volume":"69","author":"Vuren","year":"1991","journal-title":"Canadian
+        Journal of Zoology"},{"key":"10.1111\/1365-2435.12231-BIB0063|fec12231-cit-0063","first-page":"22","article-title":"A
+        field study of seasonal changes in circadian activity of rabbits","volume":"54","author":"Wallage-Drees","year":"1989","journal-title":"Zeitschrift
+        f\u00fcr S\u00e4ugetierkunde"},{"key":"10.1111\/1365-2435.12231-BIB0064|fec12231-cit-0064","doi-asserted-by":"crossref","first-page":"229","DOI":"10.1002\/dev.1017","article-title":"Variation
+        in reproductive traits is associated with short anogenital distance in female
+        rats","volume":"38","author":"Zehr","year":"2001","journal-title":"Developmental
+        Psychobiology"},{"key":"10.1111\/1365-2435.12231-BIB0065|fec12231-cit-0065","doi-asserted-by":"crossref","first-page":"955","DOI":"10.1016\/S0003-3472(05)80148-4","article-title":"Increased
+        survivorship of testosterone-treated female house mice, Mus musculus, in high-density
+        field conditions","volume":"42","author":"Zielinski","year":"1991","journal-title":"Animal
+        Behaviour"}],"container-title":["Functional Ecology"],"language":"en","link":[{"URL":"https:\/\/api.wiley.com\/onlinelibrary\/tdm\/v1\/articles\/10.1111%2F1365-2435.12231","content-type":"unspecified","content-version":"vor","intended-application":"text-mining"},{"URL":"http:\/\/onlinelibrary.wiley.com\/wol1\/doi\/10.1111\/1365-2435.12231\/fullpdf","content-type":"unspecified","content-version":"vor","intended-application":"similarity-checking"}],"deposited":{"date-parts":[[2021,7,5]],"date-time":"2021-07-05T16:52:05Z","timestamp":1625503925000},"score":0.0,"resource":{"primary":{"URL":"https:\/\/onlinelibrary.wiley.com\/doi\/10.1111\/1365-2435.12231"}},"editor":[{"given":"Jonathan","family":"Blount","sequence":"additional","affiliation":[]}],"issued":{"date-parts":[[2014,1,20]]},"references-count":65,"journal-issue":{"issue":"4","published-print":{"date-parts":[[2014,8]]}},"URL":"http:\/\/dx.doi.org\/10.1111\/1365-2435.12231","ISSN":["0269-8463"],"issn-type":[{"value":"0269-8463","type":"print"}],"subject":["Ecology,
+        Evolution, Behavior and Systematics"],"published":{"date-parts":[[2014,1,20]]}}],"items-per-page":5,"query":{"start-index":0,"search-terms":null}}}'
+  recorded_at: 2022-11-09 12:36:59 GMT
+  recorded_with: vcr/1.1.0, webmockr/0.8.0
 - request:
     method: get
     uri: https://api.crossref.org/funders?query=NSF&rows=1
@@ -549,38 +490,45 @@ http_interactions:
     headers:
       Accept-Encoding: gzip, deflate
       Accept: application/json, text/xml, application/xml, */*
-      User-Agent: r-curl/4.3.2 crul/1.1.0 rOpenSci(rcrossref/1.1.0.94) (mailto:<crossref_email>)
-      X-USER-AGENT: r-curl/4.3.2 crul/1.1.0 rOpenSci(rcrossref/1.1.0.94) (mailto:<crossref_email>)
+      User-Agent: r-curl/4.3.2 crul/1.3 rOpenSci(rcrossref/1.1.0.99) (mailto:<crossref_email>)
+      X-USER-AGENT: r-curl/4.3.2 crul/1.3 rOpenSci(rcrossref/1.1.0.99) (mailto:<crossref_email>)
   response:
     status:
       status_code: '200'
       message: OK
       explanation: Request fulfilled, document follows
     headers:
-      access-control-allow-headers: X-Requested-With
+      access-control-allow-headers: X-Requested-With, Accept, Accept-Encoding, Accept-Charset,
+        Accept-Language, Accept-Ranges, Cache-Control
       access-control-allow-origin: '*'
+      access-control-expose-headers: Link
       connection: close
-      content-length: '453'
+      content-encoding: gzip
+      content-length: '372'
       content-type: application/json
-      date: Tue, 17 Aug 2021 17:22:59 GMT
+      date: Wed, 09 Nov 2022 12:36:59 GMT
       permissions-policy: interest-cohort=()
       server: Jetty(9.4.40.v20210413)
       set-cookie:
-      - AWSALB=R8WdNjNBAf2dKa+GGk8vogPtn9QlF6ktoVxLukXREhNY2kYOWOYLsDiIeDsvgEhemO/Tb/PLh82y5/fihJoKeTULecF4bvi3LdIMG8Hkzd7qKiePyfki7z7rcCeR;
-        Expires=Tue, 24 Aug 2021 17:22:59 GMT; Path=/
-      - AWSALBCORS=R8WdNjNBAf2dKa+GGk8vogPtn9QlF6ktoVxLukXREhNY2kYOWOYLsDiIeDsvgEhemO/Tb/PLh82y5/fihJoKeTULecF4bvi3LdIMG8Hkzd7qKiePyfki7z7rcCeR;
-        Expires=Tue, 24 Aug 2021 17:22:59 GMT; Path=/; SameSite=None
+      - AWSALB=6JRifdeOUoM4+HHsGh7o4K/SXZzzL9ShReF2YP4bOOH/gjQ3onzaPlN3wkjIS8EBPrvZ+eXwggmv6ZZj0A4IGRNxeatqYwwGslZwKnZEuHlpasAlXiI0OsEGMPy8;
+        Expires=Wed, 16 Nov 2022 12:36:59 GMT; Path=/
+      - AWSALBCORS=6JRifdeOUoM4+HHsGh7o4K/SXZzzL9ShReF2YP4bOOH/gjQ3onzaPlN3wkjIS8EBPrvZ+eXwggmv6ZZj0A4IGRNxeatqYwwGslZwKnZEuHlpasAlXiI0OsEGMPy8;
+        Expires=Wed, 16 Nov 2022 12:36:59 GMT; Path=/; SameSite=None
       status: HTTP/1.1 200 OK
+      vary: Accept-Encoding
       x-api-pool: polite
       x-rate-limit-interval: 1s
       x-rate-limit-limit: '50'
       x-ratelimit-interval: 1s
       x-ratelimit-limit: '50'
     body:
-      encoding: UTF-8
+      encoding: ''
       file: no
-      string: '{"status":"ok","message-type":"funder-list","message-version":"1.0.0","message":{"items-per-page":1,"query":{"start-index":0,"search-terms":"NSF"},"total-results":39,"items":[{"id":"100000001","location":"United
-        States","name":"National Science Foundation","alt-names":["USA NSF","NSF","US
-        NSF"],"uri":"http:\/\/dx.doi.org\/10.13039\/100000001","replaces":[],"replaced-by":[],"tokens":["national","science","foundation","usa","nsf","nsf","us","nsf"]}]}}'
-  recorded_at: 2021-08-17 17:23:00 GMT
-  recorded_with: vcr/1.0.2, webmockr/0.8.0
+      string: '{"status":"ok","message-type":"funder-list","message-version":"1.0.0","message":{"items-per-page":1,"query":{"start-index":0,"search-terms":"NSF"},"total-results":81,"items":[{"id":"100000150","location":"United
+        States","name":"Division of Emerging Frontiers in Research and Innovation","alt-names":["NSF''s
+        Emerging Frontiers in Research and Innovation","EFRI","NSF EFRI","Emerging
+        Frontiers in Research and Innovation","NSF''s Division of Emerging Frontiers
+        in Research and Innovation","NSF Emerging Frontiers in Research and Innovation","NSF:
+        Emerging Frontiers In Research And Innovation"],"uri":"http:\/\/dx.doi.org\/10.13039\/100000150","replaces":[],"replaced-by":[],"tokens":["division","of","emerging","frontiers","in","research","and","innovation","nsfs","emerging","frontiers","in","research","and","innovation","efri","nsf","efri","emerging","frontiers","in","research","and","innovation","nsfs","division","of","emerging","frontiers","in","research","and","innovation","nsf","emerging","frontiers","in","research","and","innovation","nsf:","emerging","frontiers","in","research","and","innovation"]}]}}'
+  recorded_at: 2022-11-09 12:36:59 GMT
+  recorded_with: vcr/1.1.0, webmockr/0.8.0

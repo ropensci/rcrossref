@@ -8,28 +8,30 @@ http_interactions:
     headers:
       Accept-Encoding: gzip, deflate
       Accept: application/json, text/xml, application/xml, */*
-      User-Agent: r-curl/4.3.2 crul/1.1.0 rOpenSci(rcrossref/1.1.0.94) (mailto:<crossref_email>)
-      X-USER-AGENT: r-curl/4.3.2 crul/1.1.0 rOpenSci(rcrossref/1.1.0.94) (mailto:<crossref_email>)
+      User-Agent: r-curl/4.3.2 crul/1.3 rOpenSci(rcrossref/1.1.0.99) (mailto:<crossref_email>)
+      X-USER-AGENT: r-curl/4.3.2 crul/1.3 rOpenSci(rcrossref/1.1.0.99) (mailto:<crossref_email>)
   response:
     status:
       status_code: '200'
       message: OK
       explanation: Request fulfilled, document follows
     headers:
-      access-control-allow-headers: X-Requested-With
+      access-control-allow-headers: X-Requested-With, Accept, Accept-Encoding, Accept-Charset,
+        Accept-Language, Accept-Ranges, Cache-Control
       access-control-allow-origin: '*'
+      access-control-expose-headers: Link
       connection: close
       content-encoding: gzip
-      content-length: '2431'
+      content-length: '3212'
       content-type: application/json
-      date: Tue, 17 Aug 2021 17:25:11 GMT
+      date: Wed, 09 Nov 2022 09:45:18 GMT
       permissions-policy: interest-cohort=()
       server: Jetty(9.4.40.v20210413)
       set-cookie:
-      - AWSALB=ah8Bgay76wq6FoY6AwZhZg5m2NfPgnAnr3oyM3dvNgOnxEXafYGeoqReoH1AtvSUdDOsALxDdg3YqT//ivbd/UTSsYEkQfRPs7tyZCzZPa40ADqGWkLRqIR3LZao;
-        Expires=Tue, 24 Aug 2021 17:25:11 GMT; Path=/
-      - AWSALBCORS=ah8Bgay76wq6FoY6AwZhZg5m2NfPgnAnr3oyM3dvNgOnxEXafYGeoqReoH1AtvSUdDOsALxDdg3YqT//ivbd/UTSsYEkQfRPs7tyZCzZPa40ADqGWkLRqIR3LZao;
-        Expires=Tue, 24 Aug 2021 17:25:11 GMT; Path=/; SameSite=None
+      - AWSALB=+MiwhM9zSq7FMvIdm68Ckqzgi3UgBOtMQGYyKt4nV01FqcGCKJpg2H1Ki21juZOLjp5sB3+gqmVY4VWagsIkBSj02F/qn59Ovl1Cj801hpbPmjNvy4PYpBE9owfs;
+        Expires=Wed, 16 Nov 2022 09:44:43 GMT; Path=/
+      - AWSALBCORS=+MiwhM9zSq7FMvIdm68Ckqzgi3UgBOtMQGYyKt4nV01FqcGCKJpg2H1Ki21juZOLjp5sB3+gqmVY4VWagsIkBSj02F/qn59Ovl1Cj801hpbPmjNvy4PYpBE9owfs;
+        Expires=Wed, 16 Nov 2022 09:44:43 GMT; Path=/; SameSite=None
       status: HTTP/1.1 200 OK
       vary: Accept-Encoding
       x-api-pool: polite
@@ -38,47 +40,68 @@ http_interactions:
       x-ratelimit-interval: 1s
       x-ratelimit-limit: '50'
     body:
-      encoding: UTF-8
+      encoding: ''
       file: no
-      string: '{"status":"ok","message-type":"work-list","message-version":"1.0.0","message":{"facets":{},"total-results":17466879,"items":[{"indexed":{"date-parts":[[2021,5,6]],"date-time":"2021-05-06T20:37:18Z","timestamp":1620333438642},"reference-count":0,"publisher":"Elsevier
-        BV","issue":"6","license":[{"start":{"date-parts":[[1969,12,1]],"date-time":"1969-12-01T00:00:00Z","timestamp":-2678400000},"content-version":"tdm","delay-in-days":0,"URL":"https:\/\/www.elsevier.com\/tdm\/userlicense\/1.0\/"}],"content-domain":{"domain":[],"crossmark-restriction":false},"short-container-title":["The
-        Journal of Pediatrics"],"published-print":{"date-parts":[[1969,12]]},"DOI":"10.1016\/s0022-3476(69)80360-4","type":"journal-article","created":{"date-parts":[[2006,4,28]],"date-time":"2006-04-28T12:56:01Z","timestamp":1146228961000},"page":"1100-1110","source":"Crossref","is-referenced-by-count":0,"title":["Subject
-        index"],"prefix":"10.1016","volume":"75","member":"78","container-title":["The
-        Journal of Pediatrics"],"language":"en","link":[{"URL":"https:\/\/api.elsevier.com\/content\/article\/PII:S0022347669803604?httpAccept=text\/xml","content-type":"text\/xml","content-version":"vor","intended-application":"text-mining"},{"URL":"https:\/\/api.elsevier.com\/content\/article\/PII:S0022347669803604?httpAccept=text\/plain","content-type":"text\/plain","content-version":"vor","intended-application":"text-mining"}],"deposited":{"date-parts":[[2019,1,16]],"date-time":"2019-01-16T22:29:10Z","timestamp":1547677750000},"score":0.0,"issued":{"date-parts":[[1969,12]]},"references-count":0,"journal-issue":{"issue":"6","published-print":{"date-parts":[[1969,12]]}},"alternative-id":["S0022347669803604"],"URL":"http:\/\/dx.doi.org\/10.1016\/s0022-3476(69)80360-4","ISSN":["0022-3476"],"issn-type":[{"value":"0022-3476","type":"print"}],"subject":["Pediatrics,
-        Perinatology, and Child Health"],"published":{"date-parts":[[1969,12]]}},{"indexed":{"date-parts":[[2021,5,6]],"date-time":"2021-05-06T20:37:19Z","timestamp":1620333439742},"reference-count":0,"publisher":"Elsevier
-        BV","issue":"8","license":[{"start":{"date-parts":[[1999,8,1]],"date-time":"1999-08-01T00:00:00Z","timestamp":933465600000},"content-version":"tdm","delay-in-days":0,"URL":"https:\/\/www.elsevier.com\/tdm\/userlicense\/1.0\/"}],"content-domain":{"domain":[],"crossmark-restriction":false},"short-container-title":["Metal
-        Finishing"],"published-print":{"date-parts":[[1999,8]]},"DOI":"10.1016\/s0026-0576(01)80141-0","type":"journal-article","created":{"date-parts":[[2002,7,25]],"date-time":"2002-07-25T20:00:10Z","timestamp":1027627210000},"page":"37","source":"Crossref","is-referenced-by-count":0,"title":["Centrifugal
-        pumps"],"prefix":"10.1016","volume":"97","member":"78","container-title":["Metal
-        Finishing"],"language":"en","link":[{"URL":"https:\/\/api.elsevier.com\/content\/article\/PII:S0026057601801410?httpAccept=text\/xml","content-type":"text\/xml","content-version":"vor","intended-application":"text-mining"},{"URL":"https:\/\/api.elsevier.com\/content\/article\/PII:S0026057601801410?httpAccept=text\/plain","content-type":"text\/plain","content-version":"vor","intended-application":"text-mining"}],"deposited":{"date-parts":[[2019,4,22]],"date-time":"2019-04-22T01:28:36Z","timestamp":1555896516000},"score":0.0,"issued":{"date-parts":[[1999,8]]},"references-count":0,"journal-issue":{"issue":"8","published-print":{"date-parts":[[1999,8]]}},"alternative-id":["S0026057601801410"],"URL":"http:\/\/dx.doi.org\/10.1016\/s0026-0576(01)80141-0","ISSN":["0026-0576"],"issn-type":[{"value":"0026-0576","type":"print"}],"subject":["Industrial
-        and Manufacturing Engineering","Metals and Alloys","Polymers and Plastics","Pollution","Waste
-        Management and Disposal"],"published":{"date-parts":[[1999,8]]}},{"indexed":{"date-parts":[[2021,5,6]],"date-time":"2021-05-06T20:37:22Z","timestamp":1620333442103},"reference-count":4,"publisher":"Elsevier
-        BV","issue":"1","license":[{"start":{"date-parts":[[2001,1,1]],"date-time":"2001-01-01T00:00:00Z","timestamp":978307200000},"content-version":"tdm","delay-in-days":0,"URL":"https:\/\/www.elsevier.com\/tdm\/userlicense\/1.0\/"}],"content-domain":{"domain":[],"crossmark-restriction":false},"short-container-title":["The
-        American Journal of Surgery"],"published-print":{"date-parts":[[2001,1]]},"DOI":"10.1016\/s0002-9610(00)00531-6","type":"journal-article","created":{"date-parts":[[2002,7,25]],"date-time":"2002-07-25T20:01:38Z","timestamp":1027627298000},"page":"28-29","source":"Crossref","is-referenced-by-count":0,"title":["Removal
-        of the thrombosed prosthetic axillofemoral graft"],"prefix":"10.1016","volume":"181","author":[{"given":"Ertugrul","family":"Ozal","sequence":"first","affiliation":[]},{"given":"Bilgehan
-        Savas","family":"Oz","sequence":"additional","affiliation":[]},{"given":"Nezihi","family":"Kucukarslan","sequence":"additional","affiliation":[]},{"given":"Celalettin","family":"Gunay","sequence":"additional","affiliation":[]},{"given":"Ahmet
-        Turan","family":"Yilmaz","sequence":"additional","affiliation":[]},{"given":"Harun","family":"Tatar","sequence":"additional","affiliation":[]}],"member":"78","reference":[{"key":"10.1016\/S0002-9610(00)00531-6_BIB1","first-page":"646","article-title":"Revision
-        of failed infrainguinal bypass graft","volume":"100","author":"Green","year":"1986","journal-title":"Surgery"},{"key":"10.1016\/S0002-9610(00)00531-6_BIB2","first-page":"800","article-title":"Removal
-        of a thrombosed graft","volume":"156","author":"Haimovici","year":"1983","journal-title":"Surg
-        Gynecol Obstet"},{"key":"10.1016\/S0002-9610(00)00531-6_BIB3","doi-asserted-by":"crossref","first-page":"175","DOI":"10.1016\/S0002-9610(96)00145-6","article-title":"The
-        thrombosed prosthetic graft is risk for infection of an adjacent graft","volume":"172","author":"Marsan","year":"1996","journal-title":"Am
-        J Surg"},{"key":"10.1016\/S0002-9610(00)00531-6_BIB4","series-title":"Haimovici\u2019s
-        vascular surgery","first-page":"740","article-title":"Reoperation for early
-        and late complications of arterial surgery","author":"Moore","year":"1996"}],"container-title":["The
-        American Journal of Surgery"],"language":"en","link":[{"URL":"https:\/\/api.elsevier.com\/content\/article\/PII:S0002961000005316?httpAccept=text\/xml","content-type":"text\/xml","content-version":"vor","intended-application":"text-mining"},{"URL":"https:\/\/api.elsevier.com\/content\/article\/PII:S0002961000005316?httpAccept=text\/plain","content-type":"text\/plain","content-version":"vor","intended-application":"text-mining"}],"deposited":{"date-parts":[[2019,4,22]],"date-time":"2019-04-22T00:55:44Z","timestamp":1555894544000},"score":0.0,"issued":{"date-parts":[[2001,1]]},"references-count":4,"journal-issue":{"issue":"1","published-print":{"date-parts":[[2001,1]]}},"alternative-id":["S0002961000005316"],"URL":"http:\/\/dx.doi.org\/10.1016\/s0002-9610(00)00531-6","ISSN":["0002-9610"],"issn-type":[{"value":"0002-9610","type":"print"}],"subject":["General
-        Medicine","Surgery"],"published":{"date-parts":[[2001,1]]}},{"indexed":{"date-parts":[[2021,5,6]],"date-time":"2021-05-06T20:37:22Z","timestamp":1620333442107},"reference-count":0,"publisher":"Elsevier
-        BV","issue":"3","license":[{"start":{"date-parts":[[1997,1,1]],"date-time":"1997-01-01T00:00:00Z","timestamp":852076800000},"content-version":"tdm","delay-in-days":0,"URL":"https:\/\/www.elsevier.com\/tdm\/userlicense\/1.0\/"}],"content-domain":{"domain":[],"crossmark-restriction":false},"short-container-title":["Early
-        Childhood Research Quarterly"],"published-print":{"date-parts":[[1997,1]]},"DOI":"10.1016\/s0885-2006(97)90001-6","type":"journal-article","created":{"date-parts":[[2002,7,25]],"date-time":"2002-07-25T15:59:15Z","timestamp":1027612755000},"page":"245","source":"Crossref","is-referenced-by-count":0,"title":["From
-        the editor"],"prefix":"10.1016","volume":"12","author":[{"given":"Marion C.","family":"Hyson","sequence":"first","affiliation":[]}],"member":"78","container-title":["Early
-        Childhood Research Quarterly"],"language":"en","link":[{"URL":"https:\/\/api.elsevier.com\/content\/article\/PII:S0885200697900016?httpAccept=text\/xml","content-type":"text\/xml","content-version":"vor","intended-application":"text-mining"},{"URL":"https:\/\/api.elsevier.com\/content\/article\/PII:S0885200697900016?httpAccept=text\/plain","content-type":"text\/plain","content-version":"vor","intended-application":"text-mining"}],"deposited":{"date-parts":[[2019,4,21]],"date-time":"2019-04-21T21:52:49Z","timestamp":1555883569000},"score":0.0,"issued":{"date-parts":[[1997,1]]},"references-count":0,"journal-issue":{"issue":"3","published-print":{"date-parts":[[1997,1]]}},"alternative-id":["S0885200697900016"],"URL":"http:\/\/dx.doi.org\/10.1016\/s0885-2006(97)90001-6","ISSN":["0885-2006"],"issn-type":[{"value":"0885-2006","type":"print"}],"subject":["Sociology
-        and Political Science","Developmental and Educational Psychology","Education"],"published":{"date-parts":[[1997,1]]}},{"indexed":{"date-parts":[[2021,5,6]],"date-time":"2021-05-06T20:37:22Z","timestamp":1620333442693},"reference-count":0,"publisher":"Elsevier
-        BV","issue":"1","license":[{"start":{"date-parts":[[1989,10,1]],"date-time":"1989-10-01T00:00:00Z","timestamp":623203200000},"content-version":"tdm","delay-in-days":0,"URL":"https:\/\/www.elsevier.com\/tdm\/userlicense\/1.0\/"}],"content-domain":{"domain":[],"crossmark-restriction":false},"short-container-title":["Journal
-        of Fluorine Chemistry"],"published-print":{"date-parts":[[1989,10]]},"DOI":"10.1016\/s0022-1139(00)84566-2","type":"journal-article","created":{"date-parts":[[2002,7,25]],"date-time":"2002-07-25T20:03:13Z","timestamp":1027627393000},"page":"196","source":"Crossref","is-referenced-by-count":0,"title":["Fast
-        ionic fluoride conductors: General criteria and modeling"],"prefix":"10.1016","volume":"45","author":[{"given":"J.M.","family":"R\u00e9au","sequence":"first","affiliation":[]},{"given":"J.","family":"Senegas","sequence":"additional","affiliation":[]},{"given":"M.","family":"Elomari","sequence":"additional","affiliation":[]},{"given":"P.","family":"Hagenmuller","sequence":"additional","affiliation":[]}],"member":"78","container-title":["Journal
-        of Fluorine Chemistry"],"language":"en","link":[{"URL":"https:\/\/api.elsevier.com\/content\/article\/PII:S0022113900845662?httpAccept=text\/xml","content-type":"text\/xml","content-version":"vor","intended-application":"text-mining"},{"URL":"https:\/\/api.elsevier.com\/content\/article\/PII:S0022113900845662?httpAccept=text\/plain","content-type":"text\/plain","content-version":"vor","intended-application":"text-mining"}],"deposited":{"date-parts":[[2019,4,22]],"date-time":"2019-04-22T00:22:46Z","timestamp":1555892566000},"score":0.0,"issued":{"date-parts":[[1989,10]]},"references-count":0,"journal-issue":{"issue":"1","published-print":{"date-parts":[[1989,10]]}},"alternative-id":["S0022113900845662"],"URL":"http:\/\/dx.doi.org\/10.1016\/s0022-1139(00)84566-2","ISSN":["0022-1139"],"issn-type":[{"value":"0022-1139","type":"print"}],"subject":["Inorganic
-        Chemistry","Organic Chemistry","Physical and Theoretical Chemistry","Environmental
-        Chemistry","Biochemistry"],"published":{"date-parts":[[1989,10]]}}],"items-per-page":5,"query":{"start-index":0,"search-terms":null}}}'
-  recorded_at: 2021-08-17 17:25:12 GMT
-  recorded_with: vcr/1.0.2, webmockr/0.8.0
+      string: '{"status":"ok","message-type":"work-list","message-version":"1.0.0","message":{"facets":{},"total-results":18387602,"items":[{"indexed":{"date-parts":[[2022,3,30]],"date-time":"2022-03-30T13:50:52Z","timestamp":1648648252049},"reference-count":0,"publisher":"Elsevier
+        BV","issue":"9781","license":[{"start":{"date-parts":[[2011,6,1]],"date-time":"2011-06-01T00:00:00Z","timestamp":1306886400000},"content-version":"tdm","delay-in-days":0,"URL":"https:\/\/www.elsevier.com\/tdm\/userlicense\/1.0\/"}],"content-domain":{"domain":[],"crossmark-restriction":false},"short-container-title":["The
+        Lancet"],"published-print":{"date-parts":[[2011,6]]},"DOI":"10.1016\/s0140-6736(11)60792-7","type":"journal-article","created":{"date-parts":[[2011,6,4]],"date-time":"2011-06-04T21:55:09Z","timestamp":1307224509000},"page":"1892","source":"Crossref","is-referenced-by-count":1,"title":["Specialist
+        nurses and lung cancer"],"prefix":"10.1016","volume":"377","author":[{"family":"The
+        Lancet","sequence":"first","affiliation":[]}],"member":"78","container-title":["The
+        Lancet"],"language":"en","link":[{"URL":"https:\/\/api.elsevier.com\/content\/article\/PII:S0140673611607927?httpAccept=text\/xml","content-type":"text\/xml","content-version":"vor","intended-application":"text-mining"},{"URL":"https:\/\/api.elsevier.com\/content\/article\/PII:S0140673611607927?httpAccept=text\/plain","content-type":"text\/plain","content-version":"vor","intended-application":"text-mining"}],"deposited":{"date-parts":[[2018,12,2]],"date-time":"2018-12-02T10:50:59Z","timestamp":1543747859000},"score":0.0,"resource":{"primary":{"URL":"https:\/\/linkinghub.elsevier.com\/retrieve\/pii\/S0140673611607927"}},"issued":{"date-parts":[[2011,6]]},"references-count":0,"journal-issue":{"issue":"9781","published-print":{"date-parts":[[2011,6]]}},"alternative-id":["S0140673611607927"],"URL":"http:\/\/dx.doi.org\/10.1016\/s0140-6736(11)60792-7","ISSN":["0140-6736"],"issn-type":[{"value":"0140-6736","type":"print"}],"subject":["General
+        Medicine"],"published":{"date-parts":[[2011,6]]}},{"indexed":{"date-parts":[[2022,3,30]],"date-time":"2022-03-30T13:50:52Z","timestamp":1648648252173},"reference-count":0,"publisher":"Elsevier
+        BV","issue":"3","license":[{"start":{"date-parts":[[1982,1,1]],"date-time":"1982-01-01T00:00:00Z","timestamp":378691200000},"content-version":"tdm","delay-in-days":0,"URL":"https:\/\/www.elsevier.com\/tdm\/userlicense\/1.0\/"}],"content-domain":{"domain":[],"crossmark-restriction":false},"short-container-title":["Ocean
+        Engineering"],"published-print":{"date-parts":[[1982]]},"DOI":"10.1016\/0029-8018(82)90023-3","type":"journal-article","created":{"date-parts":[[2005,2,10]],"date-time":"2005-02-10T18:17:54Z","timestamp":1108059474000},"page":"293","source":"Crossref","is-referenced-by-count":0,"title":["An
+        economic device for protecting bridge piers against ship collisions"],"prefix":"10.1016","volume":"9","member":"78","container-title":["Ocean
+        Engineering"],"language":"en","link":[{"URL":"https:\/\/api.elsevier.com\/content\/article\/PII:0029801882900233?httpAccept=text\/xml","content-type":"text\/xml","content-version":"vor","intended-application":"text-mining"},{"URL":"https:\/\/api.elsevier.com\/content\/article\/PII:0029801882900233?httpAccept=text\/plain","content-type":"text\/plain","content-version":"vor","intended-application":"text-mining"}],"deposited":{"date-parts":[[2019,1,4]],"date-time":"2019-01-04T22:47:07Z","timestamp":1546642027000},"score":0.0,"resource":{"primary":{"URL":"https:\/\/linkinghub.elsevier.com\/retrieve\/pii\/0029801882900233"}},"issued":{"date-parts":[[1982]]},"references-count":0,"journal-issue":{"issue":"3","published-print":{"date-parts":[[1982]]}},"alternative-id":["0029801882900233"],"URL":"http:\/\/dx.doi.org\/10.1016\/0029-8018(82)90023-3","ISSN":["0029-8018"],"issn-type":[{"value":"0029-8018","type":"print"}],"subject":["Ocean
+        Engineering","Environmental Engineering"],"published":{"date-parts":[[1982]]}},{"indexed":{"date-parts":[[2022,3,30]],"date-time":"2022-03-30T13:51:03Z","timestamp":1648648263917},"reference-count":0,"publisher":"Elsevier
+        BV","issue":"10","license":[{"start":{"date-parts":[[2016,10,1]],"date-time":"2016-10-01T00:00:00Z","timestamp":1475280000000},"content-version":"tdm","delay-in-days":0,"URL":"https:\/\/www.elsevier.com\/tdm\/userlicense\/1.0\/"}],"content-domain":{"domain":[],"crossmark-restriction":false},"short-container-title":["Journal
+        of the American Academy of Child &amp; Adolescent Psychiatry"],"published-print":{"date-parts":[[2016,10]]},"DOI":"10.1016\/j.jaac.2016.07.660","type":"journal-article","created":{"date-parts":[[2016,10,21]],"date-time":"2016-10-21T17:18:58Z","timestamp":1477070338000},"page":"S57","source":"Crossref","is-referenced-by-count":0,"title":["37.3
+        FLAVORS FROM THE STEW POT: INDIGENOUS AND CROSS-CULTURAL RESEARCH, SCHOLARSHIP,
+        AND CAREER DEVELOPMENT IN HAWAI''I"],"prefix":"10.1016","volume":"55","author":[{"given":"Anthony
+        P.","family":"Guerrero","sequence":"first","affiliation":[]},{"given":"Naleen
+        N.","family":"Andrade","sequence":"additional","affiliation":[]},{"given":"Earl
+        S.","family":"Hishinuma","sequence":"additional","affiliation":[]},{"given":"Deborah","family":"Goebert","sequence":"additional","affiliation":[]}],"member":"78","container-title":["Journal
+        of the American Academy of Child &amp; Adolescent Psychiatry"],"language":"en","link":[{"URL":"https:\/\/api.elsevier.com\/content\/article\/PII:S0890856716310097?httpAccept=text\/xml","content-type":"text\/xml","content-version":"vor","intended-application":"text-mining"},{"URL":"https:\/\/api.elsevier.com\/content\/article\/PII:S0890856716310097?httpAccept=text\/plain","content-type":"text\/plain","content-version":"vor","intended-application":"text-mining"}],"deposited":{"date-parts":[[2019,8,29]],"date-time":"2019-08-29T16:49:58Z","timestamp":1567097398000},"score":0.0,"resource":{"primary":{"URL":"https:\/\/linkinghub.elsevier.com\/retrieve\/pii\/S0890856716310097"}},"issued":{"date-parts":[[2016,10]]},"references-count":0,"journal-issue":{"issue":"10","published-print":{"date-parts":[[2016,10]]}},"alternative-id":["S0890856716310097"],"URL":"http:\/\/dx.doi.org\/10.1016\/j.jaac.2016.07.660","ISSN":["0890-8567"],"issn-type":[{"value":"0890-8567","type":"print"}],"subject":["Psychiatry
+        and Mental health","Developmental and Educational Psychology"],"published":{"date-parts":[[2016,10]]}},{"indexed":{"date-parts":[[2022,3,30]],"date-time":"2022-03-30T13:51:00Z","timestamp":1648648260588},"reference-count":12,"publisher":"Elsevier
+        BV","issue":"3","license":[{"start":{"date-parts":[[2021,5,1]],"date-time":"2021-05-01T00:00:00Z","timestamp":1619827200000},"content-version":"tdm","delay-in-days":0,"URL":"https:\/\/www.elsevier.com\/tdm\/userlicense\/1.0\/"}],"content-domain":{"domain":[],"crossmark-restriction":false},"short-container-title":["European
+        Urology Focus"],"published-print":{"date-parts":[[2021,5]]},"DOI":"10.1016\/j.euf.2021.03.006","type":"journal-article","created":{"date-parts":[[2021,3,23]],"date-time":"2021-03-23T15:39:21Z","timestamp":1616513961000},"page":"501-502","source":"Crossref","is-referenced-by-count":1,"title":["Prostate-specific
+        Antigen Screening Using the Traditional Cut Point of 3 ng\/ml: Con"],"prefix":"10.1016","volume":"7","author":[{"given":"Peter
+        C.","family":"Albertsen","sequence":"first","affiliation":[]}],"member":"78","reference":[{"key":"10.1016\/j.euf.2021.03.006_bib0005","doi-asserted-by":"crossref","first-page":"909","DOI":"10.1056\/NEJM198710083171501","article-title":"Prostate-specific
+        antigen as a serum marker for adenocarcinoma of the prostate","volume":"317","author":"Stamey","year":"1987","journal-title":"N
+        Engl J Med"},{"key":"10.1016\/j.euf.2021.03.006_bib0010","doi-asserted-by":"crossref","first-page":"1156","DOI":"10.1056\/NEJM199104253241702","article-title":"Measurement
+        of prostate-specific antigen in serum as a screening test for prostate cancer","volume":"324","author":"Catalona","year":"1991","journal-title":"N
+        Engl J Med"},{"key":"10.1016\/j.euf.2021.03.006_bib0015","doi-asserted-by":"crossref","first-page":"592","DOI":"10.1002\/cncr.30474","article-title":"Extended
+        mortality results for prostate cancer screening in the PLCO trial with median
+        follow up of 15 years","volume":"123","author":"Pinsky","year":"2017","journal-title":"Cancer"},{"key":"10.1016\/j.euf.2021.03.006_bib0020","doi-asserted-by":"crossref","first-page":"43","DOI":"10.1016\/j.eururo.2019.02.009","article-title":"A
+        16 year follow up of the European randomized study of screening for prostate
+        cancer","volume":"76","author":"Hugosson","year":"2019","journal-title":"Eur
+        Urol"},{"key":"10.1016\/j.euf.2021.03.006_bib0025","doi-asserted-by":"crossref","first-page":"883","DOI":"10.1001\/jama.2018.0154","article-title":"Effect
+        of low-intensity PSA-based screening intervention on prostate cancer mortality","volume":"319","author":"Martin","year":"2018","journal-title":"JAMA"},{"key":"10.1016\/j.euf.2021.03.006_bib0030","doi-asserted-by":"crossref","first-page":"2239","DOI":"10.1056\/NEJMoa031918","article-title":"Prevalence
+        of prostate cancer among men with a prostate specific antigen level \u22644.0
+        ng\/milliliter","volume":"350","author":"Thompson","year":"2004","journal-title":"N
+        Engl J Med"},{"key":"10.1016\/j.euf.2021.03.006_bib0035","doi-asserted-by":"crossref","first-page":"1557","DOI":"10.1056\/NEJMms1914228","article-title":"Reconsidering
+        prostate cancer mortality \u2014 the future of PSA screening","volume":"382","author":"Welch","year":"2020","journal-title":"N
+        Engl J Med"},{"key":"10.1016\/j.euf.2021.03.006_bib0040","doi-asserted-by":"crossref","first-page":"1358","DOI":"10.1016\/S0022-5347(17)32422-9","article-title":"The
+        clinical usefulness of prostate specific antigen: update 1994","volume":"152","author":"Partin","year":"1994","journal-title":"J
+        Urol"},{"key":"10.1016\/j.euf.2021.03.006_bib0045","doi-asserted-by":"crossref","first-page":"2319","DOI":"10.1056\/NEJMoa1807801","article-title":"Radical
+        prostatectomy or watchful waiting in prostate cancer \u2014 29 year follow
+        up","volume":"379","author":"Bill-Axelson","year":"2018","journal-title":"N
+        Engl J Med"},{"key":"10.1016\/j.euf.2021.03.006_bib0050","doi-asserted-by":"crossref","first-page":"713","DOI":"10.1016\/j.eururo.2020.02.009","article-title":"Radical
+        prostatectomy or observation for localized prostate cancer: extended follow
+        up of the Prostate Intervention Versus Observation trial","volume":"77","author":"Wilt","year":"2020","journal-title":"Eur
+        Urol"},{"key":"10.1016\/j.euf.2021.03.006_bib0055","doi-asserted-by":"crossref","first-page":"1415","DOI":"10.1056\/NEJMoa1606220","article-title":"Mortality
+        and clinical outcomes at 10 years\u2019 follow up in the ProtecT trial","volume":"375","author":"Hamdy","year":"2016","journal-title":"N
+        Engl J Med"},{"key":"10.1016\/j.euf.2021.03.006_bib0060","doi-asserted-by":"crossref","first-page":"218","DOI":"10.1111\/bju.15153","article-title":"Prostate
+        cancer screening and treatment: where have we come from and where are we going?","volume":"126","author":"Albertsen","year":"2020","journal-title":"BJU
+        Int"}],"container-title":["European Urology Focus"],"language":"en","link":[{"URL":"https:\/\/api.elsevier.com\/content\/article\/PII:S2405456921000638?httpAccept=text\/xml","content-type":"text\/xml","content-version":"vor","intended-application":"text-mining"},{"URL":"https:\/\/api.elsevier.com\/content\/article\/PII:S2405456921000638?httpAccept=text\/plain","content-type":"text\/plain","content-version":"vor","intended-application":"text-mining"}],"deposited":{"date-parts":[[2021,7,5]],"date-time":"2021-07-05T16:16:34Z","timestamp":1625501794000},"score":0.0,"resource":{"primary":{"URL":"https:\/\/linkinghub.elsevier.com\/retrieve\/pii\/S2405456921000638"}},"issued":{"date-parts":[[2021,5]]},"references-count":12,"journal-issue":{"issue":"3","published-print":{"date-parts":[[2021,5]]}},"alternative-id":["S2405456921000638"],"URL":"http:\/\/dx.doi.org\/10.1016\/j.euf.2021.03.006","ISSN":["2405-4569"],"issn-type":[{"value":"2405-4569","type":"print"}],"subject":["Urology"],"published":{"date-parts":[[2021,5]]}},{"indexed":{"date-parts":[[2022,3,30]],"date-time":"2022-03-30T13:51:08Z","timestamp":1648648268306},"reference-count":0,"publisher":"Elsevier
+        BV","issue":"722","license":[{"start":{"date-parts":[[1837,7,1]],"date-time":"1837-07-01T00:00:00Z","timestamp":-4181414400000},"content-version":"tdm","delay-in-days":0,"URL":"https:\/\/www.elsevier.com\/tdm\/userlicense\/1.0\/"}],"content-domain":{"domain":[],"crossmark-restriction":false},"short-container-title":["The
+        Lancet"],"published-print":{"date-parts":[[1837,7]]},"DOI":"10.1016\/s0140-6736(02)83137-3","type":"journal-article","created":{"date-parts":[[2005,2,9]],"date-time":"2005-02-09T16:58:30Z","timestamp":1107968310000},"page":"514-515","source":"Crossref","is-referenced-by-count":0,"title":["CASE
+        OF EMPHYSEMA RESULTING FROM AN INJURY OF THE TRACHEA."],"prefix":"10.1016","volume":"28","author":[{"given":"J.","family":"Johnston
+        Kelso","sequence":"first","affiliation":[]}],"member":"78","container-title":["The
+        Lancet"],"language":"en","link":[{"URL":"https:\/\/api.elsevier.com\/content\/article\/PII:S0140673602831373?httpAccept=text\/xml","content-type":"text\/xml","content-version":"vor","intended-application":"text-mining"},{"URL":"https:\/\/api.elsevier.com\/content\/article\/PII:S0140673602831373?httpAccept=text\/plain","content-type":"text\/plain","content-version":"vor","intended-application":"text-mining"}],"deposited":{"date-parts":[[2019,1,29]],"date-time":"2019-01-29T15:51:05Z","timestamp":1548777065000},"score":0.0,"resource":{"primary":{"URL":"https:\/\/linkinghub.elsevier.com\/retrieve\/pii\/S0140673602831373"}},"issued":{"date-parts":[[1837,7]]},"references-count":0,"journal-issue":{"issue":"722","published-print":{"date-parts":[[1837,7]]}},"alternative-id":["S0140673602831373"],"URL":"http:\/\/dx.doi.org\/10.1016\/s0140-6736(02)83137-3","ISSN":["0140-6736"],"issn-type":[{"value":"0140-6736","type":"print"}],"subject":["General
+        Medicine"],"published":{"date-parts":[[1837,7]]}}],"items-per-page":5,"query":{"start-index":0,"search-terms":null}}}'
+  recorded_at: 2022-11-09 09:45:40 GMT
+  recorded_with: vcr/1.1.0, webmockr/0.8.0
 - request:
     method: get
     uri: https://api.crossref.org/prefixes/10.1016/works?query=ecology&rows=4
@@ -88,28 +111,30 @@ http_interactions:
     headers:
       Accept-Encoding: gzip, deflate
       Accept: application/json, text/xml, application/xml, */*
-      User-Agent: r-curl/4.3.2 crul/1.1.0 rOpenSci(rcrossref/1.1.0.94) (mailto:<crossref_email>)
-      X-USER-AGENT: r-curl/4.3.2 crul/1.1.0 rOpenSci(rcrossref/1.1.0.94) (mailto:<crossref_email>)
+      User-Agent: r-curl/4.3.2 crul/1.3 rOpenSci(rcrossref/1.1.0.99) (mailto:<crossref_email>)
+      X-USER-AGENT: r-curl/4.3.2 crul/1.3 rOpenSci(rcrossref/1.1.0.99) (mailto:<crossref_email>)
   response:
     status:
       status_code: '200'
       message: OK
       explanation: Request fulfilled, document follows
     headers:
-      access-control-allow-headers: X-Requested-With
+      access-control-allow-headers: X-Requested-With, Accept, Accept-Encoding, Accept-Charset,
+        Accept-Language, Accept-Ranges, Cache-Control
       access-control-allow-origin: '*'
+      access-control-expose-headers: Link
       connection: close
       content-encoding: gzip
-      content-length: '4848'
+      content-length: '4888'
       content-type: application/json
-      date: Tue, 17 Aug 2021 17:25:12 GMT
+      date: Wed, 09 Nov 2022 09:45:40 GMT
       permissions-policy: interest-cohort=()
       server: Jetty(9.4.40.v20210413)
       set-cookie:
-      - AWSALB=pKQB8MQGXnLpiL1MJ23pNd6ybwpZfji4mU8pUZnfjF0JpZNmGewlTfXZi0vUU1qtjODCxpVoDMLWR3p+Hp2nxriNeCosFTsrfpf/bt+Fs4hkSuflZfslv5zWhNp7;
-        Expires=Tue, 24 Aug 2021 17:25:12 GMT; Path=/
-      - AWSALBCORS=pKQB8MQGXnLpiL1MJ23pNd6ybwpZfji4mU8pUZnfjF0JpZNmGewlTfXZi0vUU1qtjODCxpVoDMLWR3p+Hp2nxriNeCosFTsrfpf/bt+Fs4hkSuflZfslv5zWhNp7;
-        Expires=Tue, 24 Aug 2021 17:25:12 GMT; Path=/; SameSite=None
+      - AWSALB=nEPvADguooYPpyMjD+pRQ9nH6TZSkLEvJ/1KwqO8Vhr12EtPPSKG8XlfjLpxM1X9ztoDq6pqUK7qqjKPsImhO6ZGoiy6ld8tE9MyZuKTQTHd/1W47PkZ72abXZf3;
+        Expires=Wed, 16 Nov 2022 09:45:19 GMT; Path=/
+      - AWSALBCORS=nEPvADguooYPpyMjD+pRQ9nH6TZSkLEvJ/1KwqO8Vhr12EtPPSKG8XlfjLpxM1X9ztoDq6pqUK7qqjKPsImhO6ZGoiy6ld8tE9MyZuKTQTHd/1W47PkZ72abXZf3;
+        Expires=Wed, 16 Nov 2022 09:45:19 GMT; Path=/; SameSite=None
       status: HTTP/1.1 200 OK
       vary: Accept-Encoding
       x-api-pool: polite
@@ -118,15 +143,9 @@ http_interactions:
       x-ratelimit-interval: 1s
       x-ratelimit-limit: '50'
     body:
-      encoding: UTF-8
+      encoding: ''
       file: no
-      string: '{"status":"ok","message-type":"work-list","message-version":"1.0.0","message":{"facets":{},"total-results":67676,"items":[{"indexed":{"date-parts":[[2021,5,11]],"date-time":"2021-05-11T17:51:30Z","timestamp":1620755490598},"reference-count":2,"publisher":"Elsevier
-        BV","issue":"8","license":[{"start":{"date-parts":[[1997,8,1]],"date-time":"1997-08-01T00:00:00Z","timestamp":870393600000},"content-version":"tdm","delay-in-days":0,"URL":"https:\/\/www.elsevier.com\/tdm\/userlicense\/1.0\/"}],"content-domain":{"domain":[],"crossmark-restriction":false},"short-container-title":["Trends
-        in Ecology & Evolution"],"published-print":{"date-parts":[[1997,8]]},"DOI":"10.1016\/s0169-5347(97)89918-1","type":"journal-article","created":{"date-parts":[[2002,7,25]],"date-time":"2002-07-25T13:41:10Z","timestamp":1027604470000},"page":"319-320","source":"Crossref","is-referenced-by-count":1,"title":["Is
-        the ecology of molecules really ecology?"],"prefix":"10.1016","volume":"12","author":[{"given":"Ferdinando","family":"Boero","sequence":"first","affiliation":[]}],"member":"78","reference":[{"key":"10.1016\/S0169-5347(97)89918-1_bib1","doi-asserted-by":"crossref","first-page":"220","DOI":"10.1016\/S0169-5347(00)89066-7","volume":"10","author":"Statzner","year":"1995","journal-title":"Trends
-        Ecol. Evol."},{"key":"10.1016\/S0169-5347(97)89918-1_bib2","doi-asserted-by":"crossref","first-page":"461","DOI":"10.1016\/S0169-5347(00)89182-X","volume":"10","author":"Metcalfe","year":"1995","journal-title":"Trends
-        Ecol. Evol."}],"container-title":["Trends in Ecology & Evolution"],"language":"en","link":[{"URL":"https:\/\/api.elsevier.com\/content\/article\/PII:S0169534797899181?httpAccept=text\/xml","content-type":"text\/xml","content-version":"vor","intended-application":"text-mining"},{"URL":"https:\/\/api.elsevier.com\/content\/article\/PII:S0169534797899181?httpAccept=text\/plain","content-type":"text\/plain","content-version":"vor","intended-application":"text-mining"}],"deposited":{"date-parts":[[2019,4,29]],"date-time":"2019-04-29T05:59:56Z","timestamp":1556517596000},"score":9.88355,"issued":{"date-parts":[[1997,8]]},"references-count":2,"journal-issue":{"issue":"8","published-print":{"date-parts":[[1997,8]]}},"alternative-id":["S0169534797899181"],"URL":"http:\/\/dx.doi.org\/10.1016\/s0169-5347(97)89918-1","ISSN":["0169-5347"],"issn-type":[{"value":"0169-5347","type":"print"}],"subject":["Ecology,
-        Evolution, Behavior and Systematics"],"published":{"date-parts":[[1997,8]]}},{"indexed":{"date-parts":[[2021,5,12]],"date-time":"2021-05-12T07:04:12Z","timestamp":1620803052608},"reference-count":50,"publisher":"Elsevier
+      string: '{"status":"ok","message-type":"work-list","message-version":"1.0.0","message":{"facets":{},"total-results":71066,"items":[{"indexed":{"date-parts":[[2022,3,31]],"date-time":"2022-03-31T23:27:10Z","timestamp":1648769230799},"reference-count":50,"publisher":"Elsevier
         BV","license":[{"start":{"date-parts":[[2016,2,1]],"date-time":"2016-02-01T00:00:00Z","timestamp":1454284800000},"content-version":"tdm","delay-in-days":0,"URL":"https:\/\/www.elsevier.com\/tdm\/userlicense\/1.0\/"}],"content-domain":{"domain":["elsevier.com","sciencedirect.com"],"crossmark-restriction":true},"short-container-title":["Fungal
         Ecology"],"published-print":{"date-parts":[[2016,2]]},"DOI":"10.1016\/j.funeco.2015.10.002","type":"journal-article","created":{"date-parts":[[2015,11,14]],"date-time":"2015-11-14T21:46:49Z","timestamp":1447537609000},"page":"1-4","update-policy":"http:\/\/dx.doi.org\/10.1016\/elsevier_cm_policy","source":"Crossref","is-referenced-by-count":5,"title":["Aquatic
         fungal ecology"],"prefix":"10.1016","volume":"19","author":[{"given":"Felix","family":"B\u00e4rlocher","sequence":"first","affiliation":[]}],"member":"78","reference":[{"key":"10.1016\/j.funeco.2015.10.002_bib1","first-page":"395","article-title":"Marine
@@ -220,19 +239,26 @@ http_interactions:
         Ecology"},{"key":"10.1016\/j.funeco.2015.10.002_bib47","volume":"10","year":"2003"},{"key":"10.1016\/j.funeco.2015.10.002_bib48","series-title":"The
         Fungal Community. Its Organization and Role in the Ecosystem","year":"1981"},{"key":"10.1016\/j.funeco.2015.10.002_bib49","doi-asserted-by":"crossref","first-page":"125","DOI":"10.3354\/ame01385","article-title":"Fungi
         in lake ecosystems","volume":"59","author":"Wurzbacher","year":"2010","journal-title":"Aquat.
-        Microb. Ecol."}],"container-title":["Fungal Ecology"],"language":"en","link":[{"URL":"https:\/\/api.elsevier.com\/content\/article\/PII:S1754504815001312?httpAccept=text\/xml","content-type":"text\/xml","content-version":"vor","intended-application":"text-mining"},{"URL":"https:\/\/api.elsevier.com\/content\/article\/PII:S1754504815001312?httpAccept=text\/plain","content-type":"text\/plain","content-version":"vor","intended-application":"text-mining"}],"deposited":{"date-parts":[[2019,11,3]],"date-time":"2019-11-03T12:36:05Z","timestamp":1572784565000},"score":9.857088,"issued":{"date-parts":[[2016,2]]},"references-count":50,"alternative-id":["S1754504815001312"],"URL":"http:\/\/dx.doi.org\/10.1016\/j.funeco.2015.10.002","ISSN":["1754-5048"],"issn-type":[{"value":"1754-5048","type":"print"}],"subject":["Plant
-        Science","Ecological Modelling","Ecology","Ecology, Evolution, Behavior and
+        Microb. Ecol."}],"container-title":["Fungal Ecology"],"language":"en","link":[{"URL":"https:\/\/api.elsevier.com\/content\/article\/PII:S1754504815001312?httpAccept=text\/xml","content-type":"text\/xml","content-version":"vor","intended-application":"text-mining"},{"URL":"https:\/\/api.elsevier.com\/content\/article\/PII:S1754504815001312?httpAccept=text\/plain","content-type":"text\/plain","content-version":"vor","intended-application":"text-mining"}],"deposited":{"date-parts":[[2019,11,3]],"date-time":"2019-11-03T12:36:05Z","timestamp":1572784565000},"score":9.756007,"resource":{"primary":{"URL":"https:\/\/linkinghub.elsevier.com\/retrieve\/pii\/S1754504815001312"}},"issued":{"date-parts":[[2016,2]]},"references-count":50,"alternative-id":["S1754504815001312"],"URL":"http:\/\/dx.doi.org\/10.1016\/j.funeco.2015.10.002","ISSN":["1754-5048"],"issn-type":[{"value":"1754-5048","type":"print"}],"subject":["Plant
+        Science","Ecological Modeling","Ecology","Ecology, Evolution, Behavior and
         Systematics"],"published":{"date-parts":[[2016,2]]},"assertion":[{"value":"Elsevier","name":"publisher","label":"This
         article is maintained by"},{"value":"Aquatic fungal ecology","name":"articletitle","label":"Article
         Title"},{"value":"Fungal Ecology","name":"journaltitle","label":"Journal Title"},{"value":"https:\/\/doi.org\/10.1016\/j.funeco.2015.10.002","name":"articlelink","label":"CrossRef
         DOI link to publisher maintained version"},{"value":"simple-article","name":"content_type","label":"Content
         Type"},{"value":"Copyright \u00a9 2015 Elsevier Ltd and The British Mycological
-        Society. All rights reserved.","name":"copyright","label":"Copyright"}]},{"indexed":{"date-parts":[[2021,5,7]],"date-time":"2021-05-07T02:15:01Z","timestamp":1620353701652},"reference-count":0,"publisher":"Elsevier
+        Society. All rights reserved.","name":"copyright","label":"Copyright"}]},{"indexed":{"date-parts":[[2022,3,31]],"date-time":"2022-03-31T20:55:26Z","timestamp":1648760126055},"reference-count":0,"publisher":"Elsevier
         BV","issue":"1","license":[{"start":{"date-parts":[[1976,5,1]],"date-time":"1976-05-01T00:00:00Z","timestamp":199756800000},"content-version":"tdm","delay-in-days":0,"URL":"https:\/\/www.elsevier.com\/tdm\/userlicense\/1.0\/"}],"content-domain":{"domain":[],"crossmark-restriction":false},"short-container-title":["Urban
         Ecology"],"published-print":{"date-parts":[[1976,5]]},"DOI":"10.1016\/0304-4009(76)90011-5","type":"journal-article","created":{"date-parts":[[2002,10,11]],"date-time":"2002-10-11T01:05:50Z","timestamp":1034298350000},"page":"89-90","source":"Crossref","is-referenced-by-count":0,"title":["Human
         ecology"],"prefix":"10.1016","volume":"2","author":[{"given":"G.Ainsworth","family":"Harrison","sequence":"first","affiliation":[]}],"member":"78","container-title":["Urban
-        Ecology"],"language":"en","link":[{"URL":"https:\/\/api.elsevier.com\/content\/article\/PII:0304400976900115?httpAccept=text\/xml","content-type":"text\/xml","content-version":"vor","intended-application":"text-mining"},{"URL":"https:\/\/api.elsevier.com\/content\/article\/PII:0304400976900115?httpAccept=text\/plain","content-type":"text\/plain","content-version":"vor","intended-application":"text-mining"}],"deposited":{"date-parts":[[2019,4,9]],"date-time":"2019-04-09T21:26:45Z","timestamp":1554845205000},"score":9.852111,"issued":{"date-parts":[[1976,5]]},"references-count":0,"journal-issue":{"issue":"1","published-print":{"date-parts":[[1976,5]]}},"alternative-id":["0304400976900115"],"URL":"http:\/\/dx.doi.org\/10.1016\/0304-4009(76)90011-5","ISSN":["0304-4009"],"issn-type":[{"value":"0304-4009","type":"print"}],"subject":["Geography,
-        Planning and Development"],"published":{"date-parts":[[1976,5]]}},{"indexed":{"date-parts":[[2021,5,7]],"date-time":"2021-05-07T12:46:16Z","timestamp":1620391576050},"reference-count":0,"publisher":"Elsevier","license":[{"start":{"date-parts":[[2006,1,1]],"date-time":"2006-01-01T00:00:00Z","timestamp":1136073600000},"content-version":"tdm","delay-in-days":0,"URL":"https:\/\/www.elsevier.com\/tdm\/userlicense\/1.0\/"}],"content-domain":{"domain":[],"crossmark-restriction":false},"published-print":{"date-parts":[[2006]]},"DOI":"10.1016\/b978-012088772-9\/50028-5","type":"book-chapter","created":{"date-parts":[[2007,5,16]],"date-time":"2007-05-16T14:26:25Z","timestamp":1179325585000},"page":"123-124","source":"Crossref","is-referenced-by-count":0,"title":["Population
-        Ecology"],"prefix":"10.1016","member":"78","container-title":["Insect Ecology"],"link":[{"URL":"https:\/\/api.elsevier.com\/content\/article\/PII:B9780120887729500285?httpAccept=text\/xml","content-type":"text\/xml","content-version":"vor","intended-application":"text-mining"},{"URL":"https:\/\/api.elsevier.com\/content\/article\/PII:B9780120887729500285?httpAccept=text\/plain","content-type":"text\/plain","content-version":"vor","intended-application":"text-mining"}],"deposited":{"date-parts":[[2019,1,7]],"date-time":"2019-01-07T13:23:14Z","timestamp":1546867394000},"score":9.823031,"issued":{"date-parts":[[2006]]},"references-count":0,"URL":"http:\/\/dx.doi.org\/10.1016\/b978-012088772-9\/50028-5","published":{"date-parts":[[2006]]}}],"items-per-page":4,"query":{"start-index":0,"search-terms":"ecology"}}}'
-  recorded_at: 2021-08-17 17:25:12 GMT
-  recorded_with: vcr/1.0.2, webmockr/0.8.0
+        Ecology"],"language":"en","link":[{"URL":"https:\/\/api.elsevier.com\/content\/article\/PII:0304400976900115?httpAccept=text\/xml","content-type":"text\/xml","content-version":"vor","intended-application":"text-mining"},{"URL":"https:\/\/api.elsevier.com\/content\/article\/PII:0304400976900115?httpAccept=text\/plain","content-type":"text\/plain","content-version":"vor","intended-application":"text-mining"}],"deposited":{"date-parts":[[2019,4,9]],"date-time":"2019-04-09T21:26:45Z","timestamp":1554845205000},"score":9.742724,"resource":{"primary":{"URL":"https:\/\/linkinghub.elsevier.com\/retrieve\/pii\/0304400976900115"}},"issued":{"date-parts":[[1976,5]]},"references-count":0,"journal-issue":{"issue":"1","published-print":{"date-parts":[[1976,5]]}},"alternative-id":["0304400976900115"],"URL":"http:\/\/dx.doi.org\/10.1016\/0304-4009(76)90011-5","ISSN":["0304-4009"],"issn-type":[{"value":"0304-4009","type":"print"}],"subject":["Geography,
+        Planning and Development"],"published":{"date-parts":[[1976,5]]}},{"indexed":{"date-parts":[[2022,3,29]],"date-time":"2022-03-29T22:25:20Z","timestamp":1648592720525},"reference-count":2,"publisher":"Elsevier
+        BV","issue":"8","license":[{"start":{"date-parts":[[1997,8,1]],"date-time":"1997-08-01T00:00:00Z","timestamp":870393600000},"content-version":"tdm","delay-in-days":0,"URL":"https:\/\/www.elsevier.com\/tdm\/userlicense\/1.0\/"}],"content-domain":{"domain":[],"crossmark-restriction":false},"short-container-title":["Trends
+        in Ecology &amp; Evolution"],"published-print":{"date-parts":[[1997,8]]},"DOI":"10.1016\/s0169-5347(97)89918-1","type":"journal-article","created":{"date-parts":[[2002,7,25]],"date-time":"2002-07-25T13:41:10Z","timestamp":1027604470000},"page":"319-320","source":"Crossref","is-referenced-by-count":1,"title":["Is
+        the ecology of molecules really ecology?"],"prefix":"10.1016","volume":"12","author":[{"given":"Ferdinando","family":"Boero","sequence":"first","affiliation":[]}],"member":"78","reference":[{"key":"10.1016\/S0169-5347(97)89918-1_bib1","doi-asserted-by":"crossref","first-page":"220","DOI":"10.1016\/S0169-5347(00)89066-7","volume":"10","author":"Statzner","year":"1995","journal-title":"Trends
+        Ecol. Evol."},{"key":"10.1016\/S0169-5347(97)89918-1_bib2","doi-asserted-by":"crossref","first-page":"461","DOI":"10.1016\/S0169-5347(00)89182-X","volume":"10","author":"Metcalfe","year":"1995","journal-title":"Trends
+        Ecol. Evol."}],"container-title":["Trends in Ecology &amp; Evolution"],"language":"en","link":[{"URL":"https:\/\/api.elsevier.com\/content\/article\/PII:S0169534797899181?httpAccept=text\/xml","content-type":"text\/xml","content-version":"vor","intended-application":"text-mining"},{"URL":"https:\/\/api.elsevier.com\/content\/article\/PII:S0169534797899181?httpAccept=text\/plain","content-type":"text\/plain","content-version":"vor","intended-application":"text-mining"}],"deposited":{"date-parts":[[2019,4,29]],"date-time":"2019-04-29T05:59:56Z","timestamp":1556517596000},"score":9.682307,"resource":{"primary":{"URL":"https:\/\/linkinghub.elsevier.com\/retrieve\/pii\/S0169534797899181"}},"issued":{"date-parts":[[1997,8]]},"references-count":2,"journal-issue":{"issue":"8","published-print":{"date-parts":[[1997,8]]}},"alternative-id":["S0169534797899181"],"URL":"http:\/\/dx.doi.org\/10.1016\/s0169-5347(97)89918-1","ISSN":["0169-5347"],"issn-type":[{"value":"0169-5347","type":"print"}],"subject":["Ecology,
+        Evolution, Behavior and Systematics"],"published":{"date-parts":[[1997,8]]}},{"indexed":{"date-parts":[[2022,3,31]],"date-time":"2022-03-31T03:51:39Z","timestamp":1648698699528},"reference-count":0,"publisher":"Elsevier","content-domain":{"domain":[],"crossmark-restriction":false},"published-print":{"date-parts":[[2002]]},"DOI":"10.1016\/b978-0-12-219135-0.50029-5","type":"book-chapter","created":{"date-parts":[[2013,9,6]],"date-time":"2013-09-06T01:00:21Z","timestamp":1378429221000},"page":"ii","source":"Crossref","is-referenced-by-count":0,"title":["AQUATIC
+        ECOLOGY Series"],"prefix":"10.1016","member":"78","container-title":["Freshwater
+        Ecology"],"deposited":{"date-parts":[[2018,10,13]],"date-time":"2018-10-13T10:51:46Z","timestamp":1539427906000},"score":9.661106,"resource":{"primary":{"URL":"https:\/\/linkinghub.elsevier.com\/retrieve\/pii\/B9780122191350500295"}},"issued":{"date-parts":[[2002]]},"references-count":0,"URL":"http:\/\/dx.doi.org\/10.1016\/b978-0-12-219135-0.50029-5","published":{"date-parts":[[2002]]}}],"items-per-page":4,"query":{"start-index":0,"search-terms":"ecology"}}}'
+  recorded_at: 2022-11-09 09:45:41 GMT
+  recorded_with: vcr/1.1.0, webmockr/0.8.0
