@@ -8,28 +8,30 @@ http_interactions:
     headers:
       Accept-Encoding: gzip, deflate
       Accept: application/json, text/xml, application/xml, */*
-      User-Agent: r-curl/4.3.2 crul/1.1.0 rOpenSci(rcrossref/1.1.0.94) (mailto:<crossref_email>)
-      X-USER-AGENT: r-curl/4.3.2 crul/1.1.0 rOpenSci(rcrossref/1.1.0.94) (mailto:<crossref_email>)
+      User-Agent: r-curl/4.3.2 crul/1.3 rOpenSci(rcrossref/1.1.0.99) (mailto:<crossref_email>)
+      X-USER-AGENT: r-curl/4.3.2 crul/1.3 rOpenSci(rcrossref/1.1.0.99) (mailto:<crossref_email>)
   response:
     status:
       status_code: '404'
       message: Not Found
       explanation: Nothing matches the given URI
     headers:
-      access-control-allow-headers: X-Requested-With
+      access-control-allow-headers: X-Requested-With, Accept, Accept-Encoding, Accept-Charset,
+        Accept-Language, Accept-Ranges, Cache-Control
       access-control-allow-origin: '*'
+      access-control-expose-headers: Link
       connection: close
-      content-length: '19'
       content-type: application/json;charset=utf-8
-      date: Tue, 17 Aug 2021 17:54:08 GMT
+      date: Wed, 09 Nov 2022 13:17:43 GMT
       permissions-policy: interest-cohort=()
       server: Jetty(9.4.40.v20210413)
       set-cookie:
-      - AWSALB=EEuQx5RCFAwa1+QDU+vSy5MvYyuQPO1i1R3Gs/fDHLUWYPgaAAvPPjROzl2WBuJQdfQCAKr0e9ZObgxUxT/wxp//QTquwnkgGC9tX1M7C8u7CRw5nfvrRGN/xvtF;
-        Expires=Tue, 24 Aug 2021 17:54:08 GMT; Path=/
-      - AWSALBCORS=EEuQx5RCFAwa1+QDU+vSy5MvYyuQPO1i1R3Gs/fDHLUWYPgaAAvPPjROzl2WBuJQdfQCAKr0e9ZObgxUxT/wxp//QTquwnkgGC9tX1M7C8u7CRw5nfvrRGN/xvtF;
-        Expires=Tue, 24 Aug 2021 17:54:08 GMT; Path=/; SameSite=None
+      - AWSALB=1D8Tu4sWmvsKRYrX+at0MF8Rpy5fKNeVWjzDJDQd6kjYvkspEqBCNZLRXLY7IwOK2I4ela1U4Npt0WTooVbvyYmhZlmNOtTNRRMVJtZt93HQYrAWzQc2rII0EvFU;
+        Expires=Wed, 16 Nov 2022 13:17:43 GMT; Path=/
+      - AWSALBCORS=1D8Tu4sWmvsKRYrX+at0MF8Rpy5fKNeVWjzDJDQd6kjYvkspEqBCNZLRXLY7IwOK2I4ela1U4Npt0WTooVbvyYmhZlmNOtTNRRMVJtZt93HQYrAWzQc2rII0EvFU;
+        Expires=Wed, 16 Nov 2022 13:17:43 GMT; Path=/; SameSite=None
       status: HTTP/1.1 404 Not Found
+      transfer-encoding: chunked
       vary: Accept
       x-api-pool: polite
       x-rate-limit-interval: 1s
@@ -37,11 +39,11 @@ http_interactions:
       x-ratelimit-interval: 1s
       x-ratelimit-limit: '50'
     body:
-      encoding: UTF-8
+      encoding: ''
       file: no
       string: Resource not found.
-  recorded_at: 2021-08-17 17:54:11 GMT
-  recorded_with: vcr/1.0.2, webmockr/0.8.0
+  recorded_at: 2022-11-09 13:17:45 GMT
+  recorded_with: vcr/1.1.0, webmockr/0.8.0
 - request:
     method: get
     uri: https://api.crossref.org/works/10.1038/nnano.2014.279
@@ -51,28 +53,30 @@ http_interactions:
     headers:
       Accept-Encoding: gzip, deflate
       Accept: application/json, text/xml, application/xml, */*
-      User-Agent: r-curl/4.3.2 crul/1.1.0 rOpenSci(rcrossref/1.1.0.94) (mailto:<crossref_email>)
-      X-USER-AGENT: r-curl/4.3.2 crul/1.1.0 rOpenSci(rcrossref/1.1.0.94) (mailto:<crossref_email>)
+      User-Agent: r-curl/4.3.2 crul/1.3 rOpenSci(rcrossref/1.1.0.99) (mailto:<crossref_email>)
+      X-USER-AGENT: r-curl/4.3.2 crul/1.3 rOpenSci(rcrossref/1.1.0.99) (mailto:<crossref_email>)
   response:
     status:
       status_code: '200'
       message: OK
       explanation: Request fulfilled, document follows
     headers:
-      access-control-allow-headers: X-Requested-With
+      access-control-allow-headers: X-Requested-With, Accept, Accept-Encoding, Accept-Charset,
+        Accept-Language, Accept-Ranges, Cache-Control
       access-control-allow-origin: '*'
+      access-control-expose-headers: Link
       connection: close
       content-encoding: gzip
-      content-length: '1967'
+      content-length: '1984'
       content-type: application/json
-      date: Tue, 17 Aug 2021 17:54:09 GMT
+      date: Wed, 09 Nov 2022 13:17:43 GMT
       permissions-policy: interest-cohort=()
       server: Jetty(9.4.40.v20210413)
       set-cookie:
-      - AWSALB=4lnxARuKLRpVPQ1EqI6Czw/kKpj/Yxmb6IiF+z7hoB7Q5ZW7fANPCMd4rKtutZDqK6OUhCa49SIOPk4LPA/St7DASkfAcBRRKV3OZsdWY+1jfq0GMetKu19TKs6k;
-        Expires=Tue, 24 Aug 2021 17:54:09 GMT; Path=/
-      - AWSALBCORS=4lnxARuKLRpVPQ1EqI6Czw/kKpj/Yxmb6IiF+z7hoB7Q5ZW7fANPCMd4rKtutZDqK6OUhCa49SIOPk4LPA/St7DASkfAcBRRKV3OZsdWY+1jfq0GMetKu19TKs6k;
-        Expires=Tue, 24 Aug 2021 17:54:09 GMT; Path=/; SameSite=None
+      - AWSALB=fXa97p6jHt/nFtu1S+Cs9b5GolSGjUoRlG0hd9fo1slU9/Y70S4iv7Z+Skejcy+nZmYWiiB1KrEeGCl24dEb1xIPwnF50n3BznN/sWquVrP2QmcVFv0qXt2Q0VnJ;
+        Expires=Wed, 16 Nov 2022 13:17:43 GMT; Path=/
+      - AWSALBCORS=fXa97p6jHt/nFtu1S+Cs9b5GolSGjUoRlG0hd9fo1slU9/Y70S4iv7Z+Skejcy+nZmYWiiB1KrEeGCl24dEb1xIPwnF50n3BznN/sWquVrP2QmcVFv0qXt2Q0VnJ;
+        Expires=Wed, 16 Nov 2022 13:17:43 GMT; Path=/; SameSite=None
       status: HTTP/1.1 200 OK
       vary: Accept-Encoding
       x-api-pool: polite
@@ -81,11 +85,11 @@ http_interactions:
       x-ratelimit-interval: 1s
       x-ratelimit-limit: '50'
     body:
-      encoding: UTF-8
+      encoding: ''
       file: no
-      string: '{"status":"ok","message-type":"work","message-version":"1.0.0","message":{"indexed":{"date-parts":[[2021,8,15]],"date-time":"2021-08-15T06:49:30Z","timestamp":1629010170853},"reference-count":12,"publisher":"Springer
+      string: '{"status":"ok","message-type":"work","message-version":"1.0.0","message":{"indexed":{"date-parts":[[2022,10,29]],"date-time":"2022-10-29T09:30:09Z","timestamp":1667035809255},"reference-count":12,"publisher":"Springer
         Science and Business Media LLC","issue":"1","license":[{"start":{"date-parts":[[2014,11,10]],"date-time":"2014-11-10T00:00:00Z","timestamp":1415577600000},"content-version":"tdm","delay-in-days":0,"URL":"http:\/\/www.springer.com\/tdm"}],"content-domain":{"domain":["link.springer.com"],"crossmark-restriction":false},"short-container-title":["Nature
-        Nanotech"],"published-print":{"date-parts":[[2015,1]]},"DOI":"10.1038\/nnano.2014.279","type":"journal-article","created":{"date-parts":[[2014,11,7]],"date-time":"2014-11-07T14:30:15Z","timestamp":1415370615000},"page":"22-24","update-policy":"http:\/\/dx.doi.org\/10.1007\/springer_crossmark_policy","source":"Crossref","is-referenced-by-count":41,"title":["Charges
+        Nanotech"],"published-print":{"date-parts":[[2015,1]]},"DOI":"10.1038\/nnano.2014.279","type":"journal-article","created":{"date-parts":[[2014,11,7]],"date-time":"2014-11-07T14:30:15Z","timestamp":1415370615000},"page":"22-24","update-policy":"http:\/\/dx.doi.org\/10.1007\/springer_crossmark_policy","source":"Crossref","is-referenced-by-count":44,"title":["Charges
         ride the spin wave"],"prefix":"10.1038","volume":"10","author":[{"given":"Timo","family":"Kuschel","sequence":"first","affiliation":[]},{"given":"G\u00fcnter","family":"Reiss","sequence":"additional","affiliation":[]}],"member":"297","published-online":{"date-parts":[[2014,11,10]]},"reference":[{"key":"BFnnano2014279_CR1","doi-asserted-by":"publisher","first-page":"212405","DOI":"10.1103\/PhysRevB.78.212405","volume":"78","author":"A
         Manchon","year":"2008","unstructured":"Manchon, A. & Zhang, S. Phys. Rev.
         B 78, 212405 (2008).","journal-title":"Phys. Rev. B"},{"key":"BFnnano2014279_CR2","doi-asserted-by":"publisher","first-page":"50","DOI":"10.1038\/nnano.2014.252","volume":"10","author":"C
@@ -111,13 +115,13 @@ http_interactions:
         (2013).","journal-title":"Phys. Rev. B"},{"key":"BFnnano2014279_CR12","doi-asserted-by":"publisher","first-page":"187201","DOI":"10.1103\/PhysRevLett.111.187201","volume":"111","author":"M
         Schmid","year":"2013","unstructured":"Schmid, M. et al. Phys. Rev. Lett. 111,
         187201 (2013).","journal-title":"Phys. Rev. Lett."}],"container-title":["Nature
-        Nanotechnology"],"original-title":[],"language":"en","link":[{"URL":"http:\/\/www.nature.com\/articles\/nnano.2014.279.pdf","content-type":"application\/pdf","content-version":"vor","intended-application":"text-mining"},{"URL":"http:\/\/www.nature.com\/articles\/nnano.2014.279","content-type":"text\/html","content-version":"vor","intended-application":"text-mining"},{"URL":"http:\/\/www.nature.com\/articles\/nnano.2014.279.pdf","content-type":"application\/pdf","content-version":"vor","intended-application":"similarity-checking"}],"deposited":{"date-parts":[[2019,9,30]],"date-time":"2019-09-30T19:36:22Z","timestamp":1569872182000},"score":1,"subtitle":[],"short-title":[],"issued":{"date-parts":[[2014,11,10]]},"references-count":12,"journal-issue":{"issue":"1","published-print":{"date-parts":[[2015,1]]}},"alternative-id":["BFnnano2014279"],"URL":"http:\/\/dx.doi.org\/10.1038\/nnano.2014.279","relation":{},"ISSN":["1748-3387","1748-3395"],"issn-type":[{"value":"1748-3387","type":"print"},{"value":"1748-3395","type":"electronic"}],"subject":["Electrical
+        Nanotechnology"],"original-title":[],"language":"en","link":[{"URL":"http:\/\/www.nature.com\/articles\/nnano.2014.279.pdf","content-type":"application\/pdf","content-version":"vor","intended-application":"text-mining"},{"URL":"http:\/\/www.nature.com\/articles\/nnano.2014.279","content-type":"text\/html","content-version":"vor","intended-application":"text-mining"},{"URL":"http:\/\/www.nature.com\/articles\/nnano.2014.279.pdf","content-type":"application\/pdf","content-version":"vor","intended-application":"similarity-checking"}],"deposited":{"date-parts":[[2021,12,2]],"date-time":"2021-12-02T07:57:48Z","timestamp":1638431868000},"score":1,"resource":{"primary":{"URL":"http:\/\/www.nature.com\/articles\/nnano.2014.279"}},"subtitle":[],"short-title":[],"issued":{"date-parts":[[2014,11,10]]},"references-count":12,"journal-issue":{"issue":"1","published-print":{"date-parts":[[2015,1]]}},"alternative-id":["BFnnano2014279"],"URL":"http:\/\/dx.doi.org\/10.1038\/nnano.2014.279","relation":{},"ISSN":["1748-3387","1748-3395"],"issn-type":[{"value":"1748-3387","type":"print"},{"value":"1748-3395","type":"electronic"}],"subject":["Electrical
         and Electronic Engineering","Condensed Matter Physics","General Materials
         Science","Biomedical Engineering","Atomic and Molecular Physics, and Optics","Bioengineering"],"published":{"date-parts":[[2014,11,10]]},"assertion":[{"value":"10
         November 2014","order":1,"name":"first_online","label":"First Online","group":{"name":"ArticleHistory","label":"Article
         History"}}]}}'
-  recorded_at: 2021-08-17 17:54:11 GMT
-  recorded_with: vcr/1.0.2, webmockr/0.8.0
+  recorded_at: 2022-11-09 13:17:45 GMT
+  recorded_with: vcr/1.1.0, webmockr/0.8.0
 - request:
     method: get
     uri: https://api.crossref.org/works/blblbl
@@ -127,28 +131,30 @@ http_interactions:
     headers:
       Accept-Encoding: gzip, deflate
       Accept: application/json, text/xml, application/xml, */*
-      User-Agent: r-curl/4.3.2 crul/1.1.0 rOpenSci(rcrossref/1.1.0.94) (mailto:<crossref_email>)
-      X-USER-AGENT: r-curl/4.3.2 crul/1.1.0 rOpenSci(rcrossref/1.1.0.94) (mailto:<crossref_email>)
+      User-Agent: r-curl/4.3.2 crul/1.3 rOpenSci(rcrossref/1.1.0.99) (mailto:<crossref_email>)
+      X-USER-AGENT: r-curl/4.3.2 crul/1.3 rOpenSci(rcrossref/1.1.0.99) (mailto:<crossref_email>)
   response:
     status:
       status_code: '404'
       message: Not Found
       explanation: Nothing matches the given URI
     headers:
-      access-control-allow-headers: X-Requested-With
+      access-control-allow-headers: X-Requested-With, Accept, Accept-Encoding, Accept-Charset,
+        Accept-Language, Accept-Ranges, Cache-Control
       access-control-allow-origin: '*'
+      access-control-expose-headers: Link
       connection: close
-      content-length: '19'
       content-type: application/json;charset=utf-8
-      date: Tue, 17 Aug 2021 17:54:10 GMT
+      date: Wed, 09 Nov 2022 13:17:44 GMT
       permissions-policy: interest-cohort=()
       server: Jetty(9.4.40.v20210413)
       set-cookie:
-      - AWSALB=ahf2tFMbYVogtYkCS9Hk5Gd2ypZeAwvkbpCCiaTi3FmZ8wBUwkrRbB+Qbam7PHd+IWBgpFXY1ZtjMukz/V6HSEamqsUiYevTFjAQ3B52jeGkGOmPl3iar4DB99/x;
-        Expires=Tue, 24 Aug 2021 17:54:10 GMT; Path=/
-      - AWSALBCORS=ahf2tFMbYVogtYkCS9Hk5Gd2ypZeAwvkbpCCiaTi3FmZ8wBUwkrRbB+Qbam7PHd+IWBgpFXY1ZtjMukz/V6HSEamqsUiYevTFjAQ3B52jeGkGOmPl3iar4DB99/x;
-        Expires=Tue, 24 Aug 2021 17:54:10 GMT; Path=/; SameSite=None
+      - AWSALB=ePas9KzUy1kRYi16TV5NCZS355LnbK8DoCCeoi2UUaAqMqc2Rxt/g2nuwMWtHiD/sBxH6M39cDaz8k3kz24OsoA4uJlmaQRvw7d0CMCY3lGjQXLWR3O4RKX19iW9;
+        Expires=Wed, 16 Nov 2022 13:17:44 GMT; Path=/
+      - AWSALBCORS=ePas9KzUy1kRYi16TV5NCZS355LnbK8DoCCeoi2UUaAqMqc2Rxt/g2nuwMWtHiD/sBxH6M39cDaz8k3kz24OsoA4uJlmaQRvw7d0CMCY3lGjQXLWR3O4RKX19iW9;
+        Expires=Wed, 16 Nov 2022 13:17:44 GMT; Path=/; SameSite=None
       status: HTTP/1.1 404 Not Found
+      transfer-encoding: chunked
       vary: Accept
       x-api-pool: polite
       x-rate-limit-interval: 1s
@@ -156,11 +162,11 @@ http_interactions:
       x-ratelimit-interval: 1s
       x-ratelimit-limit: '50'
     body:
-      encoding: UTF-8
+      encoding: ''
       file: no
       string: Resource not found.
-  recorded_at: 2021-08-17 17:54:11 GMT
-  recorded_with: vcr/1.0.2, webmockr/0.8.0
+  recorded_at: 2022-11-09 13:17:45 GMT
+  recorded_with: vcr/1.1.0, webmockr/0.8.0
 - request:
     method: get
     uri: https://api.crossref.org/works/10.1038/nnano.2014.279
@@ -170,28 +176,30 @@ http_interactions:
     headers:
       Accept-Encoding: gzip, deflate
       Accept: application/json, text/xml, application/xml, */*
-      User-Agent: r-curl/4.3.2 crul/1.1.0 rOpenSci(rcrossref/1.1.0.94) (mailto:<crossref_email>)
-      X-USER-AGENT: r-curl/4.3.2 crul/1.1.0 rOpenSci(rcrossref/1.1.0.94) (mailto:<crossref_email>)
+      User-Agent: r-curl/4.3.2 crul/1.3 rOpenSci(rcrossref/1.1.0.99) (mailto:<crossref_email>)
+      X-USER-AGENT: r-curl/4.3.2 crul/1.3 rOpenSci(rcrossref/1.1.0.99) (mailto:<crossref_email>)
   response:
     status:
       status_code: '200'
       message: OK
       explanation: Request fulfilled, document follows
     headers:
-      access-control-allow-headers: X-Requested-With
+      access-control-allow-headers: X-Requested-With, Accept, Accept-Encoding, Accept-Charset,
+        Accept-Language, Accept-Ranges, Cache-Control
       access-control-allow-origin: '*'
+      access-control-expose-headers: Link
       connection: close
       content-encoding: gzip
-      content-length: '1967'
+      content-length: '1984'
       content-type: application/json
-      date: Tue, 17 Aug 2021 17:54:11 GMT
+      date: Wed, 09 Nov 2022 13:17:45 GMT
       permissions-policy: interest-cohort=()
       server: Jetty(9.4.40.v20210413)
       set-cookie:
-      - AWSALB=mjxl/VBuotzgSRo6plpWWfBBFtDLgj2JmnW7blEQYJscRanJN7IGF7MtI+iX4G2Qp1tF/gaOEEegOCIJUjhXKf1h7kDqvvBnijUO11HIhVek+Y9ewH5F3eMaK7a5;
-        Expires=Tue, 24 Aug 2021 17:54:11 GMT; Path=/
-      - AWSALBCORS=mjxl/VBuotzgSRo6plpWWfBBFtDLgj2JmnW7blEQYJscRanJN7IGF7MtI+iX4G2Qp1tF/gaOEEegOCIJUjhXKf1h7kDqvvBnijUO11HIhVek+Y9ewH5F3eMaK7a5;
-        Expires=Tue, 24 Aug 2021 17:54:11 GMT; Path=/; SameSite=None
+      - AWSALB=e0yQ2BKq92GD/sbXF98UeDH1oM8+JYfEpFlp9hDaNIvb2mI79eooTh82XR/rRRHgibkjlVXII63TKl6uaTN2Y6bHtYQKWtoPVSWl9l+SjBlSqCjpH45RjR2MDwE9;
+        Expires=Wed, 16 Nov 2022 13:17:45 GMT; Path=/
+      - AWSALBCORS=e0yQ2BKq92GD/sbXF98UeDH1oM8+JYfEpFlp9hDaNIvb2mI79eooTh82XR/rRRHgibkjlVXII63TKl6uaTN2Y6bHtYQKWtoPVSWl9l+SjBlSqCjpH45RjR2MDwE9;
+        Expires=Wed, 16 Nov 2022 13:17:45 GMT; Path=/; SameSite=None
       status: HTTP/1.1 200 OK
       vary: Accept-Encoding
       x-api-pool: polite
@@ -200,11 +208,11 @@ http_interactions:
       x-ratelimit-interval: 1s
       x-ratelimit-limit: '50'
     body:
-      encoding: UTF-8
+      encoding: ''
       file: no
-      string: '{"status":"ok","message-type":"work","message-version":"1.0.0","message":{"indexed":{"date-parts":[[2021,8,15]],"date-time":"2021-08-15T06:49:30Z","timestamp":1629010170853},"reference-count":12,"publisher":"Springer
+      string: '{"status":"ok","message-type":"work","message-version":"1.0.0","message":{"indexed":{"date-parts":[[2022,10,29]],"date-time":"2022-10-29T09:30:09Z","timestamp":1667035809255},"reference-count":12,"publisher":"Springer
         Science and Business Media LLC","issue":"1","license":[{"start":{"date-parts":[[2014,11,10]],"date-time":"2014-11-10T00:00:00Z","timestamp":1415577600000},"content-version":"tdm","delay-in-days":0,"URL":"http:\/\/www.springer.com\/tdm"}],"content-domain":{"domain":["link.springer.com"],"crossmark-restriction":false},"short-container-title":["Nature
-        Nanotech"],"published-print":{"date-parts":[[2015,1]]},"DOI":"10.1038\/nnano.2014.279","type":"journal-article","created":{"date-parts":[[2014,11,7]],"date-time":"2014-11-07T14:30:15Z","timestamp":1415370615000},"page":"22-24","update-policy":"http:\/\/dx.doi.org\/10.1007\/springer_crossmark_policy","source":"Crossref","is-referenced-by-count":41,"title":["Charges
+        Nanotech"],"published-print":{"date-parts":[[2015,1]]},"DOI":"10.1038\/nnano.2014.279","type":"journal-article","created":{"date-parts":[[2014,11,7]],"date-time":"2014-11-07T14:30:15Z","timestamp":1415370615000},"page":"22-24","update-policy":"http:\/\/dx.doi.org\/10.1007\/springer_crossmark_policy","source":"Crossref","is-referenced-by-count":44,"title":["Charges
         ride the spin wave"],"prefix":"10.1038","volume":"10","author":[{"given":"Timo","family":"Kuschel","sequence":"first","affiliation":[]},{"given":"G\u00fcnter","family":"Reiss","sequence":"additional","affiliation":[]}],"member":"297","published-online":{"date-parts":[[2014,11,10]]},"reference":[{"key":"BFnnano2014279_CR1","doi-asserted-by":"publisher","first-page":"212405","DOI":"10.1103\/PhysRevB.78.212405","volume":"78","author":"A
         Manchon","year":"2008","unstructured":"Manchon, A. & Zhang, S. Phys. Rev.
         B 78, 212405 (2008).","journal-title":"Phys. Rev. B"},{"key":"BFnnano2014279_CR2","doi-asserted-by":"publisher","first-page":"50","DOI":"10.1038\/nnano.2014.252","volume":"10","author":"C
@@ -230,10 +238,10 @@ http_interactions:
         (2013).","journal-title":"Phys. Rev. B"},{"key":"BFnnano2014279_CR12","doi-asserted-by":"publisher","first-page":"187201","DOI":"10.1103\/PhysRevLett.111.187201","volume":"111","author":"M
         Schmid","year":"2013","unstructured":"Schmid, M. et al. Phys. Rev. Lett. 111,
         187201 (2013).","journal-title":"Phys. Rev. Lett."}],"container-title":["Nature
-        Nanotechnology"],"original-title":[],"language":"en","link":[{"URL":"http:\/\/www.nature.com\/articles\/nnano.2014.279.pdf","content-type":"application\/pdf","content-version":"vor","intended-application":"text-mining"},{"URL":"http:\/\/www.nature.com\/articles\/nnano.2014.279","content-type":"text\/html","content-version":"vor","intended-application":"text-mining"},{"URL":"http:\/\/www.nature.com\/articles\/nnano.2014.279.pdf","content-type":"application\/pdf","content-version":"vor","intended-application":"similarity-checking"}],"deposited":{"date-parts":[[2019,9,30]],"date-time":"2019-09-30T19:36:22Z","timestamp":1569872182000},"score":1,"subtitle":[],"short-title":[],"issued":{"date-parts":[[2014,11,10]]},"references-count":12,"journal-issue":{"issue":"1","published-print":{"date-parts":[[2015,1]]}},"alternative-id":["BFnnano2014279"],"URL":"http:\/\/dx.doi.org\/10.1038\/nnano.2014.279","relation":{},"ISSN":["1748-3387","1748-3395"],"issn-type":[{"value":"1748-3387","type":"print"},{"value":"1748-3395","type":"electronic"}],"subject":["Electrical
+        Nanotechnology"],"original-title":[],"language":"en","link":[{"URL":"http:\/\/www.nature.com\/articles\/nnano.2014.279.pdf","content-type":"application\/pdf","content-version":"vor","intended-application":"text-mining"},{"URL":"http:\/\/www.nature.com\/articles\/nnano.2014.279","content-type":"text\/html","content-version":"vor","intended-application":"text-mining"},{"URL":"http:\/\/www.nature.com\/articles\/nnano.2014.279.pdf","content-type":"application\/pdf","content-version":"vor","intended-application":"similarity-checking"}],"deposited":{"date-parts":[[2021,12,2]],"date-time":"2021-12-02T07:57:48Z","timestamp":1638431868000},"score":1,"resource":{"primary":{"URL":"http:\/\/www.nature.com\/articles\/nnano.2014.279"}},"subtitle":[],"short-title":[],"issued":{"date-parts":[[2014,11,10]]},"references-count":12,"journal-issue":{"issue":"1","published-print":{"date-parts":[[2015,1]]}},"alternative-id":["BFnnano2014279"],"URL":"http:\/\/dx.doi.org\/10.1038\/nnano.2014.279","relation":{},"ISSN":["1748-3387","1748-3395"],"issn-type":[{"value":"1748-3387","type":"print"},{"value":"1748-3395","type":"electronic"}],"subject":["Electrical
         and Electronic Engineering","Condensed Matter Physics","General Materials
         Science","Biomedical Engineering","Atomic and Molecular Physics, and Optics","Bioengineering"],"published":{"date-parts":[[2014,11,10]]},"assertion":[{"value":"10
         November 2014","order":1,"name":"first_online","label":"First Online","group":{"name":"ArticleHistory","label":"Article
         History"}}]}}'
-  recorded_at: 2021-08-17 17:54:11 GMT
-  recorded_with: vcr/1.0.2, webmockr/0.8.0
+  recorded_at: 2022-11-09 13:17:45 GMT
+  recorded_with: vcr/1.1.0, webmockr/0.8.0

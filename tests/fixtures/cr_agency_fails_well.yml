@@ -8,28 +8,30 @@ http_interactions:
     headers:
       Accept-Encoding: gzip, deflate
       Accept: application/json, text/xml, application/xml, */*
-      User-Agent: r-curl/4.3.2 crul/1.1.0 rOpenSci(rcrossref/1.1.0.94) (mailto:<crossref_email>)
-      X-USER-AGENT: r-curl/4.3.2 crul/1.1.0 rOpenSci(rcrossref/1.1.0.94) (mailto:<crossref_email>)
+      User-Agent: r-curl/4.3.2 crul/1.3 rOpenSci(rcrossref/1.1.0.99) (mailto:<crossref_email>)
+      X-USER-AGENT: r-curl/4.3.2 crul/1.3 rOpenSci(rcrossref/1.1.0.99) (mailto:<crossref_email>)
   response:
     status:
       status_code: '200'
       message: OK
       explanation: Request fulfilled, document follows
     headers:
-      access-control-allow-headers: X-Requested-With
+      access-control-allow-headers: X-Requested-With, Accept, Accept-Encoding, Accept-Charset,
+        Accept-Language, Accept-Ranges, Cache-Control
       access-control-allow-origin: '*'
+      access-control-expose-headers: Link
       connection: close
       content-encoding: gzip
-      content-length: '2263'
+      content-length: '2142'
       content-type: application/json
-      date: Tue, 17 Aug 2021 17:22:18 GMT
+      date: Wed, 09 Nov 2022 10:03:05 GMT
       permissions-policy: interest-cohort=()
       server: Jetty(9.4.40.v20210413)
       set-cookie:
-      - AWSALB=QLZ83/BYQRs7osiWfSa2sJFST2+A+mlqm1MbH1bkWYogunxYZcOQzjBN7vTIoHUXquqBZHkEin0VPTIxFMM8ODqBpdYxYKtRJPCR00lbso90/ilaDZ0JuYDsi3JF;
-        Expires=Tue, 24 Aug 2021 17:22:13 GMT; Path=/
-      - AWSALBCORS=QLZ83/BYQRs7osiWfSa2sJFST2+A+mlqm1MbH1bkWYogunxYZcOQzjBN7vTIoHUXquqBZHkEin0VPTIxFMM8ODqBpdYxYKtRJPCR00lbso90/ilaDZ0JuYDsi3JF;
-        Expires=Tue, 24 Aug 2021 17:22:13 GMT; Path=/; SameSite=None
+      - AWSALB=E6OiwRPOLFSqY0fRJYXyd8JxroNCuziTfe4VbGIOKXMy4i6PMqqzz14qjCJ8xuqwCkgbxIGt3aG/zmMQc6tX8vaqj54AscLA3mBUqFvc+z6zD/0Z4YAyb6u4pQ0c;
+        Expires=Wed, 16 Nov 2022 10:02:35 GMT; Path=/
+      - AWSALBCORS=E6OiwRPOLFSqY0fRJYXyd8JxroNCuziTfe4VbGIOKXMy4i6PMqqzz14qjCJ8xuqwCkgbxIGt3aG/zmMQc6tX8vaqj54AscLA3mBUqFvc+z6zD/0Z4YAyb6u4pQ0c;
+        Expires=Wed, 16 Nov 2022 10:02:35 GMT; Path=/; SameSite=None
       status: HTTP/1.1 200 OK
       vary: Accept-Encoding
       x-api-pool: polite
@@ -38,40 +40,31 @@ http_interactions:
       x-ratelimit-interval: 1s
       x-ratelimit-limit: '50'
     body:
-      encoding: UTF-8
+      encoding: ''
       file: no
-      string: '{"status":"ok","message-type":"work-list","message-version":"1.0.0","message":{"facets":{},"total-results":126591300,"items":[{"indexed":{"date-parts":[[2021,5,8]],"date-time":"2021-05-08T12:18:27Z","timestamp":1620476307927},"reference-count":0,"publisher":"Wiley","issue":"5","license":[{"start":{"date-parts":[[2015,9,1]],"date-time":"2015-09-01T00:00:00Z","timestamp":1441065600000},"content-version":"tdm","delay-in-days":7640,"URL":"http:\/\/doi.wiley.com\/10.1002\/tdm_license_1"}],"content-domain":{"domain":[],"crossmark-restriction":false},"published-print":{"date-parts":[[1994,10]]},"DOI":"10.1111\/apt.1994.8.issue-5","type":"journal-issue","created":{"date-parts":[[2016,2,25]],"date-time":"2016-02-25T07:46:46Z","timestamp":1456386406000},"source":"Crossref","is-referenced-by-count":0,"prefix":"10.1111","volume":"8","member":"311","container-title":["Alimentary
-        Pharmacology & Therapeutics"],"language":"en","link":[{"URL":"http:\/\/api.wiley.com\/onlinelibrary\/tdm\/v1\/articles\/10.1111%2Fapt.1994.8.issue-5","content-type":"unspecified","content-version":"vor","intended-application":"text-mining"}],"deposited":{"date-parts":[[2016,2,25]],"date-time":"2016-02-25T07:46:46Z","timestamp":1456386406000},"score":0.99999994,"issued":{"date-parts":[[1994,10]]},"references-count":0,"journal-issue":{"issue":"5"},"URL":"http:\/\/dx.doi.org\/10.1111\/apt.1994.8.issue-5","ISSN":["0269-2813","1365-2036"],"issn-type":[{"value":"0269-2813","type":"print"},{"value":"1365-2036","type":"electronic"}],"subject":["Pharmacology
-        (medical)","Gastroenterology","Hepatology","Pharmacology (medical)","General
-        Pharmacology, Toxicology and Pharmaceutics"],"published":{"date-parts":[[1994,10]]}},{"indexed":{"date-parts":[[2021,5,10]],"date-time":"2021-05-10T15:10:36Z","timestamp":1620659436250},"reference-count":0,"publisher":"Ion
-        Creanga State Pedagogical University","issue":"1","content-domain":{"domain":[],"crossmark-restriction":false},"short-container-title":["PHCS"],"published-print":{"date-parts":[[2018,6,30]]},"abstract":"<jats:p>Between
-        1914 and 1921, the population inhabiting the region of Bessarabia witnessed,
-        although from behind the frontline, the world conflagration, which was followed
-        by major political changes that detached the region from the Russian Empire,
-        then created the conditions for a short independence period, to finally attach
-        the province to \u201cGreater Romania\u201d in 1918. The history of the city
-        of Chi\u0219in\u0103u during this tumultuous time period is discussed \u2013
-        for the first time \u2013 with a specific focus on its dynamics as a place
-        in which two political systems, defined by the imperial and the national model,
-        confronted each other while also coexisting in different settings. The authors
-        are especially interested in the trajectories of individuals, communities,
-        and institutions linked to the city. They reconstruct the way local actors
-        acknowledged political changes, but also how they exercised agency and imposed
-        their own agendas, frequently based on local, group, or personal needs. The
-        case of Chi\u0219in\u0103u is relevant for\nthe understanding of the major
-        impact of political transition(s) on the local level. It shows that there
-        were various local actors, all of them being part and parcel of this transition,
-        within which they had their own story to tell. Whereas for some political
-        or social groups 1918 meant a new beginning, for others it was the time of
-        political vacuum, from which certain dividends could be extracted.<\/jats:p>","DOI":"10.37710\/plural.v6i1_1","type":"journal-article","created":{"date-parts":[[2020,4,16]],"date-time":"2020-04-16T01:09:12Z","timestamp":1586999352000},"page":"5-42","source":"Crossref","is-referenced-by-count":0,"title":["Svetlana
-        Suveic\u0103, Virgil P\u00e2slariuc, Chi\u0219in\u0103u during World WarI:
-        From the Western Borderland of Russian Empire to the Eastern Borderland of
-        Romania \/ Chi\u015fin\u0103ul \u00een anii primului r\u0103zboi mondial:
-        de la hotarul de vest al Imperiului rus la hotarul de est al Rom\u00e2niei
-        Mari"],"prefix":"10.37710","volume":"6","member":"19313","published-online":{"date-parts":[[2018,6,30]]},"container-title":["PLURAL.
-        History, Culture, Society"],"language":"ro","deposited":{"date-parts":[[2020,4,17]],"date-time":"2020-04-17T04:48:47Z","timestamp":1587098927000},"score":0.99999994,"issued":{"date-parts":[[2018,6,30]]},"references-count":0,"journal-issue":{"issue":"1","published-online":{"date-parts":[[2018,6,30]]},"published-print":{"date-parts":[[2018,6,30]]}},"URL":"http:\/\/dx.doi.org\/10.37710\/plural.v6i1_1","archive":["Internet
-        Archive","Internet Archive"],"ISSN":["2345-184X","2345-1262"],"issn-type":[{"value":"2345-184X","type":"electronic"},{"value":"2345-1262","type":"print"}],"subject":["Sociology
-        and Political Science","History","Cultural Studies"],"published":{"date-parts":[[2018,6,30]]}},{"indexed":{"date-parts":[[2021,5,9]],"date-time":"2021-05-09T03:00:54Z","timestamp":1620529254620},"reference-count":0,"publisher":"Public
-        Library of Science (PLoS)","content-domain":{"domain":[],"crossmark-restriction":false},"DOI":"10.1371\/journal.pone.0092766.g006","type":"component","created":{"date-parts":[[2014,3,27]],"date-time":"2014-03-27T16:59:24Z","timestamp":1395939564000},"source":"Crossref","is-referenced-by-count":0,"prefix":"10.1371","member":"340","deposited":{"date-parts":[[2018,10,22]],"date-time":"2018-10-22T20:29:53Z","timestamp":1540240193000},"score":0.99999994,"issued":{"date-parts":[[null]]},"references-count":0,"URL":"http:\/\/dx.doi.org\/10.1371\/journal.pone.0092766.g006"}],"items-per-page":20,"query":{"start-index":0,"search-terms":null}}}'
-  recorded_at: 2021-08-17 17:22:18 GMT
-  recorded_with: vcr/1.0.2, webmockr/0.8.0
+      string: '{"status":"ok","message-type":"work-list","message-version":"1.0.0","message":{"facets":{},"total-results":3,"items":[{"indexed":{"date-parts":[[2022,3,31]],"date-time":"2022-03-31T13:00:34Z","timestamp":1648731634281},"reference-count":0,"publisher":"Harvard
+        University Press","content-domain":{"domain":[],"crossmark-restriction":false},"published-print":{"date-parts":[[1965,12,31]]},"DOI":"10.4159\/harvard.9780674288980.c7","type":"book-chapter","created":{"date-parts":[[2014,4,14]],"date-time":"2014-04-14T20:08:48Z","timestamp":1397506128000},"page":"37-43","source":"Crossref","is-referenced-by-count":0,"title":["V.
+        EIGHTEENTH-CENTURY EDITIONS (J\u2013M)"],"prefix":"10.4159","member":"2652","container-title":["Tottel''s
+        Miscellany (1557\u20131587), Volume II"],"link":[{"URL":"https:\/\/hup.degruyter.com\/view\/book\/9780674288980\/10.4159\/harvard.9780674288980.c7.xml","content-type":"text\/html","content-version":"vor","intended-application":"text-mining"},{"URL":"https:\/\/www.degruyter.com\/document\/doi\/10.4159\/harvard.9780674288980.c7\/pdf","content-type":"unspecified","content-version":"vor","intended-application":"similarity-checking"}],"deposited":{"date-parts":[[2021,4,23]],"date-time":"2021-04-23T00:20:35Z","timestamp":1619137235000},"score":0.0,"resource":{"primary":{"URL":"https:\/\/www.degruyter.com\/document\/doi\/10.4159\/harvard.9780674288980.c7\/html"}},"issued":{"date-parts":[[1965,12,31]]},"references-count":0,"URL":"http:\/\/dx.doi.org\/10.4159\/harvard.9780674288980.c7","published":{"date-parts":[[1965,12,31]]}},{"institution":[{"name":"University
+        of Iowa","department":["Art and Art History"]}],"indexed":{"date-parts":[[2022,3,31]],"date-time":"2022-03-31T21:58:38Z","timestamp":1648763918030},"reference-count":0,"publisher":"The
+        University of Iowa","license":[{"content-version":"unspecified","delay-in-days":0,"URL":"http:\/\/rightsstatements.org\/vocab\/InC\/1.0\/"}],"content-domain":{"domain":[],"crossmark-restriction":false},"DOI":"10.17077\/etd.89e52p7n","type":"dissertation","created":{"date-parts":[[2018,11,29]],"date-time":"2018-11-29T22:03:45Z","timestamp":1543529025000},"approved":{"date-parts":[[2013,5,1]]},"source":"Crossref","is-referenced-by-count":0,"title":["Normandy''s
+        role in the development of the Flamboyant style"],"prefix":"10.17077","author":[{"given":"Steven
+        James","family":"Kerrigan","sequence":"additional","affiliation":[]}],"member":"6626","deposited":{"date-parts":[[2022,2,7]],"date-time":"2022-02-07T06:32:34Z","timestamp":1644215554000},"score":0.0,"degree":["Doctor
+        of Philosophy (PhD)"],"resource":{"primary":{"URL":"https:\/\/iro.uiowa.edu\/esploro\/outputs\/doctoral\/9983777187702771"}},"subtitle":["decoration,
+        meaning, and exchange in Late Gothic architecture"],"issued":{"date-parts":[[null]]},"references-count":0,"URL":"http:\/\/dx.doi.org\/10.17077\/etd.89e52p7n"},{"indexed":{"date-parts":[[2022,3,30]],"date-time":"2022-03-30T02:43:35Z","timestamp":1648608215712},"reference-count":4,"publisher":"Springer
+        Science and Business Media LLC","issue":"11","license":[{"start":{"date-parts":[[1933,3,1]],"date-time":"1933-03-01T00:00:00Z","timestamp":-1162512000000},"content-version":"tdm","delay-in-days":0,"URL":"http:\/\/www.springer.com\/tdm"}],"content-domain":{"domain":[],"crossmark-restriction":false},"short-container-title":["Klin
+        Wochenschr"],"published-print":{"date-parts":[[1933,3]]},"DOI":"10.1007\/bf01756261","type":"journal-article","created":{"date-parts":[[2005,6,15]],"date-time":"2005-06-15T03:31:05Z","timestamp":1118806265000},"page":"424-425","source":"Crossref","is-referenced-by-count":4,"title":["\u00dcber
+        die Eiweisslabilit\u00e4t des Serums"],"prefix":"10.1007","volume":"12","author":[{"given":"Adolf","family":"Schmitz","sequence":"first","affiliation":[]},{"given":"Albert","family":"Fischer","sequence":"additional","affiliation":[]}],"member":"297","reference":[{"key":"BF01756261_CR1","doi-asserted-by":"crossref","first-page":"10","DOI":"10.1007\/BF01474473","volume":"51","author":"the
+        Svedberg","year":"1930","unstructured":"the Svedberg, Kolloid. Z.51, 10 (1930).","journal-title":"Kolloid.
+        Z."},{"key":"BF01756261_CR2","doi-asserted-by":"crossref","first-page":"102","DOI":"10.1007\/BF01484767","volume":"53","author":"S.
+        P. L. S\u00f8rensen","year":"1930","unstructured":"S. P. L. S\u00f8rensen,
+        Kolloid. Z.53, 102 (1930).","journal-title":"Kolloid. Z."},{"key":"BF01756261_CR3","first-page":"404","volume":"244","author":"A.
+        Fischer","year":"1932","unstructured":"A. Fischer, Biochem. Z.244, 404 (1932).","journal-title":"Biochem.
+        Z."},{"key":"BF01756261_CR4","doi-asserted-by":"crossref","first-page":"471","DOI":"10.1007\/BF01504989","volume":"20","author":"A.
+        Fischer","year":"1932","unstructured":"A. Fischer u.A. Schmitz, Naturwiss.20,
+        471 (1932).","journal-title":"Naturwiss."}],"container-title":["Klinische
+        Wochenschrift"],"language":"de","link":[{"URL":"http:\/\/link.springer.com\/content\/pdf\/10.1007\/BF01756261.pdf","content-type":"application\/pdf","content-version":"vor","intended-application":"text-mining"},{"URL":"http:\/\/link.springer.com\/article\/10.1007\/BF01756261\/fulltext.html","content-type":"text\/html","content-version":"vor","intended-application":"text-mining"},{"URL":"http:\/\/link.springer.com\/content\/pdf\/10.1007\/BF01756261","content-type":"unspecified","content-version":"vor","intended-application":"similarity-checking"}],"deposited":{"date-parts":[[2019,5,8]],"date-time":"2019-05-08T16:09:50Z","timestamp":1557331790000},"score":0.0,"resource":{"primary":{"URL":"http:\/\/link.springer.com\/10.1007\/BF01756261"}},"subtitle":["Ein
+        Versuch zu einer allgemein g\u00fcltigen Fassung der serologischen Labilit\u00e4tsreaktionen"],"issued":{"date-parts":[[1933,3]]},"references-count":4,"journal-issue":{"issue":"11","published-print":{"date-parts":[[1933,3]]}},"alternative-id":["BF01756261"],"URL":"http:\/\/dx.doi.org\/10.1007\/bf01756261","ISSN":["0023-2173","1432-1440"],"issn-type":[{"value":"0023-2173","type":"print"},{"value":"1432-1440","type":"electronic"}],"subject":["General
+        Medicine","Genetics (clinical)","Drug Discovery","Molecular Medicine"],"published":{"date-parts":[[1933,3]]}}],"items-per-page":20,"query":{"start-index":0,"search-terms":null}}}'
+  recorded_at: 2022-11-09 10:03:05 GMT
+  recorded_with: vcr/1.1.0, webmockr/0.8.0

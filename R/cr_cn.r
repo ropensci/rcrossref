@@ -86,7 +86,7 @@
 #' cr_cn("10.5284/1011335", "bibentry")
 #'
 #' # Using Medra DOIs
-#' cr_cn("10.3233/ISU-150780", "onix-xml")
+#' cr_cn("10.1430/8105", "onix-xml")
 #'
 #' # Get raw output
 #' cr_cn(dois = "10.1002/app.27716", format = "citeproc-json", raw = TRUE)
@@ -97,14 +97,11 @@
 #' cr_cn("10.1890/0012-9615(1999)069[0569:EDILSA]2.0.CO;2")
 #' 
 #' # Use a different base url
-#' cr_cn("10.1126/science.169.3946.635", "text", url = "https://data.datacite.org")
 #' cr_cn("10.1126/science.169.3946.635", "text", url = "http://dx.doi.org")
 #' cr_cn("10.1126/science.169.3946.635", "text", "heredity", url = "http://dx.doi.org")
 #' cr_cn("10.5284/1011335", url = "https://citation.crosscite.org/format", 
 #'    style = "oikos")
 #' cr_cn("10.5284/1011335", url = "https://citation.crosscite.org/format", 
-#'    style = "plant-cell-and-environment")
-#' cr_cn("10.5284/1011335", url = "https://data.datacite.org", 
 #'    style = "plant-cell-and-environment")
 #' }
 

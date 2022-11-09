@@ -8,9 +8,9 @@ test_that("cr_works returns", {
     c <- cr_works(query="global state", filter=c(has_orcid=TRUE), limit=3)
     d <- cr_works(filter=c(has_full_text = TRUE))
     e <- cr_works(dois=c('10.1007/12080.1874-1746','10.1007/10452.1573-5125', '10.1111/(issn)1442-9993'))
-    f <- cr_works(query="NSF", facet=TRUE, limit=0)
+    f <- cr_works(query="lagotto", facet=TRUE, limit=0)
     g <- cr_works(sample=1)
-    h <- cr_works(query="NSF", facet=TRUE)
+   # h <- cr_works(query="lagotto", facet=TRUE)
     i <- suppressWarnings(cr_works(dois=c('blblbl', '10.1038/nnano.2014.279')))
 
     # correct class
@@ -21,7 +21,7 @@ test_that("cr_works returns", {
     expect_is(e, "list")
     expect_is(f, "list")
     expect_is(g, "list")
-    expect_is(h, "list")
+   # expect_is(h, "list")
     expect_is(i, "list")
 
     expect_is(a$meta, "data.frame")
@@ -30,11 +30,11 @@ test_that("cr_works returns", {
     expect_is(a$data$url, "character")
     expect_equal(a$facets, NULL)
 
-    expect_is(h, "list")
-    expect_is(h$meta, "data.frame")
-    expect_is(h$facets, "list")
-    expect_is(h$facets$license, "data.frame")
-    expect_is(h$facets$license$.id, "character")
+    expect_is(f, "list")
+    expect_is(f$meta, "data.frame")
+    expect_is(f$facets, "list")
+    expect_is(f$facets$license, "data.frame")
+    expect_is(f$facets$license$.id, "character")
 
     expect_equal(i$meta, NULL)
     expect_equal(i$facets, NULL)
@@ -48,7 +48,7 @@ test_that("cr_works returns", {
     expect_equal(length(e), 3)
     expect_equal(length(f), 3)
     expect_equal(length(g), 3)
-    expect_equal(length(h), 3)
+   # expect_equal(length(h), 3)
     expect_equal(length(i), 3)
 
   })

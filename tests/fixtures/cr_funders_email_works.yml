@@ -8,28 +8,30 @@ http_interactions:
     headers:
       Accept-Encoding: gzip, deflate
       Accept: application/json, text/xml, application/xml, */*
-      User-Agent: r-curl/4.3.2 crul/1.1.0 rOpenSci(rcrossref/1.1.0.94) (mailto:name@example.com)
-      X-USER-AGENT: r-curl/4.3.2 crul/1.1.0 rOpenSci(rcrossref/1.1.0.94) (mailto:name@example.com)
+      User-Agent: r-curl/4.3.2 crul/1.3 rOpenSci(rcrossref/1.1.0.99) (mailto:name@example.com)
+      X-USER-AGENT: r-curl/4.3.2 crul/1.3 rOpenSci(rcrossref/1.1.0.99) (mailto:name@example.com)
   response:
     status:
       status_code: '200'
       message: OK
       explanation: Request fulfilled, document follows
     headers:
-      access-control-allow-headers: X-Requested-With
+      access-control-allow-headers: X-Requested-With, Accept, Accept-Encoding, Accept-Charset,
+        Accept-Language, Accept-Ranges, Cache-Control
       access-control-allow-origin: '*'
+      access-control-expose-headers: Link
       connection: close
       content-encoding: gzip
-      content-length: '928'
+      content-length: '948'
       content-type: application/json
-      date: Tue, 17 Aug 2021 17:23:26 GMT
+      date: Wed, 09 Nov 2022 12:37:20 GMT
       permissions-policy: interest-cohort=()
       server: Jetty(9.4.40.v20210413)
       set-cookie:
-      - AWSALB=SHSsFHDg0QNHR0uFM00Speed/74pzQOGrdFvOkOuoOcGEaGSckcOlTwRAV9o1SsWBBkUyPeTinnCWVXFOlnmKlyfY4aQLLZfRJF0MVKxDniNEm9PAM6B/FXzQ0dw;
-        Expires=Tue, 24 Aug 2021 17:23:26 GMT; Path=/
-      - AWSALBCORS=SHSsFHDg0QNHR0uFM00Speed/74pzQOGrdFvOkOuoOcGEaGSckcOlTwRAV9o1SsWBBkUyPeTinnCWVXFOlnmKlyfY4aQLLZfRJF0MVKxDniNEm9PAM6B/FXzQ0dw;
-        Expires=Tue, 24 Aug 2021 17:23:26 GMT; Path=/; SameSite=None
+      - AWSALB=aSTJ0vTTPtW7EhAz5N2QgjJfmRwIBfg6KNQtvTAcTylCJiY2rwAjkix7OH98pKM9+bkswk/EWGcw2HF5hVmDnXDUPIyd804W4dAXzgUrsQt6qdNt3x8xFvCzrZqk;
+        Expires=Wed, 16 Nov 2022 12:37:00 GMT; Path=/
+      - AWSALBCORS=aSTJ0vTTPtW7EhAz5N2QgjJfmRwIBfg6KNQtvTAcTylCJiY2rwAjkix7OH98pKM9+bkswk/EWGcw2HF5hVmDnXDUPIyd804W4dAXzgUrsQt6qdNt3x8xFvCzrZqk;
+        Expires=Wed, 16 Nov 2022 12:37:00 GMT; Path=/; SameSite=None
       status: HTTP/1.1 200 OK
       vary: Accept-Encoding
       x-api-pool: polite
@@ -38,7 +40,7 @@ http_interactions:
       x-ratelimit-interval: 1s
       x-ratelimit-limit: '50'
     body:
-      encoding: UTF-8
+      encoding: ''
       file: no
       string: '{"status":"ok","message-type":"funder","message-version":"1.0.0","message":{"hierarchy-names":{"100010608":"Office
         of Inspector General","100000179":"Office of the Director","100014411":"Center
@@ -51,8 +53,9 @@ http_interactions:
         Science and Technology Center","100000088":"Directorate for Social, Behavioral
         and Economic Sciences","100005447":"Office of Information and Resource Management","100000086":"Directorate
         for Mathematical and Physical Sciences","100000085":"Directorate for Geosciences","100014072":"National
-        Coordination Office"},"replaced-by":[],"work-count":246656,"name":"National
-        Science Foundation","descendants":["100000076","100000077","100000078","100000081","100000082","100000083","100000084","100000085","100000086","100000087","100000088","100000089","100000105","100000106","100000121","100000141","100000143","100000144","100000145","100000146","100000147","100000148","100000149","100000150","100000151","100000152","100000153","100000154","100000155","100000156","100000159","100000160","100000162","100000163","100000164","100000165","100000166","100000169","100000170","100000171","100000172","100000173","100000174","100000175","100000176","100000177","100000178","100000179","100005441","100005442","100005443","100005444","100005445","100005446","100005447","100005448","100005449","100005450","100005553","100005554","100005714","100005716","100005717","100006091","100006603","100007352","100007521","100007522","100007523","100010608","100014071","100014072","100014073","100014074","100014411","100014591","100015815"],"descendant-work-count":309283,"id":"100000001","tokens":["national","science","foundation","usa","nsf","nsf","us","nsf"],"replaces":[],"uri":"http:\/\/dx.doi.org\/10.13039\/100000001","hierarchy":{"100000001":{"100010608":{},"100000179":{"more":true},"100014411":{},"100005716":{},"100000081":{"more":true},"100000083":{"more":true},"100015815":{},"100005441":{"more":true},"100000076":{"more":true},"100000084":{"more":true},"100014073":{},"100014591":{},"100000088":{"more":true},"100005447":{"more":true},"100000086":{"more":true},"100000085":{"more":true},"100014072":{}}},"alt-names":["USA
-        NSF","NSF","US NSF"],"location":"United States"}}'
-  recorded_at: 2021-08-17 17:23:26 GMT
-  recorded_with: vcr/1.0.2, webmockr/0.8.0
+        Coordination Office"},"replaced-by":[],"work-count":297216,"name":"National
+        Science Foundation","descendants":["100000076","100000077","100000078","100000081","100000082","100000083","100000084","100000085","100000086","100000087","100000088","100000089","100000105","100000106","100000121","100000141","100000143","100000144","100000145","100000146","100000147","100000148","100000149","100000150","100000151","100000152","100000153","100000154","100000155","100000156","100000159","100000160","100000162","100000163","100000164","100000165","100000166","100000169","100000170","100000171","100000172","100000173","100000174","100000175","100000176","100000177","100000178","100000179","100005441","100005442","100005443","100005444","100005445","100005446","100005447","100005448","100005449","100005450","100005553","100005554","100005714","100005716","100005717","100006091","100006603","100007352","100007521","100007522","100007523","100010608","100014071","100014072","100014073","100014074","100014411","100014591","100015815"],"descendant-work-count":368301,"id":"100000001","tokens":["national","science","foundation","us","national","science","foundation","usa","nsf","nsf","usnsf","us","national","science","foundation","us","nsf"],"replaces":[],"uri":"http:\/\/dx.doi.org\/10.13039\/100000001","hierarchy":{"100000001":{"100010608":{},"100000179":{"more":true},"100014411":{},"100005716":{},"100000081":{"more":true},"100000083":{"more":true},"100015815":{},"100005441":{"more":true},"100000076":{"more":true},"100000084":{"more":true},"100014073":{},"100014591":{},"100000088":{"more":true},"100005447":{"more":true},"100000086":{"more":true},"100000085":{"more":true},"100014072":{}}},"alt-names":["U.S.
+        National Science Foundation","USA NSF","NSF","USNSF","US National Science
+        Foundation","US NSF"],"location":"United States"}}'
+  recorded_at: 2022-11-09 12:37:20 GMT
+  recorded_with: vcr/1.1.0, webmockr/0.8.0

@@ -8,28 +8,30 @@ http_interactions:
     headers:
       Accept-Encoding: gzip, deflate
       Accept: application/json, text/xml, application/xml, */*
-      User-Agent: r-curl/4.3.2 crul/1.1.0 rOpenSci(rcrossref/1.1.0.94) (mailto:<crossref_email>)
-      X-USER-AGENT: r-curl/4.3.2 crul/1.1.0 rOpenSci(rcrossref/1.1.0.94) (mailto:<crossref_email>)
+      User-Agent: r-curl/4.3.2 crul/1.3 rOpenSci(rcrossref/1.1.0.99) (mailto:<crossref_email>)
+      X-USER-AGENT: r-curl/4.3.2 crul/1.3 rOpenSci(rcrossref/1.1.0.99) (mailto:<crossref_email>)
   response:
     status:
       status_code: '404'
       message: Not Found
       explanation: Nothing matches the given URI
     headers:
-      access-control-allow-headers: X-Requested-With
+      access-control-allow-headers: X-Requested-With, Accept, Accept-Encoding, Accept-Charset,
+        Accept-Language, Accept-Ranges, Cache-Control
       access-control-allow-origin: '*'
+      access-control-expose-headers: Link
       connection: close
-      content-length: '19'
       content-type: application/json;charset=utf-8
-      date: Tue, 17 Aug 2021 17:22:31 GMT
+      date: Wed, 09 Nov 2022 09:22:55 GMT
       permissions-policy: interest-cohort=()
       server: Jetty(9.4.40.v20210413)
       set-cookie:
-      - AWSALB=LqRPa89TtoyuprIAdj1nR4myeD6Br3IBbc9GH2Q+tEAgQMMRPdG8/yyaUblBUZgJm5DVrIfDve/SPKz+ZBfzVYaI29YDOZtRitmhpL10OVIfucIpVDam6g/0Gc3g;
-        Expires=Tue, 24 Aug 2021 17:22:31 GMT; Path=/
-      - AWSALBCORS=LqRPa89TtoyuprIAdj1nR4myeD6Br3IBbc9GH2Q+tEAgQMMRPdG8/yyaUblBUZgJm5DVrIfDve/SPKz+ZBfzVYaI29YDOZtRitmhpL10OVIfucIpVDam6g/0Gc3g;
-        Expires=Tue, 24 Aug 2021 17:22:31 GMT; Path=/; SameSite=None
+      - AWSALB=S5G4/oilvvxUqOHOun/ACEI9uBULE9DiL4JqF21B/wakQRNfeVzQNw5+6SgSpzB/oUuw0rq0rsavqN3eX1V/uErBCkjbDMQ1P42RVoUsYrA1d20FHc1NjqDKujmg;
+        Expires=Wed, 16 Nov 2022 09:22:55 GMT; Path=/
+      - AWSALBCORS=S5G4/oilvvxUqOHOun/ACEI9uBULE9DiL4JqF21B/wakQRNfeVzQNw5+6SgSpzB/oUuw0rq0rsavqN3eX1V/uErBCkjbDMQ1P42RVoUsYrA1d20FHc1NjqDKujmg;
+        Expires=Wed, 16 Nov 2022 09:22:55 GMT; Path=/; SameSite=None
       status: HTTP/1.1 404 Not Found
+      transfer-encoding: chunked
       vary: Accept
       x-api-pool: polite
       x-rate-limit-interval: 1s
@@ -37,21 +39,21 @@ http_interactions:
       x-ratelimit-interval: 1s
       x-ratelimit-limit: '50'
     body:
-      encoding: UTF-8
+      encoding: ''
       file: no
       string: Resource not found.
-  recorded_at: 2021-08-17 17:22:32 GMT
-  recorded_with: vcr/1.0.2, webmockr/0.8.0
+  recorded_at: 2022-11-09 09:23:17 GMT
+  recorded_with: vcr/1.1.0, webmockr/0.8.0
 - request:
     method: get
-    uri: https://data.crossref.org/10.1890%2F0012-9615%281999%29069%5B0569%3AEDILSA%5D2.0.CO%3B2
+    uri: https://api.crossref.org/v1/works/10.1890%2F0012-9615%281999%29069%5B0569%3AEDILSA%5D2.0.CO%3B2/transform
     body:
       encoding: ''
       string: ''
     headers:
       Accept-Encoding: gzip, deflate
-      User-Agent: r-curl/4.3.2 crul/1.1.0 rOpenSci(rcrossref/1.1.0.94) (mailto:<crossref_email>)
-      X-USER-AGENT: r-curl/4.3.2 crul/1.1.0 rOpenSci(rcrossref/1.1.0.94) (mailto:<crossref_email>)
+      User-Agent: r-curl/4.3.2 crul/1.3 rOpenSci(rcrossref/1.1.0.99) (mailto:<crossref_email>)
+      X-USER-AGENT: r-curl/4.3.2 crul/1.3 rOpenSci(rcrossref/1.1.0.99) (mailto:<crossref_email>)
       Accept: application/x-bibtex
   response:
     status:
@@ -59,26 +61,35 @@ http_interactions:
       message: OK
       explanation: Request fulfilled, document follows
     headers:
-      status: HTTP/1.1 200 OK
-      access-control-allow-origin: '*'
       access-control-allow-headers: X-Requested-With, Accept, Accept-Encoding, Accept-Charset,
         Accept-Language, Accept-Ranges, Cache-Control
+      access-control-allow-origin: '*'
       access-control-expose-headers: Link
+      connection: close
+      content-type: application/x-bibtex
+      date: Wed, 09 Nov 2022 09:23:17 GMT
       link: <http://dx.doi.org/10.1890/0012-9615(1999)069[0569:edilsa]2.0.co;2>; rel="canonical",
         <https://api.wiley.com/onlinelibrary/tdm/v1/articles/10.1890%2F0012-9615(1999)069%5B0569:EDILSA%5D2.0.CO;2>;
         version="vor"; rel="item", <https://onlinelibrary.wiley.com/doi/full/10.1890/0012-9615(1999)069%5B0569:EDILSA%5D2.0.CO;2>;
         version="vor"; rel="item", <http://doi.wiley.com/10.1002/tdm_license_1.1>;
         version="tdm"; rel="license"
-      content-type: application/x-bibtex
-      content-length: '526'
-      server: http-kit
-      date: Tue, 17 Aug 2021 17:22:32 GMT
-      x-rate-limit-limit: '50'
-      x-rate-limit-interval: 1s
       permissions-policy: interest-cohort=()
-      connection: close
+      server: Jetty(9.4.40.v20210413)
+      set-cookie:
+      - AWSALB=0IPqo4bmUGg8SO2Y2hwgtVHqk1NHMvabE9LI3K7dvPko/cDE/2DWOA5kJfD3wMN5NfEhSOsm9b3BK5ujvqjr/k8zL2ChV5e3Q2FBWDEI6XSoNvAOooLnnzqpOKe4;
+        Expires=Wed, 16 Nov 2022 09:22:56 GMT; Path=/
+      - AWSALBCORS=0IPqo4bmUGg8SO2Y2hwgtVHqk1NHMvabE9LI3K7dvPko/cDE/2DWOA5kJfD3wMN5NfEhSOsm9b3BK5ujvqjr/k8zL2ChV5e3Q2FBWDEI6XSoNvAOooLnnzqpOKe4;
+        Expires=Wed, 16 Nov 2022 09:22:56 GMT; Path=/; SameSite=None
+      status: HTTP/1.1 200 OK
+      transfer-encoding: chunked
+      vary: Accept
+      x-api-pool: polite
+      x-rate-limit-interval: 1s
+      x-rate-limit-limit: '50'
+      x-ratelimit-interval: 1s
+      x-ratelimit-limit: '50'
     body:
-      encoding: UTF-8
+      encoding: ''
       file: no
       string: "@article{Cunningham_1999,\n\tdoi = {10.1890/0012-9615(1999)069[0569:edilsa]2.0.co;2},\n\turl
         = {https://doi.org/10.1890%2F0012-9615%281999%29069%5B0569%3Aedilsa%5D2.0.co%3B2},\n\tyear
@@ -87,5 +98,5 @@ http_interactions:
         and Mark Westoby},\n\ttitle = {{EVOLUTIONARY} {DIVERGENCES} {IN} {LEAF} {STRUCTURE}
         {AND} {CHEMISTRY}, {COMPARING} {RAINFALL} {AND} {SOIL} {NUTRIENT} {GRADIENTS}},\n\tjournal
         = {Ecological Monographs}\n}"
-  recorded_at: 2021-08-17 17:22:32 GMT
-  recorded_with: vcr/1.0.2, webmockr/0.8.0
+  recorded_at: 2022-11-09 09:23:17 GMT
+  recorded_with: vcr/1.1.0, webmockr/0.8.0

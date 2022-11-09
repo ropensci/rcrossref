@@ -8,28 +8,30 @@ http_interactions:
     headers:
       Accept-Encoding: gzip, deflate
       Accept: application/json, text/xml, application/xml, */*
-      User-Agent: r-curl/4.3.2 crul/1.1.0 rOpenSci(rcrossref/1.1.0.94) (mailto:<crossref_email>)
-      X-USER-AGENT: r-curl/4.3.2 crul/1.1.0 rOpenSci(rcrossref/1.1.0.94) (mailto:<crossref_email>)
+      User-Agent: r-curl/4.3.2 crul/1.3 rOpenSci(rcrossref/1.1.0.99) (mailto:<crossref_email>)
+      X-USER-AGENT: r-curl/4.3.2 crul/1.3 rOpenSci(rcrossref/1.1.0.99) (mailto:<crossref_email>)
   response:
     status:
       status_code: '404'
       message: Not Found
       explanation: Nothing matches the given URI
     headers:
-      access-control-allow-headers: X-Requested-With
+      access-control-allow-headers: X-Requested-With, Accept, Accept-Encoding, Accept-Charset,
+        Accept-Language, Accept-Ranges, Cache-Control
       access-control-allow-origin: '*'
+      access-control-expose-headers: Link
       connection: close
-      content-length: '19'
       content-type: application/json;charset=utf-8
-      date: Tue, 17 Aug 2021 17:23:44 GMT
+      date: Wed, 09 Nov 2022 09:33:03 GMT
       permissions-policy: interest-cohort=()
       server: Jetty(9.4.40.v20210413)
       set-cookie:
-      - AWSALB=Z8hq+hXMggJ3DqQhbePWYEXgegaxNqW94quQ0RGv5aZEcX3GF//F8IWT7Qfgi5uLyrMW0DXZ9m2WA6ayKN+CoCYsTLbFD1d+cWprHSzdXkFzZv64g73Nx/bXn3uW;
-        Expires=Tue, 24 Aug 2021 17:23:44 GMT; Path=/
-      - AWSALBCORS=Z8hq+hXMggJ3DqQhbePWYEXgegaxNqW94quQ0RGv5aZEcX3GF//F8IWT7Qfgi5uLyrMW0DXZ9m2WA6ayKN+CoCYsTLbFD1d+cWprHSzdXkFzZv64g73Nx/bXn3uW;
-        Expires=Tue, 24 Aug 2021 17:23:44 GMT; Path=/; SameSite=None
+      - AWSALB=6gLFGuLULUfIzH0JFgWsoEtZG1guV2jMWQDC+VAGbJflEvpSjVjqYeMPoUhOq6UNo8NiCd4bHfHnFHHjLpD2eb7TAoY6ScfHeEozX0we53hkEa/yPGxI2zNMLUpO;
+        Expires=Wed, 16 Nov 2022 09:33:03 GMT; Path=/
+      - AWSALBCORS=6gLFGuLULUfIzH0JFgWsoEtZG1guV2jMWQDC+VAGbJflEvpSjVjqYeMPoUhOq6UNo8NiCd4bHfHnFHHjLpD2eb7TAoY6ScfHeEozX0we53hkEa/yPGxI2zNMLUpO;
+        Expires=Wed, 16 Nov 2022 09:33:03 GMT; Path=/; SameSite=None
       status: HTTP/1.1 404 Not Found
+      transfer-encoding: chunked
       vary: Accept
       x-api-pool: polite
       x-rate-limit-interval: 1s
@@ -37,11 +39,11 @@ http_interactions:
       x-ratelimit-interval: 1s
       x-ratelimit-limit: '50'
     body:
-      encoding: UTF-8
+      encoding: ''
       file: no
       string: Resource not found.
-  recorded_at: 2021-08-17 17:23:47 GMT
-  recorded_with: vcr/1.0.2, webmockr/0.8.0
+  recorded_at: 2022-11-09 09:33:48 GMT
+  recorded_with: vcr/1.1.0, webmockr/0.8.0
 - request:
     method: get
     uri: https://api.crossref.org/journals/1932-6203
@@ -51,28 +53,30 @@ http_interactions:
     headers:
       Accept-Encoding: gzip, deflate
       Accept: application/json, text/xml, application/xml, */*
-      User-Agent: r-curl/4.3.2 crul/1.1.0 rOpenSci(rcrossref/1.1.0.94) (mailto:<crossref_email>)
-      X-USER-AGENT: r-curl/4.3.2 crul/1.1.0 rOpenSci(rcrossref/1.1.0.94) (mailto:<crossref_email>)
+      User-Agent: r-curl/4.3.2 crul/1.3 rOpenSci(rcrossref/1.1.0.99) (mailto:<crossref_email>)
+      X-USER-AGENT: r-curl/4.3.2 crul/1.3 rOpenSci(rcrossref/1.1.0.99) (mailto:<crossref_email>)
   response:
     status:
       status_code: '200'
       message: OK
       explanation: Request fulfilled, document follows
     headers:
-      access-control-allow-headers: X-Requested-With
+      access-control-allow-headers: X-Requested-With, Accept, Accept-Encoding, Accept-Charset,
+        Accept-Language, Accept-Ranges, Cache-Control
       access-control-allow-origin: '*'
+      access-control-expose-headers: Link
       connection: close
       content-encoding: gzip
-      content-length: '1045'
+      content-length: '1096'
       content-type: application/json
-      date: Tue, 17 Aug 2021 17:23:44 GMT
+      date: Wed, 09 Nov 2022 09:33:15 GMT
       permissions-policy: interest-cohort=()
       server: Jetty(9.4.40.v20210413)
       set-cookie:
-      - AWSALB=gwGGrt6FFH+Tr2hk9x1rYfN3PQd/5hB2z5BFoRnUYAVilTTtymx+Pn6LTGbL/fr2TJ1ePSDm/veHR2vRbm5FTRbIt20nuqXGPL+TfOk/tycTrutWsqQVy2vI7Jd1;
-        Expires=Tue, 24 Aug 2021 17:23:44 GMT; Path=/
-      - AWSALBCORS=gwGGrt6FFH+Tr2hk9x1rYfN3PQd/5hB2z5BFoRnUYAVilTTtymx+Pn6LTGbL/fr2TJ1ePSDm/veHR2vRbm5FTRbIt20nuqXGPL+TfOk/tycTrutWsqQVy2vI7Jd1;
-        Expires=Tue, 24 Aug 2021 17:23:44 GMT; Path=/; SameSite=None
+      - AWSALB=5seItAMWHa2TCUaK2hSv33U/bEu+X0iGl3A5iXF+RGS0qMIKy8oCfOjwhSL/r9rchG9/eQrC6/WgK5ak/8XYg3gvgQ0HKkGZLTT6wDufV3DEG2p4o8xzwAkdMGDo;
+        Expires=Wed, 16 Nov 2022 09:33:03 GMT; Path=/
+      - AWSALBCORS=5seItAMWHa2TCUaK2hSv33U/bEu+X0iGl3A5iXF+RGS0qMIKy8oCfOjwhSL/r9rchG9/eQrC6/WgK5ak/8XYg3gvgQ0HKkGZLTT6wDufV3DEG2p4o8xzwAkdMGDo;
+        Expires=Wed, 16 Nov 2022 09:33:03 GMT; Path=/; SameSite=None
       status: HTTP/1.1 200 OK
       vary: Accept-Encoding
       x-api-pool: polite
@@ -81,13 +85,13 @@ http_interactions:
       x-ratelimit-interval: 1s
       x-ratelimit-limit: '50'
     body:
-      encoding: UTF-8
+      encoding: ''
       file: no
-      string: '{"status":"ok","message-type":"journal","message-version":"1.0.0","message":{"last-status-check-time":1629159837094,"counts":{"current-dois":43391,"backfile-dois":211409,"total-dois":254800},"breakdowns":{"dois-by-issued-year":[[2013,32985],[2014,31876],[2015,29815],[2012,24090],[2016,23022],[2017,21150],[2018,18832],[2020,16685],[2019,16226],[2011,14025],[2021,10480],[2010,6911],[2009,4534],[2008,2801],[2007,1230],[2006,138]]},"publisher":"Public
-        Library of Science","coverage":{"affiliations-current":0.0,"similarity-checking-current":1.0,"funders-backfile":0.1732754991509349,"licenses-backfile":0.9924837636997479,"funders-current":0.5781613698693276,"affiliations-backfile":0.0,"resource-links-backfile":0.0,"orcids-backfile":0.1730342606038532,"update-policies-current":1.0,"open-references-backfile":1.0,"orcids-current":0.9399184162614367,"similarity-checking-backfile":0.9139487912056724,"references-backfile":0.9139487912056724,"award-numbers-backfile":0.1472075455633393,"update-policies-backfile":0.9999668888268711,"licenses-current":1.0,"award-numbers-current":0.4971076951441543,"abstracts-backfile":3.784134071870166E-5,"resource-links-current":0.0,"abstracts-current":0.2997395773317047,"open-references-current":1.0,"references-current":0.9999769537461686},"title":"PLoS
-        ONE","subjects":[{"ASJC":1000,"name":"Multidisciplinary"}],"coverage-type":{"all":{"last-status-check-time":1629159837094,"affiliations":0.0,"abstracts":0.05107535321821036,"orcids":0.3036302982731554,"licenses":0.9937637362637363,"references":0.9285989010989011,"funders":0.2422252747252747,"similarity-checking":0.9286028257456829,"award-numbers":0.2067935635792779,"update-policies":0.9999725274725275,"resource-links":0.0,"open-references":1.0},"backfile":{"last-status-check-time":1629159837094,"affiliations":0.0,"abstracts":3.784134071870166E-5,"orcids":0.1730342606038532,"licenses":0.9924837636997479,"references":0.9139487912056724,"funders":0.1732754991509349,"similarity-checking":0.9139487912056724,"award-numbers":0.1472075455633393,"update-policies":0.9999668888268711,"resource-links":0.0,"open-references":1.0},"current":{"last-status-check-time":1629159837094,"affiliations":0.0,"abstracts":0.2997395773317047,"orcids":0.9399184162614367,"licenses":1.0,"references":0.9999769537461686,"funders":0.5781613698693276,"similarity-checking":1.0,"award-numbers":0.4971076951441543,"update-policies":1.0,"resource-links":0.0,"open-references":1.0}},"flags":{"deposits-abstracts-current":true,"deposits-orcids-current":true,"deposits":true,"deposits-affiliations-backfile":false,"deposits-update-policies-backfile":true,"deposits-similarity-checking-backfile":true,"deposits-award-numbers-current":true,"deposits-resource-links-current":false,"deposits-articles":true,"deposits-affiliations-current":false,"deposits-funders-current":true,"deposits-references-backfile":true,"deposits-abstracts-backfile":true,"deposits-licenses-backfile":true,"deposits-award-numbers-backfile":true,"deposits-open-references-backfile":true,"deposits-open-references-current":true,"deposits-references-current":true,"deposits-resource-links-backfile":false,"deposits-orcids-backfile":true,"deposits-funders-backfile":true,"deposits-update-policies-current":true,"deposits-similarity-checking-current":true,"deposits-licenses-current":true},"ISSN":["1932-6203"],"issn-type":[{"value":"1932-6203","type":"electronic"}]}}'
-  recorded_at: 2021-08-17 17:23:47 GMT
-  recorded_with: vcr/1.0.2, webmockr/0.8.0
+      string: '{"status":"ok","message-type":"journal","message-version":"1.0.0","message":{"last-status-check-time":1667923354120,"counts":{"current-dois":47025,"backfile-dois":227635,"total-dois":274660},"breakdowns":{"dois-by-issued-year":[[2013,32985],[2014,31876],[2015,29815],[2012,24090],[2016,23022],[2017,21150],[2018,18832],[2020,16685],[2021,16624],[2019,16226],[2011,14025],[2022,13716],[2010,6911],[2009,4534],[2008,2801],[2007,1230],[2006,138]]},"publisher":"Public
+        Library of Science","coverage":{"affiliations-current":0.0,"similarity-checking-current":1.0,"descriptions-current":0.0,"ror-ids-current":0.0,"funders-backfile":0.2001317899268566,"licenses-backfile":0.99303709886441,"funders-current":0.6213290802764487,"affiliations-backfile":0.0,"resource-links-backfile":0.0,"orcids-backfile":0.2262701254200804,"update-policies-current":1.0,"ror-ids-backfile":0.0,"orcids-current":0.9554279638490165,"similarity-checking-backfile":0.9201045533419729,"references-backfile":0.9201089463395348,"descriptions-backfile":0.0,"award-numbers-backfile":0.1714674808355481,"update-policies-backfile":0.9999692490170669,"licenses-current":1.0,"award-numbers-current":0.5172567783094099,"abstracts-backfile":1.273969292947042E-4,"resource-links-current":0.0,"abstracts-current":0.6867198298777246,"references-current":0.9999362041467305},"title":"PLoS
+        ONE","subjects":[{"ASJC":1000,"name":"Multidisciplinary"}],"coverage-type":{"all":{"last-status-check-time":1667923354120,"affiliations":0.0,"abstracts":0.1176800407776888,"orcids":0.3511104638462099,"licenses":0.9942292288647783,"references":0.9337763052501274,"funders":0.2722456855748926,"similarity-checking":0.9337835869802665,"award-numbers":0.2306706473458094,"ror-ids":0.0,"update-policies":0.9999745139445132,"resource-links":0.0,"descriptions":0.0},"backfile":{"last-status-check-time":1667923354120,"affiliations":0.0,"abstracts":1.273969292947042E-4,"orcids":0.2262701254200804,"licenses":0.99303709886441,"references":0.9201089463395348,"funders":0.2001317899268566,"similarity-checking":0.9201045533419729,"award-numbers":0.1714674808355481,"ror-ids":0.0,"update-policies":0.9999692490170669,"resource-links":0.0,"descriptions":0.0},"current":{"last-status-check-time":1667923354120,"affiliations":0.0,"abstracts":0.6867198298777246,"orcids":0.9554279638490165,"licenses":1.0,"references":0.9999362041467305,"funders":0.6213290802764487,"similarity-checking":1.0,"award-numbers":0.5172567783094099,"ror-ids":0.0,"update-policies":1.0,"resource-links":0.0,"descriptions":0.0}},"flags":{"deposits-abstracts-current":true,"deposits-orcids-current":true,"deposits":true,"deposits-affiliations-backfile":false,"deposits-update-policies-backfile":true,"deposits-similarity-checking-backfile":true,"deposits-award-numbers-current":true,"deposits-resource-links-current":false,"deposits-ror-ids-current":false,"deposits-articles":true,"deposits-affiliations-current":false,"deposits-funders-current":true,"deposits-references-backfile":true,"deposits-ror-ids-backfile":false,"deposits-abstracts-backfile":true,"deposits-licenses-backfile":true,"deposits-award-numbers-backfile":true,"deposits-descriptions-current":false,"deposits-references-current":true,"deposits-resource-links-backfile":false,"deposits-descriptions-backfile":false,"deposits-orcids-backfile":true,"deposits-funders-backfile":true,"deposits-update-policies-current":true,"deposits-similarity-checking-current":true,"deposits-licenses-current":true},"ISSN":["1932-6203"],"issn-type":[{"value":"1932-6203","type":"electronic"}]}}'
+  recorded_at: 2022-11-09 09:33:48 GMT
+  recorded_with: vcr/1.1.0, webmockr/0.8.0
 - request:
     method: get
     uri: https://api.crossref.org/journals/blblbl
@@ -97,28 +101,30 @@ http_interactions:
     headers:
       Accept-Encoding: gzip, deflate
       Accept: application/json, text/xml, application/xml, */*
-      User-Agent: r-curl/4.3.2 crul/1.1.0 rOpenSci(rcrossref/1.1.0.94) (mailto:<crossref_email>)
-      X-USER-AGENT: r-curl/4.3.2 crul/1.1.0 rOpenSci(rcrossref/1.1.0.94) (mailto:<crossref_email>)
+      User-Agent: r-curl/4.3.2 crul/1.3 rOpenSci(rcrossref/1.1.0.99) (mailto:<crossref_email>)
+      X-USER-AGENT: r-curl/4.3.2 crul/1.3 rOpenSci(rcrossref/1.1.0.99) (mailto:<crossref_email>)
   response:
     status:
       status_code: '404'
       message: Not Found
       explanation: Nothing matches the given URI
     headers:
-      access-control-allow-headers: X-Requested-With
+      access-control-allow-headers: X-Requested-With, Accept, Accept-Encoding, Accept-Charset,
+        Accept-Language, Accept-Ranges, Cache-Control
       access-control-allow-origin: '*'
+      access-control-expose-headers: Link
       connection: close
-      content-length: '19'
       content-type: application/json;charset=utf-8
-      date: Tue, 17 Aug 2021 17:23:45 GMT
+      date: Wed, 09 Nov 2022 09:33:15 GMT
       permissions-policy: interest-cohort=()
       server: Jetty(9.4.40.v20210413)
       set-cookie:
-      - AWSALB=M8/ncToX745Q6t7qTCtVL+lLwNdBx+V/lUjF/ZeT3JhnjHihhYPvroRr/aSEnwcRIG4GdPYg3nnojcRGnjDAiBXXoAzgNKLfltGOV6J4nyD+DjaRgoHrNm0E1rgI;
-        Expires=Tue, 24 Aug 2021 17:23:45 GMT; Path=/
-      - AWSALBCORS=M8/ncToX745Q6t7qTCtVL+lLwNdBx+V/lUjF/ZeT3JhnjHihhYPvroRr/aSEnwcRIG4GdPYg3nnojcRGnjDAiBXXoAzgNKLfltGOV6J4nyD+DjaRgoHrNm0E1rgI;
-        Expires=Tue, 24 Aug 2021 17:23:45 GMT; Path=/; SameSite=None
+      - AWSALB=jhwdLy8N/o3c2AHaa1ZRSwXSvIkdgYbOahBDW8vtmAXxnRWQDRusmUY8e70PvjxswarX79vIadDOl/6BLv9XBNkt9/mvtZUnVLhxawTkfSCQjz03p6RRQ4VLAZPq;
+        Expires=Wed, 16 Nov 2022 09:33:15 GMT; Path=/
+      - AWSALBCORS=jhwdLy8N/o3c2AHaa1ZRSwXSvIkdgYbOahBDW8vtmAXxnRWQDRusmUY8e70PvjxswarX79vIadDOl/6BLv9XBNkt9/mvtZUnVLhxawTkfSCQjz03p6RRQ4VLAZPq;
+        Expires=Wed, 16 Nov 2022 09:33:15 GMT; Path=/; SameSite=None
       status: HTTP/1.1 404 Not Found
+      transfer-encoding: chunked
       vary: Accept
       x-api-pool: polite
       x-rate-limit-interval: 1s
@@ -126,11 +132,11 @@ http_interactions:
       x-ratelimit-interval: 1s
       x-ratelimit-limit: '50'
     body:
-      encoding: UTF-8
+      encoding: ''
       file: no
       string: Resource not found.
-  recorded_at: 2021-08-17 17:23:47 GMT
-  recorded_with: vcr/1.0.2, webmockr/0.8.0
+  recorded_at: 2022-11-09 09:33:48 GMT
+  recorded_with: vcr/1.1.0, webmockr/0.8.0
 - request:
     method: get
     uri: https://api.crossref.org/journals/1932-6203
@@ -140,28 +146,30 @@ http_interactions:
     headers:
       Accept-Encoding: gzip, deflate
       Accept: application/json, text/xml, application/xml, */*
-      User-Agent: r-curl/4.3.2 crul/1.1.0 rOpenSci(rcrossref/1.1.0.94) (mailto:<crossref_email>)
-      X-USER-AGENT: r-curl/4.3.2 crul/1.1.0 rOpenSci(rcrossref/1.1.0.94) (mailto:<crossref_email>)
+      User-Agent: r-curl/4.3.2 crul/1.3 rOpenSci(rcrossref/1.1.0.99) (mailto:<crossref_email>)
+      X-USER-AGENT: r-curl/4.3.2 crul/1.3 rOpenSci(rcrossref/1.1.0.99) (mailto:<crossref_email>)
   response:
     status:
       status_code: '200'
       message: OK
       explanation: Request fulfilled, document follows
     headers:
-      access-control-allow-headers: X-Requested-With
+      access-control-allow-headers: X-Requested-With, Accept, Accept-Encoding, Accept-Charset,
+        Accept-Language, Accept-Ranges, Cache-Control
       access-control-allow-origin: '*'
+      access-control-expose-headers: Link
       connection: close
       content-encoding: gzip
-      content-length: '1045'
+      content-length: '1096'
       content-type: application/json
-      date: Tue, 17 Aug 2021 17:23:46 GMT
+      date: Wed, 09 Nov 2022 09:33:16 GMT
       permissions-policy: interest-cohort=()
       server: Jetty(9.4.40.v20210413)
       set-cookie:
-      - AWSALB=HWh5dNAmcKjkvnkF+07pw8rkRZK8lz2FnarK/zgp2IjrKcvQp5P0lqQGLH8o+RusgVuK04LqCjYEnwgNrhWusWQrU8Fb9IMzxAfnQRHWIVaD/uVa4uqu3yuxdrTT;
-        Expires=Tue, 24 Aug 2021 17:23:46 GMT; Path=/
-      - AWSALBCORS=HWh5dNAmcKjkvnkF+07pw8rkRZK8lz2FnarK/zgp2IjrKcvQp5P0lqQGLH8o+RusgVuK04LqCjYEnwgNrhWusWQrU8Fb9IMzxAfnQRHWIVaD/uVa4uqu3yuxdrTT;
-        Expires=Tue, 24 Aug 2021 17:23:46 GMT; Path=/; SameSite=None
+      - AWSALB=P75HuFxtPN2FxaQtZFzy3gf2awtX2e94tEN6DUN2HNGe0MQOaUlFgdNrRVAJR4mfNXELM3ZI89NIgs2xG+vd2EBadVb2EfYe0Wyzjd5JJRIl2DKuIgflgoaRDURn;
+        Expires=Wed, 16 Nov 2022 09:33:16 GMT; Path=/
+      - AWSALBCORS=P75HuFxtPN2FxaQtZFzy3gf2awtX2e94tEN6DUN2HNGe0MQOaUlFgdNrRVAJR4mfNXELM3ZI89NIgs2xG+vd2EBadVb2EfYe0Wyzjd5JJRIl2DKuIgflgoaRDURn;
+        Expires=Wed, 16 Nov 2022 09:33:16 GMT; Path=/; SameSite=None
       status: HTTP/1.1 200 OK
       vary: Accept-Encoding
       x-api-pool: polite
@@ -170,13 +178,13 @@ http_interactions:
       x-ratelimit-interval: 1s
       x-ratelimit-limit: '50'
     body:
-      encoding: UTF-8
+      encoding: ''
       file: no
-      string: '{"status":"ok","message-type":"journal","message-version":"1.0.0","message":{"last-status-check-time":1629159837094,"counts":{"current-dois":43391,"backfile-dois":211409,"total-dois":254800},"breakdowns":{"dois-by-issued-year":[[2013,32985],[2014,31876],[2015,29815],[2012,24090],[2016,23022],[2017,21150],[2018,18832],[2020,16685],[2019,16226],[2011,14025],[2021,10480],[2010,6911],[2009,4534],[2008,2801],[2007,1230],[2006,138]]},"publisher":"Public
-        Library of Science","coverage":{"affiliations-current":0.0,"similarity-checking-current":1.0,"funders-backfile":0.1732754991509349,"licenses-backfile":0.9924837636997479,"funders-current":0.5781613698693276,"affiliations-backfile":0.0,"resource-links-backfile":0.0,"orcids-backfile":0.1730342606038532,"update-policies-current":1.0,"open-references-backfile":1.0,"orcids-current":0.9399184162614367,"similarity-checking-backfile":0.9139487912056724,"references-backfile":0.9139487912056724,"award-numbers-backfile":0.1472075455633393,"update-policies-backfile":0.9999668888268711,"licenses-current":1.0,"award-numbers-current":0.4971076951441543,"abstracts-backfile":3.784134071870166E-5,"resource-links-current":0.0,"abstracts-current":0.2997395773317047,"open-references-current":1.0,"references-current":0.9999769537461686},"title":"PLoS
-        ONE","subjects":[{"ASJC":1000,"name":"Multidisciplinary"}],"coverage-type":{"all":{"last-status-check-time":1629159837094,"affiliations":0.0,"abstracts":0.05107535321821036,"orcids":0.3036302982731554,"licenses":0.9937637362637363,"references":0.9285989010989011,"funders":0.2422252747252747,"similarity-checking":0.9286028257456829,"award-numbers":0.2067935635792779,"update-policies":0.9999725274725275,"resource-links":0.0,"open-references":1.0},"backfile":{"last-status-check-time":1629159837094,"affiliations":0.0,"abstracts":3.784134071870166E-5,"orcids":0.1730342606038532,"licenses":0.9924837636997479,"references":0.9139487912056724,"funders":0.1732754991509349,"similarity-checking":0.9139487912056724,"award-numbers":0.1472075455633393,"update-policies":0.9999668888268711,"resource-links":0.0,"open-references":1.0},"current":{"last-status-check-time":1629159837094,"affiliations":0.0,"abstracts":0.2997395773317047,"orcids":0.9399184162614367,"licenses":1.0,"references":0.9999769537461686,"funders":0.5781613698693276,"similarity-checking":1.0,"award-numbers":0.4971076951441543,"update-policies":1.0,"resource-links":0.0,"open-references":1.0}},"flags":{"deposits-abstracts-current":true,"deposits-orcids-current":true,"deposits":true,"deposits-affiliations-backfile":false,"deposits-update-policies-backfile":true,"deposits-similarity-checking-backfile":true,"deposits-award-numbers-current":true,"deposits-resource-links-current":false,"deposits-articles":true,"deposits-affiliations-current":false,"deposits-funders-current":true,"deposits-references-backfile":true,"deposits-abstracts-backfile":true,"deposits-licenses-backfile":true,"deposits-award-numbers-backfile":true,"deposits-open-references-backfile":true,"deposits-open-references-current":true,"deposits-references-current":true,"deposits-resource-links-backfile":false,"deposits-orcids-backfile":true,"deposits-funders-backfile":true,"deposits-update-policies-current":true,"deposits-similarity-checking-current":true,"deposits-licenses-current":true},"ISSN":["1932-6203"],"issn-type":[{"value":"1932-6203","type":"electronic"}]}}'
-  recorded_at: 2021-08-17 17:23:47 GMT
-  recorded_with: vcr/1.0.2, webmockr/0.8.0
+      string: '{"status":"ok","message-type":"journal","message-version":"1.0.0","message":{"last-status-check-time":1667923354120,"counts":{"current-dois":47025,"backfile-dois":227635,"total-dois":274660},"breakdowns":{"dois-by-issued-year":[[2013,32985],[2014,31876],[2015,29815],[2012,24090],[2016,23022],[2017,21150],[2018,18832],[2020,16685],[2021,16624],[2019,16226],[2011,14025],[2022,13716],[2010,6911],[2009,4534],[2008,2801],[2007,1230],[2006,138]]},"publisher":"Public
+        Library of Science","coverage":{"affiliations-current":0.0,"similarity-checking-current":1.0,"descriptions-current":0.0,"ror-ids-current":0.0,"funders-backfile":0.2001317899268566,"licenses-backfile":0.99303709886441,"funders-current":0.6213290802764487,"affiliations-backfile":0.0,"resource-links-backfile":0.0,"orcids-backfile":0.2262701254200804,"update-policies-current":1.0,"ror-ids-backfile":0.0,"orcids-current":0.9554279638490165,"similarity-checking-backfile":0.9201045533419729,"references-backfile":0.9201089463395348,"descriptions-backfile":0.0,"award-numbers-backfile":0.1714674808355481,"update-policies-backfile":0.9999692490170669,"licenses-current":1.0,"award-numbers-current":0.5172567783094099,"abstracts-backfile":1.273969292947042E-4,"resource-links-current":0.0,"abstracts-current":0.6867198298777246,"references-current":0.9999362041467305},"title":"PLoS
+        ONE","subjects":[{"ASJC":1000,"name":"Multidisciplinary"}],"coverage-type":{"all":{"last-status-check-time":1667923354120,"affiliations":0.0,"abstracts":0.1176800407776888,"orcids":0.3511104638462099,"licenses":0.9942292288647783,"references":0.9337763052501274,"funders":0.2722456855748926,"similarity-checking":0.9337835869802665,"award-numbers":0.2306706473458094,"ror-ids":0.0,"update-policies":0.9999745139445132,"resource-links":0.0,"descriptions":0.0},"backfile":{"last-status-check-time":1667923354120,"affiliations":0.0,"abstracts":1.273969292947042E-4,"orcids":0.2262701254200804,"licenses":0.99303709886441,"references":0.9201089463395348,"funders":0.2001317899268566,"similarity-checking":0.9201045533419729,"award-numbers":0.1714674808355481,"ror-ids":0.0,"update-policies":0.9999692490170669,"resource-links":0.0,"descriptions":0.0},"current":{"last-status-check-time":1667923354120,"affiliations":0.0,"abstracts":0.6867198298777246,"orcids":0.9554279638490165,"licenses":1.0,"references":0.9999362041467305,"funders":0.6213290802764487,"similarity-checking":1.0,"award-numbers":0.5172567783094099,"ror-ids":0.0,"update-policies":1.0,"resource-links":0.0,"descriptions":0.0}},"flags":{"deposits-abstracts-current":true,"deposits-orcids-current":true,"deposits":true,"deposits-affiliations-backfile":false,"deposits-update-policies-backfile":true,"deposits-similarity-checking-backfile":true,"deposits-award-numbers-current":true,"deposits-resource-links-current":false,"deposits-ror-ids-current":false,"deposits-articles":true,"deposits-affiliations-current":false,"deposits-funders-current":true,"deposits-references-backfile":true,"deposits-ror-ids-backfile":false,"deposits-abstracts-backfile":true,"deposits-licenses-backfile":true,"deposits-award-numbers-backfile":true,"deposits-descriptions-current":false,"deposits-references-current":true,"deposits-resource-links-backfile":false,"deposits-descriptions-backfile":false,"deposits-orcids-backfile":true,"deposits-funders-backfile":true,"deposits-update-policies-current":true,"deposits-similarity-checking-current":true,"deposits-licenses-current":true},"ISSN":["1932-6203"],"issn-type":[{"value":"1932-6203","type":"electronic"}]}}'
+  recorded_at: 2022-11-09 09:33:48 GMT
+  recorded_with: vcr/1.1.0, webmockr/0.8.0
 - request:
     method: get
     uri: https://api.crossref.org/journals/blblbl
@@ -186,28 +194,30 @@ http_interactions:
     headers:
       Accept-Encoding: gzip, deflate
       Accept: application/json, text/xml, application/xml, */*
-      User-Agent: r-curl/4.3.2 crul/1.1.0 rOpenSci(rcrossref/1.1.0.94) (mailto:<crossref_email>)
-      X-USER-AGENT: r-curl/4.3.2 crul/1.1.0 rOpenSci(rcrossref/1.1.0.94) (mailto:<crossref_email>)
+      User-Agent: r-curl/4.3.2 crul/1.3 rOpenSci(rcrossref/1.1.0.99) (mailto:<crossref_email>)
+      X-USER-AGENT: r-curl/4.3.2 crul/1.3 rOpenSci(rcrossref/1.1.0.99) (mailto:<crossref_email>)
   response:
     status:
       status_code: '404'
       message: Not Found
       explanation: Nothing matches the given URI
     headers:
-      access-control-allow-headers: X-Requested-With
+      access-control-allow-headers: X-Requested-With, Accept, Accept-Encoding, Accept-Charset,
+        Accept-Language, Accept-Ranges, Cache-Control
       access-control-allow-origin: '*'
+      access-control-expose-headers: Link
       connection: close
-      content-length: '19'
       content-type: application/json;charset=utf-8
-      date: Tue, 17 Aug 2021 17:23:47 GMT
+      date: Wed, 09 Nov 2022 09:33:17 GMT
       permissions-policy: interest-cohort=()
       server: Jetty(9.4.40.v20210413)
       set-cookie:
-      - AWSALB=CGel6E5IcjEifa15/BqgNT2tU5XgOM2asoPlbRn1lm1RhqB9kx2fKi7nl1UMnEmAv9DwXDWN8PSLaOzwvN2DuFZ9RV2U+HDQWc+6TYWLH/r5lhWqDR9mNheI3KIA;
-        Expires=Tue, 24 Aug 2021 17:23:47 GMT; Path=/
-      - AWSALBCORS=CGel6E5IcjEifa15/BqgNT2tU5XgOM2asoPlbRn1lm1RhqB9kx2fKi7nl1UMnEmAv9DwXDWN8PSLaOzwvN2DuFZ9RV2U+HDQWc+6TYWLH/r5lhWqDR9mNheI3KIA;
-        Expires=Tue, 24 Aug 2021 17:23:47 GMT; Path=/; SameSite=None
+      - AWSALB=z9MnhujmY7TuadNc8vCF5+Vv657WDmf0CHwXVS0E5G+qROQCxMnOQtM6C0+8GecLAJhIiQ6KYJPf/9iPIHxYo4Ym1VxCYecQqBd/PHqSuvrOWI/Sj4tFH5H8VmnE;
+        Expires=Wed, 16 Nov 2022 09:33:17 GMT; Path=/
+      - AWSALBCORS=z9MnhujmY7TuadNc8vCF5+Vv657WDmf0CHwXVS0E5G+qROQCxMnOQtM6C0+8GecLAJhIiQ6KYJPf/9iPIHxYo4Ym1VxCYecQqBd/PHqSuvrOWI/Sj4tFH5H8VmnE;
+        Expires=Wed, 16 Nov 2022 09:33:17 GMT; Path=/; SameSite=None
       status: HTTP/1.1 404 Not Found
+      transfer-encoding: chunked
       vary: Accept
       x-api-pool: polite
       x-rate-limit-interval: 1s
@@ -215,11 +225,11 @@ http_interactions:
       x-ratelimit-interval: 1s
       x-ratelimit-limit: '50'
     body:
-      encoding: UTF-8
+      encoding: ''
       file: no
       string: Resource not found.
-  recorded_at: 2021-08-17 17:23:47 GMT
-  recorded_with: vcr/1.0.2, webmockr/0.8.0
+  recorded_at: 2022-11-09 09:33:48 GMT
+  recorded_with: vcr/1.1.0, webmockr/0.8.0
 - request:
     method: get
     uri: https://api.crossref.org/journals/1932-6203
@@ -229,28 +239,30 @@ http_interactions:
     headers:
       Accept-Encoding: gzip, deflate
       Accept: application/json, text/xml, application/xml, */*
-      User-Agent: r-curl/4.3.2 crul/1.1.0 rOpenSci(rcrossref/1.1.0.94) (mailto:<crossref_email>)
-      X-USER-AGENT: r-curl/4.3.2 crul/1.1.0 rOpenSci(rcrossref/1.1.0.94) (mailto:<crossref_email>)
+      User-Agent: r-curl/4.3.2 crul/1.3 rOpenSci(rcrossref/1.1.0.99) (mailto:<crossref_email>)
+      X-USER-AGENT: r-curl/4.3.2 crul/1.3 rOpenSci(rcrossref/1.1.0.99) (mailto:<crossref_email>)
   response:
     status:
       status_code: '200'
       message: OK
       explanation: Request fulfilled, document follows
     headers:
-      access-control-allow-headers: X-Requested-With
+      access-control-allow-headers: X-Requested-With, Accept, Accept-Encoding, Accept-Charset,
+        Accept-Language, Accept-Ranges, Cache-Control
       access-control-allow-origin: '*'
+      access-control-expose-headers: Link
       connection: close
       content-encoding: gzip
-      content-length: '1045'
+      content-length: '1096'
       content-type: application/json
-      date: Tue, 17 Aug 2021 17:23:47 GMT
+      date: Wed, 09 Nov 2022 09:33:48 GMT
       permissions-policy: interest-cohort=()
       server: Jetty(9.4.40.v20210413)
       set-cookie:
-      - AWSALB=tw/U2PvNxOWwX7XFFrVYNBW2MGaYNriEAAK9zyEZ2Lc1PAdQLABFgHDblPd4vgGL8rnwFZBjGtyRnkP2vrePpoZNRAz6BlKfUwUqDysq905ogEFEAvA49PbQn2MK;
-        Expires=Tue, 24 Aug 2021 17:23:47 GMT; Path=/
-      - AWSALBCORS=tw/U2PvNxOWwX7XFFrVYNBW2MGaYNriEAAK9zyEZ2Lc1PAdQLABFgHDblPd4vgGL8rnwFZBjGtyRnkP2vrePpoZNRAz6BlKfUwUqDysq905ogEFEAvA49PbQn2MK;
-        Expires=Tue, 24 Aug 2021 17:23:47 GMT; Path=/; SameSite=None
+      - AWSALB=mc2y1HvpC+TARXBV1wD08HRgBLxsj1Rxrt2mMlHWC33se2MuusEBZW5s44NQF36Q1S8Ga/zHg/SL3QLMTjb2wbvbRAt19QFMYzytPS9LrFN4/5iDYVTl4mFnCFh3;
+        Expires=Wed, 16 Nov 2022 09:33:18 GMT; Path=/
+      - AWSALBCORS=mc2y1HvpC+TARXBV1wD08HRgBLxsj1Rxrt2mMlHWC33se2MuusEBZW5s44NQF36Q1S8Ga/zHg/SL3QLMTjb2wbvbRAt19QFMYzytPS9LrFN4/5iDYVTl4mFnCFh3;
+        Expires=Wed, 16 Nov 2022 09:33:18 GMT; Path=/; SameSite=None
       status: HTTP/1.1 200 OK
       vary: Accept-Encoding
       x-api-pool: polite
@@ -259,10 +271,10 @@ http_interactions:
       x-ratelimit-interval: 1s
       x-ratelimit-limit: '50'
     body:
-      encoding: UTF-8
+      encoding: ''
       file: no
-      string: '{"status":"ok","message-type":"journal","message-version":"1.0.0","message":{"last-status-check-time":1629159837094,"counts":{"current-dois":43391,"backfile-dois":211409,"total-dois":254800},"breakdowns":{"dois-by-issued-year":[[2013,32985],[2014,31876],[2015,29815],[2012,24090],[2016,23022],[2017,21150],[2018,18832],[2020,16685],[2019,16226],[2011,14025],[2021,10480],[2010,6911],[2009,4534],[2008,2801],[2007,1230],[2006,138]]},"publisher":"Public
-        Library of Science","coverage":{"affiliations-current":0.0,"similarity-checking-current":1.0,"funders-backfile":0.1732754991509349,"licenses-backfile":0.9924837636997479,"funders-current":0.5781613698693276,"affiliations-backfile":0.0,"resource-links-backfile":0.0,"orcids-backfile":0.1730342606038532,"update-policies-current":1.0,"open-references-backfile":1.0,"orcids-current":0.9399184162614367,"similarity-checking-backfile":0.9139487912056724,"references-backfile":0.9139487912056724,"award-numbers-backfile":0.1472075455633393,"update-policies-backfile":0.9999668888268711,"licenses-current":1.0,"award-numbers-current":0.4971076951441543,"abstracts-backfile":3.784134071870166E-5,"resource-links-current":0.0,"abstracts-current":0.2997395773317047,"open-references-current":1.0,"references-current":0.9999769537461686},"title":"PLoS
-        ONE","subjects":[{"ASJC":1000,"name":"Multidisciplinary"}],"coverage-type":{"all":{"last-status-check-time":1629159837094,"affiliations":0.0,"abstracts":0.05107535321821036,"orcids":0.3036302982731554,"licenses":0.9937637362637363,"references":0.9285989010989011,"funders":0.2422252747252747,"similarity-checking":0.9286028257456829,"award-numbers":0.2067935635792779,"update-policies":0.9999725274725275,"resource-links":0.0,"open-references":1.0},"backfile":{"last-status-check-time":1629159837094,"affiliations":0.0,"abstracts":3.784134071870166E-5,"orcids":0.1730342606038532,"licenses":0.9924837636997479,"references":0.9139487912056724,"funders":0.1732754991509349,"similarity-checking":0.9139487912056724,"award-numbers":0.1472075455633393,"update-policies":0.9999668888268711,"resource-links":0.0,"open-references":1.0},"current":{"last-status-check-time":1629159837094,"affiliations":0.0,"abstracts":0.2997395773317047,"orcids":0.9399184162614367,"licenses":1.0,"references":0.9999769537461686,"funders":0.5781613698693276,"similarity-checking":1.0,"award-numbers":0.4971076951441543,"update-policies":1.0,"resource-links":0.0,"open-references":1.0}},"flags":{"deposits-abstracts-current":true,"deposits-orcids-current":true,"deposits":true,"deposits-affiliations-backfile":false,"deposits-update-policies-backfile":true,"deposits-similarity-checking-backfile":true,"deposits-award-numbers-current":true,"deposits-resource-links-current":false,"deposits-articles":true,"deposits-affiliations-current":false,"deposits-funders-current":true,"deposits-references-backfile":true,"deposits-abstracts-backfile":true,"deposits-licenses-backfile":true,"deposits-award-numbers-backfile":true,"deposits-open-references-backfile":true,"deposits-open-references-current":true,"deposits-references-current":true,"deposits-resource-links-backfile":false,"deposits-orcids-backfile":true,"deposits-funders-backfile":true,"deposits-update-policies-current":true,"deposits-similarity-checking-current":true,"deposits-licenses-current":true},"ISSN":["1932-6203"],"issn-type":[{"value":"1932-6203","type":"electronic"}]}}'
-  recorded_at: 2021-08-17 17:23:47 GMT
-  recorded_with: vcr/1.0.2, webmockr/0.8.0
+      string: '{"status":"ok","message-type":"journal","message-version":"1.0.0","message":{"last-status-check-time":1667923354120,"counts":{"current-dois":47025,"backfile-dois":227635,"total-dois":274660},"breakdowns":{"dois-by-issued-year":[[2013,32985],[2014,31876],[2015,29815],[2012,24090],[2016,23022],[2017,21150],[2018,18832],[2020,16685],[2021,16624],[2019,16226],[2011,14025],[2022,13716],[2010,6911],[2009,4534],[2008,2801],[2007,1230],[2006,138]]},"publisher":"Public
+        Library of Science","coverage":{"affiliations-current":0.0,"similarity-checking-current":1.0,"descriptions-current":0.0,"ror-ids-current":0.0,"funders-backfile":0.2001317899268566,"licenses-backfile":0.99303709886441,"funders-current":0.6213290802764487,"affiliations-backfile":0.0,"resource-links-backfile":0.0,"orcids-backfile":0.2262701254200804,"update-policies-current":1.0,"ror-ids-backfile":0.0,"orcids-current":0.9554279638490165,"similarity-checking-backfile":0.9201045533419729,"references-backfile":0.9201089463395348,"descriptions-backfile":0.0,"award-numbers-backfile":0.1714674808355481,"update-policies-backfile":0.9999692490170669,"licenses-current":1.0,"award-numbers-current":0.5172567783094099,"abstracts-backfile":1.273969292947042E-4,"resource-links-current":0.0,"abstracts-current":0.6867198298777246,"references-current":0.9999362041467305},"title":"PLoS
+        ONE","subjects":[{"ASJC":1000,"name":"Multidisciplinary"}],"coverage-type":{"all":{"last-status-check-time":1667923354120,"affiliations":0.0,"abstracts":0.1176800407776888,"orcids":0.3511104638462099,"licenses":0.9942292288647783,"references":0.9337763052501274,"funders":0.2722456855748926,"similarity-checking":0.9337835869802665,"award-numbers":0.2306706473458094,"ror-ids":0.0,"update-policies":0.9999745139445132,"resource-links":0.0,"descriptions":0.0},"backfile":{"last-status-check-time":1667923354120,"affiliations":0.0,"abstracts":1.273969292947042E-4,"orcids":0.2262701254200804,"licenses":0.99303709886441,"references":0.9201089463395348,"funders":0.2001317899268566,"similarity-checking":0.9201045533419729,"award-numbers":0.1714674808355481,"ror-ids":0.0,"update-policies":0.9999692490170669,"resource-links":0.0,"descriptions":0.0},"current":{"last-status-check-time":1667923354120,"affiliations":0.0,"abstracts":0.6867198298777246,"orcids":0.9554279638490165,"licenses":1.0,"references":0.9999362041467305,"funders":0.6213290802764487,"similarity-checking":1.0,"award-numbers":0.5172567783094099,"ror-ids":0.0,"update-policies":1.0,"resource-links":0.0,"descriptions":0.0}},"flags":{"deposits-abstracts-current":true,"deposits-orcids-current":true,"deposits":true,"deposits-affiliations-backfile":false,"deposits-update-policies-backfile":true,"deposits-similarity-checking-backfile":true,"deposits-award-numbers-current":true,"deposits-resource-links-current":false,"deposits-ror-ids-current":false,"deposits-articles":true,"deposits-affiliations-current":false,"deposits-funders-current":true,"deposits-references-backfile":true,"deposits-ror-ids-backfile":false,"deposits-abstracts-backfile":true,"deposits-licenses-backfile":true,"deposits-award-numbers-backfile":true,"deposits-descriptions-current":false,"deposits-references-current":true,"deposits-resource-links-backfile":false,"deposits-descriptions-backfile":false,"deposits-orcids-backfile":true,"deposits-funders-backfile":true,"deposits-update-policies-current":true,"deposits-similarity-checking-current":true,"deposits-licenses-current":true},"ISSN":["1932-6203"],"issn-type":[{"value":"1932-6203","type":"electronic"}]}}'
+  recorded_at: 2022-11-09 09:33:48 GMT
+  recorded_with: vcr/1.1.0, webmockr/0.8.0

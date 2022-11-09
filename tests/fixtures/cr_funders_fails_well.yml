@@ -8,36 +8,38 @@ http_interactions:
     headers:
       Accept-Encoding: gzip, deflate
       Accept: application/json, text/xml, application/xml, */*
-      User-Agent: r-curl/4.3.2 crul/1.1.0 rOpenSci(rcrossref/1.1.0.94) (mailto:<crossref_email>)
-      X-USER-AGENT: r-curl/4.3.2 crul/1.1.0 rOpenSci(rcrossref/1.1.0.94) (mailto:<crossref_email>)
+      User-Agent: r-curl/4.3.2 crul/1.3 rOpenSci(rcrossref/1.1.0.99) (mailto:<crossref_email>)
+      X-USER-AGENT: r-curl/4.3.2 crul/1.3 rOpenSci(rcrossref/1.1.0.99) (mailto:<crossref_email>)
   response:
     status:
       status_code: '404'
       message: Not Found
       explanation: Nothing matches the given URI
     headers:
-      access-control-allow-headers: X-Requested-With
+      access-control-allow-headers: X-Requested-With, Accept, Accept-Encoding, Accept-Charset,
+        Accept-Language, Accept-Ranges, Cache-Control
       access-control-allow-origin: '*'
+      access-control-expose-headers: Link
       connection: close
-      content-length: '19'
       content-type: application/json
-      date: Tue, 17 Aug 2021 17:23:25 GMT
+      date: Wed, 09 Nov 2022 12:37:00 GMT
       permissions-policy: interest-cohort=()
       server: Jetty(9.4.40.v20210413)
       set-cookie:
-      - AWSALB=B2jfHao641i391YPF9nOI9kyKy0KvNP93MOZMkFw6duYqWhRs6F4Ye0h3Jm0ZTLmO1FgYEagBVuqELpKGuJTnzP5H0LMvRh830X3tEUVm3Lv0BxwNBht95amd+SB;
-        Expires=Tue, 24 Aug 2021 17:23:25 GMT; Path=/
-      - AWSALBCORS=B2jfHao641i391YPF9nOI9kyKy0KvNP93MOZMkFw6duYqWhRs6F4Ye0h3Jm0ZTLmO1FgYEagBVuqELpKGuJTnzP5H0LMvRh830X3tEUVm3Lv0BxwNBht95amd+SB;
-        Expires=Tue, 24 Aug 2021 17:23:25 GMT; Path=/; SameSite=None
+      - AWSALB=H2uI6WHc+OCnKxmnRkRXhvFW3I0kae0jF85OsxEVxdRjMADH229IFP1C3IXN1soaaYSfds6dxHVRjdByryNCenFWn/150Z3+lpnS4Vs3b2H8az0KQIvy6Wlw3GFv;
+        Expires=Wed, 16 Nov 2022 12:37:00 GMT; Path=/
+      - AWSALBCORS=H2uI6WHc+OCnKxmnRkRXhvFW3I0kae0jF85OsxEVxdRjMADH229IFP1C3IXN1soaaYSfds6dxHVRjdByryNCenFWn/150Z3+lpnS4Vs3b2H8az0KQIvy6Wlw3GFv;
+        Expires=Wed, 16 Nov 2022 12:37:00 GMT; Path=/; SameSite=None
       status: HTTP/1.1 404 Not Found
+      transfer-encoding: chunked
       x-api-pool: polite
       x-rate-limit-interval: 1s
       x-rate-limit-limit: '50'
       x-ratelimit-interval: 1s
       x-ratelimit-limit: '50'
     body:
-      encoding: UTF-8
+      encoding: ''
       file: no
       string: Resource not found.
-  recorded_at: 2021-08-17 17:23:25 GMT
-  recorded_with: vcr/1.0.2, webmockr/0.8.0
+  recorded_at: 2022-11-09 12:37:00 GMT
+  recorded_with: vcr/1.1.0, webmockr/0.8.0

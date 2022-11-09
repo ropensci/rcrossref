@@ -8,28 +8,30 @@ http_interactions:
     headers:
       Accept-Encoding: gzip, deflate
       Accept: application/json, text/xml, application/xml, */*
-      User-Agent: r-curl/4.3.2 crul/1.1.0 rOpenSci(rcrossref/1.1.0.94) (mailto:<crossref_email>)
-      X-USER-AGENT: r-curl/4.3.2 crul/1.1.0 rOpenSci(rcrossref/1.1.0.94) (mailto:<crossref_email>)
+      User-Agent: r-curl/4.3.2 crul/1.3 rOpenSci(rcrossref/1.1.0.99) (mailto:<crossref_email>)
+      X-USER-AGENT: r-curl/4.3.2 crul/1.3 rOpenSci(rcrossref/1.1.0.99) (mailto:<crossref_email>)
   response:
     status:
       status_code: '200'
       message: OK
       explanation: Request fulfilled, document follows
     headers:
-      access-control-allow-headers: X-Requested-With
+      access-control-allow-headers: X-Requested-With, Accept, Accept-Encoding, Accept-Charset,
+        Accept-Language, Accept-Ranges, Cache-Control
       access-control-allow-origin: '*'
+      access-control-expose-headers: Link
       connection: close
       content-encoding: gzip
-      content-length: '11736'
+      content-length: '11868'
       content-type: application/json
-      date: Tue, 17 Aug 2021 17:23:34 GMT
+      date: Wed, 09 Nov 2022 09:32:01 GMT
       permissions-policy: interest-cohort=()
       server: Jetty(9.4.40.v20210413)
       set-cookie:
-      - AWSALB=zUeFyUZvSTiDqmFVmPMiacIXbOCkPn3ZLXYlBvK8a4l6rBucmebbEkL3W/IIh155nK5OQwCQ8NRZ+oFAQW/pvB2o7XzJ9GnweXgxAtp8JRhsWV81Jpp6iV1wnD8T;
-        Expires=Tue, 24 Aug 2021 17:23:34 GMT; Path=/
-      - AWSALBCORS=zUeFyUZvSTiDqmFVmPMiacIXbOCkPn3ZLXYlBvK8a4l6rBucmebbEkL3W/IIh155nK5OQwCQ8NRZ+oFAQW/pvB2o7XzJ9GnweXgxAtp8JRhsWV81Jpp6iV1wnD8T;
-        Expires=Tue, 24 Aug 2021 17:23:34 GMT; Path=/; SameSite=None
+      - AWSALB=Jl5JHEySnCjWz3KsmxMXZtxymvFvZBmT/9HAigDtOifanhhwIM9GEFU6j5NnnFXJnhPaFMRU5XznV90RsssI05/sM4Zw9SMJwH7YnXi2DdN3iXp07XhYfCnaVoFB;
+        Expires=Wed, 16 Nov 2022 09:31:26 GMT; Path=/
+      - AWSALBCORS=Jl5JHEySnCjWz3KsmxMXZtxymvFvZBmT/9HAigDtOifanhhwIM9GEFU6j5NnnFXJnhPaFMRU5XznV90RsssI05/sM4Zw9SMJwH7YnXi2DdN3iXp07XhYfCnaVoFB;
+        Expires=Wed, 16 Nov 2022 09:31:26 GMT; Path=/; SameSite=None
       status: HTTP/1.1 200 OK
       vary: Accept-Encoding
       x-api-pool: polite
@@ -38,96 +40,9 @@ http_interactions:
       x-ratelimit-interval: 1s
       x-ratelimit-limit: '50'
     body:
-      encoding: UTF-8
+      encoding: ''
       file: no
-      string: '{"status":"ok","message-type":"work-list","message-version":"1.0.0","message":{"facets":{},"total-results":49,"items":[{"indexed":{"date-parts":[[2021,5,19]],"date-time":"2021-05-19T01:48:11Z","timestamp":1621388891082},"reference-count":34,"publisher":"Walter
-        de Gruyter GmbH","issue":"2","content-domain":{"domain":[],"crossmark-restriction":false},"published-print":{"date-parts":[[2010,1,1]]},"DOI":"10.2478\/v10285-012-0027-y","type":"journal-article","created":{"date-parts":[[2012,8,10]],"date-time":"2012-08-10T09:15:16Z","timestamp":1344590116000},"source":"Crossref","is-referenced-by-count":6,"title":["Driving
-        Forces, Threats and Trends Relating to Mosaics in Agricultural Landscape in
-        Slovakia"],"prefix":"10.2478","volume":"3","author":[{"given":"Jana","family":"Spulerova","sequence":"first","affiliation":[]},{"given":"Marta","family":"Dobrovodsk\u00e1","sequence":"additional","affiliation":[]},{"given":"Dagmar","family":"Stefunkova","sequence":"additional","affiliation":[]}],"member":"374","reference":[{"key":"1","doi-asserted-by":"crossref","first-page":"21","DOI":"10.1016\/j.landurbplan.2003.10.002","article-title":"Why
-        landscapes of the past are important for the future?","volume":"70","author":"M.
-        Antrop","year":"2005","journal-title":"Landscape and Urban Planning"},{"key":"2","first-page":"43","article-title":"Anthropogenic
-        Pressure in the Environmental Parameters of the Bieszczady Mountains","volume":"6","author":"M.
-        Augustyn","year":"2004","journal-title":"Biosphere Conservation"},{"issue":"1","key":"3","doi-asserted-by":"crossref","first-page":"65","DOI":"10.1016\/S0264-8377(00)00047-8","article-title":"Land-use
-        changes and their social driving forces in Czechia in the 19th and 20th centuries","volume":"18","author":"I.
-        Bi\u010d\u00edk","year":"2001","journal-title":"Land Use Policy"},{"key":"4","first-page":"155","article-title":"Czech
-        agriculture in the integrating Europe","volume":"48","author":"I. Bi\u010d\u00edk","year":"2006","journal-title":"Acta
-        Geographica Universitatis Comenianae"},{"key":"5","first-page":"593","volume-title":"The
-        Cultural Landscape - Past, Present and Future","author":"H. Birks","year":"2004"},{"issue":"1","key":"6","first-page":"82","article-title":"Agriculture,
-        Landscape, Biodiversity: Scenarios and stakeholer perceptions in the Poloniny
-        National park (NE Slovakia)","volume":"25","author":"P. Bez\u00e1k","year":"2006","journal-title":"Ekol\u00f3gia
-        (Bratislava)"},{"key":"7","first-page":"40","volume-title":"\u00daloha nev\u00fdrobn\u00fdch
-        funkci\u00ed po\u013enohospod\u00e1rstva v udr\u017eate\u013enom rozvoji vidieka
-        a ich kvantifik\u00e1cia","author":"M. Brodov\u00e1","year":"2007"},{"key":"8","doi-asserted-by":"crossref","first-page":"641","DOI":"10.1111\/j.1600-0587.2000.tb00307.x","article-title":"Patterns
-        of species richness in dry grassland patches in an agricultural landscape","volume":"23","author":"H.
-        Bruun","year":"2000","journal-title":"Ecography"},{"key":"9","doi-asserted-by":"crossref","first-page":"461","DOI":"10.1034\/j.1600-0587.2001.d01-202.x","article-title":"Plant
-        species occurrences in a rural hemiboreal landscape: effects of remnant habitats,
-        site history, topography and soil","volume":"24","author":"S. Cousins","year":"2001","journal-title":"Ecography"},{"key":"10","doi-asserted-by":"crossref","first-page":"315","DOI":"10.1023\/A:1024400913488","article-title":"Modelling
-        the effects of landscape pattern and grazing regimes on the persistence of
-        plant species with high conservation value in grasslands in south-eastern
-        Sweden","volume":"18","author":"S. Cousins","year":"2003","journal-title":"Landscape
-        Ecology"},{"key":"11","first-page":"101","volume-title":"Evaluation and perception
-        of Landscape patterns","author":"M. Dobrovodsk\u00e1","year":"1998"},{"key":"12","unstructured":"Dobrovodsk\u00e1,
-        M. (2003). <i>V\u00fdvoj vz\u0165ahov medzi krajinou a \u010dlovekom na modelov\u00e1ch
-        \u00fazemiach v katastroch obc\u00ed Liptovsk\u00e1 Tepli\u010dka, Ostur\u0148a
-        a mal\u00e1 Frankov\u00e1.<\/i> Dissertation, Institute of Landscape Ecology
-        SAS, Bratislava, 141 pp."},{"key":"13","first-page":"85","article-title":"Historical
-        agricultural forms of anthropogenous relief in arable-meadow-pasture landscape
-        and vineyard landscape","volume":"7","author":"M. Dobrovodsk\u00e1","year":"1996","journal-title":"Acta
-        Environmentalica UC (Bratislava)"},{"key":"14","unstructured":"Global International
-        Waters Assessment (GIWA) (2001). <i>DPSIR framework for State of Environment
-        Reporting.<\/i> European Environment Agency (EEA). Copenhagen. Retrieved June
-        2009, from <a target=\"_blank\" href=''http:\/\/www.unep.org\/dewa\/assessments\/ecosystems\/water\/vitalwater\/12.htm#13''>http:\/\/www.unep.org\/dewa\/assessments\/ecosystems\/water\/vitalwater\/12.htm#13<\/a>"},{"key":"15","unstructured":"European
-        Environment Agency (2004). <i>Agriculture and the environment in the EU accession
-        countries.<\/i> Copenhagen, Environmental issue report 37 European Landscape
-        convention, 2000, Florence. Retrieved June 2009, from <a target=\"_blank\"
-        href=''http:\/\/conventions.coe.int\/Treaty\/en\/Treaties\/Html\/176.htm''>http:\/\/conventions.coe.int\/Treaty\/en\/Treaties\/Html\/176.htm<\/a>"},{"issue":"2","key":"16","doi-asserted-by":"crossref","first-page":"129","DOI":"10.1016\/S0303-2434(00)85006-0","article-title":"Inventory
-        of major landscape changes in the Czech Republic, Hungary, Romania and Slovak
-        Republic 1970s - 1990s","volume":"2","author":"J. Feranec","year":"2000","journal-title":"International
-        Journal of Applied Earth Observation and Geoinformation"},{"key":"17","first-page":"62","volume-title":"Historick\u00e9
-        krajinn\u00e9 \u0161trukt\u00fary","author":"M. Huba","year":"1988"},{"key":"18","doi-asserted-by":"crossref","first-page":"399","DOI":"10.1016\/0169-2046(95)93251-J","article-title":"The
-        spontaneous reforestation in abandoned agricultural lands: perception and
-        aesthetic assessment by locals and tourists","volume":"31","author":"M. Hunziker","year":"1995","journal-title":"Landscape
-        Urban Planning"},{"key":"19","first-page":"199","volume-title":"Integrovan\u00fd
-        rozvoj turizmu v mikroregi\u00f3ne Sv\u00e4t\u00fd Jur (Integrated development
-        of tourism in Sv\u00e4t\u00fd Jur microregion)","author":"Z Krn\u00e1\u010dov\u00e1","year":"2005"},{"key":"20","doi-asserted-by":"crossref","first-page":"47","DOI":"10.1006\/jema.1999.0335","article-title":"Agricultural
-        abandonment in mountain areas of Europe: environmental consequences and policy
-        response","volume":"59","author":"D. Mac Donald","year":"2000","journal-title":"Journal
-        of Environmental Management"},{"key":"21","first-page":"53","article-title":"Semi-natural
-        landscapes of the Western Beskidy Mts","volume":"18\/1","author":"J. Kozak","year":"1999","journal-title":"Ekologia,
-        Bratislava"},{"key":"22","doi-asserted-by":"crossref","first-page":"1840","DOI":"10.1890\/04-0367","article-title":"Historical
-        landscape connectivity affects present plant species diversity","volume":"85","author":"R.
-        Lindborg","year":"2004","journal-title":"Ecology"},{"issue":"2","key":"23","doi-asserted-by":"crossref","first-page":"183","DOI":"10.2980\/i1195-6860-12-2-183.1","article-title":"Functional
-        response to land use change in grasslands: Comparing species and trait data","volume":"12","author":"R.
-        Lindborg","year":"2005","journal-title":"Ecoscience"},{"issue":"1-3","key":"24","doi-asserted-by":"crossref","first-page":"39","DOI":"10.1016\/0169-2046(94)01034-6","article-title":"The
-        changing face of the Czech rural landscape","volume":"3","author":"Z. Lipsky","year":"1995","journal-title":"Landscape
-        and Urban Planning"},{"key":"25","first-page":"367","article-title":"The forest
-        transition","volume":"24\/4","author":"A. Mather","year":"1992","journal-title":"Area"},{"issue":"3","key":"26","first-page":"100","article-title":"Changes
-        of natural landscape in the Beskid Niski Mountais during 1938-1998 as exemplified
-        by the Ropianka stream catchment","volume":"20","author":"W. Maciejowski","year":"2001","journal-title":"Ekologia,
-        Bratislava"},{"key":"27","doi-asserted-by":"crossref","first-page":"19","volume-title":"Forests
-        in sustainable mountain development: a state of knowledge report for 2000","author":"P.
-        Piussi","year":"2000","DOI":"10.1079\/9780851994468.0019"},{"key":"28","first-page":"297","article-title":"Landscape
-        ecological planning (LANDEP) in territorial planning","volume":"1","author":"M.
-        Ru\u017ei\u010dka","year":"1982","journal-title":"Ekol\u00f3gia (\u010cSSR)"},{"key":"29","first-page":"326","article-title":"Land
-        use changes in the Veselovianka river catchment in the Horn\u00e1 Orava region","volume":"27\/3","author":"J.
-        \u0160pulerov\u00e1","year":"2008a","journal-title":"Ekol\u00f3gia (Bratislava)"},{"key":"30","first-page":"54","article-title":"Succession
-        changes in extensively used agricultural land","volume":"27\/1","author":"J.
-        \u0160pulerov\u00e1","year":"2008b","journal-title":"Ekol\u00f3gia (Bratislava)"},{"key":"31","first-page":"149","article-title":"Historick\u00e9
-        po\u013enohospod\u00e1rske formy vyu\u017eitia zeme - ich \u00faloha v trvalo
-        udr\u017eate\u013enom rozvoji (Historical agricultural forms of land use -
-        significance in sustainable development)","volume":"7","author":"D. \u0160tefunkov\u00e1","year":"1997","journal-title":"Acta
-        Environmentalica Universitatis Comenianae Bratislava"},{"issue":"1","key":"32","doi-asserted-by":"crossref","first-page":"54","DOI":"10.2747\/1548-1603.46.1.54","article-title":"Identifying
-        Trends in Land Use\/Land Cover Changes in the Context of Post-Socialist Transformation
-        in Central Europe: A Case Study of the Greater Olomouc Region, Czech Republic","volume":"46","author":"T.
-        V\u00e1clav\u00edk","year":"2009","journal-title":"GIScience & Remote Sensing"},{"issue":"1-2","key":"33","doi-asserted-by":"crossref","first-page":"1","DOI":"10.1016\/j.foreco.2004.03.019","article-title":"The
-        political practice of mountain forest restoration\u2014comparing restoration
-        concepts in four European countries","volume":"195","author":"G. Weiss","year":"2004","journal-title":"Forest
-        Ecology and Management"},{"key":"34","doi-asserted-by":"crossref","first-page":"1641","DOI":"10.1007\/s10531-004-0536-z","article-title":"Towards
-        sustainable land use: identifying and managing the conflicts between human
-        activities and biodiversity conservation in Europe","volume":"14\/7","author":"J.
-        Young","year":"2005","journal-title":"Biodiversity and Conservation"}],"container-title":["Journal
-        of Landscape Ecology"],"link":[{"URL":"https:\/\/www.degruyter.com\/view\/j\/jlecol.2010.3.issue-2\/v10285-012-0027-y\/v10285-012-0027-y.pdf","content-type":"unspecified","content-version":"vor","intended-application":"similarity-checking"}],"deposited":{"date-parts":[[2020,5,30]],"date-time":"2020-05-30T16:10:00Z","timestamp":1590855000000},"score":0.0,"issued":{"date-parts":[[2010,1,1]]},"references-count":34,"journal-issue":{"issue":"2"},"URL":"http:\/\/dx.doi.org\/10.2478\/v10285-012-0027-y","ISSN":["1803-2427"],"issn-type":[{"value":"1803-2427","type":"print"}],"subject":["Management,
-        Monitoring, Policy and Law","Nature and Landscape Conservation","Ecology"],"published":{"date-parts":[[2010,1,1]]}},{"indexed":{"date-parts":[[2021,5,12]],"date-time":"2021-05-12T04:11:58Z","timestamp":1620792718474},"reference-count":13,"publisher":"Walter
+      string: '{"status":"ok","message-type":"work-list","message-version":"1.0.0","message":{"facets":{},"total-results":49,"items":[{"indexed":{"date-parts":[[2022,4,3]],"date-time":"2022-04-03T05:10:09Z","timestamp":1648962609164},"reference-count":13,"publisher":"Walter
         de Gruyter GmbH","issue":"1","content-domain":{"domain":[],"crossmark-restriction":false},"published-print":{"date-parts":[[2010,1,1]]},"DOI":"10.2478\/v10285-012-0020-5","type":"journal-article","created":{"date-parts":[[2012,8,10]],"date-time":"2012-08-10T09:14:42Z","timestamp":1344590082000},"source":"Crossref","is-referenced-by-count":1,"title":["The
         Survival and Growth Rates of Woody Vegetation in the Man-Made Vracov Biocorridor
         During the Period of 1993-2007"],"prefix":"10.2478","volume":"3","author":[{"given":"Boleslav","family":"Jel\u00ednek","sequence":"first","affiliation":[]},{"given":"Lubo\u0161","family":"\u00daradn\u00ed\u010dek","sequence":"additional","affiliation":[]}],"member":"374","reference":[{"key":"1","doi-asserted-by":"crossref","first-page":"254","volume-title":"Linkages
@@ -152,8 +67,49 @@ http_interactions:
         \u00daradn\u00ed\u010dek","year":"2004"},{"key":"13","first-page":"52","volume-title":"Zakl\u00e1d\u00e1n\u00ed
         m\u00edstn\u00edch \u00fazemn\u00edch syst\u00e9m\u016f na zem\u011bd\u011blsk\u00e9
         p\u016fd\u011b","author":"E. Zimov\u00e1","year":"2002"}],"container-title":["Journal
-        of Landscape Ecology"],"link":[{"URL":"https:\/\/www.degruyter.com\/view\/j\/jlecol.2010.3.issue-1\/v10285-012-0020-5\/v10285-012-0020-5.pdf","content-type":"unspecified","content-version":"vor","intended-application":"similarity-checking"}],"deposited":{"date-parts":[[2020,5,30]],"date-time":"2020-05-30T16:09:57Z","timestamp":1590854997000},"score":0.0,"issued":{"date-parts":[[2010,1,1]]},"references-count":13,"journal-issue":{"issue":"1"},"URL":"http:\/\/dx.doi.org\/10.2478\/v10285-012-0020-5","ISSN":["1803-2427"],"issn-type":[{"value":"1803-2427","type":"print"}],"subject":["Management,
-        Monitoring, Policy and Law","Nature and Landscape Conservation","Ecology"],"published":{"date-parts":[[2010,1,1]]}},{"indexed":{"date-parts":[[2021,5,10]],"date-time":"2021-05-10T05:32:14Z","timestamp":1620624734043},"reference-count":41,"publisher":"Walter
+        of Landscape Ecology"],"link":[{"URL":"https:\/\/www.degruyter.com\/view\/j\/jlecol.2010.3.issue-1\/v10285-012-0020-5\/v10285-012-0020-5.pdf","content-type":"unspecified","content-version":"vor","intended-application":"similarity-checking"}],"deposited":{"date-parts":[[2020,5,30]],"date-time":"2020-05-30T16:09:57Z","timestamp":1590854997000},"score":0.0,"resource":{"primary":{"URL":"https:\/\/content.sciendo.com\/doi\/10.2478\/v10285-012-0020-5"}},"issued":{"date-parts":[[2010,1,1]]},"references-count":13,"journal-issue":{"issue":"1"},"URL":"http:\/\/dx.doi.org\/10.2478\/v10285-012-0020-5","ISSN":["1803-2427"],"issn-type":[{"value":"1803-2427","type":"print"}],"subject":["Management,
+        Monitoring, Policy and Law","Nature and Landscape Conservation","Ecology"],"published":{"date-parts":[[2010,1,1]]}},{"indexed":{"date-parts":[[2022,3,31]],"date-time":"2022-03-31T17:12:33Z","timestamp":1648746753757},"reference-count":11,"publisher":"Walter
+        de Gruyter GmbH","issue":"3","content-domain":{"domain":[],"crossmark-restriction":false},"published-print":{"date-parts":[[2011,1,1]]},"DOI":"10.2478\/v10285-012-0042-z","type":"journal-article","created":{"date-parts":[[2012,8,10]],"date-time":"2012-08-10T09:14:57Z","timestamp":1344590097000},"source":"Crossref","is-referenced-by-count":0,"title":["Destructive
+        Evolution of Postmeliorated Landscapes of Central Meschera"],"prefix":"10.2478","volume":"4","author":[{"given":"Tatiana","family":"Kharitonova","sequence":"first","affiliation":[]}],"member":"374","reference":[{"key":"1","unstructured":"\u0410\u0432\u0435\u0441\u0441\u0430\u043b\u043e\u043c\u043e\u0432\u0430,
+        \u0418.\u0410., \u0414\u044c\u044f\u043a\u043e\u043d\u043e\u0432, \u041a.\u041d.
+        (1983). \u0413\u0435\u043e\u0445\u0438\u043c\u0438\u0447\u0435\u0441\u043a\u0438\u0435
+        \u0430\u0441\u043f\u0435\u043a\u0442\u044b \u043e\u0441\u0443\u0448\u0438\u0442\u0435\u043b\u044c\u043d\u043e\u0439
+        \u043c\u0435\u043b\u0438\u043e\u0440\u0430\u0446\u0438\u0438 \u0432 \u0434\u043e\u043b\u0438\u043d\u043d\u043e-\u0437\u0430\u043d\u0434\u0440\u043e\u0432\u044b\u0445
+        \u043b\u0430\u043d\u0434\u0448\u0430\u0444\u0442\u0430\u0445 \u041c\u0435\u0449\u0435\u0440\u044b.
+        <i>\u0412\u0435\u0441\u0442\u043d. \u041c\u043e\u0441\u043a<\/i>. <i>\u0423\u043d-\u0442\u0430.
+        \u0421\u0435\u0440<\/i>.5. \u0413\u0435\u043e\u0433\u0440\u0430\u0444\u0438\u044f.
+        1983. \u21163. \u0421. 46-54."},{"key":"2","unstructured":"\u0410\u043d\u043d\u0435\u043d\u0441\u043a\u0430\u044f,
+        \u0413.\u041d., \u041c\u0430\u043c\u0430\u0439, \u0418.\u0418. & \u0426\u0435\u0441\u0435\u043b\u044c\u0447\u0443\u043a,
+        \u042e.\u041d. (1990). <i>\u041b\u0430\u043d\u0434\u0448\u0430\u0444\u0442\u044b
+        \u0420\u044f\u0437\u0430\u043d\u0441\u043a\u043e\u0439 \u041c\u0435\u0449\u0435\u0440\u044b
+        \u0438 \u0432\u043e\u0437\u043c\u043e\u0436\u043d\u043e\u0441\u0442\u0438
+        \u0438\u0445 \u043e\u0441\u0432\u043e\u0435\u043d\u0438\u044f<\/i>. \u041c.:
+        \u0418\u0437\u0434-\u0432\u043e \u041c\u043e\u0441\u043a. \u0423\u043d-\u0442\u0430.
+        246 \u0441."},{"key":"3","unstructured":"\u0413\u0435\u043e\u0433\u0440\u0430\u0444\u0438\u0447\u0435\u0441\u043a\u0438\u0435
+        \u043f\u0440\u043e\u0431\u043b\u0435\u043c\u044b \u043e\u0441\u0443\u0448\u0438\u0442\u0435\u043b\u044c\u043d\u044b\u0445
+        \u043c\u0435\u043b\u0438\u043e\u0440\u0430\u0446\u0438\u0439 (1990). 187 \u0441."},{"key":"4","unstructured":"\u0420\u0430\u043c\u0435\u043d\u0441\u043a\u0438\u0439,
+        \u041b.\u0413. (1956). <i>\u042d\u043a\u043e\u043b\u043e\u0433\u0438\u0447\u0435\u0441\u043a\u0430\u044f
+        \u043e\u0446\u0435\u043d\u043a\u0430 \u043a\u043e\u0440\u043c\u043e\u0432\u044b\u0445
+        \u0443\u0433\u043e\u0434\u0438\u0439 \u043f\u043e \u0440\u0430\u0441\u0442\u0438\u0442\u0435\u043b\u044c\u043d\u043e\u043c\u0443
+        \u043f\u043e\u043a\u0440\u043e\u0432\u0443<\/i>. \u0413\u043e\u0441. \u0438\u0437\u0434-\u0432\u043e
+        \u0441\u0435\u043b\u044c\u0445\u043e\u0437. \u041b\u0438\u0442-\u0440\u044b.
+        470 \u0441."},{"issue":"6","key":"5","doi-asserted-by":"crossref","first-page":"1375","DOI":"10.1016\/j.soilbio.2005.10.012","article-title":"The
+        physicochemical and microbiological status of a restored bog in Quebec: Identification
+        of relevant criteria to monitor success","volume":"38","author":"R. Andersen","year":"2006","journal-title":"Soil
+        Biology and Biochemistry"},{"key":"6","first-page":"735","volume-title":"Vegetation
+        Ecology of Central Europe","author":"H. Ellenberg","year":"2009"},{"issue":"3","key":"7","doi-asserted-by":"crossref","first-page":"242","DOI":"10.1016\/j.landurbplan.2010.12.011","article-title":"Effects
+        of prospective landscape changes on species viability in Segre River valley,
+        NE Spain","volume":"100","author":"K. Franz","year":"2011","journal-title":"Landscape
+        and Urban Planning"},{"key":"8","first-page":"144","author":"M. Hayka","year":"1989","journal-title":"Geoecological
+        foundations of territotial planing"},{"key":"9","first-page":"416","volume-title":"Dynamics
+        of Agricultural lands of Russia in XX century and Postagrogenic Restoration
+        of vegetation and soils","author":"D. Lyuri","year":"2005"},{"key":"10","unstructured":"Millennium
+        Ecosystem Assessment (2005). <i>Ecosystems and Human Well-being.<\/i> Synthesis
+        Peport. \u2014 Island Press, Washington DC, 160 pp."},{"issue":"4","key":"11","doi-asserted-by":"crossref","first-page":"304","DOI":"10.1016\/j.agee.2009.10.010","article-title":"Abandonment
+        and intensified use of agricultural land decrease habitats of rare herbs in
+        semi-natural grasslands","volume":"135","author":"Y Uematsu","year":"2010","journal-title":"Agriculture,
+        Ecosystems & Environment"}],"container-title":["Journal of Landscape Ecology"],"link":[{"URL":"https:\/\/www.degruyter.com\/view\/j\/jlecol.2011.4.issue-3\/v10285-012-0042-z\/v10285-012-0042-z.pdf","content-type":"unspecified","content-version":"vor","intended-application":"similarity-checking"}],"deposited":{"date-parts":[[2020,5,30]],"date-time":"2020-05-30T16:10:08Z","timestamp":1590855008000},"score":0.0,"resource":{"primary":{"URL":"https:\/\/content.sciendo.com\/doi\/10.2478\/v10285-012-0042-z"}},"issued":{"date-parts":[[2011,1,1]]},"references-count":11,"journal-issue":{"issue":"3"},"URL":"http:\/\/dx.doi.org\/10.2478\/v10285-012-0042-z","ISSN":["1803-2427"],"issn-type":[{"value":"1803-2427","type":"print"}],"subject":["Management,
+        Monitoring, Policy and Law","Nature and Landscape Conservation","Ecology"],"published":{"date-parts":[[2011,1,1]]}},{"indexed":{"date-parts":[[2022,3,31]],"date-time":"2022-03-31T07:09:45Z","timestamp":1648710585788},"reference-count":41,"publisher":"Walter
         de Gruyter GmbH","issue":"1","content-domain":{"domain":[],"crossmark-restriction":false},"published-print":{"date-parts":[[2011,1,1]]},"DOI":"10.2478\/v10285-012-0034-z","type":"journal-article","created":{"date-parts":[[2012,8,10]],"date-time":"2012-08-10T09:15:57Z","timestamp":1344590157000},"source":"Crossref","is-referenced-by-count":0,"title":["Antropogenically
         Created Forest Edge in the Starohorsk\u00e9 Vrchy Mts. on the Example of Donovaly
         Village"],"prefix":"10.2478","volume":"4","author":[{"given":"Martina","family":"\u0160kodov\u00e1","sequence":"first","affiliation":[]},{"given":"Alfonz","family":"Gajdo\u0161","sequence":"additional","affiliation":[]}],"member":"374","reference":[{"key":"1","first-page":"29","article-title":"Landscape-geobotanical
@@ -238,49 +194,8 @@ http_interactions:
         in wildlife communities near edges","volume":"2","author":"R. Yahner","year":"1988","journal-title":"Conserv.
         biol"},{"key":"41","first-page":"186","article-title":"Waldr\u00e4nder in
         der Kulturlandschaft","author":"S. Zerbe","year":"1991","journal-title":"Naturschutz
-        u. Landschaftsplanung"}],"container-title":["Journal of Landscape Ecology"],"link":[{"URL":"https:\/\/www.degruyter.com\/view\/j\/jlecol.2011.4.issue-1\/v10285-012-0034-z\/v10285-012-0034-z.pdf","content-type":"unspecified","content-version":"vor","intended-application":"similarity-checking"}],"deposited":{"date-parts":[[2020,5,30]],"date-time":"2020-05-30T16:10:04Z","timestamp":1590855004000},"score":0.0,"issued":{"date-parts":[[2011,1,1]]},"references-count":41,"journal-issue":{"issue":"1"},"URL":"http:\/\/dx.doi.org\/10.2478\/v10285-012-0034-z","ISSN":["1803-2427"],"issn-type":[{"value":"1803-2427","type":"print"}],"subject":["Management,
-        Monitoring, Policy and Law","Nature and Landscape Conservation","Ecology"],"published":{"date-parts":[[2011,1,1]]}},{"indexed":{"date-parts":[[2021,5,10]],"date-time":"2021-05-10T05:30:51Z","timestamp":1620624651240},"reference-count":11,"publisher":"Walter
-        de Gruyter GmbH","issue":"3","content-domain":{"domain":[],"crossmark-restriction":false},"published-print":{"date-parts":[[2011,1,1]]},"DOI":"10.2478\/v10285-012-0042-z","type":"journal-article","created":{"date-parts":[[2012,8,10]],"date-time":"2012-08-10T09:14:57Z","timestamp":1344590097000},"source":"Crossref","is-referenced-by-count":0,"title":["Destructive
-        Evolution of Postmeliorated Landscapes of Central Meschera"],"prefix":"10.2478","volume":"4","author":[{"given":"Tatiana","family":"Kharitonova","sequence":"first","affiliation":[]}],"member":"374","reference":[{"key":"1","unstructured":"\u0410\u0432\u0435\u0441\u0441\u0430\u043b\u043e\u043c\u043e\u0432\u0430,
-        \u0418.\u0410., \u0414\u044c\u044f\u043a\u043e\u043d\u043e\u0432, \u041a.\u041d.
-        (1983). \u0413\u0435\u043e\u0445\u0438\u043c\u0438\u0447\u0435\u0441\u043a\u0438\u0435
-        \u0430\u0441\u043f\u0435\u043a\u0442\u044b \u043e\u0441\u0443\u0448\u0438\u0442\u0435\u043b\u044c\u043d\u043e\u0439
-        \u043c\u0435\u043b\u0438\u043e\u0440\u0430\u0446\u0438\u0438 \u0432 \u0434\u043e\u043b\u0438\u043d\u043d\u043e-\u0437\u0430\u043d\u0434\u0440\u043e\u0432\u044b\u0445
-        \u043b\u0430\u043d\u0434\u0448\u0430\u0444\u0442\u0430\u0445 \u041c\u0435\u0449\u0435\u0440\u044b.
-        <i>\u0412\u0435\u0441\u0442\u043d. \u041c\u043e\u0441\u043a<\/i>. <i>\u0423\u043d-\u0442\u0430.
-        \u0421\u0435\u0440<\/i>.5. \u0413\u0435\u043e\u0433\u0440\u0430\u0444\u0438\u044f.
-        1983. \u21163. \u0421. 46-54."},{"key":"2","unstructured":"\u0410\u043d\u043d\u0435\u043d\u0441\u043a\u0430\u044f,
-        \u0413.\u041d., \u041c\u0430\u043c\u0430\u0439, \u0418.\u0418. & \u0426\u0435\u0441\u0435\u043b\u044c\u0447\u0443\u043a,
-        \u042e.\u041d. (1990). <i>\u041b\u0430\u043d\u0434\u0448\u0430\u0444\u0442\u044b
-        \u0420\u044f\u0437\u0430\u043d\u0441\u043a\u043e\u0439 \u041c\u0435\u0449\u0435\u0440\u044b
-        \u0438 \u0432\u043e\u0437\u043c\u043e\u0436\u043d\u043e\u0441\u0442\u0438
-        \u0438\u0445 \u043e\u0441\u0432\u043e\u0435\u043d\u0438\u044f<\/i>. \u041c.:
-        \u0418\u0437\u0434-\u0432\u043e \u041c\u043e\u0441\u043a. \u0423\u043d-\u0442\u0430.
-        246 \u0441."},{"key":"3","unstructured":"\u0413\u0435\u043e\u0433\u0440\u0430\u0444\u0438\u0447\u0435\u0441\u043a\u0438\u0435
-        \u043f\u0440\u043e\u0431\u043b\u0435\u043c\u044b \u043e\u0441\u0443\u0448\u0438\u0442\u0435\u043b\u044c\u043d\u044b\u0445
-        \u043c\u0435\u043b\u0438\u043e\u0440\u0430\u0446\u0438\u0439 (1990). 187 \u0441."},{"key":"4","unstructured":"\u0420\u0430\u043c\u0435\u043d\u0441\u043a\u0438\u0439,
-        \u041b.\u0413. (1956). <i>\u042d\u043a\u043e\u043b\u043e\u0433\u0438\u0447\u0435\u0441\u043a\u0430\u044f
-        \u043e\u0446\u0435\u043d\u043a\u0430 \u043a\u043e\u0440\u043c\u043e\u0432\u044b\u0445
-        \u0443\u0433\u043e\u0434\u0438\u0439 \u043f\u043e \u0440\u0430\u0441\u0442\u0438\u0442\u0435\u043b\u044c\u043d\u043e\u043c\u0443
-        \u043f\u043e\u043a\u0440\u043e\u0432\u0443<\/i>. \u0413\u043e\u0441. \u0438\u0437\u0434-\u0432\u043e
-        \u0441\u0435\u043b\u044c\u0445\u043e\u0437. \u041b\u0438\u0442-\u0440\u044b.
-        470 \u0441."},{"issue":"6","key":"5","doi-asserted-by":"crossref","first-page":"1375","DOI":"10.1016\/j.soilbio.2005.10.012","article-title":"The
-        physicochemical and microbiological status of a restored bog in Quebec: Identification
-        of relevant criteria to monitor success","volume":"38","author":"R. Andersen","year":"2006","journal-title":"Soil
-        Biology and Biochemistry"},{"key":"6","first-page":"735","volume-title":"Vegetation
-        Ecology of Central Europe","author":"H. Ellenberg","year":"2009"},{"issue":"3","key":"7","doi-asserted-by":"crossref","first-page":"242","DOI":"10.1016\/j.landurbplan.2010.12.011","article-title":"Effects
-        of prospective landscape changes on species viability in Segre River valley,
-        NE Spain","volume":"100","author":"K. Franz","year":"2011","journal-title":"Landscape
-        and Urban Planning"},{"key":"8","first-page":"144","author":"M. Hayka","year":"1989","journal-title":"Geoecological
-        foundations of territotial planing"},{"key":"9","first-page":"416","volume-title":"Dynamics
-        of Agricultural lands of Russia in XX century and Postagrogenic Restoration
-        of vegetation and soils","author":"D. Lyuri","year":"2005"},{"key":"10","unstructured":"Millennium
-        Ecosystem Assessment (2005). <i>Ecosystems and Human Well-being.<\/i> Synthesis
-        Peport. \u2014 Island Press, Washington DC, 160 pp."},{"issue":"4","key":"11","doi-asserted-by":"crossref","first-page":"304","DOI":"10.1016\/j.agee.2009.10.010","article-title":"Abandonment
-        and intensified use of agricultural land decrease habitats of rare herbs in
-        semi-natural grasslands","volume":"135","author":"Y Uematsu","year":"2010","journal-title":"Agriculture,
-        Ecosystems & Environment"}],"container-title":["Journal of Landscape Ecology"],"link":[{"URL":"https:\/\/www.degruyter.com\/view\/j\/jlecol.2011.4.issue-3\/v10285-012-0042-z\/v10285-012-0042-z.pdf","content-type":"unspecified","content-version":"vor","intended-application":"similarity-checking"}],"deposited":{"date-parts":[[2020,5,30]],"date-time":"2020-05-30T16:10:08Z","timestamp":1590855008000},"score":0.0,"issued":{"date-parts":[[2011,1,1]]},"references-count":11,"journal-issue":{"issue":"3"},"URL":"http:\/\/dx.doi.org\/10.2478\/v10285-012-0042-z","ISSN":["1803-2427"],"issn-type":[{"value":"1803-2427","type":"print"}],"subject":["Management,
-        Monitoring, Policy and Law","Nature and Landscape Conservation","Ecology"],"published":{"date-parts":[[2011,1,1]]}},{"indexed":{"date-parts":[[2021,5,10]],"date-time":"2021-05-10T05:30:36Z","timestamp":1620624636116},"reference-count":38,"publisher":"Walter
+        u. Landschaftsplanung"}],"container-title":["Journal of Landscape Ecology"],"link":[{"URL":"https:\/\/www.degruyter.com\/view\/j\/jlecol.2011.4.issue-1\/v10285-012-0034-z\/v10285-012-0034-z.pdf","content-type":"unspecified","content-version":"vor","intended-application":"similarity-checking"}],"deposited":{"date-parts":[[2020,5,30]],"date-time":"2020-05-30T16:10:04Z","timestamp":1590855004000},"score":0.0,"resource":{"primary":{"URL":"https:\/\/content.sciendo.com\/doi\/10.2478\/v10285-012-0034-z"}},"issued":{"date-parts":[[2011,1,1]]},"references-count":41,"journal-issue":{"issue":"1"},"URL":"http:\/\/dx.doi.org\/10.2478\/v10285-012-0034-z","ISSN":["1803-2427"],"issn-type":[{"value":"1803-2427","type":"print"}],"subject":["Management,
+        Monitoring, Policy and Law","Nature and Landscape Conservation","Ecology"],"published":{"date-parts":[[2011,1,1]]}},{"indexed":{"date-parts":[[2022,4,7]],"date-time":"2022-04-07T01:18:56Z","timestamp":1649294336002},"reference-count":38,"publisher":"Walter
         de Gruyter GmbH","issue":"2","content-domain":{"domain":[],"crossmark-restriction":false},"published-print":{"date-parts":[[2009,1,1]]},"abstract":"<jats:title>Any
         Lesson from the History of Sustainable Development?<\/jats:title>\n        <jats:p>Have
         we still got time for sustainability and reasonable application of ideas of
@@ -358,7 +273,94 @@ http_interactions:
         Declaration on Sustainable Development.<\/i> Retrieved 18 September 2008,
         from <a target=\"_blank\" href=''http:\/\/www.housing.gov.za\/content\/legislation_policies\/johannesburg.htm''>http:\/\/www.housing.gov.za\/content\/legislation_policies\/johannesburg.htm<\/a>"},{"key":"38","volume-title":"The
         Third Wave","author":"A. Toffler","year":"1990"}],"container-title":["Journal
-        of Landscape Ecology"],"link":[{"URL":"http:\/\/content.sciendo.com\/view\/journals\/jlecol\/2\/2\/article-p5.xml","content-type":"text\/html","content-version":"vor","intended-application":"text-mining"},{"URL":"https:\/\/www.degruyter.com\/view\/j\/jlecol.2009.2.issue-2\/v10285-012-0015-2\/v10285-012-0015-2.pdf","content-type":"unspecified","content-version":"vor","intended-application":"similarity-checking"}],"deposited":{"date-parts":[[2020,5,30]],"date-time":"2020-05-30T16:09:54Z","timestamp":1590854994000},"score":0.0,"issued":{"date-parts":[[2009,1,1]]},"references-count":38,"journal-issue":{"issue":"2"},"URL":"http:\/\/dx.doi.org\/10.2478\/v10285-012-0015-2","ISSN":["1803-2427"],"issn-type":[{"value":"1803-2427","type":"print"}],"subject":["Management,
-        Monitoring, Policy and Law","Nature and Landscape Conservation","Ecology"],"published":{"date-parts":[[2009,1,1]]}}],"items-per-page":5,"query":{"start-index":0,"search-terms":null}}}'
-  recorded_at: 2021-08-17 17:23:34 GMT
-  recorded_with: vcr/1.0.2, webmockr/0.8.0
+        of Landscape Ecology"],"link":[{"URL":"http:\/\/content.sciendo.com\/view\/journals\/jlecol\/2\/2\/article-p5.xml","content-type":"text\/html","content-version":"vor","intended-application":"text-mining"},{"URL":"https:\/\/www.degruyter.com\/view\/j\/jlecol.2009.2.issue-2\/v10285-012-0015-2\/v10285-012-0015-2.pdf","content-type":"unspecified","content-version":"vor","intended-application":"similarity-checking"}],"deposited":{"date-parts":[[2020,5,30]],"date-time":"2020-05-30T16:09:54Z","timestamp":1590854994000},"score":0.0,"resource":{"primary":{"URL":"https:\/\/content.sciendo.com\/doi\/10.2478\/v10285-012-0015-2"}},"issued":{"date-parts":[[2009,1,1]]},"references-count":38,"journal-issue":{"issue":"2"},"URL":"http:\/\/dx.doi.org\/10.2478\/v10285-012-0015-2","ISSN":["1803-2427"],"issn-type":[{"value":"1803-2427","type":"print"}],"subject":["Management,
+        Monitoring, Policy and Law","Nature and Landscape Conservation","Ecology"],"published":{"date-parts":[[2009,1,1]]}},{"indexed":{"date-parts":[[2022,9,17]],"date-time":"2022-09-17T04:49:23Z","timestamp":1663390163166},"reference-count":34,"publisher":"Walter
+        de Gruyter GmbH","issue":"2","content-domain":{"domain":[],"crossmark-restriction":false},"published-print":{"date-parts":[[2010,1,1]]},"DOI":"10.2478\/v10285-012-0027-y","type":"journal-article","created":{"date-parts":[[2012,8,10]],"date-time":"2012-08-10T09:15:16Z","timestamp":1344590116000},"source":"Crossref","is-referenced-by-count":7,"title":["Driving
+        Forces, Threats and Trends Relating to Mosaics in Agricultural Landscape in
+        Slovakia"],"prefix":"10.2478","volume":"3","author":[{"given":"Jana","family":"Spulerova","sequence":"first","affiliation":[]},{"given":"Marta","family":"Dobrovodsk\u00e1","sequence":"additional","affiliation":[]},{"given":"Dagmar","family":"Stefunkova","sequence":"additional","affiliation":[]}],"member":"374","reference":[{"key":"1","doi-asserted-by":"crossref","first-page":"21","DOI":"10.1016\/j.landurbplan.2003.10.002","article-title":"Why
+        landscapes of the past are important for the future?","volume":"70","author":"M.
+        Antrop","year":"2005","journal-title":"Landscape and Urban Planning"},{"key":"2","first-page":"43","article-title":"Anthropogenic
+        Pressure in the Environmental Parameters of the Bieszczady Mountains","volume":"6","author":"M.
+        Augustyn","year":"2004","journal-title":"Biosphere Conservation"},{"issue":"1","key":"3","doi-asserted-by":"crossref","first-page":"65","DOI":"10.1016\/S0264-8377(00)00047-8","article-title":"Land-use
+        changes and their social driving forces in Czechia in the 19th and 20th centuries","volume":"18","author":"I.
+        Bi\u010d\u00edk","year":"2001","journal-title":"Land Use Policy"},{"key":"4","first-page":"155","article-title":"Czech
+        agriculture in the integrating Europe","volume":"48","author":"I. Bi\u010d\u00edk","year":"2006","journal-title":"Acta
+        Geographica Universitatis Comenianae"},{"key":"5","first-page":"593","volume-title":"The
+        Cultural Landscape - Past, Present and Future","author":"H. Birks","year":"2004"},{"issue":"1","key":"6","first-page":"82","article-title":"Agriculture,
+        Landscape, Biodiversity: Scenarios and stakeholer perceptions in the Poloniny
+        National park (NE Slovakia)","volume":"25","author":"P. Bez\u00e1k","year":"2006","journal-title":"Ekol\u00f3gia
+        (Bratislava)"},{"key":"7","first-page":"40","volume-title":"\u00daloha nev\u00fdrobn\u00fdch
+        funkci\u00ed po\u013enohospod\u00e1rstva v udr\u017eate\u013enom rozvoji vidieka
+        a ich kvantifik\u00e1cia","author":"M. Brodov\u00e1","year":"2007"},{"key":"8","doi-asserted-by":"crossref","first-page":"641","DOI":"10.1111\/j.1600-0587.2000.tb00307.x","article-title":"Patterns
+        of species richness in dry grassland patches in an agricultural landscape","volume":"23","author":"H.
+        Bruun","year":"2000","journal-title":"Ecography"},{"key":"9","doi-asserted-by":"crossref","first-page":"461","DOI":"10.1034\/j.1600-0587.2001.d01-202.x","article-title":"Plant
+        species occurrences in a rural hemiboreal landscape: effects of remnant habitats,
+        site history, topography and soil","volume":"24","author":"S. Cousins","year":"2001","journal-title":"Ecography"},{"key":"10","doi-asserted-by":"crossref","first-page":"315","DOI":"10.1023\/A:1024400913488","article-title":"Modelling
+        the effects of landscape pattern and grazing regimes on the persistence of
+        plant species with high conservation value in grasslands in south-eastern
+        Sweden","volume":"18","author":"S. Cousins","year":"2003","journal-title":"Landscape
+        Ecology"},{"key":"11","first-page":"101","volume-title":"Evaluation and perception
+        of Landscape patterns","author":"M. Dobrovodsk\u00e1","year":"1998"},{"key":"12","unstructured":"Dobrovodsk\u00e1,
+        M. (2003). <i>V\u00fdvoj vz\u0165ahov medzi krajinou a \u010dlovekom na modelov\u00e1ch
+        \u00fazemiach v katastroch obc\u00ed Liptovsk\u00e1 Tepli\u010dka, Ostur\u0148a
+        a mal\u00e1 Frankov\u00e1.<\/i> Dissertation, Institute of Landscape Ecology
+        SAS, Bratislava, 141 pp."},{"key":"13","first-page":"85","article-title":"Historical
+        agricultural forms of anthropogenous relief in arable-meadow-pasture landscape
+        and vineyard landscape","volume":"7","author":"M. Dobrovodsk\u00e1","year":"1996","journal-title":"Acta
+        Environmentalica UC (Bratislava)"},{"key":"14","unstructured":"Global International
+        Waters Assessment (GIWA) (2001). <i>DPSIR framework for State of Environment
+        Reporting.<\/i> European Environment Agency (EEA). Copenhagen. Retrieved June
+        2009, from <a target=\"_blank\" href=''http:\/\/www.unep.org\/dewa\/assessments\/ecosystems\/water\/vitalwater\/12.htm#13''>http:\/\/www.unep.org\/dewa\/assessments\/ecosystems\/water\/vitalwater\/12.htm#13<\/a>"},{"key":"15","unstructured":"European
+        Environment Agency (2004). <i>Agriculture and the environment in the EU accession
+        countries.<\/i> Copenhagen, Environmental issue report 37 European Landscape
+        convention, 2000, Florence. Retrieved June 2009, from <a target=\"_blank\"
+        href=''http:\/\/conventions.coe.int\/Treaty\/en\/Treaties\/Html\/176.htm''>http:\/\/conventions.coe.int\/Treaty\/en\/Treaties\/Html\/176.htm<\/a>"},{"issue":"2","key":"16","doi-asserted-by":"crossref","first-page":"129","DOI":"10.1016\/S0303-2434(00)85006-0","article-title":"Inventory
+        of major landscape changes in the Czech Republic, Hungary, Romania and Slovak
+        Republic 1970s - 1990s","volume":"2","author":"J. Feranec","year":"2000","journal-title":"International
+        Journal of Applied Earth Observation and Geoinformation"},{"key":"17","first-page":"62","volume-title":"Historick\u00e9
+        krajinn\u00e9 \u0161trukt\u00fary","author":"M. Huba","year":"1988"},{"key":"18","doi-asserted-by":"crossref","first-page":"399","DOI":"10.1016\/0169-2046(95)93251-J","article-title":"The
+        spontaneous reforestation in abandoned agricultural lands: perception and
+        aesthetic assessment by locals and tourists","volume":"31","author":"M. Hunziker","year":"1995","journal-title":"Landscape
+        Urban Planning"},{"key":"19","first-page":"199","volume-title":"Integrovan\u00fd
+        rozvoj turizmu v mikroregi\u00f3ne Sv\u00e4t\u00fd Jur (Integrated development
+        of tourism in Sv\u00e4t\u00fd Jur microregion)","author":"Z Krn\u00e1\u010dov\u00e1","year":"2005"},{"key":"20","doi-asserted-by":"crossref","first-page":"47","DOI":"10.1006\/jema.1999.0335","article-title":"Agricultural
+        abandonment in mountain areas of Europe: environmental consequences and policy
+        response","volume":"59","author":"D. Mac Donald","year":"2000","journal-title":"Journal
+        of Environmental Management"},{"key":"21","first-page":"53","article-title":"Semi-natural
+        landscapes of the Western Beskidy Mts","volume":"18\/1","author":"J. Kozak","year":"1999","journal-title":"Ekologia,
+        Bratislava"},{"key":"22","doi-asserted-by":"crossref","first-page":"1840","DOI":"10.1890\/04-0367","article-title":"Historical
+        landscape connectivity affects present plant species diversity","volume":"85","author":"R.
+        Lindborg","year":"2004","journal-title":"Ecology"},{"issue":"2","key":"23","doi-asserted-by":"crossref","first-page":"183","DOI":"10.2980\/i1195-6860-12-2-183.1","article-title":"Functional
+        response to land use change in grasslands: Comparing species and trait data","volume":"12","author":"R.
+        Lindborg","year":"2005","journal-title":"Ecoscience"},{"issue":"1-3","key":"24","doi-asserted-by":"crossref","first-page":"39","DOI":"10.1016\/0169-2046(94)01034-6","article-title":"The
+        changing face of the Czech rural landscape","volume":"3","author":"Z. Lipsky","year":"1995","journal-title":"Landscape
+        and Urban Planning"},{"key":"25","first-page":"367","article-title":"The forest
+        transition","volume":"24\/4","author":"A. Mather","year":"1992","journal-title":"Area"},{"issue":"3","key":"26","first-page":"100","article-title":"Changes
+        of natural landscape in the Beskid Niski Mountais during 1938-1998 as exemplified
+        by the Ropianka stream catchment","volume":"20","author":"W. Maciejowski","year":"2001","journal-title":"Ekologia,
+        Bratislava"},{"key":"27","doi-asserted-by":"crossref","first-page":"19","volume-title":"Forests
+        in sustainable mountain development: a state of knowledge report for 2000","author":"P.
+        Piussi","year":"2000","DOI":"10.1079\/9780851994468.0019"},{"key":"28","first-page":"297","article-title":"Landscape
+        ecological planning (LANDEP) in territorial planning","volume":"1","author":"M.
+        Ru\u017ei\u010dka","year":"1982","journal-title":"Ekol\u00f3gia (\u010cSSR)"},{"key":"29","first-page":"326","article-title":"Land
+        use changes in the Veselovianka river catchment in the Horn\u00e1 Orava region","volume":"27\/3","author":"J.
+        \u0160pulerov\u00e1","year":"2008a","journal-title":"Ekol\u00f3gia (Bratislava)"},{"key":"30","first-page":"54","article-title":"Succession
+        changes in extensively used agricultural land","volume":"27\/1","author":"J.
+        \u0160pulerov\u00e1","year":"2008b","journal-title":"Ekol\u00f3gia (Bratislava)"},{"key":"31","first-page":"149","article-title":"Historick\u00e9
+        po\u013enohospod\u00e1rske formy vyu\u017eitia zeme - ich \u00faloha v trvalo
+        udr\u017eate\u013enom rozvoji (Historical agricultural forms of land use -
+        significance in sustainable development)","volume":"7","author":"D. \u0160tefunkov\u00e1","year":"1997","journal-title":"Acta
+        Environmentalica Universitatis Comenianae Bratislava"},{"issue":"1","key":"32","doi-asserted-by":"crossref","first-page":"54","DOI":"10.2747\/1548-1603.46.1.54","article-title":"Identifying
+        Trends in Land Use\/Land Cover Changes in the Context of Post-Socialist Transformation
+        in Central Europe: A Case Study of the Greater Olomouc Region, Czech Republic","volume":"46","author":"T.
+        V\u00e1clav\u00edk","year":"2009","journal-title":"GIScience & Remote Sensing"},{"issue":"1-2","key":"33","doi-asserted-by":"crossref","first-page":"1","DOI":"10.1016\/j.foreco.2004.03.019","article-title":"The
+        political practice of mountain forest restoration\u2014comparing restoration
+        concepts in four European countries","volume":"195","author":"G. Weiss","year":"2004","journal-title":"Forest
+        Ecology and Management"},{"key":"34","doi-asserted-by":"crossref","first-page":"1641","DOI":"10.1007\/s10531-004-0536-z","article-title":"Towards
+        sustainable land use: identifying and managing the conflicts between human
+        activities and biodiversity conservation in Europe","volume":"14\/7","author":"J.
+        Young","year":"2005","journal-title":"Biodiversity and Conservation"}],"container-title":["Journal
+        of Landscape Ecology"],"link":[{"URL":"https:\/\/www.degruyter.com\/view\/j\/jlecol.2010.3.issue-2\/v10285-012-0027-y\/v10285-012-0027-y.pdf","content-type":"unspecified","content-version":"vor","intended-application":"similarity-checking"}],"deposited":{"date-parts":[[2020,5,30]],"date-time":"2020-05-30T16:10:00Z","timestamp":1590855000000},"score":0.0,"resource":{"primary":{"URL":"https:\/\/content.sciendo.com\/doi\/10.2478\/v10285-012-0027-y"}},"issued":{"date-parts":[[2010,1,1]]},"references-count":34,"journal-issue":{"issue":"2"},"URL":"http:\/\/dx.doi.org\/10.2478\/v10285-012-0027-y","ISSN":["1803-2427"],"issn-type":[{"value":"1803-2427","type":"print"}],"subject":["Management,
+        Monitoring, Policy and Law","Nature and Landscape Conservation","Ecology"],"published":{"date-parts":[[2010,1,1]]}}],"items-per-page":5,"query":{"start-index":0,"search-terms":null}}}'
+  recorded_at: 2022-11-09 09:32:01 GMT
+  recorded_with: vcr/1.1.0, webmockr/0.8.0

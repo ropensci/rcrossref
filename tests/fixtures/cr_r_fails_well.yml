@@ -8,36 +8,38 @@ http_interactions:
     headers:
       Accept-Encoding: gzip, deflate
       Accept: application/json, text/xml, application/xml, */*
-      User-Agent: r-curl/4.3.2 crul/1.1.0 rOpenSci(rcrossref/1.1.0.94) (mailto:<crossref_email>)
-      X-USER-AGENT: r-curl/4.3.2 crul/1.1.0 rOpenSci(rcrossref/1.1.0.94) (mailto:<crossref_email>)
+      User-Agent: r-curl/4.3.2 crul/1.3 rOpenSci(rcrossref/1.1.0.99) (mailto:<crossref_email>)
+      X-USER-AGENT: r-curl/4.3.2 crul/1.3 rOpenSci(rcrossref/1.1.0.99) (mailto:<crossref_email>)
   response:
     status:
       status_code: '200'
       message: OK
       explanation: Request fulfilled, document follows
     headers:
-      access-control-allow-headers: X-Requested-With
+      access-control-allow-headers: X-Requested-With, Accept, Accept-Encoding, Accept-Charset,
+        Accept-Language, Accept-Ranges, Cache-Control
       access-control-allow-origin: '*'
+      access-control-expose-headers: Link
       connection: close
-      content-length: '191'
       content-type: application/json
-      date: Tue, 17 Aug 2021 17:26:16 GMT
+      date: Wed, 09 Nov 2022 12:57:28 GMT
       permissions-policy: interest-cohort=()
       server: Jetty(9.4.40.v20210413)
       set-cookie:
-      - AWSALB=83bkUsht3ZywSK34U17ALnE8MH2O0qM+YUcJXS/RtZv59cBwRZJocIxDeHNYtb9E4ZL1LJOpTzHUwciZf/AOM5t/cEPG2X2PsHauRnC+7g4BnR3kaSoJmMRG3NDe;
-        Expires=Tue, 24 Aug 2021 17:26:16 GMT; Path=/
-      - AWSALBCORS=83bkUsht3ZywSK34U17ALnE8MH2O0qM+YUcJXS/RtZv59cBwRZJocIxDeHNYtb9E4ZL1LJOpTzHUwciZf/AOM5t/cEPG2X2PsHauRnC+7g4BnR3kaSoJmMRG3NDe;
-        Expires=Tue, 24 Aug 2021 17:26:16 GMT; Path=/; SameSite=None
+      - AWSALB=yLeidsbUI4n7Bb3Wlz7W9b9l/odKzKbh0+K+Q0bx9keuCWK+fsPEQ2W4PBuv8lmbp5s/W6YdTY31fj8JC6mohGVRp06UZCZJGVu68gl5kGTjxDi8+1KPkiCplRbb;
+        Expires=Wed, 16 Nov 2022 12:56:49 GMT; Path=/
+      - AWSALBCORS=yLeidsbUI4n7Bb3Wlz7W9b9l/odKzKbh0+K+Q0bx9keuCWK+fsPEQ2W4PBuv8lmbp5s/W6YdTY31fj8JC6mohGVRp06UZCZJGVu68gl5kGTjxDi8+1KPkiCplRbb;
+        Expires=Wed, 16 Nov 2022 12:56:49 GMT; Path=/; SameSite=None
       status: HTTP/1.1 200 OK
+      transfer-encoding: chunked
       x-api-pool: polite
       x-rate-limit-interval: 1s
       x-rate-limit-limit: '50'
       x-ratelimit-interval: 1s
       x-ratelimit-limit: '50'
     body:
-      encoding: UTF-8
+      encoding: ''
       file: no
       string: '{"status":"ok","message-type":"work-list","message-version":"1.0.0","message":{"facets":{},"total-results":0,"items":[],"items-per-page":20,"query":{"start-index":0,"search-terms":"adfaaf"}}}'
-  recorded_at: 2021-08-17 17:26:17 GMT
-  recorded_with: vcr/1.0.2, webmockr/0.8.0
+  recorded_at: 2022-11-09 12:57:28 GMT
+  recorded_with: vcr/1.1.0, webmockr/0.8.0

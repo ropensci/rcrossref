@@ -8,28 +8,30 @@ http_interactions:
     headers:
       Accept-Encoding: gzip, deflate
       Accept: application/json, text/xml, application/xml, */*
-      User-Agent: r-curl/4.3.2 crul/1.1.0 rOpenSci(rcrossref/1.1.0.94) (mailto:<crossref_email>)
-      X-USER-AGENT: r-curl/4.3.2 crul/1.1.0 rOpenSci(rcrossref/1.1.0.94) (mailto:<crossref_email>)
+      User-Agent: r-curl/4.3.2 crul/1.3 rOpenSci(rcrossref/1.1.0.99) (mailto:<crossref_email>)
+      X-USER-AGENT: r-curl/4.3.2 crul/1.3 rOpenSci(rcrossref/1.1.0.99) (mailto:<crossref_email>)
   response:
     status:
       status_code: '200'
       message: OK
       explanation: Request fulfilled, document follows
     headers:
-      access-control-allow-headers: X-Requested-With
+      access-control-allow-headers: X-Requested-With, Accept, Accept-Encoding, Accept-Charset,
+        Accept-Language, Accept-Ranges, Cache-Control
       access-control-allow-origin: '*'
+      access-control-expose-headers: Link
       connection: close
       content-encoding: gzip
-      content-length: '432'
+      content-length: '451'
       content-type: application/json;charset=utf-8
-      date: Tue, 17 Aug 2021 17:26:19 GMT
+      date: Wed, 09 Nov 2022 12:31:10 GMT
       permissions-policy: interest-cohort=()
       server: Jetty(9.4.40.v20210413)
       set-cookie:
-      - AWSALB=WiH6H/GTb5XoJV9ajGQbe1GD9Y6cTYhAA/1aKiCUohQfQqEd+Bjih3SoftJAMyScwWoc7ei6LuN4Bz/F8G33IU18OqWZSSr5QmNfHzRNdlOUs81tAQtCLJo8MlE4;
-        Expires=Tue, 24 Aug 2021 17:26:19 GMT; Path=/
-      - AWSALBCORS=WiH6H/GTb5XoJV9ajGQbe1GD9Y6cTYhAA/1aKiCUohQfQqEd+Bjih3SoftJAMyScwWoc7ei6LuN4Bz/F8G33IU18OqWZSSr5QmNfHzRNdlOUs81tAQtCLJo8MlE4;
-        Expires=Tue, 24 Aug 2021 17:26:19 GMT; Path=/; SameSite=None
+      - AWSALB=DM0LC682oT3YjPFasTibcz7HvvtrsIFLY9Bwk/oKMb9ggiKdmTrWBOZDpR2aThtdG047cnIVcUhVW3vhD7LCw5u9p7Wcm0tBdPprrCIZ7TxqVT1z9IHOgyvCWb5b;
+        Expires=Wed, 16 Nov 2022 12:31:10 GMT; Path=/
+      - AWSALBCORS=DM0LC682oT3YjPFasTibcz7HvvtrsIFLY9Bwk/oKMb9ggiKdmTrWBOZDpR2aThtdG047cnIVcUhVW3vhD7LCw5u9p7Wcm0tBdPprrCIZ7TxqVT1z9IHOgyvCWb5b;
+        Expires=Wed, 16 Nov 2022 12:31:10 GMT; Path=/; SameSite=None
       status: HTTP/1.1 200 OK
       vary: Accept, Accept-Encoding
       x-api-pool: polite
@@ -38,22 +40,22 @@ http_interactions:
       x-ratelimit-interval: 1s
       x-ratelimit-limit: '50'
     body:
-      encoding: UTF-8
+      encoding: ''
       file: no
-      string: '{"status":"ok","message-type":"type-list","message-version":"1.0.0","message":{"total-results":28,"items":[{"id":"book-section","label":"Book
-        Section"},{"id":"monograph","label":"Monograph"},{"id":"report","label":"Report"},{"id":"peer-review","label":"Peer
+      string: '{"status":"ok","message-type":"type-list","message-version":"1.0.0","message":{"total-results":30,"items":[{"id":"book-section","label":"Book
+        Section"},{"id":"monograph","label":"Monograph"},{"id":"report-component","label":"Report
+        Component"},{"id":"report","label":"Report"},{"id":"peer-review","label":"Peer
         Review"},{"id":"book-track","label":"Book Track"},{"id":"journal-article","label":"Journal
         Article"},{"id":"book-part","label":"Part"},{"id":"other","label":"Other"},{"id":"book","label":"Book"},{"id":"journal-volume","label":"Journal
         Volume"},{"id":"book-set","label":"Book Set"},{"id":"reference-entry","label":"Reference
         Entry"},{"id":"proceedings-article","label":"Proceedings Article"},{"id":"journal","label":"Journal"},{"id":"component","label":"Component"},{"id":"book-chapter","label":"Book
         Chapter"},{"id":"proceedings-series","label":"Proceedings Series"},{"id":"report-series","label":"Report
-        Series"},{"id":"proceedings","label":"Proceedings"},{"id":"standard","label":"Standard"},{"id":"reference-book","label":"Reference
+        Series"},{"id":"proceedings","label":"Proceedings"},{"id":"database","label":"Database"},{"id":"standard","label":"Standard"},{"id":"reference-book","label":"Reference
         Book"},{"id":"posted-content","label":"Posted Content"},{"id":"journal-issue","label":"Journal
-        Issue"},{"id":"dissertation","label":"Dissertation"},{"id":"dataset","label":"Dataset"},{"id":"book-series","label":"Book
-        Series"},{"id":"edited-book","label":"Edited Book"},{"id":"standard-series","label":"Standard
-        Series"}]}}'
-  recorded_at: 2021-08-17 17:26:20 GMT
-  recorded_with: vcr/1.0.2, webmockr/0.8.0
+        Issue"},{"id":"dissertation","label":"Dissertation"},{"id":"grant","label":"Grant"},{"id":"dataset","label":"Dataset"},{"id":"book-series","label":"Book
+        Series"},{"id":"edited-book","label":"Edited Book"}]}}'
+  recorded_at: 2022-11-09 12:31:11 GMT
+  recorded_with: vcr/1.1.0, webmockr/0.8.0
 - request:
     method: get
     uri: https://api.crossref.org/types/monograph
@@ -63,28 +65,30 @@ http_interactions:
     headers:
       Accept-Encoding: gzip, deflate
       Accept: application/json, text/xml, application/xml, */*
-      User-Agent: r-curl/4.3.2 crul/1.1.0 rOpenSci(rcrossref/1.1.0.94) (mailto:<crossref_email>)
-      X-USER-AGENT: r-curl/4.3.2 crul/1.1.0 rOpenSci(rcrossref/1.1.0.94) (mailto:<crossref_email>)
+      User-Agent: r-curl/4.3.2 crul/1.3 rOpenSci(rcrossref/1.1.0.99) (mailto:<crossref_email>)
+      X-USER-AGENT: r-curl/4.3.2 crul/1.3 rOpenSci(rcrossref/1.1.0.99) (mailto:<crossref_email>)
   response:
     status:
       status_code: '200'
       message: OK
       explanation: Request fulfilled, document follows
     headers:
-      access-control-allow-headers: X-Requested-With
+      access-control-allow-headers: X-Requested-With, Accept, Accept-Encoding, Accept-Charset,
+        Accept-Language, Accept-Ranges, Cache-Control
       access-control-allow-origin: '*'
+      access-control-expose-headers: Link
       connection: close
-      content-length: '112'
       content-type: application/json;charset=utf-8
-      date: Tue, 17 Aug 2021 17:26:20 GMT
+      date: Wed, 09 Nov 2022 12:31:10 GMT
       permissions-policy: interest-cohort=()
       server: Jetty(9.4.40.v20210413)
       set-cookie:
-      - AWSALB=k60tkUg4ptR02fiGU3v5BcY+myqA9HglgCWQCw5fU9EanapQ03+eau/TjrzStMjftgXIoG0HoV6aUSuecjMyKp36Nxq0sdg+0IIKNnmYfeoXHtUeUOv4gFPUgbla;
-        Expires=Tue, 24 Aug 2021 17:26:20 GMT; Path=/
-      - AWSALBCORS=k60tkUg4ptR02fiGU3v5BcY+myqA9HglgCWQCw5fU9EanapQ03+eau/TjrzStMjftgXIoG0HoV6aUSuecjMyKp36Nxq0sdg+0IIKNnmYfeoXHtUeUOv4gFPUgbla;
-        Expires=Tue, 24 Aug 2021 17:26:20 GMT; Path=/; SameSite=None
+      - AWSALB=sX2+mpRnVf11wEXJJxmpSuBekoYgm0R/Eu4W4+WeusgrwPdT+LUIdf9KtjJyj6JVru2JF5so4iZNN3/9DhOVep4iBiz0d6yBqen7okQQTjSWcGiRyHNNH9DnbBfT;
+        Expires=Wed, 16 Nov 2022 12:31:10 GMT; Path=/
+      - AWSALBCORS=sX2+mpRnVf11wEXJJxmpSuBekoYgm0R/Eu4W4+WeusgrwPdT+LUIdf9KtjJyj6JVru2JF5so4iZNN3/9DhOVep4iBiz0d6yBqen7okQQTjSWcGiRyHNNH9DnbBfT;
+        Expires=Wed, 16 Nov 2022 12:31:10 GMT; Path=/; SameSite=None
       status: HTTP/1.1 200 OK
+      transfer-encoding: chunked
       vary: Accept
       x-api-pool: polite
       x-rate-limit-interval: 1s
@@ -92,8 +96,8 @@ http_interactions:
       x-ratelimit-interval: 1s
       x-ratelimit-limit: '50'
     body:
-      encoding: UTF-8
+      encoding: ''
       file: no
       string: '{"status":"ok","message-type":"type","message-version":"1.0.0","message":{"id":"monograph","label":"Monograph"}}'
-  recorded_at: 2021-08-17 17:26:20 GMT
-  recorded_with: vcr/1.0.2, webmockr/0.8.0
+  recorded_at: 2022-11-09 12:31:11 GMT
+  recorded_with: vcr/1.1.0, webmockr/0.8.0

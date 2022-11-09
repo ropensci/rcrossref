@@ -8,8 +8,8 @@ http_interactions:
     headers:
       Accept-Encoding: gzip, deflate
       Accept: application/json, text/xml, application/xml, */*
-      User-Agent: r-curl/4.3.2 crul/1.1.0 rOpenSci(rcrossref/1.1.0.94) (mailto:<crossref_email>)
-      X-USER-AGENT: r-curl/4.3.2 crul/1.1.0 rOpenSci(rcrossref/1.1.0.94) (mailto:<crossref_email>)
+      User-Agent: r-curl/4.3.2 crul/1.3 rOpenSci(rcrossref/1.1.0.99) (mailto:<crossref_email>)
+      X-USER-AGENT: r-curl/4.3.2 crul/1.3 rOpenSci(rcrossref/1.1.0.99) (mailto:<crossref_email>)
   response:
     status:
       status_code: '200'
@@ -22,14 +22,14 @@ http_interactions:
       content-type: text/xml;charset=UTF-8
       content-language: en-US
       transfer-encoding: chunked
-      date: Tue, 17 Aug 2021 17:22:21 GMT
+      date: Wed, 09 Nov 2022 09:22:02 GMT
       permissions-policy: interest-cohort=()
       connection: close
     body:
-      encoding: UTF-8
+      encoding: ''
       file: no
       string: |-
         <?xml version="1.0" encoding="UTF-8"?>
         <crossref_result xmlns="http://www.crossref.org/qrschema/2.0" version="2.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.crossref.org/qrschema/2.0 https://www.crossref.org/schema/crossref_query_output2.0.xsd"><query_result><head><doi_batch_id>none</doi_batch_id></head><body><query status="unresolved" fl_count="0"><doi>10.1371/journal.pone.004</doi></query></body></query_result></crossref_result>
-  recorded_at: 2021-08-17 17:22:21 GMT
-  recorded_with: vcr/1.0.2, webmockr/0.8.0
+  recorded_at: 2022-11-09 09:22:03 GMT
+  recorded_with: vcr/1.1.0, webmockr/0.8.0

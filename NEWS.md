@@ -113,7 +113,7 @@ rcrossref 0.7.0
 ### NEW FEATURES
 
 * All text mining functionality moved into a new package: `crminer`
-<https://github.com/ropensci/crminer> . Functions that did
+<https://github.com/ropensci-archive/crminer> . Functions that did
 text mining stuff now defunct, see `?rcrossref-defunct` (#122)
 * All Crossref API requests now using `https` instead of `http` (#133)
 
