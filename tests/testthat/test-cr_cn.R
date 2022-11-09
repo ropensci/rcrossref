@@ -79,10 +79,6 @@ test_that("cr_cn works with different URLs", {
   vcr::use_cassette("cr_cn_different_base_urls", {
 
     expect_match(
-      cr_cn("10.1126/science.169.3946.635", "text", url = "https://data.datacite.org"),
-      "Frank"
-    )
-    expect_match(
       cr_cn("10.1126/science.169.3946.635", "text", url = "http://dx.doi.org"),
       "Frank"
     )

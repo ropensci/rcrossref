@@ -8,28 +8,30 @@ http_interactions:
     headers:
       Accept-Encoding: gzip, deflate
       Accept: application/json, text/xml, application/xml, */*
-      User-Agent: r-curl/4.3.2 crul/1.1.0 rOpenSci(rcrossref/1.1.0.94) (mailto:<crossref_email>)
-      X-USER-AGENT: r-curl/4.3.2 crul/1.1.0 rOpenSci(rcrossref/1.1.0.94) (mailto:<crossref_email>)
+      User-Agent: r-curl/4.3.2 crul/1.3 rOpenSci(rcrossref/1.1.0.99) (mailto:<crossref_email>)
+      X-USER-AGENT: r-curl/4.3.2 crul/1.3 rOpenSci(rcrossref/1.1.0.99) (mailto:<crossref_email>)
   response:
     status:
       status_code: '200'
       message: OK
       explanation: Request fulfilled, document follows
     headers:
-      access-control-allow-headers: X-Requested-With
+      access-control-allow-headers: X-Requested-With, Accept, Accept-Encoding, Accept-Charset,
+        Accept-Language, Accept-Ranges, Cache-Control
       access-control-allow-origin: '*'
+      access-control-expose-headers: Link
       connection: close
-      content-length: '150'
       content-type: application/json;charset=utf-8
-      date: Tue, 17 Aug 2021 17:22:32 GMT
+      date: Wed, 09 Nov 2022 09:11:11 GMT
       permissions-policy: interest-cohort=()
       server: Jetty(9.4.40.v20210413)
       set-cookie:
-      - AWSALB=cekiZsAezUKgkNn0g8Ww63LN8VrwysHBuJ/SMVFuVy9Oq2c+JcZFX3PtQROo3zjEAZuKUQrhmca/Jf2m/ZYWzTk1Ioond6+Zzhu3r7fiKSq3E36mNih9xqGJUmVZ;
-        Expires=Tue, 24 Aug 2021 17:22:32 GMT; Path=/
-      - AWSALBCORS=cekiZsAezUKgkNn0g8Ww63LN8VrwysHBuJ/SMVFuVy9Oq2c+JcZFX3PtQROo3zjEAZuKUQrhmca/Jf2m/ZYWzTk1Ioond6+Zzhu3r7fiKSq3E36mNih9xqGJUmVZ;
-        Expires=Tue, 24 Aug 2021 17:22:32 GMT; Path=/; SameSite=None
+      - AWSALB=wgspuz7UwK2+z1EZN0rAuc3fr07Pz4C55sHK/gThx+XquCEemm8AEQRHtJbXC1BfooZafIvpDKAs/3HrbdKW+vE/APjbPH4limsGFcGZ5PAo6PUhKJJZQqZbg1bd;
+        Expires=Wed, 16 Nov 2022 09:11:11 GMT; Path=/
+      - AWSALBCORS=wgspuz7UwK2+z1EZN0rAuc3fr07Pz4C55sHK/gThx+XquCEemm8AEQRHtJbXC1BfooZafIvpDKAs/3HrbdKW+vE/APjbPH4limsGFcGZ5PAo6PUhKJJZQqZbg1bd;
+        Expires=Wed, 16 Nov 2022 09:11:11 GMT; Path=/; SameSite=None
       status: HTTP/1.1 200 OK
+      transfer-encoding: chunked
       vary: Accept
       x-api-pool: polite
       x-rate-limit-interval: 1s
@@ -37,11 +39,104 @@ http_interactions:
       x-ratelimit-interval: 1s
       x-ratelimit-limit: '50'
     body:
-      encoding: UTF-8
+      encoding: ''
       file: no
-      string: '{"status":"ok","message-type":"work-agency","message-version":"1.0.0","message":{"DOI":"10.3233\/isu-150780","agency":{"id":"medra","label":"mEDRA"}}}'
-  recorded_at: 2021-08-17 17:22:33 GMT
-  recorded_with: vcr/1.0.2, webmockr/0.8.0
+      string: '{"status":"ok","message-type":"work-agency","message-version":"1.0.0","message":{"DOI":"10.3233\/isu-150780","agency":{"id":"crossref","label":"Crossref"}}}'
+  recorded_at: 2022-11-09 09:11:13 GMT
+  recorded_with: vcr/1.1.0, webmockr/0.8.0
+- request:
+    method: get
+    uri: https://api.crossref.org/v1/works/10.3233%2FISU-150780/transform
+    body:
+      encoding: ''
+      string: ''
+    headers:
+      Accept-Encoding: gzip, deflate
+      User-Agent: r-curl/4.3.2 crul/1.3 rOpenSci(rcrossref/1.1.0.99) (mailto:<crossref_email>)
+      X-USER-AGENT: r-curl/4.3.2 crul/1.3 rOpenSci(rcrossref/1.1.0.99) (mailto:<crossref_email>)
+      Accept: application/vnd.crossref.unixsd+xml
+  response:
+    status:
+      status_code: '200'
+      message: OK
+      explanation: Request fulfilled, document follows
+    headers:
+      access-control-allow-headers: X-Requested-With, Accept, Accept-Encoding, Accept-Charset,
+        Accept-Language, Accept-Ranges, Cache-Control
+      access-control-allow-origin: '*'
+      access-control-expose-headers: Link
+      connection: close
+      content-encoding: gzip
+      content-length: '1219'
+      content-type: application/vnd.crossref.unixsd+xml
+      date: Wed, 09 Nov 2022 09:11:12 GMT
+      link: <http://dx.doi.org/10.3233/isu-150780>; rel="canonical", <https://content.iospress.com/download?id=10.3233/ISU-150780>;
+        version="vor"; rel="item", <https://creativecommons.org/licenses/by-nc/4.0/>;
+        rel="license"
+      permissions-policy: interest-cohort=()
+      server: Jetty(9.4.40.v20210413)
+      set-cookie:
+      - AWSALB=Wp6nsoCa+9hsfqv/vMs5h2EBS2CIpQ0RBUxQoeZNYl1HZ9u8k79UhRrfQISwoOPkOHiid6LwIhYZnlBgaCwwwYh9ACj28aqNpc520ptoFB90QP9Fa+FonD1nJir8;
+        Expires=Wed, 16 Nov 2022 09:11:12 GMT; Path=/
+      - AWSALBCORS=Wp6nsoCa+9hsfqv/vMs5h2EBS2CIpQ0RBUxQoeZNYl1HZ9u8k79UhRrfQISwoOPkOHiid6LwIhYZnlBgaCwwwYh9ACj28aqNpc520ptoFB90QP9Fa+FonD1nJir8;
+        Expires=Wed, 16 Nov 2022 09:11:12 GMT; Path=/; SameSite=None
+      status: HTTP/1.1 200 OK
+      vary: Accept, Accept-Encoding
+      x-api-pool: polite
+      x-rate-limit-interval: 1s
+      x-rate-limit-limit: '50'
+      x-ratelimit-interval: 1s
+      x-ratelimit-limit: '50'
+    body:
+      encoding: ''
+      file: no
+      string: "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<crossref_result xmlns=\"http://www.crossref.org/qrschema/3.0\"
+        version=\"3.0\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:schemaLocation=\"http://www.crossref.org/qrschema/3.0
+        http://www.crossref.org/schemas/crossref_query_output3.0.xsd\">\r\n  <query_result>\r\n
+        \   <head>\r\n      <doi_batch_id>none</doi_batch_id>\r\n    </head>\r\n    <body>\r\n
+        \     <query status=\"resolved\">\r\n        <doi type=\"journal_article\">10.3233/ISU-150780</doi>\r\n
+        \       <crm-item name=\"publisher-name\" type=\"string\">IOS Press</crm-item>\r\n
+        \       <crm-item name=\"prefix-name\" type=\"string\">IOS Press</crm-item>\r\n
+        \       <crm-item name=\"member-id\" type=\"number\">7437</crm-item>\r\n        <crm-item
+        name=\"citation-id\" type=\"number\">79609286</crm-item>\r\n        <crm-item
+        name=\"journal-id\" type=\"number\">290846</crm-item>\r\n        <crm-item
+        name=\"deposit-timestamp\" type=\"number\">20191130220031000</crm-item>\r\n
+        \       <crm-item name=\"owner-prefix\" type=\"string\">10.3233</crm-item>\r\n
+        \       <crm-item name=\"last-update\" type=\"date\">2019-12-03T05:36:56Z</crm-item>\r\n
+        \       <crm-item name=\"created\" type=\"date\">2015-12-23T09:22:47Z</crm-item>\r\n
+        \       <crm-item name=\"citedby-count\" type=\"number\">0</crm-item>\r\n
+        \       <doi_record>\r\n          <crossref xmlns=\"http://www.crossref.org/xschema/1.1\"
+        xsi:schemaLocation=\"http://www.crossref.org/xschema/1.1 http://doi.crossref.org/schemas/unixref1.1.xsd\">\r\n
+        \           <journal>\r\n              <journal_metadata>\r\n                <full_title>Information
+        Services &amp; Use</full_title>\r\n                <abbrev_title>ISU</abbrev_title>\r\n
+        \               <issn media_type=\"electronic\">18758789</issn>\r\n                <issn
+        media_type=\"print\">01675265</issn>\r\n              </journal_metadata>\r\n
+        \             <journal_issue>\r\n                <publication_date>\r\n                  <month>12</month>\r\n
+        \                 <day>18</day>\r\n                  <year>2015</year>\r\n
+        \               </publication_date>\r\n                <journal_volume>\r\n
+        \                 <volume>35</volume>\r\n                </journal_volume>\r\n
+        \               <issue>3</issue>\r\n              </journal_issue>\r\n              <journal_article>\r\n
+        \               <titles>\r\n                  <title>Data accessibility and
+        reproducibility: Moving to transparent publishing in the biosciences</title>\r\n
+        \               </titles>\r\n                <contributors>\r\n                  <person_name
+        contributor_role=\"author\" sequence=\"first\">\r\n                    <given_name>Bernd</given_name>\r\n
+        \                   <surname>Pulverer</surname>\r\n                    <affiliation>E-mail: bernd.pulverer@embo.org</affiliation>\r\n
+        \                 </person_name>\r\n                </contributors>\r\n                <publication_date>\r\n
+        \                 <month>12</month>\r\n                  <day>18</day>\r\n
+        \                 <year>2015</year>\r\n                </publication_date>\r\n
+        \               <pages>\r\n                  <first_page>185</first_page>\r\n
+        \                 <last_page>188</last_page>\r\n                </pages>\r\n
+        \               <ai:program xmlns:ai=\"http://www.crossref.org/AccessIndicators.xsd\"
+        name=\"AccessIndicators\">\r\n                  <ai:free_to_read />\r\n                  <ai:license_ref>https://creativecommons.org/licenses/by-nc/4.0/</ai:license_ref>\r\n
+        \               </ai:program>\r\n                <doi_data>\r\n                  <doi>10.3233/ISU-150780</doi>\r\n
+        \                 <resource>https://www.medra.org/servlet/aliasResolver?alias=iospress&amp;doi=10.3233/ISU-150780</resource>\r\n
+        \                 <collection property=\"crawler-based\">\r\n                    <item
+        crawler=\"iParadigms\">\r\n                      <resource>https://content.iospress.com/download?id=10.3233/ISU-150780</resource>\r\n
+        \                   </item>\r\n                  </collection>\r\n                </doi_data>\r\n
+        \             </journal_article>\r\n            </journal>\r\n          </crossref>\r\n
+        \       </doi_record>\r\n      </query>\r\n    </body>\r\n  </query_result>\r\n</crossref_result>"
+  recorded_at: 2022-11-09 09:11:13 GMT
+  recorded_with: vcr/1.1.0, webmockr/0.8.0
 - request:
     method: get
     uri: https://api.crossref.org/works/10.1126/science.169.3946.635/agency
@@ -51,28 +146,30 @@ http_interactions:
     headers:
       Accept-Encoding: gzip, deflate
       Accept: application/json, text/xml, application/xml, */*
-      User-Agent: r-curl/4.3.2 crul/1.1.0 rOpenSci(rcrossref/1.1.0.94) (mailto:<crossref_email>)
-      X-USER-AGENT: r-curl/4.3.2 crul/1.1.0 rOpenSci(rcrossref/1.1.0.94) (mailto:<crossref_email>)
+      User-Agent: r-curl/4.3.2 crul/1.3 rOpenSci(rcrossref/1.1.0.99) (mailto:<crossref_email>)
+      X-USER-AGENT: r-curl/4.3.2 crul/1.3 rOpenSci(rcrossref/1.1.0.99) (mailto:<crossref_email>)
   response:
     status:
       status_code: '200'
       message: OK
       explanation: Request fulfilled, document follows
     headers:
-      access-control-allow-headers: X-Requested-With
+      access-control-allow-headers: X-Requested-With, Accept, Accept-Encoding, Accept-Charset,
+        Accept-Language, Accept-Ranges, Cache-Control
       access-control-allow-origin: '*'
+      access-control-expose-headers: Link
       connection: close
-      content-length: '166'
       content-type: application/json;charset=utf-8
-      date: Tue, 17 Aug 2021 17:22:33 GMT
+      date: Wed, 09 Nov 2022 09:11:13 GMT
       permissions-policy: interest-cohort=()
       server: Jetty(9.4.40.v20210413)
       set-cookie:
-      - AWSALB=QQT+Rx5xyLK2wAOg1oyTcXqHfPNsGZ1wCObpGwQ7/37paJqWyBhZi4nIKPCbgvLF2skbq6OVmVmCX6xugAzhy3y4Yme5DMqds4a1kDa+9Yj+m/A2LABLgHaBpXf/;
-        Expires=Tue, 24 Aug 2021 17:22:33 GMT; Path=/
-      - AWSALBCORS=QQT+Rx5xyLK2wAOg1oyTcXqHfPNsGZ1wCObpGwQ7/37paJqWyBhZi4nIKPCbgvLF2skbq6OVmVmCX6xugAzhy3y4Yme5DMqds4a1kDa+9Yj+m/A2LABLgHaBpXf/;
-        Expires=Tue, 24 Aug 2021 17:22:33 GMT; Path=/; SameSite=None
+      - AWSALB=agwZ0YL7VkSFTEslPxvBBEQ5F6KgsxBGeCApWqElJAtvxuw4gvFvIOs8Kxudwm6fDoX6FX9BGZLtmB75/33Z+WkCS8xp1jZvXjDRp34A9+Le1BKBEWQdBaqipEqQ;
+        Expires=Wed, 16 Nov 2022 09:11:13 GMT; Path=/
+      - AWSALBCORS=agwZ0YL7VkSFTEslPxvBBEQ5F6KgsxBGeCApWqElJAtvxuw4gvFvIOs8Kxudwm6fDoX6FX9BGZLtmB75/33Z+WkCS8xp1jZvXjDRp34A9+Le1BKBEWQdBaqipEqQ;
+        Expires=Wed, 16 Nov 2022 09:11:13 GMT; Path=/; SameSite=None
       status: HTTP/1.1 200 OK
+      transfer-encoding: chunked
       vary: Accept
       x-api-pool: polite
       x-rate-limit-interval: 1s
@@ -80,8 +177,8 @@ http_interactions:
       x-ratelimit-interval: 1s
       x-ratelimit-limit: '50'
     body:
-      encoding: UTF-8
+      encoding: ''
       file: no
       string: '{"status":"ok","message-type":"work-agency","message-version":"1.0.0","message":{"DOI":"10.1126\/science.169.3946.635","agency":{"id":"crossref","label":"Crossref"}}}'
-  recorded_at: 2021-08-17 17:22:33 GMT
-  recorded_with: vcr/1.0.2, webmockr/0.8.0
+  recorded_at: 2022-11-09 09:11:13 GMT
+  recorded_with: vcr/1.1.0, webmockr/0.8.0
