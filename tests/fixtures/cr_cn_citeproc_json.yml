@@ -22,14 +22,14 @@ http_interactions:
       access-control-expose-headers: Link
       connection: close
       content-type: application/json;charset=utf-8
-      date: Wed, 09 Nov 2022 09:10:59 GMT
+      date: Wed, 09 Nov 2022 09:22:04 GMT
       permissions-policy: interest-cohort=()
       server: Jetty(9.4.40.v20210413)
       set-cookie:
-      - AWSALB=OepsYekawohBaPvWEDPItF8h0Nyweh+mZW81siE7RaHMsRP6A9XuIVzjFPilPY42MhUWRF1+GRj4ZfmjyrEvXBR4dppUOb3p1D6lcg++VfZjwHw3ma7H7gfn18e7;
-        Expires=Wed, 16 Nov 2022 09:10:59 GMT; Path=/
-      - AWSALBCORS=OepsYekawohBaPvWEDPItF8h0Nyweh+mZW81siE7RaHMsRP6A9XuIVzjFPilPY42MhUWRF1+GRj4ZfmjyrEvXBR4dppUOb3p1D6lcg++VfZjwHw3ma7H7gfn18e7;
-        Expires=Wed, 16 Nov 2022 09:10:59 GMT; Path=/; SameSite=None
+      - AWSALB=bygVmiXxb+heYE833TcgyUf9oNRw5yAKYnoCSz37y3cIFoV8iLkOpFShTORlqQ34EA/Apm+6hbANF86g4XucNny6DRNfK0tfHZZIYZ3TZYrgtC3zcvtiIsk9v2bM;
+        Expires=Wed, 16 Nov 2022 09:22:04 GMT; Path=/
+      - AWSALBCORS=bygVmiXxb+heYE833TcgyUf9oNRw5yAKYnoCSz37y3cIFoV8iLkOpFShTORlqQ34EA/Apm+6hbANF86g4XucNny6DRNfK0tfHZZIYZ3TZYrgtC3zcvtiIsk9v2bM;
+        Expires=Wed, 16 Nov 2022 09:22:04 GMT; Path=/; SameSite=None
       status: HTTP/1.1 200 OK
       transfer-encoding: chunked
       vary: Accept
@@ -42,7 +42,7 @@ http_interactions:
       encoding: ''
       file: no
       string: '{"status":"ok","message-type":"work-agency","message-version":"1.0.0","message":{"DOI":"10.1126\/science.169.3946.635","agency":{"id":"crossref","label":"Crossref"}}}'
-  recorded_at: 2022-11-09 09:11:00 GMT
+  recorded_at: 2022-11-09 09:22:14 GMT
   recorded_with: vcr/1.1.0, webmockr/0.8.0
 - request:
     method: get
@@ -68,16 +68,16 @@ http_interactions:
       connection: close
       content-encoding: gzip
       content-length: '5348'
-      date: Wed, 09 Nov 2022 09:11:00 GMT
+      date: Wed, 09 Nov 2022 09:22:14 GMT
       link: <http://dx.doi.org/10.1126/science.169.3946.635>; rel="canonical", <https://syndication.highwire.org/content/doi/10.1126/science.169.3946.635>;
         version="vor"; rel="item"
       permissions-policy: interest-cohort=()
       server: Jetty(9.4.40.v20210413)
       set-cookie:
-      - AWSALB=mlN4LEtVP1ZAnjTrViHQYBop4G2rOjbXktZBx6hVn3BWBZ11Tf1AfE0irON8G5Dn9l+xCyUNX4SypXckotZx2eS8Rcwoh2JeVVJdP3pqxmMBm9JHyq42UPaYCODG;
-        Expires=Wed, 16 Nov 2022 09:11:00 GMT; Path=/
-      - AWSALBCORS=mlN4LEtVP1ZAnjTrViHQYBop4G2rOjbXktZBx6hVn3BWBZ11Tf1AfE0irON8G5Dn9l+xCyUNX4SypXckotZx2eS8Rcwoh2JeVVJdP3pqxmMBm9JHyq42UPaYCODG;
-        Expires=Wed, 16 Nov 2022 09:11:00 GMT; Path=/; SameSite=None
+      - AWSALB=nGGnI+1ocAN5vOqH0H364dM/dUrK2c+udWgliHkgxjlc6mKzCqtUMspPcYQX6q4rSQr+8jkjnv729FlXiobyM91wAyzXG4wKhZsie6HCXQOred5/SaAMNlH+CQEX;
+        Expires=Wed, 16 Nov 2022 09:22:05 GMT; Path=/
+      - AWSALBCORS=nGGnI+1ocAN5vOqH0H364dM/dUrK2c+udWgliHkgxjlc6mKzCqtUMspPcYQX6q4rSQr+8jkjnv729FlXiobyM91wAyzXG4wKhZsie6HCXQOred5/SaAMNlH+CQEX;
+        Expires=Wed, 16 Nov 2022 09:22:05 GMT; Path=/; SameSite=None
       status: HTTP/1.1 200 OK
       vary: Accept-Encoding
       x-api-pool: polite
@@ -244,5 +244,5 @@ http_interactions:
         ANGEWANDTE CHEMIE-INTERNATIONAL EDITION 5: 106 (1966).","journal-title":"ANGEWANDTE
         CHEMIE-INTERNATIONAL EDITION"}],"container-title":"Science","original-title":[],"language":"en","link":[{"URL":"https:\/\/syndication.highwire.org\/content\/doi\/10.1126\/science.169.3946.635","content-type":"unspecified","content-version":"vor","intended-application":"similarity-checking"}],"deposited":{"date-parts":[[2021,10,23]],"date-time":"2021-10-23T19:24:14Z","timestamp":1635017054000},"score":1,"resource":{"primary":{"URL":"https:\/\/www.science.org\/doi\/10.1126\/science.169.3946.635"}},"subtitle":["New
         data and interpretations are yielding new insights into this fascinating substance."],"short-title":[],"issued":{"date-parts":[[1970,8,14]]},"references-count":76,"journal-issue":{"issue":"3946","published-print":{"date-parts":[[1970,8,14]]}},"alternative-id":["10.1126\/science.169.3946.635"],"URL":"http:\/\/dx.doi.org\/10.1126\/science.169.3946.635","relation":{},"ISSN":["0036-8075","1095-9203"],"subject":["Multidisciplinary"],"container-title-short":"Science","published":{"date-parts":[[1970,8,14]]}}'
-  recorded_at: 2022-11-09 09:11:00 GMT
+  recorded_at: 2022-11-09 09:22:14 GMT
   recorded_with: vcr/1.1.0, webmockr/0.8.0

@@ -22,14 +22,14 @@ http_interactions:
       access-control-expose-headers: Link
       connection: close
       content-type: application/json;charset=utf-8
-      date: Wed, 09 Nov 2022 09:11:13 GMT
+      date: Wed, 09 Nov 2022 09:23:20 GMT
       permissions-policy: interest-cohort=()
       server: Jetty(9.4.40.v20210413)
       set-cookie:
-      - AWSALB=XWzNBTH1yryOuqg/V8IzEoxAXYXK/PUY53WhMJJ4wFi/CvhHHEWegfM29OaBa20GjuUYhJrjBSgoTPwqfvAEbNuoR8vRxETHipdeyUI7AzCQTDh7hLiByvEvGDqn;
-        Expires=Wed, 16 Nov 2022 09:11:13 GMT; Path=/
-      - AWSALBCORS=XWzNBTH1yryOuqg/V8IzEoxAXYXK/PUY53WhMJJ4wFi/CvhHHEWegfM29OaBa20GjuUYhJrjBSgoTPwqfvAEbNuoR8vRxETHipdeyUI7AzCQTDh7hLiByvEvGDqn;
-        Expires=Wed, 16 Nov 2022 09:11:13 GMT; Path=/; SameSite=None
+      - AWSALB=UReRIEp07WaA0C0RUiBqrzHLX/uYZYEL2/TNac+xJzHG58Ed1cD8M7YlqlE76sTxnEfx+/DCnU/iXP4jpHZTcqKgKlCJ03TyAerwpQt2TizF+9Cz9K4dZSu51IQo;
+        Expires=Wed, 16 Nov 2022 09:23:19 GMT; Path=/
+      - AWSALBCORS=UReRIEp07WaA0C0RUiBqrzHLX/uYZYEL2/TNac+xJzHG58Ed1cD8M7YlqlE76sTxnEfx+/DCnU/iXP4jpHZTcqKgKlCJ03TyAerwpQt2TizF+9Cz9K4dZSu51IQo;
+        Expires=Wed, 16 Nov 2022 09:23:19 GMT; Path=/; SameSite=None
       status: HTTP/1.1 200 OK
       transfer-encoding: chunked
       vary: Accept
@@ -45,7 +45,7 @@ http_interactions:
         eyJzdGF0dXMiOiJvayIsIm1lc3NhZ2UtdHlwZSI6IndvcmstYWdlbmN5IiwibWVzc2FnZS12ZXJzaW9u
         IjoiMS4wLjAiLCJtZXNzYWdlIjp7IkRPSSI6IjEwLjExMjZcL3NjaWVuY2UuMTY5LjM5NDYuNjM1Iiwi
         YWdlbmN5Ijp7ImlkIjoiY3Jvc3NyZWYiLCJsYWJlbCI6IkNyb3NzcmVmIn19fQ==
-  recorded_at: 2022-11-09 09:11:30 GMT
+  recorded_at: 2022-11-09 09:23:45 GMT
   recorded_with: vcr/1.1.0, webmockr/0.8.0
 - request:
     method: get
@@ -70,16 +70,16 @@ http_interactions:
       access-control-expose-headers: Link
       connection: close
       content-type: text/x-bibliography
-      date: Wed, 09 Nov 2022 09:11:18 GMT
+      date: Wed, 09 Nov 2022 09:23:24 GMT
       link: <http://dx.doi.org/10.1126/science.169.3946.635>; rel="canonical", <https://syndication.highwire.org/content/doi/10.1126/science.169.3946.635>;
         version="vor"; rel="item"
       permissions-policy: interest-cohort=()
       server: Jetty(9.4.40.v20210413)
       set-cookie:
-      - AWSALB=k4SbbJctd1NtjtuaH6cmfQjiN40Qfqg4QszoIGgxT1P44R7QK86+39QYfi2pFVzR7DBvtcoRxFTzl6mLtlgYGTG2/IF96kApeT3FGmbInEvhWgvi3Z0HpThKQv/8;
-        Expires=Wed, 16 Nov 2022 09:11:14 GMT; Path=/
-      - AWSALBCORS=k4SbbJctd1NtjtuaH6cmfQjiN40Qfqg4QszoIGgxT1P44R7QK86+39QYfi2pFVzR7DBvtcoRxFTzl6mLtlgYGTG2/IF96kApeT3FGmbInEvhWgvi3Z0HpThKQv/8;
-        Expires=Wed, 16 Nov 2022 09:11:14 GMT; Path=/; SameSite=None
+      - AWSALB=+BB4aW6otzu/DMrw5b3BQpI7iUUKi//K7FZgXOx8Mevkjj3rFFDVKl0NMjJ51lmqfbGxm+h3GJogl2b2vblJHR6NTfXinLoHpxNzupRzVncX/+4eX1/Dir/BW7Kz;
+        Expires=Wed, 16 Nov 2022 09:23:22 GMT; Path=/
+      - AWSALBCORS=+BB4aW6otzu/DMrw5b3BQpI7iUUKi//K7FZgXOx8Mevkjj3rFFDVKl0NMjJ51lmqfbGxm+h3GJogl2b2vblJHR6NTfXinLoHpxNzupRzVncX/+4eX1/Dir/BW7Kz;
+        Expires=Wed, 16 Nov 2022 09:23:22 GMT; Path=/; SameSite=None
       status: HTTP/1.1 200 OK
       transfer-encoding: chunked
       vary: Accept
@@ -95,7 +95,7 @@ http_interactions:
         RnJhbmssIEguIFMuICgxOTcwKS4gVGhlIFN0cnVjdHVyZSBvZiBPcmRpbmFyeSBXYXRlci4gU2NpZW5j
         ZSwgMTY5KDM5NDYpLCA2MzXigJM2NDEuIGh0dHBzOi8vZG9pLm9yZy8xMC4xMTI2L3NjaWVuY2UuMTY5
         LjM5NDYuNjM1Cg==
-  recorded_at: 2022-11-09 09:11:30 GMT
+  recorded_at: 2022-11-09 09:23:45 GMT
   recorded_with: vcr/1.1.0, webmockr/0.8.0
 - request:
     method: get
@@ -120,14 +120,14 @@ http_interactions:
       access-control-expose-headers: Link
       connection: close
       content-type: application/json;charset=utf-8
-      date: Wed, 09 Nov 2022 09:11:19 GMT
+      date: Wed, 09 Nov 2022 09:23:25 GMT
       permissions-policy: interest-cohort=()
       server: Jetty(9.4.40.v20210413)
       set-cookie:
-      - AWSALB=R21hOzvh8k7WHur43su1rnVeu9wQTqEGBaBP8ZwiMGZ39yKXPuLDlekwsWs6ug2ygZAe4MIOQdAEt2CLAgzK+pxZ6DgO8u1ky/XcrcjZkCqAKfh+hBPhwoIpTGjo;
-        Expires=Wed, 16 Nov 2022 09:11:19 GMT; Path=/
-      - AWSALBCORS=R21hOzvh8k7WHur43su1rnVeu9wQTqEGBaBP8ZwiMGZ39yKXPuLDlekwsWs6ug2ygZAe4MIOQdAEt2CLAgzK+pxZ6DgO8u1ky/XcrcjZkCqAKfh+hBPhwoIpTGjo;
-        Expires=Wed, 16 Nov 2022 09:11:19 GMT; Path=/; SameSite=None
+      - AWSALB=ExIf/2JVqKol6eie+aiv9Kxdtz4g7T8qDVpKTAiFF8n9qvK1+/LkXKPV+ImyvuLDwASd8z9xIeVokkwE5WW8tOJ/sPgl3jRSDI7xDCM+ryYv7R3MHqcvICyKb/w3;
+        Expires=Wed, 16 Nov 2022 09:23:25 GMT; Path=/
+      - AWSALBCORS=ExIf/2JVqKol6eie+aiv9Kxdtz4g7T8qDVpKTAiFF8n9qvK1+/LkXKPV+ImyvuLDwASd8z9xIeVokkwE5WW8tOJ/sPgl3jRSDI7xDCM+ryYv7R3MHqcvICyKb/w3;
+        Expires=Wed, 16 Nov 2022 09:23:25 GMT; Path=/; SameSite=None
       status: HTTP/1.1 200 OK
       transfer-encoding: chunked
       vary: Accept
@@ -143,7 +143,7 @@ http_interactions:
         eyJzdGF0dXMiOiJvayIsIm1lc3NhZ2UtdHlwZSI6IndvcmstYWdlbmN5IiwibWVzc2FnZS12ZXJzaW9u
         IjoiMS4wLjAiLCJtZXNzYWdlIjp7IkRPSSI6IjEwLjExMjZcL3NjaWVuY2UuMTY5LjM5NDYuNjM1Iiwi
         YWdlbmN5Ijp7ImlkIjoiY3Jvc3NyZWYiLCJsYWJlbCI6IkNyb3NzcmVmIn19fQ==
-  recorded_at: 2022-11-09 09:11:30 GMT
+  recorded_at: 2022-11-09 09:23:45 GMT
   recorded_with: vcr/1.1.0, webmockr/0.8.0
 - request:
     method: get
@@ -168,16 +168,16 @@ http_interactions:
       access-control-expose-headers: Link
       connection: close
       content-type: text/x-bibliography
-      date: Wed, 09 Nov 2022 09:11:24 GMT
+      date: Wed, 09 Nov 2022 09:23:39 GMT
       link: <http://dx.doi.org/10.1126/science.169.3946.635>; rel="canonical", <https://syndication.highwire.org/content/doi/10.1126/science.169.3946.635>;
         version="vor"; rel="item"
       permissions-policy: interest-cohort=()
       server: Jetty(9.4.40.v20210413)
       set-cookie:
-      - AWSALB=6804HL/+TFSLsNXlsRKn3M9/1JvWo4SKG0bYcE4OPyJpakCihCKi4ELBlthGgwxRgDzbeDuCsxFPzzsuOQX8/3wDkbTl3S6FBaTp731dAMTJbK9e750RigsNWsv7;
-        Expires=Wed, 16 Nov 2022 09:11:19 GMT; Path=/
-      - AWSALBCORS=6804HL/+TFSLsNXlsRKn3M9/1JvWo4SKG0bYcE4OPyJpakCihCKi4ELBlthGgwxRgDzbeDuCsxFPzzsuOQX8/3wDkbTl3S6FBaTp731dAMTJbK9e750RigsNWsv7;
-        Expires=Wed, 16 Nov 2022 09:11:19 GMT; Path=/; SameSite=None
+      - AWSALB=E+F/VQfWTcLW/iAUXT3ckY2IP82xsLuWq/WnvkJpVsPxe63oGrh+HbC/KsKg46LyROacDJAbovoblZG83rSqhyx0Yww932WsTOcI9AM67D9D039xXFcfyvuHSYMu;
+        Expires=Wed, 16 Nov 2022 09:23:27 GMT; Path=/
+      - AWSALBCORS=E+F/VQfWTcLW/iAUXT3ckY2IP82xsLuWq/WnvkJpVsPxe63oGrh+HbC/KsKg46LyROacDJAbovoblZG83rSqhyx0Yww932WsTOcI9AM67D9D039xXFcfyvuHSYMu;
+        Expires=Wed, 16 Nov 2022 09:23:27 GMT; Path=/; SameSite=None
       status: HTTP/1.1 200 OK
       transfer-encoding: chunked
       vary: Accept
@@ -193,7 +193,7 @@ http_interactions:
         RnJhbmssIEguIFMuICgxOTcwKS4gVGhlIFN0cnVjdHVyZSBvZiBPcmRpbmFyeSBXYXRlci4gU2NpZW5j
         ZSwgMTY5KDM5NDYpLCA2MzXigJM2NDEuIGh0dHBzOi8vZG9pLm9yZy8xMC4xMTI2L3NjaWVuY2UuMTY5
         LjM5NDYuNjM1Cg==
-  recorded_at: 2022-11-09 09:11:30 GMT
+  recorded_at: 2022-11-09 09:23:45 GMT
   recorded_with: vcr/1.1.0, webmockr/0.8.0
 - request:
     method: get
@@ -218,14 +218,14 @@ http_interactions:
       access-control-expose-headers: Link
       connection: close
       content-type: application/json;charset=utf-8
-      date: Wed, 09 Nov 2022 09:11:24 GMT
+      date: Wed, 09 Nov 2022 09:23:40 GMT
       permissions-policy: interest-cohort=()
       server: Jetty(9.4.40.v20210413)
       set-cookie:
-      - AWSALB=lvC99GeEqwESY4EvGNuSBYhCCL7r0b+YtuT3NLBHirnWuJIupcV3Zk/o7rt/Q5mbN79KCNFpvIaTt6OdMytT1IxU8tffMxlrs0dnEZbeBFS9Wxd17vaefjRY4YsQ;
-        Expires=Wed, 16 Nov 2022 09:11:24 GMT; Path=/
-      - AWSALBCORS=lvC99GeEqwESY4EvGNuSBYhCCL7r0b+YtuT3NLBHirnWuJIupcV3Zk/o7rt/Q5mbN79KCNFpvIaTt6OdMytT1IxU8tffMxlrs0dnEZbeBFS9Wxd17vaefjRY4YsQ;
-        Expires=Wed, 16 Nov 2022 09:11:24 GMT; Path=/; SameSite=None
+      - AWSALB=/h3Ju3Jgbh+Ru6wGyqrI/OiKHTSEIfoeei5ko8bl3z2BHYPGrIRwgb56DA0aHhJCO+zHQL7nomFuWOvsw5BSIZjzPo9ylr6bkVCCPPXm/zWey/ciFei16RUB+t6y;
+        Expires=Wed, 16 Nov 2022 09:23:40 GMT; Path=/
+      - AWSALBCORS=/h3Ju3Jgbh+Ru6wGyqrI/OiKHTSEIfoeei5ko8bl3z2BHYPGrIRwgb56DA0aHhJCO+zHQL7nomFuWOvsw5BSIZjzPo9ylr6bkVCCPPXm/zWey/ciFei16RUB+t6y;
+        Expires=Wed, 16 Nov 2022 09:23:40 GMT; Path=/; SameSite=None
       status: HTTP/1.1 200 OK
       transfer-encoding: chunked
       vary: Accept
@@ -241,7 +241,7 @@ http_interactions:
         eyJzdGF0dXMiOiJvayIsIm1lc3NhZ2UtdHlwZSI6IndvcmstYWdlbmN5IiwibWVzc2FnZS12ZXJzaW9u
         IjoiMS4wLjAiLCJtZXNzYWdlIjp7IkRPSSI6IjEwLjUyODRcLzEwMTEzMzUiLCJhZ2VuY3kiOnsiaWQi
         OiJkYXRhY2l0ZSIsImxhYmVsIjoiRGF0YUNpdGUifX19
-  recorded_at: 2022-11-09 09:11:30 GMT
+  recorded_at: 2022-11-09 09:23:45 GMT
   recorded_with: vcr/1.1.0, webmockr/0.8.0
 - request:
     method: get
@@ -263,7 +263,7 @@ http_interactions:
       access-control-allow-headers: Content-Type,Accept,Accept-Encoding,Origin,User-Agent,Cache-Control,Keep-Alive
       access-control-allow-origin: '*'
       content-type: text/plain
-      date: Wed, 09 Nov 2022 09:11:27 GMT
+      date: Wed, 09 Nov 2022 09:23:43 GMT
       server: nginx/1.18.0 + Phusion Passenger(R) 6.0.12
       status:
       - 'HTTP/2 200 '
@@ -277,7 +277,7 @@ http_interactions:
         cnksIERldm9uIChOR1IgU1kgMDAwMiA5MDgzKSBIaWxsIEJhcnRvbiBJbmR1c3RyaWFsIFBhcmsgU3Ry
         aXAgTWFwIGFuZCBTYW1wbGUgRXhjYXZhdGlvbiBTdW1tYXJ5IFJlcG9ydC4gQXJjaGFlb2xvZ3kgRGF0
         YSBTZXJ2aWNlLiBodHRwczovL2RvaS5vcmcvMTAuNTI4NC8xMDExMzM1Cg==
-  recorded_at: 2022-11-09 09:11:30 GMT
+  recorded_at: 2022-11-09 09:23:45 GMT
   recorded_with: vcr/1.1.0, webmockr/0.8.0
 - request:
     method: get
@@ -302,14 +302,14 @@ http_interactions:
       access-control-expose-headers: Link
       connection: close
       content-type: application/json;charset=utf-8
-      date: Wed, 09 Nov 2022 09:11:28 GMT
+      date: Wed, 09 Nov 2022 09:23:43 GMT
       permissions-policy: interest-cohort=()
       server: Jetty(9.4.40.v20210413)
       set-cookie:
-      - AWSALB=AbMH0+CHtAAPUhP/a86ionKfx4QJVi9UyOcq/RKhrdRnprSr+Bvbw89dflJC5K4k4KUHIgNdXOvxOlY0lPytsto1ddmDOPpeFZ3D182biW5jnq03jlcHEdyugLqa;
-        Expires=Wed, 16 Nov 2022 09:11:28 GMT; Path=/
-      - AWSALBCORS=AbMH0+CHtAAPUhP/a86ionKfx4QJVi9UyOcq/RKhrdRnprSr+Bvbw89dflJC5K4k4KUHIgNdXOvxOlY0lPytsto1ddmDOPpeFZ3D182biW5jnq03jlcHEdyugLqa;
-        Expires=Wed, 16 Nov 2022 09:11:28 GMT; Path=/; SameSite=None
+      - AWSALB=s+tuFg2vjFtwCSyrKE8FUyYUC4lg6fqz6/6kJc3/3wPOfZ04XmFEaCrmeWHyncTW+QLN3WTcK/VjPDEorJf+Bqk0yhoF+CVNRMJVWvvuCrC+sj5IDdeN2Bf/bs8L;
+        Expires=Wed, 16 Nov 2022 09:23:43 GMT; Path=/
+      - AWSALBCORS=s+tuFg2vjFtwCSyrKE8FUyYUC4lg6fqz6/6kJc3/3wPOfZ04XmFEaCrmeWHyncTW+QLN3WTcK/VjPDEorJf+Bqk0yhoF+CVNRMJVWvvuCrC+sj5IDdeN2Bf/bs8L;
+        Expires=Wed, 16 Nov 2022 09:23:43 GMT; Path=/; SameSite=None
       status: HTTP/1.1 200 OK
       transfer-encoding: chunked
       vary: Accept
@@ -325,7 +325,7 @@ http_interactions:
         eyJzdGF0dXMiOiJvayIsIm1lc3NhZ2UtdHlwZSI6IndvcmstYWdlbmN5IiwibWVzc2FnZS12ZXJzaW9u
         IjoiMS4wLjAiLCJtZXNzYWdlIjp7IkRPSSI6IjEwLjUyODRcLzEwMTEzMzUiLCJhZ2VuY3kiOnsiaWQi
         OiJkYXRhY2l0ZSIsImxhYmVsIjoiRGF0YUNpdGUifX19
-  recorded_at: 2022-11-09 09:11:30 GMT
+  recorded_at: 2022-11-09 09:23:45 GMT
   recorded_with: vcr/1.1.0, webmockr/0.8.0
 - request:
     method: get
@@ -347,7 +347,7 @@ http_interactions:
       access-control-allow-headers: Content-Type,Accept,Accept-Encoding,Origin,User-Agent,Cache-Control,Keep-Alive
       access-control-allow-origin: '*'
       content-type: text/plain
-      date: Wed, 09 Nov 2022 09:11:30 GMT
+      date: Wed, 09 Nov 2022 09:23:45 GMT
       server: nginx/1.18.0 + Phusion Passenger(R) 6.0.12
       status:
       - 'HTTP/2 200 '
@@ -361,5 +361,5 @@ http_interactions:
         cnksIERldm9uIChOR1IgU1kgMDAwMiA5MDgzKSBIaWxsIEJhcnRvbiBJbmR1c3RyaWFsIFBhcmsgU3Ry
         aXAgTWFwIGFuZCBTYW1wbGUgRXhjYXZhdGlvbiBTdW1tYXJ5IFJlcG9ydC4gQXJjaGFlb2xvZ3kgRGF0
         YSBTZXJ2aWNlLiBodHRwczovL2RvaS5vcmcvMTAuNTI4NC8xMDExMzM1Cg==
-  recorded_at: 2022-11-09 09:11:30 GMT
+  recorded_at: 2022-11-09 09:23:45 GMT
   recorded_with: vcr/1.1.0, webmockr/0.8.0

@@ -86,7 +86,7 @@
 #' cr_cn("10.5284/1011335", "bibentry")
 #'
 #' # Using Medra DOIs
-#' cr_cn("10.3233/ISU-150780", "onix-xml")
+#' cr_cn("10.1430/8105", "onix-xml")
 #'
 #' # Get raw output
 #' cr_cn(dois = "10.1002/app.27716", format = "citeproc-json", raw = TRUE)

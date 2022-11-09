@@ -22,14 +22,14 @@ http_interactions:
       access-control-expose-headers: Link
       connection: close
       content-type: application/json;charset=utf-8
-      date: Wed, 09 Nov 2022 09:11:10 GMT
+      date: Wed, 09 Nov 2022 09:22:55 GMT
       permissions-policy: interest-cohort=()
       server: Jetty(9.4.40.v20210413)
       set-cookie:
-      - AWSALB=4m8RG3T1Ge41P13vvRhByng6XLzBYbGSlhmjtNBrsWV5rz1YfEB1C1SbzNZ0s0BHD1esCphBBarrwRJbg+7jVfpK3gV60BxBBkXtCqJLySbw/QnT5EsRPCaeFF8G;
-        Expires=Wed, 16 Nov 2022 09:11:10 GMT; Path=/
-      - AWSALBCORS=4m8RG3T1Ge41P13vvRhByng6XLzBYbGSlhmjtNBrsWV5rz1YfEB1C1SbzNZ0s0BHD1esCphBBarrwRJbg+7jVfpK3gV60BxBBkXtCqJLySbw/QnT5EsRPCaeFF8G;
-        Expires=Wed, 16 Nov 2022 09:11:10 GMT; Path=/; SameSite=None
+      - AWSALB=S5G4/oilvvxUqOHOun/ACEI9uBULE9DiL4JqF21B/wakQRNfeVzQNw5+6SgSpzB/oUuw0rq0rsavqN3eX1V/uErBCkjbDMQ1P42RVoUsYrA1d20FHc1NjqDKujmg;
+        Expires=Wed, 16 Nov 2022 09:22:55 GMT; Path=/
+      - AWSALBCORS=S5G4/oilvvxUqOHOun/ACEI9uBULE9DiL4JqF21B/wakQRNfeVzQNw5+6SgSpzB/oUuw0rq0rsavqN3eX1V/uErBCkjbDMQ1P42RVoUsYrA1d20FHc1NjqDKujmg;
+        Expires=Wed, 16 Nov 2022 09:22:55 GMT; Path=/; SameSite=None
       status: HTTP/1.1 404 Not Found
       transfer-encoding: chunked
       vary: Accept
@@ -42,7 +42,7 @@ http_interactions:
       encoding: ''
       file: no
       string: Resource not found.
-  recorded_at: 2022-11-09 09:11:11 GMT
+  recorded_at: 2022-11-09 09:23:17 GMT
   recorded_with: vcr/1.1.0, webmockr/0.8.0
 - request:
     method: get
@@ -67,7 +67,7 @@ http_interactions:
       access-control-expose-headers: Link
       connection: close
       content-type: application/x-bibtex
-      date: Wed, 09 Nov 2022 09:11:11 GMT
+      date: Wed, 09 Nov 2022 09:23:17 GMT
       link: <http://dx.doi.org/10.1890/0012-9615(1999)069[0569:edilsa]2.0.co;2>; rel="canonical",
         <https://api.wiley.com/onlinelibrary/tdm/v1/articles/10.1890%2F0012-9615(1999)069%5B0569:EDILSA%5D2.0.CO;2>;
         version="vor"; rel="item", <https://onlinelibrary.wiley.com/doi/full/10.1890/0012-9615(1999)069%5B0569:EDILSA%5D2.0.CO;2>;
@@ -76,10 +76,10 @@ http_interactions:
       permissions-policy: interest-cohort=()
       server: Jetty(9.4.40.v20210413)
       set-cookie:
-      - AWSALB=BZefSn3DgsCsfbWNeTlxKZx7Wa6LcXnlEmJj4xSxlzaCKtjrYbuwn4c610bjAdWNFwMwMbTyS7zAYh10KbdZeIgXFJFO5/Y3U2j8KMQtZTA8yLqvKVk6H37uNrL2;
-        Expires=Wed, 16 Nov 2022 09:11:11 GMT; Path=/
-      - AWSALBCORS=BZefSn3DgsCsfbWNeTlxKZx7Wa6LcXnlEmJj4xSxlzaCKtjrYbuwn4c610bjAdWNFwMwMbTyS7zAYh10KbdZeIgXFJFO5/Y3U2j8KMQtZTA8yLqvKVk6H37uNrL2;
-        Expires=Wed, 16 Nov 2022 09:11:11 GMT; Path=/; SameSite=None
+      - AWSALB=0IPqo4bmUGg8SO2Y2hwgtVHqk1NHMvabE9LI3K7dvPko/cDE/2DWOA5kJfD3wMN5NfEhSOsm9b3BK5ujvqjr/k8zL2ChV5e3Q2FBWDEI6XSoNvAOooLnnzqpOKe4;
+        Expires=Wed, 16 Nov 2022 09:22:56 GMT; Path=/
+      - AWSALBCORS=0IPqo4bmUGg8SO2Y2hwgtVHqk1NHMvabE9LI3K7dvPko/cDE/2DWOA5kJfD3wMN5NfEhSOsm9b3BK5ujvqjr/k8zL2ChV5e3Q2FBWDEI6XSoNvAOooLnnzqpOKe4;
+        Expires=Wed, 16 Nov 2022 09:22:56 GMT; Path=/; SameSite=None
       status: HTTP/1.1 200 OK
       transfer-encoding: chunked
       vary: Accept
@@ -98,5 +98,5 @@ http_interactions:
         and Mark Westoby},\n\ttitle = {{EVOLUTIONARY} {DIVERGENCES} {IN} {LEAF} {STRUCTURE}
         {AND} {CHEMISTRY}, {COMPARING} {RAINFALL} {AND} {SOIL} {NUTRIENT} {GRADIENTS}},\n\tjournal
         = {Ecological Monographs}\n}"
-  recorded_at: 2022-11-09 09:11:11 GMT
+  recorded_at: 2022-11-09 09:23:17 GMT
   recorded_with: vcr/1.1.0, webmockr/0.8.0
