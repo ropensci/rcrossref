@@ -1,3 +1,9 @@
+rcrossref 1.2.0
+===============
+
+* implement Crossref's REST API updates for the public and polite pool
+* change of maintainer
+
 rcrossref 1.1.0
 ===============
 

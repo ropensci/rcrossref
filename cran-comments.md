@@ -1,12 +1,18 @@
 ## Test environments
 
-* local OS X install, R 4.0.2 Patched
-* ubuntu 16.04 LTS (on Travis-CI), R 4.0.2
+* local OS X install, R4.2.2 (2022-10-31)
+* ubuntu-latest (devel, release, oldrel-1) on GH actions
 * win-builder (devel and release)
 
 ## R CMD check results
 
+local:
+
 0 errors | 0 warnings | 0 notes
+
+win-builder
+
+1 note highlighting maintainer change
 
 ## Reverse dependencies
 
@@ -14,7 +20,9 @@
 
 -------
 
-This submission moves the bibtex package to Suggests as it has been orphaned, and a few minor improvements.
+This submission implements changes relative to the Crossref REST API migration.
+
+Please note the maintainer change from Scott Chamberlain to Najko Jahn
 
 Thanks!
-Scott Chamberlain
+Najko Jahn
