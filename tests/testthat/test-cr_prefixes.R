@@ -35,13 +35,12 @@ test_that("cr_prefixes metadata works correctly", {
 test_that("cr_prefixes facet works correctly", {
   vcr::use_cassette("cr_prefixes_faceting", {
 
-    aa <- cr_prefixes(prefixes="10.1016", works=TRUE, facet=TRUE, limit = 10)
+    aa <- cr_prefixes(prefixes="10.17875", works=TRUE, facet= "container-title:*", limit = 10)
 
     expect_is(aa, "list")
     expect_named(aa, c('meta', 'data', 'facets'))
     expect_is(aa$facets, 'list')
-    expect_is(aa$facets$affiliation, 'data.frame')
-    expect_is(aa$facets$orcid, 'data.frame')
+    expect_is(aa$facets$`container-title`, 'data.frame')
   })
 })
 

@@ -20,9 +20,14 @@ win-builder
 
 -------
 
-This submission implements changes relative to the Crossref REST API migration.
+This re-submission reduced the size of tarball to less than  5MB.
 
-Please note the maintainer change from Scott Chamberlain to Najko Jahn
+Overall, this release implements changes relative to the Crossref REST API migration.
+
+It also fixes CRAN Check errors.
+
+Please note the maintainer change from Scott Chamberlain to Najko Jahn.
 
 Thanks!
+
 Najko Jahn
