@@ -1,0 +1,497 @@
+http_interactions:
+- request:
+    method: get
+    uri: https://api.crossref.org/members/1988/works?filter=from-index-date%3A2023-02-06
+    body:
+      encoding: ''
+      string: ''
+    headers:
+      Accept-Encoding: gzip, deflate
+      Accept: application/json, text/xml, application/xml, */*
+      User-Agent: r-curl/5.0.0 crul/1.3 rOpenSci(rcrossref/1.2.9) (mailto:<crossref_email>)
+      X-USER-AGENT: r-curl/5.0.0 crul/1.3 rOpenSci(rcrossref/1.2.9) (mailto:<crossref_email>)
+  response:
+    status:
+      status_code: '200'
+      message: OK
+      explanation: Request fulfilled, document follows
+    headers:
+      access-control-allow-headers: X-Requested-With, Accept, Accept-Encoding, Accept-Charset,
+        Accept-Language, Accept-Ranges, Cache-Control
+      access-control-allow-origin: '*'
+      access-control-expose-headers: Link
+      connection: close
+      content-encoding: gzip
+      content-length: '2755'
+      content-type: application/json
+      date: Mon, 20 Feb 2023 21:58:29 GMT
+      permissions-policy: interest-cohort=()
+      server: Jetty(9.4.40.v20210413)
+      set-cookie:
+      - AWSALB=3tWzD8vq/QMwdBzjv7BBQ6QI/8a+SHyUwYnQggza6euGd6+sn8M/alO08naTm0PEFgpkwCCL2b4RFs/2emrZmqEb2ORCZ3Ar4IjevkjEcwslYOpbf6v1KjNSDaEs;
+        Expires=Mon, 27 Feb 2023 21:58:26 GMT; Path=/
+      - AWSALBCORS=3tWzD8vq/QMwdBzjv7BBQ6QI/8a+SHyUwYnQggza6euGd6+sn8M/alO08naTm0PEFgpkwCCL2b4RFs/2emrZmqEb2ORCZ3Ar4IjevkjEcwslYOpbf6v1KjNSDaEs;
+        Expires=Mon, 27 Feb 2023 21:58:26 GMT; Path=/; SameSite=None
+      status: HTTP/1.1 200 OK
+      vary: Accept-Encoding
+      x-api-pool: polite
+      x-rate-limit-interval: 1s
+      x-rate-limit-limit: '50'
+      x-ratelimit-interval: 1s
+      x-ratelimit-limit: '50'
+    body:
+      encoding: ''
+      file: no
+      string: '{"status":"ok","message-type":"work-list","message-version":"1.0.0","message":{"facets":{},"total-results":411,"items":[{"indexed":{"date-parts":[[2023,2,17]],"date-time":"2023-02-17T06:27:10Z","timestamp":1676615230247},"publisher-location":"London","standards-body":{"name":"BSI
+        British Standards","acronym":"BSI"},"reference-count":0,"publisher":"BSI British
+        Standards","content-domain":{"domain":[],"crossmark-restriction":false},"DOI":"10.3403\/30430945","type":"standard","created":{"date-parts":[[2023,2,16]],"date-time":"2023-02-16T21:30:29Z","timestamp":1676583029000},"approved":{"date-parts":[[2023,2,28]]},"source":"Crossref","is-referenced-by-count":0,"title":["Dentistry
+        \ufffd Endodontic instruments"],"prefix":"10.3403","member":"1988","deposited":{"date-parts":[[2023,2,16]],"date-time":"2023-02-16T21:30:52Z","timestamp":1676583052000},"score":0.0,"resource":{"primary":{"URL":"https:\/\/linkresolver.bsigroup.com\/junction\/resolve\/000000000030430945?restype=standard"}},"subtitle":["Part
+        2: Enlargers"],"issued":{"date-parts":[[null]]},"references-count":0,"URL":"http:\/\/dx.doi.org\/10.3403\/30430945"},{"indexed":{"date-parts":[[2023,2,17]],"date-time":"2023-02-17T06:27:35Z","timestamp":1676615255804},"publisher-location":"London","standards-body":{"name":"BSI
+        British Standards","acronym":"BSI"},"reference-count":0,"publisher":"BSI British
+        Standards","content-domain":{"domain":[],"crossmark-restriction":false},"DOI":"10.3403\/30451915u","type":"standard","created":{"date-parts":[[2023,2,16]],"date-time":"2023-02-16T21:30:29Z","timestamp":1676583029000},"approved":{"date-parts":[[2023,2,28]]},"source":"Crossref","is-referenced-by-count":0,"title":["Electroacoustics
+        \ufffd Measurement microphones"],"prefix":"10.3403","member":"1988","deposited":{"date-parts":[[2023,2,16]],"date-time":"2023-02-16T21:30:31Z","timestamp":1676583031000},"score":0.0,"resource":{"primary":{"URL":"https:\/\/linkresolver.bsigroup.com\/junction\/resolve\/000000000030451915?restype=undated"}},"subtitle":["Part
+        10: Absolute pressure calibration of microphones at low frequencies using
+        calculable pistonphones"],"issued":{"date-parts":[[null]]},"references-count":0,"URL":"http:\/\/dx.doi.org\/10.3403\/30451915u"},{"indexed":{"date-parts":[[2023,2,17]],"date-time":"2023-02-17T05:24:20Z","timestamp":1676611460350},"publisher-location":"London","standards-body":{"name":"BSI
+        British Standards","acronym":"BSI"},"reference-count":0,"publisher":"BSI British
+        Standards","content-domain":{"domain":[],"crossmark-restriction":false},"DOI":"10.3403\/30142465u","type":"standard","created":{"date-parts":[[2015,6,10]],"date-time":"2015-06-10T11:34:11Z","timestamp":1433936051000},"approved":{"date-parts":[[2023,2,28]]},"source":"Crossref","is-referenced-by-count":0,"title":["Adhesives
+        - One component polyurethane (PUR) for load-bearing timber structures - Classification
+        and performance requirements"],"prefix":"10.3403","member":"1988","deposited":{"date-parts":[[2023,2,16]],"date-time":"2023-02-16T21:31:03Z","timestamp":1676583063000},"score":0.0,"resource":{"primary":{"URL":"https:\/\/linkresolver.bsigroup.com\/junction\/resolve\/000000000030142465?restype=undated"}},"subtitle":[""],"issued":{"date-parts":[[null]]},"references-count":0,"URL":"http:\/\/dx.doi.org\/10.3403\/30142465u"},{"indexed":{"date-parts":[[2023,2,17]],"date-time":"2023-02-17T05:24:32Z","timestamp":1676611472216},"publisher-location":"London","standards-body":{"name":"BSI
+        British Standards","acronym":"BSI"},"reference-count":0,"publisher":"BSI British
+        Standards","content-domain":{"domain":[],"crossmark-restriction":false},"DOI":"10.3403\/01525785u","type":"standard","created":{"date-parts":[[2015,6,10]],"date-time":"2015-06-10T10:11:52Z","timestamp":1433931112000},"approved":{"date-parts":[[2023,2,28]]},"source":"Crossref","is-referenced-by-count":0,"title":["Chemicals
+        used for treatment of water intended for human consumption - Iron (III) chloride"],"prefix":"10.3403","member":"1988","deposited":{"date-parts":[[2023,2,16]],"date-time":"2023-02-16T21:30:41Z","timestamp":1676583041000},"score":0.0,"resource":{"primary":{"URL":"https:\/\/linkresolver.bsigroup.com\/junction\/resolve\/000000000001525785?restype=undated"}},"subtitle":[""],"issued":{"date-parts":[[null]]},"references-count":0,"URL":"http:\/\/dx.doi.org\/10.3403\/01525785u"},{"indexed":{"date-parts":[[2023,2,17]],"date-time":"2023-02-17T05:25:12Z","timestamp":1676611512560},"publisher-location":"London","standards-body":{"name":"BSI
+        British Standards","acronym":"BSI"},"reference-count":0,"publisher":"BSI British
+        Standards","content-domain":{"domain":[],"crossmark-restriction":false},"DOI":"10.3403\/30245854u","type":"standard","created":{"date-parts":[[2015,6,10]],"date-time":"2015-06-10T08:38:39Z","timestamp":1433925519000},"approved":{"date-parts":[[2023,2,28]]},"source":"Crossref","is-referenced-by-count":0,"title":["Adhesives
+        for load-bearing timber structures - Test methods"],"prefix":"10.3403","member":"1988","deposited":{"date-parts":[[2023,2,16]],"date-time":"2023-02-16T21:30:50Z","timestamp":1676583050000},"score":0.0,"resource":{"primary":{"URL":"https:\/\/linkresolver.bsigroup.com\/junction\/resolve\/000000000030333357?restype=undated"}},"subtitle":["Part
+        5: Determination of maximum assembly time under referenced conditions"],"issued":{"date-parts":[[null]]},"references-count":0,"URL":"http:\/\/dx.doi.org\/10.3403\/30245854u"},{"indexed":{"date-parts":[[2023,2,17]],"date-time":"2023-02-17T06:10:27Z","timestamp":1676614227573},"publisher-location":"London","standards-body":{"name":"BSI
+        British Standards","acronym":"BSI"},"reference-count":0,"publisher":"BSI British
+        Standards","content-domain":{"domain":[],"crossmark-restriction":false},"DOI":"10.3403\/30439578","type":"standard","created":{"date-parts":[[2023,2,16]],"date-time":"2023-02-16T21:30:29Z","timestamp":1676583029000},"approved":{"date-parts":[[2023,2,28]]},"source":"Crossref","is-referenced-by-count":0,"title":["Adhesives
+        for load-bearing timber structures - Test methods"],"prefix":"10.3403","member":"1988","deposited":{"date-parts":[[2023,2,16]],"date-time":"2023-02-16T21:30:48Z","timestamp":1676583048000},"score":0.0,"resource":{"primary":{"URL":"https:\/\/linkresolver.bsigroup.com\/junction\/resolve\/000000000030439578?restype=standard"}},"subtitle":["Part
+        2: Determination of resistance to delamination"],"issued":{"date-parts":[[null]]},"references-count":0,"URL":"http:\/\/dx.doi.org\/10.3403\/30439578"},{"indexed":{"date-parts":[[2023,2,17]],"date-time":"2023-02-17T06:08:01Z","timestamp":1676614081960},"publisher-location":"London","standards-body":{"name":"BSI
+        British Standards","acronym":"BSI"},"reference-count":0,"publisher":"BSI British
+        Standards","content-domain":{"domain":[],"crossmark-restriction":false},"DOI":"10.3403\/30451915","type":"standard","created":{"date-parts":[[2023,2,16]],"date-time":"2023-02-16T21:30:29Z","timestamp":1676583029000},"approved":{"date-parts":[[2023,2,28]]},"source":"Crossref","is-referenced-by-count":0,"title":["Electroacoustics
+        \ufffd Measurement microphones"],"prefix":"10.3403","member":"1988","deposited":{"date-parts":[[2023,2,16]],"date-time":"2023-02-16T21:30:30Z","timestamp":1676583030000},"score":0.0,"resource":{"primary":{"URL":"https:\/\/linkresolver.bsigroup.com\/junction\/resolve\/000000000030451915?restype=standard"}},"subtitle":["Part
+        10: Absolute pressure calibration of microphones at low frequencies using
+        calculable pistonphones"],"issued":{"date-parts":[[null]]},"references-count":0,"URL":"http:\/\/dx.doi.org\/10.3403\/30451915"},{"indexed":{"date-parts":[[2023,2,9]],"date-time":"2023-02-09T22:11:13Z","timestamp":1675980673064},"publisher-location":"London","standards-body":{"name":"BSI
+        British Standards","acronym":"BSI"},"reference-count":0,"publisher":"BSI British
+        Standards","content-domain":{"domain":[],"crossmark-restriction":false},"DOI":"10.3403\/03054911u","type":"standard","created":{"date-parts":[[2015,6,10]],"date-time":"2015-06-10T03:52:03Z","timestamp":1433908323000},"approved":{"date-parts":[[2023,2,28]]},"source":"Crossref","is-referenced-by-count":0,"title":["Plastics
+        \ufffd Polyamides \ufffd Determination of ?-caprolactam and ?-laurolactam
+        by gas chromatography"],"prefix":"10.3403","member":"1988","deposited":{"date-parts":[[2023,2,9]],"date-time":"2023-02-09T21:30:50Z","timestamp":1675978250000},"score":0.0,"resource":{"primary":{"URL":"https:\/\/linkresolver.bsigroup.com\/junction\/resolve\/000000000030176499?restype=undated"}},"subtitle":[""],"issued":{"date-parts":[[null]]},"references-count":0,"URL":"http:\/\/dx.doi.org\/10.3403\/03054911u"},{"indexed":{"date-parts":[[2023,2,9]],"date-time":"2023-02-09T22:10:38Z","timestamp":1675980638695},"publisher-location":"London","standards-body":{"name":"BSI
+        British Standards","acronym":"BSI"},"reference-count":0,"publisher":"BSI British
+        Standards","content-domain":{"domain":[],"crossmark-restriction":false},"DOI":"10.3403\/30211089u","type":"standard","created":{"date-parts":[[2015,6,10]],"date-time":"2015-06-10T00:07:25Z","timestamp":1433894845000},"approved":{"date-parts":[[2023,2,28]]},"source":"Crossref","is-referenced-by-count":0,"title":["Road
+        vehicles \ufffd Compressed natural gas (CNG) fuel system components"],"prefix":"10.3403","member":"1988","deposited":{"date-parts":[[2023,2,9]],"date-time":"2023-02-09T21:30:56Z","timestamp":1675978256000},"score":0.0,"resource":{"primary":{"URL":"https:\/\/linkresolver.bsigroup.com\/junction\/resolve\/000000000030315856?restype=undated"}},"subtitle":["Part
+        13: Pressure relief device (PRD)"],"issued":{"date-parts":[[null]]},"references-count":0,"URL":"http:\/\/dx.doi.org\/10.3403\/30211089u"},{"indexed":{"date-parts":[[2023,2,10]],"date-time":"2023-02-10T01:50:49Z","timestamp":1675993849666},"publisher-location":"London","standards-body":{"name":"BSI
+        British Standards","acronym":"BSI"},"reference-count":0,"publisher":"BSI British
+        Standards","content-domain":{"domain":[],"crossmark-restriction":false},"DOI":"10.3403\/30330644","type":"standard","created":{"date-parts":[[2016,11,2]],"date-time":"2016-11-02T16:03:20Z","timestamp":1478102600000},"approved":{"date-parts":[[2016,11,30]]},"source":"Crossref","is-referenced-by-count":1,"title":["Quality
+        management systems. Guidelines for the application of ISO 9001:2015"],"prefix":"10.3403","member":"1988","deposited":{"date-parts":[[2017,12,5]],"date-time":"2017-12-05T14:51:55Z","timestamp":1512485515000},"score":0.0,"resource":{"primary":{"URL":"https:\/\/linkresolver.bsigroup.com\/junction\/resolve\/000000000030351604?restype=standard"}},"subtitle":[""],"issued":{"date-parts":[[null]]},"references-count":0,"URL":"http:\/\/dx.doi.org\/10.3403\/30330644"},{"indexed":{"date-parts":[[2023,2,10]],"date-time":"2023-02-10T06:05:20Z","timestamp":1676009120704},"publisher-location":"London","standards-body":{"name":"BSI
+        British Standards","acronym":"BSI"},"reference-count":0,"publisher":"BSI British
+        Standards","content-domain":{"domain":[],"crossmark-restriction":false},"DOI":"10.3403\/30402376","type":"standard","created":{"date-parts":[[2023,2,9]],"date-time":"2023-02-09T21:30:32Z","timestamp":1675978232000},"approved":{"date-parts":[[2023,2,28]]},"source":"Crossref","is-referenced-by-count":0,"title":["Energy
+        management and energy savings \ufffd Guidance for net zero energy in operations
+        using an ISO 50001 energy management system"],"prefix":"10.3403","member":"1988","deposited":{"date-parts":[[2023,2,9]],"date-time":"2023-02-09T21:30:39Z","timestamp":1675978239000},"score":0.0,"resource":{"primary":{"URL":"https:\/\/linkresolver.bsigroup.com\/junction\/resolve\/000000000030402376?restype=standard"}},"subtitle":[""],"issued":{"date-parts":[[null]]},"references-count":0,"URL":"http:\/\/dx.doi.org\/10.3403\/30402376"},{"indexed":{"date-parts":[[2023,2,10]],"date-time":"2023-02-10T06:07:49Z","timestamp":1676009269216},"publisher-location":"London","standards-body":{"name":"BSI
+        British Standards","acronym":"BSI"},"reference-count":0,"publisher":"BSI British
+        Standards","content-domain":{"domain":[],"crossmark-restriction":false},"DOI":"10.3403\/30378746","type":"standard","created":{"date-parts":[[2023,2,9]],"date-time":"2023-02-09T21:30:32Z","timestamp":1675978232000},"approved":{"date-parts":[[2023,2,28]]},"source":"Crossref","is-referenced-by-count":0,"title":["Road
+        vehicles \ufffd Compressed natural gas (CNG) fuel system components"],"prefix":"10.3403","member":"1988","deposited":{"date-parts":[[2023,2,9]],"date-time":"2023-02-09T21:30:55Z","timestamp":1675978255000},"score":0.0,"resource":{"primary":{"URL":"https:\/\/linkresolver.bsigroup.com\/junction\/resolve\/000000000030378746?restype=standard"}},"subtitle":["Part
+        13: Pressure relief device (PRD)"],"issued":{"date-parts":[[null]]},"references-count":0,"URL":"http:\/\/dx.doi.org\/10.3403\/30378746"},{"indexed":{"date-parts":[[2023,2,19]],"date-time":"2023-02-19T22:11:45Z","timestamp":1676844705113},"publisher-location":"London","standards-body":{"name":"BSI
+        British Standards","acronym":"BSI"},"reference-count":0,"publisher":"BSI British
+        Standards","content-domain":{"domain":[],"crossmark-restriction":false},"DOI":"10.3403\/30344533","type":"standard","created":{"date-parts":[[2018,7,26]],"date-time":"2018-07-26T20:30:36Z","timestamp":1532637036000},"approved":{"date-parts":[[2018,7,30]]},"source":"Crossref","is-referenced-by-count":0,"title":["Rubber.
+        Measurement of vulcanization characteristics using curemeters"],"prefix":"10.3403","member":"1988","deposited":{"date-parts":[[2023,2,19]],"date-time":"2023-02-19T21:30:24Z","timestamp":1676842224000},"score":0.0,"resource":{"primary":{"URL":"https:\/\/linkresolver.bsigroup.com\/junction\/resolve\/000000000030344533?restype=standard"}},"subtitle":["Rotorless
+        curemeter"],"issued":{"date-parts":[[null]]},"references-count":0,"URL":"http:\/\/dx.doi.org\/10.3403\/30344533"},{"indexed":{"date-parts":[[2023,2,19]],"date-time":"2023-02-19T22:11:06Z","timestamp":1676844666261},"publisher-location":"London","standards-body":{"name":"BSI
+        British Standards","acronym":"BSI"},"reference-count":0,"publisher":"BSI British
+        Standards","content-domain":{"domain":[],"crossmark-restriction":false},"DOI":"10.3403\/30344527","type":"standard","created":{"date-parts":[[2018,7,26]],"date-time":"2018-07-26T20:30:36Z","timestamp":1532637036000},"approved":{"date-parts":[[2018,7,27]]},"source":"Crossref","is-referenced-by-count":0,"title":["Rubber.
+        Measurement of vulcanization characteristics using curemeters"],"prefix":"10.3403","member":"1988","deposited":{"date-parts":[[2023,2,19]],"date-time":"2023-02-19T21:30:23Z","timestamp":1676842223000},"score":0.0,"resource":{"primary":{"URL":"https:\/\/linkresolver.bsigroup.com\/junction\/resolve\/000000000030344527?restype=standard"}},"subtitle":["Introduction"],"issued":{"date-parts":[[null]]},"references-count":0,"URL":"http:\/\/dx.doi.org\/10.3403\/30344527"},{"indexed":{"date-parts":[[2023,2,13]],"date-time":"2023-02-13T12:35:48Z","timestamp":1676291748765},"publisher-location":"London","standards-body":{"name":"BSI
+        British Standards","acronym":"BSI"},"reference-count":0,"publisher":"BSI British
+        Standards","content-domain":{"domain":[],"crossmark-restriction":false},"DOI":"10.3403\/30207522","type":"standard","created":{"date-parts":[[2014,11,3]],"date-time":"2014-11-03T13:44:03Z","timestamp":1415022243000},"approved":{"date-parts":[[2014,10,31]]},"source":"Crossref","is-referenced-by-count":2,"title":["Welded
+        steel tubes for pressure purposes. Technical delivery conditions"],"prefix":"10.3403","member":"1988","deposited":{"date-parts":[[2017,12,5]],"date-time":"2017-12-05T13:26:30Z","timestamp":1512480390000},"score":0.0,"resource":{"primary":{"URL":"https:\/\/linkresolver.bsigroup.com\/junction\/resolve\/000000000030207522?restype=standard"}},"subtitle":["Stainless
+        steel tubes"],"issued":{"date-parts":[[null]]},"references-count":0,"URL":"http:\/\/dx.doi.org\/10.3403\/30207522"},{"indexed":{"date-parts":[[2023,2,14]],"date-time":"2023-02-14T05:21:59Z","timestamp":1676352119694},"publisher-location":"London","standards-body":{"name":"BSI
+        British Standards","acronym":"BSI"},"reference-count":0,"publisher":"BSI British
+        Standards","content-domain":{"domain":[],"crossmark-restriction":false},"DOI":"10.3403\/pdiectr60297-3","type":"standard","created":{"date-parts":[[2023,2,13]],"date-time":"2023-02-13T21:30:16Z","timestamp":1676323816000},"source":"Crossref","is-referenced-by-count":0,"title":["Mechanical
+        structures for electrical and electronic equipment \ufffd Dimensions of mechanical
+        structures of the 482,6 mm (19 in) series"],"prefix":"10.3403","member":"1988","deposited":{"date-parts":[[2023,2,13]],"date-time":"2023-02-13T21:30:22Z","timestamp":1676323822000},"score":0.0,"resource":{"primary":{"URL":"https:\/\/linkresolver.bsigroup.com\/junction\/resolve\/000000000000000000?restype=series&lookup=PD+IEC+TR+60297-3"}},"issued":{"date-parts":[[null]]},"references-count":0,"URL":"http:\/\/dx.doi.org\/10.3403\/pdiectr60297-3"},{"indexed":{"date-parts":[[2023,2,14]],"date-time":"2023-02-14T05:22:47Z","timestamp":1676352167496},"publisher-location":"London","standards-body":{"name":"BSI
+        British Standards","acronym":"BSI"},"reference-count":0,"publisher":"BSI British
+        Standards","content-domain":{"domain":[],"crossmark-restriction":false},"DOI":"10.3403\/30427642","type":"standard","created":{"date-parts":[[2023,2,13]],"date-time":"2023-02-13T21:30:16Z","timestamp":1676323816000},"approved":{"date-parts":[[2023,2,28]]},"source":"Crossref","is-referenced-by-count":0,"title":["Stationary
+        source emissions \ufffd Quality assurance of automated measuring systems"],"prefix":"10.3403","member":"1988","deposited":{"date-parts":[[2023,2,13]],"date-time":"2023-02-13T21:30:26Z","timestamp":1676323826000},"score":0.0,"resource":{"primary":{"URL":"https:\/\/linkresolver.bsigroup.com\/junction\/resolve\/000000000030427642?restype=standard"}},"subtitle":[""],"issued":{"date-parts":[[null]]},"references-count":0,"URL":"http:\/\/dx.doi.org\/10.3403\/30427642"},{"indexed":{"date-parts":[[2023,2,14]],"date-time":"2023-02-14T05:23:47Z","timestamp":1676352227413},"publisher-location":"London","standards-body":{"name":"BSI
+        British Standards","acronym":"BSI"},"reference-count":0,"publisher":"BSI British
+        Standards","content-domain":{"domain":[],"crossmark-restriction":false},"DOI":"10.3403\/30432535","type":"standard","created":{"date-parts":[[2023,2,13]],"date-time":"2023-02-13T21:30:16Z","timestamp":1676323816000},"approved":{"date-parts":[[2023,2,28]]},"source":"Crossref","is-referenced-by-count":0,"title":["Photovoltaic
+        cells"],"prefix":"10.3403","member":"1988","deposited":{"date-parts":[[2023,2,13]],"date-time":"2023-02-13T21:30:24Z","timestamp":1676323824000},"score":0.0,"resource":{"primary":{"URL":"https:\/\/linkresolver.bsigroup.com\/junction\/resolve\/000000000030432535?restype=standard"}},"subtitle":["Part
+        3: Measurement of current-voltage characteristics of bifacial photovoltaic
+        cells"],"issued":{"date-parts":[[null]]},"references-count":0,"URL":"http:\/\/dx.doi.org\/10.3403\/30432535"},{"indexed":{"date-parts":[[2023,2,14]],"date-time":"2023-02-14T05:23:59Z","timestamp":1676352239154},"publisher-location":"London","standards-body":{"name":"BSI
+        British Standards","acronym":"BSI"},"reference-count":0,"publisher":"BSI British
+        Standards","content-domain":{"domain":[],"crossmark-restriction":false},"DOI":"10.3403\/30391451u","type":"standard","created":{"date-parts":[[2023,2,13]],"date-time":"2023-02-13T21:30:16Z","timestamp":1676323816000},"approved":{"date-parts":[[2023,2,28]]},"source":"Crossref","is-referenced-by-count":0,"title":["Tracked
+        Changes. Occupational health and safety management systems \ufffd General
+        guidelines for the implementation of ISO 45001:2018"],"prefix":"10.3403","member":"1988","deposited":{"date-parts":[[2023,2,13]],"date-time":"2023-02-13T21:30:29Z","timestamp":1676323829000},"score":0.0,"resource":{"primary":{"URL":"https:\/\/linkresolver.bsigroup.com\/junction\/resolve\/000000000030391451?restype=undated"}},"subtitle":[""],"issued":{"date-parts":[[null]]},"references-count":0,"URL":"http:\/\/dx.doi.org\/10.3403\/30391451u"},{"indexed":{"date-parts":[[2023,2,6]],"date-time":"2023-02-06T14:55:03Z","timestamp":1675695303013},"publisher-location":"London","standards-body":{"name":"BSI
+        British Standards","acronym":"BSI"},"reference-count":0,"publisher":"BSI British
+        Standards","content-domain":{"domain":[],"crossmark-restriction":false},"DOI":"10.3403\/00374960","type":"standard","created":{"date-parts":[[2013,12,10]],"date-time":"2013-12-10T21:10:56Z","timestamp":1386709856000},"approved":{"date-parts":[[1970,9,11]]},"source":"Crossref","is-referenced-by-count":1,"title":["Specification
+        for housings for hydraulic seals for reciprocating applications"],"prefix":"10.3403","member":"1988","deposited":{"date-parts":[[2017,12,5]],"date-time":"2017-12-05T12:50:20Z","timestamp":1512478220000},"score":0.0,"resource":{"primary":{"URL":"https:\/\/linkresolver.bsigroup.com\/junction\/resolve\/000000000000374960?restype=standard"}},"subtitle":[""],"issued":{"date-parts":[[null]]},"references-count":0,"URL":"http:\/\/dx.doi.org\/10.3403\/00374960"}],"items-per-page":20,"query":{"start-index":0,"search-terms":null}}}'
+  recorded_at: 2023-02-20 21:58:44 GMT
+  recorded_with: vcr/1.2.0, webmockr/0.8.2
+- request:
+    method: get
+    uri: https://api.crossref.org/members/1988/works?filter=from-index-date%3A2023-02-06%2Cuntil-index-date%3A2023-02-14
+    body:
+      encoding: ''
+      string: ''
+    headers:
+      Accept-Encoding: gzip, deflate
+      Accept: application/json, text/xml, application/xml, */*
+      User-Agent: r-curl/5.0.0 crul/1.3 rOpenSci(rcrossref/1.2.9) (mailto:<crossref_email>)
+      X-USER-AGENT: r-curl/5.0.0 crul/1.3 rOpenSci(rcrossref/1.2.9) (mailto:<crossref_email>)
+  response:
+    status:
+      status_code: '200'
+      message: OK
+      explanation: Request fulfilled, document follows
+    headers:
+      access-control-allow-headers: X-Requested-With, Accept, Accept-Encoding, Accept-Charset,
+        Accept-Language, Accept-Ranges, Cache-Control
+      access-control-allow-origin: '*'
+      access-control-expose-headers: Link
+      connection: close
+      content-encoding: gzip
+      content-length: '2842'
+      content-type: application/json
+      date: Mon, 20 Feb 2023 21:58:34 GMT
+      permissions-policy: interest-cohort=()
+      server: Jetty(9.4.40.v20210413)
+      set-cookie:
+      - AWSALB=Wvckd1m8U2nsW98faxOXUjd/0pHCPGpJav6i7c/drKMVDhVa1IcEY0rFcxi610GkAPpGpsQhkbr9JUT1b9vGt6kNYnRCewf7FBVlcS3AL5xqXMRMlSa3EVCDvZkE;
+        Expires=Mon, 27 Feb 2023 21:58:29 GMT; Path=/
+      - AWSALBCORS=Wvckd1m8U2nsW98faxOXUjd/0pHCPGpJav6i7c/drKMVDhVa1IcEY0rFcxi610GkAPpGpsQhkbr9JUT1b9vGt6kNYnRCewf7FBVlcS3AL5xqXMRMlSa3EVCDvZkE;
+        Expires=Mon, 27 Feb 2023 21:58:29 GMT; Path=/; SameSite=None
+      status: HTTP/1.1 200 OK
+      vary: Accept-Encoding
+      x-api-pool: polite
+      x-rate-limit-interval: 1s
+      x-rate-limit-limit: '50'
+      x-ratelimit-interval: 1s
+      x-ratelimit-limit: '50'
+    body:
+      encoding: ''
+      file: no
+      string: '{"status":"ok","message-type":"work-list","message-version":"1.0.0","message":{"facets":{},"total-results":272,"items":[{"indexed":{"date-parts":[[2023,2,6]],"date-time":"2023-02-06T14:55:03Z","timestamp":1675695303013},"publisher-location":"London","standards-body":{"name":"BSI
+        British Standards","acronym":"BSI"},"reference-count":0,"publisher":"BSI British
+        Standards","content-domain":{"domain":[],"crossmark-restriction":false},"DOI":"10.3403\/00374960","type":"standard","created":{"date-parts":[[2013,12,10]],"date-time":"2013-12-10T21:10:56Z","timestamp":1386709856000},"approved":{"date-parts":[[1970,9,11]]},"source":"Crossref","is-referenced-by-count":1,"title":["Specification
+        for housings for hydraulic seals for reciprocating applications"],"prefix":"10.3403","member":"1988","deposited":{"date-parts":[[2017,12,5]],"date-time":"2017-12-05T12:50:20Z","timestamp":1512478220000},"score":0.0,"resource":{"primary":{"URL":"https:\/\/linkresolver.bsigroup.com\/junction\/resolve\/000000000000374960?restype=standard"}},"subtitle":[""],"issued":{"date-parts":[[null]]},"references-count":0,"URL":"http:\/\/dx.doi.org\/10.3403\/00374960"},{"indexed":{"date-parts":[[2023,2,7]],"date-time":"2023-02-07T00:32:47Z","timestamp":1675729967776},"publisher-location":"London","standards-body":{"name":"BSI
+        British Standards","acronym":"BSI"},"reference-count":0,"publisher":"BSI British
+        Standards","content-domain":{"domain":[],"crossmark-restriction":false},"DOI":"10.3403\/01240942u","type":"standard","created":{"date-parts":[[2015,6,10]],"date-time":"2015-06-10T00:10:18Z","timestamp":1433895018000},"source":"Crossref","is-referenced-by-count":1,"title":["Methods
+        of testing mortars, screeds and plasters"],"prefix":"10.3403","member":"1988","deposited":{"date-parts":[[2017,12,5]],"date-time":"2017-12-05T13:46:08Z","timestamp":1512481568000},"score":0.0,"resource":{"primary":{"URL":"https:\/\/linkresolver.bsigroup.com\/junction\/resolve\/000000000001240942?restype=undated"}},"subtitle":["Physical
+        testing"],"issued":{"date-parts":[[null]]},"references-count":0,"URL":"http:\/\/dx.doi.org\/10.3403\/01240942u"},{"indexed":{"date-parts":[[2023,2,7]],"date-time":"2023-02-07T05:52:30Z","timestamp":1675749150990},"publisher-location":"London","standards-body":{"name":"BSI
+        British Standards","acronym":"BSI"},"reference-count":0,"publisher":"BSI British
+        Standards","content-domain":{"domain":[],"crossmark-restriction":false},"DOI":"10.3403\/30411012","type":"standard","created":{"date-parts":[[2023,2,6]],"date-time":"2023-02-06T21:30:15Z","timestamp":1675719015000},"approved":{"date-parts":[[2023,2,6]]},"source":"Crossref","is-referenced-by-count":0,"title":["Directly
+        heated negative temperature coefficient thermistors"],"prefix":"10.3403","member":"1988","deposited":{"date-parts":[[2023,2,6]],"date-time":"2023-02-06T21:30:23Z","timestamp":1675719023000},"score":0.0,"resource":{"primary":{"URL":"https:\/\/linkresolver.bsigroup.com\/junction\/resolve\/000000000030411012?restype=standard"}},"subtitle":["Generic
+        specification"],"issued":{"date-parts":[[null]]},"references-count":0,"URL":"http:\/\/dx.doi.org\/10.3403\/30411012"},{"indexed":{"date-parts":[[2023,2,7]],"date-time":"2023-02-07T05:55:39Z","timestamp":1675749339275},"publisher-location":"London","standards-body":{"name":"BSI
+        British Standards","acronym":"BSI"},"reference-count":0,"publisher":"BSI British
+        Standards","content-domain":{"domain":[],"crossmark-restriction":false},"DOI":"10.3403\/30425831u","type":"standard","created":{"date-parts":[[2023,2,6]],"date-time":"2023-02-06T21:30:15Z","timestamp":1675719015000},"approved":{"date-parts":[[2023,2,28]]},"source":"Crossref","is-referenced-by-count":0,"title":["Electromagnetic
+        characteristics of linear cable management systems (CMS)"],"prefix":"10.3403","member":"1988","deposited":{"date-parts":[[2023,2,6]],"date-time":"2023-02-06T21:30:49Z","timestamp":1675719049000},"score":0.0,"resource":{"primary":{"URL":"https:\/\/linkresolver.bsigroup.com\/junction\/resolve\/000000000030425831?restype=undated"}},"subtitle":[""],"issued":{"date-parts":[[null]]},"references-count":0,"URL":"http:\/\/dx.doi.org\/10.3403\/30425831u"},{"indexed":{"date-parts":[[2023,2,7]],"date-time":"2023-02-07T05:55:50Z","timestamp":1675749350564},"publisher-location":"London","standards-body":{"name":"BSI
+        British Standards","acronym":"BSI"},"reference-count":0,"publisher":"BSI British
+        Standards","content-domain":{"domain":[],"crossmark-restriction":false},"DOI":"10.3403\/30385411","type":"standard","created":{"date-parts":[[2023,2,6]],"date-time":"2023-02-06T21:30:15Z","timestamp":1675719015000},"approved":{"date-parts":[[2023,2,28]]},"source":"Crossref","is-referenced-by-count":0,"title":["Information
+        technology \ufffd Programming languages, their environments and system software
+        interfaces \ufffd Programming language COBOL"],"prefix":"10.3403","member":"1988","deposited":{"date-parts":[[2023,2,6]],"date-time":"2023-02-06T21:30:50Z","timestamp":1675719050000},"score":0.0,"resource":{"primary":{"URL":"https:\/\/linkresolver.bsigroup.com\/junction\/resolve\/000000000030385411?restype=standard"}},"subtitle":[""],"issued":{"date-parts":[[null]]},"references-count":0,"URL":"http:\/\/dx.doi.org\/10.3403\/30385411"},{"indexed":{"date-parts":[[2023,2,7]],"date-time":"2023-02-07T05:51:11Z","timestamp":1675749071594},"publisher-location":"London","standards-body":{"name":"BSI
+        British Standards","acronym":"BSI"},"reference-count":0,"publisher":"BSI British
+        Standards","content-domain":{"domain":[],"crossmark-restriction":false},"DOI":"10.3403\/30411012u","type":"standard","created":{"date-parts":[[2023,2,6]],"date-time":"2023-02-06T21:30:15Z","timestamp":1675719015000},"approved":{"date-parts":[[2023,2,6]]},"source":"Crossref","is-referenced-by-count":0,"title":["Directly
+        heated negative temperature coefficient thermistors"],"prefix":"10.3403","member":"1988","deposited":{"date-parts":[[2023,2,6]],"date-time":"2023-02-06T21:30:24Z","timestamp":1675719024000},"score":0.0,"resource":{"primary":{"URL":"https:\/\/linkresolver.bsigroup.com\/junction\/resolve\/000000000030411012?restype=undated"}},"subtitle":["Generic
+        specification"],"issued":{"date-parts":[[null]]},"references-count":0,"URL":"http:\/\/dx.doi.org\/10.3403\/30411012u"},{"indexed":{"date-parts":[[2023,2,7]],"date-time":"2023-02-07T05:51:11Z","timestamp":1675749071555},"publisher-location":"London","standards-body":{"name":"BSI
+        British Standards","acronym":"BSI"},"reference-count":0,"publisher":"BSI British
+        Standards","content-domain":{"domain":[],"crossmark-restriction":false},"DOI":"10.3403\/30362562u","type":"standard","created":{"date-parts":[[2023,2,6]],"date-time":"2023-02-06T21:30:15Z","timestamp":1675719015000},"approved":{"date-parts":[[2023,2,28]]},"source":"Crossref","is-referenced-by-count":0,"title":["Microbiology
+        of the food chain \ufffd Horizontal method for the detection and enumeration
+        of Clostridium spp."],"prefix":"10.3403","member":"1988","deposited":{"date-parts":[[2023,2,6]],"date-time":"2023-02-06T21:30:20Z","timestamp":1675719020000},"score":0.0,"resource":{"primary":{"URL":"https:\/\/linkresolver.bsigroup.com\/junction\/resolve\/000000000030362562?restype=undated"}},"subtitle":["Part
+        1: Enumeration of sulfite-reducing Clostridium spp. by colony-count technique"],"issued":{"date-parts":[[null]]},"references-count":0,"URL":"http:\/\/dx.doi.org\/10.3403\/30362562u"},{"indexed":{"date-parts":[[2023,2,7]],"date-time":"2023-02-07T05:50:21Z","timestamp":1675749021607},"publisher-location":"London","standards-body":{"name":"BSI
+        British Standards","acronym":"BSI"},"reference-count":0,"publisher":"BSI British
+        Standards","content-domain":{"domain":[],"crossmark-restriction":false},"DOI":"10.3403\/30459192","type":"standard","created":{"date-parts":[[2023,2,6]],"date-time":"2023-02-06T21:30:15Z","timestamp":1675719015000},"approved":{"date-parts":[[2023,2,28]]},"source":"Crossref","is-referenced-by-count":0,"title":["Hyperloop
+        systems - Standards Inventory and Roadmap"],"prefix":"10.3403","member":"1988","deposited":{"date-parts":[[2023,2,6]],"date-time":"2023-02-06T21:30:22Z","timestamp":1675719022000},"score":0.0,"resource":{"primary":{"URL":"https:\/\/linkresolver.bsigroup.com\/junction\/resolve\/000000000030459192?restype=standard"}},"subtitle":[""],"issued":{"date-parts":[[null]]},"references-count":0,"URL":"http:\/\/dx.doi.org\/10.3403\/30459192"},{"indexed":{"date-parts":[[2023,2,7]],"date-time":"2023-02-07T05:50:29Z","timestamp":1675749029229},"publisher-location":"London","standards-body":{"name":"BSI
+        British Standards","acronym":"BSI"},"reference-count":0,"publisher":"BSI British
+        Standards","content-domain":{"domain":[],"crossmark-restriction":false},"DOI":"10.3403\/30419344","type":"standard","created":{"date-parts":[[2023,2,6]],"date-time":"2023-02-06T21:30:15Z","timestamp":1675719015000},"approved":{"date-parts":[[2023,2,28]]},"source":"Crossref","is-referenced-by-count":0,"title":["Information
+        technology \ufffd Metadata registries (MDR)"],"prefix":"10.3403","member":"1988","deposited":{"date-parts":[[2023,2,6]],"date-time":"2023-02-06T21:30:34Z","timestamp":1675719034000},"score":0.0,"resource":{"primary":{"URL":"https:\/\/linkresolver.bsigroup.com\/junction\/resolve\/000000000030419344?restype=standard"}},"subtitle":["Part
+        32: Metamodel for concept system registration"],"issued":{"date-parts":[[null]]},"references-count":0,"URL":"http:\/\/dx.doi.org\/10.3403\/30419344"},{"indexed":{"date-parts":[[2023,2,7]],"date-time":"2023-02-07T20:13:38Z","timestamp":1675800818329},"publisher-location":"London","standards-body":{"name":"BSI
+        British Standards","acronym":"BSI"},"reference-count":0,"publisher":"BSI British
+        Standards","content-domain":{"domain":[],"crossmark-restriction":false},"DOI":"10.3403\/30181941","type":"standard","created":{"date-parts":[[2013,11,13]],"date-time":"2013-11-13T22:44:20Z","timestamp":1384382660000},"approved":{"date-parts":[[2010,8,31]]},"source":"Crossref","is-referenced-by-count":1,"title":["Surface
+        chemical analysis. Vocabulary"],"prefix":"10.3403","member":"1988","deposited":{"date-parts":[[2017,12,5]],"date-time":"2017-12-05T12:13:08Z","timestamp":1512475988000},"score":0.0,"resource":{"primary":{"URL":"https:\/\/linkresolver.bsigroup.com\/junction\/resolve\/000000000030181941?restype=standard"}},"subtitle":["Terms
+        used in scanning-probe microscopy"],"issued":{"date-parts":[[null]]},"references-count":0,"URL":"http:\/\/dx.doi.org\/10.3403\/30181941"},{"indexed":{"date-parts":[[2023,2,14]],"date-time":"2023-02-14T05:23:47Z","timestamp":1676352227413},"publisher-location":"London","standards-body":{"name":"BSI
+        British Standards","acronym":"BSI"},"reference-count":0,"publisher":"BSI British
+        Standards","content-domain":{"domain":[],"crossmark-restriction":false},"DOI":"10.3403\/30432535","type":"standard","created":{"date-parts":[[2023,2,13]],"date-time":"2023-02-13T21:30:16Z","timestamp":1676323816000},"approved":{"date-parts":[[2023,2,28]]},"source":"Crossref","is-referenced-by-count":0,"title":["Photovoltaic
+        cells"],"prefix":"10.3403","member":"1988","deposited":{"date-parts":[[2023,2,13]],"date-time":"2023-02-13T21:30:24Z","timestamp":1676323824000},"score":0.0,"resource":{"primary":{"URL":"https:\/\/linkresolver.bsigroup.com\/junction\/resolve\/000000000030432535?restype=standard"}},"subtitle":["Part
+        3: Measurement of current-voltage characteristics of bifacial photovoltaic
+        cells"],"issued":{"date-parts":[[null]]},"references-count":0,"URL":"http:\/\/dx.doi.org\/10.3403\/30432535"},{"indexed":{"date-parts":[[2023,2,14]],"date-time":"2023-02-14T05:23:59Z","timestamp":1676352239154},"publisher-location":"London","standards-body":{"name":"BSI
+        British Standards","acronym":"BSI"},"reference-count":0,"publisher":"BSI British
+        Standards","content-domain":{"domain":[],"crossmark-restriction":false},"DOI":"10.3403\/30391451u","type":"standard","created":{"date-parts":[[2023,2,13]],"date-time":"2023-02-13T21:30:16Z","timestamp":1676323816000},"approved":{"date-parts":[[2023,2,28]]},"source":"Crossref","is-referenced-by-count":0,"title":["Tracked
+        Changes. Occupational health and safety management systems \ufffd General
+        guidelines for the implementation of ISO 45001:2018"],"prefix":"10.3403","member":"1988","deposited":{"date-parts":[[2023,2,13]],"date-time":"2023-02-13T21:30:29Z","timestamp":1676323829000},"score":0.0,"resource":{"primary":{"URL":"https:\/\/linkresolver.bsigroup.com\/junction\/resolve\/000000000030391451?restype=undated"}},"subtitle":[""],"issued":{"date-parts":[[null]]},"references-count":0,"URL":"http:\/\/dx.doi.org\/10.3403\/30391451u"},{"indexed":{"date-parts":[[2023,2,14]],"date-time":"2023-02-14T05:22:47Z","timestamp":1676352167496},"publisher-location":"London","standards-body":{"name":"BSI
+        British Standards","acronym":"BSI"},"reference-count":0,"publisher":"BSI British
+        Standards","content-domain":{"domain":[],"crossmark-restriction":false},"DOI":"10.3403\/30427642","type":"standard","created":{"date-parts":[[2023,2,13]],"date-time":"2023-02-13T21:30:16Z","timestamp":1676323816000},"approved":{"date-parts":[[2023,2,28]]},"source":"Crossref","is-referenced-by-count":0,"title":["Stationary
+        source emissions \ufffd Quality assurance of automated measuring systems"],"prefix":"10.3403","member":"1988","deposited":{"date-parts":[[2023,2,13]],"date-time":"2023-02-13T21:30:26Z","timestamp":1676323826000},"score":0.0,"resource":{"primary":{"URL":"https:\/\/linkresolver.bsigroup.com\/junction\/resolve\/000000000030427642?restype=standard"}},"subtitle":[""],"issued":{"date-parts":[[null]]},"references-count":0,"URL":"http:\/\/dx.doi.org\/10.3403\/30427642"},{"indexed":{"date-parts":[[2023,2,14]],"date-time":"2023-02-14T05:21:59Z","timestamp":1676352119694},"publisher-location":"London","standards-body":{"name":"BSI
+        British Standards","acronym":"BSI"},"reference-count":0,"publisher":"BSI British
+        Standards","content-domain":{"domain":[],"crossmark-restriction":false},"DOI":"10.3403\/pdiectr60297-3","type":"standard","created":{"date-parts":[[2023,2,13]],"date-time":"2023-02-13T21:30:16Z","timestamp":1676323816000},"source":"Crossref","is-referenced-by-count":0,"title":["Mechanical
+        structures for electrical and electronic equipment \ufffd Dimensions of mechanical
+        structures of the 482,6 mm (19 in) series"],"prefix":"10.3403","member":"1988","deposited":{"date-parts":[[2023,2,13]],"date-time":"2023-02-13T21:30:22Z","timestamp":1676323822000},"score":0.0,"resource":{"primary":{"URL":"https:\/\/linkresolver.bsigroup.com\/junction\/resolve\/000000000000000000?restype=series&lookup=PD+IEC+TR+60297-3"}},"issued":{"date-parts":[[null]]},"references-count":0,"URL":"http:\/\/dx.doi.org\/10.3403\/pdiectr60297-3"},{"indexed":{"date-parts":[[2023,2,10]],"date-time":"2023-02-10T01:50:49Z","timestamp":1675993849666},"publisher-location":"London","standards-body":{"name":"BSI
+        British Standards","acronym":"BSI"},"reference-count":0,"publisher":"BSI British
+        Standards","content-domain":{"domain":[],"crossmark-restriction":false},"DOI":"10.3403\/30330644","type":"standard","created":{"date-parts":[[2016,11,2]],"date-time":"2016-11-02T16:03:20Z","timestamp":1478102600000},"approved":{"date-parts":[[2016,11,30]]},"source":"Crossref","is-referenced-by-count":1,"title":["Quality
+        management systems. Guidelines for the application of ISO 9001:2015"],"prefix":"10.3403","member":"1988","deposited":{"date-parts":[[2017,12,5]],"date-time":"2017-12-05T14:51:55Z","timestamp":1512485515000},"score":0.0,"resource":{"primary":{"URL":"https:\/\/linkresolver.bsigroup.com\/junction\/resolve\/000000000030351604?restype=standard"}},"subtitle":[""],"issued":{"date-parts":[[null]]},"references-count":0,"URL":"http:\/\/dx.doi.org\/10.3403\/30330644"},{"indexed":{"date-parts":[[2023,2,9]],"date-time":"2023-02-09T22:11:13Z","timestamp":1675980673064},"publisher-location":"London","standards-body":{"name":"BSI
+        British Standards","acronym":"BSI"},"reference-count":0,"publisher":"BSI British
+        Standards","content-domain":{"domain":[],"crossmark-restriction":false},"DOI":"10.3403\/03054911u","type":"standard","created":{"date-parts":[[2015,6,10]],"date-time":"2015-06-10T03:52:03Z","timestamp":1433908323000},"approved":{"date-parts":[[2023,2,28]]},"source":"Crossref","is-referenced-by-count":0,"title":["Plastics
+        \ufffd Polyamides \ufffd Determination of ?-caprolactam and ?-laurolactam
+        by gas chromatography"],"prefix":"10.3403","member":"1988","deposited":{"date-parts":[[2023,2,9]],"date-time":"2023-02-09T21:30:50Z","timestamp":1675978250000},"score":0.0,"resource":{"primary":{"URL":"https:\/\/linkresolver.bsigroup.com\/junction\/resolve\/000000000030176499?restype=undated"}},"subtitle":[""],"issued":{"date-parts":[[null]]},"references-count":0,"URL":"http:\/\/dx.doi.org\/10.3403\/03054911u"},{"indexed":{"date-parts":[[2023,2,9]],"date-time":"2023-02-09T22:10:38Z","timestamp":1675980638695},"publisher-location":"London","standards-body":{"name":"BSI
+        British Standards","acronym":"BSI"},"reference-count":0,"publisher":"BSI British
+        Standards","content-domain":{"domain":[],"crossmark-restriction":false},"DOI":"10.3403\/30211089u","type":"standard","created":{"date-parts":[[2015,6,10]],"date-time":"2015-06-10T00:07:25Z","timestamp":1433894845000},"approved":{"date-parts":[[2023,2,28]]},"source":"Crossref","is-referenced-by-count":0,"title":["Road
+        vehicles \ufffd Compressed natural gas (CNG) fuel system components"],"prefix":"10.3403","member":"1988","deposited":{"date-parts":[[2023,2,9]],"date-time":"2023-02-09T21:30:56Z","timestamp":1675978256000},"score":0.0,"resource":{"primary":{"URL":"https:\/\/linkresolver.bsigroup.com\/junction\/resolve\/000000000030315856?restype=undated"}},"subtitle":["Part
+        13: Pressure relief device (PRD)"],"issued":{"date-parts":[[null]]},"references-count":0,"URL":"http:\/\/dx.doi.org\/10.3403\/30211089u"},{"indexed":{"date-parts":[[2023,2,10]],"date-time":"2023-02-10T06:05:05Z","timestamp":1676009105472},"publisher-location":"London","standards-body":{"name":"BSI
+        British Standards","acronym":"BSI"},"reference-count":0,"publisher":"BSI British
+        Standards","content-domain":{"domain":[],"crossmark-restriction":false},"DOI":"10.3403\/30444534","type":"standard","created":{"date-parts":[[2023,2,9]],"date-time":"2023-02-09T21:30:32Z","timestamp":1675978232000},"approved":{"date-parts":[[2023,2,28]]},"source":"Crossref","is-referenced-by-count":0,"title":["Cloud
+        computing \ufffd Service level agreement (SLA) framework"],"prefix":"10.3403","member":"1988","deposited":{"date-parts":[[2023,2,9]],"date-time":"2023-02-09T21:30:51Z","timestamp":1675978251000},"score":0.0,"resource":{"primary":{"URL":"https:\/\/linkresolver.bsigroup.com\/junction\/resolve\/000000000030444534?restype=standard"}},"subtitle":["Part
+        2: Metric model"],"issued":{"date-parts":[[null]]},"references-count":0,"URL":"http:\/\/dx.doi.org\/10.3403\/30444534"},{"indexed":{"date-parts":[[2023,2,10]],"date-time":"2023-02-10T05:59:23Z","timestamp":1676008763373},"publisher-location":"London","standards-body":{"name":"BSI
+        British Standards","acronym":"BSI"},"reference-count":0,"publisher":"BSI British
+        Standards","content-domain":{"domain":[],"crossmark-restriction":false},"DOI":"10.3403\/30439998","type":"standard","created":{"date-parts":[[2023,2,8]],"date-time":"2023-02-08T21:30:19Z","timestamp":1675891819000},"approved":{"date-parts":[[2023,2,28]]},"source":"Crossref","is-referenced-by-count":0,"title":["Wind
+        energy generation systems"],"prefix":"10.3403","member":"1988","deposited":{"date-parts":[[2023,2,9]],"date-time":"2023-02-09T21:30:44Z","timestamp":1675978244000},"score":0.0,"resource":{"primary":{"URL":"https:\/\/linkresolver.bsigroup.com\/junction\/resolve\/000000000030439998?restype=standard"}},"subtitle":["Part
+        12: Power performance measurements of electricity producing wind turbines
+        \ufffd Overview"],"issued":{"date-parts":[[null]]},"references-count":0,"URL":"http:\/\/dx.doi.org\/10.3403\/30439998"},{"indexed":{"date-parts":[[2023,2,10]],"date-time":"2023-02-10T06:05:20Z","timestamp":1676009120704},"publisher-location":"London","standards-body":{"name":"BSI
+        British Standards","acronym":"BSI"},"reference-count":0,"publisher":"BSI British
+        Standards","content-domain":{"domain":[],"crossmark-restriction":false},"DOI":"10.3403\/30402376","type":"standard","created":{"date-parts":[[2023,2,9]],"date-time":"2023-02-09T21:30:32Z","timestamp":1675978232000},"approved":{"date-parts":[[2023,2,28]]},"source":"Crossref","is-referenced-by-count":0,"title":["Energy
+        management and energy savings \ufffd Guidance for net zero energy in operations
+        using an ISO 50001 energy management system"],"prefix":"10.3403","member":"1988","deposited":{"date-parts":[[2023,2,9]],"date-time":"2023-02-09T21:30:39Z","timestamp":1675978239000},"score":0.0,"resource":{"primary":{"URL":"https:\/\/linkresolver.bsigroup.com\/junction\/resolve\/000000000030402376?restype=standard"}},"subtitle":[""],"issued":{"date-parts":[[null]]},"references-count":0,"URL":"http:\/\/dx.doi.org\/10.3403\/30402376"}],"items-per-page":20,"query":{"start-index":0,"search-terms":null}}}'
+  recorded_at: 2023-02-20 21:58:44 GMT
+  recorded_with: vcr/1.2.0, webmockr/0.8.2
+- request:
+    method: get
+    uri: https://api.crossref.org/members/1988/works?filter=from-index-date%3A2023-02-06
+    body:
+      encoding: ''
+      string: ''
+    headers:
+      Accept-Encoding: gzip, deflate
+      Accept: application/json, text/xml, application/xml, */*
+      User-Agent: r-curl/5.0.0 crul/1.3 rOpenSci(rcrossref/1.2.9) (mailto:<crossref_email>)
+      X-USER-AGENT: r-curl/5.0.0 crul/1.3 rOpenSci(rcrossref/1.2.9) (mailto:<crossref_email>)
+  response:
+    status:
+      status_code: '200'
+      message: OK
+      explanation: Request fulfilled, document follows
+    headers:
+      access-control-allow-headers: X-Requested-With, Accept, Accept-Encoding, Accept-Charset,
+        Accept-Language, Accept-Ranges, Cache-Control
+      access-control-allow-origin: '*'
+      access-control-expose-headers: Link
+      connection: close
+      content-encoding: gzip
+      content-length: '2755'
+      content-type: application/json
+      date: Mon, 20 Feb 2023 21:58:40 GMT
+      permissions-policy: interest-cohort=()
+      server: Jetty(9.4.40.v20210413)
+      set-cookie:
+      - AWSALB=Io+6Vz0TQtGltOo7zO1MUtrPYAB3UenxwnSDLIv+kye1DV9QuC5PXmyA8hvwKZXNu0fjhGTAuzIkxLJ7bq1BSGmpVpkYVds8dqNBEl4mbO0C6JBmVBC+8qy0OmoL;
+        Expires=Mon, 27 Feb 2023 21:58:34 GMT; Path=/
+      - AWSALBCORS=Io+6Vz0TQtGltOo7zO1MUtrPYAB3UenxwnSDLIv+kye1DV9QuC5PXmyA8hvwKZXNu0fjhGTAuzIkxLJ7bq1BSGmpVpkYVds8dqNBEl4mbO0C6JBmVBC+8qy0OmoL;
+        Expires=Mon, 27 Feb 2023 21:58:34 GMT; Path=/; SameSite=None
+      status: HTTP/1.1 200 OK
+      vary: Accept-Encoding
+      x-api-pool: polite
+      x-rate-limit-interval: 1s
+      x-rate-limit-limit: '50'
+      x-ratelimit-interval: 1s
+      x-ratelimit-limit: '50'
+    body:
+      encoding: ''
+      file: no
+      string: '{"status":"ok","message-type":"work-list","message-version":"1.0.0","message":{"facets":{},"total-results":411,"items":[{"indexed":{"date-parts":[[2023,2,17]],"date-time":"2023-02-17T06:27:10Z","timestamp":1676615230247},"publisher-location":"London","standards-body":{"name":"BSI
+        British Standards","acronym":"BSI"},"reference-count":0,"publisher":"BSI British
+        Standards","content-domain":{"domain":[],"crossmark-restriction":false},"DOI":"10.3403\/30430945","type":"standard","created":{"date-parts":[[2023,2,16]],"date-time":"2023-02-16T21:30:29Z","timestamp":1676583029000},"approved":{"date-parts":[[2023,2,28]]},"source":"Crossref","is-referenced-by-count":0,"title":["Dentistry
+        \ufffd Endodontic instruments"],"prefix":"10.3403","member":"1988","deposited":{"date-parts":[[2023,2,16]],"date-time":"2023-02-16T21:30:52Z","timestamp":1676583052000},"score":0.0,"resource":{"primary":{"URL":"https:\/\/linkresolver.bsigroup.com\/junction\/resolve\/000000000030430945?restype=standard"}},"subtitle":["Part
+        2: Enlargers"],"issued":{"date-parts":[[null]]},"references-count":0,"URL":"http:\/\/dx.doi.org\/10.3403\/30430945"},{"indexed":{"date-parts":[[2023,2,17]],"date-time":"2023-02-17T06:27:35Z","timestamp":1676615255804},"publisher-location":"London","standards-body":{"name":"BSI
+        British Standards","acronym":"BSI"},"reference-count":0,"publisher":"BSI British
+        Standards","content-domain":{"domain":[],"crossmark-restriction":false},"DOI":"10.3403\/30451915u","type":"standard","created":{"date-parts":[[2023,2,16]],"date-time":"2023-02-16T21:30:29Z","timestamp":1676583029000},"approved":{"date-parts":[[2023,2,28]]},"source":"Crossref","is-referenced-by-count":0,"title":["Electroacoustics
+        \ufffd Measurement microphones"],"prefix":"10.3403","member":"1988","deposited":{"date-parts":[[2023,2,16]],"date-time":"2023-02-16T21:30:31Z","timestamp":1676583031000},"score":0.0,"resource":{"primary":{"URL":"https:\/\/linkresolver.bsigroup.com\/junction\/resolve\/000000000030451915?restype=undated"}},"subtitle":["Part
+        10: Absolute pressure calibration of microphones at low frequencies using
+        calculable pistonphones"],"issued":{"date-parts":[[null]]},"references-count":0,"URL":"http:\/\/dx.doi.org\/10.3403\/30451915u"},{"indexed":{"date-parts":[[2023,2,17]],"date-time":"2023-02-17T05:24:20Z","timestamp":1676611460350},"publisher-location":"London","standards-body":{"name":"BSI
+        British Standards","acronym":"BSI"},"reference-count":0,"publisher":"BSI British
+        Standards","content-domain":{"domain":[],"crossmark-restriction":false},"DOI":"10.3403\/30142465u","type":"standard","created":{"date-parts":[[2015,6,10]],"date-time":"2015-06-10T11:34:11Z","timestamp":1433936051000},"approved":{"date-parts":[[2023,2,28]]},"source":"Crossref","is-referenced-by-count":0,"title":["Adhesives
+        - One component polyurethane (PUR) for load-bearing timber structures - Classification
+        and performance requirements"],"prefix":"10.3403","member":"1988","deposited":{"date-parts":[[2023,2,16]],"date-time":"2023-02-16T21:31:03Z","timestamp":1676583063000},"score":0.0,"resource":{"primary":{"URL":"https:\/\/linkresolver.bsigroup.com\/junction\/resolve\/000000000030142465?restype=undated"}},"subtitle":[""],"issued":{"date-parts":[[null]]},"references-count":0,"URL":"http:\/\/dx.doi.org\/10.3403\/30142465u"},{"indexed":{"date-parts":[[2023,2,17]],"date-time":"2023-02-17T05:24:32Z","timestamp":1676611472216},"publisher-location":"London","standards-body":{"name":"BSI
+        British Standards","acronym":"BSI"},"reference-count":0,"publisher":"BSI British
+        Standards","content-domain":{"domain":[],"crossmark-restriction":false},"DOI":"10.3403\/01525785u","type":"standard","created":{"date-parts":[[2015,6,10]],"date-time":"2015-06-10T10:11:52Z","timestamp":1433931112000},"approved":{"date-parts":[[2023,2,28]]},"source":"Crossref","is-referenced-by-count":0,"title":["Chemicals
+        used for treatment of water intended for human consumption - Iron (III) chloride"],"prefix":"10.3403","member":"1988","deposited":{"date-parts":[[2023,2,16]],"date-time":"2023-02-16T21:30:41Z","timestamp":1676583041000},"score":0.0,"resource":{"primary":{"URL":"https:\/\/linkresolver.bsigroup.com\/junction\/resolve\/000000000001525785?restype=undated"}},"subtitle":[""],"issued":{"date-parts":[[null]]},"references-count":0,"URL":"http:\/\/dx.doi.org\/10.3403\/01525785u"},{"indexed":{"date-parts":[[2023,2,17]],"date-time":"2023-02-17T05:25:12Z","timestamp":1676611512560},"publisher-location":"London","standards-body":{"name":"BSI
+        British Standards","acronym":"BSI"},"reference-count":0,"publisher":"BSI British
+        Standards","content-domain":{"domain":[],"crossmark-restriction":false},"DOI":"10.3403\/30245854u","type":"standard","created":{"date-parts":[[2015,6,10]],"date-time":"2015-06-10T08:38:39Z","timestamp":1433925519000},"approved":{"date-parts":[[2023,2,28]]},"source":"Crossref","is-referenced-by-count":0,"title":["Adhesives
+        for load-bearing timber structures - Test methods"],"prefix":"10.3403","member":"1988","deposited":{"date-parts":[[2023,2,16]],"date-time":"2023-02-16T21:30:50Z","timestamp":1676583050000},"score":0.0,"resource":{"primary":{"URL":"https:\/\/linkresolver.bsigroup.com\/junction\/resolve\/000000000030333357?restype=undated"}},"subtitle":["Part
+        5: Determination of maximum assembly time under referenced conditions"],"issued":{"date-parts":[[null]]},"references-count":0,"URL":"http:\/\/dx.doi.org\/10.3403\/30245854u"},{"indexed":{"date-parts":[[2023,2,17]],"date-time":"2023-02-17T06:10:27Z","timestamp":1676614227573},"publisher-location":"London","standards-body":{"name":"BSI
+        British Standards","acronym":"BSI"},"reference-count":0,"publisher":"BSI British
+        Standards","content-domain":{"domain":[],"crossmark-restriction":false},"DOI":"10.3403\/30439578","type":"standard","created":{"date-parts":[[2023,2,16]],"date-time":"2023-02-16T21:30:29Z","timestamp":1676583029000},"approved":{"date-parts":[[2023,2,28]]},"source":"Crossref","is-referenced-by-count":0,"title":["Adhesives
+        for load-bearing timber structures - Test methods"],"prefix":"10.3403","member":"1988","deposited":{"date-parts":[[2023,2,16]],"date-time":"2023-02-16T21:30:48Z","timestamp":1676583048000},"score":0.0,"resource":{"primary":{"URL":"https:\/\/linkresolver.bsigroup.com\/junction\/resolve\/000000000030439578?restype=standard"}},"subtitle":["Part
+        2: Determination of resistance to delamination"],"issued":{"date-parts":[[null]]},"references-count":0,"URL":"http:\/\/dx.doi.org\/10.3403\/30439578"},{"indexed":{"date-parts":[[2023,2,17]],"date-time":"2023-02-17T06:08:01Z","timestamp":1676614081960},"publisher-location":"London","standards-body":{"name":"BSI
+        British Standards","acronym":"BSI"},"reference-count":0,"publisher":"BSI British
+        Standards","content-domain":{"domain":[],"crossmark-restriction":false},"DOI":"10.3403\/30451915","type":"standard","created":{"date-parts":[[2023,2,16]],"date-time":"2023-02-16T21:30:29Z","timestamp":1676583029000},"approved":{"date-parts":[[2023,2,28]]},"source":"Crossref","is-referenced-by-count":0,"title":["Electroacoustics
+        \ufffd Measurement microphones"],"prefix":"10.3403","member":"1988","deposited":{"date-parts":[[2023,2,16]],"date-time":"2023-02-16T21:30:30Z","timestamp":1676583030000},"score":0.0,"resource":{"primary":{"URL":"https:\/\/linkresolver.bsigroup.com\/junction\/resolve\/000000000030451915?restype=standard"}},"subtitle":["Part
+        10: Absolute pressure calibration of microphones at low frequencies using
+        calculable pistonphones"],"issued":{"date-parts":[[null]]},"references-count":0,"URL":"http:\/\/dx.doi.org\/10.3403\/30451915"},{"indexed":{"date-parts":[[2023,2,9]],"date-time":"2023-02-09T22:11:13Z","timestamp":1675980673064},"publisher-location":"London","standards-body":{"name":"BSI
+        British Standards","acronym":"BSI"},"reference-count":0,"publisher":"BSI British
+        Standards","content-domain":{"domain":[],"crossmark-restriction":false},"DOI":"10.3403\/03054911u","type":"standard","created":{"date-parts":[[2015,6,10]],"date-time":"2015-06-10T03:52:03Z","timestamp":1433908323000},"approved":{"date-parts":[[2023,2,28]]},"source":"Crossref","is-referenced-by-count":0,"title":["Plastics
+        \ufffd Polyamides \ufffd Determination of ?-caprolactam and ?-laurolactam
+        by gas chromatography"],"prefix":"10.3403","member":"1988","deposited":{"date-parts":[[2023,2,9]],"date-time":"2023-02-09T21:30:50Z","timestamp":1675978250000},"score":0.0,"resource":{"primary":{"URL":"https:\/\/linkresolver.bsigroup.com\/junction\/resolve\/000000000030176499?restype=undated"}},"subtitle":[""],"issued":{"date-parts":[[null]]},"references-count":0,"URL":"http:\/\/dx.doi.org\/10.3403\/03054911u"},{"indexed":{"date-parts":[[2023,2,9]],"date-time":"2023-02-09T22:10:38Z","timestamp":1675980638695},"publisher-location":"London","standards-body":{"name":"BSI
+        British Standards","acronym":"BSI"},"reference-count":0,"publisher":"BSI British
+        Standards","content-domain":{"domain":[],"crossmark-restriction":false},"DOI":"10.3403\/30211089u","type":"standard","created":{"date-parts":[[2015,6,10]],"date-time":"2015-06-10T00:07:25Z","timestamp":1433894845000},"approved":{"date-parts":[[2023,2,28]]},"source":"Crossref","is-referenced-by-count":0,"title":["Road
+        vehicles \ufffd Compressed natural gas (CNG) fuel system components"],"prefix":"10.3403","member":"1988","deposited":{"date-parts":[[2023,2,9]],"date-time":"2023-02-09T21:30:56Z","timestamp":1675978256000},"score":0.0,"resource":{"primary":{"URL":"https:\/\/linkresolver.bsigroup.com\/junction\/resolve\/000000000030315856?restype=undated"}},"subtitle":["Part
+        13: Pressure relief device (PRD)"],"issued":{"date-parts":[[null]]},"references-count":0,"URL":"http:\/\/dx.doi.org\/10.3403\/30211089u"},{"indexed":{"date-parts":[[2023,2,10]],"date-time":"2023-02-10T01:50:49Z","timestamp":1675993849666},"publisher-location":"London","standards-body":{"name":"BSI
+        British Standards","acronym":"BSI"},"reference-count":0,"publisher":"BSI British
+        Standards","content-domain":{"domain":[],"crossmark-restriction":false},"DOI":"10.3403\/30330644","type":"standard","created":{"date-parts":[[2016,11,2]],"date-time":"2016-11-02T16:03:20Z","timestamp":1478102600000},"approved":{"date-parts":[[2016,11,30]]},"source":"Crossref","is-referenced-by-count":1,"title":["Quality
+        management systems. Guidelines for the application of ISO 9001:2015"],"prefix":"10.3403","member":"1988","deposited":{"date-parts":[[2017,12,5]],"date-time":"2017-12-05T14:51:55Z","timestamp":1512485515000},"score":0.0,"resource":{"primary":{"URL":"https:\/\/linkresolver.bsigroup.com\/junction\/resolve\/000000000030351604?restype=standard"}},"subtitle":[""],"issued":{"date-parts":[[null]]},"references-count":0,"URL":"http:\/\/dx.doi.org\/10.3403\/30330644"},{"indexed":{"date-parts":[[2023,2,10]],"date-time":"2023-02-10T06:05:20Z","timestamp":1676009120704},"publisher-location":"London","standards-body":{"name":"BSI
+        British Standards","acronym":"BSI"},"reference-count":0,"publisher":"BSI British
+        Standards","content-domain":{"domain":[],"crossmark-restriction":false},"DOI":"10.3403\/30402376","type":"standard","created":{"date-parts":[[2023,2,9]],"date-time":"2023-02-09T21:30:32Z","timestamp":1675978232000},"approved":{"date-parts":[[2023,2,28]]},"source":"Crossref","is-referenced-by-count":0,"title":["Energy
+        management and energy savings \ufffd Guidance for net zero energy in operations
+        using an ISO 50001 energy management system"],"prefix":"10.3403","member":"1988","deposited":{"date-parts":[[2023,2,9]],"date-time":"2023-02-09T21:30:39Z","timestamp":1675978239000},"score":0.0,"resource":{"primary":{"URL":"https:\/\/linkresolver.bsigroup.com\/junction\/resolve\/000000000030402376?restype=standard"}},"subtitle":[""],"issued":{"date-parts":[[null]]},"references-count":0,"URL":"http:\/\/dx.doi.org\/10.3403\/30402376"},{"indexed":{"date-parts":[[2023,2,10]],"date-time":"2023-02-10T06:07:49Z","timestamp":1676009269216},"publisher-location":"London","standards-body":{"name":"BSI
+        British Standards","acronym":"BSI"},"reference-count":0,"publisher":"BSI British
+        Standards","content-domain":{"domain":[],"crossmark-restriction":false},"DOI":"10.3403\/30378746","type":"standard","created":{"date-parts":[[2023,2,9]],"date-time":"2023-02-09T21:30:32Z","timestamp":1675978232000},"approved":{"date-parts":[[2023,2,28]]},"source":"Crossref","is-referenced-by-count":0,"title":["Road
+        vehicles \ufffd Compressed natural gas (CNG) fuel system components"],"prefix":"10.3403","member":"1988","deposited":{"date-parts":[[2023,2,9]],"date-time":"2023-02-09T21:30:55Z","timestamp":1675978255000},"score":0.0,"resource":{"primary":{"URL":"https:\/\/linkresolver.bsigroup.com\/junction\/resolve\/000000000030378746?restype=standard"}},"subtitle":["Part
+        13: Pressure relief device (PRD)"],"issued":{"date-parts":[[null]]},"references-count":0,"URL":"http:\/\/dx.doi.org\/10.3403\/30378746"},{"indexed":{"date-parts":[[2023,2,19]],"date-time":"2023-02-19T22:11:45Z","timestamp":1676844705113},"publisher-location":"London","standards-body":{"name":"BSI
+        British Standards","acronym":"BSI"},"reference-count":0,"publisher":"BSI British
+        Standards","content-domain":{"domain":[],"crossmark-restriction":false},"DOI":"10.3403\/30344533","type":"standard","created":{"date-parts":[[2018,7,26]],"date-time":"2018-07-26T20:30:36Z","timestamp":1532637036000},"approved":{"date-parts":[[2018,7,30]]},"source":"Crossref","is-referenced-by-count":0,"title":["Rubber.
+        Measurement of vulcanization characteristics using curemeters"],"prefix":"10.3403","member":"1988","deposited":{"date-parts":[[2023,2,19]],"date-time":"2023-02-19T21:30:24Z","timestamp":1676842224000},"score":0.0,"resource":{"primary":{"URL":"https:\/\/linkresolver.bsigroup.com\/junction\/resolve\/000000000030344533?restype=standard"}},"subtitle":["Rotorless
+        curemeter"],"issued":{"date-parts":[[null]]},"references-count":0,"URL":"http:\/\/dx.doi.org\/10.3403\/30344533"},{"indexed":{"date-parts":[[2023,2,19]],"date-time":"2023-02-19T22:11:06Z","timestamp":1676844666261},"publisher-location":"London","standards-body":{"name":"BSI
+        British Standards","acronym":"BSI"},"reference-count":0,"publisher":"BSI British
+        Standards","content-domain":{"domain":[],"crossmark-restriction":false},"DOI":"10.3403\/30344527","type":"standard","created":{"date-parts":[[2018,7,26]],"date-time":"2018-07-26T20:30:36Z","timestamp":1532637036000},"approved":{"date-parts":[[2018,7,27]]},"source":"Crossref","is-referenced-by-count":0,"title":["Rubber.
+        Measurement of vulcanization characteristics using curemeters"],"prefix":"10.3403","member":"1988","deposited":{"date-parts":[[2023,2,19]],"date-time":"2023-02-19T21:30:23Z","timestamp":1676842223000},"score":0.0,"resource":{"primary":{"URL":"https:\/\/linkresolver.bsigroup.com\/junction\/resolve\/000000000030344527?restype=standard"}},"subtitle":["Introduction"],"issued":{"date-parts":[[null]]},"references-count":0,"URL":"http:\/\/dx.doi.org\/10.3403\/30344527"},{"indexed":{"date-parts":[[2023,2,13]],"date-time":"2023-02-13T12:35:48Z","timestamp":1676291748765},"publisher-location":"London","standards-body":{"name":"BSI
+        British Standards","acronym":"BSI"},"reference-count":0,"publisher":"BSI British
+        Standards","content-domain":{"domain":[],"crossmark-restriction":false},"DOI":"10.3403\/30207522","type":"standard","created":{"date-parts":[[2014,11,3]],"date-time":"2014-11-03T13:44:03Z","timestamp":1415022243000},"approved":{"date-parts":[[2014,10,31]]},"source":"Crossref","is-referenced-by-count":2,"title":["Welded
+        steel tubes for pressure purposes. Technical delivery conditions"],"prefix":"10.3403","member":"1988","deposited":{"date-parts":[[2017,12,5]],"date-time":"2017-12-05T13:26:30Z","timestamp":1512480390000},"score":0.0,"resource":{"primary":{"URL":"https:\/\/linkresolver.bsigroup.com\/junction\/resolve\/000000000030207522?restype=standard"}},"subtitle":["Stainless
+        steel tubes"],"issued":{"date-parts":[[null]]},"references-count":0,"URL":"http:\/\/dx.doi.org\/10.3403\/30207522"},{"indexed":{"date-parts":[[2023,2,14]],"date-time":"2023-02-14T05:21:59Z","timestamp":1676352119694},"publisher-location":"London","standards-body":{"name":"BSI
+        British Standards","acronym":"BSI"},"reference-count":0,"publisher":"BSI British
+        Standards","content-domain":{"domain":[],"crossmark-restriction":false},"DOI":"10.3403\/pdiectr60297-3","type":"standard","created":{"date-parts":[[2023,2,13]],"date-time":"2023-02-13T21:30:16Z","timestamp":1676323816000},"source":"Crossref","is-referenced-by-count":0,"title":["Mechanical
+        structures for electrical and electronic equipment \ufffd Dimensions of mechanical
+        structures of the 482,6 mm (19 in) series"],"prefix":"10.3403","member":"1988","deposited":{"date-parts":[[2023,2,13]],"date-time":"2023-02-13T21:30:22Z","timestamp":1676323822000},"score":0.0,"resource":{"primary":{"URL":"https:\/\/linkresolver.bsigroup.com\/junction\/resolve\/000000000000000000?restype=series&lookup=PD+IEC+TR+60297-3"}},"issued":{"date-parts":[[null]]},"references-count":0,"URL":"http:\/\/dx.doi.org\/10.3403\/pdiectr60297-3"},{"indexed":{"date-parts":[[2023,2,14]],"date-time":"2023-02-14T05:22:47Z","timestamp":1676352167496},"publisher-location":"London","standards-body":{"name":"BSI
+        British Standards","acronym":"BSI"},"reference-count":0,"publisher":"BSI British
+        Standards","content-domain":{"domain":[],"crossmark-restriction":false},"DOI":"10.3403\/30427642","type":"standard","created":{"date-parts":[[2023,2,13]],"date-time":"2023-02-13T21:30:16Z","timestamp":1676323816000},"approved":{"date-parts":[[2023,2,28]]},"source":"Crossref","is-referenced-by-count":0,"title":["Stationary
+        source emissions \ufffd Quality assurance of automated measuring systems"],"prefix":"10.3403","member":"1988","deposited":{"date-parts":[[2023,2,13]],"date-time":"2023-02-13T21:30:26Z","timestamp":1676323826000},"score":0.0,"resource":{"primary":{"URL":"https:\/\/linkresolver.bsigroup.com\/junction\/resolve\/000000000030427642?restype=standard"}},"subtitle":[""],"issued":{"date-parts":[[null]]},"references-count":0,"URL":"http:\/\/dx.doi.org\/10.3403\/30427642"},{"indexed":{"date-parts":[[2023,2,14]],"date-time":"2023-02-14T05:23:47Z","timestamp":1676352227413},"publisher-location":"London","standards-body":{"name":"BSI
+        British Standards","acronym":"BSI"},"reference-count":0,"publisher":"BSI British
+        Standards","content-domain":{"domain":[],"crossmark-restriction":false},"DOI":"10.3403\/30432535","type":"standard","created":{"date-parts":[[2023,2,13]],"date-time":"2023-02-13T21:30:16Z","timestamp":1676323816000},"approved":{"date-parts":[[2023,2,28]]},"source":"Crossref","is-referenced-by-count":0,"title":["Photovoltaic
+        cells"],"prefix":"10.3403","member":"1988","deposited":{"date-parts":[[2023,2,13]],"date-time":"2023-02-13T21:30:24Z","timestamp":1676323824000},"score":0.0,"resource":{"primary":{"URL":"https:\/\/linkresolver.bsigroup.com\/junction\/resolve\/000000000030432535?restype=standard"}},"subtitle":["Part
+        3: Measurement of current-voltage characteristics of bifacial photovoltaic
+        cells"],"issued":{"date-parts":[[null]]},"references-count":0,"URL":"http:\/\/dx.doi.org\/10.3403\/30432535"},{"indexed":{"date-parts":[[2023,2,14]],"date-time":"2023-02-14T05:23:59Z","timestamp":1676352239154},"publisher-location":"London","standards-body":{"name":"BSI
+        British Standards","acronym":"BSI"},"reference-count":0,"publisher":"BSI British
+        Standards","content-domain":{"domain":[],"crossmark-restriction":false},"DOI":"10.3403\/30391451u","type":"standard","created":{"date-parts":[[2023,2,13]],"date-time":"2023-02-13T21:30:16Z","timestamp":1676323816000},"approved":{"date-parts":[[2023,2,28]]},"source":"Crossref","is-referenced-by-count":0,"title":["Tracked
+        Changes. Occupational health and safety management systems \ufffd General
+        guidelines for the implementation of ISO 45001:2018"],"prefix":"10.3403","member":"1988","deposited":{"date-parts":[[2023,2,13]],"date-time":"2023-02-13T21:30:29Z","timestamp":1676323829000},"score":0.0,"resource":{"primary":{"URL":"https:\/\/linkresolver.bsigroup.com\/junction\/resolve\/000000000030391451?restype=undated"}},"subtitle":[""],"issued":{"date-parts":[[null]]},"references-count":0,"URL":"http:\/\/dx.doi.org\/10.3403\/30391451u"},{"indexed":{"date-parts":[[2023,2,6]],"date-time":"2023-02-06T14:55:03Z","timestamp":1675695303013},"publisher-location":"London","standards-body":{"name":"BSI
+        British Standards","acronym":"BSI"},"reference-count":0,"publisher":"BSI British
+        Standards","content-domain":{"domain":[],"crossmark-restriction":false},"DOI":"10.3403\/00374960","type":"standard","created":{"date-parts":[[2013,12,10]],"date-time":"2013-12-10T21:10:56Z","timestamp":1386709856000},"approved":{"date-parts":[[1970,9,11]]},"source":"Crossref","is-referenced-by-count":1,"title":["Specification
+        for housings for hydraulic seals for reciprocating applications"],"prefix":"10.3403","member":"1988","deposited":{"date-parts":[[2017,12,5]],"date-time":"2017-12-05T12:50:20Z","timestamp":1512478220000},"score":0.0,"resource":{"primary":{"URL":"https:\/\/linkresolver.bsigroup.com\/junction\/resolve\/000000000000374960?restype=standard"}},"subtitle":[""],"issued":{"date-parts":[[null]]},"references-count":0,"URL":"http:\/\/dx.doi.org\/10.3403\/00374960"}],"items-per-page":20,"query":{"start-index":0,"search-terms":null}}}'
+  recorded_at: 2023-02-20 21:58:44 GMT
+  recorded_with: vcr/1.2.0, webmockr/0.8.2
+- request:
+    method: get
+    uri: https://api.crossref.org/members/1988/works?filter=from-index-date%3A2023-02-06%2Cuntil-index-date%3A2023-02-14
+    body:
+      encoding: ''
+      string: ''
+    headers:
+      Accept-Encoding: gzip, deflate
+      Accept: application/json, text/xml, application/xml, */*
+      User-Agent: r-curl/5.0.0 crul/1.3 rOpenSci(rcrossref/1.2.9) (mailto:<crossref_email>)
+      X-USER-AGENT: r-curl/5.0.0 crul/1.3 rOpenSci(rcrossref/1.2.9) (mailto:<crossref_email>)
+  response:
+    status:
+      status_code: '200'
+      message: OK
+      explanation: Request fulfilled, document follows
+    headers:
+      access-control-allow-headers: X-Requested-With, Accept, Accept-Encoding, Accept-Charset,
+        Accept-Language, Accept-Ranges, Cache-Control
+      access-control-allow-origin: '*'
+      access-control-expose-headers: Link
+      connection: close
+      content-encoding: gzip
+      content-length: '2842'
+      content-type: application/json
+      date: Mon, 20 Feb 2023 21:58:44 GMT
+      permissions-policy: interest-cohort=()
+      server: Jetty(9.4.40.v20210413)
+      set-cookie:
+      - AWSALB=44LMJ+vEwYjVpf1SYMNZvxjx+81VZvefWfm97rz8RHnTNFMRfBNeu/BzcIStLLICeZmdEpS9BLGvuTWq1ZjN54jRo/AzHe6BUqxnegizo+LnEXOHBc3hfKIs7Iag;
+        Expires=Mon, 27 Feb 2023 21:58:40 GMT; Path=/
+      - AWSALBCORS=44LMJ+vEwYjVpf1SYMNZvxjx+81VZvefWfm97rz8RHnTNFMRfBNeu/BzcIStLLICeZmdEpS9BLGvuTWq1ZjN54jRo/AzHe6BUqxnegizo+LnEXOHBc3hfKIs7Iag;
+        Expires=Mon, 27 Feb 2023 21:58:40 GMT; Path=/; SameSite=None
+      status: HTTP/1.1 200 OK
+      vary: Accept-Encoding
+      x-api-pool: polite
+      x-rate-limit-interval: 1s
+      x-rate-limit-limit: '50'
+      x-ratelimit-interval: 1s
+      x-ratelimit-limit: '50'
+    body:
+      encoding: ''
+      file: no
+      string: '{"status":"ok","message-type":"work-list","message-version":"1.0.0","message":{"facets":{},"total-results":272,"items":[{"indexed":{"date-parts":[[2023,2,6]],"date-time":"2023-02-06T14:55:03Z","timestamp":1675695303013},"publisher-location":"London","standards-body":{"name":"BSI
+        British Standards","acronym":"BSI"},"reference-count":0,"publisher":"BSI British
+        Standards","content-domain":{"domain":[],"crossmark-restriction":false},"DOI":"10.3403\/00374960","type":"standard","created":{"date-parts":[[2013,12,10]],"date-time":"2013-12-10T21:10:56Z","timestamp":1386709856000},"approved":{"date-parts":[[1970,9,11]]},"source":"Crossref","is-referenced-by-count":1,"title":["Specification
+        for housings for hydraulic seals for reciprocating applications"],"prefix":"10.3403","member":"1988","deposited":{"date-parts":[[2017,12,5]],"date-time":"2017-12-05T12:50:20Z","timestamp":1512478220000},"score":0.0,"resource":{"primary":{"URL":"https:\/\/linkresolver.bsigroup.com\/junction\/resolve\/000000000000374960?restype=standard"}},"subtitle":[""],"issued":{"date-parts":[[null]]},"references-count":0,"URL":"http:\/\/dx.doi.org\/10.3403\/00374960"},{"indexed":{"date-parts":[[2023,2,7]],"date-time":"2023-02-07T00:32:47Z","timestamp":1675729967776},"publisher-location":"London","standards-body":{"name":"BSI
+        British Standards","acronym":"BSI"},"reference-count":0,"publisher":"BSI British
+        Standards","content-domain":{"domain":[],"crossmark-restriction":false},"DOI":"10.3403\/01240942u","type":"standard","created":{"date-parts":[[2015,6,10]],"date-time":"2015-06-10T00:10:18Z","timestamp":1433895018000},"source":"Crossref","is-referenced-by-count":1,"title":["Methods
+        of testing mortars, screeds and plasters"],"prefix":"10.3403","member":"1988","deposited":{"date-parts":[[2017,12,5]],"date-time":"2017-12-05T13:46:08Z","timestamp":1512481568000},"score":0.0,"resource":{"primary":{"URL":"https:\/\/linkresolver.bsigroup.com\/junction\/resolve\/000000000001240942?restype=undated"}},"subtitle":["Physical
+        testing"],"issued":{"date-parts":[[null]]},"references-count":0,"URL":"http:\/\/dx.doi.org\/10.3403\/01240942u"},{"indexed":{"date-parts":[[2023,2,7]],"date-time":"2023-02-07T05:52:30Z","timestamp":1675749150990},"publisher-location":"London","standards-body":{"name":"BSI
+        British Standards","acronym":"BSI"},"reference-count":0,"publisher":"BSI British
+        Standards","content-domain":{"domain":[],"crossmark-restriction":false},"DOI":"10.3403\/30411012","type":"standard","created":{"date-parts":[[2023,2,6]],"date-time":"2023-02-06T21:30:15Z","timestamp":1675719015000},"approved":{"date-parts":[[2023,2,6]]},"source":"Crossref","is-referenced-by-count":0,"title":["Directly
+        heated negative temperature coefficient thermistors"],"prefix":"10.3403","member":"1988","deposited":{"date-parts":[[2023,2,6]],"date-time":"2023-02-06T21:30:23Z","timestamp":1675719023000},"score":0.0,"resource":{"primary":{"URL":"https:\/\/linkresolver.bsigroup.com\/junction\/resolve\/000000000030411012?restype=standard"}},"subtitle":["Generic
+        specification"],"issued":{"date-parts":[[null]]},"references-count":0,"URL":"http:\/\/dx.doi.org\/10.3403\/30411012"},{"indexed":{"date-parts":[[2023,2,7]],"date-time":"2023-02-07T05:55:39Z","timestamp":1675749339275},"publisher-location":"London","standards-body":{"name":"BSI
+        British Standards","acronym":"BSI"},"reference-count":0,"publisher":"BSI British
+        Standards","content-domain":{"domain":[],"crossmark-restriction":false},"DOI":"10.3403\/30425831u","type":"standard","created":{"date-parts":[[2023,2,6]],"date-time":"2023-02-06T21:30:15Z","timestamp":1675719015000},"approved":{"date-parts":[[2023,2,28]]},"source":"Crossref","is-referenced-by-count":0,"title":["Electromagnetic
+        characteristics of linear cable management systems (CMS)"],"prefix":"10.3403","member":"1988","deposited":{"date-parts":[[2023,2,6]],"date-time":"2023-02-06T21:30:49Z","timestamp":1675719049000},"score":0.0,"resource":{"primary":{"URL":"https:\/\/linkresolver.bsigroup.com\/junction\/resolve\/000000000030425831?restype=undated"}},"subtitle":[""],"issued":{"date-parts":[[null]]},"references-count":0,"URL":"http:\/\/dx.doi.org\/10.3403\/30425831u"},{"indexed":{"date-parts":[[2023,2,7]],"date-time":"2023-02-07T05:55:50Z","timestamp":1675749350564},"publisher-location":"London","standards-body":{"name":"BSI
+        British Standards","acronym":"BSI"},"reference-count":0,"publisher":"BSI British
+        Standards","content-domain":{"domain":[],"crossmark-restriction":false},"DOI":"10.3403\/30385411","type":"standard","created":{"date-parts":[[2023,2,6]],"date-time":"2023-02-06T21:30:15Z","timestamp":1675719015000},"approved":{"date-parts":[[2023,2,28]]},"source":"Crossref","is-referenced-by-count":0,"title":["Information
+        technology \ufffd Programming languages, their environments and system software
+        interfaces \ufffd Programming language COBOL"],"prefix":"10.3403","member":"1988","deposited":{"date-parts":[[2023,2,6]],"date-time":"2023-02-06T21:30:50Z","timestamp":1675719050000},"score":0.0,"resource":{"primary":{"URL":"https:\/\/linkresolver.bsigroup.com\/junction\/resolve\/000000000030385411?restype=standard"}},"subtitle":[""],"issued":{"date-parts":[[null]]},"references-count":0,"URL":"http:\/\/dx.doi.org\/10.3403\/30385411"},{"indexed":{"date-parts":[[2023,2,7]],"date-time":"2023-02-07T05:51:11Z","timestamp":1675749071594},"publisher-location":"London","standards-body":{"name":"BSI
+        British Standards","acronym":"BSI"},"reference-count":0,"publisher":"BSI British
+        Standards","content-domain":{"domain":[],"crossmark-restriction":false},"DOI":"10.3403\/30411012u","type":"standard","created":{"date-parts":[[2023,2,6]],"date-time":"2023-02-06T21:30:15Z","timestamp":1675719015000},"approved":{"date-parts":[[2023,2,6]]},"source":"Crossref","is-referenced-by-count":0,"title":["Directly
+        heated negative temperature coefficient thermistors"],"prefix":"10.3403","member":"1988","deposited":{"date-parts":[[2023,2,6]],"date-time":"2023-02-06T21:30:24Z","timestamp":1675719024000},"score":0.0,"resource":{"primary":{"URL":"https:\/\/linkresolver.bsigroup.com\/junction\/resolve\/000000000030411012?restype=undated"}},"subtitle":["Generic
+        specification"],"issued":{"date-parts":[[null]]},"references-count":0,"URL":"http:\/\/dx.doi.org\/10.3403\/30411012u"},{"indexed":{"date-parts":[[2023,2,7]],"date-time":"2023-02-07T05:51:11Z","timestamp":1675749071555},"publisher-location":"London","standards-body":{"name":"BSI
+        British Standards","acronym":"BSI"},"reference-count":0,"publisher":"BSI British
+        Standards","content-domain":{"domain":[],"crossmark-restriction":false},"DOI":"10.3403\/30362562u","type":"standard","created":{"date-parts":[[2023,2,6]],"date-time":"2023-02-06T21:30:15Z","timestamp":1675719015000},"approved":{"date-parts":[[2023,2,28]]},"source":"Crossref","is-referenced-by-count":0,"title":["Microbiology
+        of the food chain \ufffd Horizontal method for the detection and enumeration
+        of Clostridium spp."],"prefix":"10.3403","member":"1988","deposited":{"date-parts":[[2023,2,6]],"date-time":"2023-02-06T21:30:20Z","timestamp":1675719020000},"score":0.0,"resource":{"primary":{"URL":"https:\/\/linkresolver.bsigroup.com\/junction\/resolve\/000000000030362562?restype=undated"}},"subtitle":["Part
+        1: Enumeration of sulfite-reducing Clostridium spp. by colony-count technique"],"issued":{"date-parts":[[null]]},"references-count":0,"URL":"http:\/\/dx.doi.org\/10.3403\/30362562u"},{"indexed":{"date-parts":[[2023,2,7]],"date-time":"2023-02-07T05:50:21Z","timestamp":1675749021607},"publisher-location":"London","standards-body":{"name":"BSI
+        British Standards","acronym":"BSI"},"reference-count":0,"publisher":"BSI British
+        Standards","content-domain":{"domain":[],"crossmark-restriction":false},"DOI":"10.3403\/30459192","type":"standard","created":{"date-parts":[[2023,2,6]],"date-time":"2023-02-06T21:30:15Z","timestamp":1675719015000},"approved":{"date-parts":[[2023,2,28]]},"source":"Crossref","is-referenced-by-count":0,"title":["Hyperloop
+        systems - Standards Inventory and Roadmap"],"prefix":"10.3403","member":"1988","deposited":{"date-parts":[[2023,2,6]],"date-time":"2023-02-06T21:30:22Z","timestamp":1675719022000},"score":0.0,"resource":{"primary":{"URL":"https:\/\/linkresolver.bsigroup.com\/junction\/resolve\/000000000030459192?restype=standard"}},"subtitle":[""],"issued":{"date-parts":[[null]]},"references-count":0,"URL":"http:\/\/dx.doi.org\/10.3403\/30459192"},{"indexed":{"date-parts":[[2023,2,7]],"date-time":"2023-02-07T05:50:29Z","timestamp":1675749029229},"publisher-location":"London","standards-body":{"name":"BSI
+        British Standards","acronym":"BSI"},"reference-count":0,"publisher":"BSI British
+        Standards","content-domain":{"domain":[],"crossmark-restriction":false},"DOI":"10.3403\/30419344","type":"standard","created":{"date-parts":[[2023,2,6]],"date-time":"2023-02-06T21:30:15Z","timestamp":1675719015000},"approved":{"date-parts":[[2023,2,28]]},"source":"Crossref","is-referenced-by-count":0,"title":["Information
+        technology \ufffd Metadata registries (MDR)"],"prefix":"10.3403","member":"1988","deposited":{"date-parts":[[2023,2,6]],"date-time":"2023-02-06T21:30:34Z","timestamp":1675719034000},"score":0.0,"resource":{"primary":{"URL":"https:\/\/linkresolver.bsigroup.com\/junction\/resolve\/000000000030419344?restype=standard"}},"subtitle":["Part
+        32: Metamodel for concept system registration"],"issued":{"date-parts":[[null]]},"references-count":0,"URL":"http:\/\/dx.doi.org\/10.3403\/30419344"},{"indexed":{"date-parts":[[2023,2,7]],"date-time":"2023-02-07T20:13:38Z","timestamp":1675800818329},"publisher-location":"London","standards-body":{"name":"BSI
+        British Standards","acronym":"BSI"},"reference-count":0,"publisher":"BSI British
+        Standards","content-domain":{"domain":[],"crossmark-restriction":false},"DOI":"10.3403\/30181941","type":"standard","created":{"date-parts":[[2013,11,13]],"date-time":"2013-11-13T22:44:20Z","timestamp":1384382660000},"approved":{"date-parts":[[2010,8,31]]},"source":"Crossref","is-referenced-by-count":1,"title":["Surface
+        chemical analysis. Vocabulary"],"prefix":"10.3403","member":"1988","deposited":{"date-parts":[[2017,12,5]],"date-time":"2017-12-05T12:13:08Z","timestamp":1512475988000},"score":0.0,"resource":{"primary":{"URL":"https:\/\/linkresolver.bsigroup.com\/junction\/resolve\/000000000030181941?restype=standard"}},"subtitle":["Terms
+        used in scanning-probe microscopy"],"issued":{"date-parts":[[null]]},"references-count":0,"URL":"http:\/\/dx.doi.org\/10.3403\/30181941"},{"indexed":{"date-parts":[[2023,2,14]],"date-time":"2023-02-14T05:23:47Z","timestamp":1676352227413},"publisher-location":"London","standards-body":{"name":"BSI
+        British Standards","acronym":"BSI"},"reference-count":0,"publisher":"BSI British
+        Standards","content-domain":{"domain":[],"crossmark-restriction":false},"DOI":"10.3403\/30432535","type":"standard","created":{"date-parts":[[2023,2,13]],"date-time":"2023-02-13T21:30:16Z","timestamp":1676323816000},"approved":{"date-parts":[[2023,2,28]]},"source":"Crossref","is-referenced-by-count":0,"title":["Photovoltaic
+        cells"],"prefix":"10.3403","member":"1988","deposited":{"date-parts":[[2023,2,13]],"date-time":"2023-02-13T21:30:24Z","timestamp":1676323824000},"score":0.0,"resource":{"primary":{"URL":"https:\/\/linkresolver.bsigroup.com\/junction\/resolve\/000000000030432535?restype=standard"}},"subtitle":["Part
+        3: Measurement of current-voltage characteristics of bifacial photovoltaic
+        cells"],"issued":{"date-parts":[[null]]},"references-count":0,"URL":"http:\/\/dx.doi.org\/10.3403\/30432535"},{"indexed":{"date-parts":[[2023,2,14]],"date-time":"2023-02-14T05:23:59Z","timestamp":1676352239154},"publisher-location":"London","standards-body":{"name":"BSI
+        British Standards","acronym":"BSI"},"reference-count":0,"publisher":"BSI British
+        Standards","content-domain":{"domain":[],"crossmark-restriction":false},"DOI":"10.3403\/30391451u","type":"standard","created":{"date-parts":[[2023,2,13]],"date-time":"2023-02-13T21:30:16Z","timestamp":1676323816000},"approved":{"date-parts":[[2023,2,28]]},"source":"Crossref","is-referenced-by-count":0,"title":["Tracked
+        Changes. Occupational health and safety management systems \ufffd General
+        guidelines for the implementation of ISO 45001:2018"],"prefix":"10.3403","member":"1988","deposited":{"date-parts":[[2023,2,13]],"date-time":"2023-02-13T21:30:29Z","timestamp":1676323829000},"score":0.0,"resource":{"primary":{"URL":"https:\/\/linkresolver.bsigroup.com\/junction\/resolve\/000000000030391451?restype=undated"}},"subtitle":[""],"issued":{"date-parts":[[null]]},"references-count":0,"URL":"http:\/\/dx.doi.org\/10.3403\/30391451u"},{"indexed":{"date-parts":[[2023,2,14]],"date-time":"2023-02-14T05:22:47Z","timestamp":1676352167496},"publisher-location":"London","standards-body":{"name":"BSI
+        British Standards","acronym":"BSI"},"reference-count":0,"publisher":"BSI British
+        Standards","content-domain":{"domain":[],"crossmark-restriction":false},"DOI":"10.3403\/30427642","type":"standard","created":{"date-parts":[[2023,2,13]],"date-time":"2023-02-13T21:30:16Z","timestamp":1676323816000},"approved":{"date-parts":[[2023,2,28]]},"source":"Crossref","is-referenced-by-count":0,"title":["Stationary
+        source emissions \ufffd Quality assurance of automated measuring systems"],"prefix":"10.3403","member":"1988","deposited":{"date-parts":[[2023,2,13]],"date-time":"2023-02-13T21:30:26Z","timestamp":1676323826000},"score":0.0,"resource":{"primary":{"URL":"https:\/\/linkresolver.bsigroup.com\/junction\/resolve\/000000000030427642?restype=standard"}},"subtitle":[""],"issued":{"date-parts":[[null]]},"references-count":0,"URL":"http:\/\/dx.doi.org\/10.3403\/30427642"},{"indexed":{"date-parts":[[2023,2,14]],"date-time":"2023-02-14T05:21:59Z","timestamp":1676352119694},"publisher-location":"London","standards-body":{"name":"BSI
+        British Standards","acronym":"BSI"},"reference-count":0,"publisher":"BSI British
+        Standards","content-domain":{"domain":[],"crossmark-restriction":false},"DOI":"10.3403\/pdiectr60297-3","type":"standard","created":{"date-parts":[[2023,2,13]],"date-time":"2023-02-13T21:30:16Z","timestamp":1676323816000},"source":"Crossref","is-referenced-by-count":0,"title":["Mechanical
+        structures for electrical and electronic equipment \ufffd Dimensions of mechanical
+        structures of the 482,6 mm (19 in) series"],"prefix":"10.3403","member":"1988","deposited":{"date-parts":[[2023,2,13]],"date-time":"2023-02-13T21:30:22Z","timestamp":1676323822000},"score":0.0,"resource":{"primary":{"URL":"https:\/\/linkresolver.bsigroup.com\/junction\/resolve\/000000000000000000?restype=series&lookup=PD+IEC+TR+60297-3"}},"issued":{"date-parts":[[null]]},"references-count":0,"URL":"http:\/\/dx.doi.org\/10.3403\/pdiectr60297-3"},{"indexed":{"date-parts":[[2023,2,10]],"date-time":"2023-02-10T01:50:49Z","timestamp":1675993849666},"publisher-location":"London","standards-body":{"name":"BSI
+        British Standards","acronym":"BSI"},"reference-count":0,"publisher":"BSI British
+        Standards","content-domain":{"domain":[],"crossmark-restriction":false},"DOI":"10.3403\/30330644","type":"standard","created":{"date-parts":[[2016,11,2]],"date-time":"2016-11-02T16:03:20Z","timestamp":1478102600000},"approved":{"date-parts":[[2016,11,30]]},"source":"Crossref","is-referenced-by-count":1,"title":["Quality
+        management systems. Guidelines for the application of ISO 9001:2015"],"prefix":"10.3403","member":"1988","deposited":{"date-parts":[[2017,12,5]],"date-time":"2017-12-05T14:51:55Z","timestamp":1512485515000},"score":0.0,"resource":{"primary":{"URL":"https:\/\/linkresolver.bsigroup.com\/junction\/resolve\/000000000030351604?restype=standard"}},"subtitle":[""],"issued":{"date-parts":[[null]]},"references-count":0,"URL":"http:\/\/dx.doi.org\/10.3403\/30330644"},{"indexed":{"date-parts":[[2023,2,9]],"date-time":"2023-02-09T22:11:13Z","timestamp":1675980673064},"publisher-location":"London","standards-body":{"name":"BSI
+        British Standards","acronym":"BSI"},"reference-count":0,"publisher":"BSI British
+        Standards","content-domain":{"domain":[],"crossmark-restriction":false},"DOI":"10.3403\/03054911u","type":"standard","created":{"date-parts":[[2015,6,10]],"date-time":"2015-06-10T03:52:03Z","timestamp":1433908323000},"approved":{"date-parts":[[2023,2,28]]},"source":"Crossref","is-referenced-by-count":0,"title":["Plastics
+        \ufffd Polyamides \ufffd Determination of ?-caprolactam and ?-laurolactam
+        by gas chromatography"],"prefix":"10.3403","member":"1988","deposited":{"date-parts":[[2023,2,9]],"date-time":"2023-02-09T21:30:50Z","timestamp":1675978250000},"score":0.0,"resource":{"primary":{"URL":"https:\/\/linkresolver.bsigroup.com\/junction\/resolve\/000000000030176499?restype=undated"}},"subtitle":[""],"issued":{"date-parts":[[null]]},"references-count":0,"URL":"http:\/\/dx.doi.org\/10.3403\/03054911u"},{"indexed":{"date-parts":[[2023,2,9]],"date-time":"2023-02-09T22:10:38Z","timestamp":1675980638695},"publisher-location":"London","standards-body":{"name":"BSI
+        British Standards","acronym":"BSI"},"reference-count":0,"publisher":"BSI British
+        Standards","content-domain":{"domain":[],"crossmark-restriction":false},"DOI":"10.3403\/30211089u","type":"standard","created":{"date-parts":[[2015,6,10]],"date-time":"2015-06-10T00:07:25Z","timestamp":1433894845000},"approved":{"date-parts":[[2023,2,28]]},"source":"Crossref","is-referenced-by-count":0,"title":["Road
+        vehicles \ufffd Compressed natural gas (CNG) fuel system components"],"prefix":"10.3403","member":"1988","deposited":{"date-parts":[[2023,2,9]],"date-time":"2023-02-09T21:30:56Z","timestamp":1675978256000},"score":0.0,"resource":{"primary":{"URL":"https:\/\/linkresolver.bsigroup.com\/junction\/resolve\/000000000030315856?restype=undated"}},"subtitle":["Part
+        13: Pressure relief device (PRD)"],"issued":{"date-parts":[[null]]},"references-count":0,"URL":"http:\/\/dx.doi.org\/10.3403\/30211089u"},{"indexed":{"date-parts":[[2023,2,10]],"date-time":"2023-02-10T06:05:05Z","timestamp":1676009105472},"publisher-location":"London","standards-body":{"name":"BSI
+        British Standards","acronym":"BSI"},"reference-count":0,"publisher":"BSI British
+        Standards","content-domain":{"domain":[],"crossmark-restriction":false},"DOI":"10.3403\/30444534","type":"standard","created":{"date-parts":[[2023,2,9]],"date-time":"2023-02-09T21:30:32Z","timestamp":1675978232000},"approved":{"date-parts":[[2023,2,28]]},"source":"Crossref","is-referenced-by-count":0,"title":["Cloud
+        computing \ufffd Service level agreement (SLA) framework"],"prefix":"10.3403","member":"1988","deposited":{"date-parts":[[2023,2,9]],"date-time":"2023-02-09T21:30:51Z","timestamp":1675978251000},"score":0.0,"resource":{"primary":{"URL":"https:\/\/linkresolver.bsigroup.com\/junction\/resolve\/000000000030444534?restype=standard"}},"subtitle":["Part
+        2: Metric model"],"issued":{"date-parts":[[null]]},"references-count":0,"URL":"http:\/\/dx.doi.org\/10.3403\/30444534"},{"indexed":{"date-parts":[[2023,2,10]],"date-time":"2023-02-10T05:59:23Z","timestamp":1676008763373},"publisher-location":"London","standards-body":{"name":"BSI
+        British Standards","acronym":"BSI"},"reference-count":0,"publisher":"BSI British
+        Standards","content-domain":{"domain":[],"crossmark-restriction":false},"DOI":"10.3403\/30439998","type":"standard","created":{"date-parts":[[2023,2,8]],"date-time":"2023-02-08T21:30:19Z","timestamp":1675891819000},"approved":{"date-parts":[[2023,2,28]]},"source":"Crossref","is-referenced-by-count":0,"title":["Wind
+        energy generation systems"],"prefix":"10.3403","member":"1988","deposited":{"date-parts":[[2023,2,9]],"date-time":"2023-02-09T21:30:44Z","timestamp":1675978244000},"score":0.0,"resource":{"primary":{"URL":"https:\/\/linkresolver.bsigroup.com\/junction\/resolve\/000000000030439998?restype=standard"}},"subtitle":["Part
+        12: Power performance measurements of electricity producing wind turbines
+        \ufffd Overview"],"issued":{"date-parts":[[null]]},"references-count":0,"URL":"http:\/\/dx.doi.org\/10.3403\/30439998"},{"indexed":{"date-parts":[[2023,2,10]],"date-time":"2023-02-10T06:05:20Z","timestamp":1676009120704},"publisher-location":"London","standards-body":{"name":"BSI
+        British Standards","acronym":"BSI"},"reference-count":0,"publisher":"BSI British
+        Standards","content-domain":{"domain":[],"crossmark-restriction":false},"DOI":"10.3403\/30402376","type":"standard","created":{"date-parts":[[2023,2,9]],"date-time":"2023-02-09T21:30:32Z","timestamp":1675978232000},"approved":{"date-parts":[[2023,2,28]]},"source":"Crossref","is-referenced-by-count":0,"title":["Energy
+        management and energy savings \ufffd Guidance for net zero energy in operations
+        using an ISO 50001 energy management system"],"prefix":"10.3403","member":"1988","deposited":{"date-parts":[[2023,2,9]],"date-time":"2023-02-09T21:30:39Z","timestamp":1675978239000},"score":0.0,"resource":{"primary":{"URL":"https:\/\/linkresolver.bsigroup.com\/junction\/resolve\/000000000030402376?restype=standard"}},"subtitle":[""],"issued":{"date-parts":[[null]]},"references-count":0,"URL":"http:\/\/dx.doi.org\/10.3403\/30402376"}],"items-per-page":20,"query":{"start-index":0,"search-terms":null}}}'
+  recorded_at: 2023-02-20 21:58:44 GMT
+  recorded_with: vcr/1.2.0, webmockr/0.8.2

@@ -44,7 +44,7 @@ Suggests:
     vcr (>= 0.2.6),
     bibtex,
     withr
-RoxygenNote: 7.2.0
+RoxygenNote: 7.2.3
 X-schema.org-applicationCategory: Literature
 X-schema.org-keywords: text-ming, literature, pdf, xml, publications, citations, full-text, TDM, Crossref
 X-schema.org-isPartOf: https://ropensci.org

@@ -55,3 +55,51 @@ test_that("cr_members fails correctly", {
                  "/members - This route does not support facet")
   })
 })
+
+test_that("cr_members accepts filter examples", {
+  vcr::use_cassette("cr_members_filter_examples", {
+    
+    # Accepts named character vector value
+    a <- cr_members(1988, 
+                    works=TRUE, 
+                    filter=c(from_index_date='2023-02-06'))
+    
+    # Accepts multiple named character vector values
+    b <- cr_members(1988,
+                    works=TRUE, 
+                    filter=c(from_index_date='2023-02-06', 
+                             until_index_date='2023-02-14'))
+    
+    # Accepts CrossRef documented named list value, backtick escaped
+    c <- cr_members(1988, 
+                    works=TRUE, 
+                    filter=list(`from-index-date`='2023-02-06'))
+    
+    # Accepts multiple list values
+    d <- cr_members(1988, 
+                    works=TRUE, 
+                    filter=list(`from-index-date`='2023-02-06', 
+                                `until-index-date`='2023-02-14'))
+    
+    # Validate class
+    expect_type(a, "list")
+    expect_type(b, "list")
+    expect_type(c, "list")
+    expect_type(d, "list")
+    
+    expect_s3_class(a$meta, "data.frame")
+    expect_s3_class(b$meta, "data.frame")
+    expect_s3_class(c$meta, "data.frame")
+    expect_s3_class(d$meta, "data.frame")
+    
+    expect_s3_class(a$data, "data.frame")
+    expect_s3_class(b$data, "data.frame")
+    expect_s3_class(c$data, "data.frame")
+    expect_s3_class(d$data, "data.frame")
+    
+    expect_type(a$data$title, "character")
+    expect_type(b$data$title, "character")
+    expect_type(c$data$title, "character")
+    expect_type(d$data$title, "character")
+  })
+})

@@ -71,6 +71,12 @@
 #' # select only certain fields to return
 #' res <- cr_members(98, works = TRUE, select = c('DOI', 'title'))
 #' names(res$data)
+#' 
+#' # Passing a filter parameter as named value to query for index updates
+#' ## Using backtick escaped CrossRef documented filter in list of named values
+#' cr_members(1988, works=TRUE, filter=list(`from-index-date`='2023-02-06'))
+#' ## Using rcrossref naming convention in named character vector
+#' cr_members(1988, works=TRUE, filter=c(from_index_date='2023-02-06'))
 #' }
 `cr_members` <- function(member_ids = NULL, query = NULL, filter = NULL, offset = NULL,
   limit = NULL, sample = NULL, sort = NULL, order = NULL, facet=FALSE, works = FALSE,
