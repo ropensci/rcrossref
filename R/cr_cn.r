@@ -119,114 +119,19 @@
                                 "crossref-xml", "datacite-xml", "bibentry",
                                 "crossref-tdm", "onix-xml"))
 
-  cn <- function(doi, ...){
-
+  cn <- function(doi, ...) {
     if (cache == TRUE) {
-    req <- paste("cr_cn", doi, format, style, locale, url, paste(unlist(list(...)), sep = "__"), sep = "__")
-    rlang::env_cache(
-      env = cr_cache_env, nm = req,
-      default = {
-        agency_id <- suppressWarnings(GET_agency_id(doi))
-        if (is.null(agency_id)) {
-          warning(doi, " agency not found - proceeding with 'crossref' ...",
-                  call. = FALSE)
-          agency_id <- "crossref"
-        }
-
-        assert(url, "character")
-        if (is.null(url)) url <- "https://doi.org"
-        # need separate setup for citation.crosscite.org vs. others
-        args <- list()
-        if (grepl("citation.crosscite.org", url)) {
-          args <- cr_compact(list(doi = doi, lang = locale, style = style))
-        } else {
-          url <- file.path(url, doi)
-        }
-
-        # check cn data provider
-        if (!format %in% supported_cn_types[[agency_id]]) {
-          stop(paste0("Format '", format, "' for '", doi,
-                      "' is not supported by the DOI registration agency: '",
-                      agency_id, "'.\nTry one of the following formats: ",
-                      paste0(supported_cn_types[[agency_id]], collapse = ", ")))
-        }
-        pick <- c(
-          "rdf-xml" = "application/rdf+xml",
-          "turtle" = "text/turtle",
-          "citeproc-json" =
-            "transform/application/vnd.citationstyles.csl+json",
-          "citeproc-json-ish" = "application/vnd.citationstyles.csl+json",
-          "text" = "text/x-bibliography",
-          "ris" = "application/x-research-info-systems",
-          "bibtex" = "application/x-bibtex",
-          "crossref-xml" = "application/vnd.crossref.unixref+xml",
-          "datacite-xml" = "application/vnd.datacite.datacite+xml",
-          "bibentry" = "application/x-bibtex",
-          "crossref-tdm" = "application/vnd.crossref.unixsd+xml",
-          "onix-xml" = "application/vnd.medra.onixdoi+xml")
-        type <- pick[[format]]
-        if (format == "citeproc-json") {
-          cli <- crul::HttpClient$new(
-            url = file.path("https://api.crossref.org/works", doi, type),
-            headers = list(
-              `User-Agent` = rcrossref_ua(), `X-USER-AGENT` = rcrossref_ua()
-            )
-          )
-          response <- cli$get(...)
-        } else {
-          if (format == "text") {
-            type <- paste(type, "; style = ", style, "; locale = ", locale,
-                          sep = "")
-          }
-          cli <- crul::HttpClient$new(
-            url = url,
-            opts = list(followlocation = 1),
-            headers = list(
-              `User-Agent` = rcrossref_ua(), `X-USER-AGENT` = rcrossref_ua(),
-              Accept = type
-            )
-          )
-          response <- cli$get(query = args, ...)
-        }
-        warn_status(response)
-        if (response$status_code < 202) {
-          select <- c(
-            "rdf-xml" = "text/xml",
-            "turtle" = "text/plain",
-            "citeproc-json" = "application/json",
-            "citeproc-json-ish" = "application/json",
-            "text" = "text/plain",
-            "ris" = "text/plain",
-            "bibtex" = "text/plain",
-            "crossref-xml" = "text/xml",
-            "datacite-xml" = "text/xml",
-            "bibentry" = "text/plain",
-            "crossref-tdm" = "text/xml",
-            "onix-xml" = "text/xml")
-          parser <- select[[format]]
-          if (raw) {
-            response$parse("UTF-8")
-          } else {
-            out <- response$parse("UTF-8")
-            if (format == "text") {
-              out <- gsub("\n", "", out)
-            }
-            if (format == "bibentry") {
-              out <- parse_bibtex(out)
-            }
-            if (parser == "application/json") {
-              out <- jsonlite::fromJSON(out)
-            }
-            if (parser == "text/xml") {
-              out <- xml2::read_xml(out)
-            }
-            out
-          }
-        }
-      }
-    )
+      req <- paste("cr_cn", doi, format, style, locale, url, paste(unlist(list(...)), sep = "__"), sep = "__")
+      rlang::env_cache(
+        env = cr_cache_env, nm = req,
+        default = cn_do(doi, ...)
+      )
     } else {
+    cn_do(doi, ...)
+    }
+  }
 
+  cn_do <- function(doi, ...){
     agency_id <- suppressWarnings(GET_agency_id(doi))
     if (is.null(agency_id)) {
       warning(doi, " agency not found - proceeding with 'crossref' ...",
@@ -325,7 +230,7 @@
       }
     }
   }
-  }
+
 
   if (length(dois) > 1) {
     llply(dois, function(z, ...) {
