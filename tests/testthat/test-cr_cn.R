@@ -7,7 +7,7 @@ test_that("cr_cn citeproc-json", {
     expect_match(b$`container-title`, "Science")
   })
 })
-  
+
 test_that("cr_cn bibtex", {
   skip_if_not_installed("bibtex")
   vcr::use_cassette("cr_cn_bibentry", {
@@ -88,3 +88,18 @@ test_that("cr_cn works with different URLs", {
     )
   }, preserve_exact_body_bytes = TRUE, match_requests_on = c("method"))
 })
+
+test_that("cr_cn cache works", {
+  vcr::use_cassette("cr_cn_cache", {
+    # reset cache
+    rm(list = ls(cr_cache_env), envir = cr_cache_env)
+    t1 <- system.time(b1 <- cr_cn(dois = "10.1126/science.169.3946.635", format = "citeproc-json", cache = TRUE))
+    t2 <- system.time(b2 <- cr_cn(dois = "10.1126/science.169.3946.635", format = "citeproc-json", cache = TRUE))
+    # compare timing to ensure that caching actually happened
+    expect_gt(t1[3], t2[3])
+    expect_identical(b1, b2)
+    expect_is(b1, "list")
+    expect_match(b1$`container-title`, "Science")
+  })
+})
+
