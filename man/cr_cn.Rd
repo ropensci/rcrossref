@@ -12,6 +12,7 @@ cr_cn(
   raw = FALSE,
   .progress = "none",
   url = NULL,
+  cache = FALSE,
   ...
 )
 }
@@ -43,6 +44,9 @@ non-boolean is coerced to \code{FALSE}.}
 
 \item{url}{(character) Base URL for the content negotiation request.
 Default: "https://doi.org"}
+
+\item{cache}{(logical) Should requests be cached and/or retrieved from
+the cache? Note that the cache only persists while the package is loaded.}
 
 \item{...}{Named parameters passed on to \code{\link[crul]{verb-GET}}}
 }
@@ -131,9 +135,13 @@ cr_cn("10.1890/0012-9615(1999)069[0569:EDILSA]2.0.CO;2")
 # Use a different base url
 cr_cn("10.1126/science.169.3946.635", "text", url = "http://dx.doi.org")
 cr_cn("10.1126/science.169.3946.635", "text", "heredity", url = "http://dx.doi.org")
-cr_cn("10.5284/1011335", url = "https://citation.crosscite.org/format", 
+cr_cn("10.5284/1011335", url = "https://citation.crosscite.org/format",
    style = "oikos")
-cr_cn("10.5284/1011335", url = "https://citation.crosscite.org/format", 
+cr_cn("10.5284/1011335", url = "https://citation.crosscite.org/format",
    style = "plant-cell-and-environment")
+
+# A temporary cache can be used to avoid sending the same request repeatedly
+# within the same R session.
+cr_cn("10.5284/1011335", cache = TRUE)
 }
 }
