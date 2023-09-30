@@ -18,6 +18,8 @@
 #' @param parse (logical) Whether to output json `FALSE` or parse to
 #' list `TRUE`. Default: `FALSE`
 #' @param async (logical) use async HTTP requests. Default: `FALSE`
+#' @param cache (logical) Should requests be cached and/or retrieved from
+#' the cache? Note that the cache only persists while the package is loaded.
 #'
 #' @section Beware:
 #' The API will only work for CrossRef DOIs.
@@ -100,7 +102,7 @@
 #' cr_works(query="NSF", cursor = "*", cursor_max = 300, limit = 100,
 #'    facet = TRUE)
 #' ## with optional progress bar
-#' x <- cr_works(query="NSF", cursor = "*", cursor_max = 1200, limit = 200, 
+#' x <- cr_works(query="NSF", cursor = "*", cursor_max = 1200, limit = 200,
 #'   .progress = TRUE)
 #'
 #' # Low level function - does no parsing to data.frame, get json or a list
@@ -145,52 +147,89 @@
 #' system.time(lapply(queries, function(z) cr_works(query = z)))
 #' }
 
-cr_works <- function(dois = NULL, query = NULL, filter = NULL, offset = NULL,
-  limit = NULL, sample = NULL, sort = NULL, order = NULL, facet=FALSE,
-  cursor = NULL, cursor_max = 5000, .progress="none", flq = NULL,
-  select = NULL, async = FALSE, ...) {
-
+cr_works <- function(
+    dois = NULL, query = NULL, filter = NULL, offset = NULL,
+    limit = NULL, sample = NULL, sort = NULL, order = NULL, facet = FALSE,
+    cursor = NULL, cursor_max = 5000, .progress = "none", flq = NULL,
+    select = NULL, async = FALSE, cache = FALSE, ...) {
   if (cursor_max != as.integer(cursor_max)) {
     stop("cursor_max must be an integer", call. = FALSE)
   }
-  args <- prep_args(query, filter, offset, limit, sample, sort, order,
-                    facet, cursor, flq, select)
+
+  args <- prep_args(
+    query, filter, offset, limit, sample, sort, order,
+    facet, cursor, flq, select
+  )
 
   stopifnot(is.logical(async))
-  if (async) {
-    return(cr_async("works", c(dois, args), ...))
+
+  works_do <- function(dois = NULL, query = NULL, filter = NULL, offset = NULL,
+                       limit = NULL, sample = NULL, sort = NULL, order = NULL, facet = FALSE,
+                       cursor = NULL, cursor_max = 5000, .progress = "none", flq = NULL,
+                       select = NULL, async = FALSE, cache = FALSE, ...) {
+    if (async) {
+      return(cr_async("works", c(dois, args), ...))
+    }
+
+    if (length(dois) > 1) {
+      res <- llply(dois, cr_get_cursor,
+        args = args, cursor = cursor,
+        cursor_max = cursor_max, .progress = .progress, ...
+      )
+      res <- lapply(res, "[[", "message")
+      res <- lapply(res, parse_works)
+      df <- tibble::as_tibble(bind_rows(res))
+      # exclude rows with empty DOI value until CrossRef API supports
+      # input validation
+      if (nrow(df[df$doi == "", ]) > 0) {
+        warning("only data with valid CrossRef DOIs returned", call. = FALSE)
+      }
+      df <- df[!df$doi == "", ]
+      list(meta = NULL, data = df, facets = NULL)
+    } else {
+      tmp <- cr_get_cursor(dois,
+        args = args, cursor = cursor,
+        cursor_max = cursor_max, .progress, ...
+      )
+      if (is.null(dois)) {
+        if (!is.null(cursor) || is.null(tmp$message)) {
+          tmp
+        } else {
+          meta <- parse_meta(tmp)
+          list(
+            meta = meta,
+            data = tibble::as_tibble(bind_rows(lapply(tmp$message$items, parse_works))),
+            facets = parse_facets(tmp$message$facets)
+          )
+        }
+      } else {
+        list(meta = NULL, data = tibble::as_tibble(parse_works(tmp$message)), facets = NULL)
+      }
+    }
   }
 
-  if (length(dois) > 1) {
-    res <- llply(dois, cr_get_cursor, args = args, cursor = cursor,
-                 cursor_max = cursor_max, .progress = .progress, ...)
-    res <- lapply(res, "[[", "message")
-    res <- lapply(res, parse_works)
-    df <- tibble::as_tibble(bind_rows(res))
-    #exclude rows with empty DOI value until CrossRef API supports
-    #input validation
-    if (nrow(df[df$doi == "", ]) > 0) {
-      warning("only data with valid CrossRef DOIs returned",  call. = FALSE)
-    }
-    df <- df[!df$doi == "", ]
-    list(meta = NULL, data = df, facets = NULL)
+  if (cache == TRUE) {
+    req <- paste("cr_works", paste(dois, collapse = "__"), query, filter, offset, limit, sample,
+      sort, order, facet, cursor, cursor_max, .progress, flq, select,
+      paste(unlist(list(...)), sep = "__"),
+      sep = "__"
+    )
+    rlang::env_cache(
+      env = cr_cache_env, nm = req,
+      default = works_do(dois, query, filter, offset, limit, sample,
+                         sort, order, facet, cursor, cursor_max, .progress, flq,
+                         select, async, ...)
+    )
   } else {
-    tmp <- cr_get_cursor(dois, args = args, cursor = cursor,
-                         cursor_max = cursor_max, .progress, ...)
-    if (is.null(dois)) {
-      if (!is.null(cursor) || is.null(tmp$message)) {
-        tmp
-      } else {
-        meta <- parse_meta(tmp)
-        list(meta = meta,
-             data = tibble::as_tibble(bind_rows(lapply(tmp$message$items, parse_works))),
-             facets = parse_facets(tmp$message$facets))
-      }
-    } else {
-      list(meta = NULL, data = tibble::as_tibble(parse_works(tmp$message)), facets = NULL)
-    }
+    works_do(
+      dois, query, filter, offset, limit, sample,
+      sort, order, facet, cursor, cursor_max, .progress, flq, select, async,
+      ...
+    )
   }
 }
+
+
 
 #' @export
 #' @rdname cr_works
