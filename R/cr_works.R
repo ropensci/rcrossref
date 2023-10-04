@@ -214,6 +214,16 @@ cr_works <- function(
       paste(unlist(list(...)), sep = "__"),
       sep = "__"
     )
+
+    if (object.size(req) > 10000) {
+      warning("Request call is too large to be cached (likely because many DOIs at once are requested). Request will be executed with cache = FALSE. Split into multiple calls to cache.")
+      works_do(
+        dois, query, filter, offset, limit, sample,
+        sort, order, facet, cursor, cursor_max, .progress, flq, select, async,
+        ...
+      )
+    }
+
     rlang::env_cache(
       env = cr_cache_env, nm = req,
       default = works_do(dois, query, filter, offset, limit, sample,

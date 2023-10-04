@@ -1,3 +1,10 @@
+rcrossref 1.2.1
+===============
+
+### MINOR IMPROVEMENTS
+* Requests can now be cached (for a single session) with `cr_works`, `cr_abstract` and `cr_cn` by setting `cache = TRUE`
+
+
 rcrossref 1.2.0
 ===============
 
