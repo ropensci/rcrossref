@@ -226,7 +226,7 @@ cr_journals_("2167-8359", works = TRUE, cursor = "*",
 cr_journals("2167-8359", works = TRUE, flq = c(`query.author` = 'Jane'))
 
 # select only certain fields to return
-res <- cr_journals('2167-8359', works = TRUE, 
+res <- cr_journals('2167-8359', works = TRUE,
   select = c('DOI', 'title'))
 names(res$data)
 }
