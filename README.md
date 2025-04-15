@@ -10,11 +10,11 @@ rcrossref: R interface to CrossRef APIs
 [![rstudio mirror downloads](https://cranlogs.r-pkg.org/badges/rcrossref)](https://github.com/r-hub/cranlogs.app)
 [![cran version](https://www.r-pkg.org/badges/version/rcrossref)](https://cran.r-project.org/package=rcrossref)
 
-## CrossRef documentation
+## Crossref documentation
 
-* Crossref API: https://github.com/CrossRef/rest-api-doc#readme
-* Crossref's API issue tracker: https://gitlab.com/crossref/issues
-* Crossref metadata search API: https://www.crossref.org/labs/crossref-metadata-search/
+* Crossref API: https://api.crossref.org
+* Crossref's API issue tracker: https://crossref.atlassian.net/
+* Crossref metadata search API: https://search.crossref.org/
 * Crossref DOI Content Negotiation: https://citation.crosscite.org/docs.html
 * Crossref Text and Data Mining (TDM) Services: https://www.crossref.org/education/retrieve-metadata/rest-api/text-and-data-mining/
 
