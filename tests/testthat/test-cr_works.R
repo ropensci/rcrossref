@@ -230,7 +230,7 @@ test_that("cr_works fails well: arguments that dont require http requests", {
   expect_error(cr_works(offset = 'foo'), "offset value illegal")
 
   expect_error(cr_works(sample = 'foo'), "sample value illegal")
-  
+
   expect_error(cr_works(async = 5), "is not TRUE")
 })
 
@@ -240,4 +240,29 @@ test_that("content domain parsing fix", {
   vcr::use_cassette("cr_works_no_content_domain_fail", {
     expect_is(cr_works(dois = "10.7287/peerj.3819v0.1/reviews/2"), "list")
   })
+})
+
+test_that("cr_works cache works", {
+  #vcr::use_cassette("cr_works_cache", { # Error with HTTP request here, but apart from that, test works
+    ## With query
+    # reset cache
+    rm(list = ls(cr_cache_env), envir = cr_cache_env)
+    t1 <- system.time(b1 <- cr_works(query="NSF", cache = TRUE))
+    t2 <- system.time(b2 <- cr_works(query="NSF", cache = TRUE))
+    # compare timing to ensure that caching actually happened
+    expect_gt(t1[3], t2[3])
+    expect_identical(b1, b2)
+    expect_is(b1, "list")
+
+    ## With multiple DOIs
+    # reset cache
+    rm(list = ls(cr_cache_env), envir = cr_cache_env)
+    t1 <- system.time(b1 <- cr_works(dois = c("10.1037/0022-3514.45.2.357", "10.1002/9781118719244"), cache = TRUE))
+    t2 <- system.time(b2 <- cr_works(dois = c("10.1037/0022-3514.45.2.357", "10.1002/9781118719244"), cache = TRUE))
+    # compare timing to ensure that caching actually happened
+    expect_gt(t1[3], t2[3])
+    expect_identical(b1, b2)
+    expect_is(b1, "list")
+    expect_match(b1$data$`container.title`[1], "Journal of Personality and Social Psychology")
+ # })
 })

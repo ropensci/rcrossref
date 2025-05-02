@@ -4,10 +4,13 @@
 \alias{cr_abstract}
 \title{Get abstract}
 \usage{
-cr_abstract(doi, ...)
+cr_abstract(doi, cache = FALSE, ...)
 }
 \arguments{
 \item{doi}{(character) a DOI, required.}
+
+\item{cache}{(logical) Should requests be cached and/or retrieved from
+the cache? Note that the cache only persists while the package is loaded.}
 
 \item{...}{Named parameters passed on to \code{\link[crul]{HttpClient}}}
 }

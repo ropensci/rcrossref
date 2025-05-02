@@ -21,6 +21,7 @@ cr_works(
   flq = NULL,
   select = NULL,
   async = FALSE,
+  cache = FALSE,
   ...
 )
 
@@ -137,6 +138,9 @@ are returned)}
 
 \item{async}{(logical) use async HTTP requests. Default: \code{FALSE}}
 
+\item{cache}{(logical) Should requests be cached and/or retrieved from
+the cache? Note that the cache only persists while the package is loaded.}
+
 \item{...}{Named parameters passed on to \code{\link[crul]{verb-GET}}}
 
 \item{parse}{(logical) Whether to output json \code{FALSE} or parse to
@@ -246,7 +250,7 @@ cr_works(query="NSF", cursor = "*", cursor_max = 300, limit = 100)
 cr_works(query="NSF", cursor = "*", cursor_max = 300, limit = 100,
    facet = TRUE)
 ## with optional progress bar
-x <- cr_works(query="NSF", cursor = "*", cursor_max = 1200, limit = 200, 
+x <- cr_works(query="NSF", cursor = "*", cursor_max = 1200, limit = 200,
   .progress = TRUE)
 
 # Low level function - does no parsing to data.frame, get json or a list
