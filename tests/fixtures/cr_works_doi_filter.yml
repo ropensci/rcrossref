@@ -1,0 +1,549 @@
+http_interactions:
+- request:
+    method: GET
+    uri: https://api.crossref.org/works?filter=doi%3A10.1007%2Fs11192-025-05390-3%2Cdoi%3A10.1162%2Fqss_a_00348%2Cdoi%3A10.1007%2F10452.1573-5125&rows=3
+  response:
+    status: 200
+    headers:
+      access-control-allow-headers: X-Requested-With, Accept, Accept-Encoding, Accept-Charset,
+        Accept-Language, Accept-Ranges, Cache-Control
+      access-control-allow-origin: '*'
+      access-control-expose-headers: Link
+      content-encoding: gzip
+      content-length: '17959'
+      content-type: application/json
+      date: Mon, 11 Aug 2025 14:50:00 GMT
+      permissions-policy: interest-cohort=()
+      server: Jetty(9.4.40.v20210413)
+      set-cookie:
+      - AWSALB=7WIsOqN485n5Ru8mbnCbSjPERfwYkV1fv3CmQOtmfD0RbqXNPO+x619nxjdCQMAczhThayWliZ8aMcxaE1DS2SQ4hpeDdFKWml5UicVxfeWaGdXg43RS9iaoCQe8;
+        Expires=Mon, 18 Aug 2025 14:49:58 GMT; Path=/
+      - AWSALBCORS=7WIsOqN485n5Ru8mbnCbSjPERfwYkV1fv3CmQOtmfD0RbqXNPO+x619nxjdCQMAczhThayWliZ8aMcxaE1DS2SQ4hpeDdFKWml5UicVxfeWaGdXg43RS9iaoCQe8;
+        Expires=Mon, 18 Aug 2025 14:49:58 GMT; Path=/; SameSite=None
+      status: 'HTTP/2 200 '
+      vary: Accept-Encoding
+      x-api-pool: polite
+      x-rate-limit-interval: 1s
+      x-rate-limit-limit: '50'
+    body:
+      string: '{"status":"ok","message-type":"work-list","message-version":"1.0.0","message":{"facets":{},"total-results":3,"items":[{"indexed":{"date-parts":[[2025,8,2]],"date-time":"2025-08-02T04:05:53Z","timestamp":1754107553935,"version":"3.40.3"},"reference-count":85,"publisher":"MIT
+        Press","license":[{"start":{"date-parts":[[2025,1,14]],"date-time":"2025-01-14T00:00:00Z","timestamp":1736812800000},"content-version":"vor","delay-in-days":13,"URL":"https:\/\/creativecommons.org\/licenses\/by\/4.0\/"}],"funder":[{"DOI":"10.13039\/501100001659","name":"Deutsche
+        Forschungsgemeinschaft","doi-asserted-by":"publisher","award":["416115939"],"id":[{"id":"10.13039\/501100001659","id-type":"DOI","asserted-by":"publisher"}]}],"content-domain":{"domain":["direct.mit.edu"],"crossmark-restriction":true},"published-print":{"date-parts":[[2025,3,12]]},"abstract":"<jats:title>Abstract<\/jats:title>\n               <jats:p>The
+        ongoing controversy surrounding transformative agreements, which aim to transition
+        subscription-based journal publishing to full open access, highlights the
+        need for large-scale studies assessing the impact of these agreements on hybrid
+        open access. By combining multiple open data sources, including cOAlition
+        S Journal Checker, Crossref, and OpenAlex, we present a novel approach that
+        analyzes over 700 agreements. Results suggest a strong growth in open access,
+        from 4.3% in 2018 to 15% in 2022. Over 5 years, 11,189 hybrid journals provided
+        open access to 742,369 out of 8,146,958 articles (9.1%). Authors who could
+        make use of transformative agreements contributed 328,957 open access articles
+        (44%) during this period, reaching a peak in 2022 with 143,615 out of 249,511
+        open access articles (58%). While this trend was predominantly driven by the
+        three commercial publishers Elsevier, Springer Nature, and Wiley, open access
+        uptake varied substantially across journals, publishers, disciplines, and
+        countries. In particular, the OECD and BRICS areas revealed different publication
+        trends. In conclusion, this study suggests that current levels of implementation
+        of transformative agreements are insufficient to bring about a large-scale
+        transition to full open access.<\/jats:p>","DOI":"10.1162\/qss_a_00348","type":"journal-article","created":{"date-parts":[[2025,1,14]],"date-time":"2025-01-14T18:24:38Z","timestamp":1736879078000},"page":"242-262","update-policy":"https:\/\/doi.org\/10.1162\/mitpressjournals.corrections.policy","source":"Crossref","is-referenced-by-count":4,"title":["How
+        open are hybrid journals included in transformative agreements?"],"prefix":"10.1162","volume":"6","author":[{"ORCID":"https:\/\/orcid.org\/0000-0001-5105-1463","authenticated-orcid":true,"given":"Najko","family":"Jahn","sequence":"first","affiliation":[{"name":"G\u00f6ttingen
+        State and University Library, University of G\u00f6ttingen, G\u00f6ttingen,
+        Germany"}]}],"member":"281","published-online":{"date-parts":[[2025,3,12]]},"reference":[{"issue":"8","key":"2025032610360375100_bib1","doi-asserted-by":"publisher","first-page":"6761","DOI":"10.1007\/s11192-021-04059-x","article-title":"Publication
+        patterns\u2019 changes due to the COVID-19 pandemic: A longitudinal and short-term
+        scientometric analysis","volume":"126","author":"Aviv-Reuven","year":"2021","journal-title":"Scientometrics"},{"volume-title":"The
+        Budapest Open Access Initiative: 20th anniversary recommendations","year":"2022","author":"Babini","key":"2025032610360375100_bib2"},{"issue":"4","key":"2025032610360375100_bib3","doi-asserted-by":"publisher","first-page":"67","DOI":"10.23974\/ijol.2024.vol8.4.341","article-title":"Impact
+        of transformative agreements on publication patterns: An analysis based on
+        agreements from the ESAC registry","volume":"8","author":"Bakker","year":"2024","journal-title":"International
+        Journal of Librarianship"},{"issue":"26","key":"2025032610360375100_bib4","doi-asserted-by":"publisher","first-page":"9425","DOI":"10.1073\/pnas.1403006111","article-title":"Evaluating
+        big deal journal bundles","volume":"111","author":"Bergstrom","year":"2014","journal-title":"Proceedings
+        of the National Academy of Sciences"},{"issue":"8","key":"2025032610360375100_bib5","doi-asserted-by":"publisher","first-page":"1496","DOI":"10.1002\/asi.22709","article-title":"The
+        hybrid model for open access publication of scholarly articles: A failed experiment?","volume":"63","author":"Bj\u00f6rk","year":"2012","journal-title":"Journal
+        of the American Society for Information Science and Technology"},{"key":"2025032610360375100_bib6","doi-asserted-by":"publisher","first-page":"e3878","DOI":"10.7717\/peerj.3878","article-title":"Growth
+        of hybrid open access, 2009\u20132016","volume":"5","author":"Bj\u00f6rk","year":"2017","journal-title":"PeerJ"},{"issue":"2","key":"2025032610360375100_bib7","doi-asserted-by":"publisher","first-page":"93","DOI":"10.1087\/20140203","article-title":"How
+        research funders can finance APCs in full OA and hybrid journals","volume":"27","author":"Bj\u00f6rk","year":"2014","journal-title":"Learned
+        Publishing"},{"issue":"3","key":"2025032610360375100_bib8","doi-asserted-by":"publisher","first-page":"359","DOI":"10.1002\/leap.1558","article-title":"Article
+        processing charges for open access journal publishing: A review","volume":"36","author":"Borrego","year":"2023","journal-title":"Learned
+        Publishing"},{"issue":"2","key":"2025032610360375100_bib9","doi-asserted-by":"publisher","first-page":"216","DOI":"10.1002\/leap.1347","article-title":"Transformative
+        agreements: Do they pave the way to open access?","volume":"34","author":"Borrego","year":"2021","journal-title":"Learned
+        Publishing"},{"key":"2025032610360375100_bib10","doi-asserted-by":"publisher","DOI":"10.5281\/zenodo.4558704","article-title":"OA
+        diamond journals study. Part 1: Findings","author":"Bosman","year":"2021","journal-title":"Zenodo"},{"key":"2025032610360375100_bib11","doi-asserted-by":"publisher","first-page":"16","DOI":"10.1629\/uksg.545","article-title":"Advancing
+        open access in the Netherlands after 2020: From quantity to quality","volume":"34","author":"Bosman","year":"2021","journal-title":"Insights"},{"key":"2025032610360375100_bib12","doi-asserted-by":"publisher","DOI":"10.1126\/science.abi5505","article-title":"California
+        universities and Elsevier make up, ink big open-access deal","author":"Brainard","year":"2021","journal-title":"Science"},{"key":"2025032610360375100_bib13","doi-asserted-by":"publisher","DOI":"10.1126\/science.adj3282","article-title":"\u201cTransformative\u201d
+        journals get booted for switching to open access too slowly","author":"Brainard","year":"2023","journal-title":"Science"},{"key":"2025032610360375100_bib14","doi-asserted-by":"publisher","DOI":"10.5281\/zenodo.10787392","article-title":"A
+        review of transitional agreements in the UK","author":"Brayman","year":"2024","journal-title":"Zenodo"},{"key":"2025032610360375100_bib15","doi-asserted-by":"publisher","DOI":"10.4119\/unibi\/2961544","volume-title":"ISSN-matching
+        of Gold OA journals (ISSN-GOLD-OA) 5.0","author":"Bruns","year":"2022"},{"issue":"4","key":"2025032610360375100_bib16","doi-asserted-by":"publisher","first-page":"778","DOI":"10.1162\/qss_a_00272","article-title":"The
+        oligopoly\u2019s shift to open access: How the big five academic publishers
+        profit from article processing charges","volume":"4","author":"Butler","year":"2023","journal-title":"Quantitative
+        Science Studies"},{"key":"2025032610360375100_bib17","article-title":"How
+        are transformative agreements transforming libraries?","volume-title":"87th
+        IFLA World Library and Information Congress (WLIC)","author":"Campbell","year":"2022"},{"issue":"1","key":"2025032610360375100_bib18","doi-asserted-by":"publisher","first-page":"76","DOI":"10.1162\/qss_a_00288","article-title":"Examining
+        the quality of the corresponding authorship field in Web of Science and Scopus","volume":"5","author":"Chinchilla-Rodr\u00edguez","year":"2024","journal-title":"Quantitative
+        Science Studies"},{"volume-title":"Open access publishing\u2014Models and
+        attributes","year":"2010","author":"Dallmeier-Tiessen","key":"2025032610360375100_bib19"},{"issue":"4","key":"2025032610360375100_bib20","doi-asserted-by":"publisher","first-page":"e3000959","DOI":"10.1371\/journal.pbio.3000959","article-title":"The
+        evolving role of preprints in the dissemination of COVID-19 research and their
+        impact on the science communication landscape","volume":"19","author":"Fraser","year":"2021","journal-title":"PLOS
+        Biology"},{"issue":"2","key":"2025032610360375100_bib21","doi-asserted-by":"publisher","first-page":"325","DOI":"10.1162\/qss_a_00255","article-title":"No
+        deal: German researchers\u2019 publishing and citing behaviors after Big Deal
+        negotiations with Elsevier","volume":"4","author":"Fraser","year":"2023","journal-title":"Quantitative
+        Science Studies"},{"issue":"3","key":"2025032610360375100_bib22","doi-asserted-by":"publisher","first-page":"103","DOI":"10.1629\/uksg.391","article-title":"It\u2019s
+        the workflows, stupid! What is required to make \u201coffsetting\u201d work
+        for the open access transition","volume":"30","author":"Geschuhn","year":"2017","journal-title":"Insights"},{"issue":"4","key":"2025032610360375100_bib23","doi-asserted-by":"publisher","first-page":"823","DOI":"10.1162\/qss_a_00327","article-title":"The
+        strain on scientific publishing","volume":"5","author":"Hanson","year":"2024","journal-title":"Quantitative
+        Science Studies"},{"issue":"8","key":"2025032610360375100_bib24","doi-asserted-by":"publisher","first-page":"2027","DOI":"10.1002\/mde.3493","article-title":"The
+        impact of the German \u201cDEAL\u201d on competition in the academic publishing
+        market","volume":"42","author":"Haucap","year":"2021","journal-title":"Managerial
+        and Decision Economics"},{"issue":"1","key":"2025032610360375100_bib25","doi-asserted-by":"publisher","first-page":"414","DOI":"10.1162\/qss_a_00022","article-title":"Crossref:
+        The sustainable source of community-owned scholarly metadata","volume":"1","author":"Hendricks","year":"2020","journal-title":"Quantitative
+        Science Studies"},{"key":"2025032610360375100_bib26","article-title":"Transformative
+        agreements: A primer","author":"Hinchliffe","year":"2019","journal-title":"The
+        Scholarly Kitchen"},{"key":"2025032610360375100_bib27","doi-asserted-by":"publisher","DOI":"10.18711\/2kz1-ba97","volume-title":"Strategi
+        for vitenskapelig publisering etter 2024","author":"Holden","year":"2023"},{"issue":"8","key":"2025032610360375100_bib28","doi-asserted-by":"publisher","first-page":"1039","DOI":"10.1002\/asi.24472","article-title":"The
+        rise of multiple institutional affiliations in academia","volume":"72","author":"Hottenrott","year":"2021","journal-title":"Journal
+        of the Association for Information Science and Technology"},{"key":"2025032610360375100_bib29","doi-asserted-by":"publisher","first-page":"e57067","DOI":"10.7554\/eLife.57067","article-title":"Evaluating
+        the impact of open access policies on research institutions","volume":"9","author":"Huang","year":"2020","journal-title":"eLife"},{"issue":"9","key":"2025032610360375100_bib30","doi-asserted-by":"publisher","first-page":"210389","DOI":"10.1098\/rsos.210389","article-title":"The
+        rapid, massive growth of COVID-19 authors in the scientific literature","volume":"8","author":"Ioannidis","year":"2021","journal-title":"Royal
+        Society Open Science"},{"volume-title":"hoaddata: Data about hybrid open access
+        journal publishing","year":"2023","author":"Jahn","key":"2025032610360375100_bib31"},{"volume-title":"Analysing
+        and reclassifying open access information in OpenAlex","year":"2023","author":"Jahn","key":"2025032610360375100_bib32"},{"issue":"1","key":"2025032610360375100_bib33","doi-asserted-by":"publisher","first-page":"104","DOI":"10.1002\/asi.24549","article-title":"Toward
+        transparency of hybrid open access through publisher-provided metadata: An
+        article-level study of Elsevier","volume":"73","author":"Jahn","year":"2022","journal-title":"Journal
+        of the Association for Information Science and Technology"},{"key":"2025032610360375100_bib34","doi-asserted-by":"publisher","first-page":"e2323","DOI":"10.7717\/peerj.2323","article-title":"A
+        study of institutional spending on open access publication fees in Germany","volume":"4","author":"Jahn","year":"2016","journal-title":"PeerJ"},{"volume-title":"Monitoring
+        the transition to open access: December 2017","year":"2017","author":"Jubb","key":"2025032610360375100_bib35"},{"issue":"4","key":"2025032610360375100_bib36","doi-asserted-by":"publisher","first-page":"912","DOI":"10.1162\/qss_a_00228","article-title":"Recalibrating
+        the scope of scholarly publishing: A modest step in a vast decolonization
+        process","volume":"3","author":"Khanna","year":"2022","journal-title":"Quantitative
+        Science Studies"},{"issue":"2","key":"2025032610360375100_bib37","doi-asserted-by":"publisher","first-page":"477","DOI":"10.1177\/09610006221146771","article-title":"Limitations
+        of the \u201cIndian one nation, one subscription\u201d policy proposal and
+        a way forward","volume":"56","author":"Koley","year":"2024","journal-title":"Journal
+        of Librarianship and Information Science"},{"key":"2025032610360375100_bib38","doi-asserted-by":"publisher","DOI":"10.2777\/89349","volume-title":"Study
+        on scientific publishing in Europe: Development, diversity, and transparency
+        of costs","author":"Kramer","year":"2024"},{"issue":"12","key":"2025032610360375100_bib39","doi-asserted-by":"publisher","first-page":"2629","DOI":"10.1080\/03075079.2020.1749254","article-title":"What
+        large-scale publication and citation data tell us about international research
+        collaboration in Europe: Changing national patterns in global contexts","volume":"46","author":"Kwiek","year":"2021","journal-title":"Studies
+        in Higher Education"},{"issue":"4","key":"2025032610360375100_bib40","doi-asserted-by":"publisher","first-page":"919","DOI":"10.1016\/j.joi.2016.08.002","article-title":"Hybrid
+        open access\u2014A longitudinal study","volume":"10","author":"Laakso","year":"2016","journal-title":"Journal
+        of Informetrics"},{"issue":"3","key":"2025032610360375100_bib41","doi-asserted-by":"publisher","first-page":"417","DOI":"10.1177\/0306312716650046","article-title":"Contributorship
+        and division of labor in knowledge production","volume":"46","author":"Larivi\u00e8re","year":"2016","journal-title":"Social
+        Studies of Science"},{"issue":"6","key":"2025032610360375100_bib42","doi-asserted-by":"publisher","first-page":"e0127502","DOI":"10.1371\/journal.pone.0127502","article-title":"The
+        oligopoly of academic publishers in the digital era","volume":"10","author":"Larivi\u00e8re","year":"2015","journal-title":"PLOS
+        ONE"},{"issue":"6","key":"2025032610360375100_bib43","doi-asserted-by":"publisher","first-page":"913","DOI":"10.5860\/crl.81.6.913","article-title":"Transitioning
+        to open access: An evaluation of the UK Springer Compact Agreement pilot 2016\u20132018","volume":"81","author":"Marques","year":"2020","journal-title":"College
+        & Research Libraries"},{"key":"2025032610360375100_bib44","doi-asserted-by":"publisher","first-page":"35","DOI":"10.1629\/uksg.489","article-title":"Monitoring
+        agreements with open access elements: Why article-level metadata are important","volume":"32","author":"Marques","year":"2019","journal-title":"Insights"},{"issue":"3","key":"2025032610360375100_bib45","doi-asserted-by":"publisher","first-page":"819","DOI":"10.1016\/j.joi.2018.06.012","article-title":"Evidence
+        of open access of scientific publications in Google Scholar: A large-scale
+        analysis","volume":"12","author":"Mart\u00edn-Mart\u00edn","year":"2018","journal-title":"Journal
+        of Informetrics"},{"issue":"1","key":"2025032610360375100_bib46","doi-asserted-by":"publisher","first-page":"80","DOI":"10.1080\/00031305.2017.1375986","article-title":"Packaging
+        data analytical work reproducibly using R (and friends)","volume":"72","author":"Marwick","year":"2018","journal-title":"The
+        American Statistician"},{"issue":"2","key":"2025032610360375100_bib47","doi-asserted-by":"publisher","first-page":"23","DOI":"10.3390\/publications7020023","article-title":"The
+        two-way street of open access journal publishing: Flip it and reverse it","volume":"7","author":"Matthias","year":"2019","journal-title":"Publications"},{"key":"2025032610360375100_bib48","doi-asserted-by":"publisher","DOI":"10.14293\/s2199-1006.1.sor-socsci.aowntu.v1","article-title":"Double
+        dipping in hybrid open access\u2014Chimera or reality?","author":"Mittermaier","year":"2015","journal-title":"ScienceOpen
+        Research"},{"issue":"4","key":"2025032610360375100_bib49","doi-asserted-by":"publisher","first-page":"1","DOI":"10.5282\/o-bib\/5731","article-title":"Die
+        rolle des Open Access Monitor Deutschland bei der antragstellung im DFG-F\u00f6rderprogramm
+        \u201cOpen-Access-Publikationskosten\u201d","volume":"8","author":"Mittermaier","year":"2021","journal-title":"O-Bib.
+        Das Offene Bibliotheksjournal Herausgeber VDB"},{"issue":"2","key":"2025032610360375100_bib50","doi-asserted-by":"publisher","first-page":"353","DOI":"10.1162\/qss_a_00253","article-title":"Which
+        factors are associated with Open Access publishing? A Springer Nature case
+        study","volume":"4","author":"Momeni","year":"2023","journal-title":"Quantitative
+        Science Studies"},{"issue":"12","key":"2025032610360375100_bib51","doi-asserted-by":"publisher","first-page":"9811","DOI":"10.1007\/s11192-021-03972-5","article-title":"What
+        happens when a journal converts to open access? A bibliometric analysis","volume":"126","author":"Momeni","year":"2021","journal-title":"Scientometrics"},{"issue":"3","key":"2025032610360375100_bib52","doi-asserted-by":"publisher","first-page":"165","DOI":"10.1080\/1941126X.2022.2099000","article-title":"Transformative
+        agreements in the development of open access","volume":"34","author":"Moskovkin","year":"2022","journal-title":"Journal
+        of Electronic Resources Librarianship"},{"issue":"1","key":"2025032610360375100_bib53","doi-asserted-by":"publisher","first-page":"80","DOI":"10.1080\/01930826.2023.2287945","article-title":"Strategies
+        for negotiating and signing transformative agreements in the Global South:
+        The Colombia Consortium experience","volume":"64","author":"Mu\u00f1oz-V\u00e9lez","year":"2024","journal-title":"Journal
+        of Library Administration"},{"issue":"8015","key":"2025032610360375100_bib54","doi-asserted-by":"publisher","first-page":"S2","DOI":"10.1038\/d41586-024-01596-2","article-title":"China\u2019s
+        research clout leads to growth in homegrown science publishing","volume":"630","author":"Owens","year":"2024","journal-title":"Nature"},{"key":"2025032610360375100_bib55","doi-asserted-by":"publisher","first-page":"12","DOI":"10.1629\/uksg.612","article-title":"Transformative
+        agreements and their practical impact: A librarian perspective","volume":"36","author":"Parmhed","year":"2023","journal-title":"Insights"},{"key":"2025032610360375100_bib56","doi-asserted-by":"publisher","first-page":"39","DOI":"10.1629\/uksg.439","article-title":"OpenAPC:
+        A contribution to a transparent and reproducible monitoring of fee-based open
+        access publishing across institutions and nations","volume":"31","author":"Pieper","year":"2018","journal-title":"Insights"},{"issue":"7","key":"2025032610360375100_bib57","doi-asserted-by":"publisher","first-page":"1751","DOI":"10.1002\/asi.23446","article-title":"The
+        \u201ctotal cost of publication\u201d in a hybrid open-access environment:
+        Institutional approaches to funding journal article-processing charges in
+        combination with subscriptions","volume":"67","author":"Pinfield","year":"2016","journal-title":"Journal
+        of the Association for Information Science and Technology"},{"key":"2025032610360375100_bib58","doi-asserted-by":"publisher","first-page":"25","DOI":"10.1629\/uksg.561","article-title":"Austrian
+        Transition to Open Access: A collaborative approach","volume":"34","author":"Pinhasi","year":"2021","journal-title":"Insights"},{"key":"2025032610360375100_bib59","doi-asserted-by":"publisher","first-page":"26","DOI":"10.1629\/uksg.523","article-title":"The
+        impact of open access publishing agreements at the University of Vienna in
+        light of the Plan S requirements: A review of current status, challenges and
+        perspectives","volume":"33","author":"Pinhasi","year":"2020","journal-title":"Insights"},{"key":"2025032610360375100_bib60","doi-asserted-by":"publisher","first-page":"e4375","DOI":"10.7717\/peerj.4375","article-title":"The
+        state of OA: A large-scale analysis of the prevalence and impact of Open Access
+        articles","volume":"6","author":"Piwowar","year":"2018","journal-title":"PeerJ"},{"issue":"4","key":"2025032610360375100_bib61","doi-asserted-by":"publisher","first-page":"1396","DOI":"10.1162\/qss_a_00084","article-title":"Open
+        access at the national level: A comprehensive analysis of publications by
+        Finnish researchers","volume":"1","author":"P\u00f6l\u00f6nen","year":"2020","journal-title":"Quantitative
+        Science Studies"},{"key":"2025032610360375100_bib62","doi-asserted-by":"publisher","DOI":"10.48550\/arXiv.2205.01833","article-title":"OpenAlex:
+        A fully-open index of scholarly works, authors, venues, institutions, and
+        concepts","author":"Priem","year":"2022","journal-title":"arXiv"},{"issue":"3","key":"2025032610360375100_bib63","doi-asserted-by":"publisher","first-page":"163","DOI":"10.1087\/095315103322110923","article-title":"From
+        here to there: A proposed mechanism for transforming journals from closed
+        to open access","volume":"16","author":"Prosser","year":"2003","journal-title":"Learned
+        Publishing"},{"volume-title":"R: A language and environment for statistical
+        computing","year":"2024","author":"R Core Team","key":"2025032610360375100_bib64"},{"key":"2025032610360375100_bib65","article-title":"Interview
+        with Robert \u201cBob\u201d E. Goodin","author":"Rasmussen","year":"2023","journal-title":"Tidskrift
+        f\u00f6r Politisk Filosofi"},{"key":"2025032610360375100_bib66","doi-asserted-by":"publisher","first-page":"e9410","DOI":"10.7717\/peerj.9410","article-title":"Open
+        Access uptake by universities worldwide","volume":"8","author":"Robinson-Garcia","year":"2020","journal-title":"PeerJ"},{"issue":"1","key":"2025032610360375100_bib67","doi-asserted-by":"publisher","first-page":"211032","DOI":"10.1098\/rsos.211032","article-title":"Dynamics
+        of cumulative advantage and threats to equity in open science: A scoping review","volume":"9","author":"Ross-Hellauer","year":"2022","journal-title":"Royal
+        Society Open Science"},{"issue":"3","key":"2025032610360375100_bib68","doi-asserted-by":"publisher","first-page":"600","DOI":"10.1162\/qss_a_00200","article-title":"Unsub
+        Extender: A Python-based web application for visualizing Unsub data","volume":"3","author":"Schares","year":"2022","journal-title":"Quantitative
+        Science Studies"},{"issue":"1","key":"2025032610360375100_bib69","doi-asserted-by":"publisher","first-page":"1","DOI":"10.1162\/qss_a_00237","article-title":"Impact
+        of the 2022 OSTP memo: A bibliometric analysis of US federally funded publications,
+        2017\u20132021","volume":"4","author":"Schares","year":"2023","journal-title":"Quantitative
+        Science Studies"},{"issue":"7735","key":"2025032610360375100_bib70","doi-asserted-by":"publisher","first-page":"171","DOI":"10.1038\/d41586-018-07659-5","article-title":"China
+        backs bold plan to tear down journal paywalls","volume":"564","author":"Schiermeier","year":"2018","journal-title":"Nature"},{"issue":"9","key":"2025032610360375100_bib71","doi-asserted-by":"publisher","first-page":"e3000031","DOI":"10.1371\/journal.pbio.3000031","article-title":"Science
+        without publication paywalls: cOAlition S for the realisation of full and
+        immediate open access","volume":"16","author":"Schiltz","year":"2018","journal-title":"PLOS
+        Biology"},{"key":"2025032610360375100_bib72","doi-asserted-by":"publisher","DOI":"10.17617\/1.3","volume-title":"Disrupting
+        the subscription journals\u2019 business model for the necessary large-scale
+        transformation to open access","author":"Schimmer","year":"2015"},{"issue":"3","key":"2025032610360375100_bib73","doi-asserted-by":"publisher","first-page":"1863","DOI":"10.1007\/s11192-024-04955-y","article-title":"How
+        transformative are transformative agreements? Evidence from Germany across
+        disciplines","volume":"129","author":"Schmal","year":"2024","journal-title":"Scientometrics"},{"issue":"3","key":"2025032610360375100_bib74","doi-asserted-by":"publisher","first-page":"176","DOI":"10.18352\/lq.8055","article-title":"Licensing
+        revisited: Open access clauses in practice","volume":"22","author":"Schmidt","year":"2012","journal-title":"LIBER
+        Quarterly: The Journal of the Association of European Research Libraries"},{"issue":"1","key":"2025032610360375100_bib75","doi-asserted-by":"publisher","first-page":"519","DOI":"10.1007\/s11192-023-04876-2","article-title":"The
+        oligopoly of open access publishing","volume":"129","author":"Shu","year":"2024","journal-title":"Scientometrics"},{"issue":"6","key":"2025032610360375100_bib76","doi-asserted-by":"publisher","first-page":"3601","DOI":"10.1007\/s11192-023-04716-3","article-title":"Understanding
+        differences of the OA uptake within the German university landscape (2010\u20132020):
+        Part 1\u2014Journal-based OA","volume":"128","author":"Taubert","year":"2023","journal-title":"Scientometrics"},{"issue":"1","key":"2025032610360375100_bib77","doi-asserted-by":"publisher","first-page":"20","DOI":"10.1162\/qss_a_00112","article-title":"Large-scale
+        comparison of bibliographic data sources: Scopus, Web of Science, Dimensions,
+        Crossref, and Microsoft Academic","volume":"2","author":"Visser","year":"2021","journal-title":"Quantitative
+        Science Studies"},{"key":"2025032610360375100_bib78","doi-asserted-by":"publisher","DOI":"10.5281\/zenodo.7105355","article-title":"Monitoring
+        Open Access publishing of NWO-funded research (2015\u20132021) (Version 1)","author":"Waltman","year":"2022","journal-title":"Zenodo"},{"key":"2025032610360375100_bib79","doi-asserted-by":"publisher","first-page":"943932","DOI":"10.3389\/frma.2022.943932","article-title":"Choices
+        of immediate open access and the relationship to journal ranking and publish-and-read
+        deals","volume":"7","author":"Wenaas","year":"2022","journal-title":"Frontiers
+        in Research Metrics and Analytics"},{"issue":"43","key":"2025032610360375100_bib80","doi-asserted-by":"publisher","first-page":"1686","DOI":"10.21105\/joss.01686","article-title":"Welcome
+        to the tidyverse","volume":"4","author":"Wickham","year":"2019","journal-title":"Journal
+        of Open Source Software"},{"volume-title":"bigrquery: An interface to Google\u2019s
+        \u2018BigQuery\u2019 \u2018API\u2019","year":"2023","author":"Wickham","key":"2025032610360375100_bib81"},{"issue":"S1","key":"2025032610360375100_bib82","doi-asserted-by":"publisher","first-page":"S28","DOI":"10.1017\/S1062798724000036","article-title":"Beyond
+        transformative agreements: Ways forward for universities","volume":"32","author":"Widding","year":"2024","journal-title":"European
+        Review"},{"issue":"10","key":"2025032610360375100_bib83","doi-asserted-by":"publisher","first-page":"5869","DOI":"10.1007\/s11192-023-04923-y","article-title":"Missing
+        institutions in OpenAlex: Possible reasons, implications, and solutions","volume":"129","author":"Zhang","year":"2024","journal-title":"Scientometrics"},{"issue":"12","key":"2025032610360375100_bib84","doi-asserted-by":"publisher","first-page":"7653","DOI":"10.1007\/s11192-022-04407-5","article-title":"Should
+        open access lead to closed research? The trends towards paying to perform
+        research","volume":"127","author":"Zhang","year":"2022","journal-title":"Scientometrics"},{"issue":"10","key":"2025032610360375100_bib85","doi-asserted-by":"publisher","first-page":"e2214664120","DOI":"10.1073\/pnas.2214664120","article-title":"A
+        gender perspective on the global migration of scholars","volume":"120","author":"Zhao","year":"2023","journal-title":"Proceedings
+        of the National Academy of Sciences"}],"container-title":["Quantitative Science
+        Studies"],"language":"en","link":[{"URL":"https:\/\/direct.mit.edu\/qss\/article-pdf\/doi\/10.1162\/qss_a_00348\/2497599\/qss_a_00348.pdf","content-type":"application\/pdf","content-version":"vor","intended-application":"syndication"},{"URL":"https:\/\/direct.mit.edu\/qss\/article-pdf\/doi\/10.1162\/qss_a_00348\/2497599\/qss_a_00348.pdf","content-type":"unspecified","content-version":"vor","intended-application":"similarity-checking"}],"deposited":{"date-parts":[[2025,3,26]],"date-time":"2025-03-26T14:46:30Z","timestamp":1743000390000},"score":0.0,"resource":{"primary":{"URL":"https:\/\/direct.mit.edu\/qss\/article\/doi\/10.1162\/qss_a_00348\/127473\/How-open-are-hybrid-journals-included-in"}},"issued":{"date-parts":[[2025]]},"references-count":85,"URL":"https:\/\/doi.org\/10.1162\/qss_a_00348","relation":{"has-review":[{"id-type":"doi","id":"10.1162\/QSS_A_00348\/v1\/review2","asserted-by":"object"},{"id-type":"doi","id":"10.1162\/QSS_A_00348\/v1\/decision1","asserted-by":"object"},{"id-type":"doi","id":"10.1162\/QSS_A_00348\/v1\/review1","asserted-by":"object"},{"id-type":"doi","id":"10.1162\/QSS_A_00348\/v2\/decision1","asserted-by":"object"},{"id-type":"doi","id":"10.1162\/QSS_A_00348\/v2\/response1","asserted-by":"object"}]},"ISSN":["2641-3337"],"issn-type":[{"type":"electronic","value":"2641-3337"}],"published-other":{"date-parts":[[2025]]},"published":{"date-parts":[[2025]]}},{"indexed":{"date-parts":[[2022,3,30]],"date-time":"2022-03-30T03:52:22Z","timestamp":1648612342746},"reference-count":0,"publisher":"Springer
+        Science and Business Media LLC","content-domain":{"domain":[],"crossmark-restriction":false},"DOI":"10.1007\/10452.1573-5125","type":"journal","created":{"date-parts":[[2013,5,24]],"date-time":"2013-05-24T23:59:30Z","timestamp":1369439970000},"source":"Crossref","is-referenced-by-count":0,"title":["Aquatic
+        Ecology"],"prefix":"10.1007","member":"297","language":"en","deposited":{"date-parts":[[2013,5,24]],"date-time":"2013-05-24T23:59:30Z","timestamp":1369439970000},"score":0.0,"resource":{"primary":{"URL":"http:\/\/link.springer.com\/journal\/10452"}},"issued":{"date-parts":[[null]]},"references-count":0,"URL":"https:\/\/doi.org\/10.1007\/10452.1573-5125","ISSN":["1386-2588","1573-5125"],"issn-type":[{"value":"1386-2588","type":"print"},{"value":"1573-5125","type":"electronic"}]},{"indexed":{"date-parts":[[2025,8,1]],"date-time":"2025-08-01T19:40:02Z","timestamp":1754077202854,"version":"3.41.2"},"reference-count":82,"publisher":"Springer
+        Science and Business Media LLC","license":[{"start":{"date-parts":[[2025,8,1]],"date-time":"2025-08-01T00:00:00Z","timestamp":1754006400000},"content-version":"tdm","delay-in-days":0,"URL":"https:\/\/creativecommons.org\/licenses\/by\/4.0"},{"start":{"date-parts":[[2025,8,1]],"date-time":"2025-08-01T00:00:00Z","timestamp":1754006400000},"content-version":"vor","delay-in-days":0,"URL":"https:\/\/creativecommons.org\/licenses\/by\/4.0"}],"funder":[{"DOI":"10.13039\/501100002347","name":"Bundesministerium
+        f\u00fcr Bildung und Forschung","doi-asserted-by":"publisher","award":["16WIK2301E","16WIK2101F"],"id":[{"id":"10.13039\/501100002347","id-type":"DOI","asserted-by":"publisher"}]},{"DOI":"10.13039\/501100003385","name":"Georg-August-Universit\u00e4t
+        G\u00f6ttingen","doi-asserted-by":"crossref","id":[{"id":"10.13039\/501100003385","id-type":"DOI","asserted-by":"crossref"}]}],"content-domain":{"domain":["link.springer.com"],"crossmark-restriction":false},"short-container-title":["Scientometrics"],"abstract":"<jats:title>Abstract<\/jats:title>\n          <jats:p>This
+        study compares open metadata from hoaddata, an openly available dataset based
+        on Crossref, OpenAlex and the cOAlition S Journal Checker Tool, with proprietary
+        bibliometric databases Scopus and Web of Science to estimate the impact of
+        transformative agreements on hybrid open access publishing. Analysing over
+        13,000 hybrid journals between 2019 and 2023, the research found substantial
+        growth in open access due to these agreements, although most articles remain
+        paywalled. The results were consistent across all three data sources, showing
+        strong correlations in country-level metrics despite differences in journal
+        coverage and metadata availability. By 2023, transformative agreements enabled
+        the majority of open access in hybrid journals, with particularly high adoption
+        in European countries. The analysis revealed strong alignment between first
+        and corresponding authorship when measuring agreement uptake by publisher
+        and country. This comparative approach supports the use of open metadata for
+        large-scale hybrid open access studies, while using multiple data sources
+        together provides a more robust understanding of hybrid open access adoption
+        than any single database can offer, overcoming individual limitations in coverage
+        and metadata quality.<\/jats:p>","DOI":"10.1007\/s11192-025-05390-3","type":"journal-article","created":{"date-parts":[[2025,8,1]],"date-time":"2025-08-01T07:06:06Z","timestamp":1754031966000},"update-policy":"https:\/\/doi.org\/10.1007\/springer_crossmark_policy","source":"Crossref","is-referenced-by-count":0,"title":["Estimating
+        transformative agreement impact on hybrid open access: a comparative large-scale
+        study using Scopus, Web of Science and open metadata"],"prefix":"10.1007","author":[{"ORCID":"https:\/\/orcid.org\/0000-0001-5105-1463","authenticated-orcid":false,"given":"Najko","family":"Jahn","sequence":"first","affiliation":[]}],"member":"297","published-online":{"date-parts":[[2025,8,1]]},"reference":[{"key":"5390_CR1","unstructured":"Achterberg,
+        I., & Jahn, N. (2023). Introducing the Hybrid Open Access Dashboard (HOAD).
+        cOAlition S. https:\/\/www.coalition-s.org\/blog\/introducing-the-hybrid-open-access-dashboard-hoad\/"},{"key":"5390_CR2","doi-asserted-by":"publisher","DOI":"10.1038\/s41597-024-03655-9","author":"A
+        Akbaritabar","year":"2024","unstructured":"Akbaritabar, A., Theile, T., &
+        Zagheni, E. (2024). Bilateral flows and rates of international migration of
+        scholars for 210 countries for the period 1998\u20132020. Scientific Data.
+        https:\/\/doi.org\/10.1038\/s41597-024-03655-9","journal-title":"Scientific
+        Data"},{"key":"5390_CR3","unstructured":"Alperin, J. P., Portenoy, J., Demes,
+        K., Larivi\u00e8re, V., & Haustein, S. (2024). An analysis of the suitability
+        of OpenAlex for bibliometric analyses. arXiv. https:\/\/arxiv.org\/abs\/2404.17663"},{"issue":"9","key":"5390_CR4","doi-asserted-by":"publisher","first-page":"5159","DOI":"10.1007\/s11192-023-04800-8","volume":"128","author":"S
+        Asai","year":"2023","unstructured":"Asai, S. (2023). Does double dipping occur?
+        The case of Wiley\u2019s hybrid journals. Scientometrics, 128(9), 5159\u20135168.
+        https:\/\/doi.org\/10.1007\/s11192-023-04800-8","journal-title":"Scientometrics"},{"issue":"6491","key":"5390_CR5","doi-asserted-by":"publisher","first-page":"574","DOI":"10.1126\/science.aba3763","volume":"368","author":"C
+        Aspesi","year":"2020","unstructured":"Aspesi, C., & Brand, A. (2020). In pursuit
+        of open science, open access is not enough. Science, 368(6491), 574\u2013577.
+        https:\/\/doi.org\/10.1126\/science.aba3763","journal-title":"Science"},{"issue":"1","key":"5390_CR6","doi-asserted-by":"publisher","first-page":"377","DOI":"10.1162\/qss_a_00019","volume":"1","author":"J
+        Baas","year":"2020","unstructured":"Baas, J., Schotten, M., Plume, A., C\u00f4t\u00e9,
+        G., & Karimi, R. (2020). Scopus as a curated, high-quality bibliometric data
+        source for academic research in quantitative science studies. Quantitative
+        Science Studies, 1(1), 377\u2013386. https:\/\/doi.org\/10.1162\/qss_a_00019","journal-title":"Quantitative
+        Science Studies"},{"key":"5390_CR7","unstructured":"Babini, D., Chan, L.,
+        Hagemann, M., Joseph, H., Kuchma, I., & Suber, P. (2022). The Budapest Open
+        Access Initiative-20th. Anniversary recommendations (BOAI20). https:\/\/www.budapestopenaccessinitiative.org\/boai20\/"},{"issue":"4","key":"5390_CR8","doi-asserted-by":"publisher","first-page":"67","DOI":"10.23974\/ijol.2024.vol8.4.341","volume":"8","author":"C
+        Bakker","year":"2024","unstructured":"Bakker, C., Langham-Putrow, A., & Riegelman,
+        A. (2024). Impact of transformative agreements on publication patterns: An
+        analysis based on agreements from the ESAC registry. International Journal
+        of Librarianship, 8(4), 67\u201396. https:\/\/doi.org\/10.23974\/ijol.2024.vol8.4.341","journal-title":"International
+        Journal of Librarianship"},{"issue":"1","key":"5390_CR9","doi-asserted-by":"crossref","first-page":"363","DOI":"10.1162\/qss_a_00018","volume":"1","author":"C
+        Birkle","year":"2020","unstructured":"Birkle, C., Pendlebury, D. A., Schnell,
+        J., & Adams, J. (2020). Web of Science as a data source for research on scientific
+        and scholarly activity. Quantitative Science Studies, 1(1), 363\u2013376.","journal-title":"Quantitative
+        Science Studies"},{"issue":"8","key":"5390_CR10","doi-asserted-by":"publisher","first-page":"1496","DOI":"10.1002\/asi.22709","volume":"63","author":"B-C
+        Bj\u00f6rk","year":"2012","unstructured":"Bj\u00f6rk, B.-C. (2012). The hybrid
+        model for open access publication of scholarly articles: A failed experiment?
+        Journal of the American Society for Information Science and Technology, 63(8),
+        1496\u20131504. https:\/\/doi.org\/10.1002\/asi.22709","journal-title":"Journal
+        of the American Society for Information Science and Technology"},{"issue":"2","key":"5390_CR11","doi-asserted-by":"publisher","first-page":"216","DOI":"10.1002\/leap.1347","volume":"34","author":"\u00c1
+        Borrego","year":"2021","unstructured":"Borrego, \u00c1., Anglada, L., & Abadal,
+        E. (2021). Transformative agreements: Do they pave the way to open access?
+        Learned Publishing, 34(2), 216\u2013232. https:\/\/doi.org\/10.1002\/leap.1347","journal-title":"Learned
+        Publishing"},{"key":"5390_CR12","doi-asserted-by":"publisher","DOI":"10.5281\/zenodo.10787392","author":"K
+        Brayman","year":"2024","unstructured":"Brayman, K., Devenney, A., Dobson,
+        H., Marques, M., & Vernon, A. (2024). A review of transitional agreements
+        in the UK. Zenodo. https:\/\/doi.org\/10.5281\/zenodo.10787392","journal-title":"Zenodo"},{"issue":"4","key":"5390_CR13","doi-asserted-by":"crossref","first-page":"778","DOI":"10.1162\/qss_a_00272","volume":"4","author":"L-A
+        Butler","year":"2023","unstructured":"Butler, L.-A., Matthias, L., Simard,
+        M.-A., Mongeon, P., & Haustein, S. (2023). The oligopoly\u2019s shift to open
+        access: How the big five academic publishers profit from article processing
+        charges. Quantitative Science Studies, 4(4), 778\u2013799.","journal-title":"Quantitative
+        Science Studies"},{"key":"5390_CR14","unstructured":"Campbell, C., D\u00e9r,
+        \u00c1., Geschuhn, K., & Valente, A. (2022). How are transformative agreements
+        transforming libraries? In 87th IFLA World Library and Information Congress
+        (WLIC)\/2022 in Dublin, Ireland. https:\/\/repository.ifla.org\/handle\/123456789\/1973"},{"key":"5390_CR15","doi-asserted-by":"publisher","DOI":"10.1002\/asi.24979","author":"L
+        C\u00e9spedes","year":"2025","unstructured":"C\u00e9spedes, L., Kozlowski,
+        D., Pradier, C., Sainte-Marie, M. H., Shokida, N. S., Benz, P., Poitras, C.,
+        Ninkov, A. B., Ebrahimy, S., Ayeni, P., Filali, S., Li, B., & Larivi\u00e8re,
+        V. (2025). Evaluating the linguistic coverage of OpenAlex: An assessment of
+        metadata accuracy and completeness. Journal of the Association for Information
+        Science and Technology. https:\/\/doi.org\/10.1002\/asi.24979","journal-title":"Journal
+        of the Association for Information Science and Technology"},{"issue":"1","key":"5390_CR16","doi-asserted-by":"crossref","first-page":"76","DOI":"10.1162\/qss_a_00288","volume":"5","author":"Z
+        Chinchilla-Rodr\u00edguez","year":"2024","unstructured":"Chinchilla-Rodr\u00edguez,
+        Z., Costas, R., Robinson-Garc\u00eda, N., & Larivi\u00e8re, V. (2024). Examining
+        the quality of the corresponding authorship field in Web of Science and Scopus.
+        Quantitative Science Studies, 5(1), 76\u201397.","journal-title":"Quantitative
+        Science Studies"},{"issue":"4","key":"5390_CR17","doi-asserted-by":"publisher","first-page":"2475","DOI":"10.1007\/s11192-025-05293-3","volume":"130","author":"JH
+        Culbert","year":"2025","unstructured":"Culbert, J. H., Hobert, A., Jahn, N.,
+        Haupka, N., Schmidt, M., Donner, P., & Mayr, P. (2025). Reference coverage
+        analysis of OpenAlex compared to web of science and scopus. Scientometrics,
+        130(4), 2475\u20132492. https:\/\/doi.org\/10.1007\/s11192-025-05293-3","journal-title":"Scientometrics"},{"key":"5390_CR18","doi-asserted-by":"publisher","DOI":"10.31222\/osf.io\/tz6be_v1","author":"H
+        de Jonge","year":"2025","unstructured":"de Jonge, H., Kramer, B., & Sondervan,
+        J. (2025). Tracking transformative agreements through open metadata: Method
+        and validation using Dutch Research Council NWO funded papers. MetaArXiv.
+        https:\/\/doi.org\/10.31222\/osf.io\/tz6be_v1","journal-title":"MetaArXiv"},{"key":"5390_CR19","doi-asserted-by":"publisher","DOI":"10.1146\/katina-20250212-1","author":"\u00c1
+        D\u00e9r","year":"2025","unstructured":"D\u00e9r, \u00c1. (2025). What gets
+        missed in the discourse on transformative agreements. Katina Magazine. https:\/\/doi.org\/10.1146\/katina-20250212-1","journal-title":"Katina
+        Magazine"},{"issue":"1","key":"5390_CR20","doi-asserted-by":"publisher","first-page":"219","DOI":"10.1007\/s11192-017-2483-y","volume":"113","author":"P
+        Donner","year":"2017","unstructured":"Donner, P. (2017). Document type assignment
+        accuracy in the journal citation index data of Web of Science. Scientometrics,
+        113(1), 219\u2013236. https:\/\/doi.org\/10.1007\/s11192-017-2483-y","journal-title":"Scientometrics"},{"issue":"23","key":"5390_CR21","doi-asserted-by":"publisher","first-page":"11492","DOI":"10.1002\/ece3.4584","volume":"8","author":"CW
+        Fox","year":"2018","unstructured":"Fox, C. W., Ritchey, J. P., & Paine, C.
+        E. T. (2018). Patterns of authorship in ecology and evolution: First, last,
+        and corresponding authorship vary with gender and geography. Ecology and Evolution,
+        8(23), 11492\u201311507. https:\/\/doi.org\/10.1002\/ece3.4584","journal-title":"Ecology
+        and Evolution"},{"issue":"2","key":"5390_CR22","doi-asserted-by":"crossref","first-page":"325","DOI":"10.1162\/qss_a_00255","volume":"4","author":"N
+        Fraser","year":"2023","unstructured":"Fraser, N., Hobert, A., Jahn, N., Mayr,
+        P., & Peters, I. (2023). No deal: German researchers\u2019 publishing and
+        citing behaviors after big deal negotiations with Elsevier. Quantitative Science
+        Studies, 4(2), 325\u2013352.","journal-title":"Quantitative Science Studies"},{"issue":"3","key":"5390_CR23","doi-asserted-by":"publisher","first-page":"103","DOI":"10.1629\/uksg.391","volume":"30","author":"K
+        Geschuhn","year":"2017","unstructured":"Geschuhn, K., & Stone, G. (2017).
+        It\u2019s the workflows, stupid! What is required to make \u201coffsetting\u2019\u2019
+        work for the open access transition. Insights the UKSG Journal, 30(3), 103\u2013114.
+        https:\/\/doi.org\/10.1629\/uksg.391","journal-title":"Insights the UKSG Journal"},{"key":"5390_CR24","doi-asserted-by":"publisher","DOI":"10.3389\/frma.2018.00001","author":"C
+        Gumpenberger","year":"2018","unstructured":"Gumpenberger, C., H\u00f6lbling,
+        L., & Gorraiz, J. I. (2018). On the issues of a \u201ccorresponding author\u201d
+        field-based monitoring approach for gold open access publications and derivative
+        cost calculations. Frontiers in Research Metrics and Analytics. https:\/\/doi.org\/10.3389\/frma.2018.00001","journal-title":"Frontiers
+        in Research Metrics and Analytics"},{"key":"5390_CR25","doi-asserted-by":"publisher","unstructured":"Harrell
+        Jr, F. E. (2003). Hmisc: Harrell miscellaneous. In CRAN: Contributed Packages.
+        The R Foundation. https:\/\/doi.org\/10.32614\/cran.package.hmisc","DOI":"10.32614\/cran.package.hmisc"},{"issue":"8","key":"5390_CR26","doi-asserted-by":"publisher","first-page":"2027","DOI":"10.1002\/mde.3493","volume":"42","author":"J
+        Haucap","year":"2021","unstructured":"Haucap, J., Moshgbar, N., & Schmal,
+        W. B. (2021). The impact of the German \u201cDEAL\u2019\u2019 on competition
+        in the academic publishing market. Managerial and Decision Economics, 42(8),
+        2027\u20132049. https:\/\/doi.org\/10.1002\/mde.3493","journal-title":"Managerial
+        and Decision Economics"},{"key":"5390_CR27","doi-asserted-by":"publisher","unstructured":"Haupka,
+        N., Culbert, J. H., Schniedermann, A., Jahn, N., & Mayr, P. (2024). Analysis
+        of the publication and document types in OpenAlex, Web of Science, Scopus,
+        Pubmed and Semantic Scholar. arXiv. https:\/\/doi.org\/10.48550\/ARXIV.2406.15154","DOI":"10.48550\/ARXIV.2406.15154"},{"key":"5390_CR28","unstructured":"Haustein,
+        S., Schares, E., Alperin, J. P., Hare, M., Butler, L.-A., & Sch\u00f6nfelder,
+        N. (2024). Estimating global article processing charges paid to six publishers
+        for open access between 2019 and 2023. https:\/\/arxiv.org\/abs\/2407.16551"},{"issue":"1\u20132","key":"5390_CR29","doi-asserted-by":"publisher","first-page":"1","DOI":"10.1177\/1747016119898403","volume":"16","author":"G
+        Helgesson","year":"2020","unstructured":"Helgesson, G. (2020). Authorship
+        order and effects of changing bibliometrics practices. Research Ethics, 16(1\u20132),
+        1\u20137. https:\/\/doi.org\/10.1177\/1747016119898403","journal-title":"Research
+        Ethics"},{"issue":"1","key":"5390_CR30","doi-asserted-by":"crossref","first-page":"414","DOI":"10.1162\/qss_a_00022","volume":"1","author":"G
+        Hendricks","year":"2020","unstructured":"Hendricks, G., Tkaczyk, D., Lin,
+        J., & Feeney, P. (2020). Crossref: The sustainable source of community-owned
+        scholarly metadata. Quantitative Science Studies, 1(1), 414\u2013427.","journal-title":"Quantitative
+        Science Studies"},{"key":"5390_CR31","unstructured":"Hinchliffe, L. J. (2019).
+        Transformative agreements: A primer. The Scholarly Kitchen. https:\/\/scholarlykitchen.sspnet.org\/2019\/04\/23\/transformative-agreements\/"},{"key":"5390_CR32","doi-asserted-by":"publisher","unstructured":"Holden,
+        L., Skoie, M., R\u00f8eggen, V., Bjerde, K. W., Wenaas, L., Bakke, P., L\u00f8vhaug,
+        J. W., Karlsen, E. S., & Qvenild, M. (2023). Strategi for vitenskapelig publisering
+        etter 2024. Sikt. https:\/\/doi.org\/10.18711\/2KZ1-BA97","DOI":"10.18711\/2KZ1-BA97"},{"issue":"8","key":"5390_CR33","doi-asserted-by":"publisher","first-page":"1039","DOI":"10.1002\/asi.24472","volume":"72","author":"H
+        Hottenrott","year":"2021","unstructured":"Hottenrott, H., Rose, M. E., & Lawson,
+        C. (2021). The rise of multiple institutional affiliations in academia. Journal
+        of the Association for Information Science and Technology, 72(8), 1039\u20131058.
+        https:\/\/doi.org\/10.1002\/asi.24472","journal-title":"Journal of the Association
+        for Information Science and Technology"},{"key":"5390_CR34","doi-asserted-by":"publisher","DOI":"10.7554\/elife.57067","author":"C-K
+        Huang","year":"2020","unstructured":"Huang, C.-K., Neylon, C., Hosking, R.,
+        Montgomery, L., Wilson, K. S., Ozaygen, A., & Brookes-Kenworthy, C. (2020a).
+        Evaluating the impact of open access policies on research institutions. eLife.
+        https:\/\/doi.org\/10.7554\/elife.57067","journal-title":"eLife"},{"key":"5390_CR35","doi-asserted-by":"publisher","DOI":"10.1101\/2020.03.19.998542","author":"C-K
+        Huang","year":"2020","unstructured":"Huang, C.-K., Neylon, C., Hosking, R.,
+        Montgomery, L., Wilson, K., Ozaygen, A., & Brookes-Kenworthy, C. (2020b).
+        Evaluating institutional open access performance: Sensitivity analysis. bioRxiv.
+        https:\/\/doi.org\/10.1101\/2020.03.19.998542","journal-title":"bioRxiv"},{"key":"5390_CR36","unstructured":"Jahn,
+        N. (2024). hoaddata: Data about hybrid open access journal publishing (v.0.3).
+        https:\/\/github.com\/subugoe\/hoaddata\/releases\/tag\/v.0.3"},{"key":"5390_CR37","doi-asserted-by":"crossref","first-page":"242","DOI":"10.1162\/qss_a_00348","volume":"6","author":"N
+        Jahn","year":"2025","unstructured":"Jahn, N. (2025). How open are hybrid journals
+        included in transformative agreements? Quantitative Science Studies, 6, 242\u2013262.","journal-title":"Quantitative
+        Science Studies"},{"key":"5390_CR38","unstructured":"Jahn, N., Haupka, N.,
+        & Hobert, A. (2023). Analysing and reclassifying open access information in
+        OpenAlex. Scholarly Communication Analytics Blog. https:\/\/subugoe.github.io\/scholcomm_analytics\/posts\/oalex_oa_status\/"},{"issue":"1","key":"5390_CR39","doi-asserted-by":"publisher","first-page":"104","DOI":"10.1002\/asi.24549","volume":"73","author":"N
+        Jahn","year":"2022","unstructured":"Jahn, N., Matthias, L., & Laakso, M. (2022).
+        Toward transparency of hybrid open access through publisher-provided metadata:
+        An article-level study of Elsevier. Journal of the Association for Information
+        Science and Technology, 73(1), 104\u2013118. https:\/\/doi.org\/10.1002\/asi.24549","journal-title":"Journal
+        of the Association for Information Science and Technology"},{"key":"5390_CR40","unstructured":"Kiley,
+        R. (2024). Transformative journals: Analysis from the 2023 reports. cOAlition
+        S. https:\/\/www.coalition-s.org\/blog\/transformative-journals-analysis-from-the-2023-reports\/"},{"issue":"2","key":"5390_CR41","doi-asserted-by":"publisher","first-page":"15","DOI":"10.3390\/publications6020015","volume":"6","author":"A
+        Kohls","year":"2018","unstructured":"Kohls, A., & Mele, S. (2018). Converting
+        the literature of a scientific field to open access through global collaboration:
+        The experience of SCOAP3 in particle physics. Publications, 6(2), 15. https:\/\/doi.org\/10.3390\/publications6020015","journal-title":"Publications"},{"key":"5390_CR42","doi-asserted-by":"publisher","unstructured":"Kramer,
+        B. (2024). Study on scientific publishing in Europe\u2014development, diversity,
+        and transparency of costs. Publications Office of the European Union. https:\/\/doi.org\/10.2777\/89349","DOI":"10.2777\/89349"},{"key":"5390_CR43","doi-asserted-by":"publisher","DOI":"10.5281\/zenodo.3700590","author":"M
+        Krassowski","year":"2020","unstructured":"Krassowski, M. (2020). ComplexUpset.
+        Zenodo. https:\/\/doi.org\/10.5281\/zenodo.3700590","journal-title":"Zenodo"},{"issue":"4","key":"5390_CR44","doi-asserted-by":"publisher","first-page":"919","DOI":"10.1016\/j.joi.2016.08.002","volume":"10","author":"M
+        Laakso","year":"2016","unstructured":"Laakso, M., & Bj\u00f6rk, B.-C. (2016).
+        Hybrid open access-a longitudinal study. Journal of Informetrics, 10(4), 919\u2013932.
+        https:\/\/doi.org\/10.1016\/j.joi.2016.08.002","journal-title":"Journal of
+        Informetrics"},{"issue":"3","key":"5390_CR45","doi-asserted-by":"publisher","first-page":"417","DOI":"10.1177\/0306312716650046","volume":"46","author":"V
+        Larivi\u00e8re","year":"2016","unstructured":"Larivi\u00e8re, V., Desrochers,
+        N., Macaluso, B., Mongeon, P., Paul-Hus, A., & Sugimoto, C. R. (2016). Contributorship
+        and division of labor in knowledge production. Social Studies of Science,
+        46(3), 417\u2013435. https:\/\/doi.org\/10.1177\/0306312716650046","journal-title":"Social
+        Studies of Science"},{"issue":"12","key":"5390_CR46","doi-asserted-by":"publisher","first-page":"1983","DOI":"10.1109\/tvcg.2014.2346248","volume":"20","author":"A
+        Lex","year":"2014","unstructured":"Lex, A., Gehlenborg, N., Strobelt, H.,
+        Vuillemot, R., & Pfister, H. (2014). UpSet: Visualization of intersecting
+        sets. IEEE Transactions on Visualization and Computer Graphics, 20(12), 1983\u20131992.
+        https:\/\/doi.org\/10.1109\/tvcg.2014.2346248","journal-title":"IEEE Transactions
+        on Visualization and Computer Graphics"},{"issue":"3","key":"5390_CR47","doi-asserted-by":"publisher","first-page":"88","DOI":"10.2478\/jdis-2024-0015","volume":"9","author":"A
+        Maddi","year":"2024","unstructured":"Maddi, A., & da Silva, J. A. T. (2024).
+        Beyond authorship: Analyzing contributions in PLOS ONE and the challenges
+        of appropriate attribution. Journal of Data and Information Science, 9(3),
+        88\u2013115. https:\/\/doi.org\/10.2478\/jdis-2024-0015","journal-title":"Journal
+        of Data and Information Science"},{"issue":"3","key":"5390_CR48","doi-asserted-by":"publisher","first-page":"1901","DOI":"10.1007\/s11192-025-05244-y","volume":"130","author":"DA
+        Maisano","year":"2025","unstructured":"Maisano, D. A., Mastrogiacomo, L.,
+        Ferrara, L., & Franceschini, F. (2025). A large-scale semi-automated approach
+        for assessing document-type classification errors in bibliometric databases.
+        Scientometrics, 130(3), 1901\u20131938. https:\/\/doi.org\/10.1007\/s11192-025-05244-y","journal-title":"Scientometrics"},{"issue":"1","key":"5390_CR49","doi-asserted-by":"publisher","first-page":"80","DOI":"10.1080\/00031305.2017.1375986","volume":"72","author":"B
+        Marwick","year":"2018","unstructured":"Marwick, B., Boettiger, C., & Mullen,
+        L. (2018). Packaging data analytical work reproducibly using R (and friends).
+        The American Statistician, 72(1), 80\u201388. https:\/\/doi.org\/10.1080\/00031305.2017.1375986","journal-title":"The
+        American Statistician"},{"issue":"1","key":"5390_CR50","doi-asserted-by":"publisher","first-page":"99","DOI":"10.1007\/s11192-010-0310-9","volume":"87","author":"P
+        Mattsson","year":"2010","unstructured":"Mattsson, P., Sundberg, C. J., & Laget,
+        P. (2010). Is correspondence reflected in the author position? A bibliometric
+        study of the relation between corresponding author and byline position. Scientometrics,
+        87(1), 99\u2013105. https:\/\/doi.org\/10.1007\/s11192-010-0310-9","journal-title":"Scientometrics"},{"issue":"6714","key":"5390_CR51","doi-asserted-by":"publisher","first-page":"1170","DOI":"10.1126\/science.adp8882","volume":"385","author":"MJ
+        McCabe","year":"2024","unstructured":"McCabe, M. J., & Mueller-Langer, F.
+        (2024). Open access is shaping scientific communication. Science, 385(6714),
+        1170\u20131172. https:\/\/doi.org\/10.1126\/science.adp8882","journal-title":"Science"},{"issue":"1","key":"5390_CR52","doi-asserted-by":"publisher","DOI":"10.1016\/j.joi.2024.101631","volume":"19","author":"D
+        Melero-Fuentes","year":"2025","unstructured":"Melero-Fuentes, D., Aguilar-Moya,
+        R., Valderrama-Zuri\u00e1n, J.-C., & Gorraiz, J. (2025). Evolution and effect
+        of meeting abstracts in JCR journals. Journal of Informetrics, 19(1), Article
+        101631. https:\/\/doi.org\/10.1016\/j.joi.2024.101631","journal-title":"Journal
+        of Informetrics"},{"issue":"12","key":"5390_CR53","doi-asserted-by":"publisher","first-page":"9811","DOI":"10.1007\/s11192-021-03972-5","volume":"126","author":"F
+        Momeni","year":"2021","unstructured":"Momeni, F., Mayr, P., Fraser, N., &
+        Peters, I. (2021). What happens when a journal converts to open access? A
+        bibliometric analysis. Scientometrics, 126(12), 9811\u20139827. https:\/\/doi.org\/10.1007\/s11192-021-03972-5","journal-title":"Scientometrics"},{"issue":"1","key":"5390_CR54","doi-asserted-by":"publisher","first-page":"80","DOI":"10.1080\/01930826.2023.2287945","volume":"64","author":"H
+        Mu\u00f1oz-V\u00e9lez","year":"2024","unstructured":"Mu\u00f1oz-V\u00e9lez,
+        H., Pallares, C., Echavarr\u00eda, A. F., Contreras, J., Pavas, A., Bello,
+        D., Rend\u00f3n, C., Calder\u00f3n-Rojas, J., & Garz\u00f3n, F. (2024). Strategies
+        for negotiating and signing transformative agreements in the Global South:
+        The Colombia Consortium experience. Journal of Library Administration, 64(1),
+        80\u201398. https:\/\/doi.org\/10.1080\/01930826.2023.2287945","journal-title":"Journal
+        of Library Administration"},{"key":"5390_CR55","doi-asserted-by":"publisher","unstructured":"Pampel,
+        H., & Schneider, J. (2025). Open Access Dashboard Collection Launched. Research
+        Group Information Management, Humboldt-Universit\u00e4t zu Berlin. https:\/\/doi.org\/10.59350\/gj3rx-m5059","DOI":"10.59350\/gj3rx-m5059"},{"issue":"5","key":"5390_CR56","doi-asserted-by":"publisher","first-page":"604","DOI":"10.1108\/oir-05-2015-0167","volume":"39","author":"S
+        Pinfield","year":"2015","unstructured":"Pinfield, S. (2015). Making open access
+        work: The \u201cstate-of-the-art\u2019\u2019 in providing open access to scholarly
+        literature. Online Information Review, 39(5), 604\u2013636. https:\/\/doi.org\/10.1108\/oir-05-2015-0167","journal-title":"Online
+        Information Review"},{"key":"5390_CR57","doi-asserted-by":"publisher","DOI":"10.7717\/peerj.4375","volume":"6","author":"H
+        Piwowar","year":"2018","unstructured":"Piwowar, H., Priem, J., Larivi\u00e8re,
+        V., Alperin, J. P., Matthias, L., Norlander, B., Farley, A., West, J., & Haustein,
+        S. (2018). The state of OA: A large-scale analysis of the prevalence and impact
+        of open access articles. PeerJ, 6, Article e4375. https:\/\/doi.org\/10.7717\/peerj.4375","journal-title":"PeerJ"},{"issue":"4","key":"5390_CR58","doi-asserted-by":"crossref","first-page":"1396","DOI":"10.1162\/qss_a_00084","volume":"1","author":"J
+        P\u00f6l\u00f6nen","year":"2020","unstructured":"P\u00f6l\u00f6nen, J., Laakso,
+        M., Guns, R., Kulczycki, E., & Sivertsen, G. (2020). Open access at the national
+        level: A comprehensive analysis of publications by Finnish researchers. Quantitative
+        Science Studies, 1(4), 1396\u20131428.","journal-title":"Quantitative Science
+        Studies"},{"key":"5390_CR59","unstructured":"Priem, J., Piwowar, H., & Orr,
+        R. (2022). OpenAlex: A fully-open index of scholarly works, authors, venues,
+        institutions, and concepts. https:\/\/arxiv.org\/abs\/2205.01833"},{"key":"5390_CR60","unstructured":"R
+        Core Team. (2024). R: A language and environment for statistical computing.
+        R Foundation for Statistical Computing. https:\/\/www.R-project.org\/"},{"key":"5390_CR61","doi-asserted-by":"publisher","DOI":"10.1126\/science.aba5656","author":"T
+        Rabesandratana","year":"2019","unstructured":"Rabesandratana, T. (2019). Elsevier
+        deal with France disappoints open-access advocates. Science. https:\/\/doi.org\/10.1126\/science.aba5656","journal-title":"Science"},{"key":"5390_CR62","doi-asserted-by":"publisher","DOI":"10.5281\/ZENODO.15775260","author":"M
+        Rittman","year":"2025","unstructured":"Rittman, M., Chim, M., Rodsangiam,
+        C., Li, X., Patel, J., et al. (2025). PREreview of \u2019Estimating transformative
+        agreement impact on hybrid open access: A comparative large-scale study using
+        Scopus, Web of Science and open metadata. Zenodo. https:\/\/doi.org\/10.5281\/ZENODO.15775260","journal-title":"Zenodo."},{"key":"5390_CR63","doi-asserted-by":"publisher","DOI":"10.7717\/peerj.9410","volume":"8","author":"N
+        Robinson-Garcia","year":"2020","unstructured":"Robinson-Garcia, N., Costas,
+        R., & van Leeuwen, T. N. (2020). Open access uptake by universities worldwide.
+        PeerJ, 8, Article e9410. https:\/\/doi.org\/10.7717\/peerj.9410","journal-title":"PeerJ"},{"key":"5390_CR64","doi-asserted-by":"publisher","DOI":"10.1098\/rsos.211032","author":"T
+        Ross-Hellauer","year":"2022","unstructured":"Ross-Hellauer, T., Reichmann,
+        S., Cole, N. L., Fessl, A., Klebel, T., & Pontika, N. (2022). Dynamics of
+        cumulative advantage and threats to equity in open science: A scoping review.
+        Royal Society Open Science. https:\/\/doi.org\/10.1098\/rsos.211032","journal-title":"Royal
+        Society Open Science"},{"key":"5390_CR65","unstructured":"Rothfritz, L., Schmal,
+        W. B., & Herb, U. (2024). Trapped in transformative agreements? A multifaceted
+        analysis of>1,000 contracts. arXiv. https:\/\/arxiv.org\/abs\/2409.20224"},{"key":"5390_CR66","doi-asserted-by":"publisher","DOI":"10.1629\/uksg.641","author":"A
+        Salamoura","year":"2024","unstructured":"Salamoura, A., & Tsakonas, G. (2024).
+        On the challenges of open access monitoring. Insights the UKSG Journal. https:\/\/doi.org\/10.1629\/uksg.641","journal-title":"Insights
+        the UKSG Journal"},{"issue":"17617\/1","key":"5390_CR67","first-page":"3","volume":"10","author":"R
+        Schimmer","year":"2015","unstructured":"Schimmer, R., Geschuhn, K., & Vogler,
+        A. (2015). Disrupting the subscription journals\u2019business model for the
+        necessary large-scale transformation to open access. Max Planck Digital Library.","journal-title":"Max
+        Planck Digital Library"},{"key":"5390_CR68","doi-asserted-by":"publisher","unstructured":"Schmal,
+        W. B. (2024). La r\u00e9volution d\u00e9vore ses enfants: Pricing implications
+        of transformative agreements. arXiv. https:\/\/doi.org\/10.48550\/ARXIV.2403.03597","DOI":"10.48550\/ARXIV.2403.03597"},{"key":"5390_CR69","doi-asserted-by":"publisher","DOI":"10.5281\/zenodo.13935407","author":"M
+        Schmidt","year":"2024","unstructured":"Schmidt, M., Rimmert, C., Stephen,
+        D., Lenke, C., Donner, P., G\u00e4rtner, S., Taubert, N., Bausenwein, T.,
+        & Stahlschmidt, S. (2024). The data infrastructure of the German Kompetenznetzwerk
+        Bibliometrie: An enabling intermediary between raw data and analysis. Zenodo.
+        https:\/\/doi.org\/10.5281\/zenodo.13935407","journal-title":"Zenodo"},{"issue":"1","key":"5390_CR70","doi-asserted-by":"publisher","first-page":"519","DOI":"10.1007\/s11192-023-04876-2","volume":"129","author":"F
+        Shu","year":"2023","unstructured":"Shu, F., & Larivi\u00e8re, V. (2023). The
+        oligopoly of open access publishing. Scientometrics, 129(1), 519\u2013536.
+        https:\/\/doi.org\/10.1007\/s11192-023-04876-2","journal-title":"Scientometrics"},{"key":"5390_CR71","doi-asserted-by":"publisher","DOI":"10.1162\/qss.a.1","author":"M-A
+        Simard","year":"2025","unstructured":"Simard, M.-A., Basson, I., Hare, M.,
+        Larivi\u00e8re, V., & Mongeon, P. (2025). Examining the geographic and linguistic
+        coverage of gold and diamond open access journals in OpenAlex, Scopus, and
+        Web of Science. Quantitative Science Studies. https:\/\/doi.org\/10.1162\/qss.a.1","journal-title":"Quantitative
+        Science Studies"},{"issue":"6","key":"5390_CR72","doi-asserted-by":"publisher","first-page":"5113","DOI":"10.1007\/s11192-021-03948-5","volume":"126","author":"VK
+        Singh","year":"2021","unstructured":"Singh, V. K., Singh, P., Karmakar, M.,
+        Leta, J., & Mayr, P. (2021). The journal coverage of Web of Science, Scopus
+        and Dimensions: A comparative analysis. Scientometrics, 126(6), 5113\u20135142.
+        https:\/\/doi.org\/10.1007\/s11192-021-03948-5","journal-title":"Scientometrics"},{"issue":"5","key":"5390_CR73","doi-asserted-by":"publisher","first-page":"2413","DOI":"10.1007\/s11192-022-04309-6","volume":"127","author":"S
+        Stahlschmidt","year":"2022","unstructured":"Stahlschmidt, S., & Stephen, D.
+        (2022). From indexation policies through citation networks to normalized citation
+        impacts: Web of Science, Scopus, and Dimensions as varying resonance chambers.
+        Scientometrics, 127(5), 2413\u20132431. https:\/\/doi.org\/10.1007\/s11192-022-04309-6","journal-title":"Scientometrics"},{"key":"5390_CR74","doi-asserted-by":"publisher","unstructured":"Suber,
+        P. (2012). Open access. The MIT Press. https:\/\/doi.org\/10.7551\/mitpress\/9286.001.0001","DOI":"10.7551\/mitpress\/9286.001.0001"},{"issue":"6","key":"5390_CR75","doi-asserted-by":"publisher","DOI":"10.1371\/journal.pone.0327015","volume":"20","author":"S
+        van Bellen","year":"2025","unstructured":"van Bellen, S., Alperin, J. P.,
+        & Larivi\u00e8re, V. (2025). Scholarly publishing\u2019s hidden diversity:
+        How exclusive databases sustain the oligopoly of academic publishers. PLoS
+        One, 20(6), Article e0327015. https:\/\/doi.org\/10.1371\/journal.pone.0327015","journal-title":"PLoS
+        One"},{"key":"5390_CR76","doi-asserted-by":"publisher","unstructured":"van
+        Eck, N. J., & Waltman, L. (2024). Crossref as a source of open bibliographic
+        metadata. https:\/\/doi.org\/10.31222\/osf.io\/smxe5","DOI":"10.31222\/osf.io\/smxe5"},{"key":"5390_CR77","doi-asserted-by":"publisher","unstructured":"van
+        Eck, N. J., Waltman, L., & Neijssel, M. (2024). Launch of the CWTS Leiden
+        Ranking Open Edition 2024. Leiden Madtrics. https:\/\/doi.org\/10.59350\/r512t-r8h93","DOI":"10.59350\/r512t-r8h93"},{"issue":"1","key":"5390_CR78","doi-asserted-by":"publisher","first-page":"20","DOI":"10.1162\/qss_a_00112","volume":"2","author":"M
+        Visser","year":"2021","unstructured":"Visser, M., van Eck, N. J., & Waltman,
+        L. (2021). Large-scale comparison of bibliographic data sources: Scopus, Web
+        of Science, Dimensions, Crossref, and Microsoft Academic. Quantitative Science
+        Studies, 2(1), 20\u201341. https:\/\/doi.org\/10.1162\/qss_a_00112","journal-title":"Quantitative
+        Science Studies"},{"key":"5390_CR79","doi-asserted-by":"publisher","unstructured":"Wickham,
+        H., Averick, M., Bryan, J., Chang, W., McGowan, L. D., Fran\u00e7ois, R.,
+        Grolemund, G., Hayes, A., Henry, L., Hester, J., Kuhn, M., Pedersen, T. L.,
+        Miller, E., Bache, S. M., M\u00fcller, K., Ooms, J., Robinson, D., Seidel,
+        D. P., Spinu, V., Takahashi, K., Vaughan, D., Wilke, C., Woo, K., Yutani,
+        H. (2019). Welcome to the tidyverse. Journal of Open Source Software, 4(43),
+        1686. https:\/\/doi.org\/10.21105\/joss.01686","DOI":"10.21105\/joss.01686"},{"issue":"S1","key":"5390_CR80","doi-asserted-by":"publisher","first-page":"S28","DOI":"10.1017\/s1062798724000036","volume":"32","author":"AS
+        Widding","year":"2024","unstructured":"Widding, A. S. (2024). Beyond transformative
+        agreements: Ways forward for universities. European Review, 32(S1), S28\u2013S38.
+        https:\/\/doi.org\/10.1017\/s1062798724000036","journal-title":"European Review"},{"issue":"10","key":"5390_CR81","doi-asserted-by":"publisher","first-page":"5869","DOI":"10.1007\/s11192-023-04923-y","volume":"129","author":"L
+        Zhang","year":"2024","unstructured":"Zhang, L., Cao, Z., Shang, Y., Sivertsen,
+        G., & Huang, Y. (2024). Missing institutions in OpenAlex: Possible reasons,
+        implications, and solutions. Scientometrics, 129(10), 5869\u20135891. https:\/\/doi.org\/10.1007\/s11192-023-04923-y","journal-title":"Scientometrics"},{"issue":"12","key":"5390_CR82","doi-asserted-by":"publisher","first-page":"7653","DOI":"10.1007\/s11192-022-04407-5","volume":"127","author":"L
+        Zhang","year":"2022","unstructured":"Zhang, L., Wei, Y., Huang, Y., & Sivertsen,
+        G. (2022). Should open access lead to closed research? The trends towards
+        paying to perform research. Scientometrics, 127(12), 7653\u20137679. https:\/\/doi.org\/10.1007\/s11192-022-04407-5","journal-title":"Scientometrics"}],"container-title":["Scientometrics"],"language":"en","link":[{"URL":"https:\/\/link.springer.com\/content\/pdf\/10.1007\/s11192-025-05390-3.pdf","content-type":"application\/pdf","content-version":"vor","intended-application":"text-mining"},{"URL":"https:\/\/link.springer.com\/article\/10.1007\/s11192-025-05390-3\/fulltext.html","content-type":"text\/html","content-version":"vor","intended-application":"text-mining"},{"URL":"https:\/\/link.springer.com\/content\/pdf\/10.1007\/s11192-025-05390-3.pdf","content-type":"application\/pdf","content-version":"vor","intended-application":"similarity-checking"}],"deposited":{"date-parts":[[2025,8,1]],"date-time":"2025-08-01T19:03:08Z","timestamp":1754074988000},"score":0.0,"resource":{"primary":{"URL":"https:\/\/link.springer.com\/10.1007\/s11192-025-05390-3"}},"issued":{"date-parts":[[2025,8,1]]},"references-count":82,"alternative-id":["5390"],"URL":"https:\/\/doi.org\/10.1007\/s11192-025-05390-3","ISSN":["0138-9130","1588-2861"],"issn-type":[{"type":"print","value":"0138-9130"},{"type":"electronic","value":"1588-2861"}],"published":{"date-parts":[[2025,8,1]]},"assertion":[{"value":"8
+        May 2025","order":1,"name":"received","label":"Received","group":{"name":"ArticleHistory","label":"Article
+        History"}},{"value":"14 July 2025","order":2,"name":"accepted","label":"Accepted","group":{"name":"ArticleHistory","label":"Article
+        History"}},{"value":"1 August 2025","order":3,"name":"first_online","label":"First
+        Online","group":{"name":"ArticleHistory","label":"Article History"}},{"order":1,"name":"Ethics","group":{"name":"EthicsHeading","label":"Declarations"}},{"value":"The
+        author has participated in working groups of OA2020, ESAC and the Barcelona
+        Declaration as part of his professional responsibilities. No funding was received
+        from these initiatives for the present study, and they had no influence on
+        its design, data collection, analysis, or interpretation of results.","order":2,"name":"Ethics","group":{"name":"EthicsHeading","label":"Conflict
+        of interest"}}]}],"items-per-page":3,"query":{"start-index":0,"search-terms":null}}}'
+  recorded_at: 2025-08-11 14:50:00
+recorded_with: VCR-vcr/2.0.0

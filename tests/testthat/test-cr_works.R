@@ -234,6 +234,19 @@ test_that("cr_works fails well: arguments that dont require http requests", {
   expect_error(cr_works(async = 5), "is not TRUE")
 })
 
+test_that("cr_works - works with doi filter", {
+
+  vcr::use_cassette("cr_works_doi_filter", {
+    dois <- c('10.1007/s11192-025-05390-3', '10.1162/qss_a_00348', '10.1007/10452.1573-5125')
+    names(dois) <- rep("doi", length(dois))
+    res <- cr_works(filter = dois, limit = length(dois))
+    expect_is(res, "list")
+    expect_is(res$data, "data.frame")
+    expect_equal(nrow(res$data), length(dois))
+    expect_true(all(res$data$doi %in% dois))
+  })
+})
+
 # see https://github.com/ropensci/rcrossref/issues/211
 test_that("content domain parsing fix", {
   # this DOI caused a failure in parsing content domain

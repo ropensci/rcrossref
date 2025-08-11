@@ -254,8 +254,7 @@ parse_bibtex <- function(x) {
   chk4pk("bibtex")
   x <- gsub("@[Dd]ata", "@Misc", x)
   writeLines(x, "tmpscratch.bib")
-  out <- bibtex::do_read_bib("tmpscratch.bib",
-    srcfile = srcfile("tmpscratch.bib"))
+  out <- bibtex::do_read_bib("tmpscratch.bib")
   unlink("tmpscratch.bib")
   if (length(out) > 0) {
     out <- out[[1]]
