@@ -67,6 +67,13 @@
 #' cr_works(dois='10.1007/12080.1874-1746')
 #' cr_works(dois=c('10.1007/12080.1874-1746','10.1007/10452.1573-5125',
 #'    '10.1111/(issn)1442-9993'))
+#' # You can also use filter to get metatdata for several dois at once.
+#' # This is much faster than querying each doi individually.
+#' my_dois <- c('10.1007/s11192-025-05390-3', '10.1162/qss_a_00348', 
+#'   '10.1007/10452.1573-5125')
+#' # Prepare filter
+#' names(my_dois) <- rep("doi", length(my_dois))
+#' cr_works(filter = my_dois, limit = length(my_dois))
 #'
 #' # progress bar
 #' cr_works(dois=c('10.1007/12080.1874-1746','10.1007/10452.1573-5125'),
