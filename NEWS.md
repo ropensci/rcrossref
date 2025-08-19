@@ -1,3 +1,9 @@
+rcrossref 1.2.1
+===============
+
+* fix bibtex::do_read_bib() deprecation warning 
+* add example to `cr_works()` using `doi` filter for querying multiple dois at once (thanks @LukasWallrich)
+
 rcrossref 1.2.0
 ===============
 

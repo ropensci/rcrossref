@@ -70,8 +70,3 @@ See https://docs.ropensci.org/rcrossref/ to get started
 * Get citation information for `rcrossref` in R doing `citation(package = 'rcrossref')`
 * Please note that this package is released with a Contributor Code of Conduct (https://ropensci.org/code-of-conduct/). By contributing to this project, you agree to abide by its terms.
 
----
-
-This package is part of a richer suite called fulltext (https://github.com/ropensci/fulltext), along with several other packages, that provides the ability to search for and retrieve full text of open access scholarly articles.
-
----

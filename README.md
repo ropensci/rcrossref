@@ -10,11 +10,11 @@ rcrossref: R interface to CrossRef APIs
 [![rstudio mirror downloads](https://cranlogs.r-pkg.org/badges/rcrossref)](https://github.com/r-hub/cranlogs.app)
 [![cran version](https://www.r-pkg.org/badges/version/rcrossref)](https://cran.r-project.org/package=rcrossref)
 
-## Crossref documentation
+## CrossRef documentation
 
-* Crossref API: https://api.crossref.org
-* Crossref's API issue tracker: https://crossref.atlassian.net/
-* Crossref metadata search API: https://search.crossref.org/
+* Crossref API: https://github.com/CrossRef/rest-api-doc#readme
+* Crossref's API issue tracker: https://gitlab.com/crossref/issues
+* Crossref metadata search API: https://www.crossref.org/labs/crossref-metadata-search/
 * Crossref DOI Content Negotiation: https://citation.crosscite.org/docs.html
 * Crossref Text and Data Mining (TDM) Services: https://www.crossref.org/education/retrieve-metadata/rest-api/text-and-data-mining/
 
@@ -23,21 +23,21 @@ rcrossref: R interface to CrossRef APIs
 Stable version from CRAN
 
 
-```r
+``` r
 install.packages("rcrossref")
 ```
 
 Or development version from GitHub
 
 
-```r
+``` r
 remotes::install_github("ropensci/rcrossref")
 ```
 
 Load `rcrossref`
 
 
-```r
+``` r
 library('rcrossref')
 ```
 
@@ -66,8 +66,3 @@ See https://docs.ropensci.org/rcrossref/ to get started
 * Get citation information for `rcrossref` in R doing `citation(package = 'rcrossref')`
 * Please note that this package is released with a Contributor Code of Conduct (https://ropensci.org/code-of-conduct/). By contributing to this project, you agree to abide by its terms.
 
----
-
-This package is part of a richer suite called fulltext (https://github.com/ropensci/fulltext), along with several other packages, that provides the ability to search for and retrieve full text of open access scholarly articles.
-
----

@@ -1,8 +1,8 @@
 ## Test environments
 
-* local OS X install, R4.2.2 (2022-10-31)
+* local Mac OS 15.6, R version 4.5.1 (2025-06-13)
 * ubuntu-latest (devel, release, oldrel-1) on GH actions
-* win-builder (devel and release)
+* win-builder (oldrelease, release, and devel)
 
 ## R CMD check results
 
@@ -10,23 +10,17 @@ local:
 
 0 errors | 0 warnings | 0 notes
 
-win-builder
+win-builder 4.4.3 (oldrelease):
 
-1 note highlighting maintainer change
+1 note about Author field differs from that derived from Authors@R 
 
 ## Reverse dependencies
 
-* I have run R CMD check on the 8 downstream dependencies. There were no problems. See the summary at <https://github.com/ropensci/rcrossref/tree/master/revdep>
+* I have run R CMD check on the 86 downstream dependencies. There were no problems. 
 
 -------
 
-This re-submission reduced the size of tarball to less than  5MB.
-
-Overall, this release implements changes relative to the Crossref REST API migration.
-
-It also fixes CRAN Check errors.
-
-Please note the maintainer change from Scott Chamberlain to Najko Jahn.
+This submission fixes a warning message when using bibtex::do_read_bib() internally, as alerted by Kurt Hornik.
 
 Thanks!
 
