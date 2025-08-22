@@ -1,4 +1,4 @@
-rcrossref: R interface to CrossRef APIs
+rcrossref: R interface to Crossref APIs
 =======================================
 
 
@@ -10,13 +10,13 @@ rcrossref: R interface to CrossRef APIs
 [![rstudio mirror downloads](https://cranlogs.r-pkg.org/badges/rcrossref)](https://github.com/r-hub/cranlogs.app)
 [![cran version](https://www.r-pkg.org/badges/version/rcrossref)](https://cran.r-project.org/package=rcrossref)
 
-## CrossRef documentation
+## Crossref documentation
 
-* Crossref API: https://github.com/CrossRef/rest-api-doc#readme
-* Crossref's API issue tracker: https://gitlab.com/crossref/issues
-* Crossref metadata search API: https://www.crossref.org/labs/crossref-metadata-search/
-* Crossref DOI Content Negotiation: https://citation.crosscite.org/docs.html
-* Crossref Text and Data Mining (TDM) Services: https://www.crossref.org/education/retrieve-metadata/rest-api/text-and-data-mining/
+* Crossref API: https://api.crossref.org/
+* Crossref's API issue tracker: https://crossref.atlassian.net/jira/software/c/projects/CR/issues/
+* Crossref metadata search API: https://search.crossref.org/
+* Crossref DOI Content Negotiation: https://www.crossref.org/documentation/retrieve-metadata/content-negotiation/
+* Crossref Text and Data Mining (TDM) Services: www.crossref.org/documentation/retrieve-metadata/rest-api/text-and-data-mining/
 
 ## Installation
 
@@ -43,7 +43,7 @@ library('rcrossref')
 
 ## Register for the Polite Pool
 
-If you are intending to access Crossref regularly you will want to send your email address with your queries. This has the advantage that queries are placed in the polite pool of servers. Including your email address is good practice as described in the Crossref documentation under Good manners (https://github.com/CrossRef/rest-api-doc#good-manners--more-reliable-service). The second advantage is that Crossref can contact you if there is a problem with a query.
+If you are intending to access Crossref regularly you will want to send your email address with your queries. This has the advantage that queries are placed in the polite pool of servers. Including your email address is good practice as described in the Crossref documentation (https://api.crossref.org/swagger-ui/index.html#access). The second advantage is that Crossref can contact you if there is a problem with a query.
 
 Details on how to register your email in a call can be found at `?rcrossref-package`. To pass your email address to Crossref, simply store it as an environment variable in .Renviron like this:
 
