@@ -19,6 +19,12 @@
 #' # cr_abstract(cr_r(1))
 #' }
 cr_abstract <- function(doi, ...) {
+  if (length(doi) != 1L) {
+    stop(
+      "`doi` must contain exactly one DOI. Use `cr_works()` for multiple DOIs.",
+      call. = FALSE
+    )
+  }
   url <- paste0('https://api.crossref.org/works/', doi, '/transform/application/vnd.crossref.unixsd+xml')
   cli <- crul::HttpClient$new(
     url = url,
