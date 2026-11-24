@@ -7,6 +7,6 @@
 cr_citation(...)
 }
 \description{
-This function is defunct
+Use \code{\link[=cr_cn]{cr_cn()}} to retrieve citations by DOI.
 }
 \keyword{internal}

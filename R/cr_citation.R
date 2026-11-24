@@ -1,5 +1,7 @@
 #' This function is defunct
 #'
+#' Use [cr_cn()] to retrieve citations by DOI.
+#'
 #' @export
 #' @rdname cr_citation-defunct
 #' @keywords internal
