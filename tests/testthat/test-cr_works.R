@@ -247,6 +247,24 @@ test_that("cr_works - works with doi filter", {
   })
 })
 
+test_that("cr_works advises smaller DOI filter batches on HTTP 414", {
+  vcr::use_cassette("cr_works_uri_too_long", {
+    dois <- c(doi = "10.5555/too-long-one", doi = "10.5555/too-long-two")
+    expect_warning(
+      result <- cr_works(filter = dois, limit = length(dois)),
+      "Split the DOI filter into smaller batches.",
+      fixed = TRUE
+    )
+    expect_identical(result, list(message = NULL))
+
+    expect_warning(
+      result <- cr_works(filter = c(doi = "10.5555/bad-filter"), limit = 1),
+      "Bad filter$"
+    )
+    expect_identical(result, list(message = NULL))
+  }, record = "none")
+})
+
 # see https://github.com/ropensci/rcrossref/issues/211
 test_that("content domain parsing fix", {
   # this DOI caused a failure in parsing content domain

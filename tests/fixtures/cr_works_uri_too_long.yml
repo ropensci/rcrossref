@@ -1,0 +1,44 @@
+# Synthetic responses keep this test independent of Crossref's URI length limit.
+http_interactions:
+- request:
+    method: get
+    uri: https://api.crossref.org/works?filter=doi%3A10.5555%2Ftoo-long-one%2Cdoi%3A10.5555%2Ftoo-long-two&rows=2
+    body:
+      encoding: ''
+      string: ''
+    headers: {}
+  response:
+    status:
+      status_code: '414'
+      message: URI Too Long
+      explanation: Request URI is too long
+    headers:
+      content-type: text/html;charset=iso-8859-1
+      status: HTTP/1.1 414 URI Too Long
+    body:
+      encoding: UTF-8
+      file: no
+      string: '<h1>Bad Message 414</h1><pre>reason: URI Too Long</pre>'
+  recorded_at: 2026-11-25 00:00:00 GMT
+  recorded_with: vcr
+- request:
+    method: get
+    uri: https://api.crossref.org/works?filter=doi%3A10.5555%2Fbad-filter&rows=1
+    body:
+      encoding: ''
+      string: ''
+    headers: {}
+  response:
+    status:
+      status_code: '400'
+      message: Bad Request
+      explanation: The request was invalid
+    headers:
+      content-type: text/plain
+      status: HTTP/1.1 400 Bad Request
+    body:
+      encoding: UTF-8
+      file: no
+      string: Bad filter
+  recorded_at: 2026-11-25 00:00:00 GMT
+  recorded_with: vcr
