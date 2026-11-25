@@ -247,6 +247,15 @@ test_that("cr_works - works with doi filter", {
   })
 })
 
+test_that("cr_works rejects missing filter values", {
+  error <- "`filter` must not contain missing values."
+  vcr::use_cassette("cr_works_doi_filter", {
+    dois <- c(doi = "10.1162/qss_a_00348", doi = NA_character_)
+    expect_error(cr_works(filter = dois), error, fixed = TRUE)
+    expect_error(cr_works(filter = list(has_orcid = NA)), error, fixed = TRUE)
+  }, record = "none")
+})
+
 # see https://github.com/ropensci/rcrossref/issues/211
 test_that("content domain parsing fix", {
   # this DOI caused a failure in parsing content domain
