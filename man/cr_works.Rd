@@ -176,6 +176,15 @@ or lists, with no attempt to parse to data.frame's
 }
 }
 
+\section{Facet results}{
+
+For a synchronous search without a cursor, \code{cr_works()} returns \code{facets}
+as a named list of data frames, or \code{NULL} if Crossref returns no facets.
+In each nonempty data frame, \code{.id} holds the facet value and \code{V1} holds
+the count reported by Crossref for that value. For a cursor search,
+\code{facets} contains one such named list for each page that supplies facets.
+}
+
 \section{Explanation of some data fields}{
 
 \itemize{
@@ -220,8 +229,9 @@ cr_works(dois=c('10.1007/12080.1874-1746','10.1007/10452.1573-5125'),
 
 # Include facetting in results
 cr_works(query="NSF", facet=TRUE)
-## Get facets only, by setting limit=0
-cr_works(query="NSF", facet=TRUE, limit=0)
+## Get facets only and inspect the license values and counts
+results <- cr_works(query = "lagotto", facet = TRUE, limit = 0)
+head(results$facets$license)
 ## you can also set facet to a query
 cr_works(facet = "license:*", limit=0)
 
