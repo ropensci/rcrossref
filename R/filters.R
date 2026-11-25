@@ -31,6 +31,9 @@ filter_details <- function(x = NULL) {
 
 # helpers ----------------------------
 filter_handler <- function(x){
+  if (anyNA(x, recursive = TRUE)) {
+    stop("`filter` must not contain missing values.", call. = FALSE)
+  }
   if (is.null(x)) {
     NULL
   } else {
