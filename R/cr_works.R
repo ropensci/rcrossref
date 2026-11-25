@@ -38,6 +38,12 @@
 #'  date of publication.
 #' }
 #'
+#' @section DOI filters:
+#' Pass DOI names as values of the `doi` filter, as returned in Crossref
+#' metadata. The client URL-encodes these values when building the request.
+#' If you start with a percent-encoded DOI in a resolver URL, extract the
+#' DOI from the path and decode it once with `utils::URLdecode()`.
+#'
 #' @references
 #' https://github.com/CrossRef/rest-api-doc
 #'
@@ -67,13 +73,18 @@
 #' cr_works(dois='10.1007/12080.1874-1746')
 #' cr_works(dois=c('10.1007/12080.1874-1746','10.1007/10452.1573-5125',
 #'    '10.1111/(issn)1442-9993'))
-#' # You can also use filter to get metatdata for several dois at once.
+#' # You can also use filter to get metadata for several DOIs at once.
 #' # This is much faster than querying each doi individually.
-#' my_dois <- c('10.1007/s11192-025-05390-3', '10.1162/qss_a_00348', 
+#' my_dois <- c('10.1007/s11192-025-05390-3', '10.1162/qss_a_00348',
 #'   '10.1007/10452.1573-5125')
 #' # Prepare filter
 #' names(my_dois) <- rep("doi", length(my_dois))
 #' cr_works(filter = my_dois, limit = length(my_dois))
+#'
+#' # Filter by a DOI copied from a URL path
+#' encoded_doi <- paste0("10.1002/(SICI)1099-0771(199806)11:2",
+#'                       "%3C107::AID-BDM292%3E3.0.CO;2-Y")
+#' cr_works(filter = c(doi = utils::URLdecode(encoded_doi)))
 #'
 #' # progress bar
 #' cr_works(dois=c('10.1007/12080.1874-1746','10.1007/10452.1573-5125'),
