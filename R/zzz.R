@@ -38,8 +38,14 @@ cr_GET <- function(endpoint, args, todf = TRUE, on_error = warning, parse = TRUE
   }
   doi <- gsub("works/|/agency|funders/", "", endpoint)
   if (!res$status_code < 300) {
+    detail <- if (res$status_code == 414L && endpoint == "works" &&
+                  isTRUE(grepl("(^|,)doi:", args[["filter"]]))) {
+      "URI Too Long. Split the DOI filter into smaller batches."
+    } else {
+      get_err(res)
+    }
     on_error(sprintf("%s (%s): %s - %s", res$status_code, err_type(res),
-      get_route(res), get_err(res)), call. = FALSE)
+      get_route(res), detail), call. = FALSE)
     list(message = NULL)
   } else {
     #stopifnot(res$response_headers$`content-type` == "application/json;charset=UTF-8")
