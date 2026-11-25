@@ -3,7 +3,8 @@ context("testing cr_works - cursor")
 test_that("cr_works cursor basic functionality works", {
   vcr::use_cassette("cr_works_with_cursor", {
 
-    aa <- cr_works(query="NSF", cursor = "*", cursor_max = 300, limit = 100)
+    aa <- cr_works(query = "NSF", cursor = "*", cursor_max = 300,
+                   limit = 100, parse = TRUE)
     bb <- cr_works(query="NSF", limit = 100)
 
     expect_is(aa, "list")
@@ -23,6 +24,13 @@ test_that("cr_works cursor fails correctly", {
     expect_error(cr_works(cursor_max = 3.4),
                  "cursor_max must be an integer")
   })
+})
+
+test_that("cr_works directs raw cursor requests to cr_works_", {
+  expect_error(
+    cr_works(query = "NSF", cursor = "*", parse = FALSE),
+    "Use cr_works_() with parse = FALSE", fixed = TRUE
+  )
 })
 
 test_that("cr_works cursor works with progress bar", {

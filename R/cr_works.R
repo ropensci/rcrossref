@@ -15,8 +15,8 @@
 #' funder-doi, orcid, container-title, assertion, archive, update-type,
 #' issn, published, source, type-name, publisher-name, license,
 #' category-name, assertion-group. Default: `FALSE`
-#' @param parse (logical) Whether to output json `FALSE` or parse to
-#' list `TRUE`. Default: `FALSE`
+#' @param parse (logical) For `cr_works_()`, whether to parse JSON to a list
+#' (`TRUE`) or return JSON strings (`FALSE`, the default).
 #' @param async (logical) use async HTTP requests. Default: `FALSE`
 #'
 #' @section Beware:
@@ -227,7 +227,11 @@ cr_works_ <- function(dois = NULL, query = NULL, filter = NULL, offset = NULL,
   }
 }
 
-cr_get_cursor <- function(x, args, cursor, cursor_max, .progress, ...) {
+cr_get_cursor <- function(x, args, cursor, cursor_max, .progress, ...,
+                          parse = TRUE) {
+  if (!isTRUE(parse)) {
+    stop("Use cr_works_() with parse = FALSE for raw JSON.", call. = FALSE)
+  }
   path <- if (!is.null(x)) sprintf("works/%s", x) else "works"
   if (!is.null(cursor)) {
     rr <- Requestor$new(path = path, args = args, cursor_max = cursor_max,
