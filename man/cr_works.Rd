@@ -139,8 +139,8 @@ are returned)}
 
 \item{...}{Named parameters passed on to \code{\link[crul]{verb-GET}}}
 
-\item{parse}{(logical) Whether to output json \code{FALSE} or parse to
-list \code{TRUE}. Default: \code{FALSE}}
+\item{parse}{(logical) For \code{cr_works_()}, whether to parse JSON to a list
+(\code{TRUE}) or return JSON strings (\code{FALSE}, the default).}
 }
 \description{
 Search CrossRef works (articles)
